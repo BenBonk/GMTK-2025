@@ -19,7 +19,7 @@ public class CaptureManager : MonoBehaviour
             HashSet<string> newSet = new HashSet<string>();
             foreach (var animal in captured.animalsNeeded)
             {
-                newSet.Add(animal.name);
+                newSet.Add(animal);
             }
             synergySets.Add(newSet);
         }
@@ -54,14 +54,21 @@ public class CaptureManager : MonoBehaviour
     {
         player.playerCurrency += possibleSynergies[index].currencyBonus;
         gameManager.pointsThisRound += possibleSynergies[index].pointsBonus;
-        gameManager.pointsThisRound *= possibleSynergies[index].pointsMult;
+        if (possibleSynergies[index].pointsMult!=0)
+        {
+            gameManager.pointsThisRound *= possibleSynergies[index].pointsMult;   
+        }
     }
 }
 
 [System.Serializable]
 public class Synergy
 {
-    public Animal[] animalsNeeded;
+    public string name;
+    public string desc;
+    public Sprite art;
+    
+    public string[] animalsNeeded;
     public int currencyBonus;
     public int pointsBonus;
     public int pointsMult;

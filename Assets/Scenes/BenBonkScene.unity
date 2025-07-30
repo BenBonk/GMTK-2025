@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef8ac2e4998b294f89dbd8d0eaf9bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 177080492}
+  possibleAnimalsToSell: []
 --- !u!4 &421038979
 Transform:
   m_ObjectHideFlags: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 177080492}
-  roundsPointsRequirement: 
+  roundsPointsRequirement: 0000000000000000000000000000000000000000
   pointsThisRound: 0
   roundNumber: 0
 --- !u!4 &903279479
@@ -761,9 +761,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleSynergies:
   - animalsNeeded:
-    - {fileID: 0}
-    currencyBonus: 0
-    pointsBonus: 0
+    - Pig
+    - Sheep
+    currencyBonus: 10
+    pointsBonus: 100
     pointsMult: 0
   - animalsNeeded: []
     currencyBonus: 0
