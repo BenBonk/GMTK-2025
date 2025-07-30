@@ -35,15 +35,52 @@ public class LassoController : MonoBehaviour
     void UpdateLasso()
     {
         Vector2 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (rawPoints.Count == 0 || Vector2.Distance(mouseWorld, rawPoints[rawPoints.Count - 1]) > 0.1f)
+
+        if (rawPoints.Count == 0 || Vector2.Distance(mouseWorld, rawPoints[rawPoints.Count - 1]) > pointDistanceThreshold)
         {
             rawPoints.Add(mouseWorld);
 
+            if (rawPoints.Count >= 4)
+            {
+                Vector2 newStart = rawPoints[rawPoints.Count - 2];
+                Vector2 newEnd = rawPoints[rawPoints.Count - 1];
+
+                for (int i = 0; i < rawPoints.Count - 3; i++)
+                {
+                    Vector2 segStart = rawPoints[i];
+                    Vector2 segEnd = rawPoints[i + 1];
+
+                    if (GetLineIntersection(segStart, segEnd, newStart, newEnd, out Vector2 intersection))
+                    {
+                        List<Vector2> loopPoints = new List<Vector2>();
+
+                        // Include the intersection point as start
+                        loopPoints.Add(intersection);
+
+                        // Include points from start to end
+                        for (int j = i + 1; j < rawPoints.Count - 1; j++)
+                            loopPoints.Add(rawPoints[j]);
+
+                        // Add the intersection again to close the polygon
+                        loopPoints.Add(intersection);
+
+                        rawPoints = loopPoints;
+
+                        CompleteLasso();
+                        return;
+                    }
+                }
+            }
+
+            // Update visual if still drawing
             List<Vector3> smooth = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
             lineRenderer.positionCount = smooth.Count;
             lineRenderer.SetPositions(smooth.ToArray());
         }
     }
+
+
+
 
     void CompleteLasso()
     {
@@ -55,7 +92,7 @@ public class LassoController : MonoBehaviour
 
         // Close the smoothed line
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
-        smoothClosed.Add(smoothClosed[0]); // Close visually
+        smoothClosed.Add(smoothClosed[0]);
         lineRenderer.positionCount = smoothClosed.Count;
         lineRenderer.SetPositions(smoothClosed.ToArray());
 
@@ -64,16 +101,14 @@ public class LassoController : MonoBehaviour
 
     void SelectObjectsInLasso()
     {
-        // Create a temporary GameObject with a PolygonCollider2D
         GameObject lassoArea = new GameObject("TempLassoCollider");
         PolygonCollider2D poly = lassoArea.AddComponent<PolygonCollider2D>();
 
-        // Convert raw lasso points to local space of collider
         Vector2[] localPoints = rawPoints.ToArray();
         poly.points = localPoints;
 
         ContactFilter2D filter = new ContactFilter2D();
-        filter.NoFilter(); // match everything
+        filter.NoFilter();
 
         List<Collider2D> results = new List<Collider2D>();
         int count = poly.Overlap(filter, results);
@@ -86,7 +121,7 @@ public class LassoController : MonoBehaviour
         Destroy(lassoArea);
     }
 
-    // Catmull-Rom Smoothing
+    //Catmull-Rom Smoothing
     Vector3 CatmullRom(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
     {
         return 0.5f * (
@@ -117,5 +152,23 @@ public class LassoController : MonoBehaviour
 
         smoothPoints.Add(controlPoints[controlPoints.Count - 1]);
         return smoothPoints;
+    }
+
+    bool GetLineIntersection(Vector2 a1, Vector2 a2, Vector2 b1, Vector2 b2, out Vector2 intersection)
+    {
+        intersection = Vector2.zero;
+        float d = (a2.x - a1.x) * (b2.y - b1.y) - (a2.y - a1.y) * (b2.x - b1.x);
+        if (Mathf.Approximately(d, 0)) return false;
+
+        float u = ((b1.x - a1.x) * (b2.y - b1.y) - (b1.y - a1.y) * (b2.x - b1.x)) / d;
+        float v = ((b1.x - a1.x) * (a2.y - a1.y) - (b1.y - a1.y) * (a2.x - a1.x)) / d;
+
+        if (u >= 0 && u <= 1 && v >= 0 && v <= 1)
+        {
+            intersection = a1 + u * (a2 - a1);
+            return true;
+        }
+
+        return false;
     }
 }
