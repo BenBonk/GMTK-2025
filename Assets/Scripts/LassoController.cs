@@ -6,6 +6,7 @@ public class LassoController : MonoBehaviour
     public LineRenderer lineRenderer; // Assign in inspector
     public int smoothingSubdivisions; // Higher = smoother
     public float pointDistanceThreshold; // Minimum distance between points
+    public float closeThreshold = 0.5f; // Distance to consider the lasso closed
     private List<Vector2> rawPoints = new List<Vector2>();
     private bool isDrawing = false;
 
@@ -86,11 +87,28 @@ public class LassoController : MonoBehaviour
     {
         isDrawing = false;
 
+        if (rawPoints.Count <3)
+        {
+            Debug.Log("Lasso too small — discarded.");
+            return;
+        }
+        Vector2 start = rawPoints[0];
+        Vector2 end = rawPoints[rawPoints.Count - 1];
+
+        // If not already closed (e.g. via self-intersection)
+        if (Vector2.Distance(start, end) > closeThreshold)
+        {
+            Debug.Log("Lasso did not close — discarded.");
+            rawPoints.Clear();
+            lineRenderer.positionCount = 0;
+            return;
+        }
+
         // Close the polygon
         if (rawPoints.Count > 2)
-            rawPoints.Add(rawPoints[0]);
+            rawPoints.Add(start);
 
-        // Close the smoothed line
+        // render the smoothed line
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
         smoothClosed.Add(smoothClosed[0]);
         lineRenderer.positionCount = smoothClosed.Count;
@@ -101,24 +119,20 @@ public class LassoController : MonoBehaviour
 
     void SelectObjectsInLasso()
     {
-        GameObject lassoArea = new GameObject("TempLassoCollider");
-        PolygonCollider2D poly = lassoArea.AddComponent<PolygonCollider2D>();
+        if (rawPoints.Count < 3)
+            return;
 
-        Vector2[] localPoints = rawPoints.ToArray();
-        poly.points = localPoints;
+        Collider2D[] allColliders = FindObjectsOfType<Collider2D>();
 
-        ContactFilter2D filter = new ContactFilter2D();
-        filter.NoFilter();
-
-        List<Collider2D> results = new List<Collider2D>();
-        int count = poly.Overlap(filter, results);
-
-        foreach (Collider2D col in results)
+        foreach (Collider2D col in allColliders)
         {
-            Debug.Log("Selected: " + col.name);
-        }
+            Vector2 center = col.bounds.center;
 
-        Destroy(lassoArea);
+            if (IsPointInPolygon(center, rawPoints))
+            {
+                Debug.Log("Selected: " + col.name);
+            }
+        }
     }
 
     //Catmull-Rom Smoothing
@@ -170,5 +184,25 @@ public class LassoController : MonoBehaviour
         }
 
         return false;
+    }
+
+    bool IsPointInPolygon(Vector2 point, List<Vector2> polygon)
+    {
+        bool inside = false;
+        int j = polygon.Count - 1;
+
+        for (int i = 0; i < polygon.Count; j = i++)
+        {
+            Vector2 pi = polygon[i];
+            Vector2 pj = polygon[j];
+
+            if ((pi.y > point.y) != (pj.y > point.y) &&
+                point.x < (pj.x - pi.x) * (point.y - pi.y) / (pj.y - pi.y + float.Epsilon) + pi.x)
+            {
+                inside = !inside;
+            }
+        }
+
+        return inside;
     }
 }

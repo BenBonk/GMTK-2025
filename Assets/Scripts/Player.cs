@@ -4,7 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int playerCurrency;
-    public int timeToSpawnAnimals;
+    //public int timeToSpawnAnimals;
     
     public List<GameObject> animalsInDeck;
 
