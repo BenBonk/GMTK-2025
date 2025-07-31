@@ -32,6 +32,7 @@ public class Cow : Animal
 
     public override void Move()
     {
+
         // Smooth speed transition
         currentSpeed = Mathf.SmoothDamp(currentSpeed, speedTarget, ref speedVelocity, pauseFadeDuration);
 

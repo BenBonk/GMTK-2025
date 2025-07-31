@@ -20,6 +20,7 @@ public class Animal : MonoBehaviour
     public Sprite sprite;
 
     //movement parameters
+    public bool isLassoed;
     public float traveled;
     public float leftEdgeX;
     public Vector3 startPos;
@@ -64,6 +65,9 @@ public class Animal : MonoBehaviour
 
     public void Update()
     {
-        Move();
+        if (!isLassoed)
+        {
+            Move();
+        }
     }
 }

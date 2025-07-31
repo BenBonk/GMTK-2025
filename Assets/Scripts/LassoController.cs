@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class LassoController : MonoBehaviour
 {
-    public LineRenderer lineRenderer; // Assign in inspector
+    private LineRenderer lineRenderer;
+    public GameObject lassoPrefab; // Assign in inspector
     public int smoothingSubdivisions; // Higher = smoother
     public float pointDistanceThreshold; // Minimum distance between points
     public float closeThreshold = 0.5f; // Distance to consider the lasso closed
@@ -29,6 +30,8 @@ public class LassoController : MonoBehaviour
     void StartLasso()
     {
         isDrawing = true;
+        newInstantiate(lassoPrefab, Vector3.zero, Quaternion.identity); // Create a new lasso object
+        lineRenderer = lassoPrefab.GetComponent<LineRenderer>();
         rawPoints.Clear();
         lineRenderer.positionCount = 0;
     }
@@ -131,6 +134,7 @@ public class LassoController : MonoBehaviour
             if (IsPointInPolygon(center, rawPoints))
             {
                 Debug.Log("Selected: " + col.name);
+                col.gameObject.GetComponent<Animal>().isLassoed = true;
             }
         }
     }
