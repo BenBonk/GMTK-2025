@@ -13,7 +13,6 @@ public class Cow : Animal
     [Header("Speed Control")]
     public float stopThreshold = 0.05f; // consider "paused" when speed is below this
 
-    private float currentSpeed;
     private float speedTarget;
 
     private float stateTimer = 0f;

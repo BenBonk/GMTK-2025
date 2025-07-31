@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,8 +31,8 @@ public class LassoController : MonoBehaviour
     void StartLasso()
     {
         isDrawing = true;
-        newInstantiate(lassoPrefab, Vector3.zero, Quaternion.identity); // Create a new lasso object
-        lineRenderer = lassoPrefab.GetComponent<LineRenderer>();
+        GameObject newLasso = Instantiate(lassoPrefab, Vector3.zero, Quaternion.identity); // Create a new lasso object
+        lineRenderer = newLasso.GetComponent<LineRenderer>();
         rawPoints.Clear();
         lineRenderer.positionCount = 0;
     }
@@ -90,42 +91,89 @@ public class LassoController : MonoBehaviour
     {
         isDrawing = false;
 
-        if (rawPoints.Count <3)
+        if (rawPoints.Count < 3)
         {
             Debug.Log("Lasso too small — discarded.");
+            Destroy(lineRenderer.gameObject);
             return;
         }
+
         Vector2 start = rawPoints[0];
         Vector2 end = rawPoints[rawPoints.Count - 1];
 
-        // If not already closed (e.g. via self-intersection)
         if (Vector2.Distance(start, end) > closeThreshold)
         {
             Debug.Log("Lasso did not close — discarded.");
             rawPoints.Clear();
             lineRenderer.positionCount = 0;
+            Destroy(lineRenderer.gameObject);
             return;
         }
 
-        // Close the polygon
-        if (rawPoints.Count > 2)
-            rawPoints.Add(start);
+        GameController.gameManager.lassosUsed++;
+        rawPoints.Add(start); // close loop
 
-        // render the smoothed line
+        // Generate smooth loop (no tail yet)
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
-        smoothClosed.Add(smoothClosed[0]);
-        lineRenderer.positionCount = smoothClosed.Count;
-        lineRenderer.SetPositions(smoothClosed.ToArray());
+        smoothClosed.Add(smoothClosed[0]); // ensure visual closure
 
-        SelectObjectsInLasso();
+        // Clone to visual points for LineRenderer
+        List<Vector3> visualPoints = new List<Vector3>(smoothClosed);
+
+        // Calculate bottom center of screen in world space
+        float zDepth = Mathf.Abs(Camera.main.transform.position.z - lineRenderer.transform.position.z);
+        Vector3 screenBottomCenter = new Vector3(Screen.width / 2f, 0, zDepth);
+        Vector3 bottomCenterWorld = Camera.main.ScreenToWorldPoint(screenBottomCenter);
+        bottomCenterWorld.z = lineRenderer.transform.position.z;
+
+        // Find index of closest point on the lasso loop
+        int closestIndex = 0;
+        float minDistance = float.MaxValue;
+        for (int i = 0; i < smoothClosed.Count; i++)
+        {
+            float dist = Vector2.Distance(smoothClosed[i], bottomCenterWorld);
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closestIndex = i;
+            }
+        }
+
+        // Insert the bottom center as the next point after the closest one
+        visualPoints.Insert(closestIndex + 1, bottomCenterWorld);
+
+        // Apply to LineRenderer
+        lineRenderer.positionCount = visualPoints.Count;
+        lineRenderer.SetPositions(visualPoints.ToArray());
+
+        // Create parent group and reparent items
+        Vector3 groupPosition = CalculateCentroidOfLasso();
+        GameObject group = new GameObject("LassoGroup");
+        group.transform.position = groupPosition;
+        lineRenderer.transform.SetParent(group.transform);
+
+        List<GameObject> lassoedObjects = SelectObjectsInLasso(); // only uses rawPoints
+        if (lassoedObjects != null && lassoedObjects.Count > 0)
+        {
+            foreach (GameObject item in lassoedObjects)
+            {
+                item.transform.SetParent(group.transform);
+            }
+        }
+
+        // Move group to bottom center of screen
+        bottomCenterWorld.z = group.transform.position.z;
+        bottomCenterWorld.y -= 6f;
+        group.transform.DOMove(bottomCenterWorld, 1f).SetEase(Ease.InOutCubic);
     }
 
-    void SelectObjectsInLasso()
+    List<GameObject> SelectObjectsInLasso()
     {
         if (rawPoints.Count < 3)
-            return;
+            return null;
 
         Collider2D[] allColliders = FindObjectsOfType<Collider2D>();
+        List<GameObject> list = new List<GameObject>();
 
         foreach (Collider2D col in allColliders)
         {
@@ -135,8 +183,11 @@ public class LassoController : MonoBehaviour
             {
                 Debug.Log("Selected: " + col.name);
                 col.gameObject.GetComponent<Animal>().isLassoed = true;
+                list.Add(col.gameObject);
             }
         }
+
+        return list;
     }
 
     //Catmull-Rom Smoothing
@@ -208,5 +259,19 @@ public class LassoController : MonoBehaviour
         }
 
         return inside;
+    }
+
+    Vector3 CalculateCentroidOfLasso()
+    {
+        Vector3 sum = Vector3.zero;
+        int count = 0;
+
+        foreach (Vector2 point in rawPoints)
+        {
+            sum += new Vector3(point.x, point.y, 0);
+            count++;
+        }
+
+        return count > 0 ? sum / count : Vector3.zero;
     }
 }

@@ -11,9 +11,11 @@ public class Animal : MonoBehaviour
 
     public int currencyToGive;
     public int pointsToGive;
+    public bool isPredator;
 
     public float speed;
-    
+    public float currentSpeed;
+
     //movement parameters
     public bool isLassoed;
     public float traveled;
@@ -41,6 +43,7 @@ public class Animal : MonoBehaviour
         }
 
         traveled = 0f;
+        currentSpeed = speed;
     }
 
     public virtual void CaptureAnimal()

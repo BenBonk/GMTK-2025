@@ -19,6 +19,25 @@ public class AnimalSpawner : MonoBehaviour
     private void SpawnRandomAnimal()
     {
         GameObject animal = Instantiate(GameController.player.animalsInDeck[Random.Range(0,GameController.player.animalsInDeck.Count)]);
-        //animal.GetComponent<Animal>().Move(); // Call the Move method on the animal to start its movement
+
+        // Get vertical bounds of the camera in world space
+        float z = Mathf.Abs(Camera.main.transform.position.z - animal.transform.position.z);
+        Vector3 screenBottom = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, z));
+        Vector3 screenTop = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 1f, z));
+
+        // Account for the sprite's vertical size
+        SpriteRenderer sr = animal.GetComponent<SpriteRenderer>();
+        float halfHeight = sr.bounds.extents.y;
+
+        float minY = screenBottom.y + halfHeight;
+        float maxY = screenTop.y - halfHeight;
+
+        //  Choose a random Y position safely within bounds
+        float randomY = Random.Range(minY, maxY);
+
+        //  Set spawn position at the right edge
+        float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x + sr.bounds.extents.x;
+
+        animal.transform.position = new Vector3(rightEdgeX, randomY, 0f);
     }
 }
