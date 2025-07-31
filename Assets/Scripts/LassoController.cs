@@ -1,5 +1,7 @@
 using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class LassoController : MonoBehaviour
@@ -11,6 +13,8 @@ public class LassoController : MonoBehaviour
     public float closeThreshold = 0.5f; // Distance to consider the lasso closed
     private List<Vector2> rawPoints = new List<Vector2>();
     private bool isDrawing = false;
+    public GameObject feedbackTextPrefab; // assign a TextMeshPro or UI prefab
+    public float feedbackDelay = 0.5f;    // delay between each text popup
 
     void Update()
     {
@@ -110,6 +114,27 @@ public class LassoController : MonoBehaviour
             return;
         }
 
+        float area = CalculatePolygonArea(rawPoints);
+
+        // Calculate screen size in world units
+        Vector3 screenBottomLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Mathf.Abs(Camera.main.transform.position.z)));
+        Vector3 screenTopRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Mathf.Abs(Camera.main.transform.position.z)));
+
+        float screenWorldWidth = Mathf.Abs(screenTopRight.x - screenBottomLeft.x);
+        float screenWorldHeight = Mathf.Abs(screenTopRight.y - screenBottomLeft.y);
+        float screenWorldArea = screenWorldWidth * screenWorldHeight;
+
+        // Use a ratio (e.g. 1%) of screen area as minimum valid lasso
+        float areaThreshold = screenWorldArea * 0.003f;
+
+        if (area < areaThreshold)
+        {
+            Debug.Log($"Lasso area too small ({area:F2} < {areaThreshold:F2}) — discarded.");
+            rawPoints.Clear();
+            Destroy(lineRenderer.gameObject);
+            return;
+        }
+
         GameController.gameManager.lassosUsed++;
         rawPoints.Add(start); // close loop
 
@@ -153,18 +178,26 @@ public class LassoController : MonoBehaviour
         lineRenderer.transform.SetParent(group.transform);
 
         List<GameObject> lassoedObjects = SelectObjectsInLasso(); // only uses rawPoints
+        List<Animal> lassoedAnimals = new List<Animal>();
         if (lassoedObjects != null && lassoedObjects.Count > 0)
         {
             foreach (GameObject item in lassoedObjects)
             {
                 item.transform.SetParent(group.transform);
+                lassoedAnimals.Add(item.GetComponent<Animal>());
             }
         }
 
         // Move group to bottom center of screen
         bottomCenterWorld.z = group.transform.position.z;
         bottomCenterWorld.y -= 6f;
-        group.transform.DOMove(bottomCenterWorld, 1f).SetEase(Ease.InOutCubic);
+        group.transform.DOMove(bottomCenterWorld, 1f)
+            .SetEase(Ease.InOutCubic)
+            .OnComplete(() =>
+            {
+                var captureResult = GameController.captureManager.MakeCapture(lassoedAnimals.ToArray());
+                ShowCaptureFeedback(captureResult);
+            });
     }
 
     List<GameObject> SelectObjectsInLasso()
@@ -189,6 +222,107 @@ public class LassoController : MonoBehaviour
 
         return list;
     }
+
+    public void ShowCaptureFeedback((int pointBonus, float pointMult, int currencyBonus, float currencyMult) result)
+    {
+        StartCoroutine(ShowFeedbackSequence(result));
+    }
+
+    private IEnumerator ShowFeedbackSequence((int pointBonus, float pointMult, int currencyBonus, float currencyMult) result)
+    {
+        float zDepth = Mathf.Abs(Camera.main.transform.position.z);
+        Vector3 screenBase = new Vector3(Screen.width / 2f, 100f, zDepth); // 100px from bottom
+        Vector3 baseWorld = Camera.main.ScreenToWorldPoint(screenBase);
+        baseWorld.z = 0f;
+
+        List<(string label, object value)> feedbacks = new();
+
+        // Points
+        if (result.pointBonus != 0)
+            feedbacks.Add(("+Points", result.pointBonus));
+        if (Mathf.Abs(result.pointMult - 1f) > 0.01f)
+            feedbacks.Add(("xPoints", result.pointMult));
+
+        // Currency
+        if (result.currencyBonus != 0)
+            feedbacks.Add(("+Cash", result.currencyBonus));
+        if (Mathf.Abs(result.currencyMult - 1f) > 0.01f)
+            feedbacks.Add(("xCash", result.currencyMult));
+
+        List<(GameObject go, TMP_Text text, string label)> createdText = new();
+
+        // Track animation steps
+        bool bonusPointsShown = result.pointBonus == 0;
+        bool multPointsShown = Mathf.Abs(result.pointMult - 1f) <= 0.01f;
+
+        bool bonusCashShown = result.currencyBonus == 0;
+        bool multCashShown = Mathf.Abs(result.currencyMult - 1f) <= 0.01f;
+
+        for (int i = 0; i < feedbacks.Count; i++)
+        {
+            Vector3 offset = new Vector3(0, i * 1.5f, 0);
+            GameObject go = Instantiate(feedbackTextPrefab, baseWorld + offset, Quaternion.identity);
+            go.transform.localScale = Vector3.zero;
+
+            TMP_Text text = go.GetComponent<TMP_Text>();
+            string label = feedbacks[i].label;
+
+            if (text != null)
+            {
+                if (feedbacks[i].value is float f)
+                    text.text = $"{label}: {f:F2}";
+                else
+                    text.text = $"{label}: {feedbacks[i].value}";
+
+                text.alpha = 1f;
+
+                // Animate pop-in
+                Sequence popSeq = DOTween.Sequence();
+                popSeq.Append(go.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
+                popSeq.Append(go.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+                popSeq.OnComplete(() =>
+                {
+                    if (label == "+Points") bonusPointsShown = true;
+                    if (label == "xPoints") multPointsShown = true;
+                    if (label == "+Cash") bonusCashShown = true;
+                    if (label == "xCash") multCashShown = true;
+
+                    if (bonusPointsShown && multPointsShown)
+                    {
+                        int totalPoints = Mathf.RoundToInt(result.pointBonus * result.pointMult);
+                        GameController.gameManager.pointsThisRound += totalPoints;
+                        Debug.Log($"Points added: {totalPoints}");
+                        bonusPointsShown = multPointsShown = false;
+                    }
+
+                    if (bonusCashShown && multCashShown)
+                    {
+                        int totalCash = Mathf.RoundToInt(result.currencyBonus * result.currencyMult);
+                        GameController.player.playerCurrency += totalCash;
+                        Debug.Log($"Cash added: {totalCash}");
+                        bonusCashShown = multCashShown = false;
+                    }
+                });
+            }
+
+            createdText.Add((go, text, label));
+            yield return new WaitForSeconds(feedbackDelay);
+        }
+
+        yield return new WaitForSeconds(0.3f);
+
+        float moveUpAmount = 1f;
+        float fadeDuration = 1.5f;
+
+        foreach (var (go, text, _) in createdText)
+        {
+            go.transform.DOMoveY(go.transform.position.y + moveUpAmount, fadeDuration).SetEase(Ease.OutSine);
+            text.DOFade(0f, fadeDuration).SetEase(Ease.InOutQuad);
+            Destroy(go, fadeDuration + 0.1f);
+        }
+    }
+
+
 
     //Catmull-Rom Smoothing
     Vector3 CatmullRom(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
@@ -273,5 +407,21 @@ public class LassoController : MonoBehaviour
         }
 
         return count > 0 ? sum / count : Vector3.zero;
+    }
+
+    private float CalculatePolygonArea(List<Vector2> points)
+    {
+        if (points == null || points.Count < 3) return 0f;
+
+        float area = 0f;
+        for (int i = 0; i < points.Count - 1; i++)
+        {
+            area += (points[i].x * points[i + 1].y) - (points[i + 1].x * points[i].y);
+        }
+
+        // Close the loop (last to first)
+        area += (points[points.Count - 1].x * points[0].y) - (points[0].x * points[points.Count - 1].y);
+
+        return Mathf.Abs(area * 0.5f);
     }
 }

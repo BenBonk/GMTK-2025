@@ -6,7 +6,8 @@ public class Pig : Animal
     public float waveFrequency = 2f; // Wave cycles during movement
 
     private bool initialized = false;
-    public override void Move()
+    private float waveProgress = 0f;
+    protected override Vector3 ComputeMove()
     {
         if (!initialized)
         {
@@ -14,17 +15,24 @@ public class Pig : Animal
             initialized = true;
         }
 
-        traveled += speed * Time.deltaTime;
-        float x = startPos.x - traveled;
+        waveProgress += Time.deltaTime;
 
-        float horizontalDistance = startPos.x - leftEdgeX;
-        float progress = Mathf.Clamp01(traveled / horizontalDistance);
+        float yOffset = Mathf.Sin(waveProgress * Mathf.PI * 2f * waveFrequency) * waveAmplitude;
 
-        float y = startPos.y + Mathf.Sin(progress * Mathf.PI * 2 * waveFrequency) * waveAmplitude;
+        // Horizontal base movement
+        Vector3 baseMove = transform.position + Vector3.left * currentSpeed * Time.deltaTime;
 
-        transform.position = new Vector3(x, y, startPos.z);
+        // Respect vertical offset by adding it to the wave
+        float verticalOffset = externalOffset.y;
+        baseMove.y = startY + yOffset + verticalOffset;
+
+        // Zero out the vertical offset so it isn’t double-counted later
+        externalOffset.y = 0f;
+
+        return baseMove;
     }
 
+    private float startY;
     private void AdjustStartYToFitWave()
     {
         float z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
@@ -32,15 +40,12 @@ public class Pig : Animal
         Vector3 topWorld = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 1f, z));
 
         float halfHeight = GetComponent<SpriteRenderer>().bounds.extents.y;
-
         float topLimit = topWorld.y - halfHeight;
         float bottomLimit = bottomWorld.y + halfHeight;
 
         float maxY = topLimit - waveAmplitude;
         float minY = bottomLimit + waveAmplitude;
 
-        // Clamp original startPos.y into this range
-        float clampedY = Mathf.Clamp(startPos.y, minY, maxY);
-        startPos.y = clampedY;
+        startY = Mathf.Clamp(transform.position.y, minY, maxY);
     }
 }

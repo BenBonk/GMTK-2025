@@ -45,14 +45,14 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI scoreDisplay;
     public TextMeshProUGUI timerDisplay;
-    public TextMeshProUGUI cashDisplay;
+    public TextMeshProUGUI currencyDisplay;
     public TextMeshProUGUI lassosDisplay;
 
     private void Start()
     {
         elapsedTime = 0;
         lassosUsed = 0;
-        player.OnCurrencyChanged += UpdateCashDisplay;
+        player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         OnLassosChanged += UpdateLassosDisplay;
     }
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         pointsThisRound = 0;
         scoreDisplay.text = "Score: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
         timerDisplay.text = "Time: " + roundDuration.ToString("F1") + "s";
-        cashDisplay.text = "Cash: " + player.playerCurrency;
+        currencyDisplay.text = "currency: " + player.playerCurrency;
         lassosDisplay.text = "Lassos: " + player.lassosPerRound;
         roundNumber++;
         roundInProgress = true;
@@ -83,9 +83,9 @@ public class GameManager : MonoBehaviour
         scoreDisplay.text = $"Score: {newPoints} / {roundsPointsRequirement[roundNumber]}";
     }
 
-    private void UpdateCashDisplay(int newCash)
+    private void UpdatecurrencyDisplay(int newcurrency)
     {
-        cashDisplay.text = $"Cash: {newCash}";
+        currencyDisplay.text = $"currency: {newcurrency}";
     }
 
     private void UpdateTimerDisplay()

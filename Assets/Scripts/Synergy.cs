@@ -7,10 +7,12 @@ public class Synergy : ScriptableObject
     public string desc;
     public Sprite art;
     public int price;
+    public bool isExactMatch;
     
     public int currencyBonus;
+    public float currencyMult;
     public int pointsBonus;
-    public int pointsMult;
+    public float pointsMult;
     
     public string[] animalsNeeded;
 }

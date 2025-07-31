@@ -1,4 +1,3 @@
-using DG.Tweening;
 using UnityEngine;
 
 public class Cow : Animal
@@ -8,38 +7,31 @@ public class Cow : Animal
     public float maxMoveDuration = 4f;
     public float minPauseDuration = 0.5f;
     public float maxPauseDuration = 1.5f;
-    public float pauseFadeDuration = 0.7f; // how smoothly to transition
+    public float pauseFadeDuration = 0.7f;
 
     [Header("Speed Control")]
-    public float stopThreshold = 0.05f; // consider "paused" when speed is below this
+    public float stopThreshold = 0.05f;
 
     private float speedTarget;
-
+    private float speedVelocity = 0f;
     private float stateTimer = 0f;
     private bool isPaused = false;
 
-    private float speedVelocity = 0f; // used internally by SmoothDamp
-
-    private void Start()
+    public override void Start()
     {
         base.Start();
-
         currentSpeed = speed;
         speedTarget = speed;
         stateTimer = Random.Range(minMoveDuration, maxMoveDuration);
     }
 
-    public override void Move()
+    protected override Vector3 ComputeMove()
     {
-
-        // Smooth speed transition
         currentSpeed = Mathf.SmoothDamp(currentSpeed, speedTarget, ref speedVelocity, pauseFadeDuration);
-
         stateTimer -= Time.deltaTime;
 
         if (isPaused)
         {
-            // Paused: wait until timer finishes, then accelerate
             if (stateTimer <= 0f)
             {
                 isPaused = false;
@@ -49,21 +41,10 @@ public class Cow : Animal
         }
         else
         {
-            // Moving: apply horizontal movement
-            float step = currentSpeed * Time.deltaTime;
-            traveled += step;
-
-            float x = startPos.x - traveled;
-            float y = startPos.y;
-
-            transform.position = new Vector3(x, y, startPos.z);
-
-            // If move duration is up, start slowing down
             if (stateTimer <= 0f)
             {
                 speedTarget = 0f;
 
-                // Wait to actually enter pause state until we're nearly stopped
                 if (Mathf.Abs(currentSpeed) < stopThreshold)
                 {
                     isPaused = true;
@@ -71,5 +52,8 @@ public class Cow : Animal
                 }
             }
         }
+
+        return transform.position + Vector3.left * currentSpeed * Time.deltaTime;
     }
 }
+
