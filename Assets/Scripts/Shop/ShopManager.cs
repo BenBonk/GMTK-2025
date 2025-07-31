@@ -4,43 +4,23 @@ using UnityEngine;
 public class ShopManager : MonoBehaviour
 {
     private Player player;
-    public Animal[] synergyShopItems;
-    public Synergy[] animalShopItems;
+    public ShopItem[] shopItems;
     //continue
 
     private void Start()
     {
         player = GameController.player;
+        InitializeAllUpgrades();
     }
 
-    public void GenerateSynergies()
+    public void InitializeAllUpgrades()
     {
-        
+        foreach (var shopItem in shopItems)
+        {
+            shopItem.canPurchase = true;
+            shopItem.Initialize();
+        }
     }
-
-    public void GenerateAnimals()
-    {
-        
-    }
-
-    public void PurchaseAnimal(Animal animal)
-    {
-        
-    }
-
-    public void PurchaseSynergy(Synergy synergy)
-    {
-        
-    }
-
-    public void RemoveCard()
-    {
-        
-    }
-
-    public void IncreaseLoops()
-    {
-        
-    }
+    
     
 }

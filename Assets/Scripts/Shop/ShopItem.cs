@@ -9,7 +9,8 @@ public abstract class ShopItem : MonoBehaviour
     public TMP_Text priceText;
     public Image upgradeArt;
     
-    public int price;
+    [HideInInspector]public int price;
+    public bool canPurchase = true;
 
     public virtual void Initialize()
     {

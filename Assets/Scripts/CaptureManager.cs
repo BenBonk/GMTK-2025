@@ -7,14 +7,19 @@ public class CaptureManager : MonoBehaviour
 {
     private Player player;
     private GameManager gameManager;
-    public Synergy[] possibleSynergies;
     private List<HashSet<string>> synergySets = new List<HashSet<string>>();
 
     private void Start()
     {
         gameManager = GameController.gameManager;
         player = GameController.player;
-        foreach (var captured in possibleSynergies)
+    }
+
+    public void MakeCapture(Animal[] animalsCaptured)
+    {
+        // Check if there is a synergy in the capture
+        synergySets.Clear();
+        foreach (var captured in player.synergiesInDeck)
         {
             HashSet<string> newSet = new HashSet<string>();
             foreach (var animal in captured.animalsNeeded)
@@ -23,11 +28,6 @@ public class CaptureManager : MonoBehaviour
             }
             synergySets.Add(newSet);
         }
-    }
-
-    public void MakeCapture(Animal[] animalsCaptured)
-    {
-        // Check if there is a synergy in the capture
         
         HashSet<string> capturedSet = new HashSet<string>();
         foreach (var animal in animalsCaptured)
@@ -52,24 +52,11 @@ public class CaptureManager : MonoBehaviour
 
     public void ActivateSynergy(int index)
     {
-        player.playerCurrency += possibleSynergies[index].currencyBonus;
-        gameManager.pointsThisRound += possibleSynergies[index].pointsBonus;
-        if (possibleSynergies[index].pointsMult!=0)
+        player.playerCurrency += player.synergiesInDeck[index].currencyBonus;
+        gameManager.pointsThisRound += player.synergiesInDeck[index].pointsBonus;
+        if (player.synergiesInDeck[index].pointsMult!=0)
         {
-            gameManager.pointsThisRound *= possibleSynergies[index].pointsMult;   
+            gameManager.pointsThisRound *= player.synergiesInDeck[index].pointsMult;   
         }
     }
-}
-
-[System.Serializable]
-public class Synergy
-{
-    public string name;
-    public string desc;
-    public Sprite art;
-    
-    public string[] animalsNeeded;
-    public int currencyBonus;
-    public int pointsBonus;
-    public int pointsMult;
 }

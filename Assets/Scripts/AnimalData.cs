@@ -8,4 +8,5 @@ public class AnimalData : ScriptableObject
     private int level;
     public int price;
     public Sprite sprite;
+    public GameObject animalPrefab;
 }
