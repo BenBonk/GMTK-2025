@@ -24,8 +24,8 @@ public class Animal : MonoBehaviour
     public Vector3 startPos;
     protected Vector3 externalOffset = Vector3.zero;
 
-    private float topLimitY;
-    private float bottomLimitY;
+    public float topLimitY;
+    public float bottomLimitY;
 
     protected virtual void Awake()
     {

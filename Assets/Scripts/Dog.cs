@@ -8,11 +8,11 @@ public class Dog : Animal
     private int verticalDirection = 1;        // 1 = up-left, -1 = down-left
     private float zigTimer;
 
-    private float topLimitY;
-    private float bottomLimitY;
-
     public float pushRadius = 1.5f;
     public float pushStrength = 1f;
+
+    [Range(0f, 1f)] public float xPushFactor = 0.25f;
+    [Range(0f, 1f)] public float yPushFactor = 1.0f;
 
     public override void Start()
     {
@@ -92,9 +92,11 @@ public class Dog : Animal
             float dist = Vector3.Distance(transform.position, other.transform.position);
             if (dist < pushRadius)
             {
-                Vector3 away = (other.transform.position - transform.position).normalized;
-                float force = (1f - (dist / pushRadius)) * pushStrength; // Falloff
-                Vector3 push = away * force * Time.deltaTime;
+                Vector3 direction = (other.transform.position - transform.position).normalized;
+
+                float force = (1f - (dist / pushRadius)) * pushStrength;
+                Vector3 scaledDirection = new Vector3(direction.x * xPushFactor, direction.y * yPushFactor, 0f).normalized;
+                Vector3 push = scaledDirection * force * Time.deltaTime;
 
                 other.ApplyExternalOffset(push);
             }
