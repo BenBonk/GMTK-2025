@@ -11,7 +11,7 @@ public abstract class ShopItem : MonoBehaviour
     
     public int price;
 
-    public void Initialize()
+    public virtual void Initialize()
     {
         
     }

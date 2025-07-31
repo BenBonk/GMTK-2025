@@ -12,13 +12,8 @@ public class Animal : MonoBehaviour
     public int currencyToGive;
     public int pointsToGive;
 
-    public string name;
-    public string description;
-    private int level;
-    public int price;
     public float speed;
-    public Sprite sprite;
-
+    
     //movement parameters
     public bool isLassoed;
     public float traveled;
