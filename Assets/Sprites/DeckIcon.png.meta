@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4899ce849b68b6d4faeec76c714a6adc
+guid: 42e83bdc5d334934387a051a1e0f695e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 407852853044964936
-    second: BarnInside2_0
+      213: 8613946562746806202
+    second: DeckIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BarnInside2_0
+      name: DeckIcon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 108
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84eef5a420cf8a500800000000000000
-      internalID: 407852853044964936
+      spriteID: abf68ba92c2ea8770800000000000000
+      internalID: 8613946562746806202
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BarnInside2_0: 407852853044964936
+      DeckIcon_0: 8613946562746806202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

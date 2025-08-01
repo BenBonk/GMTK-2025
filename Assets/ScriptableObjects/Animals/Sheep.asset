@@ -15,5 +15,8 @@ MonoBehaviour:
   name: Sheep
   description: test description
   price: 15
-  sprite: {fileID: 0}
+  sprite: {fileID: 3184159518366690391, guid: b6ada73c9f252f149a349a2d2ca49cf4, type: 3}
+  sprite2: {fileID: -94349284460663922, guid: b6ada73c9f252f149a349a2d2ca49cf4, type: 3}
+  deckIcon: {fileID: 8605058227922502660, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
+  animSpeed: 0.5
   animalPrefab: {fileID: 0}

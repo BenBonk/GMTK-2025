@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
-  m_Name: Wolf
+  m_Name: Chicken
   m_EditorClassIdentifier: 
-  name: Wolf
+  name: Chicken
   description: test description
   price: 15
-  sprite: {fileID: -458185587419916677, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
-  sprite2: {fileID: -5547194825390550217, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
-  deckIcon: {fileID: -7821579809664607473, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
-  animSpeed: 0.45
+  sprite: {fileID: 5336855417275088078, guid: f62971579a2e2fc47923b5ab6f9e2da6, type: 3}
+  sprite2: {fileID: -1433109330887674863, guid: f62971579a2e2fc47923b5ab6f9e2da6, type: 3}
+  deckIcon: {fileID: 528724167467012147, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
+  animSpeed: 0.3
   animalPrefab: {fileID: 0}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class ShopManager : MonoBehaviour
@@ -8,6 +9,11 @@ public class ShopManager : MonoBehaviour
     public ShopItem[] shopItems;
     public GameObject deckCardPrefab;
     public RectTransform deckParent;
+
+    public RectTransform deckPanel;
+    public RectTransform synergiesPanel;
+    private bool deckOpen;
+    private bool synergiesOpen;
     //continue
 
     private void Start()
@@ -54,10 +60,37 @@ public class ShopManager : MonoBehaviour
             int count = entry.Value.count;
             GameObject reference = entry.Value.reference;
             GameObject card = Instantiate(deckCardPrefab, deckParent);
-            card.GetComponent<DeckCard>().Initialize(name + " - x" + count);
+           // card.GetComponent<DeckCard>().Initialize("x" + count);
         }
 
     }
-    
+
+    public void ToggleDeck()
+    {
+        deckOpen = !deckOpen;
+        if (deckOpen)
+        {
+            deckPanel.gameObject.SetActive(true);
+            deckPanel.DOAnchorPosX(-1058, .35f).SetEase(Ease.OutBack);
+        }
+        else
+        {
+            deckPanel.DOAnchorPosX(-1469, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>deckPanel.gameObject.SetActive(false));
+        }
+    }
+
+    public void ToggleSynergies()
+    {
+        synergiesOpen = !synergiesOpen;
+        if (synergiesOpen)
+        {
+            synergiesPanel.gameObject.SetActive(true);
+            synergiesPanel.DOAnchorPosX(1146, .35f).SetEase(Ease.OutBack);
+        }
+        else
+        {
+            synergiesPanel.DOAnchorPosX(1577, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>synergiesPanel.gameObject.SetActive(false));
+        }
+    }
     
 }

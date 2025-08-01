@@ -15,5 +15,8 @@ MonoBehaviour:
   name: Pig
   description: test description
   price: 15
-  sprite: {fileID: 0}
+  sprite: {fileID: -9122695006515159614, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
+  sprite2: {fileID: 3283728978217524802, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
+  deckIcon: {fileID: 7992425119190620944, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
+  animSpeed: 0.8
   animalPrefab: {fileID: 0}

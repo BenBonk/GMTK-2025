@@ -8,9 +8,11 @@ public class DeckCard : MonoBehaviour
     public TMP_Text desc;
     public Image icon;
 
-    public void Initialize(string text)
+    public void Initialize(string titleStr, string descStr, Sprite iconSprite)
     {
-        title.text = text;
+        title.text = titleStr;
+        desc.text = descStr;
+        icon.sprite = iconSprite;
     }
     
 }

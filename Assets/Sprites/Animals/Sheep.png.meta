@@ -119,10 +119,10 @@ TextureImporter:
       name: Sheep_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 20
-        height: 14
+        x: 0
+        y: 0
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Sheep_1
       rect:
         serializedVersion: 2
-        x: 25
-        y: 1
-        width: 20
-        height: 13
+        x: 24
+        y: 0
+        width: 24
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3ce2f58851b65524a8feac5bdb25d93c
     internalID: 0
     vertices: []
     indices: 

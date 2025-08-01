@@ -1,9 +1,14 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimalShopItem : ShopItem
 {
     public AnimalData[] possibleAnimals;
     private AnimalData chosenAnimal;
+    private Sprite sprite1;
+    private Sprite sprite2;
+    private float animSpeed;
     public override void Initialize()
     {
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
@@ -12,6 +17,10 @@ public class AnimalShopItem : ShopItem
         priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;
         upgradeArt.sprite = chosenAnimal.sprite;
+        sprite1 = chosenAnimal.sprite;
+        sprite2 = chosenAnimal.sprite2;
+        animSpeed = chosenAnimal.animSpeed;
+        StartCoroutine(Animate());
     }
     public override void PurchaseUpgrade()
     {
@@ -20,6 +29,17 @@ public class AnimalShopItem : ShopItem
             GameController.player.playerCurrency -= price;
             canPurchase = false;
             GameController.player.AddAnimalToDeck(chosenAnimal.animalPrefab);
+        }
+    }
+
+    IEnumerator Animate()
+    {
+        while (canPurchase)
+        {
+            upgradeArt.sprite = sprite1;
+            yield return new WaitForSeconds(animSpeed);
+            upgradeArt.sprite = sprite2;
+            yield return new WaitForSeconds(animSpeed);   
         }
     }
 }

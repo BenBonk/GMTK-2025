@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
-  m_Name: Wolf
+  m_Name: Horse
   m_EditorClassIdentifier: 
-  name: Wolf
+  name: Horse
   description: test description
   price: 15
-  sprite: {fileID: -458185587419916677, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
-  sprite2: {fileID: -5547194825390550217, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
-  deckIcon: {fileID: -7821579809664607473, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
-  animSpeed: 0.45
+  sprite: {fileID: 7672759098259192623, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
+  sprite2: {fileID: 3604182692263377810, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
+  deckIcon: {fileID: -5525896158525752363, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
+  animSpeed: 0.7
   animalPrefab: {fileID: 0}

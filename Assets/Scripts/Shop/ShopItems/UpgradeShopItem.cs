@@ -13,7 +13,7 @@ public class UpgradeShopItem : ShopItem
         titleText.text = chosenAnimal.name;
         price = (int)(25 * Mathf.Pow(2, animalLevel));
         priceText.text = price.ToString();
-        upgradeArt.sprite = chosenAnimal.sprite;
+        upgradeArt.sprite = chosenAnimal.deckIcon;
     }
     public override void PurchaseUpgrade()
     {
