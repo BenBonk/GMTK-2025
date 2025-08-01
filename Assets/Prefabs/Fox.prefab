@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4348466279998540118
+--- !u!1 &2978474136613401339
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2744881394383764780}
-  - component: {fileID: 3794475612963244493}
-  - component: {fileID: 6033065132623998016}
-  - component: {fileID: 8753846741520140088}
+  - component: {fileID: 6291927488793056930}
+  - component: {fileID: 1046149763964911851}
+  - component: {fileID: 4225513695606286369}
+  - component: {fileID: 3412350783031639149}
   m_Layer: 0
-  m_Name: Pig
+  m_Name: Fox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2744881394383764780
+--- !u!4 &6291927488793056930
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 2978474136613401339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.68, y: 1.12, z: 0}
+  m_LocalPosition: {x: 13.83, y: -1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3794475612963244493
+--- !u!212 &1046149763964911851
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 2978474136613401339}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9122695006515159614, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
+  m_Sprite: {fileID: 1791904589581890566, guid: f43edba2e5d1116448daa89f3affffe1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,13 +89,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6033065132623998016
+--- !u!61 &4225513695606286369
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 2978474136613401339}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -135,24 +135,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8753846741520140088
+--- !u!114 &3412350783031639149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 2978474136613401339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3940456c99f936c4fa0011017f041010, type: 3}
+  m_Script: {fileID: 11500000, guid: a276abcf981631d4382a32cb97cf533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyToGive: 5
-  pointsToGive: 0
+  currencyToGive: -10
+  pointsToGive: -10
   currencyMultToGive: 1
   pointsMultToGive: 1
-  isPredator: 0
-  speed: 2
+  isPredator: 1
+  speed: 1
   currentSpeed: 0
   isLassoed: 0
   leftEdgeX: 0
@@ -160,6 +160,10 @@ MonoBehaviour:
   topLimitY: 0
   bottomLimitY: 0
   tiltFrequency: 5
-  maxTiltAmplitude: 5
-  waveAmplitude: 1
-  waveFrequency: 0.4
+  maxTiltAmplitude: 4
+  baseAmplitude: 1
+  baseFrequency: 0.1
+  amplitudeVariation: 0.75
+  frequencyVariation: 0.02
+  variationSpeed: 0.2
+  speedRecoveryRate: 0.5

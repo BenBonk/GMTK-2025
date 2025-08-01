@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4348466279998540118
+--- !u!1 &5660066743077353431
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2744881394383764780}
-  - component: {fileID: 3794475612963244493}
-  - component: {fileID: 6033065132623998016}
-  - component: {fileID: 8753846741520140088}
+  - component: {fileID: 2937629875415924333}
+  - component: {fileID: 2260465360911162231}
+  - component: {fileID: 8939936914984115835}
+  - component: {fileID: 5618917105362823549}
   m_Layer: 0
-  m_Name: Pig
+  m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2744881394383764780
+--- !u!4 &2937629875415924333
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 5660066743077353431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.68, y: 1.12, z: 0}
+  m_LocalPosition: {x: 13.83, y: -4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3794475612963244493
+--- !u!212 &2260465360911162231
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 5660066743077353431}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9122695006515159614, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
+  m_Sprite: {fileID: -3994744024693093290, guid: 3505c7501cd1bd5439c88d7002a5b20e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,13 +89,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6033065132623998016
+--- !u!61 &8939936914984115835
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 5660066743077353431}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5, y: 1}
+    oldSize: {x: 1.75, y: 1.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -135,24 +135,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8753846741520140088
+--- !u!114 &5618917105362823549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4348466279998540118}
+  m_GameObject: {fileID: 5660066743077353431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3940456c99f936c4fa0011017f041010, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bf8ef00ede9a154f8a4e729998ccdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyToGive: 5
-  pointsToGive: 0
-  currencyMultToGive: 1
-  pointsMultToGive: 1
+  currencyToGive: 10
+  pointsToGive: 10
+  currencyMultToGive: 1.2
+  pointsMultToGive: 1.2
   isPredator: 0
-  speed: 2
+  speed: 3
   currentSpeed: 0
   isLassoed: 0
   leftEdgeX: 0
@@ -160,6 +160,10 @@ MonoBehaviour:
   topLimitY: 0
   bottomLimitY: 0
   tiltFrequency: 5
-  maxTiltAmplitude: 5
-  waveAmplitude: 1
-  waveFrequency: 0.4
+  maxTiltAmplitude: 6
+  zigZagAngle: 10
+  zigZagDuration: 2
+  pushRadius: 3
+  pushStrength: 4
+  xPushFactor: 0.1
+  yPushFactor: 1

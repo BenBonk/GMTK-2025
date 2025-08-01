@@ -259,12 +259,12 @@ public class LassoController : MonoBehaviour
         // === POINTS BONUS ===
         if (result.pointBonus != 0)
         {
-            Vector3 offset = new Vector3(0, row++ * 1.5f, 0);
+            Vector3 offset = new Vector3(0, row++ * 1f, 0);
             GameObject group = Instantiate(feedbackTextGroupPrefab, baseWorld + offset, Quaternion.identity);
             createdGroups.Add(group);
 
             var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
-            var multText = group.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
+            var multText = bonusText.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
 
             if (bonusText != null)
             {
@@ -298,7 +298,7 @@ public class LassoController : MonoBehaviour
                 if (!multPointsShown && multText != null)
                 {
                     multPointsShown = true;
-                    ShowMultiplierPopIn(multText);
+                    ShowMultiplierPopIn(multText, bonusText, result.pointBonus, result.pointMult);
                 }
 
                 if (bonusPointsShown && multPointsShown)
@@ -315,12 +315,12 @@ public class LassoController : MonoBehaviour
         // === CURRENCY BONUS ===
         if (result.currencyBonus != 0)
         {
-            Vector3 offset = new Vector3(0, row++ * 1.5f, 0);
+            Vector3 offset = new Vector3(0, row++ * 1f, 0);
             GameObject group = Instantiate(feedbackTextGroupPrefab, baseWorld + offset, Quaternion.identity);
             createdGroups.Add(group);
 
             var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
-            var multText = group.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
+            var multText = bonusText.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
 
             if (bonusText != null)
             {
@@ -354,7 +354,7 @@ public class LassoController : MonoBehaviour
                 if (!multCashShown && multText != null)
                 {
                     multCashShown = true;
-                    ShowMultiplierPopIn(multText);
+                    ShowMultiplierPopIn(multText, bonusText, result.currencyBonus, result.currencyMult);
                 }
 
                 if (bonusCashShown && multCashShown)
@@ -387,15 +387,27 @@ public class LassoController : MonoBehaviour
         }
     }
 
-    private void ShowMultiplierPopIn(TMP_Text multText)
+    private void ShowMultiplierPopIn(TMP_Text multText, TMP_Text bonusText, int baseValue, float multiplier)
     {
-        if (multText == null) return;
+        if (multText == null || bonusText == null) return;
+
+        // Update bonus text immediately when multiplier is revealed
+        int newTotal = Mathf.RoundToInt(baseValue * multiplier);
+        if (bonusText.text.StartsWith("+Points"))
+            bonusText.text = $"+Points: {newTotal}";
+        else if (bonusText.text.StartsWith("+Cash"))
+            bonusText.text = $"+Cash: {newTotal}";
 
         multText.gameObject.SetActive(true);
         multText.transform.localScale = Vector3.zero;
+        multText.transform.localRotation = Quaternion.identity;
 
         Sequence multPop = DOTween.Sequence();
-        multPop.Append(multText.transform.DOScale(1.3f, 0.15f).SetEase(Ease.OutBack));
+
+        multPop.Append(multText.transform.DOScale(1.2f, 0.1f).SetEase(Ease.OutBack));
+        multPop.Join(multText.transform.DOLocalRotate(new Vector3(0, 0, -15f), 0.05f));
+        multPop.Append(multText.transform.DOLocalRotate(new Vector3(0, 0, 15f), 0.1f));
+        multPop.Append(multText.transform.DOLocalRotate(Vector3.zero, 0.05f));
         multPop.Append(multText.transform.DOScale(1f, 0.1f).SetEase(Ease.OutCubic));
     }
 

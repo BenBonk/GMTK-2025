@@ -70,27 +70,27 @@ public class GameManager : MonoBehaviour
     public void StartRound()
     {
         pointsThisRound = 0;
-        scoreDisplay.text = "Score: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
-        timerDisplay.text = "Time: " + roundDuration.ToString("F1") + "s";
-        currencyDisplay.text = "currency: " + player.playerCurrency;
-        lassosDisplay.text = "Lassos: " + player.lassosPerRound;
+        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
+        timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
+        currencyDisplay.text = "CASH: " + player.playerCurrency;
+        //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
         roundNumber++;
         roundInProgress = true;
     }
 
     private void UpdateScoreDisplay(int newPoints)
     {
-        scoreDisplay.text = $"Score: {newPoints} / {roundsPointsRequirement[roundNumber]}";
+        scoreDisplay.text = $"POINTS: {newPoints} / {roundsPointsRequirement[roundNumber]}";
     }
 
     private void UpdatecurrencyDisplay(int newcurrency)
     {
-        currencyDisplay.text = $"currency: {newcurrency}";
+        currencyDisplay.text = $"CASH: {newcurrency}";
     }
 
     private void UpdateTimerDisplay()
     {
-        timerDisplay.text = $"Time: {roundDuration-elapsedTime:F1}s";
+        timerDisplay.text = $"TIME: {roundDuration-elapsedTime:F1}s";
     }
 
     private void UpdateLassosDisplay(int usedLassos)

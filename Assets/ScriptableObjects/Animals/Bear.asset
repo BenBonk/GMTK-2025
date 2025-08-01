@@ -19,4 +19,4 @@ MonoBehaviour:
   sprite2: {fileID: 1047276864, guid: b20cd1efb2399b84a83d3ac4f9d5504a, type: 3}
   deckIcon: {fileID: 7976311676407056975, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 1
-  animalPrefab: {fileID: 0}
+  animalPrefab: {fileID: 1086039005306102819, guid: 8c3128233cd69cb44a14147edba5745b, type: 3}
