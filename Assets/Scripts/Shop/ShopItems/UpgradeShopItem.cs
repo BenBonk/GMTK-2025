@@ -17,7 +17,7 @@ public class UpgradeShopItem : ShopItem
     }
     public override void PurchaseUpgrade()
     {
-        if (canPurchase && GameController.player.playerCurrency >= price)
+        if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
             GameController.player.playerCurrency -= price;
             canPurchase = false;

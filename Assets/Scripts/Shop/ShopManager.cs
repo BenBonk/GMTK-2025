@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
@@ -9,12 +10,18 @@ public class ShopManager : MonoBehaviour
     public ShopItem[] shopItems;
     public DeckCard[] synergyCards;
     public GameObject deckCardPrefab;
+    public GameObject synergyCardPrefab;
     public RectTransform deckParent;
-
+    public RectTransform synergiesParent;
+    
     public RectTransform deckPanel;
     public RectTransform synergiesPanel;
     private bool deckOpen;
-    private bool synergiesOpen;
+    [HideInInspector]public bool synergiesOpen;
+
+    [HideInInspector]public Synergy overridingSynergy;
+    public Image darkCover;
+    public bool cantPurchaseItem;
     //continue
 
     private void Start()
@@ -38,7 +45,16 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateSynergies()
     {
-        
+        foreach (Transform child in synergiesParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (var synergy in player.synergiesInDeck)
+        {
+            GameObject card = Instantiate(synergyCardPrefab, synergiesParent);
+            card.GetComponent<DeckCard>().Initialize(synergy.name,synergy.desc,synergy.art);
+        }
     }
 
     public void UpdateDeck()
@@ -78,6 +94,10 @@ public class ShopManager : MonoBehaviour
 
     public void ToggleDeck()
     {
+        if (cantPurchaseItem)
+        {
+            return;
+        }
         deckOpen = !deckOpen;
         if (deckOpen)
         {

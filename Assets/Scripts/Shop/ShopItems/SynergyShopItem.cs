@@ -1,9 +1,11 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class SynergyShopItem : ShopItem
 {
     public Synergy[] possibleSynergies;
     private Synergy chosenSynergy;
+    public SynergySlots synergySlots;
 
     public override void Initialize()
     {
@@ -16,14 +18,25 @@ public class SynergyShopItem : ShopItem
     }
     public override void PurchaseUpgrade()
     {
-        if (canPurchase && GameController.player.playerCurrency >= price)
+        if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
             GameController.player.playerCurrency -= price;
             canPurchase = false;
             if (GameController.player.synergiesInDeck.Count<3)
             {
                 GameController.player.AddSynergyToDeck(chosenSynergy);
+                shopManager.UpdateSynergies();
             }
+            else
+            {
+                shopManager.synergiesOpen = false;
+                shopManager.ToggleSynergies();  
+                shopManager.darkCover.DOFade(.75f, 0.5f);
+                shopManager.cantPurchaseItem = true;
+                shopManager.overridingSynergy = chosenSynergy;
+                synergySlots.canOverrideSynergy = true;
+            }
+
         }
     }
 }
