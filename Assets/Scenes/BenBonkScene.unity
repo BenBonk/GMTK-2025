@@ -315,12 +315,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ec31ddc60061d49b9e8b0edc3cfb0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCurrency: 0
   animalsInDeck:
   - {fileID: 4857273460826031192, guid: b630984c7e71cc848bcfbb1b2592b24a, type: 3}
   - {fileID: 4857273460826031192, guid: b630984c7e71cc848bcfbb1b2592b24a, type: 3}
   - {fileID: 4857273460826031192, guid: b630984c7e71cc848bcfbb1b2592b24a, type: 3}
   - {fileID: 8084247208874845987, guid: 7adde632424c112409be9f00fa6e4939, type: 3}
+  lassosPerRound: 0
   synergiesInDeck: []
 --- !u!4 &177080493
 Transform:
@@ -2849,10 +2849,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 177080492}
   roundsPointsRequirement: 0000000000000000000000000000000000000000
-  pointsThisRound: 0
   roundNumber: 0
   roundInProgress: 0
-  Roundduration: 20
+  roundDuration: 20
+  scoreDisplay: {fileID: 0}
+  timerDisplay: {fileID: 0}
+  cashDisplay: {fileID: 0}
+  lassosDisplay: {fileID: 0}
 --- !u!4 &903279479
 Transform:
   m_ObjectHideFlags: 0
