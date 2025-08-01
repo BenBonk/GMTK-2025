@@ -36,11 +36,11 @@ public class ShopManager : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        Dictionary<string, (int count, GameObject reference)> uniqueObjects =
-            new Dictionary<string, (int, GameObject)>();
+        Dictionary<string, (int count, AnimalData reference)> uniqueObjects =
+            new Dictionary<string, (int, AnimalData)>();
         
-        /*
-        foreach (GameObject obj in player.animalsInDeck)
+        
+        foreach (AnimalData obj in player.animalsInDeck)
         {
             string name = obj.name;
 
@@ -53,16 +53,15 @@ public class ShopManager : MonoBehaviour
                 uniqueObjects[name] = (1, obj);
             }
         }
-        */
+        
 
         // Step 2: Create a card for each unique GameObject
         foreach (var entry in uniqueObjects)
         {
-            string name = entry.Key;
             int count = entry.Value.count;
-            GameObject reference = entry.Value.reference;
+            AnimalData reference = entry.Value.reference;
             GameObject card = Instantiate(deckCardPrefab, deckParent);
-           // card.GetComponent<DeckCard>().Initialize("x" + count);
+            card.GetComponent<DeckCard>().Initialize("x" + count, reference.description, reference.deckIcon);
         }
 
     }
