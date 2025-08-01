@@ -2,14 +2,12 @@ using UnityEngine;
 
 public class Cow : Animal
 {
-    [Header("Move & Pause Timing")]
     public float minMoveDuration = 2f;
     public float maxMoveDuration = 4f;
     public float minPauseDuration = 0.5f;
     public float maxPauseDuration = 1.5f;
     public float pauseFadeDuration = 0.7f;
 
-    [Header("Speed Control")]
     public float stopThreshold = 0.05f;
 
     private float speedTarget;

@@ -239,24 +239,28 @@ public class LassoController : MonoBehaviour
 
         // Points
         if (result.pointBonus != 0)
+        {
             feedbacks.Add(("+Points", result.pointBonus));
-        if (Mathf.Abs(result.pointMult - 1f) > 0.01f)
-            feedbacks.Add(("xPoints", result.pointMult));
+            if (Mathf.Abs(result.pointMult - 1f) > 0.01f)
+                feedbacks.Add(("xPoints", result.pointMult));
+        }
 
         // Currency
         if (result.currencyBonus != 0)
+        {
             feedbacks.Add(("+Cash", result.currencyBonus));
-        if (Mathf.Abs(result.currencyMult - 1f) > 0.01f)
-            feedbacks.Add(("xCash", result.currencyMult));
+            if (Mathf.Abs(result.currencyMult - 1f) > 0.01f)
+                feedbacks.Add(("xCash", result.currencyMult));
+        }
 
         List<(GameObject go, TMP_Text text, string label)> createdText = new();
 
-        // Track animation steps
+        // Track animation completion
         bool bonusPointsShown = result.pointBonus == 0;
-        bool multPointsShown = Mathf.Abs(result.pointMult - 1f) <= 0.01f;
+        bool multPointsShown = bonusPointsShown || Mathf.Abs(result.pointMult - 1f) <= 0.01f;
 
         bool bonusCashShown = result.currencyBonus == 0;
-        bool multCashShown = Mathf.Abs(result.currencyMult - 1f) <= 0.01f;
+        bool multCashShown = bonusCashShown || Mathf.Abs(result.currencyMult - 1f) <= 0.01f;
 
         for (int i = 0; i < feedbacks.Count; i++)
         {
@@ -282,11 +286,13 @@ public class LassoController : MonoBehaviour
                 popSeq.Append(go.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
                 popSeq.OnComplete(() =>
                 {
+                    // Flag parts as complete
                     if (label == "+Points") bonusPointsShown = true;
                     if (label == "xPoints") multPointsShown = true;
                     if (label == "+Cash") bonusCashShown = true;
                     if (label == "xCash") multCashShown = true;
 
+                    // Apply score if both shown
                     if (bonusPointsShown && multPointsShown)
                     {
                         int totalPoints = Mathf.RoundToInt(result.pointBonus * result.pointMult);
@@ -309,7 +315,7 @@ public class LassoController : MonoBehaviour
             yield return new WaitForSeconds(feedbackDelay);
         }
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.3f); // Wait before fade/move
 
         float moveUpAmount = 1f;
         float fadeDuration = 1.5f;
