@@ -14,6 +14,7 @@ public class Goat : Animal
 
     public float predatorSlowRadius = 2.5f;
     public float predatorSpeedMultiplier = 0.5f; // 0.5 = 50% speed
+    public float minAllowedSpeedMultiplier = 0.3f; // cap slowdown 
 
     private Vector3 moveDirection;
     private float stateTimer = 0f;
@@ -84,8 +85,13 @@ public class Goat : Animal
             float dist = Vector3.Distance(transform.position, other.transform.position);
             if (dist <= predatorSlowRadius)
             {
-                // Reduce current speed (but don’t let it go negative or too low)
-                other.currentSpeed = Mathf.Min(other.currentSpeed, other.speed * predatorSpeedMultiplier);
+                float proposedSpeed = other.speed * predatorSpeedMultiplier;
+                float minSpeed = other.speed * minAllowedSpeedMultiplier;
+
+                // Apply the higher of the proposed speed and min allowed speed
+                float finalSpeed = Mathf.Max(proposedSpeed, minSpeed);
+
+                other.currentSpeed = Mathf.Min(other.currentSpeed, finalSpeed);
             }
         }
     }

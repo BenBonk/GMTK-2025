@@ -13,8 +13,18 @@ public class LassoController : MonoBehaviour
     public float closeThreshold = 0.5f; // Distance to consider the lasso closed
     private List<Vector2> rawPoints = new List<Vector2>();
     private bool isDrawing = false;
-    public GameObject feedbackTextPrefab; // assign a TextMeshPro or UI prefab
+    public GameObject feedbackTextGroupPrefab;
+
     public float feedbackDelay = 0.5f;    // delay between each text popup
+
+    public Color pointBonusColor;
+    public Color negativePointBonusColor;
+
+    public Color cashBonusColor;
+    public Color negativeCashBonusColor;
+
+    public Color positiveMultColor;
+    public Color negativeMultColor;
 
     void Update()
     {
@@ -135,7 +145,7 @@ public class LassoController : MonoBehaviour
             return;
         }
 
-        GameController.gameManager.lassosUsed++;
+        //GameController.gameManager.lassosUsed++;
         rawPoints.Add(start); // close loop
 
         // Generate smooth loop (no tail yet)
@@ -228,105 +238,167 @@ public class LassoController : MonoBehaviour
         StartCoroutine(ShowFeedbackSequence(result));
     }
 
+
     private IEnumerator ShowFeedbackSequence((int pointBonus, float pointMult, int currencyBonus, float currencyMult) result)
     {
         float zDepth = Mathf.Abs(Camera.main.transform.position.z);
-        Vector3 screenBase = new Vector3(Screen.width / 2f, 100f, zDepth); // 100px from bottom
+        Vector3 screenBase = new Vector3(Screen.width / 2f, 100f, zDepth);
         Vector3 baseWorld = Camera.main.ScreenToWorldPoint(screenBase);
         baseWorld.z = 0f;
 
-        List<(string label, object value)> feedbacks = new();
+        List<GameObject> createdGroups = new();
 
-        // Points
-        if (result.pointBonus != 0)
-        {
-            feedbacks.Add(("+Points", result.pointBonus));
-            if (Mathf.Abs(result.pointMult - 1f) > 0.01f)
-                feedbacks.Add(("xPoints", result.pointMult));
-        }
-
-        // Currency
-        if (result.currencyBonus != 0)
-        {
-            feedbacks.Add(("+Cash", result.currencyBonus));
-            if (Mathf.Abs(result.currencyMult - 1f) > 0.01f)
-                feedbacks.Add(("xCash", result.currencyMult));
-        }
-
-        List<(GameObject go, TMP_Text text, string label)> createdText = new();
-
-        // Track animation completion
         bool bonusPointsShown = result.pointBonus == 0;
-        bool multPointsShown = bonusPointsShown || Mathf.Abs(result.pointMult - 1f) <= 0.01f;
+        bool multPointsShown = Mathf.Abs(result.pointMult - 1f) <= 0.01f || result.pointBonus == 0;
 
         bool bonusCashShown = result.currencyBonus == 0;
-        bool multCashShown = bonusCashShown || Mathf.Abs(result.currencyMult - 1f) <= 0.01f;
+        bool multCashShown = Mathf.Abs(result.currencyMult - 1f) <= 0.01f || result.currencyBonus == 0;
 
-        for (int i = 0; i < feedbacks.Count; i++)
+        int row = 0;
+
+        // === POINTS BONUS ===
+        if (result.pointBonus != 0)
         {
-            Vector3 offset = new Vector3(0, i * 1.5f, 0);
-            GameObject go = Instantiate(feedbackTextPrefab, baseWorld + offset, Quaternion.identity);
-            go.transform.localScale = Vector3.zero;
+            Vector3 offset = new Vector3(0, row++ * 1.5f, 0);
+            GameObject group = Instantiate(feedbackTextGroupPrefab, baseWorld + offset, Quaternion.identity);
+            createdGroups.Add(group);
 
-            TMP_Text text = go.GetComponent<TMP_Text>();
-            string label = feedbacks[i].label;
+            var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
+            var multText = group.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
 
-            if (text != null)
+            if (bonusText != null)
             {
-                if (feedbacks[i].value is float f)
-                    text.text = $"{label}: {f:F2}";
-                else
-                    text.text = $"{label}: {feedbacks[i].value}";
-
-                text.alpha = 1f;
-
-                // Animate pop-in
-                Sequence popSeq = DOTween.Sequence();
-                popSeq.Append(go.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
-                popSeq.Append(go.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
-                popSeq.OnComplete(() =>
-                {
-                    // Flag parts as complete
-                    if (label == "+Points") bonusPointsShown = true;
-                    if (label == "xPoints") multPointsShown = true;
-                    if (label == "+Cash") bonusCashShown = true;
-                    if (label == "xCash") multCashShown = true;
-
-                    // Apply score if both shown
-                    if (bonusPointsShown && multPointsShown)
-                    {
-                        int totalPoints = Mathf.RoundToInt(result.pointBonus * result.pointMult);
-                        GameController.gameManager.pointsThisRound += totalPoints;
-                        Debug.Log($"Points added: {totalPoints}");
-                        bonusPointsShown = multPointsShown = false;
-                    }
-
-                    if (bonusCashShown && multCashShown)
-                    {
-                        int totalCash = Mathf.RoundToInt(result.currencyBonus * result.currencyMult);
-                        GameController.player.playerCurrency += totalCash;
-                        Debug.Log($"Cash added: {totalCash}");
-                        bonusCashShown = multCashShown = false;
-                    }
-                });
+                bonusText.text = $"+Points: {result.pointBonus}";
+                bonusText.color = result.pointBonus >= 0 ? pointBonusColor : negativePointBonusColor;
             }
 
-            createdText.Add((go, text, label));
+            if (multText != null)
+            {
+                if (Mathf.Abs(result.pointMult - 1f) > 0.01f)
+                {
+                    multText.text = $"x{result.pointMult:F2}";
+                    multText.color = result.pointMult > 1f ? positiveMultColor : negativeMultColor;
+                    multText.gameObject.SetActive(false); // Hide initially
+                }
+                else
+                {
+                    multPointsShown = true;
+                    multText.gameObject.SetActive(false);
+                }
+            }
+
+            group.transform.localScale = Vector3.zero;
+            Sequence pop = DOTween.Sequence();
+            pop.Append(group.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
+            pop.Append(group.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+            pop.OnComplete(() =>
+            {
+                bonusPointsShown = true;
+
+                if (!multPointsShown && multText != null)
+                {
+                    multPointsShown = true;
+                    ShowMultiplierPopIn(multText);
+                }
+
+                if (bonusPointsShown && multPointsShown)
+                {
+                    int totalPoints = Mathf.RoundToInt(result.pointBonus * result.pointMult);
+                    GameController.gameManager.pointsThisRound += totalPoints;
+                    Debug.Log($"Points added: {totalPoints}");
+                }
+            });
+
             yield return new WaitForSeconds(feedbackDelay);
         }
 
-        yield return new WaitForSeconds(0.3f); // Wait before fade/move
+        // === CURRENCY BONUS ===
+        if (result.currencyBonus != 0)
+        {
+            Vector3 offset = new Vector3(0, row++ * 1.5f, 0);
+            GameObject group = Instantiate(feedbackTextGroupPrefab, baseWorld + offset, Quaternion.identity);
+            createdGroups.Add(group);
+
+            var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
+            var multText = group.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
+
+            if (bonusText != null)
+            {
+                bonusText.text = $"+Cash: {result.currencyBonus}";
+                bonusText.color = result.currencyBonus >= 0 ? cashBonusColor : negativeCashBonusColor;
+            }
+
+            if (multText != null)
+            {
+                if (Mathf.Abs(result.currencyMult - 1f) > 0.01f)
+                {
+                    multText.text = $"x{result.currencyMult:F2}";
+                    multText.color = result.currencyMult > 1f ? positiveMultColor : negativeMultColor;
+                    multText.gameObject.SetActive(false); // Hide initially
+                }
+                else
+                {
+                    multCashShown = true;
+                    multText.gameObject.SetActive(false);
+                }
+            }
+
+            group.transform.localScale = Vector3.zero;
+            Sequence pop = DOTween.Sequence();
+            pop.Append(group.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
+            pop.Append(group.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+            pop.OnComplete(() =>
+            {
+                bonusCashShown = true;
+
+                if (!multCashShown && multText != null)
+                {
+                    multCashShown = true;
+                    ShowMultiplierPopIn(multText);
+                }
+
+                if (bonusCashShown && multCashShown)
+                {
+                    int totalCash = Mathf.RoundToInt(result.currencyBonus * result.currencyMult);
+                    GameController.player.playerCurrency += totalCash;
+                    Debug.Log($"Cash added: {totalCash}");
+                }
+            });
+
+            yield return new WaitForSeconds(feedbackDelay);
+        }
+
+        // Wait before fade/move
+        yield return new WaitForSeconds(0.3f);
 
         float moveUpAmount = 1f;
         float fadeDuration = 1.5f;
 
-        foreach (var (go, text, _) in createdText)
+        foreach (GameObject group in createdGroups)
         {
-            go.transform.DOMoveY(go.transform.position.y + moveUpAmount, fadeDuration).SetEase(Ease.OutSine);
-            text.DOFade(0f, fadeDuration).SetEase(Ease.InOutQuad);
-            Destroy(go, fadeDuration + 0.1f);
+            group.transform.DOMoveY(group.transform.position.y + moveUpAmount, fadeDuration).SetEase(Ease.OutSine);
+
+            foreach (TMP_Text txt in group.GetComponentsInChildren<TMP_Text>())
+            {
+                txt.DOFade(0f, fadeDuration).SetEase(Ease.InOutQuad);
+            }
+
+            Destroy(group, fadeDuration + 0.1f);
         }
     }
+
+    private void ShowMultiplierPopIn(TMP_Text multText)
+    {
+        if (multText == null) return;
+
+        multText.gameObject.SetActive(true);
+        multText.transform.localScale = Vector3.zero;
+
+        Sequence multPop = DOTween.Sequence();
+        multPop.Append(multText.transform.DOScale(1.3f, 0.15f).SetEase(Ease.OutBack));
+        multPop.Append(multText.transform.DOScale(1f, 0.1f).SetEase(Ease.OutCubic));
+    }
+
 
 
 

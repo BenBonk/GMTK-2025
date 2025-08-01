@@ -95,9 +95,15 @@ public class Chicken : Animal
             transform.position.z
         );
 
+        // Face right if moving right (sprite faces left by default)
+        if (target.x > transform.position.x)
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // flip to right
+        else
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // face left (default)
+
         moveDirection = (target - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, target);
-        moveTimer = distance / speed; // duration based purely on distance and speed
+        moveTimer = distance / speed;
     }
 
     private void BeginExit()
@@ -106,6 +112,7 @@ public class Chicken : Animal
         isPaused = false;
         speedTarget = speed;
         moveDirection = Vector3.left;
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 }
 

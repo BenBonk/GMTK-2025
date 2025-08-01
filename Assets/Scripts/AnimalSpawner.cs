@@ -18,7 +18,7 @@ public class AnimalSpawner : MonoBehaviour
 
     private void SpawnRandomAnimal()
     {
-        GameObject animal = Instantiate(GameController.player.animalsInDeck[Random.Range(0,GameController.player.animalsInDeck.Count)]);
+        GameObject animal = Instantiate(GameController.player.animalsInDeck[Random.Range(0,GameController.player.animalsInDeck.Count)].animalPrefab);
 
         // Get vertical bounds of the camera in world space
         float z = Mathf.Abs(Camera.main.transform.position.z - animal.transform.position.z);

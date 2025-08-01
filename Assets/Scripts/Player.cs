@@ -6,10 +6,10 @@ public class Player : MonoBehaviour
 {
     //public int timeToSpawnAnimals;
     
-    public List<GameObject> animalsInDeck;
+    public List<AnimalData> animalsInDeck;
     public int lassosPerRound;
     public List<Synergy> synergiesInDeck;
-    public void AddAnimalToDeck(GameObject animal)
+    public void AddAnimalToDeck(AnimalData animal)
     {
         animalsInDeck.Add(animal);
     }

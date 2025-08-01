@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     public float roundDuration = 20f;
     private float elapsedTime;
 
-    private int _lassosUsedThisRound;
-    public int lassosUsed
+    //private int _lassosUsedThisRound;
+    /*public int lassosUsed
         {
         get => _lassosUsedThisRound;
         set
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
                 OnLassosChanged?.Invoke(_lassosUsedThisRound);
             }
         }
-    }
+    }*/
 
     private int _pointsThisRound;
     public int pointsThisRound
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         elapsedTime = 0;
-        lassosUsed = 0;
+        //lassosUsed = 0;
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         OnLassosChanged += UpdateLassosDisplay;

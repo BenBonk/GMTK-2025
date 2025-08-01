@@ -23,9 +23,19 @@ public class Animal : MonoBehaviour
     public float leftEdgeX;
     public Vector3 startPos;
     protected Vector3 externalOffset = Vector3.zero;
+    protected Vector3 pendingExternalOffset = Vector3.zero;
 
     public float topLimitY;
     public float bottomLimitY;
+
+    // run animation parameters
+    private float tiltAngle = 0f;
+    public float tiltFrequency = 3f; // how fast the tilt cycles (e.g. 3 = 3 full waves per second)
+    public float maxTiltAmplitude = 20f; // degrees at full speed
+
+    private float tiltProgress = 0f;
+    private Vector3 previousPosition;
+    public float actualSpeed { get; private set; } // total movement speed
 
     protected virtual void Awake()
     {
@@ -64,9 +74,13 @@ public class Animal : MonoBehaviour
         externalOffset = Vector3.zero;
     }
 
-    public void ApplyExternalOffset(Vector3 offset)
+
+
+    public virtual void ApplyExternalOffset(Vector3 offset)
     {
-        externalOffset += offset;
+        // Instead of applying immediately, accumulate the strongest offset
+        if (offset.magnitude > pendingExternalOffset.magnitude)
+            pendingExternalOffset = offset;
     }
 
     protected virtual Vector3 ComputeMove()
@@ -79,7 +93,19 @@ public class Animal : MonoBehaviour
     {
         if (!isLassoed)
         {
+            externalOffset = pendingExternalOffset;
+            pendingExternalOffset = Vector3.zero;
             Move();
+        }
+    }
+
+    protected virtual void LateUpdate()
+    {
+        if (!isLassoed)
+        {
+            actualSpeed = (transform.position - previousPosition).magnitude / Time.deltaTime;
+            previousPosition = transform.position;
+            ApplyRunTilt();
         }
     }
 
@@ -98,6 +124,21 @@ public class Animal : MonoBehaviour
     protected float ClampY(float y)
     {
         return Mathf.Clamp(y, bottomLimitY, topLimitY);
+    }
+
+    protected virtual void ApplyRunTilt()
+    {
+        // Advance the tilt cycle
+        tiltProgress += Time.deltaTime * tiltFrequency;
+
+        // Normalize actual speed relative to base speed
+        float speedFactor = Mathf.Clamp01(actualSpeed / speed);
+
+        // Calculate the tilt angle using sine wave
+        float amplitude = maxTiltAmplitude * speedFactor;
+        float angle = Mathf.Sin(tiltProgress * Mathf.PI * 2f) * amplitude;
+
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
 

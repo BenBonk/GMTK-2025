@@ -112,6 +112,10 @@ public class Bear : Animal
             if (other == this || other.isLassoed)
                 continue;
 
+            // Skip attracting other bears
+            if (other is Bear)
+                continue;
+
             float dist = Vector3.Distance(transform.position, other.transform.position);
             if (dist < attractionRadius)
             {
@@ -120,7 +124,6 @@ public class Bear : Animal
                 Vector3 offset = direction * force * Time.deltaTime;
                 Vector3 smoothedOffset = Vector3.Lerp(Vector3.zero, offset, 0.25f);
                 other.ApplyExternalOffset(smoothedOffset);
-
             }
         }
     }
