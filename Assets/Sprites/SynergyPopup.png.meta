@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 624d8647241ab79419f200fb3f2f4825
+guid: 76138aae81097d84a8ef7130370907d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7672759098259192623
-    second: Horse_0
-  - first:
-      213: 3604182692263377810
-    second: Horse_1
+      213: -4171150779234643993
+    second: SynergyPopup_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Horse_0
+      name: SynergyPopup_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 28
-        height: 20
+        width: 50
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2bb2e27fbd1b7a60800000000000000
-      internalID: 7672759098259192623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Horse_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 0
-        width: 28
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29b38f51011a40230800000000000000
-      internalID: 3604182692263377810
+      spriteID: 7ef002b47781d16c0800000000000000
+      internalID: -4171150779234643993
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e1e464e536aa78f40ae496768439e71a
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Horse_0: 7672759098259192623
-      Horse_1: 3604182692263377810
+      SynergyPopup_0: -4171150779234643993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,5 @@
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class AnimalShopItem : ShopItem
         priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;
         upgradeArt.sprite = chosenAnimal.sprite;
+        upgradeArt.SetNativeSize();
         sprite1 = chosenAnimal.sprite;
         sprite2 = chosenAnimal.sprite2;
         animSpeed = chosenAnimal.animSpeed;
@@ -29,6 +31,8 @@ public class AnimalShopItem : ShopItem
             GameController.player.playerCurrency -= price;
             canPurchase = false;
             GameController.player.AddAnimalToDeck(chosenAnimal);
+            upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
+            shopManager.UpdateDeck();
         }
     }
 

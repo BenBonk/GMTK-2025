@@ -7,6 +7,7 @@ public class ShopManager : MonoBehaviour
 {
     private Player player;
     public ShopItem[] shopItems;
+    public DeckCard[] synergyCards;
     public GameObject deckCardPrefab;
     public RectTransform deckParent;
 
@@ -19,6 +20,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         player = GameController.player;
+        player.playerCurrency = 10000;
         InitializeAllUpgrades();
     }
 
@@ -30,12 +32,21 @@ public class ShopManager : MonoBehaviour
             shopItem.canPurchase = true;
             shopItem.Initialize();
         }
+        UpdateDeck();
+        UpdateSynergies();
+    }
 
+    public void UpdateSynergies()
+    {
+        
+    }
+
+    public void UpdateDeck()
+    {
         foreach (Transform child in deckParent.transform)
         {
             Destroy(child.gameObject);
         }
-
         Dictionary<string, (int count, AnimalData reference)> uniqueObjects =
             new Dictionary<string, (int, AnimalData)>();
         
@@ -63,7 +74,6 @@ public class ShopManager : MonoBehaviour
             GameObject card = Instantiate(deckCardPrefab, deckParent);
             card.GetComponent<DeckCard>().Initialize("x" + count, reference.description, reference.deckIcon);
         }
-
     }
 
     public void ToggleDeck()
@@ -72,7 +82,7 @@ public class ShopManager : MonoBehaviour
         if (deckOpen)
         {
             deckPanel.gameObject.SetActive(true);
-            deckPanel.DOAnchorPosX(-1058, .35f).SetEase(Ease.OutBack);
+            deckPanel.DOAnchorPosX(-1059, .35f).SetEase(Ease.OutBack);
         }
         else
         {
@@ -86,7 +96,7 @@ public class ShopManager : MonoBehaviour
         if (synergiesOpen)
         {
             synergiesPanel.gameObject.SetActive(true);
-            synergiesPanel.DOAnchorPosX(1146, .35f).SetEase(Ease.OutBack);
+            synergiesPanel.DOAnchorPosX(1148, .35f).SetEase(Ease.OutBack);
         }
         else
         {

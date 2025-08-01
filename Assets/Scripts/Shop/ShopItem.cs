@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -16,6 +17,13 @@ public abstract class ShopItem : MonoBehaviour
     public RectTransform hoverPopup;
     private Tween a;
     private Tween b;
+    protected ShopManager shopManager;
+
+    private void Start()
+    {
+        shopManager = GameController.shopManager;
+    }
+
     public virtual void Initialize()
     {
         
