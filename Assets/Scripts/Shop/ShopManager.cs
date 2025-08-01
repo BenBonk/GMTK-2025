@@ -39,6 +39,7 @@ public class ShopManager : MonoBehaviour
         Dictionary<string, (int count, GameObject reference)> uniqueObjects =
             new Dictionary<string, (int, GameObject)>();
         
+        /*
         foreach (GameObject obj in player.animalsInDeck)
         {
             string name = obj.name;
@@ -52,6 +53,7 @@ public class ShopManager : MonoBehaviour
                 uniqueObjects[name] = (1, obj);
             }
         }
+        */
 
         // Step 2: Create a card for each unique GameObject
         foreach (var entry in uniqueObjects)

@@ -28,7 +28,7 @@ public class AnimalShopItem : ShopItem
         {
             GameController.player.playerCurrency -= price;
             canPurchase = false;
-            GameController.player.AddAnimalToDeck(chosenAnimal.animalPrefab);
+            //GameController.player.AddAnimalToDeck(chosenAnimal.animalPrefab);
         }
     }
 
