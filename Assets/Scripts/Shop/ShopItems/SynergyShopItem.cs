@@ -23,7 +23,7 @@ public class SynergyShopItem : ShopItem
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
-            upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
+            upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
             if (GameController.player.synergiesInDeck.Count<3)
             {
                 GameController.player.AddSynergyToDeck(chosenSynergy);

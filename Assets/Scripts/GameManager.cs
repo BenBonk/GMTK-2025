@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         OnLassosChanged += UpdateLassosDisplay;
+        Invoke("StartRound", 1);
     }
 
     private void Update()
@@ -130,7 +131,7 @@ public class GameManager : MonoBehaviour
 
     public void LeaveShop()
     {
-        barn.DOFade(1f, 1f).SetEase(Ease.OutSine);
+        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
         cameraController.ResetToStartPosition(1f);
     }
 
