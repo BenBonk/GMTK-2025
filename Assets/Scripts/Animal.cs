@@ -9,6 +9,7 @@ public class Animal : MonoBehaviour
     private Player player;
     private AnimalLevelManager levelManager;
 
+    public AnimalData animalData;
     public int currencyToGive;
     public int pointsToGive;
     public float currencyMultToGive;
@@ -88,6 +89,11 @@ public class Animal : MonoBehaviour
 
         transform.position = nextPos;
         externalOffset = Vector3.zero;
+
+        if (nextPos.x < leftEdgeX - 5)
+        {
+            Destroy(gameObject);
+        }
     }
 
 

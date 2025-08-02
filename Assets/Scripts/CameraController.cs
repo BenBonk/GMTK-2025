@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
@@ -24,17 +25,32 @@ public class CameraController : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    public void AnimateToTarget(Transform target, float delay)
+    public void AnimateToTarget(Transform target, float delay = 0f, System.Action onZoomMidpoint = null, System.Action onZoomEndpoint = null)
     {
-        if (target == null || mainCamera == null)
-            return;
+        StartCoroutine(AnimateRoutine(target, delay, onZoomMidpoint, onZoomEndpoint));
+    }
 
-        Vector3 targetPos = new Vector3(target.position.x, target.position.y, transform.position.z);
+    private IEnumerator AnimateRoutine(Transform target, float delay, System.Action onZoomMidpoint, System.Action onZoomEndPoint)
+    {
+        yield return new WaitForSeconds(delay);
 
-        Sequence cameraSequence = DOTween.Sequence();
-        cameraSequence.AppendInterval(delay); // Wait before starting
-        cameraSequence.Append(transform.DOMove(targetPos, moveDuration).SetEase(Ease.InOutSine)); // Move
-        cameraSequence.Append(mainCamera.DOOrthoSize(targetOrthographicSize, zoomDuration).SetEase(Ease.InOutSine)); // Zoom after move
+        Vector3 targetPos = target.position + new Vector3(0, 0, -10f);
+
+        // Move camera first
+        Tween moveTween = transform.DOMove(targetPos, 1f).SetEase(Ease.InOutSine);
+        yield return moveTween.WaitForCompletion();
+
+        // Start zoom tween
+        Tween zoomTween = Camera.main.DOOrthoSize(targetOrthographicSize, zoomDuration).SetEase(Ease.InOutSine);
+
+        yield return new WaitForSeconds(zoomDuration * 0.3f);
+        onZoomMidpoint?.Invoke();
+
+        yield return new WaitForSeconds(zoomDuration * 0.5f);
+        onZoomEndPoint?.Invoke();
+
+        // Wait for zoom to finish
+        yield return zoomTween.WaitForCompletion();
     }
 
     public void ResetToStartPosition(float delay = 0f)

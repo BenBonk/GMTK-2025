@@ -19,9 +19,18 @@ public class GameManager : MonoBehaviour
     public GameObject wordPrefab; // Assign in inspector
     public float wordScaleDuration = 0.3f;
     public float wordDisplayDuration = 0.7f;
+    [SerializeField] private Material lassoMaterialPreset;
+    [SerializeField] private Material defaultMaterialPreset;
 
     [SerializeField] private CameraController cameraController;
-    [SerializeField] private GameObject barn;
+    [SerializeField] private SpriteRenderer barn;
+    [SerializeField] private Transform barnCameraTarget;
+    [SerializeField] private Animator barnAnimator;
+
+
+    private int lastDisplayedSecond = -1;
+    [SerializeField] private Color timerNormalColor = Color.white;
+    [SerializeField] private Color timerWarningColor = Color.red;
 
     //private int _lassosUsedThisRound;
     /*public int lassosUsed
@@ -96,6 +105,7 @@ public class GameManager : MonoBehaviour
         roundNumber++;
         roundInProgress = true;
         roundCompleted = false;
+        barnAnimator.Play("Closed", 0, 0.1f);
         StartCoroutine(ShowReadySetLassoSequence());
     }
 
@@ -106,11 +116,20 @@ public class GameManager : MonoBehaviour
         elapsedTime = 0;
         playerReady = false;
         DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
-        cameraController.AnimateToTarget(barn.transform, 3f);
+        cameraController.AnimateToTarget(
+            barnCameraTarget.transform,
+            delay: 3f,
+            onZoomMidpoint: () => barnAnimator.Play("Open", 0, 0.1f),
+            onZoomEndpoint: () =>
+            {
+                barn.DOFade(0f, 1f).SetEase(Ease.OutSine);
+            }
+        );
     }
 
     public void LeaveShop()
     {
+        barn.DOFade(1f, 1f).SetEase(Ease.OutSine);
         cameraController.ResetToStartPosition(1f);
     }
 
@@ -126,8 +145,26 @@ public class GameManager : MonoBehaviour
 
     private void UpdateTimerDisplay()
     {
-        timerDisplay.text = $"TIME: {roundDuration-elapsedTime:F1}s";
+        float remaining = roundDuration - elapsedTime;
+        int currentSecond = Mathf.FloorToInt(remaining);
+
+        timerDisplay.text = $"TIME: {remaining:F1}s";
+
+        if (remaining <= 10f && currentSecond != lastDisplayedSecond)
+        {
+            lastDisplayedSecond = currentSecond;
+
+            timerDisplay.color = timerWarningColor;
+            timerDisplay.transform.localScale = Vector3.one * 1.3f;
+
+            Sequence pulse = DOTween.Sequence();
+            pulse.Append(timerDisplay.transform.DOScale(1.5f, 0.15f).SetEase(Ease.OutBack));
+            pulse.Append(timerDisplay.transform.DOScale(1f, 0.2f).SetEase(Ease.OutExpo));
+
+            pulse.Join(timerDisplay.DOColor(timerNormalColor, 0.4f));
+        }
     }
+
 
     private void UpdateLassosDisplay(int usedLassos)
     {
@@ -140,7 +177,16 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < words.Length; i++)
         {
-            DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2);
+            if (i == 2)
+            {
+                // Use lasso material for the last word
+                DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, lassoMaterialPreset);
+            }
+            else
+            {
+                // Use default material for other words
+                DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, defaultMaterialPreset);
+            }
 
             yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
         }
@@ -158,12 +204,19 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void DisplayPopupWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false)
+    public void DisplayPopupWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null)
     {
         GameObject wordObj = Instantiate(wordPrefab, transform);
         TMP_Text wordText = wordObj.GetComponent<TMP_Text>();
 
         wordText.text = word;
+
+        // Apply material override if provided
+        if (overrideMaterial != null)
+        {
+            wordText.fontSharedMaterial = overrideMaterial;
+        }
+
         wordObj.transform.position = GetCenterScreenWorldPosition();
         wordObj.transform.localScale = Vector3.zero;
         wordObj.transform.rotation = Quaternion.identity;
@@ -180,7 +233,7 @@ public class GameManager : MonoBehaviour
         {
             seq.Append(wordObj.transform.DOShakeRotation(
                 duration: 0.4f,
-                strength: new Vector3(0f, 0f, 20f), // Shake on Z axis
+                strength: new Vector3(0f, 0f, 20f), // Z-axis only
                 vibrato: 10,
                 randomness: 90,
                 fadeOut: true

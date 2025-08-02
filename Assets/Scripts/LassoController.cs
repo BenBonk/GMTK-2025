@@ -206,6 +206,7 @@ public class LassoController : MonoBehaviour
             .OnComplete(() =>
             {
                 var captureResult = GameController.captureManager.MakeCapture(lassoedAnimals.ToArray());
+                Destroy(group);
                 ShowCaptureFeedback(captureResult);
             });
     }

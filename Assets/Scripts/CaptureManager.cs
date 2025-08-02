@@ -9,7 +9,7 @@ public class CaptureManager : MonoBehaviour
 {
     private Player player;
     private GameManager gameManager;
-   // private List<HashSet<string>> synergySets = new List<HashSet<string>>();
+    // private List<HashSet<string>> synergySets = new List<HashSet<string>>();
 
     private int pointBonus = 0;
     private float pointMult = 1;
@@ -76,10 +76,10 @@ public class CaptureManager : MonoBehaviour
 
     public virtual void CaptureAnimal(Animal capturedAnimal)
     {
-        currencyBonus += capturedAnimal.currencyToGive;
-        currencyMult *= capturedAnimal.currencyMultToGive;
-        pointBonus += capturedAnimal.pointsToGive;
-        pointMult *= capturedAnimal.pointsMultToGive;
+        currencyBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.currencyToGive;
+        currencyMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.currencyMultToGive;
+        pointBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.pointsToGive;
+        pointMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.pointsMultToGive;
     }
 
     private Dictionary<string, int> GetNameCounts(IEnumerable<String> animals)

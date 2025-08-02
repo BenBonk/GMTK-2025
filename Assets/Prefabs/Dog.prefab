@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf8ef00ede9a154f8a4e729998ccdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalData: {fileID: 11400000, guid: af25408ade403b34cbf9a46a842a8ebd, type: 2}
   currencyToGive: 10
   pointsToGive: 10
   currencyMultToGive: 1.2
