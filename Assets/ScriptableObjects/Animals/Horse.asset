@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Horse
   m_EditorClassIdentifier: 
   name: Horse
-  description: test description
-  price: 15
+  description: Runs swiftly across the field.
+  price: 3
   sprite: {fileID: 7672759098259192623, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
   sprite2: {fileID: 3604182692263377810, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
   deckIcon: {fileID: -5525896158525752363, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.7
   animalPrefab: {fileID: 754275776994582978, guid: 52f1490e078799d4095629e4e5d27c94, type: 3}
-  pointsLevelUpIncrease: 10
-  pointsLevelUpMult: 0
-  currencyLevelUpIncrease: 5
-  currencyLevelUpMult: 0
+  pointsLevelUpIncrease: 1
+  pointsLevelUpMult: 0.5
+  currencyLevelUpIncrease: 0
+  currencyLevelUpMult: 0.2
+  upgradeCost: 400

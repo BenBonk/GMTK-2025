@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Chicken
   m_EditorClassIdentifier: 
   name: Chicken
-  description: test description
-  price: 15
+  description: Moves to random locations on the field before exiting.
+  price: 75
   sprite: {fileID: 5336855417275088078, guid: f62971579a2e2fc47923b5ab6f9e2da6, type: 3}
   sprite2: {fileID: -1433109330887674863, guid: f62971579a2e2fc47923b5ab6f9e2da6, type: 3}
   deckIcon: {fileID: 528724167467012147, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.3
   animalPrefab: {fileID: 5708340661006968601, guid: 62b44a17f60e2564abf5ae809f670dfe, type: 3}
   pointsLevelUpIncrease: 10
-  pointsLevelUpMult: 0.1
-  currencyLevelUpIncrease: 0
+  pointsLevelUpMult: 0.25
+  currencyLevelUpIncrease: 1
   currencyLevelUpMult: 0
+  upgradeCost: 300

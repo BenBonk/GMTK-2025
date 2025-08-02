@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Wolf
   m_EditorClassIdentifier: 
   name: Wolf
-  description: test description
-  price: 15
+  description: Predator. Chases non-predators.
+  price: 25
   sprite: {fileID: -458185587419916677, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
   sprite2: {fileID: -5547194825390550217, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
   deckIcon: {fileID: -7821579809664607473, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.45
   animalPrefab: {fileID: 8568992135008309764, guid: cda56dd838c62fb4b8e0ed1f81e971cb, type: 3}
-  pointsLevelUpIncrease: 10
-  pointsLevelUpMult: 0
-  currencyLevelUpIncrease: 5
+  pointsLevelUpIncrease: 5
+  pointsLevelUpMult: 0.05
+  currencyLevelUpIncrease: 0
   currencyLevelUpMult: 0
+  upgradeCost: 150

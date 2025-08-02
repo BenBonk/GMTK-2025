@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Bear
   m_EditorClassIdentifier: 
   name: Bear
-  description: test description
-  price: 15
+  description: Predator. Pulls nearby non-predators towards it. Immune to push and
+    pull effects.
+  price: 60
   sprite: {fileID: 4693792977596894205, guid: b20cd1efb2399b84a83d3ac4f9d5504a, type: 3}
   sprite2: {fileID: 1047276864, guid: b20cd1efb2399b84a83d3ac4f9d5504a, type: 3}
   deckIcon: {fileID: 7976311676407056975, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 1
   animalPrefab: {fileID: 1086039005306102819, guid: 8c3128233cd69cb44a14147edba5745b, type: 3}
-  pointsLevelUpIncrease: 10
-  pointsLevelUpMult: 0.1
-  currencyLevelUpIncrease: 0
-  currencyLevelUpMult: 0
+  pointsLevelUpIncrease: 1
+  pointsLevelUpMult: 0.15
+  currencyLevelUpIncrease: 1
+  currencyLevelUpMult: 0.15
+  upgradeCost: 350

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalData: {fileID: 11400000, guid: dd5f3d014a70c4c4794954f608059d4b, type: 2}
-  currencyToGive: 2
+  currencyToGive: 0
   pointsToGive: 15
   currencyMultToGive: 1
   pointsMultToGive: 1

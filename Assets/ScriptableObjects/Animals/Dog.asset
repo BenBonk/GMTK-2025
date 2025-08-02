@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Dog
   m_EditorClassIdentifier: 
   name: Dog
-  description: test description
-  price: 15
+  description: Runs along the edge of the field, pushing other animals towards the
+    middle.
+  price: 150
   sprite: {fileID: -3994744024693093290, guid: 3505c7501cd1bd5439c88d7002a5b20e, type: 3}
   sprite2: {fileID: 3704152636332655822, guid: 3505c7501cd1bd5439c88d7002a5b20e, type: 3}
   deckIcon: {fileID: -7066902412895447660, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.4
   animalPrefab: {fileID: 5660066743077353431, guid: c7f16862f707fd34384f68dd262add9f, type: 3}
-  pointsLevelUpIncrease: 10
-  pointsLevelUpMult: 0.1
+  pointsLevelUpIncrease: 3
+  pointsLevelUpMult: 0
   currencyLevelUpIncrease: 0
-  currencyLevelUpMult: 0
+  currencyLevelUpMult: 0.3
+  upgradeCost: 150

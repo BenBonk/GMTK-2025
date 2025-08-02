@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Cow
   m_EditorClassIdentifier: 
   name: Cow
-  description: test description
-  price: 15
+  description: Stops periodically to graze.
+  price: 100
   sprite: {fileID: 6602966838755796383, guid: c2914d636906a98449ea8b716b3638a6, type: 3}
   sprite2: {fileID: -7810360661050545635, guid: c2914d636906a98449ea8b716b3638a6, type: 3}
   deckIcon: {fileID: -5863608287252117823, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.75
   animalPrefab: {fileID: 6561535014221172434, guid: 5c35bec9414ba1047bc6dd3f61e56cae, type: 3}
-  pointsLevelUpIncrease: 10
-  pointsLevelUpMult: 0.1
-  currencyLevelUpIncrease: 0
+  pointsLevelUpIncrease: 2
+  pointsLevelUpMult: 0
+  currencyLevelUpIncrease: 1
   currencyLevelUpMult: 0
+  upgradeCost: 50

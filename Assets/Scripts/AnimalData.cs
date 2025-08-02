@@ -16,4 +16,5 @@ public class AnimalData : ScriptableObject
     public float pointsLevelUpMult;
     public int currencyLevelUpIncrease;
     public float currencyLevelUpMult;
+    public int upgradeCost;
 }

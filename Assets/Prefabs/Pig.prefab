@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalData: {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-  currencyToGive: 5
-  pointsToGive: 0
-  currencyMultToGive: 1
+  currencyToGive: 3
+  pointsToGive: 1
+  currencyMultToGive: 1.1
   pointsMultToGive: 1
   isPredator: 0
   speed: 2

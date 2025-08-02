@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Fox
   m_EditorClassIdentifier: 
   name: Fox
-  description: test description
+  description: Predator. Moves up and down the field sporadically.
   price: 15
   sprite: {fileID: 1791904589581890566, guid: f43edba2e5d1116448daa89f3affffe1, type: 3}
   sprite2: {fileID: -1484708753, guid: f43edba2e5d1116448daa89f3affffe1, type: 3}
   deckIcon: {fileID: -1974254988549768979, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.43
   animalPrefab: {fileID: 2978474136613401339, guid: 29965806bc728ce47b0064248782b6f2, type: 3}
-  pointsLevelUpIncrease: 10
-  pointsLevelUpMult: 0.1
-  currencyLevelUpIncrease: 0
+  pointsLevelUpIncrease: 6
+  pointsLevelUpMult: 0
+  currencyLevelUpIncrease: 4
   currencyLevelUpMult: 0
+  upgradeCost: 120

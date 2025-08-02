@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Pig
   m_EditorClassIdentifier: 
   name: Pig
-  description: test description
+  description: Meanders predictably.
   price: 15
   sprite: {fileID: -9122695006515159614, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
   sprite2: {fileID: 3283728978217524802, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
   deckIcon: {fileID: 7992425119190620944, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.8
   animalPrefab: {fileID: 4348466279998540118, guid: 04c439d9d48218d4fae99e7062270073, type: 3}
-  pointsLevelUpIncrease: 10
+  pointsLevelUpIncrease: 1
   pointsLevelUpMult: 0
-  currencyLevelUpIncrease: 5
+  currencyLevelUpIncrease: 2
   currencyLevelUpMult: 0
+  upgradeCost: 30
