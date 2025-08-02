@@ -22,6 +22,7 @@ public class SynergyShopItem : ShopItem
         {
             GameController.player.playerCurrency -= price;
             canPurchase = false;
+            upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             if (GameController.player.synergiesInDeck.Count<3)
             {
                 GameController.player.AddSynergyToDeck(chosenSynergy);
@@ -32,6 +33,7 @@ public class SynergyShopItem : ShopItem
                 shopManager.synergiesOpen = false;
                 shopManager.ToggleSynergies();  
                 shopManager.darkCover.DOFade(.75f, 0.5f);
+                shopManager.instructionsText.DOFade(1, 0.5f);
                 shopManager.cantPurchaseItem = true;
                 shopManager.overridingSynergy = chosenSynergy;
                 synergySlots.canOverrideSynergy = true;

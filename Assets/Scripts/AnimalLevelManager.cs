@@ -12,6 +12,12 @@ public class AnimalLevelManager : MonoBehaviour
         animalLevels["Pig"] = 1;
         animalLevels["Cow"] = 1;
         animalLevels["Wolf"] = 1;
+        animalLevels["Chicken"] = 1;
+        animalLevels["Fox"] = 1;
+        animalLevels["Bear"] = 1;
+        animalLevels["Horse"] = 1;
+        animalLevels["Goat"] = 1;
+        animalLevels["Dog"] = 1;
     }
 
     public int GetLevel(string name)

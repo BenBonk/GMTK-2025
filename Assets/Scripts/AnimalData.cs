@@ -12,4 +12,8 @@ public class AnimalData : ScriptableObject
     public Sprite deckIcon;
     public float animSpeed;
     public GameObject animalPrefab;
+    public int pointsLevelUpIncrease;
+    public float pointsLevelUpMult;
+    public int currencyLevelUpIncrease;
+    public float currencyLevelUpMult;
 }

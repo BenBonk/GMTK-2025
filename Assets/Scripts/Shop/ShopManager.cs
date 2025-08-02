@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +11,11 @@ public class ShopManager : MonoBehaviour
     public ShopItem[] shopItems;
     public DeckCard[] synergyCards;
     public GameObject deckCardPrefab;
-    public GameObject synergyCardPrefab;
     public RectTransform deckParent;
-    public RectTransform synergiesParent;
-    
+
     public RectTransform deckPanel;
     public RectTransform synergiesPanel;
+    public TMP_Text instructionsText;
     private bool deckOpen;
     [HideInInspector]public bool synergiesOpen;
 
@@ -45,15 +45,15 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateSynergies()
     {
-        foreach (Transform child in synergiesParent.transform)
+        foreach (DeckCard synergyCard in synergyCards)
         {
-            Destroy(child.gameObject);
+            synergyCard.gameObject.SetActive(false);
         }
 
-        foreach (var synergy in player.synergiesInDeck)
+        for (int i = 0; i < player.synergiesInDeck.Count; i++)
         {
-            GameObject card = Instantiate(synergyCardPrefab, synergiesParent);
-            card.GetComponent<DeckCard>().Initialize(synergy.name,synergy.desc,synergy.art);
+            synergyCards[i].gameObject.SetActive(true);
+            synergyCards[i].Initialize( player.synergiesInDeck[i].name, player.synergiesInDeck[i].desc, player.synergiesInDeck[i].art);
         }
     }
 

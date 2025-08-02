@@ -36,7 +36,7 @@ public abstract class ShopItem : MonoBehaviour
     
     public void HoverOver()
     {
-        if (cantHoverOver)
+        if (cantHoverOver || shopManager.cantPurchaseItem)
         {
             return;
         }

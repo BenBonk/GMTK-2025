@@ -26,6 +26,8 @@ public class SynergySlots : MonoBehaviour
             shopManager.overridingSynergy = null;
             shopManager.cantPurchaseItem = false;
             shopManager.darkCover.DOFade(0f, 0.5f);
+            shopManager.instructionsText.DOFade(0f, 0.5f);
+            shopManager.Invoke("ToggleSynergies", 1);
         }
     }
 }
