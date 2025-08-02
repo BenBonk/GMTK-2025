@@ -86,7 +86,7 @@ public class Dog : Animal
         Animal[] allAnimals = FindObjectsOfType<Animal>();
         foreach (Animal other in allAnimals)
         {
-            if (other == this || other.isLassoed)
+            if (other == this || other.isLassoed || other.IsRepelImmune)
                 continue;
 
             float dist = Vector3.Distance(transform.position, other.transform.position);

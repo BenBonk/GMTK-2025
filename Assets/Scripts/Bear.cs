@@ -21,6 +21,8 @@ public class Bear : Animal
 
     [Range(1f, 2f)] public float decelerationDurationMultiplier = 1.25f;
 
+    public override bool IsRepelImmune => true;
+
     public override void Start()
     {
         base.Start();
@@ -109,14 +111,29 @@ public class Bear : Animal
         Animal[] allAnimals = FindObjectsOfType<Animal>();
         foreach (var other in allAnimals)
         {
-            if (other == this || other.isLassoed)
-                continue;
-
-            // Skip attracting other bears
-            if (other is Bear)
+            if (other == this || other.isLassoed || other.isPredator)
                 continue;
 
             float dist = Vector3.Distance(transform.position, other.transform.position);
+
+            // If animal is within repel range of another animal, skip attraction
+            bool isInRepelRange = false;
+            foreach (var possibleRepeller in allAnimals)
+            {
+                if (possibleRepeller == other || possibleRepeller.isLassoed)
+                    continue;
+
+                float otherDist = Vector3.Distance(possibleRepeller.transform.position, other.transform.position);
+                if (otherDist > 0f && otherDist < possibleRepeller.MinimumSpacing)
+                {
+                    isInRepelRange = true;
+                    break;
+                }
+            }
+
+            if (isInRepelRange)
+                continue;
+
             if (dist < attractionRadius)
             {
                 Vector3 direction = (transform.position - other.transform.position).normalized;
