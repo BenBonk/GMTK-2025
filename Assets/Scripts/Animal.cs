@@ -28,14 +28,20 @@ public class Animal : MonoBehaviour
     public float topLimitY;
     public float bottomLimitY;
 
+    protected float minimumSpacing = 0.3f;
+    public float MinimumSpacing => minimumSpacing;
+    private float repelForce = 4; 
+    public virtual bool IsRepelImmune => false;
+
     // run animation parameters
     private float tiltAngle = 0f;
-    public float tiltFrequency = 3f; // how fast the tilt cycles (e.g. 3 = 3 full waves per second)
+    public float tiltFrequency = 3f; // how fast the tilt cycles 
     public float maxTiltAmplitude = 20f; // degrees at full speed
 
     private float tiltProgress = 0f;
     private Vector3 previousPosition;
     public float actualSpeed { get; private set; } // total movement speed
+
 
     protected virtual void Awake()
     {
@@ -65,7 +71,17 @@ public class Animal : MonoBehaviour
 
     public void Move()
     {
-        Vector3 nextPos = ComputeMove();
+        ApplyRepelFromNearbyAnimals();
+
+        Vector3 nextPos;
+        if (GameController.gameManager.roundCompleted)
+        {
+            nextPos = LeaveScreen();
+        }
+        else
+        {
+            nextPos = ComputeMove();
+        }
         nextPos += externalOffset;
 
         nextPos.y = ClampY(nextPos.y);
@@ -78,7 +94,7 @@ public class Animal : MonoBehaviour
 
     public virtual void ApplyExternalOffset(Vector3 offset)
     {
-        // Instead of applying immediately, accumulate the strongest offset
+        // Instead of applying immediately, find the strongest offset
         if (offset.magnitude > pendingExternalOffset.magnitude)
             pendingExternalOffset = offset;
     }
@@ -87,6 +103,12 @@ public class Animal : MonoBehaviour
     {
         // Default behavior: move left across screen
         return transform.position + Vector3.left * currentSpeed * Time.deltaTime;
+    }
+
+    public Vector3 LeaveScreen()
+    {
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        return transform.position + Vector3.left * 5 * Time.deltaTime;
     }
 
     public void Update()
@@ -139,6 +161,29 @@ public class Animal : MonoBehaviour
         float angle = Mathf.Sin(tiltProgress * Mathf.PI * 2f) * amplitude;
 
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+
+    private void ApplyRepelFromNearbyAnimals()
+    {
+        if (IsRepelImmune) return; // Skip if animal is immune
+
+        Animal[] allAnimals = FindObjectsOfType<Animal>();
+        foreach (var other in allAnimals)
+        {
+            if (other == this || other.isLassoed)
+                continue;
+
+            Vector3 toOther = other.transform.position - transform.position;
+            float dist = toOther.magnitude;
+
+            if (dist > 0f && dist < minimumSpacing)
+            {
+                Vector3 pushDir = -toOther.normalized;
+                float strength = (minimumSpacing - dist) / minimumSpacing;
+                Vector3 push = pushDir * strength * repelForce * Time.deltaTime;
+                ApplyExternalOffset(push);
+            }
+        }
     }
 
 

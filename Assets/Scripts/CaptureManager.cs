@@ -22,50 +22,48 @@ public class CaptureManager : MonoBehaviour
         player = GameController.player;
     }
 
-    public (int,float,int,float) MakeCapture(Animal[] animalsCaptured)
+    public (int, float, int, float) MakeCapture(Animal[] animalsCaptured)
     {
-        // Check if there is a synergy in the capture
-        //synergySets.Clear();
-        /*foreach (var playerSynergies in player.synergiesInDeck)
-        {
-            HashSet<string> newSet = new HashSet<string>();
-            foreach (var animal in playerSynergies.animalsNeeded)
-            {
-                newSet.Add(animal);
-            }
-            synergySets.Add(newSet);
-        }*/
         pointBonus = 0;
         pointMult = 1;
         currencyBonus = 0;
         currencyMult = 1;
 
-        HashSet<string> capturedSet = new HashSet<string>();
-        foreach (var animal in animalsCaptured)
-        {
-            capturedSet.Add(animal.name);
-        }
+        var capturedCounts = GetNameCounts(animalsCaptured);
 
         for (int i = 0; i < player.synergiesInDeck.Count; i++)
         {
-            if (!player.synergiesInDeck[i].isExactMatch && player.synergiesInDeck[i].animalsNeeded.All(animal => capturedSet.Contains(animal)))
+            var synergy = player.synergiesInDeck[i];
+            var neededCounts = GetNameCounts(synergy.animalsNeeded);
+
+            if (!synergy.isExactMatch)
             {
-                // We have a synergy found!
-                ActivateSynergy(i);
+                if (IsSubset(neededCounts, capturedCounts))
+                    ActivateSynergy(i);
             }
-            else if (player.synergiesInDeck[i].isExactMatch && capturedSet.SetEquals(player.synergiesInDeck[i].animalsNeeded))
+            else
             {
-                // We have an exact match synergy found!
-                ActivateSynergy(i);
+                if (AreCountsEqual(neededCounts, capturedCounts))
+                    ActivateSynergy(i);
             }
         }
 
+        int totalNonPredatorCount = 0;
         foreach (var animal in animalsCaptured)
         {
+            if (!animal.isPredator)
+            {
+                totalNonPredatorCount++;
+            }
             CaptureAnimal(animal);
         }
 
-        return (pointBonus,pointMult,currencyBonus,currencyMult);
+        if (totalNonPredatorCount > 1)
+        {
+            pointMult *= 1 + (0.1f * animalsCaptured.Length);
+        }
+
+        return (pointBonus, pointMult, currencyBonus, currencyMult);
     }
 
     public void ActivateSynergy(int index)
@@ -82,5 +80,53 @@ public class CaptureManager : MonoBehaviour
         currencyMult *= capturedAnimal.currencyMultToGive;
         pointBonus += capturedAnimal.pointsToGive;
         pointMult *= capturedAnimal.pointsMultToGive;
+    }
+
+    private Dictionary<string, int> GetNameCounts(IEnumerable<String> animals)
+    {
+        Dictionary<string, int> counts = new Dictionary<string, int>();
+        foreach (var animal in animals)
+        {
+            if (counts.ContainsKey(animal))
+                counts[name]++;
+            else
+                counts[name] = 1;
+        }
+        return counts;
+    }
+
+    private Dictionary<string, int> GetNameCounts(IEnumerable<Animal> animals)
+    {
+        Dictionary<string, int> counts = new Dictionary<string, int>();
+        foreach (var animal in animals)
+        {
+            if (counts.ContainsKey(animal.name))
+                counts[name]++;
+            else
+                counts[name] = 1;
+        }
+        return counts;
+    }
+
+    private bool IsSubset(Dictionary<string, int> required, Dictionary<string, int> actual)
+    {
+        foreach (var pair in required)
+        {
+            if (!actual.ContainsKey(pair.Key) || actual[pair.Key] < pair.Value)
+                return false;
+        }
+        return true;
+    }
+
+    private bool AreCountsEqual(Dictionary<string, int> a, Dictionary<string, int> b)
+    {
+        if (a.Count != b.Count) return false;
+
+        foreach (var pair in a)
+        {
+            if (!b.ContainsKey(pair.Key) || b[pair.Key] != pair.Value)
+                return false;
+        }
+        return true;
     }
 }

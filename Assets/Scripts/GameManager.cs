@@ -1,6 +1,9 @@
+using DG.Tweening;
+using System.Collections;
 using TMPro;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +11,17 @@ public class GameManager : MonoBehaviour
     public int[] roundsPointsRequirement;
     public int roundNumber;
     public bool roundInProgress;
+    public bool playerReady;
+    public bool roundCompleted;
     public float roundDuration = 20f;
     private float elapsedTime;
+
+    public GameObject wordPrefab; // Assign in inspector
+    public float wordScaleDuration = 0.3f;
+    public float wordDisplayDuration = 0.7f;
+
+    [SerializeField] private CameraController cameraController;
+    [SerializeField] private GameObject barn;
 
     //private int _lassosUsedThisRound;
     /*public int lassosUsed
@@ -59,10 +71,17 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (roundInProgress)
+        if (!roundCompleted && roundDuration - elapsedTime <= 0)
         {
-            elapsedTime += Time.deltaTime;
-            UpdateTimerDisplay();
+            EndRound();
+        }
+        else
+        {
+            if (roundInProgress && playerReady)
+            {
+                elapsedTime += Time.deltaTime;
+                UpdateTimerDisplay();
+            }
         }
     }
 
@@ -76,6 +95,23 @@ public class GameManager : MonoBehaviour
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
         roundNumber++;
         roundInProgress = true;
+        roundCompleted = false;
+        StartCoroutine(ShowReadySetLassoSequence());
+    }
+
+    public void EndRound()
+    {
+        roundCompleted = true;
+        roundInProgress = false;
+        elapsedTime = 0;
+        playerReady = false;
+        DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
+        cameraController.AnimateToTarget(barn.transform, 3f);
+    }
+
+    public void LeaveShop()
+    {
+        cameraController.ResetToStartPosition(1f);
     }
 
     private void UpdateScoreDisplay(int newPoints)
@@ -98,6 +134,64 @@ public class GameManager : MonoBehaviour
         lassosDisplay.text = $"Lassos: {player.lassosPerRound  - usedLassos}";
     }
 
+    public IEnumerator ShowReadySetLassoSequence()
+    {
+        string[] words = { "READY?", "SET", "LASSO!" };
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2);
+
+            yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
+        }
+
+        playerReady = true;
+    }
+
+    private Vector3 GetCenterScreenWorldPosition()
+    {
+        float z = Mathf.Abs(Camera.main.transform.position.z);
+        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, z);
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenCenter);
+        worldPos.z = 0f;
+        return worldPos;
+    }
+
+
+    public void DisplayPopupWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false)
+    {
+        GameObject wordObj = Instantiate(wordPrefab, transform);
+        TMP_Text wordText = wordObj.GetComponent<TMP_Text>();
+
+        wordText.text = word;
+        wordObj.transform.position = GetCenterScreenWorldPosition();
+        wordObj.transform.localScale = Vector3.zero;
+        wordObj.transform.rotation = Quaternion.identity;
+        wordObj.SetActive(true);
+
+        Sequence seq = DOTween.Sequence();
+
+        // Scale pop-in
+        seq.Append(wordObj.transform.DOScale(1.2f, scaleDuration).SetEase(Ease.OutBack));
+        seq.Append(wordObj.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+
+        // Optional shake
+        if (shake)
+        {
+            seq.Append(wordObj.transform.DOShakeRotation(
+                duration: 0.4f,
+                strength: new Vector3(0f, 0f, 20f), // Shake on Z axis
+                vibrato: 10,
+                randomness: 90,
+                fadeOut: true
+            ));
+        }
+
+        // Fade out and destroy
+        seq.AppendInterval(displayDuration);
+        seq.AppendCallback(() => wordText.DOFade(0f, 0.5f));
+        seq.AppendCallback(() => Destroy(wordObj, 0.6f));
+    }
 
 
 }
