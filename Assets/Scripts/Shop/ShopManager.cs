@@ -1,6 +1,7 @@
-using System;
-using System.Collections.Generic;
 using DG.Tweening;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class ShopManager : MonoBehaviour
 
     public RectTransform deckPanel;
     public RectTransform synergiesPanel;
+    public GameObject synergiesVisual;
     public TMP_Text instructionsText;
     private bool deckOpen;
     [HideInInspector]public bool synergiesOpen;
@@ -101,6 +103,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+
     public void ToggleDeck()
     {
         if (cantPurchaseItem)
@@ -124,12 +127,12 @@ public class ShopManager : MonoBehaviour
         synergiesOpen = !synergiesOpen;
         if (synergiesOpen)
         {
-            synergiesPanel.gameObject.SetActive(true);
+            synergiesVisual.SetActive(true);
             synergiesPanel.DOAnchorPosX(1148, .35f).SetEase(Ease.OutBack);
         }
         else
         {
-            synergiesPanel.DOAnchorPosX(1577, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>synergiesPanel.gameObject.SetActive(false));
+            synergiesPanel.DOAnchorPosX(1577, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>synergiesVisual.SetActive(false));
         }
     }
     
