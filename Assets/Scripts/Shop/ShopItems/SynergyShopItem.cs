@@ -1,4 +1,5 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class SynergyShopItem : ShopItem
@@ -6,6 +7,7 @@ public class SynergyShopItem : ShopItem
     public Synergy[] possibleSynergies;
     private Synergy chosenSynergy;
     public SynergySlots synergySlots;
+    public TMP_Text desc2;
 
     public override void Initialize()
     {
@@ -15,6 +17,23 @@ public class SynergyShopItem : ShopItem
         priceText.text = chosenSynergy.price.ToString();
         price = chosenSynergy.price;
         upgradeArt.sprite = chosenSynergy.art;
+        desc2.text = "";
+        if (chosenSynergy.pointsBonus!=0)
+        {
+            desc2.text += ("Points bonus: +" + chosenSynergy.pointsBonus + "\n");
+        }
+        if (chosenSynergy.pointsMult!=0)
+        {
+            desc2.text += ("Points mult: x" + chosenSynergy.pointsMult + "\n");
+        }
+        if (chosenSynergy.currencyBonus!=0)
+        {
+            desc2.text += ("Cash bonus: +" + chosenSynergy.currencyBonus + "\n");
+        }
+        if (chosenSynergy.currencyMult!=0)
+        {
+            desc2.text += ("Cash mult: x" + chosenSynergy.currencyMult + "\n");
+        }
     }
     public override void PurchaseUpgrade()
     {

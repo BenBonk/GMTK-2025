@@ -15,7 +15,6 @@ public class AnimalShopItem : ShopItem
     {
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
         titleText.text = chosenAnimal.name;
-        descriptionText.text = chosenAnimal.description;
         priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;
         upgradeArt.sprite = chosenAnimal.sprite;
@@ -28,6 +27,38 @@ public class AnimalShopItem : ShopItem
             StopCoroutine(animCo);
         }
         animCo = StartCoroutine(Animate());
+        descriptionText.text = "";
+        Animal animalRef = chosenAnimal.animalPrefab.GetComponent<Animal>();
+        if (animalRef.pointsToGive!=0)
+        {
+            if (animalRef.pointsToGive<0)
+            {
+                descriptionText.text += ("Points loss: " + animalRef.pointsToGive + "\n");   
+            }
+            else
+            {
+                descriptionText.text += ("Points bonus: +" + animalRef.pointsToGive + "\n");   
+            }
+        }
+        if (animalRef.pointsMultToGive!=1f)
+        {
+            descriptionText.text += ("Points mult: x" + animalRef.pointsMultToGive + "\n");
+        }
+        if (animalRef.currencyToGive!=0)
+        {
+            if (animalRef.currencyToGive < 0)
+            {
+                descriptionText.text  += ("Cash loss: " + animalRef.currencyToGive + "\n");
+            }
+            else
+            {
+                descriptionText.text  += ("Cash bonus: +" + animalRef.currencyToGive + "\n");    
+            }
+        }
+        if (animalRef.currencyMultToGive!=1f)
+        {
+            descriptionText.text += ("Cash mult: x" + animalRef.currencyMultToGive + "\n");
+        }
     }
     public override void PurchaseUpgrade()
     {

@@ -17,7 +17,7 @@ public class UpgradeShopItem : ShopItem
         {
             float initial = (animalLevel * chosenAnimal.pointsLevelUpIncrease + animalPrefabRef.pointsToGive); 
             float after = initial + chosenAnimal.pointsLevelUpIncrease;
-            descriptionText.text += ("Points: " + initial + "-> " + after +"\n");
+            descriptionText.text += ("Points: " + initial + " -> " + after +"\n");
         }
         if (chosenAnimal.pointsLevelUpMult!=0)
         {
@@ -29,13 +29,13 @@ public class UpgradeShopItem : ShopItem
         {
             float initial = (animalLevel * chosenAnimal.currencyLevelUpIncrease + animalPrefabRef.currencyToGive);
             float after = initial + chosenAnimal.currencyLevelUpIncrease;
-            descriptionText.text += ("Coins: " + initial + "-> " + after +"\n");
+            descriptionText.text += ("Coins: " + initial + " -> " + after +"\n");
         }
         if (chosenAnimal.currencyLevelUpMult!=0)
         {
             float initial = (animalLevel * chosenAnimal.currencyLevelUpMult + animalPrefabRef.currencyMultToGive);
             float after = initial + chosenAnimal.currencyLevelUpMult;
-            descriptionText.text += ("Coins: x" + initial + "-> x" + after+"\n");
+            descriptionText.text += ("Coins: x" + initial + " -> x" + after+"\n");
         }
         
         titleText.text = chosenAnimal.name;
