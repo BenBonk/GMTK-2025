@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
         roundInProgress = false;
         elapsedTime = 0;
         playerReady = false;
+        GameController.shopManager.InitializeAllUpgrades();
         DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
         cameraController.AnimateToTarget(
             barnCameraTarget.transform,
@@ -122,7 +123,7 @@ public class GameManager : MonoBehaviour
             onZoomMidpoint: () => barnAnimator.Play("Open", 0, 0.1f),
             onZoomEndpoint: () =>
             {
-                barn.DOFade(0f, 1f).SetEase(Ease.OutSine);
+                barn.DOFade(0f, 1f).SetEase(Ease.OutSine).OnComplete(()=> GameController.shopManager.cantPurchaseItem = false);
             }
         );
     }

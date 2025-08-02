@@ -48,6 +48,7 @@ public class UpgradeShopItem : ShopItem
         if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
             GameController.player.playerCurrency -= price;
+            shopManager. UpdateCashText();
             canPurchase = false;
             GameController.animalLevelManager.SetLevel(chosenAnimal.name, GameController.animalLevelManager.GetLevel(chosenAnimal.name)+1);
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);

@@ -12,7 +12,7 @@ public class DeckCard : MonoBehaviour
     private bool isPopup;
     private Tween a;
     private Tween b;
-    public Ease ease;
+    public bool bounch;
     public void Initialize(string titleStr, string descStr, Sprite iconSprite)
     {
         title.text = titleStr;
@@ -21,7 +21,14 @@ public class DeckCard : MonoBehaviour
     }
     public void HoverOver()
     {
-        a = hoverPopup.DOScale(Vector3.one, 0.25f).SetEase(ease);   
+        if (bounch)
+        {
+            a = hoverPopup.DOScale(Vector3.one, 0.25f).SetEase(Ease.OutBack);      
+        }
+        else
+        {
+            a = hoverPopup.DOScale(Vector3.one, 0.2f).SetEase(Ease.InOutQuad);      
+        }
         b.Kill();
     }
 

@@ -22,6 +22,7 @@ public class ShopManager : MonoBehaviour
     [HideInInspector]public Synergy overridingSynergy;
     public Image darkCover;
     public bool cantPurchaseItem;
+    public TMP_Text cashText;
     //continue
 
     private void Start()
@@ -33,14 +34,22 @@ public class ShopManager : MonoBehaviour
 
     public void InitializeAllUpgrades()
     {
+        UpdateCashText();
+        
         //needs to be called when entering shop
         foreach (var shopItem in shopItems)
         {
             shopItem.canPurchase = true;
             shopItem.Initialize();
+            shopItem.transform.DOScale(Vector3.one, .3f).SetEase(Ease.OutBack);
         }
         UpdateDeck();
         UpdateSynergies();
+    }
+
+    public void UpdateCashText()
+    {
+        cashText.text = "CASH: " + player.playerCurrency; 
     }
 
     public void UpdateSynergies()

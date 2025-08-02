@@ -21,6 +21,7 @@ public class SynergyShopItem : ShopItem
         if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
             GameController.player.playerCurrency -= price;
+            shopManager. UpdateCashText();
             canPurchase = false;
             upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             if (GameController.player.synergiesInDeck.Count<3)

@@ -446,7 +446,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 7
@@ -516,7 +516,7 @@ MonoBehaviour:
   desc: {fileID: 6860113055035492433}
   icon: {fileID: 3122615936035191174}
   hoverPopup: {fileID: 8162438419569462793}
-  ease: 27
+  bounch: 1
 --- !u!223 &1559342015706638166
 Canvas:
   m_ObjectHideFlags: 0
