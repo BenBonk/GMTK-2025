@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool roundCompleted;
     public float roundDuration = 20f;
     private float elapsedTime;
+    public int predatorRoundFrequency;
 
     public GameObject wordPrefab; // Assign in inspector
     public float wordScaleDuration = 0.3f;
@@ -118,6 +119,18 @@ public class GameManager : MonoBehaviour
         playerReady = false;
         GameController.shopManager.InitializeAllUpgrades();
         DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
+        if (roundNumber%predatorRoundFrequency==0)
+        {
+            GameController.predatorSelect.StartCoroutine("Intro");
+        }
+        else
+        {
+            GoToShop();
+        }
+    }
+
+    public void GoToShop()
+    {
         cameraController.AnimateToTarget(
             barnCameraTarget.transform,
             delay: 3f,
