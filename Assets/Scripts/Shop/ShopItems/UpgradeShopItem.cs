@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class UpgradeShopItem : ShopItem
 {
-    public AnimalData[] possibleAnimals;
+    private AnimalData[] possibleAnimals;
     private AnimalData chosenAnimal;
     public override void Initialize()
     {
+        possibleAnimals = GameController.player.animalsInDeck.ToArray();
         AnimalLevelManager levelManager = GameController.animalLevelManager;
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
         int animalLevel = levelManager.GetLevel(chosenAnimal.name);
@@ -50,6 +51,7 @@ public class UpgradeShopItem : ShopItem
             canPurchase = false;
             GameController.animalLevelManager.SetLevel(chosenAnimal.name, GameController.animalLevelManager.GetLevel(chosenAnimal.name)+1);
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
+            upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             
         }
     }
