@@ -2439,7 +2439,14 @@ MonoBehaviour:
   roundsPointsRequirement: 0000000000000000000000000000000000000000
   roundNumber: 0
   roundInProgress: 0
+  playerReady: 0
+  roundCompleted: 0
   roundDuration: 20
+  wordPrefab: {fileID: 0}
+  wordScaleDuration: 0.3
+  wordDisplayDuration: 0.7
+  cameraController: {fileID: 0}
+  barn: {fileID: 0}
   scoreDisplay: {fileID: 607209325}
   timerDisplay: {fileID: 607209325}
   currencyDisplay: {fileID: 607209325}
