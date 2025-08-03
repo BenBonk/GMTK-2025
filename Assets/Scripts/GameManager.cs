@@ -121,6 +121,10 @@ public class GameManager : MonoBehaviour
 
     public void EndRound()
     {
+        if (lassoController.lineRenderer!=null)
+        {
+            Destroy(lassoController.lineRenderer.gameObject);
+        }
         roundCompleted = true;
         roundInProgress = false;
         elapsedTime = 0;

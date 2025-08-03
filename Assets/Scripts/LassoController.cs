@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class LassoController : MonoBehaviour
 {
-    private LineRenderer lineRenderer;
+    [HideInInspector]public LineRenderer lineRenderer;
     public GameObject lassoPrefab; // Assign in inspector
     public int smoothingSubdivisions; // Higher = smoother
     public float pointDistanceThreshold; // Minimum distance between points
     public float closeThreshold = 0.5f; // Distance to consider the lasso closed
     private List<Vector2> rawPoints = new List<Vector2>();
-    private bool isDrawing = false;
+    [HideInInspector]public bool isDrawing = false;
     public GameObject feedbackTextGroupPrefab;
 
     public float feedbackDelay = 0.5f;    // delay between each text popup
@@ -105,7 +105,7 @@ public class LassoController : MonoBehaviour
 
 
 
-    void CompleteLasso()
+    public void CompleteLasso()
     {
         isDrawing = false;
 
