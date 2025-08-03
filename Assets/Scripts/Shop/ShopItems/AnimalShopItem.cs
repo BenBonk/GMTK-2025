@@ -41,6 +41,7 @@ public class AnimalShopItem : ShopItem
         animCo = StartCoroutine(Animate());
         descriptionText.text = "";
         Animal animalRef = chosenAnimal.animalPrefab.GetComponent<Animal>();
+        int level = GameController.animalLevelManager.GetLevel(chosenAnimal.name);
         if (buttonFX != null)
         {
             buttonFX.clickSFX = animalRef.animalData.animalName;
@@ -50,31 +51,31 @@ public class AnimalShopItem : ShopItem
         {
             if (animalRef.pointsToGive<0)
             {
-                descriptionText.text += ("Points loss: " + animalRef.pointsToGive + "\n");   
+                descriptionText.text += ("Points loss: " + (animalRef.pointsToGive+(level*chosenAnimal.pointsLevelUpIncrease)) + "\n");   
             }
             else
             {
-                descriptionText.text += ("Points bonus: +" + animalRef.pointsToGive + "\n");   
+                descriptionText.text += ("Points bonus: +" + (animalRef.pointsToGive+(level*chosenAnimal.pointsLevelUpIncrease)) + "\n");   
             }
         }
         if (animalRef.pointsMultToGive!=1f)
         {
-            descriptionText.text += ("Points mult: x" + animalRef.pointsMultToGive + "\n");
+            descriptionText.text += ("Points mult: x" + (animalRef.pointsMultToGive+(level*chosenAnimal.pointsLevelUpMult)) + "\n");
         }
         if (animalRef.currencyToGive!=0)
         {
             if (animalRef.currencyToGive < 0)
             {
-                descriptionText.text  += ("Cash loss: " + animalRef.currencyToGive + "\n");
+                descriptionText.text  += ("Cash loss: " + (animalRef.currencyToGive+(level*chosenAnimal.currencyLevelUpIncrease)) + "\n");
             }
             else
             {
-                descriptionText.text  += ("Cash bonus: +" + animalRef.currencyToGive + "\n");    
+                descriptionText.text  += ("Cash bonus: +" + (animalRef.currencyToGive+(level*chosenAnimal.currencyLevelUpIncrease)) + "\n");    
             }
         }
         if (animalRef.currencyMultToGive!=1f)
         {
-            descriptionText.text += ("Cash mult: x" + animalRef.currencyMultToGive + "\n");
+            descriptionText.text += ("Cash mult: x" + (animalRef.currencyMultToGive+(level*chosenAnimal.currencyLevelUpMult)) + "\n");
         }
     }
     public override void PurchaseUpgrade()

@@ -150,8 +150,8 @@ MonoBehaviour:
   animalData: {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
   currencyToGive: 0
   pointsToGive: 0
-  currencyMultToGive: 0
-  pointsMultToGive: 0
+  currencyMultToGive: 0.1
+  pointsMultToGive: 0.1
   isPredator: 1
   speed: 2
   currentSpeed: 0
