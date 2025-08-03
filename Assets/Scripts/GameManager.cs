@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < roundsPointsRequirement.Length; i++)
         {
-            float rawScore = 25 * Mathf.Pow(pointsRequirementGrowthRate, i);
+            float rawScore = 85 * Mathf.Pow(pointsRequirementGrowthRate, i);
             int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
             roundsPointsRequirement[i] = roundedToFive;
         }
@@ -123,7 +123,11 @@ public class GameManager : MonoBehaviour
 
     public void UpdateUI()
     {
-        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
+        if (roundNumber==0)
+        {
+            return;
+        }
+        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber-1];
         timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
         currencyDisplay.text = "CASH: " + player.playerCurrency;
     }
@@ -141,7 +145,7 @@ public class GameManager : MonoBehaviour
         lassoController.canLasso = false;
         
         //UNCOMMENT BELOW FOR PROD
-        /*
+        
         if (pointsThisRound < roundsPointsRequirement[roundNumber-1])
         {
             //GameOver
@@ -151,7 +155,7 @@ public class GameManager : MonoBehaviour
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
             return;
         }
-        */
+        
         
         DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
         AudioManager.Instance.PlaySFX("time_up");

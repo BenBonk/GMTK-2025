@@ -31,7 +31,6 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
         player = GameController.player;
-        player.playerCurrency = 10000;
         InitializeAllUpgrades();
     }
 
