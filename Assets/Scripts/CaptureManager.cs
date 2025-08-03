@@ -35,12 +35,15 @@ public class CaptureManager : MonoBehaviour
         {
             var synergy = player.synergiesInDeck[i];
             var neededCounts = GetNameCounts(synergy.animalsNeeded);
+            Debug.Log($"Checking synergy {synergy.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
 
             if (!synergy.isExactMatch)
             {
-                if (IsSubset(neededCounts, capturedCounts))
-                    ActivateSynergy(i);
+                bool subset = IsSubset(neededCounts, capturedCounts);
+                Debug.Log($"Non-exact match check for {synergy.name}: Result = {subset}");
+                if (subset) ActivateSynergy(i);
             }
+
             else
             {
                 if (AreCountsEqual(neededCounts, capturedCounts))
@@ -72,6 +75,7 @@ public class CaptureManager : MonoBehaviour
         currencyMult *= player.synergiesInDeck[index].currencyMult;
         pointBonus += player.synergiesInDeck[index].pointsBonus;
         pointMult *= player.synergiesInDeck[index].pointsMult;
+        Debug.Log($"Synergy activated: {player.synergiesInDeck[index].name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
     }
 
     public virtual void CaptureAnimal(Animal capturedAnimal)
@@ -79,18 +83,20 @@ public class CaptureManager : MonoBehaviour
         currencyBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.currencyToGive;
         currencyMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.currencyMultToGive;
         pointBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.pointsToGive;
-        pointMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.pointsMultToGive;
+        pointMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.pointsMultToGive;    
+        Debug.Log($"Captured animal: {capturedAnimal.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
     }
 
-    private Dictionary<string, int> GetNameCounts(IEnumerable<String> animals)
+    private Dictionary<string, int> GetNameCounts(IEnumerable<string> animals)
     {
         Dictionary<string, int> counts = new Dictionary<string, int>();
         foreach (var animal in animals)
         {
-            if (counts.ContainsKey(animal))
-                counts[name]++;
+            string key = animal.Trim().ToLower();
+            if (counts.ContainsKey(key))
+                counts[key]++;
             else
-                counts[name] = 1;
+                counts[key] = 1;
         }
         return counts;
     }
@@ -100,10 +106,11 @@ public class CaptureManager : MonoBehaviour
         Dictionary<string, int> counts = new Dictionary<string, int>();
         foreach (var animal in animals)
         {
-            if (counts.ContainsKey(animal.name))
-                counts[name]++;
+            string key = animal.animalData.animalName.Trim().ToLower();
+            if (counts.ContainsKey(key))
+                counts[key]++;
             else
-                counts[name] = 1;
+                counts[key] = 1;
         }
         return counts;
     }

@@ -74,7 +74,7 @@ public class AudioManager : MonoBehaviour
             !currentMusicSource.loop
         )
         {
-            Debug.Log($"🔁 Fallback triggered. Playing: '{fallbackTrackName}'");
+            //Debug.Log($"Fallback triggered. Playing: '{fallbackTrackName}'");
             fallbackPending = false;
             PlayMusicWithFadeOutOld(fallbackTrackName, playlistFadeOutTime, loop: true);
         }
@@ -91,7 +91,7 @@ public class AudioManager : MonoBehaviour
             float baseVolume = sfxVolumeDict.TryGetValue(name, out var v) ? v : 1f;
             float finalVolume = baseVolume * volumeMultiplier;
             sfxSource.PlayOneShot(clip, finalVolume);
-            Debug.Log($" Playing SFX: '{name}' | Volume: {finalVolume:F2}");
+            //Debug.Log($" Playing SFX: '{name}' | Volume: {finalVolume:F2}");
         }
         else
         {
@@ -124,7 +124,7 @@ public class AudioManager : MonoBehaviour
         nextMusicSource.loop = loop;
         nextMusicSource.Play();
 
-        Debug.Log($" Playing music: '{newTrackName}' | Volume: {volume:F2} | Loop: {loop}");
+        //Debug.Log($" Playing music: '{newTrackName}' | Volume: {volume:F2} | Loop: {loop}");
 
         var temp = currentMusicSource;
         currentMusicSource = nextMusicSource;
@@ -153,19 +153,13 @@ public class AudioManager : MonoBehaviour
         currentMusicSource.Stop();
         nextMusicSource.Stop();
         fallbackPending = false;
-        Debug.Log(" Music stopped immediately.");
     }
 
     public void SetMusicVolume(float volume)
     {
         currentMusicSource.volume = volume;
-        Debug.Log($" Music volume set to {volume:F2}");
+
     }
-
-    // ──────────────────────────────────────────────
-    // Playlist (Manual + Fallback)
-    // ──────────────────────────────────────────────
-
     public void PlayNextPlaylistTrack(float fadeOutDuration = -1f)
     {
         if (playlistTrackNames.Count == 0) return;
@@ -226,7 +220,6 @@ public class AudioManager : MonoBehaviour
 
         float firstVolume = sfxVolumeDict.TryGetValue(firstClipName, out var v1) ? v1 * volumeMultiplier : 1f * volumeMultiplier;
         sfxSource.PlayOneShot(firstClip, firstVolume);
-        Debug.Log($"🔊 Playing first SFX: '{firstClipName}' | Volume: {firstVolume:F2}");
 
         yield return new WaitForSeconds(firstClip.length + delayBetween);
 
@@ -234,11 +227,6 @@ public class AudioManager : MonoBehaviour
         {
             float secondVolume = sfxVolumeDict.TryGetValue(secondClipName, out var v2) ? v2 * volumeMultiplier : 1f * volumeMultiplier;
             sfxSource.PlayOneShot(secondClip, secondVolume);
-            Debug.Log($"🔊 Playing second SFX: '{secondClipName}' | Volume: {secondVolume:F2}");
-        }
-        else
-        {
-            Debug.LogWarning($" Second SFX '{secondClipName}' not found!");
         }
     }
 }

@@ -8,16 +8,16 @@ public class AnimalLevelManager : MonoBehaviour
 
     private void Awake()
     {
-        animalLevels["Sheep"] = 1;
-        animalLevels["Pig"] = 1;
-        animalLevels["Cow"] = 1;
-        animalLevels["Wolf"] = 1;
-        animalLevels["Chicken"] = 1;
-        animalLevels["Fox"] = 1;
-        animalLevels["Bear"] = 1;
-        animalLevels["Horse"] = 1;
-        animalLevels["Goat"] = 1;
-        animalLevels["Dog"] = 1;
+        animalLevels["Sheep"] = 0;
+        animalLevels["Pig"] = 0;
+        animalLevels["Cow"] = 0;
+        animalLevels["Wolf"] = 0;
+        animalLevels["Chicken"] = 0;
+        animalLevels["Fox"] = 0;
+        animalLevels["Bear"] = 0;
+        animalLevels["Horse"] = 0;
+        animalLevels["Goat"] = 0;
+        animalLevels["Dog"] = 0;
     }
 
     public int GetLevel(string name)
@@ -27,7 +27,7 @@ public class AnimalLevelManager : MonoBehaviour
             return level;
         }
         
-        return 1; //Default level
+        return 0; //Default level
     }
 
     public void SetLevel(string name, int newLevel)

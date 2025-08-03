@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Synergy", menuName = "Scriptable Objects/Synergy")]
 public class Synergy : ScriptableObject
 {
-    public string name;
+    public string synergyName;
     public string desc;
     public Sprite art;
     public int price;

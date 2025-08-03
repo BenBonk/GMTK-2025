@@ -230,7 +230,7 @@ public class LassoController : MonoBehaviour
 
             if (IsPointInPolygon(center, rawPoints))
             {
-                Debug.Log("Selected: " + col.name);
+                //Debug.Log("Selected: " + col.name);
                 col.gameObject.GetComponent<Animal>().isLassoed = true;
                 list.Add(col.gameObject);
             }
@@ -314,12 +314,9 @@ public class LassoController : MonoBehaviour
                 if (bonusPointsShown && multPointsShown)
                 {
                     int totalPoints = Mathf.RoundToInt(result.pointBonus * result.pointMult);
-                    Debug.Log("????????????");
-                    Debug.Log($"TutorialManager instance: {(TutorialManager._instance != null ? "Exists" : "NULL")}");
                     if (TutorialManager._instance != null)
                     {
                         TutorialManager._instance.pointsThisRound += totalPoints;
-                        Debug.Log("!!!!!!!!!");
                     }
                     else
                     {

@@ -14,7 +14,7 @@ public class AnimalShopItem : ShopItem
     public override void Initialize()
     {
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
-        titleText.text = chosenAnimal.name;
+        titleText.text = chosenAnimal.animalName;
         priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;
         upgradeArt.sprite = chosenAnimal.sprite;
@@ -31,8 +31,8 @@ public class AnimalShopItem : ShopItem
         Animal animalRef = chosenAnimal.animalPrefab.GetComponent<Animal>();
         if (buttonFX != null)
         {
-            buttonFX.clickSFX = animalRef.name;
-            buttonFX.highlightSFX = animalRef.name;
+            buttonFX.clickSFX = animalRef.animalData.animalName;
+            buttonFX.highlightSFX = animalRef.animalData.animalName;
         }
         if (animalRef.pointsToGive!=0)
         {

@@ -80,7 +80,7 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < player.synergiesInDeck.Count; i++)
         {
             synergyCards[i].gameObject.SetActive(true);
-            synergyCards[i].Initialize( player.synergiesInDeck[i].name, player.synergiesInDeck[i].desc, player.synergiesInDeck[i].art);
+            synergyCards[i].Initialize( player.synergiesInDeck[i].synergyName, player.synergiesInDeck[i].desc, player.synergiesInDeck[i].art);
         }
     }
 
@@ -96,7 +96,7 @@ public class ShopManager : MonoBehaviour
         
         foreach (AnimalData obj in player.animalsInDeck)
         {
-            string name = obj.name;
+            string name = obj.animalName;
 
             if (uniqueObjects.ContainsKey(name))
             {

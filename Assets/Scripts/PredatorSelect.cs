@@ -89,8 +89,8 @@ public class PredatorSelect : MonoBehaviour
         {
             bStr += ("Cash mult: x" + animalRef2.currencyMultToGive + "\n");
         }
-        predatorPanel1.Initialize(predatorOptions[a].name,aStr, predatorOptions[a].sprite, predatorOptions[a]);
-        predatorPanel2.Initialize(predatorOptions[b].name,bStr, predatorOptions[b].sprite, predatorOptions[b]);
+        predatorPanel1.Initialize(predatorOptions[a].animalName,aStr, predatorOptions[a].sprite, predatorOptions[a]);
+        predatorPanel2.Initialize(predatorOptions[b].animalName,bStr, predatorOptions[b].sprite, predatorOptions[b]);
         yield return new WaitForSeconds(2f);
         darkCover.DOFade(0.5f, 0.5f);
         panel1.gameObject.SetActive(true);
