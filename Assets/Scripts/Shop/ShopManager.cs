@@ -25,6 +25,7 @@ public class ShopManager : MonoBehaviour
     [HideInInspector]public Synergy overridingSynergy;
     public Image darkCover;
     public bool cantPurchaseItem;
+    public bool isTut;
     public TMP_Text cashText;
     //continue
 
@@ -43,9 +44,12 @@ public class ShopManager : MonoBehaviour
         while (synergyIndexes.Count<3)
         {
             int val = Random.Range(0, 24);
-            if (synergyIndexes.Contains(val) || player.synergiesInDeck.Contains(shopItems[0].GetComponent<SynergyShopItem>().possibleSynergies[val]))
+            if (!isTut)
             {
-                continue;
+                if (synergyIndexes.Contains(val) || player.synergiesInDeck.Contains(shopItems[0].GetComponent<SynergyShopItem>().possibleSynergies[val]))
+                {
+                    continue;
+                }   
             }
             synergyIndexes.Add(val);
         }
@@ -116,36 +120,37 @@ public class ShopManager : MonoBehaviour
             GameObject card = Instantiate(deckCardPrefab, deckParent);
 
             Animal animalRef = reference.animalPrefab.GetComponent<Animal>();
+            int level = GameController.animalLevelManager.GetLevel(reference.name);
             string stra = "";
             if (animalRef.pointsToGive!=0)
             {
                 if (animalRef.pointsToGive<0)
                 {
-                    stra += ("Points loss: " + animalRef.pointsToGive + "\n");   
+                    stra += ("Points loss: " + (animalRef.pointsToGive+(level*reference.pointsLevelUpIncrease))+ "\n");   
                 }
                 else
                 {
-                    stra += ("Points bonus: +" + animalRef.pointsToGive + "\n");   
+                    stra += ("Points bonus: +" + (animalRef.pointsToGive+(level*reference.pointsLevelUpIncrease)) + "\n");   
                 }
             }
             if (animalRef.pointsMultToGive!=1f)
             {
-                stra+= ("Points mult: x" + animalRef.pointsMultToGive + "\n");
+                stra+= ("Points mult: x" +(animalRef.pointsMultToGive+(level*reference.pointsLevelUpMult)) + "\n");
             }
             if (animalRef.currencyToGive!=0)
             {
                 if (animalRef.currencyToGive < 0)
                 {
-                    stra  += ("Cash loss: " + animalRef.currencyToGive + "\n");
+                    stra  += ("Cash loss: " + (animalRef.currencyToGive+(level*reference.currencyLevelUpIncrease)) + "\n");
                 }
                 else
                 {
-                    stra += ("Cash bonus: +" + animalRef.currencyToGive + "\n");    
+                    stra += ("Cash bonus: +" + (animalRef.currencyToGive+(level*reference.currencyLevelUpIncrease)) + "\n");    
                 }
             }
             if (animalRef.currencyMultToGive!=1f)
             {
-                stra += ("Cash mult: x" + animalRef.currencyMultToGive + "\n");
+                stra += ("Cash mult: x" + (animalRef.currencyMultToGive+(level*reference.currencyLevelUpMult)) + "\n");
             }
             card.GetComponent<DeckCard>().Initialize("x" + count, stra, reference.deckIcon);
         }

@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < roundsPointsRequirement.Length; i++)
         {
-            float rawScore = 125 * Mathf.Pow(pointsRequirementGrowthRate, i);
+            float rawScore = 85 * Mathf.Pow(pointsRequirementGrowthRate, i);
             int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
             roundsPointsRequirement[i] = roundedToFive;
         }

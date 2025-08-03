@@ -15,8 +15,12 @@ public class SynergyShopItem : ShopItem
     }
     public override void Initialize()
     {
+        if (GameController.shopManager.isTut)
+        {
+            value = 0;
+        }
         chosenSynergy = possibleSynergies[value];
-        titleText.text = chosenSynergy.name;
+        titleText.text = chosenSynergy.synergyName;
         descriptionText.text = chosenSynergy.desc;
         priceText.text = chosenSynergy.price.ToString();
         price = chosenSynergy.price;

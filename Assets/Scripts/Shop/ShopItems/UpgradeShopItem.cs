@@ -39,7 +39,7 @@ public class UpgradeShopItem : ShopItem
         }
         
         titleText.text = chosenAnimal.animalName;
-        price = (int)(25 * Mathf.Pow(2, animalLevel));
+        price = (int)(chosenAnimal.upgradeCost * Mathf.Pow(2, animalLevel));
         priceText.text = price.ToString();
         upgradeArt.sprite = chosenAnimal.deckIcon;
         upgradeArt.transform.DOScale(Vector3.one, 0);

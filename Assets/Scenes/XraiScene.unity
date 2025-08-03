@@ -6641,7 +6641,7 @@ MonoBehaviour:
   deathPanel: {fileID: 1901236480}
   roundNumberDeath: {fileID: 1844727764}
   lassoController: {fileID: 1615761884}
-  pointsRequirementGrowthRate: 1.2
+  pointsRequirementGrowthRate: 1.25
 --- !u!4 &1220268108
 Transform:
   m_ObjectHideFlags: 0
@@ -6874,6 +6874,7 @@ MonoBehaviour:
   overridingSynergy: {fileID: 0}
   darkCover: {fileID: 263320576}
   cantPurchaseItem: 1
+  isTut: 0
   cashText: {fileID: 1070060282}
 --- !u!1 &1306484911
 GameObject:
@@ -7872,7 +7873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'POINTS: 0 / 150'
+  m_text: 'POINTS: 0 / 100'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}

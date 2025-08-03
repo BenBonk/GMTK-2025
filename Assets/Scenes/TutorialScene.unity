@@ -242,6 +242,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3122615936035191174, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122615936035191174, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861225634360310261, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_text
+      value: Synergy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860113055035492433, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_text
+      value: 'Synergy Desc
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 7215211842641616410, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2306,6 +2324,24 @@ PrefabInstance:
     - target: {fileID: 2008887705696537010, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122615936035191174, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122615936035191174, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861225634360310261, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_text
+      value: Synergy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860113055035492433, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_text
+      value: 'Synergy Desc
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 7215211842641616410, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4691,6 +4727,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3122615936035191174, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122615936035191174, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861225634360310261, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_text
+      value: Synergy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860113055035492433, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
+      propertyPath: m_text
+      value: 'Synergy Desc
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 7215211842641616410, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6199,6 +6253,7 @@ MonoBehaviour:
   overridingSynergy: {fileID: 0}
   darkCover: {fileID: 263320576}
   cantPurchaseItem: 1
+  isTut: 1
   cashText: {fileID: 1070060282}
 --- !u!1 &1306484911
 GameObject:

@@ -17,7 +17,7 @@ MonoBehaviour:
   art: {fileID: 5362674378373723280, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 150
   isExactMatch: 0
-  currencyBonus: 5
+  currencyBonus: 15
   currencyMult: 1
   pointsBonus: 1
   pointsMult: 0
