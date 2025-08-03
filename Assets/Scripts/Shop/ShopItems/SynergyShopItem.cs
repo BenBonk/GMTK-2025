@@ -24,7 +24,14 @@ public class SynergyShopItem : ShopItem
         desc2.text = "";
         if (chosenSynergy.pointsBonus!=0)
         {
-            desc2.text += ("Points bonus: +" + chosenSynergy.pointsBonus + "\n");
+            if (chosenSynergy.pointsBonus<0)
+            {
+                desc2.text += ("Points loss: " + chosenSynergy.pointsBonus + "\n");
+            }
+            else
+            {
+                desc2.text += ("Points bonus: +" + chosenSynergy.pointsBonus + "\n");   
+            }
         }
         if (chosenSynergy.pointsMult!=1)
         {
@@ -32,7 +39,14 @@ public class SynergyShopItem : ShopItem
         }
         if (chosenSynergy.currencyBonus!=0)
         {
-            desc2.text += ("Cash bonus: +" + chosenSynergy.currencyBonus + "\n");
+            if (chosenSynergy.currencyBonus<0)
+            {
+                desc2.text += ("Cash loss: " + chosenSynergy.currencyBonus + "\n");
+            }
+            else
+            {
+                desc2.text += ("Cash bonus: +" + chosenSynergy.currencyBonus + "\n");   
+            }
         }
         if (chosenSynergy.currencyMult!=1)
         {
