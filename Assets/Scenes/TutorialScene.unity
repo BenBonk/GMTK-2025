@@ -789,50 +789,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: possibleAnimals.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: dd5f3d014a70c4c4794954f608059d4b, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61624a01d96a1c94289577fc134ae6ff, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: af25408ade403b34cbf9a46a842a8ebd, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 74903cbb3ccf3604982132ca7eee3dfa, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[8]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[9]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
     - target: {fileID: 5969877957938756722, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_fontColor.b
       value: 0.21960786
@@ -1612,50 +1568,6 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 373462337}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: possibleAnimals.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: dd5f3d014a70c4c4794954f608059d4b, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61624a01d96a1c94289577fc134ae6ff, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: af25408ade403b34cbf9a46a842a8ebd, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 74903cbb3ccf3604982132ca7eee3dfa, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[8]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[9]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
     - target: {fileID: 5969877957938756722, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_fontColor.b
       value: 0.21960786
@@ -9935,50 +9847,6 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 1808476963}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: possibleAnimals.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: dd5f3d014a70c4c4794954f608059d4b, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61624a01d96a1c94289577fc134ae6ff, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: af25408ade403b34cbf9a46a842a8ebd, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 74903cbb3ccf3604982132ca7eee3dfa, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[8]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[9]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
     - target: {fileID: 5969877957938756722, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_fontColor.b
       value: 0.21960786
