@@ -15,22 +15,28 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource currentMusicSource;
     private AudioSource nextMusicSource;
-    private Coroutine crossfadeRoutine;
+    private Coroutine fadeOutRoutine;
 
     [Header("Audio Clips")]
-    public List<NamedAudioClip> soundEffects = new List<NamedAudioClip>();
-    public List<NamedAudioClip> musicTracks = new List<NamedAudioClip>();
+    public List<NamedAudioClip> soundEffects = new();
+    public List<NamedAudioClip> musicTracks = new();
 
     private Dictionary<string, AudioClip> sfxDict = new();
+    private Dictionary<string, float> sfxVolumeDict = new();
+
     private Dictionary<string, AudioClip> musicDict = new();
+    private Dictionary<string, float> musicVolumeDict = new();
 
     [Header("Playlist Settings")]
     public List<string> playlistTrackNames = new();
-    public float playlistCrossfadeTime = 2f;
-    public bool avoidRepeats = true;
+    public float playlistFadeOutTime = 2f;
 
+    [Header("Fallback Settings")]
+    public string fallbackTrackName = "idle_loop";
+    private bool fallbackPending = false;
+
+    private int currentPlaylistIndex = -1;
     private string lastPlayedTrack = "";
-    private Coroutine playlistRoutine;
 
     private void Awake()
     {
@@ -39,122 +45,170 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
         foreach (var clip in soundEffects)
+        {
             sfxDict[clip.name] = clip.clip;
+            sfxVolumeDict[clip.name] = clip.volume;
+        }
+
         foreach (var clip in musicTracks)
+        {
             musicDict[clip.name] = clip.clip;
+            musicVolumeDict[clip.name] = clip.volume;
+        }
 
         currentMusicSource = musicSourceA;
         nextMusicSource = musicSourceB;
     }
 
-    // ----- SFX -----
-    public void PlaySFX(string name, float volume = 1f)
+    private void Update()
+    {
+        if (
+            fallbackPending &&
+            !currentMusicSource.isPlaying &&
+            currentMusicSource.clip != null &&
+            !currentMusicSource.loop
+        )
+        {
+            Debug.Log($"🔁 Fallback triggered. Playing: '{fallbackTrackName}'");
+            fallbackPending = false;
+            PlayMusicWithFadeOutOld(fallbackTrackName, playlistFadeOutTime, loop: true);
+        }
+    }
+
+    // ──────────────────────────────────────────────
+    // SFX
+    // ──────────────────────────────────────────────
+
+    public void PlaySFX(string name, float volumeMultiplier = 1f)
     {
         if (sfxDict.TryGetValue(name, out var clip))
         {
-            sfxSource.PlayOneShot(clip, volume);
+            float baseVolume = sfxVolumeDict.TryGetValue(name, out var v) ? v : 1f;
+            float finalVolume = baseVolume * volumeMultiplier;
+            sfxSource.PlayOneShot(clip, finalVolume);
+            Debug.Log($" Playing SFX: '{name}' | Volume: {finalVolume:F2}");
         }
         else
         {
-            Debug.LogWarning($"SFX '{name}' not found!");
+            Debug.LogWarning($" SFX '{name}' not found!");
         }
     }
 
-    // ----- Music -----
-    public void PlayMusic(string name, bool loop = true, float volume = 1f)
+    public void SetSFXVolume(float volume) => sfxSource.volume = volume;
+
+    // ──────────────────────────────────────────────
+    // Music (Fade-out Previous, Play New)
+    // ──────────────────────────────────────────────
+
+    public void PlayMusicWithFadeOutOld(string newTrackName, float fadeOutDuration = 2f, bool loop = false)
     {
-        if (!musicDict.TryGetValue(name, out var clip))
+        if (!musicDict.TryGetValue(newTrackName, out var newClip))
         {
-            Debug.LogWarning($"Music '{name}' not found!");
+            Debug.LogWarning($" Music track '{newTrackName}' not found!");
             return;
         }
 
-        currentMusicSource.clip = clip;
-        currentMusicSource.loop = loop;
-        currentMusicSource.volume = volume;
-        currentMusicSource.Play();
+        if (fadeOutRoutine != null)
+            StopCoroutine(fadeOutRoutine);
+
+        fadeOutRoutine = StartCoroutine(FadeOutOldTrack(currentMusicSource, fadeOutDuration));
+
+        float volume = musicVolumeDict.TryGetValue(newTrackName, out float trackVolume) ? trackVolume : 1f;
+        nextMusicSource.clip = newClip;
+        nextMusicSource.volume = volume;
+        nextMusicSource.loop = loop;
+        nextMusicSource.Play();
+
+        Debug.Log($" Playing music: '{newTrackName}' | Volume: {volume:F2} | Loop: {loop}");
+
+        var temp = currentMusicSource;
+        currentMusicSource = nextMusicSource;
+        nextMusicSource = temp;
     }
 
-    public void StopMusic()
+    private IEnumerator FadeOutOldTrack(AudioSource sourceToFade, float duration)
+    {
+        float startVolume = sourceToFade.volume;
+        float time = 0f;
+
+        while (time < duration)
+        {
+            sourceToFade.volume = Mathf.Lerp(startVolume, 0f, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        sourceToFade.Stop();
+        sourceToFade.volume = startVolume;
+        fadeOutRoutine = null;
+    }
+
+    public void StopMusicImmediately()
     {
         currentMusicSource.Stop();
+        nextMusicSource.Stop();
+        fallbackPending = false;
+        Debug.Log(" Music stopped immediately.");
     }
 
     public void SetMusicVolume(float volume)
     {
         currentMusicSource.volume = volume;
+        Debug.Log($" Music volume set to {volume:F2}");
     }
 
-    public void SetSFXVolume(float volume)
+    // ──────────────────────────────────────────────
+    // Playlist (Manual + Fallback)
+    // ──────────────────────────────────────────────
+
+    public void PlayNextPlaylistTrack(float fadeOutDuration = -1f)
     {
-        sfxSource.volume = volume;
+        if (playlistTrackNames.Count == 0) return;
+
+        currentPlaylistIndex = (currentPlaylistIndex + 1) % playlistTrackNames.Count;
+        string nextTrack = playlistTrackNames[currentPlaylistIndex];
+
+        float duration = fadeOutDuration > 0 ? fadeOutDuration : playlistFadeOutTime;
+
+        fallbackPending = true;
+        PlayMusicWithFadeOutOld(nextTrack, duration, loop: false);
     }
 
-    public void CrossfadeMusic(string name, float duration = 2f, float targetVolume = 1f)
+    public void PlayPlaylistTrack(int index, float fadeOutDuration = -1f)
     {
-        if (!musicDict.TryGetValue(name, out var newClip))
+        if (playlistTrackNames.Count == 0 || index < 0 || index >= playlistTrackNames.Count)
         {
-            Debug.LogWarning($"Music '{name}' not found!");
+            Debug.LogWarning(" Invalid playlist index.");
             return;
         }
 
-        if (crossfadeRoutine != null)
-            StopCoroutine(crossfadeRoutine);
+        currentPlaylistIndex = index;
+        float duration = fadeOutDuration > 0 ? fadeOutDuration : playlistFadeOutTime;
 
-        crossfadeRoutine = StartCoroutine(CrossfadeRoutine(newClip, duration, targetVolume));
+        fallbackPending = true;
+        PlayMusicWithFadeOutOld(playlistTrackNames[index], duration, loop: false);
     }
 
-    private IEnumerator CrossfadeRoutine(AudioClip newClip, float duration, float targetVolume)
-    {
-        nextMusicSource.clip = newClip;
-        nextMusicSource.volume = 0f;
-        nextMusicSource.loop = true;
-        nextMusicSource.Play();
-
-        float time = 0f;
-        float startVolume = currentMusicSource.volume;
-
-        while (time < duration)
-        {
-            float t = time / duration;
-            currentMusicSource.volume = Mathf.Lerp(startVolume, 0f, t);
-            nextMusicSource.volume = Mathf.Lerp(0f, targetVolume, t);
-            time += Time.deltaTime;
-            yield return null;
-        }
-
-        currentMusicSource.Stop();
-        currentMusicSource.volume = targetVolume;
-
-        // Swap roles
-        var temp = currentMusicSource;
-        currentMusicSource = nextMusicSource;
-        nextMusicSource = temp;
-
-        crossfadeRoutine = null;
-    }
-
-    public void CrossfadeToRandomPlaylistTrack(float crossfadeDuration = 2f, float targetVolume = 1f)
+    public void PlayRandomPlaylistTrack(float fadeOutDuration = -1f)
     {
         if (playlistTrackNames.Count == 0)
         {
-            Debug.LogWarning("Playlist is empty!");
+            Debug.LogWarning(" Playlist is empty!");
             return;
         }
 
-        List<string> availableTracks = new(playlistTrackNames);
-
-        if (avoidRepeats && availableTracks.Count > 1)
-            availableTracks.Remove(lastPlayedTrack);
-
-        string selected = availableTracks[Random.Range(0, availableTracks.Count)];
+        string selected = playlistTrackNames[Random.Range(0, playlistTrackNames.Count)];
         lastPlayedTrack = selected;
 
-        CrossfadeMusic(selected, crossfadeDuration, targetVolume);
+        float duration = fadeOutDuration > 0 ? fadeOutDuration : playlistFadeOutTime;
+
+        fallbackPending = true;
+        PlayMusicWithFadeOutOld(selected, duration, loop: false);
     }
 }
 
@@ -163,5 +217,8 @@ public class NamedAudioClip
 {
     public string name;
     public AudioClip clip;
+    [Range(0f, 2f)] public float volume = 1f;
 }
+
+
 

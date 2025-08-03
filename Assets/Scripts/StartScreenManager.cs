@@ -10,11 +10,16 @@ public class StartScreenManager : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("SpawnAnimal", 1,Random.Range(1.5f, 2.5f));
-        AudioManager.Instance.PlayMusic("main_theme");
+        AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,true);
     }
 
     void SpawnAnimal()
     {
         Instantiate(animalsToSpawn[Random.Range(0, animalsToSpawn.Length)], spawnPositions[Random.Range(0, spawnPositions.Length)].position, Quaternion.identity);
+    }
+
+    public void ChangeScene()
+    {
+        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 2f, true);
     }
 }

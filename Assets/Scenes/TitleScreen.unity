@@ -352,7 +352,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -449,7 +449,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -546,24 +546,41 @@ MonoBehaviour:
   musicSourceA: {fileID: 456881771}
   musicSourceB: {fileID: 456881770}
   sfxSource: {fileID: 456881769}
-  soundEffects: []
+  soundEffects:
+  - name: rooster
+    clip: {fileID: 8300000, guid: e5e44e3f87139ad41b3430acca9302a7, type: 3}
+    volume: 1
+  - name: ready
+    clip: {fileID: 8300000, guid: 572f0cb2ced07974cbb72496c2876f5d, type: 3}
+    volume: 1
+  - name: lasso_create
+    clip: {fileID: 8300000, guid: c91e5b4dca1c2ed458de7f9fc866bbae, type: 3}
+    volume: 1
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}
+    volume: 0.6
   - name: wrangle_1
-    clip: {fileID: 8300000, guid: 380c23a4952592d438bfc00dad7752ad, type: 3}
-  - name: wrangle_2
-    clip: {fileID: 8300000, guid: 49e9068344ea3df488e10e6522a617df, type: 3}
-  - name: wrangle_3
     clip: {fileID: 8300000, guid: c2d0ca59e9fc03042bc944e2ad8661c1, type: 3}
+    volume: 0.6
+  - name: wrangle_2
+    clip: {fileID: 8300000, guid: 380c23a4952592d438bfc00dad7752ad, type: 3}
+    volume: 0.6
+  - name: wrangle_3
+    clip: {fileID: 8300000, guid: 49e9068344ea3df488e10e6522a617df, type: 3}
+    volume: 0.6
   - name: shop_theme
     clip: {fileID: 8300000, guid: f7f22ac31f969c94d94de2748c635667, type: 3}
+    volume: 0.6
+  - name: ambient
+    clip: {fileID: 8300000, guid: 3166efeb4b2db294a84a3857dbb68fa5, type: 3}
+    volume: 2
   playlistTrackNames:
   - wrangle_1
   - wrangle_2
   - wrangle_3
-  playlistCrossfadeTime: 2
-  avoidRepeats: 1
+  playlistFadeOutTime: 2
+  fallbackTrackName: ambient
 --- !u!4 &456881773
 Transform:
   m_ObjectHideFlags: 0
@@ -707,6 +724,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: TutorialScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 511311563}
+        m_TargetAssemblyTypeName: StartScreenManager, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &495177324
@@ -1150,6 +1179,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: XraiScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 511311563}
+        m_TargetAssemblyTypeName: StartScreenManager, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &571119861

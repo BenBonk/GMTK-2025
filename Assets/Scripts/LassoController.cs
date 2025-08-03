@@ -151,6 +151,7 @@ public class LassoController : MonoBehaviour
 
         //GameController.gameManager.lassosUsed++;
         rawPoints.Add(start); // close loop
+        AudioManager.Instance.PlaySFX("lasso_create");
 
         // Generate smooth loop (no tail yet)
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);

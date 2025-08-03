@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
         onZoomMidpoint: () =>
         {
             barnAnimator.Play("Open", 0, 0.1f);
-            AudioManager.Instance.CrossfadeMusic("shop_theme", 2f); // fade duration = 2s (or whatever you like)
+            AudioManager.Instance.PlayMusicWithFadeOutOld("shop_theme", 1f);
         },
             onZoomEndpoint: () =>
             {
@@ -182,7 +182,7 @@ public class GameManager : MonoBehaviour
 
     public void LeaveShop()
     {
-        AudioManager.Instance.CrossfadeToRandomPlaylistTrack();
+        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         if (GameController.shopManager.cantPurchaseItem)
         {
             return;
@@ -233,18 +233,20 @@ public class GameManager : MonoBehaviour
     public IEnumerator ShowReadySetLassoSequence()
     {
         string[] words = { "READY?", "SET", "LASSO!" };
-
         for (int i = 0; i < words.Length; i++)
         {
             if (i == 2)
             {
                 // Use lasso material for the last word
                 DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, lassoMaterialPreset);
+                AudioManager.Instance.PlayNextPlaylistTrack();
+                AudioManager.Instance.PlaySFX("rooster");
             }
             else
             {
                 // Use default material for other words
                 DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, defaultMaterialPreset);
+                AudioManager.Instance.PlaySFX("ready");
             }
 
             yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
