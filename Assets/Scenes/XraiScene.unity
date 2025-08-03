@@ -6641,7 +6641,7 @@ MonoBehaviour:
   deathPanel: {fileID: 1901236480}
   roundNumberDeath: {fileID: 1844727764}
   lassoController: {fileID: 1615761884}
-  pointsRequirementGrowthRate: 1.25
+  pointsRequirementGrowthRate: 1.3
 --- !u!4 &1220268108
 Transform:
   m_ObjectHideFlags: 0
