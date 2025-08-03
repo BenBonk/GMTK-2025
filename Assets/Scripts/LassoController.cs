@@ -25,7 +25,7 @@ public class LassoController : MonoBehaviour
 
     public Color positiveMultColor;
     public Color negativeMultColor;
-    [HideInInspector] public bool canLasso;
+    public bool canLasso;
     void Update()
     {
         if (!canLasso)
