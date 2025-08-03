@@ -72,9 +72,16 @@ public class GameManager : MonoBehaviour
     public RectTransform deathPanel;
     public TMP_Text roundNumberDeath;
     public LassoController lassoController;
+    public float pointsRequirementGrowthRate;
 
     private void Start()
     {
+        for (int i = 0; i < roundsPointsRequirement.Length; i++)
+        {
+            float rawScore = 25 * Mathf.Pow(pointsRequirementGrowthRate, i);
+            int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
+            roundsPointsRequirement[i] = roundedToFive;
+        }
         elapsedTime = 0;
         //lassosUsed = 0;
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
