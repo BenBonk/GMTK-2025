@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
 
         //UNCOMMENT BELOW FOR PROD
 
-        if (pointsThisRound < roundsPointsRequirement[roundNumber - 1])
+        if (pointsThisRound < roundsPointsRequirement[roundNumber])
         {
             //GameOver
             roundNumberDeath.text = "Round: " + roundNumber;
