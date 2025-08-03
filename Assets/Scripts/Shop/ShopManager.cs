@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class ShopManager : MonoBehaviour
 {
@@ -39,6 +40,21 @@ public class ShopManager : MonoBehaviour
         UpdateCashText();
         
         //needs to be called when entering shop
+        List<int> synergyIndexes = new List<int>();
+        while (synergyIndexes.Count<3)
+        {
+            int val = Random.Range(0, 24);
+            if (synergyIndexes.Contains(val) || player.synergiesInDeck.Contains(shopItems[0].GetComponent<SynergyShopItem>().possibleSynergies[val]))
+            {
+                continue;
+            }
+            synergyIndexes.Add(val);
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            shopItems[i].GetComponent<SynergyShopItem>().SetInt(synergyIndexes[i]);
+        }
         foreach (var shopItem in shopItems)
         {
             shopItem.canPurchase = true;
@@ -99,7 +115,40 @@ public class ShopManager : MonoBehaviour
             int count = entry.Value.count;
             AnimalData reference = entry.Value.reference;
             GameObject card = Instantiate(deckCardPrefab, deckParent);
-            card.GetComponent<DeckCard>().Initialize("x" + count, reference.description, reference.deckIcon);
+
+            Animal animalRef = reference.animalPrefab.GetComponent<Animal>();
+            string stra = "";
+            if (animalRef.pointsToGive!=0)
+            {
+                if (animalRef.pointsToGive<0)
+                {
+                    stra += ("Points loss: " + animalRef.pointsToGive + "\n");   
+                }
+                else
+                {
+                    stra += ("Points bonus: +" + animalRef.pointsToGive + "\n");   
+                }
+            }
+            if (animalRef.pointsMultToGive!=1f)
+            {
+                stra+= ("Points mult: x" + animalRef.pointsMultToGive + "\n");
+            }
+            if (animalRef.currencyToGive!=0)
+            {
+                if (animalRef.currencyToGive < 0)
+                {
+                    stra  += ("Cash loss: " + animalRef.currencyToGive + "\n");
+                }
+                else
+                {
+                    stra += ("Cash bonus: +" + animalRef.currencyToGive + "\n");    
+                }
+            }
+            if (animalRef.currencyMultToGive!=1f)
+            {
+                stra += ("Cash mult: x" + animalRef.currencyMultToGive + "\n");
+            }
+            card.GetComponent<DeckCard>().Initialize("x" + count, stra, reference.deckIcon);
         }
     }
 

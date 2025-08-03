@@ -8,10 +8,14 @@ public class SynergyShopItem : ShopItem
     private Synergy chosenSynergy;
     public SynergySlots synergySlots;
     public TMP_Text desc2;
-
+    private int value;
+    public void SetInt(int val)
+    {
+        value = val;
+    }
     public override void Initialize()
     {
-        chosenSynergy = possibleSynergies[Random.Range(0, possibleSynergies.Length)];
+        chosenSynergy = possibleSynergies[value];
         titleText.text = chosenSynergy.name;
         descriptionText.text = chosenSynergy.desc;
         priceText.text = chosenSynergy.price.ToString();
@@ -22,7 +26,7 @@ public class SynergyShopItem : ShopItem
         {
             desc2.text += ("Points bonus: +" + chosenSynergy.pointsBonus + "\n");
         }
-        if (chosenSynergy.pointsMult!=0)
+        if (chosenSynergy.pointsMult!=1)
         {
             desc2.text += ("Points mult: x" + chosenSynergy.pointsMult + "\n");
         }
@@ -30,7 +34,7 @@ public class SynergyShopItem : ShopItem
         {
             desc2.text += ("Cash bonus: +" + chosenSynergy.currencyBonus + "\n");
         }
-        if (chosenSynergy.currencyMult!=0)
+        if (chosenSynergy.currencyMult!=1)
         {
             desc2.text += ("Cash mult: x" + chosenSynergy.currencyMult + "\n");
         }
