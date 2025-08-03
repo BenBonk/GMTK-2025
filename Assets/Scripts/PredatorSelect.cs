@@ -106,7 +106,6 @@ public class PredatorSelect : MonoBehaviour
 
     public IEnumerator Exit()
     {
-        GameController.gameManager.GoToShop();
         darkCover.DOFade(0, .5f);
         yield return new WaitForSeconds(.1f);
         titleText.DOAnchorPosY(530, .5f).SetEase(Ease.InBack).OnComplete(()=>titleText.gameObject.SetActive(false));
@@ -114,6 +113,8 @@ public class PredatorSelect : MonoBehaviour
         panel1.DOAnchorPosY(-900, .5f).SetEase(Ease.InBack).OnComplete(()=>panel1.gameObject.SetActive(false));
         yield return new WaitForSeconds(.25f);
         panel2.DOAnchorPosY(-900, .5f).SetEase(Ease.InBack).OnComplete(()=>panel2.gameObject.SetActive(false));
+        GameController.shopManager.InitializeAllUpgrades();
+        GameController.gameManager.GoToShop();
     }
 
 }

@@ -69,6 +69,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerDisplay;
     public TextMeshProUGUI currencyDisplay;
     public TextMeshProUGUI lassosDisplay;
+    public RectTransform deathPanel;
+    public TMP_Text roundNumberDeath;
+    public LassoController lassoController;
 
     private void Start()
     {
@@ -100,9 +103,7 @@ public class GameManager : MonoBehaviour
     public void StartRound()
     {
         pointsThisRound = 0;
-        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
-        timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
-        currencyDisplay.text = "CASH: " + player.playerCurrency;
+        UpdateUI();
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
         roundNumber++;
         roundInProgress = true;
@@ -111,13 +112,34 @@ public class GameManager : MonoBehaviour
         StartCoroutine(ShowReadySetLassoSequence());
     }
 
+    public void UpdateUI()
+    {
+        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
+        timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
+        currencyDisplay.text = "CASH: " + player.playerCurrency;
+    }
+
     public void EndRound()
     {
         roundCompleted = true;
         roundInProgress = false;
         elapsedTime = 0;
         playerReady = false;
-        GameController.shopManager.InitializeAllUpgrades();
+        lassoController.canLasso = false;
+        
+        //UNCOMMENT BELOW FOR PROD
+        /*
+        if (pointsThisRound < roundsPointsRequirement[roundNumber-1])
+        {
+            //GameOver
+            roundNumberDeath.text = "Round: " + roundNumber;
+            deathPanel.gameObject.SetActive(true);
+            deathPanel.DOAnchorPosY(0,1f).SetEase(Ease.InOutBack);
+            GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
+            return;
+        }
+        */
+        
         DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
         if (roundNumber%predatorRoundFrequency==0)
         {
@@ -125,6 +147,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            GameController.shopManager.InitializeAllUpgrades();
             GoToShop();
         }
     }
@@ -133,7 +156,7 @@ public class GameManager : MonoBehaviour
     {
         cameraController.AnimateToTarget(
             barnCameraTarget.transform,
-            delay: 3f,
+            delay: .5f,
             onZoomMidpoint: () => barnAnimator.Play("Open", 0, 0.1f),
             onZoomEndpoint: () =>
             {
@@ -144,6 +167,11 @@ public class GameManager : MonoBehaviour
 
     public void LeaveShop()
     {
+        if (GameController.shopManager.cantPurchaseItem)
+        {
+            return;
+        }
+        UpdateUI();
         barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
         cameraController.ResetToStartPosition(1f);
     }
@@ -207,6 +235,7 @@ public class GameManager : MonoBehaviour
         }
 
         playerReady = true;
+        lassoController.canLasso = true;
     }
 
     private Vector3 GetCenterScreenWorldPosition()

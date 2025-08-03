@@ -25,9 +25,13 @@ public class LassoController : MonoBehaviour
 
     public Color positiveMultColor;
     public Color negativeMultColor;
-
+    [HideInInspector] public bool canLasso;
     void Update()
     {
+        if (!canLasso)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             StartLasso();
@@ -107,7 +111,7 @@ public class LassoController : MonoBehaviour
 
         if (rawPoints.Count < 3)
         {
-            Debug.Log("Lasso too small — discarded.");
+            Debug.Log("Lasso too small ï¿½ discarded.");
             Destroy(lineRenderer.gameObject);
             return;
         }
@@ -117,7 +121,7 @@ public class LassoController : MonoBehaviour
 
         if (Vector2.Distance(start, end) > closeThreshold)
         {
-            Debug.Log("Lasso did not close — discarded.");
+            Debug.Log("Lasso did not close ï¿½ discarded.");
             rawPoints.Clear();
             lineRenderer.positionCount = 0;
             Destroy(lineRenderer.gameObject);
@@ -139,7 +143,7 @@ public class LassoController : MonoBehaviour
 
         if (area < areaThreshold)
         {
-            Debug.Log($"Lasso area too small ({area:F2} < {areaThreshold:F2}) — discarded.");
+            Debug.Log($"Lasso area too small ({area:F2} < {areaThreshold:F2}) ï¿½ discarded.");
             rawPoints.Clear();
             Destroy(lineRenderer.gameObject);
             return;
