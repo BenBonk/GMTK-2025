@@ -3,7 +3,6 @@ using Level;
 using System.Collections;
 using System.Linq;
 using TMPro;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -199,7 +198,7 @@ public class TutorialManager : MonoBehaviour
     {
         if (scoreDisplay == null || roundsPointsRequirement == null || roundNumber >= roundsPointsRequirement.Length)
         {
-            Debug.LogWarning("Cannot update score display – scoreDisplay or roundsPointsRequirement invalid.");
+            Debug.LogWarning("Cannot update score display â€“ scoreDisplay or roundsPointsRequirement invalid.");
             return;
         }
 
