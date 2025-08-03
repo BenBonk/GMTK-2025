@@ -1,60 +1,167 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
-    public bool game;
-    void Awake()
+    public static AudioManager Instance;
+
+    [Header("Music Sources")]
+    public AudioSource musicSourceA;
+    public AudioSource musicSourceB;
+
+    [Header("SFX Source")]
+    public AudioSource sfxSource;
+
+    private AudioSource currentMusicSource;
+    private AudioSource nextMusicSource;
+    private Coroutine crossfadeRoutine;
+
+    [Header("Audio Clips")]
+    public List<NamedAudioClip> soundEffects = new List<NamedAudioClip>();
+    public List<NamedAudioClip> musicTracks = new List<NamedAudioClip>();
+
+    private Dictionary<string, AudioClip> sfxDict = new();
+    private Dictionary<string, AudioClip> musicDict = new();
+
+    [Header("Playlist Settings")]
+    public List<string> playlistTrackNames = new();
+    public float playlistCrossfadeTime = 2f;
+    public bool avoidRepeats = true;
+
+    private string lastPlayedTrack = "";
+    private Coroutine playlistRoutine;
+
+    private void Awake()
     {
-
-        foreach (Sound s in sounds)     
+        if (Instance != null && Instance != this)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
+            Destroy(gameObject);
+            return;
         }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        foreach (var clip in soundEffects)
+            sfxDict[clip.name] = clip.clip;
+        foreach (var clip in musicTracks)
+            musicDict[clip.name] = clip.clip;
+
+        currentMusicSource = musicSourceA;
+        nextMusicSource = musicSourceB;
     }
 
-    private void Start()
+    // ----- SFX -----
+    public void PlaySFX(string name, float volume = 1f)
     {
-        if (game)
+        if (sfxDict.TryGetValue(name, out var clip))
         {
-            StartCoroutine(Game());
+            sfxSource.PlayOneShot(clip, volume);
         }
         else
         {
-            StartCoroutine(StartScreen());
+            Debug.LogWarning($"SFX '{name}' not found!");
         }
     }
 
-    IEnumerator StartScreen()
+    // ----- Music -----
+    public void PlayMusic(string name, bool loop = true, float volume = 1f)
     {
-        Play("startintro");
-        Sound s = Array.Find(sounds, sound => sound.name == "startintro");
-        yield return new WaitForSeconds(s.clip.length-0.5f);
-        Play("startloop");
-    }
-
-    IEnumerator Game()
-    {
-        yield return new WaitForSeconds(1);
-        Play("gameintro");
-        Sound s = Array.Find(sounds, sound => sound.name == "gameintro");
-        yield return new WaitForSeconds(s.clip.length);
-        Play("gameloop");
-    }
-
-    public void Play(string name)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
+        if (!musicDict.TryGetValue(name, out var clip))
+        {
+            Debug.LogWarning($"Music '{name}' not found!");
             return;
-        s.source.Play();
+        }
+
+        currentMusicSource.clip = clip;
+        currentMusicSource.loop = loop;
+        currentMusicSource.volume = volume;
+        currentMusicSource.Play();
+    }
+
+    public void StopMusic()
+    {
+        currentMusicSource.Stop();
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        currentMusicSource.volume = volume;
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxSource.volume = volume;
+    }
+
+    public void CrossfadeMusic(string name, float duration = 2f, float targetVolume = 1f)
+    {
+        if (!musicDict.TryGetValue(name, out var newClip))
+        {
+            Debug.LogWarning($"Music '{name}' not found!");
+            return;
+        }
+
+        if (crossfadeRoutine != null)
+            StopCoroutine(crossfadeRoutine);
+
+        crossfadeRoutine = StartCoroutine(CrossfadeRoutine(newClip, duration, targetVolume));
+    }
+
+    private IEnumerator CrossfadeRoutine(AudioClip newClip, float duration, float targetVolume)
+    {
+        nextMusicSource.clip = newClip;
+        nextMusicSource.volume = 0f;
+        nextMusicSource.loop = true;
+        nextMusicSource.Play();
+
+        float time = 0f;
+        float startVolume = currentMusicSource.volume;
+
+        while (time < duration)
+        {
+            float t = time / duration;
+            currentMusicSource.volume = Mathf.Lerp(startVolume, 0f, t);
+            nextMusicSource.volume = Mathf.Lerp(0f, targetVolume, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        currentMusicSource.Stop();
+        currentMusicSource.volume = targetVolume;
+
+        // Swap roles
+        var temp = currentMusicSource;
+        currentMusicSource = nextMusicSource;
+        nextMusicSource = temp;
+
+        crossfadeRoutine = null;
+    }
+
+    public void CrossfadeToRandomPlaylistTrack(float crossfadeDuration = 2f, float targetVolume = 1f)
+    {
+        if (playlistTrackNames.Count == 0)
+        {
+            Debug.LogWarning("Playlist is empty!");
+            return;
+        }
+
+        List<string> availableTracks = new(playlistTrackNames);
+
+        if (avoidRepeats && availableTracks.Count > 1)
+            availableTracks.Remove(lastPlayedTrack);
+
+        string selected = availableTracks[Random.Range(0, availableTracks.Count)];
+        lastPlayedTrack = selected;
+
+        CrossfadeMusic(selected, crossfadeDuration, targetVolume);
     }
 }
+
+[System.Serializable]
+public class NamedAudioClip
+{
+    public string name;
+    public AudioClip clip;
+}
+

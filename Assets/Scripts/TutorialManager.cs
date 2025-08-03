@@ -1,0 +1,417 @@
+using DG.Tweening;
+using Level;
+using System.Collections;
+using System.Linq;
+using TMPro;
+using UnityEditor.ShaderGraph.Internal;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class TutorialManager : MonoBehaviour
+{
+    public Player player;
+    public int[] roundsPointsRequirement;
+    public int roundNumber;
+    public bool roundInProgress;
+    public bool playerReady;
+    public bool roundCompleted;
+    public float roundDuration = 20f;
+    private float elapsedTime;
+    public int predatorRoundFrequency;
+
+    public GameObject wordPrefab; // Assign in inspector
+    public float wordScaleDuration = 0.3f;
+    public float wordDisplayDuration = 0.7f;
+    [SerializeField] private Material lassoMaterialPreset;
+    [SerializeField] private Material defaultMaterialPreset;
+
+    [SerializeField] private CameraController cameraController;
+    [SerializeField] private SpriteRenderer barn;
+    [SerializeField] private Transform barnCameraTarget;
+    [SerializeField] private Animator barnAnimator;
+
+
+    private int lastDisplayedSecond = -1;
+    [SerializeField] private Color timerNormalColor = Color.white;
+    [SerializeField] private Color timerWarningColor = Color.red;
+
+
+    public  GameObject cowPrefab;
+    public GameObject wolfPrefab;
+    public GameObject wordPrefab2;
+
+    public LevelLoader levelLoader;
+
+    //private int _lassosUsedThisRound;
+    /*public int lassosUsed
+        {
+        get => _lassosUsedThisRound;
+        set
+        {
+            if (_lassosUsedThisRound != value)
+            {
+                _lassosUsedThisRound = value;
+                OnLassosChanged?.Invoke(_lassosUsedThisRound);
+            }
+        }
+    }*/
+
+    private int _pointsThisRound;
+    public int pointsThisRound
+    {
+        get => _pointsThisRound;
+        set
+        {
+            if (_pointsThisRound != value)
+            {
+                _pointsThisRound = value;
+                OnPointsChanged?.Invoke(_pointsThisRound);
+            }
+        }
+    }
+
+    public event System.Action<int> OnPointsChanged;
+    public event System.Action<int> OnLassosChanged;
+
+
+    public TextMeshProUGUI scoreDisplay;
+    public TextMeshProUGUI timerDisplay;
+    public TextMeshProUGUI currencyDisplay;
+    public TextMeshProUGUI lassosDisplay;
+
+    private void Start()
+    {
+        elapsedTime = 0;
+        //lassosUsed = 0;
+        player.OnCurrencyChanged += UpdatecurrencyDisplay;
+        OnPointsChanged += UpdateScoreDisplay;
+        OnLassosChanged += UpdateLassosDisplay;
+        Invoke("StartRound", 1);
+    }
+
+    private void Update()
+    {
+        if (!roundCompleted && roundDuration - elapsedTime <= 0)
+        {
+            EndRound();
+        }
+        else
+        {
+            if (roundInProgress && playerReady)
+            {
+                elapsedTime += Time.deltaTime;
+                UpdateTimerDisplay();
+            }
+        }
+    }
+
+
+    public void StartRound()
+    {
+        pointsThisRound = 0;
+        scoreDisplay.text = "POINTS: " + pointsThisRound + " / 50";
+        timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
+        currencyDisplay.text = "CASH: " + player.playerCurrency;
+        //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
+        roundNumber++;
+        roundInProgress = true;
+        roundCompleted = false;
+        barnAnimator.Play("Closed", 0, 0.1f);
+        //StartCoroutine(ShowReadySetLassoSequence());
+        StartCoroutine(RunTutorial());
+    }
+
+    public void EndRound()
+    {
+        roundCompleted = true;
+        roundInProgress = false;
+        elapsedTime = 0;
+        playerReady = false;
+        GameController.shopManager.InitializeAllUpgrades();
+        DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
+        if (roundNumber % predatorRoundFrequency == 0)
+        {
+            GameController.predatorSelect.StartCoroutine("Intro");
+        }
+        else
+        {
+            GoToShop();
+        }
+    }
+
+    public void GoToShop()
+    {
+        cameraController.AnimateToTarget(
+            barnCameraTarget.transform,
+            delay: 0.1f,
+            onZoomMidpoint: () => barnAnimator.Play("Open", 0, 0.1f),
+            onZoomEndpoint: () =>
+            {
+                barn.DOFade(0f, 1f).SetEase(Ease.OutSine).OnComplete(() => GameController.shopManager.cantPurchaseItem = false);
+            }
+        );
+    }
+
+    public void LeaveShop()
+    {
+        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(() => Invoke("StartRound", 2.25f));
+        cameraController.ResetToStartPosition(1f);
+    }
+
+    private void UpdateScoreDisplay(int newPoints)
+    {
+        scoreDisplay.text = $"POINTS: {newPoints} / {roundsPointsRequirement[roundNumber]}";
+    }
+
+    private void UpdatecurrencyDisplay(int newcurrency)
+    {
+        currencyDisplay.text = $"CASH: {newcurrency}";
+    }
+
+    private void UpdateTimerDisplay()
+    {
+        float remaining = roundDuration - elapsedTime;
+        int currentSecond = Mathf.FloorToInt(remaining);
+
+        timerDisplay.text = $"TIME: {remaining:F1}s";
+
+        if (remaining <= 10f && currentSecond != lastDisplayedSecond)
+        {
+            lastDisplayedSecond = currentSecond;
+
+            timerDisplay.color = timerWarningColor;
+            timerDisplay.transform.localScale = Vector3.one * 1.3f;
+
+            Sequence pulse = DOTween.Sequence();
+            pulse.Append(timerDisplay.transform.DOScale(1.5f, 0.15f).SetEase(Ease.OutBack));
+            pulse.Append(timerDisplay.transform.DOScale(1f, 0.2f).SetEase(Ease.OutExpo));
+
+            pulse.Join(timerDisplay.DOColor(timerNormalColor, 0.4f));
+        }
+    }
+
+
+    private void UpdateLassosDisplay(int usedLassos)
+    {
+        lassosDisplay.text = $"Lassos: {player.lassosPerRound - usedLassos}";
+    }
+
+    public IEnumerator ShowReadySetLassoSequence()
+    {
+        string[] words = { "READY?", "SET", "LASSO!" };
+
+        for (int i = 0; i < words.Length; i++)
+        {
+            if (i == 2)
+            {
+                // Use lasso material for the last word
+                DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, lassoMaterialPreset);
+            }
+            else
+            {
+                // Use default material for other words
+                DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, defaultMaterialPreset);
+            }
+
+            yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
+        }
+
+        playerReady = true;
+    }
+
+    private Vector3 GetCenterScreenWorldPosition()
+    {
+        float z = Mathf.Abs(Camera.main.transform.position.z);
+        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, z);
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(screenCenter);
+        worldPos.z = 0f;
+        return worldPos;
+    }
+
+
+    public void DisplayPopupWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null)
+    {
+        GameObject wordObj = Instantiate(wordPrefab, transform);
+        TMP_Text wordText = wordObj.GetComponent<TMP_Text>();
+
+        wordText.text = word;
+
+        // Apply material override if provided
+        if (overrideMaterial != null)
+        {
+            wordText.fontSharedMaterial = overrideMaterial;
+        }
+
+        wordObj.transform.position = GetCenterScreenWorldPosition();
+        wordObj.transform.localScale = Vector3.zero;
+        wordObj.transform.rotation = Quaternion.identity;
+        wordObj.SetActive(true);
+
+        Sequence seq = DOTween.Sequence();
+
+        // Scale pop-in
+        seq.Append(wordObj.transform.DOScale(1.05f, scaleDuration).SetEase(Ease.OutBack));
+        seq.Append(wordObj.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+
+        // Optional shake
+        if (shake)
+        {
+            seq.Append(wordObj.transform.DOShakeRotation(
+                duration: 0.4f,
+                strength: new Vector3(0f, 0f, 20f), // Z-axis only
+                vibrato: 10,
+                randomness: 90,
+                fadeOut: true
+            ));
+        }
+
+        // Fade out and destroy
+        seq.AppendInterval(displayDuration);
+        seq.AppendCallback(() => wordText.DOFade(0f, 0.5f));
+        seq.AppendCallback(() => Destroy(wordObj, 0.6f));
+    }
+
+    public void DisplayPopupWord2(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null)
+    {
+        GameObject wordObj = Instantiate(wordPrefab2, transform);
+        TMP_Text wordText = wordObj.GetComponent<TMP_Text>();
+
+        wordText.text = word;
+
+        // Apply material override if provided
+        if (overrideMaterial != null)
+        {
+            wordText.fontSharedMaterial = overrideMaterial;
+        }
+
+        wordObj.transform.position = GetCenterScreenWorldPosition();
+        wordObj.transform.localScale = Vector3.zero;
+        wordObj.transform.rotation = Quaternion.identity;
+        wordObj.SetActive(true);
+
+        Sequence seq = DOTween.Sequence();
+
+        // Scale pop-in
+        seq.Append(wordObj.transform.DOScale(1.05f, scaleDuration).SetEase(Ease.OutBack));
+        seq.Append(wordObj.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+
+        // Optional shake
+        if (shake)
+        {
+            seq.Append(wordObj.transform.DOShakeRotation(
+                duration: 0.4f,
+                strength: new Vector3(0f, 0f, 20f), // Z-axis only
+                vibrato: 10,
+                randomness: 90,
+                fadeOut: true
+            ));
+        }
+
+        // Fade out and destroy
+        seq.AppendInterval(displayDuration);
+        seq.AppendCallback(() => wordText.DOFade(0f, 0.5f));
+        seq.AppendCallback(() => Destroy(wordObj, 0.6f));
+    }
+
+
+    private GameObject SpawnAnimal(GameObject ToSpawn)
+    {
+        GameObject animal = Instantiate(ToSpawn);
+
+        // Get vertical bounds of the camera in world space
+        float z = Mathf.Abs(Camera.main.transform.position.z - animal.transform.position.z);
+        Vector3 screenBottom = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, z));
+        Vector3 screenTop = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 1f, z));
+
+        // Account for the sprite's vertical size
+        SpriteRenderer sr = animal.GetComponent<SpriteRenderer>();
+        float halfHeight = sr.bounds.extents.y;
+
+        float minY = screenBottom.y + halfHeight;
+        float maxY = screenTop.y - halfHeight;
+
+        float variationRange = 0.5f; // you can expose this in the inspector if you want
+
+        // Get center position with a small variation
+        float centerY = (minY + maxY) / 2f;
+        float variedY = Mathf.Clamp(centerY + Random.Range(-variationRange, variationRange), minY, maxY);
+
+        //  Set spawn position at the right edge
+        float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x + sr.bounds.extents.x;
+
+        animal.transform.position = new Vector3(rightEdgeX, variedY, 0f);
+
+        return animal;
+    }
+
+
+    private GameObject cow1, cow2, cow3, wolf1;
+    private IEnumerator RunTutorial()
+    {
+        yield return ShowMessage("Welcome to Wrangle Ranch!");
+        cow1 = SpawnAnimal(cowPrefab);
+        yield return ShowMessage("Uh OH! Looks like the Cow got loose again",-0.5f);
+        yield return ShowMessage("Click and drag with your mouse to draw a circle around the cow!",+0.5f);
+
+        yield return new WaitUntil(() => IsAnimalLassoed(cow1) || cow1 == null);
+        yield return new WaitForSeconds(2.5f);
+        timerDisplay.gameObject.SetActive(true);
+        yield return ShowMessage("Nice Job! Wrangling your farm animals will give you points and cash, but you can't stay out all night!",2f);
+        scoreDisplay.gameObject.SetActive(true);
+        yield return ShowMessage("You'll need to wrangle enough animals to reach the point goal before time runs out.", 1f);
+
+        cow2 = SpawnAnimal(cowPrefab);
+        cow3 = SpawnAnimal(cowPrefab);
+        yield return ShowMessage("You can lasso multiple animals at once for extra points!");
+        yield return new WaitUntil(() => AreAllLassoed(cow2, cow3) || (cow2 == null && cow3 == null));
+        yield return new WaitForSeconds(1f);
+
+        cow1 = SpawnAnimal(cowPrefab);
+        wolf1 = SpawnAnimal(wolfPrefab);
+        yield return new WaitForSeconds(1.5f);
+        yield return ShowMessage("Now try lassoing these two critters together!");
+        yield return new WaitUntil(() => AreAllLassoed(cow1, wolf1));
+        yield return new WaitForSeconds(2.5f);
+        yield return ShowMessage("UH OH, Watch out for predators! You will lose points if you lasso them with your animals.", 1f);
+        yield return ShowMessage("When the day is done, we can head back to the barn to spend our hard earned cash!",1f);
+
+        GoToShop();
+        yield return new WaitForSeconds(4f);
+
+        yield return ShowMessage2("This is the shop.");
+        yield return ShowMessage2("From here you can add new animals to be wrangled during the day!", 1.5f);
+        yield return ShowMessage2("You can view all the animals that might appear during the day by clicking the button in the top left", 4.5f);
+        yield return ShowMessage2("You can also add powerful abilities that will give you extra points when lassoing certain combinations of animals",4.5f);
+        yield return ShowMessage2("Lastly, you can upgrade your animals so that they will give you more points and cash!", 4.5f);
+        yield return ShowMessage2("Now that you know the basics, let's get started!");
+        levelLoader.LoadCertainScene("TitleScreen");
+    }
+
+
+    private IEnumerator ShowMessage(string text, float durationOffset = 0f)
+    {
+        float finalDuration = wordDisplayDuration + durationOffset;
+        DisplayPopupWord(text, wordScaleDuration, finalDuration, false, defaultMaterialPreset);
+        yield return new WaitForSeconds(finalDuration + 0.7f); // includes a small buffer before the next message
+    }
+
+    private IEnumerator ShowMessage2(string text, float durationOffset = 0f)
+    {
+        float finalDuration = wordDisplayDuration + durationOffset;
+        DisplayPopupWord2(text, wordScaleDuration, finalDuration, false, defaultMaterialPreset);
+        yield return new WaitForSeconds(finalDuration + 0.9f); // includes a small buffer before the next message
+    }
+    private bool IsAnimalLassoed(GameObject animal)
+    {
+        if (animal == null) return false;
+        Animal a = animal.GetComponent<Animal>();
+        return a != null && a.isLassoed;
+    }
+
+    private bool AreAllLassoed(params GameObject[] animals)
+    {
+        return animals.All(a => IsAnimalLassoed(a));
+    }
+
+}
+

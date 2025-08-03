@@ -75,7 +75,7 @@ public class Animal : MonoBehaviour
         ApplyRepelFromNearbyAnimals();
 
         Vector3 nextPos;
-        if (GameController.gameManager.roundCompleted)
+        if (GameController.gameManager!= null && GameController.gameManager.roundCompleted)
         {
             nextPos = LeaveScreen();
         }

@@ -6506,7 +6506,7 @@ MonoBehaviour:
   roundInProgress: 0
   playerReady: 0
   roundCompleted: 0
-  roundDuration: 3
+  roundDuration: 90
   predatorRoundFrequency: 1
   wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
   wordScaleDuration: 0.3

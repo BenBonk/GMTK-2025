@@ -168,7 +168,11 @@ public class GameManager : MonoBehaviour
         cameraController.AnimateToTarget(
             barnCameraTarget.transform,
             delay: .5f,
-            onZoomMidpoint: () => barnAnimator.Play("Open", 0, 0.1f),
+        onZoomMidpoint: () =>
+        {
+            barnAnimator.Play("Open", 0, 0.1f);
+            AudioManager.Instance.CrossfadeMusic("shop_theme", 2f); // fade duration = 2s (or whatever you like)
+        },
             onZoomEndpoint: () =>
             {
                 barn.DOFade(0f, 1f).SetEase(Ease.OutSine).OnComplete(()=> GameController.shopManager.cantPurchaseItem = false);
@@ -178,6 +182,7 @@ public class GameManager : MonoBehaviour
 
     public void LeaveShop()
     {
+        AudioManager.Instance.CrossfadeToRandomPlaylistTrack();
         if (GameController.shopManager.cantPurchaseItem)
         {
             return;
@@ -244,7 +249,6 @@ public class GameManager : MonoBehaviour
 
             yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
         }
-
         playerReady = true;
         lassoController.canLasso = true;
     }

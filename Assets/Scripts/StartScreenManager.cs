@@ -10,6 +10,7 @@ public class StartScreenManager : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("SpawnAnimal", 1,Random.Range(1.5f, 2.5f));
+        AudioManager.Instance.PlayMusic("main_theme");
     }
 
     void SpawnAnimal()
