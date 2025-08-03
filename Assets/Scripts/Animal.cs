@@ -29,7 +29,7 @@ public class Animal : MonoBehaviour
     public float topLimitY;
     public float bottomLimitY;
 
-    protected float minimumSpacing = 0.3f;
+    protected float minimumSpacing = 0.15f;
     public float MinimumSpacing => minimumSpacing;
     private float repelForce = 4; 
     public virtual bool IsRepelImmune => false;

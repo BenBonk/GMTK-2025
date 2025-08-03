@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalName: Horse
   description: Runs swiftly across the field.
-  price: 3
+  price: 300
   sprite: {fileID: 7672759098259192623, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
   sprite2: {fileID: 3604182692263377810, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
   deckIcon: {fileID: -5525896158525752363, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}

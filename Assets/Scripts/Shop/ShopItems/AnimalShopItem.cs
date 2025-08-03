@@ -1,11 +1,12 @@
-using System.Collections;
 using DG.Tweening;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AnimalShopItem : ShopItem
 {
-    public AnimalData[] possibleAnimals;
+    public Animal[] possibleAnimals;
     private AnimalData chosenAnimal;
     private Sprite sprite1;
     private Sprite sprite2;
@@ -13,7 +14,18 @@ public class AnimalShopItem : ShopItem
     private Coroutine animCo;
     public override void Initialize()
     {
-        chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
+        // Bias: non-predators get weight 3, predators get weight 1
+        List<Animal> weightedList = new List<Animal>();
+        foreach (var animal in possibleAnimals)
+        {
+            int weight = animal.isPredator ? 1 : 3; // change weights as needed
+            for (int i = 0; i < weight; i++)
+            {
+                weightedList.Add(animal);
+            }
+        }
+
+        chosenAnimal = weightedList[Random.Range(0, weightedList.Count)].animalData;
         titleText.text = chosenAnimal.animalName;
         priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;

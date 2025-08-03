@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalName: Pig
   description: Meanders predictably.
-  price: 15
+  price: 100
   sprite: {fileID: -9122695006515159614, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
   sprite2: {fileID: 3283728978217524802, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
   deckIcon: {fileID: 7992425119190620944, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}

@@ -38,6 +38,8 @@ public class AudioManager : MonoBehaviour
     private int currentPlaylistIndex = -1;
     private string lastPlayedTrack = "";
 
+    private bool isAppFocused = true;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -67,16 +69,29 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
+        if (!Application.isFocused || AudioListener.pause) return;
         if (
             fallbackPending &&
             !currentMusicSource.isPlaying &&
             currentMusicSource.clip != null &&
-            !currentMusicSource.loop
+            !currentMusicSource.loop &&
+            isAppFocused
         )
         {
             //Debug.Log($"Fallback triggered. Playing: '{fallbackTrackName}'");
             fallbackPending = false;
             PlayMusicWithFadeOutOld(fallbackTrackName, playlistFadeOutTime, loop: true);
+        }
+    }
+
+    void OnApplicationFocus(bool focus)
+    {
+        isAppFocused = focus;
+
+        if (focus && fallbackPending && currentMusicSource.clip != null && !currentMusicSource.isPlaying)
+        {
+            // Resume the playlist track if it was paused due to focus loss
+            currentMusicSource.Play();
         }
     }
 

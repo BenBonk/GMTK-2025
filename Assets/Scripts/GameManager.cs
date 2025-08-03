@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < roundsPointsRequirement.Length; i++)
         {
-            float rawScore = 85 * Mathf.Pow(pointsRequirementGrowthRate, i);
+            float rawScore = 165 * Mathf.Pow(pointsRequirementGrowthRate, i);
             int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
             roundsPointsRequirement[i] = roundedToFive;
         }
@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber-1];
+        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
         timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
         currencyDisplay.text = "CASH: " + player.playerCurrency;
     }
