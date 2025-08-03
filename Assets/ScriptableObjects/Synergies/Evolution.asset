@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Evolution
   desc: Lasso a group of animals containing a Dog and a Wolf
-  art: {fileID: 7976311676407056975, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
+  art: {fileID: 3129263420742346131, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 200
   isExactMatch: 0
   currencyBonus: 12

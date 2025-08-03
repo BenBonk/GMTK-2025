@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Photo Finish
   desc: Lasso exactly 2 Horses
-  art: {fileID: 7976311676407056975, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
+  art: {fileID: -464304336, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 300
   isExactMatch: 1
   currencyBonus: 10

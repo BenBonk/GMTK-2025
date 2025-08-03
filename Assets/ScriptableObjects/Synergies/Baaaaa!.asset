@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c833c1c2ddd849c4f803f68b6ef18eea, type: 3}
-  m_Name: Wooly
+  m_Name: Baaaaa!
   m_EditorClassIdentifier: 
-  name: Wooly
+  name: Baaaaaa!
   desc: Lasso a group of animals containing a Sheep and a Goat
-  art: {fileID: 7976311676407056975, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
+  art: {fileID: 6890584507143152139, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 225
   isExactMatch: 0
   currencyBonus: 15
