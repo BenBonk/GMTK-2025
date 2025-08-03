@@ -210,6 +210,37 @@ public class AudioManager : MonoBehaviour
         fallbackPending = true;
         PlayMusicWithFadeOutOld(selected, duration, loop: false);
     }
+
+    public void PlaySequentialSFX(string firstClipName, string secondClipName, float volumeMultiplier = 1f, float delayBetween = 0f)
+    {
+        StartCoroutine(PlaySequentialRoutine(firstClipName, secondClipName, volumeMultiplier, delayBetween));
+    }
+
+    private IEnumerator PlaySequentialRoutine(string firstClipName, string secondClipName, float volumeMultiplier, float delayBetween)
+    {
+        if (!sfxDict.TryGetValue(firstClipName, out var firstClip))
+        {
+            Debug.LogWarning($" First SFX '{firstClipName}' not found!");
+            yield break;
+        }
+
+        float firstVolume = sfxVolumeDict.TryGetValue(firstClipName, out var v1) ? v1 * volumeMultiplier : 1f * volumeMultiplier;
+        sfxSource.PlayOneShot(firstClip, firstVolume);
+        Debug.Log($"🔊 Playing first SFX: '{firstClipName}' | Volume: {firstVolume:F2}");
+
+        yield return new WaitForSeconds(firstClip.length + delayBetween);
+
+        if (sfxDict.TryGetValue(secondClipName, out var secondClip))
+        {
+            float secondVolume = sfxVolumeDict.TryGetValue(secondClipName, out var v2) ? v2 * volumeMultiplier : 1f * volumeMultiplier;
+            sfxSource.PlayOneShot(secondClip, secondVolume);
+            Debug.Log($"🔊 Playing second SFX: '{secondClipName}' | Volume: {secondVolume:F2}");
+        }
+        else
+        {
+            Debug.LogWarning($" Second SFX '{secondClipName}' not found!");
+        }
+    }
 }
 
 [System.Serializable]

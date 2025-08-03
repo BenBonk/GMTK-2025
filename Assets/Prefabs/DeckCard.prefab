@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 3737927582340243160}
   - component: {fileID: 2789256019795255106}
   - component: {fileID: -6019259168169881205}
+  - component: {fileID: 3874473515144137430}
   m_Layer: 5
   m_Name: DeckCard
   m_TagString: Untagged
@@ -526,3 +527,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 2789256019795255106}
+--- !u!114 &3874473515144137430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7866310356001365729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: 

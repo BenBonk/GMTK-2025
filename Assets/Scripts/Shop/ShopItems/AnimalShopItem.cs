@@ -29,6 +29,11 @@ public class AnimalShopItem : ShopItem
         animCo = StartCoroutine(Animate());
         descriptionText.text = "";
         Animal animalRef = chosenAnimal.animalPrefab.GetComponent<Animal>();
+        if (buttonFX != null)
+        {
+            buttonFX.clickSFX = animalRef.name;
+            buttonFX.highlightSFX = animalRef.name;
+        }
         if (animalRef.pointsToGive!=0)
         {
             if (animalRef.pointsToGive<0)

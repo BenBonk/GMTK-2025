@@ -734,6 +734,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3165176705033492574, guid: 3d50e3e217a48fb4994745bd1941c850, type: 3}
+      propertyPath: buttonFX
+      value: 
+      objectReference: {fileID: 7941161980072623757}
+    - target: {fileID: 3165176705033492574, guid: 3d50e3e217a48fb4994745bd1941c850, type: 3}
       propertyPath: priceText
       value: 
       objectReference: {fileID: 7714219315543973598}
@@ -779,6 +783,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d50e3e217a48fb4994745bd1941c850, type: 3}
+--- !u!114 &7941161980072623757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1568033018749236044, guid: 3d50e3e217a48fb4994745bd1941c850, type: 3}
+  m_PrefabInstance: {fileID: 8932442386109386177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8369571419308926127 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1139650238242023790, guid: 3d50e3e217a48fb4994745bd1941c850, type: 3}

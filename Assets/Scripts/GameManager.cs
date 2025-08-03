@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Color timerNormalColor = Color.white;
     [SerializeField] private Color timerWarningColor = Color.red;
 
+    public GameObject shopButtonBlocker;
+
     //private int _lassosUsedThisRound;
     /*public int lassosUsed
         {
@@ -152,6 +154,7 @@ public class GameManager : MonoBehaviour
         */
         
         DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
+        AudioManager.Instance.PlaySFX("time_up");
         if (roundNumber%predatorRoundFrequency==0)
         {
             GameController.predatorSelect.StartCoroutine("Intro");
@@ -171,11 +174,18 @@ public class GameManager : MonoBehaviour
         onZoomMidpoint: () =>
         {
             barnAnimator.Play("Open", 0, 0.1f);
+            AudioManager.Instance.PlaySFX("barn_door");
             AudioManager.Instance.PlayMusicWithFadeOutOld("shop_theme", 1f);
         },
             onZoomEndpoint: () =>
             {
-                barn.DOFade(0f, 1f).SetEase(Ease.OutSine).OnComplete(()=> GameController.shopManager.cantPurchaseItem = false);
+                barn.DOFade(0f, 1f)
+                .SetEase(Ease.OutSine)
+                .OnComplete(() =>
+                {
+                    GameController.shopManager.cantPurchaseItem = false;
+                    shopButtonBlocker.SetActive(false);
+                });
             }
         );
     }
@@ -183,6 +193,7 @@ public class GameManager : MonoBehaviour
     public void LeaveShop()
     {
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
+        shopButtonBlocker.SetActive(true);
         if (GameController.shopManager.cantPurchaseItem)
         {
             return;
@@ -215,6 +226,8 @@ public class GameManager : MonoBehaviour
 
             timerDisplay.color = timerWarningColor;
             timerDisplay.transform.localScale = Vector3.one * 1.3f;
+            AudioManager.Instance.PlaySFX("tick");
+
 
             Sequence pulse = DOTween.Sequence();
             pulse.Append(timerDisplay.transform.DOScale(1.5f, 0.15f).SetEase(Ease.OutBack));

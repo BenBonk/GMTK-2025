@@ -42,6 +42,34 @@ public class TutorialManager : MonoBehaviour
 
     public LevelLoader levelLoader;
 
+    public GameObject buttonBlocker;
+    public GameObject buttonBlocker2;
+    public GameObject buttonBlocker3;
+    public GameObject buttonBlocker4;
+    public GameObject buttonBlocker5;
+    public GameObject buttonBlocker6;
+    public GameObject buttonBlocker7;
+
+    public GameObject arrowSet1;
+    public GameObject arrowSet2;
+    public GameObject arrowSet3;
+    public GameObject arrowSet4;
+
+    public static TutorialManager _instance;
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Debug.LogWarning("Duplicate TutorialManager found. Destroying new instance.");
+            Destroy(gameObject);
+            return;
+        }
+
+        _instance = this;
+    }
+
+
     //private int _lassosUsedThisRound;
     /*public int lassosUsed
         {
@@ -144,10 +172,19 @@ public class TutorialManager : MonoBehaviour
         cameraController.AnimateToTarget(
             barnCameraTarget.transform,
             delay: 0.1f,
-            onZoomMidpoint: () => barnAnimator.Play("Open", 0, 0.1f),
+        onZoomMidpoint: () =>
+        {
+            barnAnimator.Play("Open", 0, 0.1f);
+            AudioManager.Instance.PlaySFX("barn_door");
+        },
             onZoomEndpoint: () =>
             {
-                barn.DOFade(0f, 1f).SetEase(Ease.OutSine).OnComplete(() => GameController.shopManager.cantPurchaseItem = false);
+                barn.DOFade(0f, 1f)
+                .SetEase(Ease.OutSine)
+                .OnComplete(() =>
+                {
+                    GameController.shopManager.cantPurchaseItem = false;
+                });
             }
         );
     }
@@ -160,9 +197,14 @@ public class TutorialManager : MonoBehaviour
 
     private void UpdateScoreDisplay(int newPoints)
     {
+        if (scoreDisplay == null || roundsPointsRequirement == null || roundNumber >= roundsPointsRequirement.Length)
+        {
+            Debug.LogWarning("Cannot update score display – scoreDisplay or roundsPointsRequirement invalid.");
+            return;
+        }
+
         scoreDisplay.text = $"POINTS: {newPoints} / {roundsPointsRequirement[roundNumber]}";
     }
-
     private void UpdatecurrencyDisplay(int newcurrency)
     {
         currencyDisplay.text = $"CASH: {newcurrency}";
@@ -242,7 +284,7 @@ public class TutorialManager : MonoBehaviour
             wordText.fontSharedMaterial = overrideMaterial;
         }
 
-        wordObj.transform.position = GetCenterScreenWorldPosition();
+        wordObj.transform.position = GetCenterScreenWorldPosition() + new Vector3(0f, 2.75f, 0f); // Adjust Y as needed
         wordObj.transform.localScale = Vector3.zero;
         wordObj.transform.rotation = Quaternion.identity;
         wordObj.SetActive(true);
@@ -351,45 +393,60 @@ public class TutorialManager : MonoBehaviour
         yield return ShowMessage("Welcome to Wrangle Ranch!");
         cow1 = SpawnAnimal(cowPrefab);
         yield return ShowMessage("Uh OH! Looks like the Cow got loose again",-0.5f);
-        yield return ShowMessage("Click and drag with your mouse to draw a circle around the cow!",+0.5f);
+        yield return ShowMessage("Click and drag with your mouse to draw a circle around the cow!",+1f);
 
         yield return new WaitUntil(() => IsAnimalLassoed(cow1) || cow1 == null);
         yield return new WaitForSeconds(2.5f);
         timerDisplay.gameObject.SetActive(true);
-        yield return ShowMessage("Nice Job! Wrangling your farm animals will give you points and cash, but you can't stay out all night!",2f);
+        yield return ShowMessage("Nice Job! Wrangling your farm animals will give you points and cash, but you can't stay out all night!",3f);
         scoreDisplay.gameObject.SetActive(true);
-        yield return ShowMessage("You'll need to wrangle enough animals to reach the point goal before time runs out.", 1f);
+        yield return ShowMessage("You'll need to wrangle enough animals to reach the point goal before time runs out.", 2f);
 
         cow2 = SpawnAnimal(cowPrefab);
         cow3 = SpawnAnimal(cowPrefab);
-        yield return ShowMessage("You can lasso multiple animals at once for extra points!");
+        yield return ShowMessage("You can lasso multiple animals at once for extra points!", 1f);
         yield return new WaitUntil(() => AreAllLassoed(cow2, cow3) || (cow2 == null && cow3 == null));
         yield return new WaitForSeconds(1f);
 
         cow1 = SpawnAnimal(cowPrefab);
         wolf1 = SpawnAnimal(wolfPrefab);
         yield return new WaitForSeconds(1.5f);
-        yield return ShowMessage("Now try lassoing these two critters together!");
+        yield return ShowMessage("Now try lassoing these two critters together!", 0.5f);
         yield return new WaitUntil(() => AreAllLassoed(cow1, wolf1));
         yield return new WaitForSeconds(2.5f);
-        yield return ShowMessage("UH OH, Watch out for predators! You will lose points if you lasso them with your animals.", 1f);
+        yield return ShowMessage("UH OH, Watch out for predators! You will lose points if you lasso them with your animals.", 2f);
         yield return ShowMessage("When the day is done, we can head back to the barn to spend our hard earned cash!",1f);
 
         GoToShop();
         yield return new WaitForSeconds(4f);
 
-        yield return ShowMessage2("This is the shop.");
-        yield return ShowMessage2("From here you can add new animals to be wrangled during the day!", 1.5f);
-        yield return ShowMessage2("You can view all the animals that might appear during the day by clicking the button in the top left", 4.5f);
-        yield return ShowMessage2("You can also add powerful abilities that will give you extra points when lassoing certain combinations of animals",4.5f);
-        yield return ShowMessage2("Lastly, you can upgrade your animals so that they will give you more points and cash!", 4.5f);
-        yield return ShowMessage2("Now that you know the basics, let's get started!");
+        yield return ShowMessage2("This is the shop.",1f);
+        buttonBlocker.SetActive(false);
+        buttonBlocker2.SetActive(true);
+        arrowSet1.SetActive(true);
+        yield return ShowMessage2("From here you can add new animals to be wrangled during the day!", 7.5f);
+        buttonBlocker2.SetActive(false);
+        buttonBlocker3.SetActive(true);
+        arrowSet2.SetActive(true);
+        yield return ShowMessage2("You can view all the animals that might appear during the day by clicking the button in the top left", 7.5f);
+        buttonBlocker3.SetActive(false);
+        buttonBlocker4.SetActive(true);
+        buttonBlocker5.SetActive(true);
+        buttonBlocker7.SetActive(true);
+        arrowSet3.SetActive(true);
+        yield return ShowMessage2("You can also add powerful abilities that will give you extra points when lassoing certain combinations of animals",7.5f);
+        buttonBlocker5.SetActive(false);
+        buttonBlocker6.SetActive(true);
+        arrowSet4.SetActive(true);  
+        yield return ShowMessage2("Lastly, you can upgrade your animals so that they will give you more points and cash!", 7.5f);
+        yield return ShowMessage2("Now that you know the basics, let's get started!",0.5f);
         levelLoader.LoadCertainScene("TitleScreen");
     }
 
 
     private IEnumerator ShowMessage(string text, float durationOffset = 0f)
     {
+        AudioManager.Instance?.PlaySFX("ui_click");
         float finalDuration = wordDisplayDuration + durationOffset;
         DisplayPopupWord(text, wordScaleDuration, finalDuration, false, defaultMaterialPreset);
         yield return new WaitForSeconds(finalDuration + 0.7f); // includes a small buffer before the next message
@@ -397,6 +454,7 @@ public class TutorialManager : MonoBehaviour
 
     private IEnumerator ShowMessage2(string text, float durationOffset = 0f)
     {
+        AudioManager.Instance?.PlaySFX("ready");
         float finalDuration = wordDisplayDuration + durationOffset;
         DisplayPopupWord2(text, wordScaleDuration, finalDuration, false, defaultMaterialPreset);
         yield return new WaitForSeconds(finalDuration + 0.9f); // includes a small buffer before the next message

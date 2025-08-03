@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 3165176705033492574}
   - component: {fileID: 1929844963313294119}
   - component: {fileID: 3124415776814495600}
+  - component: {fileID: 1568033018749236044}
   m_Layer: 5
   m_Name: AnimalShopItem
   m_TagString: Untagged
@@ -584,6 +585,7 @@ MonoBehaviour:
   descriptionText: {fileID: 6864150532487078924}
   priceText: {fileID: 4246351569277187796}
   upgradeArt: {fileID: 3879212446876034407}
+  buttonFX: {fileID: 1568033018749236044}
   price: 0
   canPurchase: 1
   hoverPopup: {fileID: 455196304743373294}
@@ -689,6 +691,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1568033018749236044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7243034037043098066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
 --- !u!1 &8619925793922179031
 GameObject:
   m_ObjectHideFlags: 0

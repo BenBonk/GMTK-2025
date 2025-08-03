@@ -151,7 +151,7 @@ public class LassoController : MonoBehaviour
 
         //GameController.gameManager.lassosUsed++;
         rawPoints.Add(start); // close loop
-        AudioManager.Instance.PlaySFX("lasso_create");
+        AudioManager.Instance.PlaySequentialSFX("lasso_create", "lasso_pull");
 
         // Generate smooth loop (no tail yet)
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
@@ -263,7 +263,7 @@ public class LassoController : MonoBehaviour
         int row = 0;
 
         // === POINTS BONUS ===
-        if (result.pointBonus != 0)
+        if (true)
         {
             Vector3 offset = new Vector3(0, row++ * 1f, 0);
             GameObject group = Instantiate(feedbackTextGroupPrefab, baseWorld + offset, Quaternion.identity);
@@ -292,6 +292,10 @@ public class LassoController : MonoBehaviour
                     multText.gameObject.SetActive(false);
                 }
             }
+            if (result.pointBonus > 0)
+                AudioManager.Instance.PlaySFX("points");
+            else
+                AudioManager.Instance.PlaySFX("no_points");
 
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();
@@ -310,12 +314,33 @@ public class LassoController : MonoBehaviour
                 if (bonusPointsShown && multPointsShown)
                 {
                     int totalPoints = Mathf.RoundToInt(result.pointBonus * result.pointMult);
-                    GameController.gameManager.pointsThisRound += totalPoints;
+                    Debug.Log("????????????");
+                    Debug.Log($"TutorialManager instance: {(TutorialManager._instance != null ? "Exists" : "NULL")}");
+                    if (TutorialManager._instance != null)
+                    {
+                        TutorialManager._instance.pointsThisRound += totalPoints;
+                        Debug.Log("!!!!!!!!!");
+                    }
+                    else
+                    {
+
+                        GameController.gameManager.pointsThisRound += totalPoints;
+                    }
+
                     Debug.Log($"Points added: {totalPoints}");
                 }
             });
 
-            yield return new WaitForSeconds(feedbackDelay);
+            bool hasValidPointMultiplier = result.pointBonus != 0 && Mathf.Abs(result.pointMult - 1f) > 0.01f;
+
+            if (hasValidPointMultiplier)
+            {
+                yield return new WaitForSeconds(feedbackDelay + 0.3f);
+            }
+            else
+            {
+                yield return new WaitForSeconds(feedbackDelay - 0.3f);
+            }
         }
 
         // === CURRENCY BONUS ===
@@ -348,6 +373,11 @@ public class LassoController : MonoBehaviour
                     multText.gameObject.SetActive(false);
                 }
             }
+
+            if (result.pointBonus > 0)
+                AudioManager.Instance.PlaySFX("cash");
+            else
+                AudioManager.Instance.PlaySFX("no_cash");
 
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();
@@ -399,10 +429,34 @@ public class LassoController : MonoBehaviour
 
         // Update bonus text immediately when multiplier is revealed
         int newTotal = Mathf.RoundToInt(baseValue * multiplier);
+        bool isPoints = bonusText.text.StartsWith("+Points");
         if (bonusText.text.StartsWith("+Points"))
             bonusText.text = $"+Points: {newTotal}";
         else if (bonusText.text.StartsWith("+Cash"))
             bonusText.text = $"+Cash: {newTotal}";
+
+        if (multiplier > 1f)
+        {
+            if (isPoints)
+            {
+                AudioManager.Instance.PlaySFX("point_mult");
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("cash_mult");
+            }
+        }
+        else
+        {
+            if (isPoints)
+            {
+                AudioManager.Instance.PlaySFX("no_point_mult");
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("no_cash_mult");
+            }
+        }
 
         multText.gameObject.SetActive(true);
         multText.transform.localScale = Vector3.zero;

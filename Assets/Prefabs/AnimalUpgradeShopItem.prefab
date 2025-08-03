@@ -687,6 +687,7 @@ GameObject:
   - component: {fileID: 6772677190055033454}
   - component: {fileID: 4565441969384559441}
   - component: {fileID: 4277660279856035143}
+  - component: {fileID: 6850774403984247200}
   m_Layer: 5
   m_Name: Art
   m_TagString: Untagged
@@ -731,14 +732,10 @@ MonoBehaviour:
   descriptionText: {fileID: 7879982658423447763}
   priceText: {fileID: 7619883914274069311}
   upgradeArt: {fileID: 1307909775584855245}
+  buttonFX: {fileID: 0}
   price: 0
   canPurchase: 1
   hoverPopup: {fileID: 7310025862920069743}
-  possibleAnimals:
-  - {fileID: 11400000, guid: 61624a01d96a1c94289577fc134ae6ff, type: 2}
-  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
 --- !u!114 &4565441969384559441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,6 +837,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &6850774403984247200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6605638126501185154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
 --- !u!1 &7473698674869216222
 GameObject:
   m_ObjectHideFlags: 0

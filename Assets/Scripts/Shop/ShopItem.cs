@@ -10,7 +10,8 @@ public abstract class ShopItem : MonoBehaviour
     public TMP_Text descriptionText;
     public TMP_Text priceText;
     public Image upgradeArt;
-    
+    public ButtonFX buttonFX;
+
     [HideInInspector]public int price;
     public bool canPurchase = true;
     [HideInInspector] private bool cantHoverOver;

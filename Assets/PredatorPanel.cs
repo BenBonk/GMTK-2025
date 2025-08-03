@@ -10,6 +10,7 @@ public class PredatorPanel : MonoBehaviour
     public TMP_Text desc;
     public Image icon;
     private AnimalData predator;
+    public ButtonFX buttonFX;
     [HideInInspector]public bool cantSelect;
 
     private void Start()
@@ -24,6 +25,7 @@ public class PredatorPanel : MonoBehaviour
         icon.sprite = iconSprite;
         predator = predatorData;
         cantSelect = false;
+        buttonFX.clickSFX = predator.name;
     }
 
     public void SelectPredator()
