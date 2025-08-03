@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int predatorRoundFrequency;
 
     public GameObject wordPrefab; // Assign in inspector
+    public GameObject endRoundPrefab;
     public float wordScaleDuration = 0.3f;
     public float wordDisplayDuration = 0.7f;
     [SerializeField] private Material lassoMaterialPreset;
@@ -33,6 +34,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Color timerWarningColor = Color.red;
 
     public GameObject shopButtonBlocker;
+
+    private int endDayCash = 25;
+
 
     //private int _lassosUsedThisRound;
     /*public int lassosUsed
@@ -79,7 +83,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < roundsPointsRequirement.Length; i++)
         {
-            float rawScore = 165 * Mathf.Pow(pointsRequirementGrowthRate, i);
+            float rawScore = 125 * Mathf.Pow(pointsRequirementGrowthRate, i);
             int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
             roundsPointsRequirement[i] = roundedToFive;
         }
@@ -133,7 +137,7 @@ public class GameManager : MonoBehaviour
 
     public void EndRound()
     {
-        if (lassoController.lineRenderer!=null)
+        if (lassoController.lineRenderer != null)
         {
             Destroy(lassoController.lineRenderer.gameObject);
         }
@@ -142,23 +146,37 @@ public class GameManager : MonoBehaviour
         elapsedTime = 0;
         playerReady = false;
         lassoController.canLasso = false;
-        
+
         //UNCOMMENT BELOW FOR PROD
-        
-        if (pointsThisRound < roundsPointsRequirement[roundNumber-1])
+
+        if (pointsThisRound < roundsPointsRequirement[roundNumber - 1])
         {
             //GameOver
             roundNumberDeath.text = "Round: " + roundNumber;
             deathPanel.gameObject.SetActive(true);
-            deathPanel.DOAnchorPosY(0,1f).SetEase(Ease.InOutBack);
+            deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
             return;
         }
-        
-        
+        StartCoroutine(EndRoundRoutine());
+    }
+
+    private IEnumerator EndRoundRoutine()
+    {
+        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
+        // First message
         DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
         AudioManager.Instance.PlaySFX("time_up");
-        if (roundNumber%predatorRoundFrequency==0)
+        yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // wait before next
+
+        // Second message
+        DisplayCashWord("DAY COMPLETE! + " + endDayCash + " Cash!" , wordScaleDuration, wordDisplayDuration, false);
+        AudioManager.Instance.PlaySFX("cash_register");
+        GameController.player.playerCurrency += endDayCash;
+        yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
+
+        // After both messages
+        if (roundNumber % predatorRoundFrequency == 0)
         {
             GameController.predatorSelect.StartCoroutine("Intro");
         }
@@ -323,5 +341,47 @@ public class GameManager : MonoBehaviour
         seq.AppendCallback(() => Destroy(wordObj, 0.6f));
     }
 
+
+    public void DisplayCashWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null)
+    {
+        GameObject wordObj = Instantiate(endRoundPrefab, transform);
+        TMP_Text wordText = wordObj.GetComponent<TMP_Text>();
+
+        wordText.text = word;
+
+        // Apply material override if provided
+        if (overrideMaterial != null)
+        {
+            wordText.fontSharedMaterial = overrideMaterial;
+        }
+
+        wordObj.transform.position = GetCenterScreenWorldPosition();
+        wordObj.transform.localScale = Vector3.zero;
+        wordObj.transform.rotation = Quaternion.identity;
+        wordObj.SetActive(true);
+
+        Sequence seq = DOTween.Sequence();
+
+        // Scale pop-in
+        seq.Append(wordObj.transform.DOScale(1.2f, scaleDuration).SetEase(Ease.OutBack));
+        seq.Append(wordObj.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+
+        // Optional shake
+        if (shake)
+        {
+            seq.Append(wordObj.transform.DOShakeRotation(
+                duration: 0.4f,
+                strength: new Vector3(0f, 0f, 20f), // Z-axis only
+                vibrato: 10,
+                randomness: 90,
+                fadeOut: true
+            ));
+        }
+
+        // Fade out and destroy
+        seq.AppendInterval(displayDuration);
+        seq.AppendCallback(() => wordText.DOFade(0f, 0.5f));
+        seq.AppendCallback(() => Destroy(wordObj, 0.6f));
+    }
 
 }

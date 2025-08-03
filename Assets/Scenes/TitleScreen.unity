@@ -805,6 +805,9 @@ MonoBehaviour:
   - name: ui_crunch
     clip: {fileID: 8300000, guid: 1c130210835b4a04ba13199cfa67369b, type: 3}
     volume: 0.2
+  - name: cash_register
+    clip: {fileID: 8300000, guid: 5749392ddf7f97845a35bf1f3d307e3e, type: 3}
+    volume: 0.4
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}
@@ -2367,6 +2370,7 @@ MonoBehaviour:
   roundDuration: 20
   predatorRoundFrequency: 0
   wordPrefab: {fileID: 0}
+  endRoundPrefab: {fileID: 0}
   wordScaleDuration: 0.3
   wordDisplayDuration: 0.7
   lassoMaterialPreset: {fileID: 0}
