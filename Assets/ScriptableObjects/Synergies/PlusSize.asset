@@ -18,9 +18,9 @@ MonoBehaviour:
   price: 125
   isExactMatch: 0
   currencyBonus: 50
-  currencyMult: 0.5
-  pointsBonus: 250
-  pointsMult: 0.5
+  currencyMult: 2
+  pointsBonus: 300
+  pointsMult: 2
   animalsNeeded:
   - Cow
   - Bear

@@ -18,9 +18,9 @@ MonoBehaviour:
   price: 75
   isExactMatch: 0
   currencyBonus: 5
-  currencyMult: 2
+  currencyMult: 4
   pointsBonus: 10
-  pointsMult: 2
+  pointsMult: 4
   animalsNeeded:
   - Pig
   - Bear

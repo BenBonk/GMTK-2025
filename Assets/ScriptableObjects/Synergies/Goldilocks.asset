@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c833c1c2ddd849c4f803f68b6ef18eea, type: 3}
   m_Name: Goldilocks
   m_EditorClassIdentifier: 
-  name: Goldilocks
+  synergyName: 
   desc: Lasso exactly 3 Bears
   art: {fileID: -127987637, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 100
   isExactMatch: 1
   currencyBonus: 10
-  currencyMult: 3
+  currencyMult: 30
   pointsBonus: 33
-  pointsMult: 3
+  pointsMult: 30
   animalsNeeded:
   - Bear
   - Bear
