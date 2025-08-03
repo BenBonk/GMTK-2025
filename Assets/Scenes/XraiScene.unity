@@ -2776,7 +2776,7 @@ PrefabInstance:
       objectReference: {fileID: 441562321}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: possibleSynergies.Array.size
-      value: 26
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[0]'
@@ -2865,19 +2865,19 @@ PrefabInstance:
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[21]'
       value: 
-      objectReference: {fileID: 11400000, guid: e016151f80b615b46bd4ccfbda854f88, type: 2}
+      objectReference: {fileID: 11400000, guid: 2605d99b1eb1d2b45b9d02c58eed44c1, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[22]'
       value: 
-      objectReference: {fileID: 11400000, guid: 94b011d7aa38aaf4f9c611fd4d2fc486, type: 2}
+      objectReference: {fileID: 11400000, guid: 850a7b19dccde4f40a252d03e3228849, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[23]'
       value: 
-      objectReference: {fileID: 11400000, guid: 2605d99b1eb1d2b45b9d02c58eed44c1, type: 2}
+      objectReference: {fileID: 11400000, guid: 3339c7266c6abc4479256473092c0551, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[24]'
       value: 
-      objectReference: {fileID: 11400000, guid: 850a7b19dccde4f40a252d03e3228849, type: 2}
+      objectReference: {fileID: 11400000, guid: 3339c7266c6abc4479256473092c0551, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[25]'
       value: 
@@ -5996,7 +5996,7 @@ PrefabInstance:
       objectReference: {fileID: 441562321}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: possibleSynergies.Array.size
-      value: 26
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[0]'
@@ -6085,19 +6085,19 @@ PrefabInstance:
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[21]'
       value: 
-      objectReference: {fileID: 11400000, guid: e016151f80b615b46bd4ccfbda854f88, type: 2}
+      objectReference: {fileID: 11400000, guid: 2605d99b1eb1d2b45b9d02c58eed44c1, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[22]'
       value: 
-      objectReference: {fileID: 11400000, guid: 94b011d7aa38aaf4f9c611fd4d2fc486, type: 2}
+      objectReference: {fileID: 11400000, guid: 850a7b19dccde4f40a252d03e3228849, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[23]'
       value: 
-      objectReference: {fileID: 11400000, guid: 2605d99b1eb1d2b45b9d02c58eed44c1, type: 2}
+      objectReference: {fileID: 11400000, guid: 3339c7266c6abc4479256473092c0551, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[24]'
       value: 
-      objectReference: {fileID: 11400000, guid: 850a7b19dccde4f40a252d03e3228849, type: 2}
+      objectReference: {fileID: 11400000, guid: 3339c7266c6abc4479256473092c0551, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[25]'
       value: 
@@ -7904,7 +7904,7 @@ PrefabInstance:
       objectReference: {fileID: 441562321}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: possibleSynergies.Array.size
-      value: 26
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[0]'
@@ -7993,19 +7993,19 @@ PrefabInstance:
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[21]'
       value: 
-      objectReference: {fileID: 11400000, guid: e016151f80b615b46bd4ccfbda854f88, type: 2}
+      objectReference: {fileID: 11400000, guid: 2605d99b1eb1d2b45b9d02c58eed44c1, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[22]'
       value: 
-      objectReference: {fileID: 11400000, guid: 94b011d7aa38aaf4f9c611fd4d2fc486, type: 2}
+      objectReference: {fileID: 11400000, guid: 850a7b19dccde4f40a252d03e3228849, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[23]'
       value: 
-      objectReference: {fileID: 11400000, guid: 2605d99b1eb1d2b45b9d02c58eed44c1, type: 2}
+      objectReference: {fileID: 11400000, guid: 3339c7266c6abc4479256473092c0551, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[24]'
       value: 
-      objectReference: {fileID: 11400000, guid: 850a7b19dccde4f40a252d03e3228849, type: 2}
+      objectReference: {fileID: 11400000, guid: 3339c7266c6abc4479256473092c0551, type: 2}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: 'possibleSynergies.Array.data[25]'
       value: 
