@@ -460,14 +460,14 @@ public class TutorialManager : MonoBehaviour
     }
     private bool IsAnimalLassoed(GameObject animal)
     {
-        if (animal == null) return false;
-        Animal a = animal.GetComponent<Animal>();
-        return a != null && a.isLassoed;
+        if (animal == null) return true; // Treat null as "already lassoed"
+        var a = animal.GetComponent<Animal>();
+        return a == null || a.isLassoed;
     }
 
     private bool AreAllLassoed(params GameObject[] animals)
     {
-        return animals.All(a => IsAnimalLassoed(a));
+        return animals.All(IsAnimalLassoed);
     }
 
 }
