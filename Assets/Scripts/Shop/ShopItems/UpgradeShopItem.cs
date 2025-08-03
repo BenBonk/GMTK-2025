@@ -42,6 +42,8 @@ public class UpgradeShopItem : ShopItem
         price = (int)(25 * Mathf.Pow(2, animalLevel));
         priceText.text = price.ToString();
         upgradeArt.sprite = chosenAnimal.deckIcon;
+        upgradeArt.transform.DOScale(Vector3.one, 0);
+        upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.one, .25f);
     }
     public override void PurchaseUpgrade()
     {
