@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pig In A Blanket
   desc: Lasso a group of animals containing a Pig and a Sheep
-  art: {fileID: 1836224642, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
+  art: {fileID: -1646089200, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 200
   isExactMatch: 0
   currencyBonus: 5
