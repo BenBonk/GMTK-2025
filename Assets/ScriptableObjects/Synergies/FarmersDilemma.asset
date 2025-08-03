@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c833c1c2ddd849c4f803f68b6ef18eea, type: 3}
   m_Name: FarmersDilemma
   m_EditorClassIdentifier: 
-  name: Farmer's Dilemma
+  synergyName: Farmer's Dilemma
   desc: Lasso exactly a Fox and a Chicken
   art: {fileID: 4669297817646425545, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 200

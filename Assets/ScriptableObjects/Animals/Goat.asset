@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Goat
   m_EditorClassIdentifier: 
-  name: Goat
+  animalName: Goat
   description: Slows nearby predators.
   price: 50
   sprite: {fileID: -4802990570011083647, guid: c4dc552108e123e4db99c82806412406, type: 3}

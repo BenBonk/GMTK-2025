@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Dog
   m_EditorClassIdentifier: 
-  name: Dog
+  animalName: Dog
   description: Runs along the edge of the field, pushing other animals towards the
     middle.
   price: 150

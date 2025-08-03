@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c833c1c2ddd849c4f803f68b6ef18eea, type: 3}
   m_Name: ChickenJockey
   m_EditorClassIdentifier: 
-  name: Chicken Jockey
+  synergyName: Chicken Jockey
   desc: Lasso exactly 1 Chicken and 1 Horse
   art: {fileID: 4673576150224118391, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 300

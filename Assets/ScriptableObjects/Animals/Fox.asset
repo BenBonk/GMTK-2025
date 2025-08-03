@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Fox
   m_EditorClassIdentifier: 
-  name: Fox
+  animalName: Fox
   description: Predator. Moves up and down the field sporadically.
   price: 15
   sprite: {fileID: 1791904589581890566, guid: f43edba2e5d1116448daa89f3affffe1, type: 3}

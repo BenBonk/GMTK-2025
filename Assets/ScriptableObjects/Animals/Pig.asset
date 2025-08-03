@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Pig
   m_EditorClassIdentifier: 
-  name: Pig
+  animalName: Pig
   description: Meanders predictably.
   price: 15
   sprite: {fileID: -9122695006515159614, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}

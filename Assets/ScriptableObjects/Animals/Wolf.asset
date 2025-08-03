@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Wolf
   m_EditorClassIdentifier: 
-  name: Wolf
+  animalName: Wolf
   description: Predator. Chases non-predators.
   price: 25
   sprite: {fileID: -458185587419916677, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}

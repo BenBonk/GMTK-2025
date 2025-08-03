@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Sheep
   m_EditorClassIdentifier: 
-  name: Sheep
+  animalName: Sheep
   description: Runs in a straight line.
   price: 30
   sprite: {fileID: 3184159518366690391, guid: b6ada73c9f252f149a349a2d2ca49cf4, type: 3}

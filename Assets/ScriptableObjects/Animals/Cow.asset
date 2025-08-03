@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Cow
   m_EditorClassIdentifier: 
-  name: Cow
+  animalName: Cow
   description: Stops periodically to graze.
   price: 100
   sprite: {fileID: 6602966838755796383, guid: c2914d636906a98449ea8b716b3638a6, type: 3}

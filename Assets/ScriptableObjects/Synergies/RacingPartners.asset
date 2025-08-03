@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c833c1c2ddd849c4f803f68b6ef18eea, type: 3}
   m_Name: RacingPartners
   m_EditorClassIdentifier: 
-  name: Racing Partners
+  synergyName: Racing Partners
   desc: Lasso a group of animals containing a Horse and a Dog
   art: {fileID: -1421767001, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 175

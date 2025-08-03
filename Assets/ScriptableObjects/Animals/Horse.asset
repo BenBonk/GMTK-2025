@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Horse
   m_EditorClassIdentifier: 
-  name: Horse
+  animalName: Horse
   description: Runs swiftly across the field.
   price: 3
   sprite: {fileID: 7672759098259192623, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}

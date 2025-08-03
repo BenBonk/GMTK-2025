@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c833c1c2ddd849c4f803f68b6ef18eea, type: 3}
   m_Name: HoneyBakedHam
   m_EditorClassIdentifier: 
-  name: Honey Baked Ham
+  synergyName: Honey Baked Ham
   desc: Lasso a group of animals containing a Pig and a Bear
   art: {fileID: -636515342, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 75
