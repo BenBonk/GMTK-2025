@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         OnLassosChanged += UpdateLassosDisplay;
+
         Invoke("StartRound", 1);
     }
 
@@ -118,6 +119,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
         roundNumber++;
+        UpdateScoreDisplay(0);
         roundInProgress = true;
         roundCompleted = false;
         barnAnimator.Play("Closed", 0, 0.1f);
@@ -196,7 +198,7 @@ public class GameManager : MonoBehaviour
         {
             barnAnimator.Play("Open", 0, 0.1f);
             AudioManager.Instance.PlaySFX("barn_door");
-            AudioManager.Instance.PlayMusicWithFadeOutOld("shop_theme", 1f);
+            AudioManager.Instance.PlayMusicWithFadeOutOld("shop_theme", 1f, true);
         },
             onZoomEndpoint: () =>
             {
