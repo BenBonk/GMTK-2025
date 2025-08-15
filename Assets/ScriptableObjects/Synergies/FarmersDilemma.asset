@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: FarmersDilemma
   m_EditorClassIdentifier: 
   synergyName: Farmer's Dilemma
-  desc: Lasso exactly a Fox and a Chicken
+  desc: Lasso a group of animals containing a Fox and a Chicken
   art: {fileID: 4669297817646425545, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 200
-  isExactMatch: 1
-  currencyBonus: 4
-  currencyMult: 2.5
-  pointsBonus: 25
-  pointsMult: 2.5
+  price: 125
+  isExactMatch: 0
+  currencyBonus: 10
+  currencyMult: 1.5
+  pointsBonus: 10
+  pointsMult: 1.5
   animalsNeeded:
   - Chicken
   - Fox

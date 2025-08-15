@@ -15,12 +15,12 @@ MonoBehaviour:
   synergyName: Wolf In Sheep's Clothing
   desc: Lasso a group of animals containing a Wolf and a Sheep
   art: {fileID: 830542839, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 75
+  price: 115
   isExactMatch: 0
   currencyBonus: 11
-  currencyMult: 1.1
+  currencyMult: 2
   pointsBonus: 11
-  pointsMult: 1.1
+  pointsMult: 2
   animalsNeeded:
   - Wolf
   - Sheep

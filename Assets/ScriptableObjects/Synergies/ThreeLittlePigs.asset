@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: ThreeLittlePigs
   m_EditorClassIdentifier: 
   synergyName: Three Little Pigs
-  desc: Lasso exactly 3 Pigs and 1 Wolf
+  desc: Lasso a group of animals containing 3 Pigs and 1 Wolf
   art: {fileID: -1203944517, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 250
-  isExactMatch: 1
-  currencyBonus: 5
-  currencyMult: 4
-  pointsBonus: 25
-  pointsMult: 4
+  price: 210
+  isExactMatch: 0
+  currencyBonus: 3
+  currencyMult: 2
+  pointsBonus: 33
+  pointsMult: 3
   animalsNeeded:
   - Wolf
   - Pig

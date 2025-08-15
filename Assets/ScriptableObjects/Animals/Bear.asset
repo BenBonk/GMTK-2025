@@ -22,7 +22,7 @@ MonoBehaviour:
   animSpeed: 1
   animalPrefab: {fileID: 1086039005306102819, guid: 8c3128233cd69cb44a14147edba5745b, type: 3}
   pointsLevelUpIncrease: 1
-  pointsLevelUpMult: 0.15
+  pointsLevelUpMult: 0.1
   currencyLevelUpIncrease: 1
-  currencyLevelUpMult: 0.15
+  currencyLevelUpMult: 0.1
   upgradeCost: 350

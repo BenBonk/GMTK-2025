@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Goldilocks
   m_EditorClassIdentifier: 
   synergyName: Goldilocks
-  desc: Lasso exactly 3 Bears
+  desc: Lasso a group of animals containing 3 Bears
   art: {fileID: -127987637, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 100
-  isExactMatch: 1
-  currencyBonus: 10
-  currencyMult: 30
-  pointsBonus: 33
-  pointsMult: 30
+  isExactMatch: 0
+  currencyBonus: 50
+  currencyMult: 100
+  pointsBonus: 1
+  pointsMult: 1
   animalsNeeded:
   - Bear
   - Bear

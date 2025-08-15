@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,7 +8,7 @@ using UnityEngine;
 public class LassoController : MonoBehaviour
 {
     [HideInInspector]public LineRenderer lineRenderer;
-    public GameObject lassoPrefab; // Assign in inspector
+    public GameObject lassoPrefab; 
     public int smoothingSubdivisions; // Higher = smoother
     public float pointDistanceThreshold; // Minimum distance between points
     public float closeThreshold = 0.5f; // Distance to consider the lasso closed
@@ -111,7 +112,7 @@ public class LassoController : MonoBehaviour
 
         if (rawPoints.Count < 3)
         {
-            Debug.Log("Lasso too small � discarded.");
+            Debug.Log("Lasso too small, discarded.");
             Destroy(lineRenderer.gameObject);
             return;
         }
@@ -121,7 +122,7 @@ public class LassoController : MonoBehaviour
 
         if (Vector2.Distance(start, end) > closeThreshold)
         {
-            Debug.Log("Lasso did not close � discarded.");
+            Debug.Log("Lasso did not close, discarded.");
             rawPoints.Clear();
             lineRenderer.positionCount = 0;
             Destroy(lineRenderer.gameObject);
@@ -143,7 +144,7 @@ public class LassoController : MonoBehaviour
 
         if (area < areaThreshold)
         {
-            Debug.Log($"Lasso area too small ({area:F2} < {areaThreshold:F2}) � discarded.");
+            Debug.Log($"Lasso area too small ({area:F2} < {areaThreshold:F2}), discarded.");
             rawPoints.Clear();
             Destroy(lineRenderer.gameObject);
             return;
@@ -239,13 +240,13 @@ public class LassoController : MonoBehaviour
         return list;
     }
 
-    public void ShowCaptureFeedback((int pointBonus, float pointMult, int currencyBonus, float currencyMult) result)
+    public void ShowCaptureFeedback((double pointBonus, double pointMult, double currencyBonus, double currencyMult) result)
     {
         StartCoroutine(ShowFeedbackSequence(result));
     }
 
 
-    private IEnumerator ShowFeedbackSequence((int pointBonus, float pointMult, int currencyBonus, float currencyMult) result)
+    private IEnumerator ShowFeedbackSequence((double pointBonus, double pointMult, double currencyBonus, double currencyMult) result)
     {
         float zDepth = Mathf.Abs(Camera.main.transform.position.z);
         Vector3 screenBase = new Vector3(Screen.width / 2f, 100f, zDepth);
@@ -255,10 +256,10 @@ public class LassoController : MonoBehaviour
         List<GameObject> createdGroups = new();
 
         bool bonusPointsShown = result.pointBonus == 0;
-        bool multPointsShown = Mathf.Abs(result.pointMult - 1f) <= 0.01f || result.pointBonus == 0;
+        bool multPointsShown = Math.Abs(result.pointMult - 1f) <= 0.01f || result.pointBonus == 0;
 
         bool bonusCashShown = result.currencyBonus == 0;
-        bool multCashShown = Mathf.Abs(result.currencyMult - 1f) <= 0.01f || result.currencyBonus == 0;
+        bool multCashShown = Math.Abs(result.currencyMult - 1f) <= 0.01f || result.currencyBonus == 0;
 
         int row = 0;
 
@@ -274,15 +275,15 @@ public class LassoController : MonoBehaviour
 
             if (bonusText != null)
             {
-                bonusText.text = $"+Points: {result.pointBonus}";
+                bonusText.text = $"+Points: {FormatNumber(result.pointBonus)}";
                 bonusText.color = result.pointBonus >= 0 ? pointBonusColor : negativePointBonusColor;
             }
 
             if (multText != null)
             {
-                if (Mathf.Abs(result.pointMult - 1f) > 0.01f)
+                if (Math.Abs(result.pointMult - 1f) > 0.01f)
                 {
-                    multText.text = $"x{result.pointMult:F2}";
+                    multText.text = $"x{FormatMult(result.pointMult)}";
                     multText.color = result.pointMult > 1f ? positiveMultColor : negativeMultColor;
                     multText.gameObject.SetActive(false); // Hide initially
                 }
@@ -313,7 +314,7 @@ public class LassoController : MonoBehaviour
 
                 if (bonusPointsShown && multPointsShown)
                 {
-                    int totalPoints = Mathf.RoundToInt(result.pointBonus * result.pointMult);
+                    double totalPoints = Math.Round(result.pointBonus * result.pointMult);
                     if (TutorialManager._instance != null)
                     {
                         TutorialManager._instance.pointsThisRound += totalPoints;
@@ -328,7 +329,7 @@ public class LassoController : MonoBehaviour
                 }
             });
 
-            bool hasValidPointMultiplier = result.pointBonus != 0 && Mathf.Abs(result.pointMult - 1f) > 0.01f;
+            bool hasValidPointMultiplier = result.pointBonus != 0 && Math.Abs(result.pointMult - 1f) > 0.01f;
 
             if (hasValidPointMultiplier)
             {
@@ -352,15 +353,15 @@ public class LassoController : MonoBehaviour
 
             if (bonusText != null)
             {
-                bonusText.text = $"+Cash: {result.currencyBonus}";
+                bonusText.text = $"+Cash: {FormatNumber(result.currencyBonus)}";
                 bonusText.color = result.currencyBonus >= 0 ? cashBonusColor : negativeCashBonusColor;
             }
 
             if (multText != null)
             {
-                if (Mathf.Abs(result.currencyMult - 1f) > 0.01f)
+                if (Math.Abs(result.currencyMult - 1f) > 0.01f)
                 {
-                    multText.text = $"x{result.currencyMult:F2}";
+                    multText.text = $"x{FormatMult(result.currencyMult)}";
                     multText.color = result.currencyMult > 1f ? positiveMultColor : negativeMultColor;
                     multText.gameObject.SetActive(false); // Hide initially
                 }
@@ -392,7 +393,7 @@ public class LassoController : MonoBehaviour
 
                 if (bonusCashShown && multCashShown)
                 {
-                    int totalCash = Mathf.RoundToInt(result.currencyBonus * result.currencyMult);
+                    double totalCash = Math.Round(result.currencyBonus * result.currencyMult);
                     GameController.player.playerCurrency += totalCash;
                     Debug.Log($"Cash added: {totalCash}");
                 }
@@ -420,17 +421,17 @@ public class LassoController : MonoBehaviour
         }
     }
 
-    private void ShowMultiplierPopIn(TMP_Text multText, TMP_Text bonusText, int baseValue, float multiplier)
+    private void ShowMultiplierPopIn(TMP_Text multText, TMP_Text bonusText, double baseValue, double multiplier)
     {
         if (multText == null || bonusText == null) return;
 
         // Update bonus text immediately when multiplier is revealed
-        int newTotal = Mathf.RoundToInt(baseValue * multiplier);
+        double newTotal = Math.Round(baseValue * multiplier);
         bool isPoints = bonusText.text.StartsWith("+Points");
         if (bonusText.text.StartsWith("+Points"))
-            bonusText.text = $"+Points: {newTotal}";
+            bonusText.text = $"+Points: {FormatNumber(newTotal)}";
         else if (bonusText.text.StartsWith("+Cash"))
-            bonusText.text = $"+Cash: {newTotal}";
+            bonusText.text = $"+Cash: {FormatNumber(newTotal)}";
 
         if (multiplier > 1f)
         {
@@ -480,6 +481,24 @@ public class LassoController : MonoBehaviour
             (2f * p0 - 5f * p1 + 4f * p2 - p3) * t * t +
             (-p0 + 3f * p1 - 3f * p2 + p3) * t * t * t
         );
+    }
+
+    public static string FormatNumber(double value)
+    {
+        if (Math.Abs(value) < 1e12)
+            return value.ToString("N0"); // e.g. 987,654,321,000
+        else
+            return value.ToString("0.00E+0"); // e.g. 1.23E+13
+    }
+
+    public static string FormatMult(double value)
+    {
+        if (Math.Abs(value) < 1000)
+            return value.ToString("N2"); // e.g. 987.65
+        else if (Math.Abs(value) < 1e10)
+            return value.ToString("N0");  // e.g. 987,654,321,000
+        else
+            return value.ToString("0.00E+0"); // e.g. 1.23E+13
     }
 
     List<Vector3> GenerateSmoothLasso(List<Vector3> controlPoints, int subdivisions)

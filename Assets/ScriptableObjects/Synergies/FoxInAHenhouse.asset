@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: FoxInAHenhouse
   m_EditorClassIdentifier: 
   synergyName: Fox In A Henhouse
-  desc: Lasso a group of animals containing a Fox and two Chickens
+  desc: Lasso a group of animals containing a Fox and three Chickens
   art: {fileID: -807716104232975945, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 150
+  price: 250
   isExactMatch: 0
-  currencyBonus: 10
-  currencyMult: 2
+  currencyBonus: 0
+  currencyMult: 1
   pointsBonus: 0
-  pointsMult: 2
+  pointsMult: 6
   animalsNeeded:
+  - Chicken
   - Chicken
   - Chicken
   - Fox

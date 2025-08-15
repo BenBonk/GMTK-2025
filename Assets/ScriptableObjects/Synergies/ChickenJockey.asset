@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: ChickenJockey
   m_EditorClassIdentifier: 
   synergyName: Chicken Jockey
-  desc: Lasso exactly 1 Chicken and 1 Horse
+  desc: Lasso a group of animals containing 1 Chicken and 1 Horse
   art: {fileID: 4673576150224118391, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 300
-  isExactMatch: 1
+  isExactMatch: 0
   currencyBonus: 0
   currencyMult: 3
-  pointsBonus: 30
+  pointsBonus: 50
   pointsMult: 3
   animalsNeeded:
   - Chicken

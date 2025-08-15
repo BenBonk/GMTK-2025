@@ -148,12 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalData: {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
-  currencyToGive: -20
-  pointsToGive: -20
+  currencyToGive: -10
+  pointsToGive: -10
   currencyMultToGive: 1
   pointsMultToGive: 1
   isPredator: 1
-  speed: 1
+  speed: 2.5
   currentSpeed: 0
   isLassoed: 0
   leftEdgeX: 0

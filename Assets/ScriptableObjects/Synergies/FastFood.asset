@@ -15,12 +15,12 @@ MonoBehaviour:
   synergyName: Fast Food
   desc: Lasso a group of animals containing a Cow and a Chicken
   art: {fileID: 3108005297328110129, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 200
+  price: 150
   isExactMatch: 0
-  currencyBonus: 0
-  currencyMult: 1
+  currencyBonus: 30
+  currencyMult: 2
   pointsBonus: -30
-  pointsMult: 2
+  pointsMult: 1
   animalsNeeded:
   - Cow
   - Chicken

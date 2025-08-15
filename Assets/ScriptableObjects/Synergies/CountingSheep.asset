@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: CountingSheep
   m_EditorClassIdentifier: 
   synergyName: Counting Sheep
-  desc: Lasso exactly 3 Sheep
+  desc: Lasso a group of animals containing 3 Sheep
   art: {fileID: 3678287154355541291, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 250
-  isExactMatch: 1
-  currencyBonus: 0
+  price: 100
+  isExactMatch: 0
+  currencyBonus: 3
   currencyMult: 1
   pointsBonus: 0
-  pointsMult: 10
+  pointsMult: 2.5
   animalsNeeded:
   - Sheep
   - Sheep

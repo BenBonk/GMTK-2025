@@ -16,12 +16,12 @@ MonoBehaviour:
   desc: Lasso a group of animals containing a Chicken, Cow, Goat, Horse, Dog, Sheep,
     and Pig
   art: {fileID: -824223596, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 175
+  price: 500
   isExactMatch: 0
-  currencyBonus: 0
-  currencyMult: 5
-  pointsBonus: 0
-  pointsMult: 5
+  currencyBonus: 50
+  currencyMult: 10
+  pointsBonus: 100
+  pointsMult: 10
   animalsNeeded:
   - Chicken
   - Horse

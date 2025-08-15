@@ -15,11 +15,11 @@ MonoBehaviour:
   synergyName: Lone Wolf
   desc: Lasso exactly 1 Wolf
   art: {fileID: 267791020, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 250
+  price: 125
   isExactMatch: 1
-  currencyBonus: 6
+  currencyBonus: 10
   currencyMult: 1
-  pointsBonus: 6
+  pointsBonus: 20
   pointsMult: 1
   animalsNeeded:
   - Wolf

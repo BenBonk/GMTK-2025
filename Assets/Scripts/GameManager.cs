@@ -52,8 +52,8 @@ public class GameManager : MonoBehaviour
         }
     }*/
 
-    private int _pointsThisRound;
-    public int pointsThisRound
+    private double _pointsThisRound;
+    public double pointsThisRound
     {
         get => _pointsThisRound;
         set
@@ -66,8 +66,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public event System.Action<int> OnPointsChanged;
-    public event System.Action<int> OnLassosChanged;
+    public event System.Action<double> OnPointsChanged;
 
 
     public TextMeshProUGUI scoreDisplay;
@@ -91,7 +90,6 @@ public class GameManager : MonoBehaviour
         //lassosUsed = 0;
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
-        OnLassosChanged += UpdateLassosDisplay;
 
         Invoke("StartRound", 1);
     }
@@ -132,9 +130,9 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        scoreDisplay.text = "POINTS: " + pointsThisRound  + " / " + roundsPointsRequirement[roundNumber];
+        scoreDisplay.text = "POINTS: " + LassoController.FormatNumber(pointsThisRound)  + " / " + LassoController.FormatNumber(roundsPointsRequirement[roundNumber]);
         timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
-        currencyDisplay.text = "CASH: " + player.playerCurrency;
+        currencyDisplay.text = "CASH: " + LassoController.FormatNumber(player.playerCurrency);
     }
 
     public void EndRound()
@@ -226,14 +224,14 @@ public class GameManager : MonoBehaviour
         cameraController.ResetToStartPosition(1f);
     }
 
-    private void UpdateScoreDisplay(int newPoints)
+    private void UpdateScoreDisplay(double newPoints)
     {
-        scoreDisplay.text = $"POINTS: {newPoints} / {roundsPointsRequirement[roundNumber]}";
+        scoreDisplay.text = $"POINTS: {LassoController.FormatNumber(newPoints)} / {LassoController.FormatNumber(roundsPointsRequirement[roundNumber])}";
     }
 
-    private void UpdatecurrencyDisplay(int newcurrency)
+    private void UpdatecurrencyDisplay(double newcurrency)
     {
-        currencyDisplay.text = $"CASH: {newcurrency}";
+        currencyDisplay.text = $"CASH: {LassoController.FormatNumber(newcurrency)}";
     }
 
     private void UpdateTimerDisplay()
@@ -260,12 +258,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    private void UpdateLassosDisplay(int usedLassos)
-    {
-        lassosDisplay.text = $"Lassos: {player.lassosPerRound  - usedLassos}";
-    }
-
     public IEnumerator ShowReadySetLassoSequence()
     {
         string[] words = { "READY?", "SET", "LASSO!" };
@@ -277,6 +269,8 @@ public class GameManager : MonoBehaviour
                 DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, lassoMaterialPreset);
                 AudioManager.Instance.PlayNextPlaylistTrack();
                 AudioManager.Instance.PlaySFX("rooster");
+                lassoController.canLasso = true;
+                playerReady = true;
             }
             else
             {
@@ -287,8 +281,6 @@ public class GameManager : MonoBehaviour
 
             yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
         }
-        playerReady = true;
-        lassoController.canLasso = true;
     }
 
     private Vector3 GetCenterScreenWorldPosition()

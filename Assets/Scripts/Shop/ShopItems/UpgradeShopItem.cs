@@ -1,5 +1,7 @@
 using DG.Tweening;
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class UpgradeShopItem : ShopItem
 {
@@ -39,8 +41,8 @@ public class UpgradeShopItem : ShopItem
         }
         
         titleText.text = chosenAnimal.animalName;
-        price = (int)(chosenAnimal.upgradeCost * Mathf.Pow(2, animalLevel));
-        priceText.text = price.ToString();
+        price = chosenAnimal.upgradeCost * Math.Pow(1.5, animalLevel);
+        priceText.text = LassoController.FormatNumber(price);
         upgradeArt.sprite = chosenAnimal.deckIcon;
         upgradeArt.transform.DOScale(Vector3.one, 0);
         upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.one, .25f);

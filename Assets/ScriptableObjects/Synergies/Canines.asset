@@ -17,10 +17,10 @@ MonoBehaviour:
   art: {fileID: 7121192296692568260, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 150
   isExactMatch: 0
-  currencyBonus: 2
-  currencyMult: 2
+  currencyBonus: 10
+  currencyMult: 2.5
   pointsBonus: 20
-  pointsMult: 2
+  pointsMult: 2.5
   animalsNeeded:
   - Dog
   - Wolf

@@ -10,10 +10,10 @@ public class CaptureManager : MonoBehaviour
     private GameManager gameManager;
     // private List<HashSet<string>> synergySets = new List<HashSet<string>>();
 
-    private int pointBonus = 0;
-    private float pointMult = 1;
-    private int currencyBonus = 0;
-    private float currencyMult = 1;
+    private double pointBonus = 0;
+    private double pointMult = 1;
+    private double currencyBonus = 0;
+    private double currencyMult = 1;
 
     private void Start()
     {
@@ -21,7 +21,7 @@ public class CaptureManager : MonoBehaviour
         player = GameController.player;
     }
 
-    public (int, float, int, float) MakeCapture(Animal[] animalsCaptured)
+    public (double, double, double, double) MakeCapture(Animal[] animalsCaptured)
     {
         pointBonus = 0;
         pointMult = 1;

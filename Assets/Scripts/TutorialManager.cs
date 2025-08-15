@@ -83,8 +83,8 @@ public class TutorialManager : MonoBehaviour
         }
     }*/
 
-    private int _pointsThisRound;
-    public int pointsThisRound
+    private double _pointsThisRound;
+    public double pointsThisRound
     {
         get => _pointsThisRound;
         set
@@ -97,8 +97,7 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
-    public event System.Action<int> OnPointsChanged;
-    public event System.Action<int> OnLassosChanged;
+    public event System.Action<double> OnPointsChanged;
 
 
     public TextMeshProUGUI scoreDisplay;
@@ -112,7 +111,6 @@ public class TutorialManager : MonoBehaviour
         //lassosUsed = 0;
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
-        OnLassosChanged += UpdateLassosDisplay;
         Invoke("StartRound", 1);
     }
 
@@ -194,7 +192,7 @@ public class TutorialManager : MonoBehaviour
         cameraController.ResetToStartPosition(1f);
     }
 
-    private void UpdateScoreDisplay(int newPoints)
+    private void UpdateScoreDisplay(double newPoints)
     {
         if (scoreDisplay == null || roundsPointsRequirement == null || roundNumber >= roundsPointsRequirement.Length)
         {
@@ -204,7 +202,7 @@ public class TutorialManager : MonoBehaviour
 
         scoreDisplay.text = $"POINTS: {newPoints} / {roundsPointsRequirement[roundNumber]}";
     }
-    private void UpdatecurrencyDisplay(int newcurrency)
+    private void UpdatecurrencyDisplay(double newcurrency)
     {
         currencyDisplay.text = $"CASH: {newcurrency}";
     }
@@ -229,12 +227,6 @@ public class TutorialManager : MonoBehaviour
 
             pulse.Join(timerDisplay.DOColor(timerNormalColor, 0.4f));
         }
-    }
-
-
-    private void UpdateLassosDisplay(int usedLassos)
-    {
-        lassosDisplay.text = $"Lassos: {player.lassosPerRound - usedLassos}";
     }
 
     public IEnumerator ShowReadySetLassoSequence()

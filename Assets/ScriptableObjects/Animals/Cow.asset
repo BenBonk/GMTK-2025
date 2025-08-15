@@ -20,8 +20,8 @@ MonoBehaviour:
   deckIcon: {fileID: -5863608287252117823, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.75
   animalPrefab: {fileID: 6561535014221172434, guid: 5c35bec9414ba1047bc6dd3f61e56cae, type: 3}
-  pointsLevelUpIncrease: 2
-  pointsLevelUpMult: 0
+  pointsLevelUpIncrease: 5
+  pointsLevelUpMult: 0.05
   currencyLevelUpIncrease: 1
   currencyLevelUpMult: 0
-  upgradeCost: 50
+  upgradeCost: 100

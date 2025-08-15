@@ -15,12 +15,12 @@ MonoBehaviour:
   synergyName: Predatory
   desc: Lasso a group of animals containing a Bear, a Wolf, and a Fox
   art: {fileID: 1267484794, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 75
+  price: 100
   isExactMatch: 0
   currencyBonus: 20
-  currencyMult: 5
-  pointsBonus: 100
-  pointsMult: 5
+  currencyMult: 10
+  pointsBonus: 50
+  pointsMult: 10
   animalsNeeded:
   - Bear
   - Wolf

@@ -17,9 +17,9 @@ MonoBehaviour:
   art: {fileID: 7650970668192384800, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 200
   isExactMatch: 0
-  currencyBonus: 4
-  currencyMult: 1.25
-  pointsBonus: 5
+  currencyBonus: 10
+  currencyMult: 1
+  pointsBonus: 0
   pointsMult: 1.5
   animalsNeeded:
   - Pig

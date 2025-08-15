@@ -18,9 +18,9 @@ MonoBehaviour:
   price: 200
   isExactMatch: 0
   currencyBonus: 12
-  currencyMult: 1
+  currencyMult: 2
   pointsBonus: 5
-  pointsMult: 1
+  pointsMult: 2
   animalsNeeded:
   - Dog
   - Wolf

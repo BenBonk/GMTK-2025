@@ -153,7 +153,7 @@ MonoBehaviour:
   currencyMultToGive: 0.1
   pointsMultToGive: 0.1
   isPredator: 1
-  speed: 2
+  speed: 2.5
   currentSpeed: 0
   isLassoed: 0
   leftEdgeX: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   bottomLimitY: 0
   tiltFrequency: 3
   maxTiltAmplitude: 8
-  pauseDuration: 5
+  pauseDuration: 3.5
   attractionRadius: 4
   attractionStrength: 5.5
   acceleration: 0.5

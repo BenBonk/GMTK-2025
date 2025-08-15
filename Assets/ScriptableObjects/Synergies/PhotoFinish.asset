@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: PhotoFinish
   m_EditorClassIdentifier: 
   synergyName: Photo Finish
-  desc: Lasso exactly 2 Horses
+  desc: Lasso a group of animals containing 2 Horses
   art: {fileID: -464304336, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 300
-  isExactMatch: 1
-  currencyBonus: 10
-  currencyMult: 1
+  isExactMatch: 0
+  currencyBonus: 25
+  currencyMult: 2
   pointsBonus: 0
-  pointsMult: 3
+  pointsMult: 1
   animalsNeeded:
   - Horse
   - Horse

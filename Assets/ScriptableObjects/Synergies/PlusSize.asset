@@ -15,12 +15,12 @@ MonoBehaviour:
   synergyName: Plus Size
   desc: Lasso a group of animals containing a Cow and a Bear
   art: {fileID: -2129282658, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 125
+  price: 300
   isExactMatch: 0
-  currencyBonus: 50
-  currencyMult: 2
-  pointsBonus: 300
-  pointsMult: 2
+  currencyBonus: 1
+  currencyMult: 10
+  pointsBonus: 50
+  pointsMult: 15
   animalsNeeded:
   - Cow
   - Bear

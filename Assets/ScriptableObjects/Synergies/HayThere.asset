@@ -15,12 +15,12 @@ MonoBehaviour:
   synergyName: Hay There
   desc: Lasso a group of animals containing a Cow, Goat, Horse, and Sheep
   art: {fileID: 1754114436, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 150
+  price: 225
   isExactMatch: 0
-  currencyBonus: 10
-  currencyMult: 1
-  pointsBonus: 25
-  pointsMult: 4
+  currencyBonus: 25
+  currencyMult: 3
+  pointsBonus: 0
+  pointsMult: 1.5
   animalsNeeded:
   - Cow
   - Goat

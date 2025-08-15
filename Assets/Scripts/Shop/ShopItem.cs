@@ -12,7 +12,7 @@ public abstract class ShopItem : MonoBehaviour
     public Image upgradeArt;
     public ButtonFX buttonFX;
 
-    [HideInInspector]public int price;
+    [HideInInspector]public double price;
     public bool canPurchase = true;
     [HideInInspector] private bool cantHoverOver;
     public RectTransform hoverPopup;

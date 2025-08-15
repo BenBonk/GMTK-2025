@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
         synergiesInDeck.Add(synergy);
     }
 
-    private int _playerCurrency;
-    public int playerCurrency
+    private double _playerCurrency;
+    public double playerCurrency
     {
         get => _playerCurrency;
         set
@@ -32,5 +32,5 @@ public class Player : MonoBehaviour
         }
     }
 
-    public event Action<int> OnCurrencyChanged;
+    public event Action<double> OnCurrencyChanged;
 }
