@@ -19,7 +19,6 @@ public abstract class ShopItem : MonoBehaviour
     private Tween a;
     private Tween b;
     protected ShopManager shopManager;
-
     private void Start()
     {
         shopManager = GameController.shopManager;

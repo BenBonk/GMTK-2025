@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PredatorSelect : MonoBehaviour
 {
@@ -13,6 +15,13 @@ public class PredatorSelect : MonoBehaviour
     public PredatorPanel predatorPanel2;
     public AnimalData[] predatorOptions;
 
+    private DescriptionManager descriptionManager;
+
+    private void Start()
+    {
+        descriptionManager = GameController.descriptionManager;
+    }
+
     public IEnumerator Intro()
     {
         int a = Random.Range(0, 3); 
@@ -23,74 +32,11 @@ public class PredatorSelect : MonoBehaviour
             b = Random.Range(0, 3);
         } while (b == a);
         
-        //TRASH CODE BUT WE GOTTA FINISH IN TIME IDC
-        AnimalData animalRef = predatorOptions[a];
-        string aStr ="";
-        if (animalRef.pointsToGive!=0)
-        {
-            if (animalRef.pointsToGive<0)
-            {
-                aStr += ("Points loss: " + animalRef.pointsToGive + "\n");   
-            }
-            else
-            {
-                aStr += ("Points bonus: +" + animalRef.pointsToGive + "\n");   
-            }
-        }
-        if (animalRef.pointsMultToGive!=1f)
-        {
-            aStr += ("Points mult: x" + animalRef.pointsMultToGive + "\n");
-        }
-        if (animalRef.currencyToGive!=0)
-        {
-            if (animalRef.currencyToGive < 0)
-            {
-                aStr += ("Cash loss: " + animalRef.currencyToGive + "\n");
-            }
-            else
-            {
-                aStr += ("Cash bonus: +" + animalRef.currencyToGive + "\n");    
-            }
-            
-        }
-        if (animalRef.currencyMultToGive!=1f)
-        {
-            aStr += ("Cash mult: x" + animalRef.currencyMultToGive + "\n");
-        }
-        AnimalData animalRef2 = predatorOptions[b];
-        string bStr ="";
-        if (animalRef2.pointsToGive!=0)
-        {
-            if (animalRef2.pointsToGive<0)
-            {
-                bStr += ("Points loss: " + animalRef2.pointsToGive + "\n");   
-            }
-            else
-            {
-                bStr += ("Points bonus: +" + animalRef2.pointsToGive + "\n");   
-            }
-        }
-        if (animalRef2.pointsMultToGive!=1f)
-        {
-            bStr += ("Points mult: x" + animalRef2.pointsMultToGive + "\n");
-        }
-        if (animalRef2.currencyToGive!=0)
-        {
-            if (animalRef2.currencyToGive < 0)
-            {
-                bStr += ("Cash loss: " + animalRef2.currencyToGive + "\n");
-            }
-            else
-            {
-                bStr += ("Cash bonus: +" + animalRef2.currencyToGive + "\n");    
-            }
-        }
-        if (animalRef2.currencyMultToGive!=1f)
-        {
-            bStr += ("Cash mult: x" + animalRef2.currencyMultToGive + "\n");
-        }
-        predatorPanel1.Initialize(predatorOptions[a].animalName,aStr, predatorOptions[a].sprite, predatorOptions[a]);
-        predatorPanel2.Initialize(predatorOptions[b].animalName,bStr, predatorOptions[b].sprite, predatorOptions[b]);
+        string desc = descriptionManager.GetAnimalDescription(predatorOptions[a]);
+        string desc2 =  descriptionManager.GetAnimalDescription(predatorOptions[b]);
+        
+        predatorPanel1.Initialize(predatorOptions[a].animalName,desc, predatorOptions[a].sprite, predatorOptions[a]);
+        predatorPanel2.Initialize(predatorOptions[b].animalName,desc2, predatorOptions[b].sprite, predatorOptions[b]);
         yield return new WaitForSeconds(2f);
         darkCover.DOFade(0.5f, 0.5f);
         panel1.gameObject.SetActive(true);

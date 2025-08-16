@@ -25,37 +25,8 @@ public class SynergyShopItem : ShopItem
         priceText.text = chosenSynergy.price.ToString();
         price = chosenSynergy.price;
         upgradeArt.sprite = chosenSynergy.art;
-        desc2.text = "";
-        if (chosenSynergy.pointsBonus!=0)
-        {
-            if (chosenSynergy.pointsBonus<0)
-            {
-                desc2.text += ("Points loss: " + chosenSynergy.pointsBonus + "\n");
-            }
-            else
-            {
-                desc2.text += ("Points bonus: +" + chosenSynergy.pointsBonus + "\n");   
-            }
-        }
-        if (chosenSynergy.pointsMult!=1)
-        {
-            desc2.text += ("Points mult: x" + chosenSynergy.pointsMult + "\n");
-        }
-        if (chosenSynergy.currencyBonus!=0)
-        {
-            if (chosenSynergy.currencyBonus<0)
-            {
-                desc2.text += ("Cash loss: " + chosenSynergy.currencyBonus + "\n");
-            }
-            else
-            {
-                desc2.text += ("Cash bonus: +" + chosenSynergy.currencyBonus + "\n");   
-            }
-        }
-        if (chosenSynergy.currencyMult!=1)
-        {
-            desc2.text += ("Cash mult: x" + chosenSynergy.currencyMult + "\n");
-        }
+
+        desc2.text = GameController.descriptionManager.GetSynergyDescription(chosenSynergy);
     }
     public override void PurchaseUpgrade()
     {
