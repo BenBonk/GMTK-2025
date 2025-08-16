@@ -10,10 +10,6 @@ public class Animal : MonoBehaviour
     private AnimalLevelManager levelManager;
 
     public AnimalData animalData;
-    public int currencyToGive;
-    public int pointsToGive;
-    public float currencyMultToGive;
-    public float pointsMultToGive;
     public bool isPredator;
 
     public float speed;

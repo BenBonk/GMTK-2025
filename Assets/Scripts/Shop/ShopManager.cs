@@ -118,39 +118,38 @@ public class ShopManager : MonoBehaviour
             int count = entry.Value.count;
             AnimalData reference = entry.Value.reference;
             GameObject card = Instantiate(deckCardPrefab, deckParent);
-
-            Animal animalRef = reference.animalPrefab.GetComponent<Animal>();
+            
             int level = GameController.animalLevelManager.GetLevel(reference.name);
             string stra = "";
-            if (animalRef.pointsToGive!=0)
+            if (reference.pointsToGive!=0)
             {
-                if (animalRef.pointsToGive<0)
+                if (reference.pointsToGive<0)
                 {
-                    stra += ("Points loss: " + (animalRef.pointsToGive+(level*reference.pointsLevelUpIncrease))+ "\n");   
+                    stra += ("Points loss: " + (reference.pointsToGive+(level*reference.pointsLevelUpIncrease))+ "\n");   
                 }
                 else
                 {
-                    stra += ("Points bonus: +" + (animalRef.pointsToGive+(level*reference.pointsLevelUpIncrease)) + "\n");   
+                    stra += ("Points bonus: +" + (reference.pointsToGive+(level*reference.pointsLevelUpIncrease)) + "\n");   
                 }
             }
-            if (animalRef.pointsMultToGive!=1f)
+            if (reference.pointsMultToGive!=1f)
             {
-                stra+= ("Points mult: x" +(animalRef.pointsMultToGive+(level*reference.pointsLevelUpMult)) + "\n");
+                stra+= ("Points mult: x" +(reference.pointsMultToGive+(level*reference.pointsLevelUpMult)) + "\n");
             }
-            if (animalRef.currencyToGive!=0)
+            if (reference.currencyToGive!=0)
             {
-                if (animalRef.currencyToGive < 0)
+                if (reference.currencyToGive < 0)
                 {
-                    stra  += ("Cash loss: " + (animalRef.currencyToGive+(level*reference.currencyLevelUpIncrease)) + "\n");
+                    stra  += ("Cash loss: " + (reference.currencyToGive+(level*reference.currencyLevelUpIncrease)) + "\n");
                 }
                 else
                 {
-                    stra += ("Cash bonus: +" + (animalRef.currencyToGive+(level*reference.currencyLevelUpIncrease)) + "\n");    
+                    stra += ("Cash bonus: +" + (reference.currencyToGive+(level*reference.currencyLevelUpIncrease)) + "\n");    
                 }
             }
-            if (animalRef.currencyMultToGive!=1f)
+            if (reference.currencyMultToGive!=1f)
             {
-                stra += ("Cash mult: x" + (animalRef.currencyMultToGive+(level*reference.currencyLevelUpMult)) + "\n");
+                stra += ("Cash mult: x" + (reference.currencyMultToGive+(level*reference.currencyLevelUpMult)) + "\n");
             }
             card.GetComponent<DeckCard>().Initialize("x" + count, stra, reference.deckIcon);
         }

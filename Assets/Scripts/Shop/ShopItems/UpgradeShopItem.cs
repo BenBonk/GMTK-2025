@@ -13,29 +13,28 @@ public class UpgradeShopItem : ShopItem
         AnimalLevelManager levelManager = GameController.animalLevelManager;
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
         int animalLevel = levelManager.GetLevel(chosenAnimal.animalName);
-        Animal animalPrefabRef = chosenAnimal.animalPrefab.GetComponent<Animal>();
         descriptionText.text = "";
         if (chosenAnimal.pointsLevelUpIncrease!=0)
         {
-            float initial = (animalLevel * chosenAnimal.pointsLevelUpIncrease + animalPrefabRef.pointsToGive); 
+            float initial = (animalLevel * chosenAnimal.pointsLevelUpIncrease + chosenAnimal.pointsToGive); 
             float after = initial + chosenAnimal.pointsLevelUpIncrease;
             descriptionText.text += ("Points: " + initial + " -> " + after +"\n");
         }
         if (chosenAnimal.pointsLevelUpMult!=0)
         {
-            float initial = (animalLevel * chosenAnimal.pointsLevelUpMult + animalPrefabRef.pointsMultToGive);
+            float initial = (animalLevel * chosenAnimal.pointsLevelUpMult + chosenAnimal.pointsMultToGive);
             float after = initial + chosenAnimal.pointsLevelUpMult;
             descriptionText.text += ("Points: x" + initial + "-> x" + after+"\n");
         }
         if (chosenAnimal.currencyLevelUpIncrease!=0)
         {
-            float initial = (animalLevel * chosenAnimal.currencyLevelUpIncrease + animalPrefabRef.currencyToGive);
+            float initial = (animalLevel * chosenAnimal.currencyLevelUpIncrease + chosenAnimal.currencyToGive);
             float after = initial + chosenAnimal.currencyLevelUpIncrease;
             descriptionText.text += ("Coins: " + initial + " -> " + after +"\n");
         }
         if (chosenAnimal.currencyLevelUpMult!=0)
         {
-            float initial = (animalLevel * chosenAnimal.currencyLevelUpMult + animalPrefabRef.currencyMultToGive);
+            float initial = (animalLevel * chosenAnimal.currencyLevelUpMult + chosenAnimal.currencyMultToGive);
             float after = initial + chosenAnimal.currencyLevelUpMult;
             descriptionText.text += ("Coins: x" + initial + " -> x" + after+"\n");
         }

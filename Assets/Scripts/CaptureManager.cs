@@ -79,10 +79,10 @@ public class CaptureManager : MonoBehaviour
 
     public virtual void CaptureAnimal(Animal capturedAnimal)
     {
-        currencyBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.currencyToGive;
-        currencyMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.currencyMultToGive;
-        pointBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.pointsToGive;
-        pointMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.pointsMultToGive;    
+        currencyBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.animalData.currencyToGive;
+        currencyMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;
+        pointBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.animalData.pointsToGive;
+        pointMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.animalData.pointsMultToGive;    
         Debug.Log($"Captured animal: {capturedAnimal.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
     }
 

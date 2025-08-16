@@ -40,42 +40,41 @@ public class AnimalShopItem : ShopItem
         }
         animCo = StartCoroutine(Animate());
         descriptionText.text = "";
-        Animal animalRef = chosenAnimal.animalPrefab.GetComponent<Animal>();
         int level = GameController.animalLevelManager.GetLevel(chosenAnimal.name);
         if (buttonFX != null)
         {
-            buttonFX.clickSFX = animalRef.animalData.animalName;
-            buttonFX.highlightSFX = animalRef.animalData.animalName;
+            buttonFX.clickSFX = chosenAnimal.animalName;
+            buttonFX.highlightSFX = chosenAnimal.animalName;
         }
-        if (animalRef.pointsToGive!=0)
+        if (chosenAnimal.pointsToGive!=0)
         {
-            if (animalRef.pointsToGive<0)
+            if (chosenAnimal.pointsToGive<0)
             {
-                descriptionText.text += ("Points loss: " + (animalRef.pointsToGive+(level*chosenAnimal.pointsLevelUpIncrease)) + "\n");   
+                descriptionText.text += ("Points loss: " + (chosenAnimal.pointsToGive+(level*chosenAnimal.pointsLevelUpIncrease)) + "\n");   
             }
             else
             {
-                descriptionText.text += ("Points bonus: +" + (animalRef.pointsToGive+(level*chosenAnimal.pointsLevelUpIncrease)) + "\n");   
+                descriptionText.text += ("Points bonus: +" + (chosenAnimal.pointsToGive+(level*chosenAnimal.pointsLevelUpIncrease)) + "\n");   
             }
         }
-        if (animalRef.pointsMultToGive!=1f)
+        if (chosenAnimal.pointsMultToGive!=1f)
         {
-            descriptionText.text += ("Points mult: x" + (animalRef.pointsMultToGive+(level*chosenAnimal.pointsLevelUpMult)) + "\n");
+            descriptionText.text += ("Points mult: x" + (chosenAnimal.pointsMultToGive+(level*chosenAnimal.pointsLevelUpMult)) + "\n");
         }
-        if (animalRef.currencyToGive!=0)
+        if (chosenAnimal.currencyToGive!=0)
         {
-            if (animalRef.currencyToGive < 0)
+            if (chosenAnimal.currencyToGive < 0)
             {
-                descriptionText.text  += ("Cash loss: " + (animalRef.currencyToGive+(level*chosenAnimal.currencyLevelUpIncrease)) + "\n");
+                descriptionText.text  += ("Cash loss: " + (chosenAnimal.currencyToGive+(level*chosenAnimal.currencyLevelUpIncrease)) + "\n");
             }
             else
             {
-                descriptionText.text  += ("Cash bonus: +" + (animalRef.currencyToGive+(level*chosenAnimal.currencyLevelUpIncrease)) + "\n");    
+                descriptionText.text  += ("Cash bonus: +" + (chosenAnimal.currencyToGive+(level*chosenAnimal.currencyLevelUpIncrease)) + "\n");    
             }
         }
-        if (animalRef.currencyMultToGive!=1f)
+        if (chosenAnimal.currencyMultToGive!=1f)
         {
-            descriptionText.text += ("Cash mult: x" + (animalRef.currencyMultToGive+(level*chosenAnimal.currencyLevelUpMult)) + "\n");
+            descriptionText.text += ("Cash mult: x" + (chosenAnimal.currencyMultToGive+(level*chosenAnimal.currencyLevelUpMult)) + "\n");
         }
     }
     public override void PurchaseUpgrade()

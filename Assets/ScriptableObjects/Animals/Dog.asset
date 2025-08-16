@@ -21,6 +21,10 @@ MonoBehaviour:
   deckIcon: {fileID: -7066902412895447660, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.4
   animalPrefab: {fileID: 5660066743077353431, guid: c7f16862f707fd34384f68dd262add9f, type: 3}
+  currencyToGive: 6
+  pointsToGive: 10
+  currencyMultToGive: 1
+  pointsMultToGive: 1.2
   pointsLevelUpIncrease: 3
   pointsLevelUpMult: 0
   currencyLevelUpIncrease: 0

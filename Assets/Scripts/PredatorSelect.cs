@@ -24,7 +24,7 @@ public class PredatorSelect : MonoBehaviour
         } while (b == a);
         
         //TRASH CODE BUT WE GOTTA FINISH IN TIME IDC
-        Animal animalRef = predatorOptions[a].animalPrefab.GetComponent<Animal>();
+        AnimalData animalRef = predatorOptions[a];
         string aStr ="";
         if (animalRef.pointsToGive!=0)
         {
@@ -57,7 +57,7 @@ public class PredatorSelect : MonoBehaviour
         {
             aStr += ("Cash mult: x" + animalRef.currencyMultToGive + "\n");
         }
-        Animal animalRef2 = predatorOptions[b].animalPrefab.GetComponent<Animal>();
+        AnimalData animalRef2 = predatorOptions[b];
         string bStr ="";
         if (animalRef2.pointsToGive!=0)
         {
