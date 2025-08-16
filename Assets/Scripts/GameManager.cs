@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public bool isTesting;
+    
     public Player player;
     public int[] roundsPointsRequirement;
     public int roundNumber;
@@ -80,11 +82,19 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < roundsPointsRequirement.Length; i++)
+        if (isTesting)
         {
-            float rawScore = 85 * Mathf.Pow(pointsRequirementGrowthRate, i);
-            int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
-            roundsPointsRequirement[i] = roundedToFive;
+            roundDuration = 3;
+            player.playerCurrency = 10000;
+        }
+        else
+        {
+            for (int i = 0; i < roundsPointsRequirement.Length; i++)
+            {
+                float rawScore = 85 * Mathf.Pow(pointsRequirementGrowthRate, i);
+                int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
+                roundsPointsRequirement[i] = roundedToFive;
+            }   
         }
         elapsedTime = 0;
         //lassosUsed = 0;
