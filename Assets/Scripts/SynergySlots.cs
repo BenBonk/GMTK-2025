@@ -8,8 +8,10 @@ public class SynergySlots : MonoBehaviour
     private ShopManager shopManager;
     private DeckCard[] deckCards;
     private Player player;
+    private DescriptionManager descriptionManager;
     private void Start()
     {
+        descriptionManager = GameController.descriptionManager;
         shopManager = GameController.shopManager;
         player = GameController.player;
         deckCards = shopManager.synergyCards;
@@ -21,7 +23,7 @@ public class SynergySlots : MonoBehaviour
         {
             Synergy newSynergy = shopManager.overridingSynergy;
             canOverrideSynergy = false;
-            deckCards[index].Initialize(newSynergy.synergyName, newSynergy.desc, newSynergy.art);
+            deckCards[index].Initialize(newSynergy.synergyName, newSynergy.desc, newSynergy.art, descriptionManager.GetSynergyDescription(newSynergy));
             player.synergiesInDeck[index] = newSynergy;
             shopManager.overridingSynergy = null;
             shopManager.cantPurchaseItem = false;
