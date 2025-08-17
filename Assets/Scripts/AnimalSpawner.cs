@@ -20,6 +20,9 @@ public class AnimalSpawner : MonoBehaviour
     {
         GameObject animal = Instantiate(GameController.player.animalsInDeck[Random.Range(0,GameController.player.animalsInDeck.Count)].animalPrefab);
 
+        float topBuffer = 0.25f;
+        float bottomBuffer = 0.25f;
+        
         // Get vertical bounds of the camera in world space
         float z = Mathf.Abs(Camera.main.transform.position.z - animal.transform.position.z);
         Vector3 screenBottom = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, z));
@@ -29,8 +32,8 @@ public class AnimalSpawner : MonoBehaviour
         SpriteRenderer sr = animal.GetComponent<SpriteRenderer>();
         float halfHeight = sr.bounds.extents.y;
 
-        float minY = screenBottom.y + halfHeight;
-        float maxY = screenTop.y - halfHeight;
+        float minY = screenBottom.y + halfHeight + bottomBuffer;
+        float maxY = screenTop.y - halfHeight - topBuffer;
 
         //  Choose a random Y position safely within bounds
         float randomY = Random.Range(minY, maxY);
