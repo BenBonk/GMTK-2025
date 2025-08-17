@@ -7,14 +7,21 @@ using UnityEngine;
 
 public class LassoController : MonoBehaviour
 {
-    [HideInInspector]public LineRenderer lineRenderer;
-    public GameObject lassoPrefab; 
+    [HideInInspector] public LineRenderer lineRenderer;
+    public GameObject lassoPrefab;
     public int smoothingSubdivisions; // Higher = smoother
     public float pointDistanceThreshold; // Minimum distance between points
-    public float closeThreshold = 0.5f; // Distance to consider the lasso closed
+    public float closeThreshold = 0.5f; // Release within this distance to close
     private List<Vector2> rawPoints = new List<Vector2>();
-    [HideInInspector]public bool isDrawing = false;
+    [HideInInspector] public bool isDrawing = false;
     public GameObject feedbackTextGroupPrefab;
+
+
+    public float tipRadius = 0.9f;     //Auto-close detection radius
+    public int skipTailPoints = 30;     // ignore the newest N raw points
+    public int rawPointCheckThreshold = 80; // only start checking after this many
+    Transform tipXform;
+    CircleCollider2D tipCollider;
 
     public float feedbackDelay = 0.5f;    // delay between each text popup
 
@@ -27,6 +34,32 @@ public class LassoController : MonoBehaviour
     public Color positiveMultColor;
     public Color negativeMultColor;
     public bool canLasso;
+
+
+    public bool debugDrawTip = true;
+    public bool debugShowCandidate = true;
+    public Color debugTipColor = Color.yellow;
+    public Color debugHitColor = Color.cyan;
+    public float debugDotSize = 0.18f;
+
+
+    public enum AutoCloseOnMouseUpMode { ToStart, ToNearestPoint }
+
+    [Header("Mouse-Up Auto Close")]
+    public AutoCloseOnMouseUpMode mouseUpAutoCloseMode = AutoCloseOnMouseUpMode.ToNearestPoint;
+    public bool useBubbleCloseOnMouseUp = true;
+    public float bubbleExpandStep = 0.15f;     // grow per iteration
+    public float bubbleExpandMax = 2.0f;      // max bubble radius
+    public float bubbleTailDist = 0.35f;     // ignore last X meters of stroke
+    public int bubbleTailMaxPts = 20;        // cap when counting back
+    public int bubbleMinArcPts = 4;         // require at least this many points from hit..end
+
+    void Awake()
+    {
+        smoothingSubdivisions = Mathf.Max(1, smoothingSubdivisions);
+    }
+
+
     void Update()
     {
         if (!canLasso)
@@ -54,6 +87,13 @@ public class LassoController : MonoBehaviour
         lineRenderer = newLasso.GetComponent<LineRenderer>();
         rawPoints.Clear();
         lineRenderer.positionCount = 0;
+
+        // Tip collider
+        var tipGO = new GameObject("LassoTip");
+        tipXform = tipGO.transform;
+        tipCollider = tipGO.AddComponent<CircleCollider2D>();
+        tipCollider.isTrigger = true;
+        tipCollider.radius = tipRadius;
     }
 
     void UpdateLasso()
@@ -63,6 +103,15 @@ public class LassoController : MonoBehaviour
         if (rawPoints.Count == 0 || Vector2.Distance(mouseWorld, rawPoints[rawPoints.Count - 1]) > pointDistanceThreshold)
         {
             rawPoints.Add(mouseWorld);
+
+            // Move the tip collider to the cursor
+            if (tipXform != null)
+            {
+                tipXform.position = new Vector3(mouseWorld.x, mouseWorld.y, 0f);
+            }
+
+            // auto-close if tip overlaps
+            TryAutoCloseWithTip();
 
             if (rawPoints.Count >= 4)
             {
@@ -74,6 +123,7 @@ public class LassoController : MonoBehaviour
                     Vector2 segStart = rawPoints[i];
                     Vector2 segEnd = rawPoints[i + 1];
 
+                    //check if intersecting (redundant with tip auto-close, but more general)
                     if (GetLineIntersection(segStart, segEnd, newStart, newEnd, out Vector2 intersection))
                     {
                         List<Vector2> loopPoints = new List<Vector2>();
@@ -97,9 +147,33 @@ public class LassoController : MonoBehaviour
             }
 
             // Update visual if still drawing
-            List<Vector3> smooth = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
-            lineRenderer.positionCount = smooth.Count;
-            lineRenderer.SetPositions(smooth.ToArray());
+            if (rawPoints.Count > 0)
+            {
+                var smooth = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
+                lineRenderer.positionCount = smooth.Count;
+                if (smooth.Count > 0)
+                    lineRenderer.SetPositions(smooth.ToArray());
+                else
+                    lineRenderer.positionCount = 0;
+            }
+            else
+            {
+                lineRenderer.positionCount = 0;
+            }
+        }
+
+        // Tip circle
+        if (debugDrawTip && tipXform != null)
+        {
+            int segments = 24;
+            for (int i = 0; i < segments; i++)
+            {
+                float a0 = i * Mathf.PI * 2f / segments;
+                float a1 = (i + 1) * Mathf.PI * 2f / segments;
+                Vector3 p0 = tipXform.position + new Vector3(Mathf.Cos(a0), Mathf.Sin(a0)) * tipRadius;
+                Vector3 p1 = tipXform.position + new Vector3(Mathf.Cos(a1), Mathf.Sin(a1)) * tipRadius;
+                Debug.DrawLine(p0, p1, debugTipColor);
+            }
         }
     }
 
@@ -109,52 +183,71 @@ public class LassoController : MonoBehaviour
     public void CompleteLasso()
     {
         isDrawing = false;
-
-        if (rawPoints.Count < 3)
-        {
-            Debug.Log("Lasso too small, discarded.");
-            Destroy(lineRenderer.gameObject);
-            return;
-        }
+        if (rawPoints == null || rawPoints.Count < 3) { Destroy(lineRenderer?.gameObject); return; }
 
         Vector2 start = rawPoints[0];
         Vector2 end = rawPoints[rawPoints.Count - 1];
 
-        if (Vector2.Distance(start, end) > closeThreshold)
+        // Consider "already closed" either by being near start OR explicitly closed (last == first)
+        bool explicitlyClosed = (rawPoints[0] - rawPoints[rawPoints.Count - 1]).sqrMagnitude <= 1e-6f;
+        bool alreadyClosed = explicitlyClosed || Vector2.Distance(start, end) <= closeThreshold;
+
+        // Bubble close ONLY when not already closed, in ToNearestPoint mode
+        if (!alreadyClosed &&
+            mouseUpAutoCloseMode == AutoCloseOnMouseUpMode.ToNearestPoint &&
+            useBubbleCloseOnMouseUp)
         {
+            int hitIdx;
+            if (TryBubbleFindHitIndex(out hitIdx))
+            {
+                // Build the loop IN PLACE (no recursion)
+                BuildClosedLoopAtIndex(hitIdx);
+                // fall through to the rest of CompleteLasso() to area-check, smooth, etc.
+            }
+            else
+            {
+                Debug.Log("Bubble close: no candidate found, discarding.");
+                rawPoints.Clear();
+                lineRenderer.positionCount = 0;
+                Destroy(lineRenderer?.gameObject);
+                return;
+            }
+        }
+        else if (!alreadyClosed)
+        {
+            // ToStart mode (original behavior): if not near start, discard
             Debug.Log("Lasso did not close, discarded.");
             rawPoints.Clear();
             lineRenderer.positionCount = 0;
-            Destroy(lineRenderer.gameObject);
+            Destroy(lineRenderer?.gameObject);
             return;
         }
 
-        float area = CalculatePolygonArea(rawPoints);
 
-        // Calculate screen size in world units
-        Vector3 screenBottomLeft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Mathf.Abs(Camera.main.transform.position.z)));
-        Vector3 screenTopRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Mathf.Abs(Camera.main.transform.position.z)));
+        // Ensure explicit closure exactly once
+        if ((rawPoints[rawPoints.Count - 1] - rawPoints[0]).sqrMagnitude > 1e-6f)
+            rawPoints.Add(rawPoints[0]); // only if not already closed
 
-        float screenWorldWidth = Mathf.Abs(screenTopRight.x - screenBottomLeft.x);
-        float screenWorldHeight = Mathf.Abs(screenTopRight.y - screenBottomLeft.y);
-        float screenWorldArea = screenWorldWidth * screenWorldHeight;
+        // Area check on lasso polygon
+        float area = CalculatePolygonAreaNormalized(rawPoints);
 
-        // Use a ratio (e.g. 1%) of screen area as minimum valid lasso
+        float z = Mathf.Abs(Camera.main.transform.position.z);
+        Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
+        Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
+        float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
         float areaThreshold = screenWorldArea * 0.003f;
 
         if (area < areaThreshold)
         {
             Debug.Log($"Lasso area too small ({area:F2} < {areaThreshold:F2}), discarded.");
             rawPoints.Clear();
-            Destroy(lineRenderer.gameObject);
+            Destroy(lineRenderer?.gameObject);
             return;
         }
 
-        //GameController.gameManager.lassosUsed++;
-        rawPoints.Add(start); // close loop
         AudioManager.Instance.PlaySequentialSFX("lasso_create", "lasso_pull");
 
-        // Generate smooth loop (no tail yet)
+        // Generate smooth loop
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
         smoothClosed.Add(smoothClosed[0]); // ensure visual closure
 
@@ -193,7 +286,8 @@ public class LassoController : MonoBehaviour
         group.transform.position = groupPosition;
         lineRenderer.transform.SetParent(group.transform);
 
-        List<GameObject> lassoedObjects = SelectObjectsInLasso(); // only uses rawPoints
+        // find animals within the lasso
+        List<GameObject> lassoedObjects = SelectObjectsInLasso();
         List<Animal> lassoedAnimals = new List<Animal>();
         if (lassoedObjects != null && lassoedObjects.Count > 0)
         {
@@ -219,21 +313,21 @@ public class LassoController : MonoBehaviour
 
     List<GameObject> SelectObjectsInLasso()
     {
-        if (rawPoints.Count < 3)
-            return null;
+        if (rawPoints.Count < 3) return null;
 
-        Collider2D[] allColliders = FindObjectsOfType<Collider2D>();
-        List<GameObject> list = new List<GameObject>();
+        var list = new List<GameObject>();
+        var animals = FindObjectsOfType<Animal>(false); // only active
 
-        foreach (Collider2D col in allColliders)
+        foreach (var animal in animals)
         {
-            Vector2 center = col.bounds.center;
+            // Use collider center if present; fall back to transform.position
+            var col = animal.GetComponent<Collider2D>();
+            Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)animal.transform.position;
 
-            if (IsPointInPolygon(center, rawPoints))
+            if (IsPointInPolygon(point, rawPoints))
             {
-                //Debug.Log("Selected: " + col.name);
-                col.gameObject.GetComponent<Animal>().isLassoed = true;
-                list.Add(col.gameObject);
+                animal.isLassoed = true;
+                list.Add(animal.gameObject);
             }
         }
 
@@ -503,14 +597,26 @@ public class LassoController : MonoBehaviour
 
     List<Vector3> GenerateSmoothLasso(List<Vector3> controlPoints, int subdivisions)
     {
-        List<Vector3> smoothPoints = new List<Vector3>();
+        var smoothPoints = new List<Vector3>();
+
+        if (controlPoints == null || controlPoints.Count == 0)
+            return smoothPoints;
+
+        if (controlPoints.Count == 1)
+        {
+            smoothPoints.Add(controlPoints[0]);
+            return smoothPoints;
+        }
+
+        subdivisions = Mathf.Max(1, subdivisions);
 
         for (int i = 0; i < controlPoints.Count - 1; i++)
         {
-            Vector3 p0 = controlPoints[Mathf.Clamp(i - 1, 0, controlPoints.Count - 1)];
+            int last = controlPoints.Count - 1;
+            Vector3 p0 = controlPoints[Mathf.Max(i - 1, 0)];
             Vector3 p1 = controlPoints[i];
             Vector3 p2 = controlPoints[i + 1];
-            Vector3 p3 = controlPoints[Mathf.Clamp(i + 2, 0, controlPoints.Count - 1)];
+            Vector3 p3 = controlPoints[Mathf.Min(i + 2, last)];
 
             for (int j = 0; j < subdivisions; j++)
             {
@@ -575,19 +681,173 @@ public class LassoController : MonoBehaviour
         return count > 0 ? sum / count : Vector3.zero;
     }
 
-    private float CalculatePolygonArea(List<Vector2> points)
+    float CalculatePolygonAreaNormalized(List<Vector2> pts)
     {
-        if (points == null || points.Count < 3) return 0f;
+        int n = pts.Count;
+        if (n < 3) return 0f;
+        bool dupEnd = (pts[0] - pts[n - 1]).sqrMagnitude <= 1e-6f;
+        int m = dupEnd ? n - 1 : n;
 
         float area = 0f;
-        for (int i = 0; i < points.Count - 1; i++)
-        {
-            area += (points[i].x * points[i + 1].y) - (points[i + 1].x * points[i].y);
-        }
-
-        // Close the loop (last to first)
-        area += (points[points.Count - 1].x * points[0].y) - (points[0].x * points[points.Count - 1].y);
+        for (int i = 0; i < m - 1; i++)
+            area += (pts[i].x * pts[i + 1].y) - (pts[i + 1].x * pts[i].y);
+        area += (pts[m - 1].x * pts[0].y) - (pts[0].x * pts[m - 1].y);
 
         return Mathf.Abs(area * 0.5f);
+    }
+    void TryAutoCloseWithTip()
+    {
+        if (tipXform == null) return;
+
+        if (rawPoints == null || rawPoints.Count < 3) return;
+
+        Vector2 tip = tipXform.position;
+        float r2 = tipRadius * tipRadius;
+
+        //tail skip by distance
+        int tailSkipByDist = ComputeTailSkipByDistance(0.35f, 20);
+        int tailSkip = Mathf.Max(skipTailPoints, tailSkipByDist);
+
+        int usableCount = Mathf.Max(0, rawPoints.Count - tailSkip);
+        if (usableCount < 2) return;
+
+        int bestIdx = -1;
+        float bestD2 = float.MaxValue;
+
+        for (int i = 0; i < usableCount; i++)
+        {
+            float d2 = (rawPoints[i] - tip).sqrMagnitude;
+            if (d2 <= r2 && d2 < bestD2)
+            {
+                bestD2 = d2;
+                bestIdx = i;
+            }
+        }
+
+        if (bestIdx == -1) return;
+
+        AutoCloseAtPointIndex(bestIdx); // your existing closer (still calls CompleteLasso)
+    }
+
+    void AutoCloseAtPointIndex(int hitIndex)
+    {
+        // trims the leftover path 
+        int count = rawPoints.Count - hitIndex;
+        if (count < 2) return; // need at least hit + one more point
+
+        var loop = new List<Vector2>(count + 1);
+        for (int i = hitIndex; i < rawPoints.Count; i++)
+            loop.Add(rawPoints[i]);
+
+        //remove consecutive duplicates
+        PruneConsecutiveDuplicates(loop, 1e-8f);
+
+        // Ensure closure
+        if ((loop[loop.Count - 1] - loop[0]).sqrMagnitude > 1e-6f)
+            loop.Add(loop[0]);
+
+        // Replace
+        rawPoints = loop;
+
+        if (tipXform) Destroy(tipXform.gameObject);
+        tipXform = null; tipCollider = null;
+
+        CompleteLasso();
+    }
+
+    int ComputeTailSkipByDistance(float tailDist, int maxPts)
+    {
+        int endIdx = rawPoints.Count - 1;
+        float acc = 0f;
+        int skip = 0;
+        for (int i = endIdx; i > 0; --i)
+        {
+            acc += Vector2.Distance(rawPoints[i], rawPoints[i - 1]);
+            ++skip;
+            if (acc >= tailDist || skip >= maxPts) break;
+        }
+        return skip;
+    }
+
+    bool TryBubbleFindHitIndex(out int hitIndex)
+    {
+        hitIndex = -1;
+        if (rawPoints == null || rawPoints.Count < 3) return false;
+
+        Vector2 end = rawPoints[rawPoints.Count - 1];
+
+        float r = Mathf.Max(0.0001f, tipRadius);
+
+        while (r <= bubbleExpandMax)
+        {
+            // compute how many tail points to skip by distance
+            int endIdx = rawPoints.Count - 1;
+            float acc = 0f;
+            int skip = 0;
+            for (int i = endIdx; i > 0; i--)
+            {
+                acc += Vector2.Distance(rawPoints[i], rawPoints[i - 1]);
+                skip++;
+                if (acc >= bubbleTailDist || skip >= bubbleTailMaxPts) break;
+            }
+            int usable = Mathf.Max(0, rawPoints.Count - skip);
+            if (usable < 2) return false;
+
+            float r2 = r * r;
+            float bestD2 = float.MaxValue;
+            int bestIdx = -1;
+
+            for (int i = 0; i < usable; i++)
+            {
+                int arcCount = rawPoints.Count - i;
+                if (arcCount < bubbleMinArcPts) continue;
+
+                float d2 = (rawPoints[i] - end).sqrMagnitude;
+                if (d2 <= r2 && d2 < bestD2)
+                {
+                    bestD2 = d2;
+                    bestIdx = i;
+                }
+            }
+
+            if (bestIdx != -1)
+            {
+                hitIndex = bestIdx;
+                return true;
+            }
+
+            r += Mathf.Max(0.001f, bubbleExpandStep);
+        }
+
+        return false;
+    }
+
+    void BuildClosedLoopAtIndex(int hitIndex)
+    {
+        int count = rawPoints.Count - hitIndex;
+        if (count < 2) return;
+
+        var loop = new List<Vector2>(count + 1);
+        for (int i = hitIndex; i < rawPoints.Count; i++)
+            loop.Add(rawPoints[i]);
+
+        // Remove consecutive duplicates to stabilize area
+        PruneConsecutiveDuplicates(loop, 1e-8f);
+
+        // Ensure explicit closure at the hit
+        if ((loop[loop.Count - 1] - loop[0]).sqrMagnitude > 1e-6f)
+            loop.Add(loop[0]);
+
+        rawPoints = loop;
+
+        if (tipXform) Destroy(tipXform.gameObject);
+        tipXform = null; tipCollider = null;
+    }
+
+    void PruneConsecutiveDuplicates(List<Vector2> pts, float minSqr)
+    {
+        for (int i = pts.Count - 2; i >= 0; i--)
+            if ((pts[i + 1] - pts[i]).sqrMagnitude <= minSqr)
+                pts.RemoveAt(i + 1);
     }
 }

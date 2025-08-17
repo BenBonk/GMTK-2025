@@ -395,8 +395,9 @@ public class TutorialManager : MonoBehaviour
 
         cow2 = SpawnAnimal(cowPrefab);
         cow3 = SpawnAnimal(cowPrefab);
-        yield return ShowMessage("You can lasso multiple animals at once for extra points!", 1f);
-        yield return new WaitUntil(() => AreAllLassoed(cow2, cow3) || (cow2 == null && cow3 == null));
+        cow1 = SpawnAnimal(cowPrefab);
+        yield return ShowMessage("You can lasso multiple animals at once for extra points and cash!", 1f);
+        yield return new WaitUntil(() => AreAllLassoed(cow2, cow3, cow1) || (cow2 == null && cow3 == null && cow1 == null));
         yield return new WaitForSeconds(1f);
 
         cow1 = SpawnAnimal(cowPrefab);

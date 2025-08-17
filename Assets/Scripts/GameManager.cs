@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject shopButtonBlocker;
 
-    private int endDayCash = 25;
+    private int endDayCash = 50;
 
 
     //private int _lassosUsedThisRound;
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < roundsPointsRequirement.Length; i++)
             {
-                float rawScore = 85 * Mathf.Pow(pointsRequirementGrowthRate, i);
+                float rawScore = 65 * Mathf.Pow(pointsRequirementGrowthRate, i);
                 int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
                 roundsPointsRequirement[i] = roundedToFive;
             }   

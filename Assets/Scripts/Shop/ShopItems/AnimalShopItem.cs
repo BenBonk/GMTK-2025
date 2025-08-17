@@ -16,11 +16,11 @@ public class AnimalShopItem : ShopItem
     public TMP_Text descriptionText2;
     public override void Initialize()
     {
-        // Bias: non-predators get weight 3, predators get weight 1
+        // Bias: non-predators get weight 4, predators get weight 1
         List<Animal> weightedList = new List<Animal>();
         foreach (var animal in possibleAnimals)
         {
-            int weight = animal.isPredator ? 1 : 3; // change weights as needed
+            int weight = animal.isPredator ? 1 : 4; // change weights as needed
             for (int i = 0; i < weight; i++)
             {
                 weightedList.Add(animal);

@@ -63,6 +63,8 @@ public class CaptureManager : MonoBehaviour
         if (totalNonPredatorCount > 1)
         {
             pointMult *= 1 + (0.1f * animalsCaptured.Length);
+            int groupsOf3 = totalNonPredatorCount / 3;
+            currencyBonus += groupsOf3;
         }
 
         return (pointBonus, pointMult, currencyBonus, currencyMult);
