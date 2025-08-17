@@ -32,7 +32,7 @@ public class DeckCard : MonoBehaviour
         }
         else
         {
-            a = hoverPopup.DOScale(Vector3.one, 0.2f).SetEase(Ease.InOutQuad);      
+            a = hoverPopup.DOScale(Vector3.one, 0.15f).SetEase(Ease.InOutQuad);      
         }
         b.Kill();
     }

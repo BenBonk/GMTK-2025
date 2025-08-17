@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class AnimalShopItem : ShopItem
     private Sprite sprite2;
     private float animSpeed;
     private Coroutine animCo;
+    public TMP_Text descriptionText2;
     public override void Initialize()
     {
         // Bias: non-predators get weight 3, predators get weight 1
@@ -47,6 +49,7 @@ public class AnimalShopItem : ShopItem
 
         string desc = GameController.descriptionManager.GetAnimalDescription(chosenAnimal);
         descriptionText.text = desc;
+        descriptionText2.text = chosenAnimal.description;
     }
     public override void PurchaseUpgrade()
     {
