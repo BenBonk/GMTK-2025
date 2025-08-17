@@ -166,9 +166,26 @@ public class GameManager : MonoBehaviour
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
+            StartCoroutine(CheckIfStillDead());
             return;
         }
         StartCoroutine(EndRoundRoutine());
+    }
+
+    IEnumerator CheckIfStillDead()
+    {
+        yield return new WaitForSeconds(2);
+        if (pointsThisRound >= roundsPointsRequirement[roundNumber])
+        {
+            deathPanel.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
+            GameController.predatorSelect.darkCover.DOFade(0f, 0.5f);
+            yield return new WaitForSeconds(.5f);
+            DisplayPopupWord("CLOSE CALL!", .3f, .5f, false);
+            //think we need some sfx here
+            yield return new WaitForSeconds(1.5f);
+            StartCoroutine(EndRoundRoutine());
+            deathPanel.gameObject.SetActive(false);
+        }
     }
 
     private IEnumerator EndRoundRoutine()
