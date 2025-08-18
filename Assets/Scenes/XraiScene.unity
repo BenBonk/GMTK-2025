@@ -9380,7 +9380,7 @@ MonoBehaviour:
   lassoPrefab: {fileID: 7958001604512104576, guid: 4c232ff176459994a9d237b5a2ea96e9, type: 3}
   smoothingSubdivisions: 10
   pointDistanceThreshold: 0.01
-  closeThreshold: 5
+  closeThreshold: 4.5
   isDrawing: 0
   feedbackTextGroupPrefab: {fileID: 3317699075510183685, guid: dfbb644ecc4ba154299e9d8a2d59b7aa, type: 3}
   drawFrontFactor: 0.35
