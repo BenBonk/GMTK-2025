@@ -25,7 +25,7 @@ public class PredatorPanel : MonoBehaviour
         icon.sprite = iconSprite;
         predator = predatorData;
         cantSelect = false;
-        buttonFX.clickSFX = predator.animalName;
+        buttonFX.clickSFX = predator.animalName.GetLocalizedString();
     }
 
     public void SelectPredator()

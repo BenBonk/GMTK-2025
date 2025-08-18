@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Fox
   m_EditorClassIdentifier: 
-  animalName: Fox
-  description: Predator. Moves up and down the field sporadically.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 29
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 30
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 15
   sprite: {fileID: 1791904589581890566, guid: f43edba2e5d1116448daa89f3affffe1, type: 3}
   sprite2: {fileID: -1484708753, guid: f43edba2e5d1116448daa89f3affffe1, type: 3}
@@ -29,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 2
   currencyLevelUpMult: 0
   upgradeCost: 80
+  references:
+    version: 2
+    RefIds: []

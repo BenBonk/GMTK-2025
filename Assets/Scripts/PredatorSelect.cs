@@ -35,8 +35,8 @@ public class PredatorSelect : MonoBehaviour
         string desc = descriptionManager.GetAnimalDescription(predatorOptions[a]);
         string desc2 =  descriptionManager.GetAnimalDescription(predatorOptions[b]);
         
-        predatorPanel1.Initialize(predatorOptions[a].animalName,desc, predatorOptions[a].sprite, predatorOptions[a]);
-        predatorPanel2.Initialize(predatorOptions[b].animalName,desc2, predatorOptions[b].sprite, predatorOptions[b]);
+        predatorPanel1.Initialize(predatorOptions[a].animalName.GetLocalizedString(),desc, predatorOptions[a].sprite, predatorOptions[a]);
+        predatorPanel2.Initialize(predatorOptions[b].animalName.GetLocalizedString(),desc2, predatorOptions[b].sprite, predatorOptions[b]);
         yield return new WaitForSeconds(2f);
         darkCover.DOFade(0.5f, 0.5f);
         panel1.gameObject.SetActive(true);

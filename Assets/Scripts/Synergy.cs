@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "Synergy", menuName = "Scriptable Objects/Synergy")]
 public class Synergy : ScriptableObject
 {
-    public string synergyName;
-    public string desc;
+    public LocalizedString synergyName;
+    public LocalizedString desc;
     public Sprite art;
     public int price;
     public bool isExactMatch;

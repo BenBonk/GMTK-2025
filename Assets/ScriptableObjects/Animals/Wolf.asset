@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Wolf
   m_EditorClassIdentifier: 
-  animalName: Wolf
-  description: Predator. Chases non-predators.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 39
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 40
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 25
   sprite: {fileID: -458185587419916677, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
   sprite2: {fileID: -5547194825390550217, guid: 6b8e90cdf92ed3e4788105d3c6d79d0a, type: 3}
@@ -29,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 0
   currencyLevelUpMult: 0
   upgradeCost: 75
+  references:
+    version: 2
+    RefIds: []

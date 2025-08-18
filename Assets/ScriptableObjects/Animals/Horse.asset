@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Horse
   m_EditorClassIdentifier: 
-  animalName: Horse
-  description: Runs swiftly across the field.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 33
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 34
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 300
   sprite: {fileID: 7672759098259192623, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
   sprite2: {fileID: 3604182692263377810, guid: 624d8647241ab79419f200fb3f2f4825, type: 3}
@@ -29,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 0
   currencyLevelUpMult: 0.2
   upgradeCost: 300
+  references:
+    version: 2
+    RefIds: []

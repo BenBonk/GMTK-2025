@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Sheep
   m_EditorClassIdentifier: 
-  animalName: Sheep
-  description: Runs in a straight line.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 37
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 38
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 30
   sprite: {fileID: 3184159518366690391, guid: b6ada73c9f252f149a349a2d2ca49cf4, type: 3}
   sprite2: {fileID: -94349284460663922, guid: b6ada73c9f252f149a349a2d2ca49cf4, type: 3}
@@ -29,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 1
   currencyLevelUpMult: 0
   upgradeCost: 25
+  references:
+    version: 2
+    RefIds: []

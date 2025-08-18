@@ -107,7 +107,7 @@ public class CaptureManager : MonoBehaviour
         Dictionary<string, int> counts = new Dictionary<string, int>();
         foreach (var animal in animals)
         {
-            string key = animal.animalData.animalName.Trim().ToLower();
+            string key = animal.animalData.animalName.GetLocalizedString().Trim().ToLower();
             if (counts.ContainsKey(key))
                 counts[key]++;
             else

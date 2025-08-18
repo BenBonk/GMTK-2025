@@ -10,16 +10,16 @@ game.timesUpPopup,7,TIME'S UP!,spanish,french,german,italian,chinese,japanese,ko
 game.closeCallPopup,8,CLOSE CALL!,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 game.predatorSelect,9,Select a predator to add to your barn,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 shop.leaveShop,10,Leave Shop,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.animalDescPointsLoss,11,Points loss: {0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.animalDescPointsBonus,12,Points bonus: +{0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.animalDescCashLoss,13,Cash loss: {0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.animalDescCashBonus,14,Cash bonus: +{0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.animalDescPointsMult,15,Points mult: x{0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.animalDescCashMult,16,Cash mult: x{0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.upgradeDescPoints,17,Points: {0} -> {1},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.upgradeDescPointsMult,18,Points: x{0} -> x{1},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.upgradeDescCash,19,Cash: {0} -> {1},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-shop.upgradeDescCashMult,20,Cash: x{0} -> x{1},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.animalDescPointsLoss,11,Points loss:,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.animalDescPointsBonus,12,Points bonus: +,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.animalDescCashLoss,13,Cash loss:,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.animalDescCashBonus,14,Cash bonus: +,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.animalDescPointsMult,15,Points mult: x,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.animalDescCashMult,16,Cash mult: x,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.upgradeDescPoints,17,Points:,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.upgradeDescPointsMult,18,Points:,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.upgradeDescCash,19,Cash:,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+shop.upgradeDescCashMult,20,Cash:,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 animal.bear,21,Bear,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 animal.bearDesc,22,Predator. Pulls nearby non-predators towards it. Immune to push and pull effects.,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 animal.chicken,23,Chicken,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian

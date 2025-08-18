@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Chicken
   m_EditorClassIdentifier: 
-  animalName: Chicken
-  description: Moves to random locations on the field before exiting.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 23
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 24
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 75
   sprite: {fileID: 5336855417275088078, guid: f62971579a2e2fc47923b5ab6f9e2da6, type: 3}
   sprite2: {fileID: -1433109330887674863, guid: f62971579a2e2fc47923b5ab6f9e2da6, type: 3}
@@ -29,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 2
   currencyLevelUpMult: 0
   upgradeCost: 200
+  references:
+    version: 2
+    RefIds: []

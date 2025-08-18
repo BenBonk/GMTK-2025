@@ -12,11 +12,11 @@ public class UpgradeShopItem : ShopItem
         possibleAnimals = GameController.player.animalsInDeck.ToArray();
         AnimalLevelManager levelManager = GameController.animalLevelManager;
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
-        int animalLevel = levelManager.GetLevel(chosenAnimal.animalName);
+        int animalLevel = levelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
 
         descriptionText.text = GameController.descriptionManager.GetAnimalLevelDescription(chosenAnimal);
 
-        titleText.text = chosenAnimal.animalName;
+        titleText.text = chosenAnimal.animalName.GetLocalizedString();
         price = chosenAnimal.upgradeCost * Math.Pow(1.5, animalLevel);
         priceText.text = LassoController.FormatNumber(price);
         upgradeArt.sprite = chosenAnimal.deckIcon;
@@ -30,7 +30,7 @@ public class UpgradeShopItem : ShopItem
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
-            GameController.animalLevelManager.SetLevel(chosenAnimal.animalName, GameController.animalLevelManager.GetLevel(chosenAnimal.animalName)+1);
+            GameController.animalLevelManager.SetLevel(chosenAnimal.animalName.GetLocalizedString(), GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString())+1);
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             

@@ -70,44 +70,44 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112937
   - m_Id: 11
-    m_Localized: 'Points loss: {0}'
+    m_Localized: 'Points loss:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112937
   - m_Id: 12
-    m_Localized: 'Points bonus: +{0}'
+    m_Localized: 'Points bonus: +'
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: 'Cash loss: {0}'
+    m_Localized: 'Cash loss:'
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: 'Cash bonus: +{0}'
+    m_Localized: 'Cash bonus: +'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Points mult: x{0}'
+    m_Localized: 'Points mult: x'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Cash mult: x{0}'
+    m_Localized: 'Cash mult: x'
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: 'Points: {0} -> {1}'
+    m_Localized: 'Points:'
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: 'Points: x{0} -> x{1}'
+    m_Localized: 'Points:'
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: 'Cash: {0} -> {1}'
+    m_Localized: 'Cash:'
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: 'Cash: x{0} -> x{1}'
+    m_Localized: 'Cash:'
     m_Metadata:
       m_Items: []
   - m_Id: 21
@@ -459,7 +459,8 @@ MonoBehaviour:
   - m_Id: 105
     m_Localized: 'Round: {0}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 241711563893112937
   - m_Id: 106
     m_Localized: Restart
     m_Metadata:
@@ -495,3 +496,4 @@ MonoBehaviour:
         - id: 5
         - id: 10
         - id: 11
+        - id: 105

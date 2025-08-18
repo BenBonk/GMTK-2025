@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Dog
   m_EditorClassIdentifier: 
-  animalName: Dog
-  description: Runs along the edge of the field, pushing other animals towards the
-    middle.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 27
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 28
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 150
   sprite: {fileID: -3994744024693093290, guid: 3505c7501cd1bd5439c88d7002a5b20e, type: 3}
   sprite2: {fileID: 3704152636332655822, guid: 3505c7501cd1bd5439c88d7002a5b20e, type: 3}
@@ -30,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 0
   currencyLevelUpMult: 0.3
   upgradeCost: 150
+  references:
+    version: 2
+    RefIds: []

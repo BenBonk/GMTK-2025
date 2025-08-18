@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Bear
   m_EditorClassIdentifier: 
-  animalName: Bear
-  description: Predator. Pulls nearby non-predators towards it. Immune to push and
-    pull effects.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 21
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 22
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 60
   sprite: {fileID: 4693792977596894205, guid: b20cd1efb2399b84a83d3ac4f9d5504a, type: 3}
   sprite2: {fileID: 1047276864, guid: b20cd1efb2399b84a83d3ac4f9d5504a, type: 3}
@@ -30,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 1
   currencyLevelUpMult: 0.1
   upgradeCost: 350
+  references:
+    version: 2
+    RefIds: []

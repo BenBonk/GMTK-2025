@@ -85,7 +85,7 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < player.synergiesInDeck.Count; i++)
         {
             synergyCards[i].gameObject.SetActive(true);
-            synergyCards[i].Initialize( player.synergiesInDeck[i].synergyName, player.synergiesInDeck[i].desc, player.synergiesInDeck[i].art, descriptionManager.GetSynergyDescription(player.synergiesInDeck[i]));
+            synergyCards[i].Initialize( player.synergiesInDeck[i].synergyName.GetLocalizedString(), player.synergiesInDeck[i].desc.GetLocalizedString(), player.synergiesInDeck[i].art, descriptionManager.GetSynergyDescription(player.synergiesInDeck[i]));
         }
     }
 
@@ -101,7 +101,7 @@ public class ShopManager : MonoBehaviour
         
         foreach (AnimalData obj in player.animalsInDeck)
         {
-            string name = obj.animalName;
+            string name = obj.animalName.GetLocalizedString();
 
             if (uniqueObjects.ContainsKey(name))
             {

@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de23467bd001f4458163509f97fbe7b, type: 3}
   m_Name: Pig
   m_EditorClassIdentifier: 
-  animalName: Pig
-  description: Meanders predictably.
+  animalName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 35
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  description:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 36
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   price: 100
   sprite: {fileID: -9122695006515159614, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
   sprite2: {fileID: 3283728978217524802, guid: 79189ea466f3b2648ab7db50055a3801, type: 3}
@@ -29,3 +45,6 @@ MonoBehaviour:
   currencyLevelUpIncrease: 2
   currencyLevelUpMult: 0
   upgradeCost: 40
+  references:
+    version: 2
+    RefIds: []

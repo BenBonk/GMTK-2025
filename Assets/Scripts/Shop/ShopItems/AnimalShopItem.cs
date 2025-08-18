@@ -28,7 +28,7 @@ public class AnimalShopItem : ShopItem
         }
 
         chosenAnimal = weightedList[Random.Range(0, weightedList.Count)].animalData;
-        titleText.text = chosenAnimal.animalName;
+        titleText.text = chosenAnimal.animalName.GetLocalizedString();
         priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;
         upgradeArt.sprite = chosenAnimal.sprite;
@@ -43,13 +43,13 @@ public class AnimalShopItem : ShopItem
         animCo = StartCoroutine(Animate());
         if (buttonFX != null)
         {
-            buttonFX.clickSFX = chosenAnimal.animalName;
-            buttonFX.highlightSFX = chosenAnimal.animalName;
+            buttonFX.clickSFX = chosenAnimal.animalName.GetLocalizedString();
+            buttonFX.highlightSFX = chosenAnimal.animalName.GetLocalizedString();
         }
 
         string desc = GameController.descriptionManager.GetAnimalDescription(chosenAnimal);
         descriptionText.text = desc;
-        descriptionText2.text = chosenAnimal.description;
+        descriptionText2.text = chosenAnimal.description.GetLocalizedString();
     }
     public override void PurchaseUpgrade()
     {

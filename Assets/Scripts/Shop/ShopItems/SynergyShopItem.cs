@@ -20,8 +20,8 @@ public class SynergyShopItem : ShopItem
             value = 0;
         }
         chosenSynergy = possibleSynergies[value];
-        titleText.text = chosenSynergy.synergyName;
-        descriptionText.text = chosenSynergy.desc;
+        titleText.text = chosenSynergy.synergyName.GetLocalizedString();
+        descriptionText.text = chosenSynergy.desc.GetLocalizedString();
         priceText.text = chosenSynergy.price.ToString();
         price = chosenSynergy.price;
         upgradeArt.sprite = chosenSynergy.art;

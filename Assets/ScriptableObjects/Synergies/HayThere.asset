@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c833c1c2ddd849c4f803f68b6ef18eea, type: 3}
   m_Name: HayThere
   m_EditorClassIdentifier: 
-  synergyName: Hay There
-  desc: Lasso a group of animals containing a Cow, Goat, Horse, and Sheep
+  synergyName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 65
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  desc:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 66
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   art: {fileID: 1754114436, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 225
   isExactMatch: 0
@@ -26,3 +42,6 @@ MonoBehaviour:
   - Goat
   - Horse
   - Sheep
+  references:
+    version: 2
+    RefIds: []

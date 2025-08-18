@@ -23,7 +23,7 @@ public class SynergySlots : MonoBehaviour
         {
             Synergy newSynergy = shopManager.overridingSynergy;
             canOverrideSynergy = false;
-            deckCards[index].Initialize(newSynergy.synergyName, newSynergy.desc, newSynergy.art, descriptionManager.GetSynergyDescription(newSynergy));
+            deckCards[index].Initialize(newSynergy.synergyName.GetLocalizedString(), newSynergy.desc.GetLocalizedString(), newSynergy.art, descriptionManager.GetSynergyDescription(newSynergy));
             player.synergiesInDeck[index] = newSynergy;
             shopManager.overridingSynergy = null;
             shopManager.cantPurchaseItem = false;

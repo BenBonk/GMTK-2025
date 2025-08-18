@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "AnimalData", menuName = "Scriptable Objects/AnimalData")]
 public class AnimalData : ScriptableObject
 {
     [Header("General")]
-    public string animalName;
-    public string description;
+    public LocalizedString animalName;
+    public LocalizedString description;
     private int level;
     public int price;
     public Sprite sprite;
