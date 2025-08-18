@@ -49,9 +49,10 @@ public class LassoController : MonoBehaviour
     public int tipTailMaxPts = 20;             // but cap by count
 
     [Header("Auto-close guards")]
-    public int minPointsBeforeChecking = 50;     
-    public int minArcPoints = 6;                
+    public int minPointsBeforeChecking = 50;
+    public int minArcPoints = 6;
     public float minArcDistance = 0.5f;
+
 
     // Debug values so the yellow visual matches real test center
     public bool debugDrawTip = true;
@@ -205,12 +206,7 @@ public class LassoController : MonoBehaviour
 
         // Area check on lasso polygon
         float area = CalculatePolygonAreaNormalized(rawPoints);
-
-        float z = Mathf.Abs(Camera.main.transform.position.z);
-        Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
-        Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
-        float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
-        float areaThreshold = screenWorldArea * 0.003f;
+        float areaThreshold = GetScreenWorldAreaThreshold();
 
         if (area < areaThreshold)
         {
@@ -754,8 +750,13 @@ public class LassoController : MonoBehaviour
                 bestIdx = i;
             }
         }
-
         if (bestIdx == -1) return;
+
+        if (!TryComputeCandidateLoopArea(bestIdx, out float previewArea))
+            return;
+
+        if (previewArea < GetScreenWorldAreaThreshold())
+            return; // too small; don't close yet
 
         AutoCloseAtPointIndex(bestIdx);
     }
@@ -806,5 +807,35 @@ public class LassoController : MonoBehaviour
         for (int i = pts.Count - 2; i >= 0; i--)
             if ((pts[i + 1] - pts[i]).sqrMagnitude <= minSqr)
                 pts.RemoveAt(i + 1);
+    }
+
+    float GetScreenWorldAreaThreshold()
+    {
+        float z = Mathf.Abs(Camera.main.transform.position.z);
+        Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
+        Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
+        float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
+        return screenWorldArea * 0.004f;
+    }
+
+    bool TryComputeCandidateLoopArea(int hitIndex, out float area)
+    {
+        area = 0f;
+        int count = rawPoints.Count - hitIndex;
+        if (count < 3) return false;
+
+        // Build a lightweight preview of the loop without mutating rawPoints
+        var loop = new List<Vector2>(count + 1);
+        for (int i = hitIndex; i < rawPoints.Count; i++)
+            loop.Add(rawPoints[i]);
+
+        PruneConsecutiveDuplicates(loop, 1e-8f);
+        if (loop.Count < 3) return false;
+
+        if ((loop[loop.Count - 1] - loop[0]).sqrMagnitude > 1e-6f)
+            loop.Add(loop[0]);
+
+        area = CalculatePolygonAreaNormalized(loop);
+        return true;
     }
 }
