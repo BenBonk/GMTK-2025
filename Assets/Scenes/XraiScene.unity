@@ -2819,11 +2819,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103816934101566386, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontSize
-      value: 31.15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5103816934101566386, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontSizeMax
-      value: 36
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5103816934101566386, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontSizeBase
@@ -6087,7 +6087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103816934101566386, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontSizeMax
-      value: 36
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5103816934101566386, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontSizeBase
@@ -8568,7 +8568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103816934101566386, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontSizeMax
-      value: 36
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5103816934101566386, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontSizeBase
@@ -9208,8 +9208,6 @@ MonoBehaviour:
   isDrawing: 0
   feedbackTextGroupPrefab: {fileID: 3317699075510183685, guid: dfbb644ecc4ba154299e9d8a2d59b7aa, type: 3}
   tipRadius: 0.9
-  skipTailPoints: 50
-  rawPointCheckThreshold: 80
   feedbackDelay: 0.7
   pointBonusColor: {r: 0.96470594, g: 0.45882356, b: 0.4784314, a: 1}
   negativePointBonusColor: {r: 0.40784317, g: 0.21568629, b: 0.42352945, a: 1}
@@ -9218,18 +9216,15 @@ MonoBehaviour:
   positiveMultColor: {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
   negativeMultColor: {r: 0.63529414, g: 0.14509805, b: 0.19607845, a: 1}
   canLasso: 0
+  tipForwardOffset: 0.35
+  tipUseForwardOffset: 1
+  tipForwardLookback: 3
+  tipTailDist: 0.35
+  tipTailMaxPts: 20
+  minPointsBeforeChecking: 50
+  minArcPoints: 6
+  minArcDistance: 0.5
   debugDrawTip: 1
-  debugShowCandidate: 1
-  debugTipColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  debugHitColor: {r: 0, g: 1, b: 1, a: 1}
-  debugDotSize: 0.18
-  mouseUpAutoCloseMode: 1
-  useBubbleCloseOnMouseUp: 1
-  bubbleExpandStep: 0.15
-  bubbleExpandMax: 2
-  bubbleTailDist: 2
-  bubbleTailMaxPts: 100
-  bubbleMinArcPts: 4
 --- !u!4 &1615761885
 Transform:
   m_ObjectHideFlags: 0
