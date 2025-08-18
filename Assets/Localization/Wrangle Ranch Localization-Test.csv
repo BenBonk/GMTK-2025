@@ -3,8 +3,8 @@ game.points,0,POINTS: {0} / {1},spanish,french,german,italian,chinese,japanese,k
 game.time,1,TIME: {0}s,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 game.cash,2,CASH: {0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 game.ready,3,"READY?,SET,LASSO!",spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-game.pointsPopup,4,Points: {0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
-game.cashPopup,5,CASH: {0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+game.pointsPopup,4,+Points: {0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
+game.cashPopup,5,+Cash: {0},spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 game.dayCompletePopup,6,DAY COMPLETE! + {0} Cash!,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 game.timesUpPopup,7,TIME'S UP!,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian
 game.closeCallPopup,8,CLOSE CALL!,spanish,french,german,italian,chinese,japanese,korean,polish,portuguese,russian

@@ -59,10 +59,15 @@ public class LassoController : MonoBehaviour
     Vector2 debugTipCenter;
     Vector2 debugTipTangent;
     bool debugTipCenterValid = false;
-
+    private LocalizationManager localization;
     void Awake()
     {
         smoothingSubdivisions = Mathf.Max(1, smoothingSubdivisions);
+    }
+
+    private void Start()
+    {
+        localization = GameController.localizationManager;
     }
 
     void Update()
@@ -312,7 +317,9 @@ public class LassoController : MonoBehaviour
 
             if (bonusText != null)
             {
-                bonusText.text = $"+Points: {FormatNumber(result.pointBonus)}";
+                localization.localPointsPopup.Arguments[0] = FormatNumber(result.pointBonus);
+                localization.localPointsPopup.RefreshString();
+                bonusText.text = localization.pointsPopup;
                 bonusText.color = result.pointBonus >= 0 ? pointBonusColor : negativePointBonusColor;
             }
 
@@ -390,7 +397,9 @@ public class LassoController : MonoBehaviour
 
             if (bonusText != null)
             {
-                bonusText.text = $"+Cash: {FormatNumber(result.currencyBonus)}";
+                localization.localCashPopup.Arguments[0] = FormatNumber(result.currencyBonus);
+                localization.localCashPopup.RefreshString();
+                bonusText.text = localization.cashPopup;
                 bonusText.color = result.currencyBonus >= 0 ? cashBonusColor : negativeCashBonusColor;
             }
 
@@ -492,11 +501,21 @@ public class LassoController : MonoBehaviour
 
         // Update bonus text immediately when multiplier is revealed
         double newTotal = Math.Round(baseValue * multiplier);
+        
+        
         bool isPoints = bonusText.text.StartsWith("+Points");
         if (bonusText.text.StartsWith("+Points"))
-            bonusText.text = $"+Points: {FormatNumber(newTotal)}";
+        {
+            localization.localPointsPopup.Arguments[0] = FormatNumber(newTotal);
+            localization.localPointsPopup.RefreshString();
+            bonusText.text = localization.pointsPopup;
+        }
         else if (bonusText.text.StartsWith("+Cash"))
-            bonusText.text = $"+Cash: {FormatNumber(newTotal)}";
+        {
+            localization.localCashPopup.Arguments[0] = FormatNumber(newTotal);
+            localization.localCashPopup.RefreshString();
+            bonusText.text = localization.cashPopup;
+        }
 
         if (multiplier > 1f)
         {

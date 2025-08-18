@@ -11,11 +11,15 @@ public class LocalizationManager : MonoBehaviour
     public LocalizedString localCloseCall;
     public LocalizedString localTimesUp;
     public LocalizedString localDayComplete;
+    public LocalizedString localPointsPopup;
+    public LocalizedString localCashPopup;
 
     [HideInInspector] public string closeCall;
     [HideInInspector] public string timesUp;
     [HideInInspector] public string readySetLasso;
     [HideInInspector] public string dayComplete;
+    [HideInInspector] public string pointsPopup;
+    [HideInInspector] public string cashPopup;
     private void OnEnable()
     {
         localPointsString.Arguments = new object[] { 0, 85 };
@@ -29,6 +33,12 @@ public class LocalizationManager : MonoBehaviour
         
         localDayComplete.Arguments = new object[] { "25" };
         localDayComplete.StringChanged += UpdateDayComplete;
+        
+        localPointsPopup.Arguments = new object[] { "0" };
+        localPointsPopup.StringChanged += UpdatePointsPopup;
+        
+        localCashPopup.Arguments = new object[] { "0" };
+        localCashPopup.StringChanged += UpdateCashPopup;
 
         localCloseCall.StringChanged += UpdateCloseCall;
         localTimesUp.StringChanged += UpdateTimesUp;
@@ -43,6 +53,8 @@ public class LocalizationManager : MonoBehaviour
         localCloseCall.StringChanged -= UpdateCloseCall;
         localTimesUp.StringChanged -= UpdateTimesUp;
         localReadySetLasso.StringChanged -= UpdateReadySetLasso;
+        localPointsPopup.StringChanged -= UpdatePointsPopup;
+        localCashPopup.StringChanged -= UpdateCashPopup;
     }
     void UpdatePoints(string value) => GameController.gameManager.scoreDisplay.text = value;
     void UpdateTime(string value) => GameController.gameManager.timerDisplay.text = value;
@@ -51,4 +63,6 @@ public class LocalizationManager : MonoBehaviour
     void UpdateTimesUp(string value) => timesUp = value;
     void UpdateReadySetLasso(string value) => readySetLasso = value;
     void UpdateDayComplete(string value) => dayComplete = value;
+    void UpdatePointsPopup(string value) => pointsPopup = value;
+    void UpdateCashPopup(string value) => cashPopup = value;
 }
