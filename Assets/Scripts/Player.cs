@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
             {
                 _playerCurrency = value;
                 OnCurrencyChanged?.Invoke(_playerCurrency);
+                GameController.localizationManager.localCashString.Arguments[0] = LassoController.FormatNumber(_playerCurrency);
+                GameController.localizationManager.localCashString.RefreshString();
             }
         }
     }

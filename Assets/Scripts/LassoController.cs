@@ -588,7 +588,7 @@ public class LassoController : MonoBehaviour
         }
         else
         {
-            // On success, we keep the line (it’s been reparented to the group)
+            // On success, we keep the line (itâ€™s been reparented to the group)
             lineRenderer = null;          // but still clear our reference
         }
 

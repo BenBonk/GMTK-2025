@@ -16,90 +16,94 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 67f652bb649f23a4dbde2d1bd75f61ed, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 241711563893112937
   m_TableData:
   - m_Id: 581425123328
-    m_Localized: POINTS
+    m_Localized: 'POINTS: {0} / {1}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 241711563893112937
   - m_Id: 1
-    m_Localized: TIME
+    m_Localized: 'TIME: {0}s'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 241711563893112937
   - m_Id: 2
-    m_Localized: CASH
+    m_Localized: 'CASH: {0}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 241711563893112937
   - m_Id: 3
-    m_Localized: READY
+    m_Localized: READY?,SET,LASSO!
     m_Metadata:
       m_Items: []
   - m_Id: 4
-    m_Localized: SET
+    m_Localized: 'Points: {0}'
     m_Metadata:
       m_Items: []
   - m_Id: 5
-    m_Localized: LASSO!
+    m_Localized: 'CASH: {0}'
     m_Metadata:
       m_Items: []
   - m_Id: 6
-    m_Localized: Points
+    m_Localized: DAY COMPLETE! + {0} Cash!
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: Cash
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8
-    m_Localized: DAY COMPLETE!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 9
-    m_Localized: Cash!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 10
     m_Localized: TIME'S UP!
     m_Metadata:
       m_Items: []
-  - m_Id: 11
+  - m_Id: 8
     m_Localized: CLOSE CALL!
     m_Metadata:
       m_Items: []
-  - m_Id: 12
+  - m_Id: 9
+    m_Localized: Select a predator to add to your barn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
     m_Localized: Leave Shop
     m_Metadata:
       m_Items: []
+  - m_Id: 11
+    m_Localized: 'Points loss: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: 'Points bonus: +{0}'
+    m_Metadata:
+      m_Items: []
   - m_Id: 13
-    m_Localized: Points loss
+    m_Localized: 'Cash loss: {0}'
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: Points bonus
+    m_Localized: 'Cash bonus: +{0}'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: Cash loss
+    m_Localized: 'Points mult: x{0}'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: Cash bonus
+    m_Localized: 'Cash mult: x{0}'
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Points mult
+    m_Localized: 'Points: {0} -> {1}'
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Cash mult
+    m_Localized: 'Points: x{0} -> x{1}'
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: Points
+    m_Localized: 'Cash: {0} -> {1}'
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: Cash
+    m_Localized: 'Cash: x{0} -> x{1}'
     m_Metadata:
       m_Items: []
   - m_Id: 21
@@ -449,7 +453,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: Round
+    m_Localized: 'Round: {0}'
     m_Metadata:
       m_Items: []
   - m_Id: 106
@@ -474,4 +478,12 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 241711563893112937
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 581425123328
+        - id: 1
+        - id: 2

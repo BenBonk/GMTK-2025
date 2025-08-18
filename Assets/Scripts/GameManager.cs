@@ -1,7 +1,10 @@
+using System;
 using DG.Tweening;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -29,6 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpriteRenderer barn;
     [SerializeField] private Transform barnCameraTarget;
     [SerializeField] private Animator barnAnimator;
+    private LocalizationManager localization;
 
 
     private int lastDisplayedSecond = -1;
@@ -64,6 +68,9 @@ public class GameManager : MonoBehaviour
             {
                 _pointsThisRound = value;
                 OnPointsChanged?.Invoke(_pointsThisRound);
+                localization.localPointsString.Arguments[0] = pointsThisRound;
+                localization.localPointsString.Arguments[1] = roundsPointsRequirement[roundNumber];
+                localization.localPointsString.RefreshString();
             }
         }
     }
@@ -79,9 +86,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text roundNumberDeath;
     public LassoController lassoController;
     public float pointsRequirementGrowthRate;
+    
 
     private void Start()
     {
+        localization = GameController.localizationManager;
         if (isTesting)
         {
             roundDuration = 3;
@@ -140,9 +149,9 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        scoreDisplay.text = "POINTS: " + LassoController.FormatNumber(pointsThisRound)  + " / " + LassoController.FormatNumber(roundsPointsRequirement[roundNumber]);
-        timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
-        currencyDisplay.text = "CASH: " + LassoController.FormatNumber(player.playerCurrency);
+        //scoreDisplay.text = "POINTS: " + LassoController.FormatNumber(pointsThisRound)  + " / " + LassoController.FormatNumber(roundsPointsRequirement[roundNumber]);
+        //timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
+        //currencyDisplay.text = "CASH: " + LassoController.FormatNumber(player.playerCurrency);
     }
 
     public void EndRound()
@@ -180,7 +189,7 @@ public class GameManager : MonoBehaviour
             deathPanel.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
             GameController.predatorSelect.darkCover.DOFade(0f, 0.5f);
             yield return new WaitForSeconds(.5f);
-            DisplayPopupWord("CLOSE CALL!", .3f, .5f, false);
+            DisplayPopupWord(localization.closeCall, .3f, .5f, false);
             //think we need some sfx here
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(EndRoundRoutine());
@@ -192,12 +201,14 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         // First message
-        DisplayPopupWord("TIME'S UP!", wordScaleDuration, wordDisplayDuration, true);
+        DisplayPopupWord(localization.timesUp, wordScaleDuration, wordDisplayDuration, true);
         AudioManager.Instance.PlaySFX("time_up");
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // wait before next
 
         // Second message
-        DisplayCashWord("DAY COMPLETE! + " + endDayCash + " Cash!" , wordScaleDuration, wordDisplayDuration, false);
+        localization.localPointsString.Arguments[0] = endDayCash;
+        localization.localPointsString.RefreshString();
+        DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");
         GameController.player.playerCurrency += endDayCash;
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
@@ -267,6 +278,8 @@ public class GameManager : MonoBehaviour
         int currentSecond = Mathf.FloorToInt(remaining);
 
         timerDisplay.text = $"TIME: {remaining:F1}s";
+        localization.localTimeString.Arguments[0] = remaining.ToString("F1");
+        localization.localTimeString.RefreshString();
 
         if (remaining <= 10f && currentSecond != lastDisplayedSecond)
         {
@@ -287,13 +300,14 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ShowReadySetLassoSequence()
     {
-        string[] words = { "READY?", "SET", "LASSO!" };
-        for (int i = 0; i < words.Length; i++)
+        
+        for (int i = 0; i < 3; i++)
         {
             if (i == 2)
             {
                 // Use lasso material for the last word
-                DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, lassoMaterialPreset);
+                DisplayPopupWord(localization.readySetLasso.Split(',')[i], wordScaleDuration, wordDisplayDuration, true,
+                    lassoMaterialPreset);
                 AudioManager.Instance.PlayNextPlaylistTrack();
                 AudioManager.Instance.PlaySFX("rooster");
                 lassoController.canLasso = true;
@@ -302,10 +316,10 @@ public class GameManager : MonoBehaviour
             else
             {
                 // Use default material for other words
-                DisplayPopupWord(words[i], wordScaleDuration, wordDisplayDuration, i == 2, defaultMaterialPreset);
+                DisplayPopupWord(localization.readySetLasso.Split(',')[i], wordScaleDuration, wordDisplayDuration, false,
+                    defaultMaterialPreset);
                 AudioManager.Instance.PlaySFX("ready");
             }
-
             yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
         }
     }

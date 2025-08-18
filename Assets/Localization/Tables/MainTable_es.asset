@@ -16,20 +16,24 @@ MonoBehaviour:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: 67f652bb649f23a4dbde2d1bd75f61ed, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 241711563893112938
   m_TableData:
   - m_Id: 581425123328
     m_Localized: spanish
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 241711563893112938
   - m_Id: 1
     m_Localized: spanish
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 241711563893112938
   - m_Id: 2
     m_Localized: spanish
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 241711563893112938
   - m_Id: 3
     m_Localized: spanish
     m_Metadata:
@@ -464,4 +468,12 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 241711563893112938
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 581425123328
+        - id: 1
+        - id: 2

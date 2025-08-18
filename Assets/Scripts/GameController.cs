@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] AnimalLevelManager localAnimalLevelManager;
     [SerializeField] PredatorSelect localPredatorSelect;
     [SerializeField] DescriptionManager localDescriptionManager;
+    [SerializeField] LocalizationManager localLocalizationManager;
     void Awake()
     {
         instance = this;
@@ -50,5 +51,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localDescriptionManager; }
         set { instance.localDescriptionManager = value; }
+    }
+    public static LocalizationManager localizationManager
+    {
+        get { return instance.localLocalizationManager; }
+        set { instance.localLocalizationManager = value; }
     }
 }
