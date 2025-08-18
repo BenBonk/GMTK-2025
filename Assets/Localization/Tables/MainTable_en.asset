@@ -1,0 +1,477 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: MainTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 67f652bb649f23a4dbde2d1bd75f61ed, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 581425123328
+    m_Localized: POINTS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Localized: TIME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Localized: CASH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: READY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: SET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: LASSO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: Cash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: DAY COMPLETE!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: Cash!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: TIME'S UP!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: CLOSE CALL!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Leave Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: Points loss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: Points bonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: Cash loss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Localized: Cash bonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: Points mult
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Cash mult
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Localized: Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: Cash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: Predator. Pulls nearby non-predators towards it. Immune to push
+      and pull effects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: Chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: Moves to random locations on the field before exiting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Localized: Cow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Stops periodically to graze.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Localized: Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Localized: Runs along the edge of the field, pushing other animals towards
+      the middle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Localized: Fox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Localized: Predator. Moves up and down the field sporadically.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Localized: Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Localized: Slows nearby predators.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Localized: Horse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Localized: Runs swiftly across the field.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Localized: Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Localized: Meanders predictably.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Localized: Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Localized: Runs in a straight line.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Localized: Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Localized: Predator. Chases non-predators.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Localized: Baaaaa!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Localized: Lasso a group of animals containing a Sheep and a Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43
+    m_Localized: Bacon and Eggs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44
+    m_Localized: Lasso a group of animals containing a Pig and a Chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Localized: Canines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46
+    m_Localized: Lasso a group of animals containing a Dog, a Fox, and a Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47
+    m_Localized: Cash Cow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48
+    m_Localized: Lasso exactly one Cow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49
+    m_Localized: Chicken Jockey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50
+    m_Localized: Lasso a group of animals containing 1 Chicken and 1 Horse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51
+    m_Localized: Counting Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52
+    m_Localized: Lasso a group of animals containing 3 Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53
+    m_Localized: Evolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54
+    m_Localized: Lasso a group of animals containing a Dog and a Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55
+    m_Localized: Farmers Dilemma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56
+    m_Localized: Lasso a group of animals containing a Fox and a Chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57
+    m_Localized: Fast Food
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58
+    m_Localized: Lasso a group of animals containing a Cow and a Chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59
+    m_Localized: Fox In A Henhouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60
+    m_Localized: Lasso a group of animals containing a Fox and three Chickens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61
+    m_Localized: Goldilocks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62
+    m_Localized: Lasso a group of animals containing 3 Bears
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63
+    m_Localized: Got Milk?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64
+    m_Localized: Lasso a group of animals containing a Cow and a Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65
+    m_Localized: Hay There
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66
+    m_Localized: Lasso a group of animals containing a Cow, Goat, Horse, and Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67
+    m_Localized: Honey Baked Ham
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68
+    m_Localized: Lasso a group of animals containing a Pig and a Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69
+    m_Localized: Lone Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70
+    m_Localized: Lasso exactly 1 Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71
+    m_Localized: Old MacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72
+    m_Localized: Lasso a group of animals containing a Chicken, Cow, Goat, Horse,
+      Dog, Sheep, and Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73
+    m_Localized: Photo Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74
+    m_Localized: Lasso a group of animals containing 2 Horses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75
+    m_Localized: Piggy Bank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76
+    m_Localized: Lasso a group of animals containing a Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77
+    m_Localized: Pig In A Blanket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78
+    m_Localized: Lasso a group of animals containing a Pig and a Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79
+    m_Localized: Plus Size
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80
+    m_Localized: Lasso a group of animals containing a Cow and a Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81
+    m_Localized: Predatory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82
+    m_Localized: Lasso a group of animals containing a Bear, a Wolf, and a Fox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83
+    m_Localized: Racing Partners
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84
+    m_Localized: Lasso a group of animals containing a Horse and a Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85
+    m_Localized: Three Little Pigs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86
+    m_Localized: Lasso a group of animals containing 3 Pigs and 1 Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87
+    m_Localized: Wolf In Sheep's Clothing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88
+    m_Localized: Lasso a group of animals containing a Wolf and a Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89
+    m_Localized: Welcome to Wrangle Ranch!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90
+    m_Localized: Uh OH! Looks like the Cow got loose again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91
+    m_Localized: Click and drag with your mouse to draw a circle around the cow!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 92
+    m_Localized: Nice Job! Wrangling your farm animals will give you points and cash,
+      but you can't stay out all night!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93
+    m_Localized: You'll need to wrangle enough animals to reach the point goal before
+      time runs out.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94
+    m_Localized: You can lasso multiple animals at once for extra points and cash!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 95
+    m_Localized: Now try lassoing these two critters together!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96
+    m_Localized: UH OH, Watch out for predators! You will lose points if you lasso
+      them with your animals.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97
+    m_Localized: When the day is done, we can head back to the barn to spend our
+      hard earned cash!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98
+    m_Localized: This is the shop.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99
+    m_Localized: From here you can add new animals to be wrangled during the day!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100
+    m_Localized: You can view all the animals that might appear during the day by
+      clicking the button in the top left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101
+    m_Localized: You can also add powerful abilities that will give you extra points
+      when lassoing certain combinations of animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102
+    m_Localized: Lastly, you can upgrade your animals so that they will give you
+      more points and cash!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103
+    m_Localized: Now that you know the basics, let's get started!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104
+    m_Localized: You hit the hay...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105
+    m_Localized: Round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108
+    m_Localized: Wrangle Ranch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

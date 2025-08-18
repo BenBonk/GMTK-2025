@@ -1,0 +1,112 @@
+Key,Id,English(en),Spanish(es),French(fr),German(de),Italian(it),Chinese (Simplified)(zh-Hans),Japanese(ja),Korean(ko),Polish(pl),Portuguese(pt),Russian(ru)
+game.points,0,POINTS,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.time,1,TIME,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.cash,2,CASH,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.ready,3,READY,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.set,4,SET,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.lasso,5,LASSO!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.pointsPopup,6,Points,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.cashPopup,7,Cash,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.dayCompletePopup,8,DAY COMPLETE!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.dayCompleteCashPopup,9,Cash!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.timesUpPopup,10,TIME'S UP!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+game.closeCallPopup,11,CLOSE CALL!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.leaveShop,12,Leave Shop,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.animalDescPointsLoss,13,Points loss,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.animalDescPointsBonus,14,Points bonus,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.animalDescCashLoss,15,Cash loss,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.animalDescCashBonus,16,Cash bonus,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.animalDescPointsMult,17,Points mult,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.animalDescCashMult,18,Cash mult,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.upgradeDescPoints,19,Points,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+shop.upgradeDescCash,20,Cash,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.bear,21,Bear,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.bearDesc,22,Predator. Pulls nearby non-predators towards it. Immune to push and pull effects.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.chicken,23,Chicken,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.ChickenDesc,24,Moves to random locations on the field before exiting.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.cow,25,Cow,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.cowDesc,26,Stops periodically to graze.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.dog,27,Dog,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.dogDesc,28,"Runs along the edge of the field, pushing other animals towards the middle.",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.fox,29,Fox,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.foxDesc,30,Predator. Moves up and down the field sporadically.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.goat,31,Goat,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.goatDesc,32,Slows nearby predators.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.horse,33,Horse,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.horseDesc,34,Runs swiftly across the field.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.pig,35,Pig,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.pigDesc,36,Meanders predictably.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.sheep,37,Sheep,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.sheepDesc,38,Runs in a straight line.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.wolf,39,Wolf,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+animal.wolfDesc,40,Predator. Chases non-predators.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.baaaaa,41,Baaaaa!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.baaaaaDesc,42,Lasso a group of animals containing a Sheep and a Goat,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.baconAndEggs,43,Bacon and Eggs,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.baconAndEggsDesc,44,Lasso a group of animals containing a Pig and a Chicken,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.canines,45,Canines,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.caninesDesc,46,"Lasso a group of animals containing a Dog, a Fox, and a Wolf",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.cashCow,47,Cash Cow,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.cashCowDesc,48,Lasso exactly one Cow,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.chickenJockey,49,Chicken Jockey,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.chickenJockeyDesc,50,Lasso a group of animals containing 1 Chicken and 1 Horse,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.countingSheep,51,Counting Sheep,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.countingSheepDesc,52,Lasso a group of animals containing 3 Sheep,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.evolution,53,Evolution,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.evolutionDesc,54,Lasso a group of animals containing a Dog and a Wolf,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.farmersDilemma,55,Farmers Dilemma,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.farmersDilemmaDesc,56,Lasso a group of animals containing a Fox and a Chicken,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.fastFood,57,Fast Food,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.fastFoodDesc,58,Lasso a group of animals containing a Cow and a Chicken,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.foxInAHenhouse,59,Fox In A Henhouse,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.foxInAHenhouseDesc,60,Lasso a group of animals containing a Fox and three Chickens,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.goldilocks,61,Goldilocks,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.goldilocksDesc,62,Lasso a group of animals containing 3 Bears,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.gotMilk,63,Got Milk?,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.gotMilkDesc,64,Lasso a group of animals containing a Cow and a Goat,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.hayThere,65,Hay There,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.hayThereDesc,66,"Lasso a group of animals containing a Cow, Goat, Horse, and Sheep",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.honeyBakedHam,67,Honey Baked Ham,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.synergy.honeyBakedHamDesc,68,Lasso a group of animals containing a Pig and a Bear,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.loneWolf,69,Lone Wolf,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.loneWolfDesc,70,Lasso exactly 1 Wolf,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.oldMacDonald,71,Old MacDonald,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.oldMacDonaldDesc,72,"Lasso a group of animals containing a Chicken, Cow, Goat, Horse, Dog, Sheep, and Pig",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.photoFinish,73,Photo Finish,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.photoFinishDesc,74,Lasso a group of animals containing 2 Horses,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.piggyBank,75,Piggy Bank,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.piggyBankDesc,76,Lasso a group of animals containing a Pig,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.pigInABlanket,77,Pig In A Blanket,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.pigInABlanketDesc,78,Lasso a group of animals containing a Pig and a Sheep,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.plusSize,79,Plus Size,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.plusSizeDesc,80,Lasso a group of animals containing a Cow and a Bear,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.predatory,81,Predatory,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.predatoryDesc,82,"Lasso a group of animals containing a Bear, a Wolf, and a Fox",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.racingPartners,83,Racing Partners,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.racingPartnersDesc,84,Lasso a group of animals containing a Horse and a Dog,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.threeLittlePigs,85,Three Little Pigs,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.threeLittlePigsDesc,86,Lasso a group of animals containing 3 Pigs and 1 Wolf,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.wolfInSheepsClothing,87,Wolf In Sheep's Clothing,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+synergy.synergy.wolfInSheepsClothingDesc,88,Lasso a group of animals containing a Wolf and a Sheep,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup1,89,Welcome to Wrangle Ranch!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup2,90,Uh OH! Looks like the Cow got loose again,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup3,91,Click and drag with your mouse to draw a circle around the cow!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup4,92,"Nice Job! Wrangling your farm animals will give you points and cash, but you can't stay out all night!",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup5,93,You'll need to wrangle enough animals to reach the point goal before time runs out.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup6,94,You can lasso multiple animals at once for extra points and cash!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup7,95,Now try lassoing these two critters together!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup8,96,"UH OH, Watch out for predators! You will lose points if you lasso them with your animals.",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup9,97,"When the day is done, we can head back to the barn to spend our hard earned cash!",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup10,98,This is the shop.,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup11,99,From here you can add new animals to be wrangled during the day!,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup12,100,You can view all the animals that might appear during the day by clicking the button in the top left,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup13,101,You can also add powerful abilities that will give you extra points when lassoing certain combinations of animals,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup14,102,"Lastly, you can upgrade your animals so that they will give you more points and cash!",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+tutorial.popup15,103,"Now that you know the basics, let's get started!",spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+death.hitHay,104,You hit the hay...,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+death.round,105,Round,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+death.restart,106,Restart,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+death.home,107,Home,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+startScreen.wrangleRanch,108,Wrangle Ranch,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+startScreen.start,109,Start,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian
+startScreen.tutorial,110,Tutorial,spanish,french,german,italian,时间,japanese,korean,polish,portuguese,russian

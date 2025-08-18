@@ -1,0 +1,472 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: MainTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: MainTable
+  m_TableCollectionNameGuidString: 67f652bb649f23a4dbde2d1bd75f61ed
+  m_Entries:
+  - m_Id: 581425123328
+    m_Key: game.points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1
+    m_Key: game.time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Key: game.cash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Key: game.ready
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Key: game.set
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Key: game.lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Key: game.pointsPopup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Key: game.cashPopup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Key: game.dayCompletePopup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Key: game.dayCompleteCashPopup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Key: game.timesUpPopup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Key: game.closeCallPopup
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Key: shop.leaveShop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Key: shop.animalDescPointsLoss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Key: shop.animalDescPointsBonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Key: shop.animalDescCashLoss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Key: shop.animalDescCashBonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Key: shop.animalDescPointsMult
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Key: shop.animalDescCashMult
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Key: shop.upgradeDescPoints
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Key: shop.upgradeDescCash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Key: animal.bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Key: animal.bearDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Key: animal.chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Key: animal.ChickenDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Key: animal.cow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Key: animal.cowDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Key: animal.dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Key: animal.dogDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Key: animal.fox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Key: animal.foxDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Key: animal.goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32
+    m_Key: animal.goatDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33
+    m_Key: animal.horse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Key: animal.horseDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Key: animal.pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36
+    m_Key: animal.pigDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Key: animal.sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Key: animal.sheepDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Key: animal.wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Key: animal.wolfDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Key: synergy.baaaaa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Key: synergy.baaaaaDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43
+    m_Key: synergy.baconAndEggs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44
+    m_Key: synergy.baconAndEggsDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Key: synergy.canines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46
+    m_Key: synergy.caninesDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47
+    m_Key: synergy.cashCow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48
+    m_Key: synergy.cashCowDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49
+    m_Key: synergy.chickenJockey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50
+    m_Key: synergy.chickenJockeyDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51
+    m_Key: synergy.countingSheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 52
+    m_Key: synergy.countingSheepDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53
+    m_Key: synergy.evolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 54
+    m_Key: synergy.evolutionDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55
+    m_Key: synergy.farmersDilemma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56
+    m_Key: synergy.farmersDilemmaDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57
+    m_Key: synergy.fastFood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58
+    m_Key: synergy.fastFoodDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59
+    m_Key: synergy.foxInAHenhouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60
+    m_Key: synergy.foxInAHenhouseDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61
+    m_Key: synergy.goldilocks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62
+    m_Key: synergy.goldilocksDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63
+    m_Key: synergy.gotMilk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64
+    m_Key: synergy.gotMilkDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65
+    m_Key: synergy.hayThere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66
+    m_Key: synergy.hayThereDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67
+    m_Key: synergy.honeyBakedHam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68
+    m_Key: synergy.synergy.honeyBakedHamDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69
+    m_Key: synergy.loneWolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70
+    m_Key: synergy.loneWolfDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71
+    m_Key: synergy.oldMacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72
+    m_Key: synergy.oldMacDonaldDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73
+    m_Key: synergy.photoFinish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 74
+    m_Key: synergy.photoFinishDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75
+    m_Key: synergy.piggyBank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76
+    m_Key: synergy.piggyBankDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77
+    m_Key: synergy.pigInABlanket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 78
+    m_Key: synergy.pigInABlanketDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79
+    m_Key: synergy.plusSize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80
+    m_Key: synergy.plusSizeDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81
+    m_Key: synergy.predatory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82
+    m_Key: synergy.predatoryDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83
+    m_Key: synergy.racingPartners
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84
+    m_Key: synergy.racingPartnersDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85
+    m_Key: synergy.threeLittlePigs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86
+    m_Key: synergy.threeLittlePigsDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87
+    m_Key: synergy.wolfInSheepsClothing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88
+    m_Key: synergy.synergy.wolfInSheepsClothingDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89
+    m_Key: tutorial.popup1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90
+    m_Key: tutorial.popup2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91
+    m_Key: tutorial.popup3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 92
+    m_Key: tutorial.popup4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93
+    m_Key: tutorial.popup5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94
+    m_Key: tutorial.popup6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 95
+    m_Key: tutorial.popup7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 96
+    m_Key: tutorial.popup8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97
+    m_Key: tutorial.popup9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 98
+    m_Key: tutorial.popup10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99
+    m_Key: tutorial.popup11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 100
+    m_Key: tutorial.popup12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101
+    m_Key: tutorial.popup13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 102
+    m_Key: tutorial.popup14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103
+    m_Key: tutorial.popup15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104
+    m_Key: death.hitHay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 105
+    m_Key: death.round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 106
+    m_Key: death.restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107
+    m_Key: death.home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 108
+    m_Key: startScreen.wrangleRanch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 109
+    m_Key: startScreen.start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 110
+    m_Key: startScreen.tutorial
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 241711536766714217
+  references:
+    version: 2
+    RefIds:
+    - rid: 241711536766714217
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1755490489720
