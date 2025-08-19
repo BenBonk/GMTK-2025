@@ -197,7 +197,7 @@ public class LassoController : MonoBehaviour
 
         // Area check
         float area = CalculatePolygonAreaNormalized(rawPoints);
-        float areaThreshold = GetScreenWorldAreaThreshold(0.003f); // factor retained from your version
+        float areaThreshold = GetScreenWorldAreaThreshold();
 
         if (area < areaThreshold)
         {
@@ -577,7 +577,7 @@ public class LassoController : MonoBehaviour
 
             for (int i = 0; i < usableCount; i++)
             {
-                // guard: require minimum distance along the path from candidate -> end
+                // require minimum distance along the path from candidate -> end
                 float arc = 0f;
                 for (int j = i + 1; j < rawPoints.Count; j++)
                 {
@@ -641,7 +641,7 @@ public class LassoController : MonoBehaviour
 
         for (int i = 0; i < usableCount; i++)
         {
-            // guard: minimum arc length from candidate to end
+            // minimum arc length from candidate to end
             float arc = 0f;
             for (int j = i + 1; j < rawPoints.Count; j++)
             {
@@ -717,7 +717,7 @@ public class LassoController : MonoBehaviour
             tipXform = null;
         }
 
-        // Optionally destroy the line object (used on failure paths)
+        // Optionally destroy the line object
         if (discardLineObject && lineRenderer != null)
         {
             var go = lineRenderer.gameObject;
@@ -726,8 +726,8 @@ public class LassoController : MonoBehaviour
         }
         else
         {
-            // On success, we keep the line (it’s reparented to the group)
-            lineRenderer = null; // but still clear our reference
+            // On success, keep the line 
+            lineRenderer = null; // but still clear reference
         }
 
         // Reset state
@@ -858,22 +858,13 @@ public class LassoController : MonoBehaviour
                 pts.RemoveAt(i + 1);
     }
 
-    float GetScreenWorldAreaThreshold(float factor = 0.004f)
-    {
-        float z = Mathf.Abs(Camera.main.transform.position.z);
-        Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
-        Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
-        float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
-        return screenWorldArea * factor;
-    }
-
     float GetScreenWorldAreaThreshold()
 {
     float z = Mathf.Abs(Camera.main.transform.position.z);
     Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
     Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
     float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
-    return screenWorldArea * 0.003f;   // same scale you use in CompleteLasso (keep consistent)
+    return screenWorldArea * 0.004f;   
 }
 
 bool TryComputeCandidateLoopArea(int hitIndex, out float area)
