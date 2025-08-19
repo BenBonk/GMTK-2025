@@ -13,6 +13,7 @@ public class LocalizationManager : MonoBehaviour
     public LocalizedString localDayComplete;
     public LocalizedString localPointsPopup;
     public LocalizedString localCashPopup;
+    public LocalizedString localDeathRound;
 
     [HideInInspector] public string closeCall;
     [HideInInspector] public string timesUp;

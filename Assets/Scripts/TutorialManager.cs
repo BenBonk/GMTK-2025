@@ -4,6 +4,7 @@ using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
@@ -55,6 +56,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject arrowSet4;
 
     public static TutorialManager _instance;
+    public LocalizedString[] tutorialStrings;
 
     private void Awake()
     {
@@ -381,57 +383,57 @@ public class TutorialManager : MonoBehaviour
     private GameObject cow1, cow2, cow3, wolf1;
     private IEnumerator RunTutorial()
     {
-        yield return ShowMessage("Welcome to Wrangle Ranch!");
+        yield return ShowMessage(tutorialStrings[0].GetLocalizedString());
         cow1 = SpawnAnimal(cowPrefab);
-        yield return ShowMessage("Uh OH! Looks like the Cow got loose again",-0.5f);
-        yield return ShowMessage("Click and drag with your mouse to draw a circle around the cow!",+1f);
+        yield return ShowMessage(tutorialStrings[1].GetLocalizedString(),-0.5f);
+        yield return ShowMessage(tutorialStrings[2].GetLocalizedString(),+1f);
 
         yield return new WaitUntil(() => IsAnimalLassoed(cow1) || cow1 == null);
         yield return new WaitForSeconds(2.5f);
         timerDisplay.gameObject.SetActive(true);
-        yield return ShowMessage("Nice Job! Wrangling your farm animals will give you points and cash, but you can't stay out all night!",3f);
+        yield return ShowMessage(tutorialStrings[3].GetLocalizedString(),3f);
         scoreDisplay.gameObject.SetActive(true);
-        yield return ShowMessage("You'll need to wrangle enough animals to reach the point goal before time runs out.", 2f);
+        yield return ShowMessage(tutorialStrings[4].GetLocalizedString(), 2f);
 
         cow2 = SpawnAnimal(cowPrefab);
         cow3 = SpawnAnimal(cowPrefab);
         cow1 = SpawnAnimal(cowPrefab);
-        yield return ShowMessage("You can lasso multiple animals at once for extra points and cash!", 1f);
+        yield return ShowMessage(tutorialStrings[5].GetLocalizedString(), 1f);
         yield return new WaitUntil(() => AreAllLassoed(cow2, cow3, cow1) || (cow2 == null && cow3 == null && cow1 == null));
         yield return new WaitForSeconds(1f);
 
         cow1 = SpawnAnimal(cowPrefab);
         wolf1 = SpawnAnimal(wolfPrefab);
         yield return new WaitForSeconds(1.5f);
-        yield return ShowMessage("Now try lassoing these two critters together!", 0.5f);
+        yield return ShowMessage(tutorialStrings[6].GetLocalizedString(), 0.5f);
         yield return new WaitUntil(() => AreAllLassoed(cow1, wolf1));
         yield return new WaitForSeconds(2.5f);
-        yield return ShowMessage("UH OH, Watch out for predators! You will lose points if you lasso them with your animals.", 2f);
-        yield return ShowMessage("When the day is done, we can head back to the barn to spend our hard earned cash!",1f);
+        yield return ShowMessage(tutorialStrings[7].GetLocalizedString(), 2f);
+        yield return ShowMessage(tutorialStrings[8].GetLocalizedString(),1f);
 
         GoToShop();
         yield return new WaitForSeconds(4f);
 
-        yield return ShowMessage2("This is the shop.",1f);
+        yield return ShowMessage2(tutorialStrings[9].GetLocalizedString(),1f);
         buttonBlocker.SetActive(false);
         buttonBlocker2.SetActive(true);
         arrowSet1.SetActive(true);
-        yield return ShowMessage2("From here you can add new animals to be wrangled during the day!", 7.5f);
+        yield return ShowMessage2(tutorialStrings[10].GetLocalizedString(), 7.5f);
         buttonBlocker2.SetActive(false);
         buttonBlocker3.SetActive(true);
         arrowSet2.SetActive(true);
-        yield return ShowMessage2("You can view all the animals that might appear during the day by clicking the button in the top left", 7.5f);
+        yield return ShowMessage2(tutorialStrings[11].GetLocalizedString(), 7.5f);
         buttonBlocker3.SetActive(false);
         buttonBlocker4.SetActive(true);
         buttonBlocker5.SetActive(true);
         buttonBlocker7.SetActive(true);
         arrowSet3.SetActive(true);
-        yield return ShowMessage2("You can also add powerful abilities that will give you extra points when lassoing certain combinations of animals",7.5f);
+        yield return ShowMessage2(tutorialStrings[12].GetLocalizedString(),7.5f);
         buttonBlocker5.SetActive(false);
         buttonBlocker6.SetActive(true);
         arrowSet4.SetActive(true);  
-        yield return ShowMessage2("Lastly, you can upgrade your animals so that they will give you more points and cash!", 7.5f);
-        yield return ShowMessage2("Now that you know the basics, let's get started!",0.5f);
+        yield return ShowMessage2(tutorialStrings[13].GetLocalizedString(), 7.5f);
+        yield return ShowMessage2(tutorialStrings[14].GetLocalizedString(),0.5f);
         levelLoader.LoadCertainScene("TitleScreen");
     }
 

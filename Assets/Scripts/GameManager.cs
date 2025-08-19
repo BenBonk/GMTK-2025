@@ -171,7 +171,7 @@ public class GameManager : MonoBehaviour
         if (pointsThisRound < roundsPointsRequirement[roundNumber])
         {
             //GameOver
-            roundNumberDeath.text = "Round: " + roundNumber;
+            roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
