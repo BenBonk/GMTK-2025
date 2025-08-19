@@ -457,7 +457,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: 'Round: {0}'
+    m_Localized: 'Round:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112937

@@ -20,455 +20,471 @@ MonoBehaviour:
     - rid: 241711563893112939
   m_TableData:
   - m_Id: 581425123328
-    m_Localized: french
+    m_Localized: "POINTS\_: {0} / {1}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 1
-    m_Localized: french
+    m_Localized: "TEMPS\_: {0}\_S"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 2
-    m_Localized: french
+    m_Localized: "ESP\xC8CES\_: {0}"
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: french
+    m_Localized: "PR\xCATS ?, PR\xCATS, LASSO !"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 4
-    m_Localized: french
+    m_Localized: "+Points\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: french
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 6
-    m_Localized: french
+    m_Localized: "JOURN\xC9E TERMIN\xC9E ! + {0} CASH !"
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: french
+    m_Localized: "LE TEMPS EST \xC9COUL\xC9 !"
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: french
+    m_Localized: "IL A \xC9T\xC9 TROISI\xC8MEMENT TERMIN\xC9 !"
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: french
+    m_Localized: "S\xE9lectionnez un pr\xE9dateur \xE0 ajouter \xE0 votre grange"
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: french
+    m_Localized: Quitter la boutique
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 11
-    m_Localized: french
+    m_Localized: 'Perte de points :'
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 12
-    m_Localized: french
+    m_Localized: 'Bonus de points : +'
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: french
+    m_Localized: "Perte de tr\xE9sorerie :"
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: french
+    m_Localized: "Bonus en esp\xE8ces : +"
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: french
+    m_Localized: 'Points mult: x'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: french
+    m_Localized: "Tr\xE9sorerie mult: x"
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: french
+    m_Localized: 'Points:'
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: french
+    m_Localized: 'Points:'
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: french
+    m_Localized: "Esp\xE8ces:"
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: french
+    m_Localized: "Esp\xE8ces:"
     m_Metadata:
       m_Items: []
   - m_Id: 21
-    m_Localized: french
+    m_Localized: Ours
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: french
+    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs \xE0 proximit\xE9. Immunis\xE9
+      contre les effets de pouss\xE9e et d'attraction."
     m_Metadata:
       m_Items: []
   - m_Id: 23
-    m_Localized: french
+    m_Localized: Poulet
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: french
+    m_Localized: "Se d\xE9place vers des emplacements al\xE9atoires sur le terrain
+      avant de sortir."
     m_Metadata:
       m_Items: []
   - m_Id: 25
-    m_Localized: french
+    m_Localized: Vache
     m_Metadata:
       m_Items: []
   - m_Id: 26
-    m_Localized: french
+    m_Localized: "S'arr\xEAte p\xE9riodiquement pour brouter."
     m_Metadata:
       m_Items: []
   - m_Id: 27
-    m_Localized: french
+    m_Localized: Chien
     m_Metadata:
       m_Items: []
   - m_Id: 28
-    m_Localized: french
+    m_Localized: Il court le long du bord du champ, poussant les autres animaux vers
+      le milieu.
     m_Metadata:
       m_Items: []
   - m_Id: 29
-    m_Localized: french
+    m_Localized: Renard
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: french
+    m_Localized: "Pr\xE9dateur. Se d\xE9place sporadiquement sur le terrain."
     m_Metadata:
       m_Items: []
   - m_Id: 31
-    m_Localized: french
+    m_Localized: "Ch\xE8vre"
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: french
+    m_Localized: "Ralentit les pr\xE9dateurs \xE0 proximit\xE9."
     m_Metadata:
       m_Items: []
   - m_Id: 33
-    m_Localized: french
+    m_Localized: Cheval
     m_Metadata:
       m_Items: []
   - m_Id: 34
-    m_Localized: french
+    m_Localized: "Il court rapidement \xE0 travers le champ."
     m_Metadata:
       m_Items: []
   - m_Id: 35
-    m_Localized: french
+    m_Localized: Cochon
     m_Metadata:
       m_Items: []
   - m_Id: 36
-    m_Localized: french
+    m_Localized: "Des m\xE9andres pr\xE9visibles."
     m_Metadata:
       m_Items: []
   - m_Id: 37
-    m_Localized: french
+    m_Localized: Mouton
     m_Metadata:
       m_Items: []
   - m_Id: 38
-    m_Localized: french
+    m_Localized: Il court en ligne droite.
     m_Metadata:
       m_Items: []
   - m_Id: 39
-    m_Localized: french
+    m_Localized: Loup
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: french
+    m_Localized: "Pr\xE9dateur. Poursuit les non-pr\xE9dateurs."
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: french
+    m_Localized: "B\xEA\xEA\xEA\xEA !"
     m_Metadata:
       m_Items: []
   - m_Id: 42
-    m_Localized: french
+    m_Localized: "Lasso un groupe d'animaux contenant un mouton et une ch\xE8vre"
     m_Metadata:
       m_Items: []
   - m_Id: 43
-    m_Localized: french
+    m_Localized: "Bacon et \u0153ufs"
     m_Metadata:
       m_Items: []
   - m_Id: 44
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un cochon et un poulet
     m_Metadata:
       m_Items: []
   - m_Id: 45
-    m_Localized: french
+    m_Localized: "Canid\xE9s"
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un chien, un renard et un loup
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: french
+    m_Localized: "Vache \xE0 lait"
     m_Metadata:
       m_Items: []
   - m_Id: 48
-    m_Localized: french
+    m_Localized: Lasso exactement une vache
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: french
+    m_Localized: Chicken Jockey
     m_Metadata:
       m_Items: []
   - m_Id: 50
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant 1 poulet et 1 cheval
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: french
+    m_Localized: Compter les moutons
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant 3 moutons
     m_Metadata:
       m_Items: []
   - m_Id: 53
-    m_Localized: french
+    m_Localized: "\xC9volution"
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un chien et un loup
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: french
+    m_Localized: Le dilemme des agriculteurs
     m_Metadata:
       m_Items: []
   - m_Id: 56
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un renard et un poulet
     m_Metadata:
       m_Items: []
   - m_Id: 57
-    m_Localized: french
+    m_Localized: Restauration rapide
     m_Metadata:
       m_Items: []
   - m_Id: 58
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant une vache et un poulet
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: french
+    m_Localized: Renard dans un poulailler
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un renard et trois poulets
     m_Metadata:
       m_Items: []
   - m_Id: 61
-    m_Localized: french
+    m_Localized: Boucle d'or
     m_Metadata:
       m_Items: []
   - m_Id: 62
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant 3 ours
     m_Metadata:
       m_Items: []
   - m_Id: 63
-    m_Localized: french
+    m_Localized: Tu as du lait ?
     m_Metadata:
       m_Items: []
   - m_Id: 64
-    m_Localized: french
+    m_Localized: "Lasso un groupe d'animaux contenant une vache et une ch\xE8vre"
     m_Metadata:
       m_Items: []
   - m_Id: 65
-    m_Localized: french
+    m_Localized: "Il y a du foin l\xE0-bas"
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: french
+    m_Localized: "Lasso un groupe d'animaux contenant une vache, une ch\xE8vre, un
+      cheval et un mouton"
     m_Metadata:
       m_Items: []
   - m_Id: 67
-    m_Localized: french
+    m_Localized: Jambon cuit au miel
     m_Metadata:
       m_Items: []
   - m_Id: 68
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un cochon et un ours
     m_Metadata:
       m_Items: []
   - m_Id: 69
-    m_Localized: french
+    m_Localized: Loup solitaire
     m_Metadata:
       m_Items: []
   - m_Id: 70
-    m_Localized: french
+    m_Localized: Lasso exactement 1 Loup
     m_Metadata:
       m_Items: []
   - m_Id: 71
-    m_Localized: french
+    m_Localized: Le vieux MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: french
+    m_Localized: "Lasso un groupe d'animaux contenant un poulet, une vache, une ch\xE8vre,
+      un cheval, un chien, un mouton et un cochon"
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: french
+    m_Localized: Photo-finish
     m_Metadata:
       m_Items: []
   - m_Id: 74
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant 2 chevaux
     m_Metadata:
       m_Items: []
   - m_Id: 75
-    m_Localized: french
+    m_Localized: Tirelire
     m_Metadata:
       m_Items: []
   - m_Id: 76
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un cochon
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: french
+    m_Localized: Cochon dans une couverture
     m_Metadata:
       m_Items: []
   - m_Id: 78
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un cochon et un mouton
     m_Metadata:
       m_Items: []
   - m_Id: 79
-    m_Localized: french
+    m_Localized: Grande taille
     m_Metadata:
       m_Items: []
   - m_Id: 80
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant une vache et un ours
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: french
+    m_Localized: "Pr\xE9dateur"
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un ours, un loup et un renard
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: french
+    m_Localized: Partenaires de course
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un cheval et un chien
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: french
+    m_Localized: Les trois petits cochons
     m_Metadata:
       m_Items: []
   - m_Id: 86
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant 3 cochons et 1 loup
     m_Metadata:
       m_Items: []
   - m_Id: 87
-    m_Localized: french
+    m_Localized: "Loup d\xE9guis\xE9 en mouton"
     m_Metadata:
       m_Items: []
   - m_Id: 88
-    m_Localized: french
+    m_Localized: Lasso un groupe d'animaux contenant un loup et un mouton
     m_Metadata:
       m_Items: []
   - m_Id: 89
-    m_Localized: french
+    m_Localized: Bienvenue au Wrangle Ranch !
     m_Metadata:
       m_Items: []
   - m_Id: 90
-    m_Localized: french
+    m_Localized: "Oh oh ! On dirait que la vache s'est encore \xE9chapp\xE9e"
     m_Metadata:
       m_Items: []
   - m_Id: 91
-    m_Localized: french
+    m_Localized: Cliquez et faites glisser votre souris pour dessiner un cercle autour
+      de la vache !
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: french
+    m_Localized: "Bravo ! G\xE9rer vos animaux de ferme vous rapportera des points
+      et de l'argent, mais vous ne pouvez pas rester dehors toute la nuit !"
     m_Metadata:
       m_Items: []
   - m_Id: 93
-    m_Localized: french
+    m_Localized: Vous devrez rassembler suffisamment d'animaux pour atteindre l'objectif
+      de points avant la fin du temps imparti.
     m_Metadata:
       m_Items: []
   - m_Id: 94
-    m_Localized: french
+    m_Localized: "Vous pouvez capturer plusieurs animaux \xE0 la fois pour obtenir
+      des points et de l'argent suppl\xE9mentaires\_!"
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: french
+    m_Localized: "Essayez maintenant d'attacher ces deux cr\xE9atures ensemble !"
     m_Metadata:
       m_Items: []
   - m_Id: 96
-    m_Localized: french
+    m_Localized: "Oh l\xE0 l\xE0, attention aux pr\xE9dateurs ! Vous perdrez des
+      points si vous les capturez avec vos animaux."
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: french
+    m_Localized: "Une fois la journ\xE9e termin\xE9e, nous pouvons retourner \xE0
+      la grange pour d\xE9penser notre argent durement gagn\xE9 !"
     m_Metadata:
       m_Items: []
   - m_Id: 98
-    m_Localized: french
+    m_Localized: C'est la boutique.
     m_Metadata:
       m_Items: []
   - m_Id: 99
-    m_Localized: french
+    m_Localized: "\xC0 partir d'ici, vous pouvez ajouter de nouveaux animaux \xE0
+      combattre pendant la journ\xE9e\_!"
     m_Metadata:
       m_Items: []
   - m_Id: 100
-    m_Localized: french
+    m_Localized: "Vous pouvez visualiser tous les animaux qui pourraient appara\xEEtre
+      au cours de la journ\xE9e en cliquant sur le bouton en haut \xE0 gauche"
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: french
+    m_Localized: "Vous pouvez \xE9galement ajouter des capacit\xE9s puissantes qui
+      vous donneront des points suppl\xE9mentaires lorsque vous capturerez certaines
+      combinaisons d'animaux."
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: french
+    m_Localized: "Enfin, vous pouvez am\xE9liorer vos animaux afin qu'ils vous rapportent
+      plus de points et d'argent !"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: french
+    m_Localized: "Maintenant que vous connaissez les bases, commen\xE7ons !"
     m_Metadata:
       m_Items: []
   - m_Id: 104
-    m_Localized: french
+    m_Localized: "Tu as frapp\xE9 le foin..."
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: french
+    m_Localized: 'Rond:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 106
-    m_Localized: french
+    m_Localized: "Red\xE9marrage"
     m_Metadata:
       m_Items: []
   - m_Id: 107
-    m_Localized: french
+    m_Localized: Maison
     m_Metadata:
       m_Items: []
   - m_Id: 108
-    m_Localized: french
+    m_Localized: Ranch Wrangle
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: french
+    m_Localized: Commencer
     m_Metadata:
       m_Items: []
   - m_Id: 110
-    m_Localized: french
+    m_Localized: Tutoriel
     m_Metadata:
       m_Items: []
   references:

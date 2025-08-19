@@ -20,455 +20,468 @@ MonoBehaviour:
     - rid: 241711563893112941
   m_TableData:
   - m_Id: 581425123328
-    m_Localized: italian
+    m_Localized: 'PUNTI: {0} / {1}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 1
-    m_Localized: italian
+    m_Localized: 'TEMPO: {0}S'
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 2
-    m_Localized: italian
+    m_Localized: 'CONTANTI: {0}'
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: italian
+    m_Localized: PRONTI? PARTENZA, LASSO!
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 4
-    m_Localized: italian
+    m_Localized: '+Punti: {0}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 5
-    m_Localized: italian
+    m_Localized: '+Contanti: {0}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 6
-    m_Localized: italian
+    m_Localized: GIORNATA COMPLETATA! + {0} CONTANTI!
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: italian
+    m_Localized: TEMPO SCADUTO!
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: italian
+    m_Localized: PER UN CERTO PASSO!
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: italian
+    m_Localized: Seleziona un predatore da aggiungere al tuo fienile
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: italian
+    m_Localized: Lascia il negozio
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 11
-    m_Localized: italian
+    m_Localized: 'Perdita di punti:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 12
-    m_Localized: italian
+    m_Localized: 'Punti bonus: +'
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: italian
+    m_Localized: 'Perdita di denaro:'
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: italian
+    m_Localized: 'Bonus in denaro: +'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: italian
+    m_Localized: 'Punti moltiplicati: x'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: italian
+    m_Localized: 'Moltiplicatore di contanti: x'
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: italian
+    m_Localized: 'Punti:'
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: italian
+    m_Localized: 'Punti:'
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: italian
+    m_Localized: 'Contanti:'
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: italian
+    m_Localized: 'Contanti:'
     m_Metadata:
       m_Items: []
   - m_Id: 21
-    m_Localized: italian
+    m_Localized: Orso
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: italian
+    m_Localized: "Predatore. Attira verso di s\xE9 i non predatori nelle vicinanze.
+      Immune agli effetti di spinta e trazione."
     m_Metadata:
       m_Items: []
   - m_Id: 23
-    m_Localized: italian
+    m_Localized: Pollo
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: italian
+    m_Localized: Si sposta in posizioni casuali sul campo prima di uscire.
     m_Metadata:
       m_Items: []
   - m_Id: 25
-    m_Localized: italian
+    m_Localized: Mucca
     m_Metadata:
       m_Items: []
   - m_Id: 26
-    m_Localized: italian
+    m_Localized: Si ferma periodicamente per brucare.
     m_Metadata:
       m_Items: []
   - m_Id: 27
-    m_Localized: italian
+    m_Localized: Cane
     m_Metadata:
       m_Items: []
   - m_Id: 28
-    m_Localized: italian
+    m_Localized: Corre lungo il bordo del campo, spingendo gli altri animali verso
+      il centro.
     m_Metadata:
       m_Items: []
   - m_Id: 29
-    m_Localized: italian
+    m_Localized: Volpe
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: italian
+    m_Localized: Predatore. Si muove avanti e indietro sul campo sporadicamente.
     m_Metadata:
       m_Items: []
   - m_Id: 31
-    m_Localized: italian
+    m_Localized: Capra
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: italian
+    m_Localized: Rallenta i predatori nelle vicinanze.
     m_Metadata:
       m_Items: []
   - m_Id: 33
-    m_Localized: italian
+    m_Localized: Cavallo
     m_Metadata:
       m_Items: []
   - m_Id: 34
-    m_Localized: italian
+    m_Localized: Corre velocemente attraverso il campo.
     m_Metadata:
       m_Items: []
   - m_Id: 35
-    m_Localized: italian
+    m_Localized: Maiale
     m_Metadata:
       m_Items: []
   - m_Id: 36
-    m_Localized: italian
+    m_Localized: Serpeggia in modo prevedibile.
     m_Metadata:
       m_Items: []
   - m_Id: 37
-    m_Localized: italian
+    m_Localized: Pecora
     m_Metadata:
       m_Items: []
   - m_Id: 38
-    m_Localized: italian
+    m_Localized: Corre in linea retta.
     m_Metadata:
       m_Items: []
   - m_Id: 39
-    m_Localized: italian
+    m_Localized: Lupo
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: italian
+    m_Localized: Predatore. Insegue i non predatori.
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: italian
+    m_Localized: Beaaaa!
     m_Metadata:
       m_Items: []
   - m_Id: 42
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente una pecora e una capra
     m_Metadata:
       m_Items: []
   - m_Id: 43
-    m_Localized: italian
+    m_Localized: Pancetta e uova
     m_Metadata:
       m_Items: []
   - m_Id: 44
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un maiale e un pollo
     m_Metadata:
       m_Items: []
   - m_Id: 45
-    m_Localized: italian
+    m_Localized: Canini
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un cane, una volpe e un lupo
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: italian
+    m_Localized: Mucca da soldi
     m_Metadata:
       m_Items: []
   - m_Id: 48
-    m_Localized: italian
+    m_Localized: Prendi al lazo esattamente una mucca
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: italian
+    m_Localized: Chicken Jockey
     m_Metadata:
       m_Items: []
   - m_Id: 50
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente 1 pollo e 1 cavallo
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: italian
+    m_Localized: Contare le pecore
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente 3 pecore
     m_Metadata:
       m_Items: []
   - m_Id: 53
-    m_Localized: italian
+    m_Localized: Evoluzione
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un cane e un lupo
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: italian
+    m_Localized: Il dilemma degli agricoltori
     m_Metadata:
       m_Items: []
   - m_Id: 56
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente una volpe e un pollo
     m_Metadata:
       m_Items: []
   - m_Id: 57
-    m_Localized: italian
+    m_Localized: Fast food
     m_Metadata:
       m_Items: []
   - m_Id: 58
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente una mucca e un pollo
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: italian
+    m_Localized: Volpe in un pollaio
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente una volpe e tre polli
     m_Metadata:
       m_Items: []
   - m_Id: 61
-    m_Localized: italian
+    m_Localized: Riccioli d'oro
     m_Metadata:
       m_Items: []
   - m_Id: 62
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente 3 orsi
     m_Metadata:
       m_Items: []
   - m_Id: 63
-    m_Localized: italian
+    m_Localized: Hai del latte?
     m_Metadata:
       m_Items: []
   - m_Id: 64
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente una mucca e una capra
     m_Metadata:
       m_Items: []
   - m_Id: 65
-    m_Localized: italian
+    m_Localized: "Fieno l\xEC"
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente una mucca, una capra, un cavallo
+      e una pecora
     m_Metadata:
       m_Items: []
   - m_Id: 67
-    m_Localized: italian
+    m_Localized: Prosciutto al miele
     m_Metadata:
       m_Items: []
   - m_Id: 68
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un maiale e un orso
     m_Metadata:
       m_Items: []
   - m_Id: 69
-    m_Localized: italian
+    m_Localized: Lupo solitario
     m_Metadata:
       m_Items: []
   - m_Id: 70
-    m_Localized: italian
+    m_Localized: Cattura con il lazo esattamente 1 lupo
     m_Metadata:
       m_Items: []
   - m_Id: 71
-    m_Localized: italian
+    m_Localized: Vecchio MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un pollo, una mucca, una capra,
+      un cavallo, un cane, una pecora e un maiale
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: italian
+    m_Localized: Fotofinish
     m_Metadata:
       m_Items: []
   - m_Id: 74
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente 2 cavalli
     m_Metadata:
       m_Items: []
   - m_Id: 75
-    m_Localized: italian
+    m_Localized: Salvadanaio
     m_Metadata:
       m_Items: []
   - m_Id: 76
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un maiale
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: italian
+    m_Localized: Maiale in una coperta
     m_Metadata:
       m_Items: []
   - m_Id: 78
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un maiale e una pecora
     m_Metadata:
       m_Items: []
   - m_Id: 79
-    m_Localized: italian
+    m_Localized: taglie forti
     m_Metadata:
       m_Items: []
   - m_Id: 80
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente una mucca e un orso
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: italian
+    m_Localized: Predatore
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un orso, un lupo e una volpe
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: italian
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un cavallo e un cane
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: italian
+    m_Localized: I tre porcellini
     m_Metadata:
       m_Items: []
   - m_Id: 86
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente 3 maiali e 1 lupo
     m_Metadata:
       m_Items: []
   - m_Id: 87
-    m_Localized: italian
+    m_Localized: Lupo travestito da pecora
     m_Metadata:
       m_Items: []
   - m_Id: 88
-    m_Localized: italian
+    m_Localized: Lazo un gruppo di animali contenente un lupo e una pecora
     m_Metadata:
       m_Items: []
   - m_Id: 89
-    m_Localized: italian
+    m_Localized: Benvenuti al Wrangle Ranch!
     m_Metadata:
       m_Items: []
   - m_Id: 90
-    m_Localized: italian
+    m_Localized: Uh OH! Sembra che la mucca si sia liberata di nuovo
     m_Metadata:
       m_Items: []
   - m_Id: 91
-    m_Localized: italian
+    m_Localized: Clicca e trascina con il mouse per disegnare un cerchio attorno
+      alla mucca!
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: italian
+    m_Localized: "Ottimo lavoro! Domare gli animali della fattoria ti far\xE0 guadagnare
+      punti e soldi, ma non puoi restare fuori tutta la notte!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
-    m_Localized: italian
+    m_Localized: Dovrai radunare abbastanza animali per raggiungere il punteggio
+      obiettivo prima che scada il tempo.
     m_Metadata:
       m_Items: []
   - m_Id: 94
-    m_Localized: italian
+    m_Localized: "Puoi catturare pi\xF9 animali contemporaneamente per ottenere punti
+      extra e denaro!"
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: italian
+    m_Localized: Ora prova a catturare insieme queste due creature con il lazo!
     m_Metadata:
       m_Items: []
   - m_Id: 96
-    m_Localized: italian
+    m_Localized: Oh, attenzione ai predatori! Perderai punti se li prendi al lazo
+      con i tuoi animali.
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: italian
+    m_Localized: Una volta finita la giornata, potremo tornare alla stalla per spendere
+      i soldi guadagnati con tanta fatica!
     m_Metadata:
       m_Items: []
   - m_Id: 98
-    m_Localized: italian
+    m_Localized: "Questo \xE8 il negozio."
     m_Metadata:
       m_Items: []
   - m_Id: 99
-    m_Localized: italian
+    m_Localized: Da qui puoi aggiungere nuovi animali da accudire durante il giorno!
     m_Metadata:
       m_Items: []
   - m_Id: 100
-    m_Localized: italian
+    m_Localized: Puoi visualizzare tutti gli animali che potrebbero apparire durante
+      il giorno cliccando sul pulsante in alto a sinistra
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: italian
+    m_Localized: "Puoi anche aggiungere potenti abilit\xE0 che ti daranno punti extra
+      quando prendi al lazo determinate combinazioni di animali"
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: italian
+    m_Localized: "Infine, puoi potenziare i tuoi animali in modo che ti diano pi\xF9
+      punti e denaro!"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: italian
+    m_Localized: Ora che conosci le basi, cominciamo!
     m_Metadata:
       m_Items: []
   - m_Id: 104
-    m_Localized: italian
+    m_Localized: Sei andato a letto...
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: italian
+    m_Localized: 'Girare:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 106
-    m_Localized: italian
+    m_Localized: Ricomincia
     m_Metadata:
       m_Items: []
   - m_Id: 107
-    m_Localized: italian
+    m_Localized: Casa
     m_Metadata:
       m_Items: []
   - m_Id: 108
-    m_Localized: italian
+    m_Localized: Wrangle Ranch
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: italian
+    m_Localized: Inizio
     m_Metadata:
       m_Items: []
   - m_Id: 110
-    m_Localized: italian
+    m_Localized: Esercitazione
     m_Metadata:
       m_Items: []
   references:

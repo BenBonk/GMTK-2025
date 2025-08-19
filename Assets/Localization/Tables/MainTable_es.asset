@@ -20,455 +20,469 @@ MonoBehaviour:
     - rid: 241711563893112938
   m_TableData:
   - m_Id: 581425123328
-    m_Localized: spanish
+    m_Localized: 'PUNTOS: {0} / {1}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 1
-    m_Localized: spanish
+    m_Localized: 'TIEMPO: {0}S'
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 2
-    m_Localized: spanish
+    m_Localized: 'EFECTIVO: {0}'
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: spanish
+    m_Localized: "\xBFLISTOS?, \xA1LISTOS, LAZO!"
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 4
-    m_Localized: spanish
+    m_Localized: '+Puntos: {0}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 5
-    m_Localized: spanish
+    m_Localized: '+Efectivo: {0}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 6
-    m_Localized: spanish
+    m_Localized: "\xA1D\xCDA COMPLETADO! + {0} \xA1EFECTIVO!"
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: spanish
+    m_Localized: "\xA1SE ACAB\xD3 EL TIEMPO!"
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: spanish
+    m_Localized: "\xA1UN LLAMADO CERCANO!"
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: spanish
+    m_Localized: "Selecciona un depredador para a\xF1adir a tu establo"
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: spanish
+    m_Localized: Salir de la tienda
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 11
-    m_Localized: spanish
+    m_Localized: "P\xE9rdida de puntos:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 12
-    m_Localized: spanish
+    m_Localized: "Bonificaci\xF3n de puntos: +"
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: spanish
+    m_Localized: "P\xE9rdida de efectivo:"
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: spanish
+    m_Localized: 'Bono en efectivo: +'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: spanish
+    m_Localized: 'Puntos mult: x'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: spanish
+    m_Localized: 'Efectivo multi: x'
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: spanish
+    m_Localized: 'Agujas:'
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: spanish
+    m_Localized: 'Agujas:'
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: spanish
+    m_Localized: 'Dinero en efectivo:'
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: spanish
+    m_Localized: 'Dinero en efectivo:'
     m_Metadata:
       m_Items: []
   - m_Id: 21
-    m_Localized: spanish
+    m_Localized: Oso
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: spanish
+    m_Localized: "Depredador. Atrae a los enemigos cercanos que no sean depredadores.
+      Inmune a los efectos de empuje y atracci\xF3n."
     m_Metadata:
       m_Items: []
   - m_Id: 23
-    m_Localized: spanish
+    m_Localized: Pollo
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: spanish
+    m_Localized: Se mueve a ubicaciones aleatorias en el campo antes de salir.
     m_Metadata:
       m_Items: []
   - m_Id: 25
-    m_Localized: spanish
+    m_Localized: Vaca
     m_Metadata:
       m_Items: []
   - m_Id: 26
-    m_Localized: spanish
+    m_Localized: "Se detiene peri\xF3dicamente para pastar."
     m_Metadata:
       m_Items: []
   - m_Id: 27
-    m_Localized: spanish
+    m_Localized: Perro
     m_Metadata:
       m_Items: []
   - m_Id: 28
-    m_Localized: spanish
+    m_Localized: Corre a lo largo del borde del campo, empujando a otros animales
+      hacia el centro.
     m_Metadata:
       m_Items: []
   - m_Id: 29
-    m_Localized: spanish
+    m_Localized: Zorro
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: spanish
+    m_Localized: "Depredador. Se mueve por el campo espor\xE1dicamente."
     m_Metadata:
       m_Items: []
   - m_Id: 31
-    m_Localized: spanish
+    m_Localized: Cabra
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: spanish
+    m_Localized: Ralentiza a los depredadores cercanos.
     m_Metadata:
       m_Items: []
   - m_Id: 33
-    m_Localized: spanish
+    m_Localized: Caballo
     m_Metadata:
       m_Items: []
   - m_Id: 34
-    m_Localized: spanish
+    m_Localized: "Corre r\xE1pidamente por el campo."
     m_Metadata:
       m_Items: []
   - m_Id: 35
-    m_Localized: spanish
+    m_Localized: Cerdo
     m_Metadata:
       m_Items: []
   - m_Id: 36
-    m_Localized: spanish
+    m_Localized: Meandros previsibles.
     m_Metadata:
       m_Items: []
   - m_Id: 37
-    m_Localized: spanish
+    m_Localized: Oveja
     m_Metadata:
       m_Items: []
   - m_Id: 38
-    m_Localized: spanish
+    m_Localized: "Corre en l\xEDnea recta."
     m_Metadata:
       m_Items: []
   - m_Id: 39
-    m_Localized: spanish
+    m_Localized: Lobo
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: spanish
+    m_Localized: Depredador. Persigue a los no depredadores.
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: spanish
+    m_Localized: "\xA1Beeeee!"
     m_Metadata:
       m_Items: []
   - m_Id: 42
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene una oveja y una cabra
     m_Metadata:
       m_Items: []
   - m_Id: 43
-    m_Localized: spanish
+    m_Localized: Tocino y huevos
     m_Metadata:
       m_Items: []
   - m_Id: 44
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un cerdo y un pollo
     m_Metadata:
       m_Items: []
   - m_Id: 45
-    m_Localized: spanish
+    m_Localized: Caninos
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un perro, un zorro y un lobo
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: spanish
+    m_Localized: Vaca lechera
     m_Metadata:
       m_Items: []
   - m_Id: 48
-    m_Localized: spanish
+    m_Localized: Lazo exactamente a una vaca
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: spanish
+    m_Localized: Pollo Jockey
     m_Metadata:
       m_Items: []
   - m_Id: 50
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene 1 pollo y 1 caballo
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: spanish
+    m_Localized: Contando ovejas
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene 3 ovejas
     m_Metadata:
       m_Items: []
   - m_Id: 53
-    m_Localized: spanish
+    m_Localized: "Evoluci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un perro y un lobo
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: spanish
+    m_Localized: El dilema de los agricultores
     m_Metadata:
       m_Items: []
   - m_Id: 56
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un zorro y un pollo
     m_Metadata:
       m_Items: []
   - m_Id: 57
-    m_Localized: spanish
+    m_Localized: "Comida r\xE1pida"
     m_Metadata:
       m_Items: []
   - m_Id: 58
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene una vaca y un pollo
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: spanish
+    m_Localized: Zorro en un gallinero
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un zorro y tres pollos
     m_Metadata:
       m_Items: []
   - m_Id: 61
-    m_Localized: spanish
+    m_Localized: Encerrada dorada
     m_Metadata:
       m_Items: []
   - m_Id: 62
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene 3 osos
     m_Metadata:
       m_Items: []
   - m_Id: 63
-    m_Localized: spanish
+    m_Localized: "\xBFTienes leche?"
     m_Metadata:
       m_Items: []
   - m_Id: 64
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene una vaca y una cabra
     m_Metadata:
       m_Items: []
   - m_Id: 65
-    m_Localized: spanish
+    m_Localized: "Hay all\xED"
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene una vaca, una cabra, un caballo
+      y una oveja
     m_Metadata:
       m_Items: []
   - m_Id: 67
-    m_Localized: spanish
+    m_Localized: "Jam\xF3n al horno con miel"
     m_Metadata:
       m_Items: []
   - m_Id: 68
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un cerdo y un oso
     m_Metadata:
       m_Items: []
   - m_Id: 69
-    m_Localized: spanish
+    m_Localized: Lobo solitario
     m_Metadata:
       m_Items: []
   - m_Id: 70
-    m_Localized: spanish
+    m_Localized: Lazo exactamente 1 Lobo
     m_Metadata:
       m_Items: []
   - m_Id: 71
-    m_Localized: spanish
+    m_Localized: El viejo MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: spanish
+    m_Localized: 'Lazo: un grupo de animales que contiene un pollo, una vaca, una
+      cabra, un caballo, un perro, una oveja y un cerdo.'
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: spanish
+    m_Localized: Foto Finish
     m_Metadata:
       m_Items: []
   - m_Id: 74
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene 2 Caballos
     m_Metadata:
       m_Items: []
   - m_Id: 75
-    m_Localized: spanish
+    m_Localized: Hucha
     m_Metadata:
       m_Items: []
   - m_Id: 76
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un Cerdo
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: spanish
+    m_Localized: Cerdo en una manta
     m_Metadata:
       m_Items: []
   - m_Id: 78
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un cerdo y una oveja
     m_Metadata:
       m_Items: []
   - m_Id: 79
-    m_Localized: spanish
+    m_Localized: Talla grande
     m_Metadata:
       m_Items: []
   - m_Id: 80
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene una vaca y un oso
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: spanish
+    m_Localized: Depredador
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: spanish
+    m_Localized: 'Lazo: un grupo de animales que contiene un oso, un lobo y un zorro.'
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: spanish
+    m_Localized: Socios de carreras
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un Caballo y un Perro
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: spanish
+    m_Localized: Los tres cerditos
     m_Metadata:
       m_Items: []
   - m_Id: 86
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene 3 cerdos y 1 lobo
     m_Metadata:
       m_Items: []
   - m_Id: 87
-    m_Localized: spanish
+    m_Localized: Lobo con piel de oveja
     m_Metadata:
       m_Items: []
   - m_Id: 88
-    m_Localized: spanish
+    m_Localized: Lazo un grupo de animales que contiene un lobo y una oveja
     m_Metadata:
       m_Items: []
   - m_Id: 89
-    m_Localized: spanish
+    m_Localized: "\xA1Bienvenido a Wrangle Ranch!"
     m_Metadata:
       m_Items: []
   - m_Id: 90
-    m_Localized: spanish
+    m_Localized: "\xA1Oh, oh! Parece que la vaca se solt\xF3 otra vez."
     m_Metadata:
       m_Items: []
   - m_Id: 91
-    m_Localized: spanish
+    m_Localized: "\xA1Haga clic y arrastre el mouse para dibujar un c\xEDrculo alrededor
+      de la vaca!"
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: spanish
+    m_Localized: "\xA1Buen trabajo! Controlar a tus animales de granja te dar\xE1
+      puntos y dinero, \xA1pero no puedes quedarte fuera toda la noche!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
-    m_Localized: spanish
+    m_Localized: "Necesitar\xE1s reunir suficientes animales para alcanzar el objetivo
+      antes de que se acabe el tiempo."
     m_Metadata:
       m_Items: []
   - m_Id: 94
-    m_Localized: spanish
+    m_Localized: "\xA1Puedes atrapar varios animales a la vez para obtener puntos
+      y dinero extra!"
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: spanish
+    m_Localized: "\xA1Ahora intenta enlazar a estas dos criaturas!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
-    m_Localized: spanish
+    m_Localized: "\xA1Cuidado con los depredadores! Perder\xE1s puntos si los enlazas
+      con tus animales."
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: spanish
+    m_Localized: "\xA1Cuando termine el d\xEDa, podremos regresar al granero para
+      gastar el dinero que ganamos con tanto esfuerzo!"
     m_Metadata:
       m_Items: []
   - m_Id: 98
-    m_Localized: spanish
+    m_Localized: Esta es la tienda.
     m_Metadata:
       m_Items: []
   - m_Id: 99
-    m_Localized: spanish
+    m_Localized: "\xA1Desde aqu\xED puedes agregar nuevos animales para cuidar durante
+      el d\xEDa!"
     m_Metadata:
       m_Items: []
   - m_Id: 100
-    m_Localized: spanish
+    m_Localized: "Puedes ver todos los animales que podr\xEDan aparecer durante el
+      d\xEDa haciendo clic en el bot\xF3n de la parte superior izquierda."
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: spanish
+    m_Localized: "Tambi\xE9n puedes agregar habilidades poderosas que te dar\xE1n
+      puntos extra al enlazar ciertas combinaciones de animales."
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: spanish
+    m_Localized: "\xA1Por \xFAltimo, puedes mejorar tus animales para que te den
+      m\xE1s puntos y dinero!"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: spanish
+    m_Localized: "Ahora que ya conoces los conceptos b\xE1sicos, \xA1comencemos!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
-    m_Localized: spanish
+    m_Localized: Te fuiste a dormir...
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: spanish
+    m_Localized: 'Redondo:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 106
-    m_Localized: spanish
+    m_Localized: Reanudar
     m_Metadata:
       m_Items: []
   - m_Id: 107
-    m_Localized: spanish
+    m_Localized: Hogar
     m_Metadata:
       m_Items: []
   - m_Id: 108
-    m_Localized: spanish
+    m_Localized: Rancho Wrangle
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: spanish
+    m_Localized: Comenzar
     m_Metadata:
       m_Items: []
   - m_Id: 110
-    m_Localized: spanish
+    m_Localized: Tutorial
     m_Metadata:
       m_Items: []
   references:

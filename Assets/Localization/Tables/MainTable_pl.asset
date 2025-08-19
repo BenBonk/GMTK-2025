@@ -20,455 +20,488 @@ MonoBehaviour:
     - rid: 241711563893112945
   m_TableData:
   - m_Id: 581425123328
-    m_Localized: polish
+    m_Localized: 'PUNKTY: {0} / {1}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 1
-    m_Localized: polish
+    m_Localized: 'CZAS: {0} S'
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 2
-    m_Localized: polish
+    m_Localized: "GOT\xD3WKA: {0}"
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: polish
+    m_Localized: GOTOWI?, DO STARTU, LASSO!
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 4
-    m_Localized: polish
+    m_Localized: '+Punkty: {0}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 5
-    m_Localized: polish
+    m_Localized: "+Got\xF3wka: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 6
-    m_Localized: polish
+    m_Localized: "DZIE\u0143 ZAKO\u0143CZONY! + {0} GOT\xD3WKI!"
     m_Metadata:
       m_Items: []
   - m_Id: 7
-    m_Localized: polish
+    m_Localized: "CZAS SI\u0118 KO\u0143CZY!"
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: polish
+    m_Localized: "BY\u0141O BLISKO!"
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: polish
+    m_Localized: "Wybierz drapie\u017Cnika, kt\xF3rego chcesz doda\u0107 do swojej
+      stajni"
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: polish
+    m_Localized: "Opu\u015B\u0107 sklep"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: polish
+    m_Localized: "Strata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 12
-    m_Localized: polish
+    m_Localized: 'Bonus punktowy: +'
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: polish
+    m_Localized: "Strata got\xF3wkowa:"
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: polish
+    m_Localized: "Bonus pieni\u0119\u017Cny: +"
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: polish
+    m_Localized: "Punkty mno\u017Cone: x"
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: polish
+    m_Localized: "Mno\u017Cenie got\xF3wki: x"
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: polish
+    m_Localized: 'Zwrotnica:'
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: polish
+    m_Localized: 'Zwrotnica:'
     m_Metadata:
       m_Items: []
   - m_Id: 19
-    m_Localized: polish
+    m_Localized: "Got\xF3wka:"
     m_Metadata:
       m_Items: []
   - m_Id: 20
-    m_Localized: polish
+    m_Localized: "Got\xF3wka:"
     m_Metadata:
       m_Items: []
   - m_Id: 21
-    m_Localized: polish
+    m_Localized: "Nied\u017Awied\u017A"
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: polish
+    m_Localized: "Drapie\u017Cnik. Przyci\u0105ga do siebie pobliskie stworzenia
+      nieb\u0119d\u0105ce drapie\u017Cnikami. Odporny na efekty odpychania i przyci\u0105gania."
     m_Metadata:
       m_Items: []
   - m_Id: 23
-    m_Localized: polish
+    m_Localized: Kurczak
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: polish
+    m_Localized: "Przemieszcza si\u0119 w losowe miejsca na polu, po czym opuszcza
+      je."
     m_Metadata:
       m_Items: []
   - m_Id: 25
-    m_Localized: polish
+    m_Localized: Krowa
     m_Metadata:
       m_Items: []
   - m_Id: 26
-    m_Localized: polish
+    m_Localized: "Zatrzymuje si\u0119 okresowo, aby si\u0119 posili\u0107."
     m_Metadata:
       m_Items: []
   - m_Id: 27
-    m_Localized: polish
+    m_Localized: Pies
     m_Metadata:
       m_Items: []
   - m_Id: 28
-    m_Localized: polish
+    m_Localized: "Biegnie wzd\u0142u\u017C kraw\u0119dzi pola, spychaj\u0105c inne
+      zwierz\u0119ta w kierunku \u015Brodka."
     m_Metadata:
       m_Items: []
   - m_Id: 29
-    m_Localized: polish
+    m_Localized: Lis
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: polish
+    m_Localized: "Drapie\u017Cnik. Porusza si\u0119 po boisku w r\xF3\u017Cnych kierunkach."
     m_Metadata:
       m_Items: []
   - m_Id: 31
-    m_Localized: polish
+    m_Localized: Koza
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: polish
+    m_Localized: "Spowalnia pobliskie drapie\u017Cniki."
     m_Metadata:
       m_Items: []
   - m_Id: 33
-    m_Localized: polish
+    m_Localized: "Ko\u0144"
     m_Metadata:
       m_Items: []
   - m_Id: 34
-    m_Localized: polish
+    m_Localized: Szybko biegnie przez pole.
     m_Metadata:
       m_Items: []
   - m_Id: 35
-    m_Localized: polish
+    m_Localized: "\u015Awinia"
     m_Metadata:
       m_Items: []
   - m_Id: 36
-    m_Localized: polish
+    m_Localized: Meandruje przewidywalnie.
     m_Metadata:
       m_Items: []
   - m_Id: 37
-    m_Localized: polish
+    m_Localized: Owce
     m_Metadata:
       m_Items: []
   - m_Id: 38
-    m_Localized: polish
+    m_Localized: Biegnie po linii prostej.
     m_Metadata:
       m_Items: []
   - m_Id: 39
-    m_Localized: polish
+    m_Localized: Wilk
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: polish
+    m_Localized: "Drapie\u017Cnik. Poluje na zwierz\u0119ta nieb\u0119d\u0105ce drapie\u017Cnikami."
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: polish
+    m_Localized: Beee!
     m_Metadata:
       m_Items: []
   - m_Id: 42
-    m_Localized: polish
+    m_Localized: "Lasso \u2013 grupa zwierz\u0105t zawieraj\u0105ca owc\u0119 i koz\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 43
-    m_Localized: polish
+    m_Localized: Bekon i jajka
     m_Metadata:
       m_Items: []
   - m_Id: 44
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 \u015Bwini\u0119
+      i kurczaka"
     m_Metadata:
       m_Items: []
   - m_Id: 45
-    m_Localized: polish
+    m_Localized: "K\u0142y"
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z psa, lisa i wilka"
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: polish
+    m_Localized: Dojna krowa
     m_Metadata:
       m_Items: []
   - m_Id: 48
-    m_Localized: polish
+    m_Localized: "Z\u0142ap dok\u0142adnie jedn\u0105 krow\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: polish
+    m_Localized: "D\u017Cokej z kurczaka"
     m_Metadata:
       m_Items: []
   - m_Id: 50
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 1 kurczaka
+      i 1 konia"
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: polish
+    m_Localized: Liczenie owiec
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 3 owce"
     m_Metadata:
       m_Items: []
   - m_Id: 53
-    m_Localized: polish
+    m_Localized: Ewolucja
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 psa i
+      wilka"
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: polish
+    m_Localized: Dylemat rolnika
     m_Metadata:
       m_Items: []
   - m_Id: 56
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 lisa i
+      kurczaka"
     m_Metadata:
       m_Items: []
   - m_Id: 57
-    m_Localized: polish
+    m_Localized: Fast food
     m_Metadata:
       m_Items: []
   - m_Id: 58
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 krow\u0119
+      i kurczaka"
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: polish
+    m_Localized: Lis w kurniku
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 lisa i
+      trzy kurczaki"
     m_Metadata:
       m_Items: []
   - m_Id: 61
-    m_Localized: polish
+    m_Localized: "Z\u0142otow\u0142osa"
     m_Metadata:
       m_Items: []
   - m_Id: 62
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 3 nied\u017Awiedzie"
     m_Metadata:
       m_Items: []
   - m_Id: 63
-    m_Localized: polish
+    m_Localized: Masz mleko?
     m_Metadata:
       m_Items: []
   - m_Id: 64
-    m_Localized: polish
+    m_Localized: "Lasso \u2013 grupa zwierz\u0105t zawieraj\u0105ca krow\u0119 i
+      koz\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 65
-    m_Localized: polish
+    m_Localized: Siano tam
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: polish
+    m_Localized: "Lasso \u2013 grupa zwierz\u0105t sk\u0142adaj\u0105ca si\u0119
+      z krowy, kozy, konia i owcy"
     m_Metadata:
       m_Items: []
   - m_Id: 67
-    m_Localized: polish
+    m_Localized: Szynka pieczona w miodzie
     m_Metadata:
       m_Items: []
   - m_Id: 68
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 \u015Bwini\u0119
+      i nied\u017Awiedzia"
     m_Metadata:
       m_Items: []
   - m_Id: 69
-    m_Localized: polish
+    m_Localized: Samotny Wilk
     m_Metadata:
       m_Items: []
   - m_Id: 70
-    m_Localized: polish
+    m_Localized: "Lasso dok\u0142adnie 1 Wilka"
     m_Metadata:
       m_Items: []
   - m_Id: 71
-    m_Localized: polish
+    m_Localized: Stary MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z kurczaka, krowy, kozy, konia, psa, owcy i \u015Bwini"
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: polish
+    m_Localized: Fotofinisz
     m_Metadata:
       m_Items: []
   - m_Id: 74
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 2 konie"
     m_Metadata:
       m_Items: []
   - m_Id: 75
-    m_Localized: polish
+    m_Localized: Skarbonka
     m_Metadata:
       m_Items: []
   - m_Id: 76
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 \u015Bwini\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: polish
+    m_Localized: "\u015Awinka w kocyku"
     m_Metadata:
       m_Items: []
   - m_Id: 78
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 \u015Bwini\u0119
+      i owc\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 79
-    m_Localized: polish
+    m_Localized: "Du\u017Cy rozmiar"
     m_Metadata:
       m_Items: []
   - m_Id: 80
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 krow\u0119
+      i nied\u017Awiedzia"
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: polish
+    m_Localized: "Drapie\u017Cny"
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 nied\u017Awiedzia,
+      wilka i lisa"
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: polish
+    m_Localized: "Partnerzy wy\u015Bcigowi"
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 konia
+      i psa"
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: polish
+    m_Localized: "Trzy ma\u0142e \u015Bwinki"
     m_Metadata:
       m_Items: []
   - m_Id: 86
-    m_Localized: polish
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z 3 \u015Bwi\u0144 i 1 wilka"
     m_Metadata:
       m_Items: []
   - m_Id: 87
-    m_Localized: polish
+    m_Localized: "Wilk w owczej sk\xF3rze"
     m_Metadata:
       m_Items: []
   - m_Id: 88
-    m_Localized: polish
+    m_Localized: "Lasso \u2013 grupa zwierz\u0105t zawieraj\u0105ca wilka i owc\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 89
-    m_Localized: polish
+    m_Localized: Witamy w Wrangle Ranch!
     m_Metadata:
       m_Items: []
   - m_Id: 90
-    m_Localized: polish
+    m_Localized: "Ojej! Wygl\u0105da na to, \u017Ce krowa znowu si\u0119 wyrwa\u0142a"
     m_Metadata:
       m_Items: []
   - m_Id: 91
-    m_Localized: polish
+    m_Localized: "Kliknij i przeci\u0105gnij myszk\u0105, aby narysowa\u0107 okr\u0105g
+      wok\xF3\u0142 krowy!"
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: polish
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
-    m_Localized: polish
+    m_Localized: "Musisz okie\u0142zna\u0107 wystarczaj\u0105co du\u017Co zwierz\u0105t,
+      aby osi\u0105gn\u0105\u0107 cel punktowy, zanim sko\u0144czy si\u0119 czas."
     m_Metadata:
       m_Items: []
   - m_Id: 94
-    m_Localized: polish
+    m_Localized: "Mo\u017Cesz z\u0142apa\u0107 na lasso kilka zwierz\u0105t jednocze\u015Bnie,
+      aby zdoby\u0107 dodatkowe punkty i got\xF3wk\u0119!"
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: polish
+    m_Localized: "A teraz spr\xF3buj z\u0142apa\u0107 te dwa stworzenia na lasso!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
-    m_Localized: polish
+    m_Localized: "Ojej, uwa\u017Caj na drapie\u017Cniki! Stracisz punkty, je\u015Bli
+      z\u0142apiesz je na lasso ze swoimi zwierz\u0119tami."
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: polish
+    m_Localized: "Po zako\u0144czeniu dnia mo\u017Cemy wr\xF3ci\u0107 do stodo\u0142y
+      i wyda\u0107 ci\u0119\u017Cko zarobione pieni\u0105dze!"
     m_Metadata:
       m_Items: []
   - m_Id: 98
-    m_Localized: polish
+    m_Localized: To jest sklep.
     m_Metadata:
       m_Items: []
   - m_Id: 99
-    m_Localized: polish
+    m_Localized: "Tutaj mo\u017Cesz doda\u0107 nowe zwierz\u0119ta, kt\xF3re b\u0119dziesz
+      m\xF3g\u0142 tresowa\u0107 w ci\u0105gu dnia!"
     m_Metadata:
       m_Items: []
   - m_Id: 100
-    m_Localized: polish
+    m_Localized: "Mo\u017Cesz zobaczy\u0107 wszystkie zwierz\u0119ta, kt\xF3re mog\u0105
+      pojawi\u0107 si\u0119 w ci\u0105gu dnia, klikaj\u0105c przycisk w lewym g\xF3rnym
+      rogu"
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: polish
+    m_Localized: "Mo\u017Cesz r\xF3wnie\u017C doda\u0107 pot\u0119\u017Cne umiej\u0119tno\u015Bci,
+      kt\xF3re zapewni\u0105 Ci dodatkowe punkty podczas \u0142apania na lasso okre\u015Blonych
+      kombinacji zwierz\u0105t"
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: polish
+    m_Localized: "Na koniec mo\u017Cesz ulepsza\u0107 swoje zwierz\u0119ta, dzi\u0119ki
+      czemu b\u0119dziesz dostawa\u0142 wi\u0119cej punkt\xF3w i got\xF3wki!"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: polish
+    m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
-    m_Localized: polish
+    m_Localized: "Trafi\u0142e\u015B w siano..."
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: polish
+    m_Localized: "Okr\u0105g\u0142y:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 106
-    m_Localized: polish
+    m_Localized: Uruchom ponownie
     m_Metadata:
       m_Items: []
   - m_Id: 107
-    m_Localized: polish
+    m_Localized: Dom
     m_Metadata:
       m_Items: []
   - m_Id: 108
-    m_Localized: polish
+    m_Localized: Ranczo Wrangle
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: polish
+    m_Localized: Start
     m_Metadata:
       m_Items: []
   - m_Id: 110
-    m_Localized: polish
+    m_Localized: Seminarium
     m_Metadata:
       m_Items: []
   references:
