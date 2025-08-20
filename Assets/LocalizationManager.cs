@@ -24,7 +24,7 @@ public class LocalizationManager : MonoBehaviour
     private void OnEnable()
     {
         localPointsString.Arguments = new object[] { 0, 85 };
-        localPointsString.StringChanged += UpdatePoints;
+        //localPointsString.StringChanged += UpdatePoints;
         
         localTimeString.Arguments = new object[] { "45.0" };
         localTimeString.StringChanged += UpdateTime;

@@ -1,2 +1,20 @@
 fileFormatVersion: 2
 guid: 5d90c5c946393fd46bdb889b617dd2c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - titleText: {instanceID: 0}
+  - descriptionText: {instanceID: 0}
+  - priceText: {instanceID: 0}
+  - upgradeArt: {instanceID: 0}
+  - buttonFX: {instanceID: 0}
+  - hoverPopup: {instanceID: 0}
+  - descriptionText2: {instanceID: 0}
+  - cow: {instanceID: 0}
+  - goat: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

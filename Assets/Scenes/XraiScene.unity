@@ -11642,7 +11642,7 @@ MonoBehaviour:
   roundInProgress: 0
   playerReady: 0
   roundCompleted: 0
-  roundDuration: 45
+  roundDuration: 20
   predatorRoundFrequency: 3
   wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
   endRoundPrefab: {fileID: 3484454060116296803, guid: c01d5805210ba0c459e6a670098a123a, type: 3}
@@ -15868,10 +15868,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalsInDeck:
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
+  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
+  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
+  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   lassosPerRound: 5
   synergiesInDeck: []

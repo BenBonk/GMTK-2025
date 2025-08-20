@@ -14,6 +14,12 @@ public class AnimalShopItem : ShopItem
     private float animSpeed;
     private Coroutine animCo;
     public TMP_Text descriptionText2;
+
+
+    //remove this after trailer
+    public AnimalData cow;
+    public AnimalData goat;
+
     public override void Initialize()
     {
         // Bias: non-predators get weight 4, predators get weight 1
@@ -28,6 +34,10 @@ public class AnimalShopItem : ShopItem
         }
 
         chosenAnimal = weightedList[Random.Range(0, weightedList.Count)].animalData;
+
+        //remove this after trailer
+        chosenAnimal = Random.Range(0f, 1f) < 0.5f ? cow: goat;
+
         titleText.text = chosenAnimal.animalName.GetLocalizedString();
         priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;

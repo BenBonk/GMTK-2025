@@ -91,6 +91,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         localization = GameController.localizationManager;
+
+        //remove this after trailer
+        roundNumber = 10;
+        player.playerCurrency = 1000;
+
+
         if (isTesting)
         {
             roundDuration = 3;
@@ -126,6 +132,13 @@ public class GameManager : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 UpdateTimerDisplay();
             }
+        }
+
+
+        //remove this after trailer
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            pointsThisRound = roundsPointsRequirement[roundNumber];
         }
     }
 
@@ -264,6 +277,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreDisplay(double newPoints)
     {
+        Debug.Log($"Score raw: {newPoints}, formatted: {LassoController.FormatNumber(newPoints)}");
         scoreDisplay.text = $"POINTS: {LassoController.FormatNumber(newPoints)} / {LassoController.FormatNumber(roundsPointsRequirement[roundNumber])}";
         scoreDisplay.transform.localScale = Vector3.one * 1.1f;
         scoreDisplay.transform.localRotation = Quaternion.identity; // reset
@@ -285,6 +299,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdatecurrencyDisplay(double newcurrency)
     {
+        Debug.Log($"Currency raw: {newcurrency}, formatted: {LassoController.FormatNumber(newcurrency)}");
         currencyDisplay.text = $"CASH: {LassoController.FormatNumber(newcurrency)}";
         currencyDisplay.transform.localScale = Vector3.one * 1.1f;
         currencyDisplay.transform.localRotation = Quaternion.identity; // reset

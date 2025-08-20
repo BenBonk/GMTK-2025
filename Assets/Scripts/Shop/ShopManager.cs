@@ -59,6 +59,11 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             shopItems[i].GetComponent<SynergyShopItem>().SetInt(synergyIndexes[i]);
+            //remove this after trailer
+            if ((i ==2))
+            {
+                shopItems[i].GetComponent<SynergyShopItem>().SetInt(21);
+            }
         }
         foreach (var shopItem in shopItems)
         {

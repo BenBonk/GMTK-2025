@@ -590,6 +590,9 @@ MonoBehaviour:
   canPurchase: 1
   hoverPopup: {fileID: 455196304743373294}
   possibleAnimals: []
+  descriptionText2: {fileID: 0}
+  cow: {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
+  goat: {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
 --- !u!114 &1929844963313294119
 MonoBehaviour:
   m_ObjectHideFlags: 0
