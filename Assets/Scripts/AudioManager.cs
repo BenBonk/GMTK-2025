@@ -122,6 +122,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusicWithFadeOutOld(string newTrackName, float fadeOutDuration = 2f, bool loop = false)
     {
+        return;
         if (!musicDict.TryGetValue(newTrackName, out var newClip))
         {
             Debug.LogWarning($" Music track '{newTrackName}' not found!");
@@ -163,20 +164,9 @@ public class AudioManager : MonoBehaviour
         fadeOutRoutine = null;
     }
 
-    public void StopMusicImmediately()
-    {
-        currentMusicSource.Stop();
-        nextMusicSource.Stop();
-        fallbackPending = false;
-    }
-
-    public void SetMusicVolume(float volume)
-    {
-        currentMusicSource.volume = volume;
-
-    }
     public void PlayNextPlaylistTrack(float fadeOutDuration = -1f)
     {
+        return;
         if (playlistTrackNames.Count == 0) return;
 
         currentPlaylistIndex = (currentPlaylistIndex + 1) % playlistTrackNames.Count;
@@ -190,6 +180,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayPlaylistTrack(int index, float fadeOutDuration = -1f)
     {
+        return;
         if (playlistTrackNames.Count == 0 || index < 0 || index >= playlistTrackNames.Count)
         {
             Debug.LogWarning(" Invalid playlist index.");
@@ -205,6 +196,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayRandomPlaylistTrack(float fadeOutDuration = -1f)
     {
+        return;
         if (playlistTrackNames.Count == 0)
         {
             Debug.LogWarning(" Playlist is empty!");
