@@ -14395,7 +14395,7 @@ MonoBehaviour:
   releaseFrontFactor: 0.5
   tipTailDist: 0.35
   minArcDistance: 0.5
-  tipRadius: 0
+  tipRadius: 0.5
   tipUseForwardOffset: 1
   tipForwardLookback: 3
   debugDrawTip: 1
