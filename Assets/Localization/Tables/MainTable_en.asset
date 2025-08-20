@@ -20,7 +20,7 @@ MonoBehaviour:
     - rid: 241711563893112937
   m_TableData:
   - m_Id: 581425123328
-    m_Localized: 'POINTS: {0} / {1}'
+    m_Localized: 'POINTSS: {0} / {1}'
     m_Metadata:
       m_Items:
       - rid: 241711563893112937
