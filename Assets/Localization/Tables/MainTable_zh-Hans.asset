@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112942
   - m_Id: 12
-    m_Localized: "\u79EF\u5206\u5956\u52B1\uFF1A+"
+    m_Localized: "\u4F18\u70B9\uFF1A"
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: "\u6709\u6548\u5229\u76CA\uFF1A+"
+    m_Localized: "\u6709\u6548\u7684\u5229\u76CA\uFF1A"
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: "\u70B9\u6570\uFF1Ax"
+    m_Localized: "\u70B9\u6570:"
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: "\u591A\u91CD\u6709\u6548\uFF1Ax"
+    m_Localized: "\u591A\u91CD\u529F\u6548\uFF1A"
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -259,7 +259,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 58
-    m_Localized: Lazo un group de Animales que contiene una vaca y un pollo
+    m_Localized: "\u62C9\u4F50\u662F\u4E00\u7FA4\u52A8\u7269\uFF0C\u6709\u7A7A\u548C\u9A6C\u7403"
     m_Metadata:
       m_Items: []
   - m_Id: 59

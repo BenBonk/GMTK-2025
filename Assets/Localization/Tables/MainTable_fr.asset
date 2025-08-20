@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 12
-    m_Localized: 'Bonus de points : +'
+    m_Localized: 'Bonus de points :'
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: "Bonus en esp\xE8ces : +"
+    m_Localized: "Bonus en esp\xE8ces :"
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Points mult: x'
+    m_Localized: 'Points multiples :'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: "Tr\xE9sorerie mult: x"
+    m_Localized: "Tr\xE9sorerie multiple :"
     m_Metadata:
       m_Items: []
   - m_Id: 17

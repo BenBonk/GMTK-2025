@@ -76,7 +76,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 12
-    m_Localized: 'Bonus punktowy: +'
+    m_Localized: 'Bonus punktowy:'
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -84,15 +84,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: "Bonus pieni\u0119\u017Cny: +"
+    m_Localized: "Premia pieni\u0119\u017Cna:"
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: "Punkty mno\u017Cone: x"
+    m_Localized: "Punkty mno\u017C\u0105 si\u0119:"
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: "Mno\u017Cenie got\xF3wki: x"
+    m_Localized: "Mno\u017Cenie got\xF3wki:"
     m_Metadata:
       m_Items: []
   - m_Id: 17

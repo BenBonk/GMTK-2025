@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 12
-    m_Localized: "Bonificaci\xF3n de puntos: +"
+    m_Localized: "Bonificaci\xF3n de puntos:"
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: 'Bono en efectivo: +'
+    m_Localized: 'Bono en efectivo:'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Puntos mult: x'
+    m_Localized: 'Puntos multip:'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Efectivo multi: x'
+    m_Localized: 'Efectivo multi:'
     m_Metadata:
       m_Items: []
   - m_Id: 17

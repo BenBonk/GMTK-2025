@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112937
   - m_Id: 12
-    m_Localized: 'Points bonus: +'
+    m_Localized: 'Points bonus:'
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: 'Cash bonus: +'
+    m_Localized: 'Cash bonus:'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Points mult: x'
+    m_Localized: 'Points mult:'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Cash mult: x'
+    m_Localized: 'Cash mult:'
     m_Metadata:
       m_Items: []
   - m_Id: 17

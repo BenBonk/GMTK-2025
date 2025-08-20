@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 12
-    m_Localized: 'Punti bonus: +'
+    m_Localized: 'Punti bonus:'
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: 'Bonus in denaro: +'
+    m_Localized: 'Bonus in denaro:'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Punti moltiplicati: x'
+    m_Localized: 'Punti moltiplicati:'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Moltiplicatore di contanti: x'
+    m_Localized: 'Moltiplicatore di contanti:'
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84

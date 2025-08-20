@@ -76,7 +76,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112940
   - m_Id: 12
-    m_Localized: 'Punktebonus: +'
+    m_Localized: 'Punktebonus:'
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -84,15 +84,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: 'Bargeldbonus: +'
+    m_Localized: 'Bargeldbonus:'
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Punktemultiplikator: x'
+    m_Localized: 'Punktemultiplikator:'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Bargeldmultiplikator: x'
+    m_Localized: 'Bargeldmultiplikator:'
     m_Metadata:
       m_Items: []
   - m_Id: 17

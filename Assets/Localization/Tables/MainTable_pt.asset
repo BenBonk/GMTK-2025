@@ -75,7 +75,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112946
   - m_Id: 12
-    m_Localized: "B\xF4nus de pontos: +"
+    m_Localized: "B\xF4nus de pontos:"
     m_Metadata:
       m_Items: []
   - m_Id: 13
@@ -83,15 +83,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14
-    m_Localized: "B\xF4nus em dinheiro: +"
+    m_Localized: "B\xF4nus em dinheiro:"
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Pontos mult: x'
+    m_Localized: "Pontos m\xFAltiplos:"
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Multiplicador de dinheiro: x'
+    m_Localized: "Caixa m\xFAltiplo:"
     m_Metadata:
       m_Items: []
   - m_Id: 17
