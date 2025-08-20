@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Google Sheets Service
   m_EditorClassIdentifier: 
   m_ApiKey: 
-  m_ClientId: 163504070494-duktum3ela9b8pq5ol20cill5n8vnoot.apps.googleusercontent.com
-  m_ClientSecret: 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
+  m_ClientId: 
+  m_ClientSecret: 
   m_AuthenticationType: 1
   m_ApplicationName: Wrangle Ranch
   m_NewSheetProperties:
