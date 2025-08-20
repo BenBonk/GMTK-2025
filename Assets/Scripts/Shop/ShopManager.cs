@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -28,6 +29,7 @@ public class ShopManager : MonoBehaviour
     public bool cantPurchaseItem;
     public bool isTut;
     public TMP_Text cashText;
+    public LocalizedString cashLocalString;
     //continue
 
     private void Start()
@@ -72,7 +74,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateCashText()
     {
-        cashText.text = "CASH: " + player.playerCurrency; 
+        cashText.text = cashLocalString.GetLocalizedString() + LassoController.FormatNumber(player.playerCurrency);
     }
 
     public void UpdateSynergies()
