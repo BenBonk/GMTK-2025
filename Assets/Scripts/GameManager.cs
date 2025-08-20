@@ -206,7 +206,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // wait before next
 
         // Second message
-        localization.localPointsString.Arguments[0] = endDayCash;
+        localization.localPointsString.Arguments[0] = pointsThisRound;
         localization.localPointsString.RefreshString();
         DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");
@@ -265,11 +265,43 @@ public class GameManager : MonoBehaviour
     private void UpdateScoreDisplay(double newPoints)
     {
         scoreDisplay.text = $"POINTS: {LassoController.FormatNumber(newPoints)} / {LassoController.FormatNumber(roundsPointsRequirement[roundNumber])}";
+        scoreDisplay.transform.localScale = Vector3.one * 1.1f;
+        scoreDisplay.transform.localRotation = Quaternion.identity; // reset
+
+        float angle = UnityEngine.Random.Range(-10f, 10f); 
+
+        Sequence pulse = DOTween.Sequence();
+        pulse.Append(scoreDisplay.transform.DOScale(1.10f, 0.15f).SetEase(Ease.OutBack));
+        pulse.Append(scoreDisplay.transform.DOShakeRotation(
+            duration: 0.15f,
+            strength: new Vector3(0f, 0f, 6f), 
+            vibrato: 5,
+            randomness: 90,
+            fadeOut: true
+        ));
+        pulse.Append(scoreDisplay.transform.DOScale(1f, 0.2f).SetEase(Ease.OutExpo));
+        pulse.Join(scoreDisplay.transform.DOLocalRotate(Vector3.zero, 0.2f, RotateMode.Fast));
     }
 
     private void UpdatecurrencyDisplay(double newcurrency)
     {
         currencyDisplay.text = $"CASH: {LassoController.FormatNumber(newcurrency)}";
+        currencyDisplay.transform.localScale = Vector3.one * 1.1f;
+        currencyDisplay.transform.localRotation = Quaternion.identity; // reset
+
+        float angle = UnityEngine.Random.Range(-10f, 10f);
+
+        Sequence pulse = DOTween.Sequence();
+        pulse.Append(currencyDisplay.transform.DOScale(1.10f, 0.15f).SetEase(Ease.OutBack));
+        pulse.Append(currencyDisplay.transform.DOShakeRotation(
+            duration: 0.15f,
+            strength: new Vector3(0f, 0f, 6f),
+            vibrato: 5,
+            randomness: 90,
+            fadeOut: true
+        ));
+        pulse.Append(currencyDisplay.transform.DOScale(1f, 0.2f).SetEase(Ease.OutExpo));
+        pulse.Join(currencyDisplay.transform.DOLocalRotate(Vector3.zero, 0.2f, RotateMode.Fast));
     }
 
     private void UpdateTimerDisplay()

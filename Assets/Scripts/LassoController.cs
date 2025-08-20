@@ -4,11 +4,30 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LassoController : MonoBehaviour
 {
     [HideInInspector] public LineRenderer lineRenderer;
     public GameObject lassoPrefab;
+
+
+    [Header("Lasso Particles")]
+    public ParticleSystem drawParticles;                
+    [Range(0f, 5f)] public float particlesPerMeter = 0.4f; // density
+    [Min(0)] public int particlesCap = 60;               // hard cap
+    [Min(0f)] public float particleOutwardSpeed = 1.5f;  // initial speed outward
+    [Range(0f, 45f)] public float particleOutwardJitterDeg = 8f; // random spread
+    [Range(0f, 1f)] public float particleOutwardBias = 0.7f; // 0=random, 1=fully outward
+    [Min(1)] public int burstMin = 1;                  // particles per burst (min)
+    [Min(1)] public int burstMax = 1;                  // particles per burst (max)
+    [Range(0.5f, 2f)] public float spacingJitter = 1.3f; 
+    [Header("Tether Particles")]
+    public bool burstOnTether = true;
+    [Range(0f, 5f)] public float tetherParticlesPerMeterScale = 0.6f;
+    [Min(0)] public int tetherParticlesCap = 40;
+
+
     public int smoothingSubdivisions; // Higher = smoother
     public float pointDistanceThreshold; // Minimum distance between points
     public float closeThreshold = 0.5f; // Release within this distance to close
@@ -152,9 +171,30 @@ public class LassoController : MonoBehaviour
             {
                 lineRenderer.positionCount = 0;
             }
+
+            /*
+            if (drawParticles != null)
+            {
+                // Move particle system to mouse position
+                drawParticles.transform.position = mouseWorld;
+
+                // Align particle direction with lasso forward vector
+                if (rawPoints.Count > 1)
+                {
+                    Vector2 forward = (rawPoints[rawPoints.Count - 1] - rawPoints[rawPoints.Count - 2]).normalized;
+                    float angle = Mathf.Atan2(forward.y, forward.x) * Mathf.Rad2Deg;
+
+                    // Rotate particle system
+                    drawParticles.transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
+                }
+
+                // Make sure it’s playing
+                if (!drawParticles.isPlaying)
+                    drawParticles.Play();
+            }*/
         }
 
-        // debug ring (matches logical center)
+        // debug tip
         if (debugDrawTip && debugTipCenterValid)
         {
             int segments = 24;
@@ -212,34 +252,76 @@ public class LassoController : MonoBehaviour
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
         smoothClosed.Add(smoothClosed[0]);
 
-        // Visual points + bottom-center insertion (unchanged)
-        List<Vector3> visualPoints = new List<Vector3>(smoothClosed);
+
+
+        var visualPoints = new List<Vector3>(smoothClosed);
+        lineRenderer.positionCount = visualPoints.Count;
+        lineRenderer.SetPositions(visualPoints.ToArray());
+
+        // Compute bottom-of-lasso and bottom-center
         float zDepth = Mathf.Abs(Camera.main.transform.position.z - lineRenderer.transform.position.z);
         Vector3 screenBottomCenter = new Vector3(Screen.width / 2f, 0, zDepth);
         Vector3 bottomCenterWorld = Camera.main.ScreenToWorldPoint(screenBottomCenter);
         bottomCenterWorld.z = lineRenderer.transform.position.z;
 
-        int closestIndex = 0;
-        float minDistance = float.MaxValue;
+        // “bottom of the lasso” = lowest Y point
+        int bottomIdx = 0;
+        float minY = float.MaxValue;
         for (int i = 0; i < smoothClosed.Count; i++)
         {
-            float dist = Vector2.Distance(smoothClosed[i], bottomCenterWorld);
-            if (dist < minDistance)
+            if (smoothClosed[i].y < minY)
             {
-                minDistance = dist;
-                closestIndex = i;
+                minY = smoothClosed[i].y;
+                bottomIdx = i;
             }
         }
-        visualPoints.Insert(closestIndex + 1, bottomCenterWorld);
+        Vector3 bottomOfLassoWorld = smoothClosed[bottomIdx];
+        bottomOfLassoWorld.z = bottomCenterWorld.z; // keep same Z as loop
+                                                    // Make a separate tether 
+        GameObject tetherGO = new GameObject("LassoTether");
+        var tether = tetherGO.AddComponent<LineRenderer>();
+        tether.useWorldSpace = false; // use local space since we're parenting
 
-        lineRenderer.positionCount = visualPoints.Count;
-        lineRenderer.SetPositions(visualPoints.ToArray());
+        // Copy styling from the main lasso
+        CopyLineRendererStyle(lineRenderer, tether);
 
         // Group and reparent
         Vector3 groupPosition = CalculateCentroidOfLasso();
         GameObject group = new GameObject("LassoGroup");
         group.transform.position = groupPosition;
         lineRenderer.transform.SetParent(group.transform);
+        tether.transform.SetParent(group.transform, false);
+
+        // Convert to local positions relative to the group
+        Vector3 localBottomOfLasso = group.transform.InverseTransformPoint(bottomOfLassoWorld);
+        Vector3 localBottomCenter = group.transform.InverseTransformPoint(bottomCenterWorld);
+
+        // Two-point segment from bottom of lasso to bottom-center of screen
+        tether.positionCount = 2;
+        tether.SetPosition(0, localBottomOfLasso);
+        tether.SetPosition(1, localBottomCenter);
+
+        // Push tether slightly behind the lasso in Z so it renders underneath
+        Vector3 tetherPos = tether.transform.position;
+        tetherPos.z = lineRenderer.transform.position.z + 0.01f;
+        tether.transform.position = tetherPos;
+
+        PrepareParticlesForBurst(clear: true);
+
+        // Burst along the loop
+        BurstParticlesAlongLoop(smoothClosed);
+
+        // Burst along the tether
+        if (burstOnTether)
+        {
+            BurstParticlesAlongSegment(
+                bottomOfLassoWorld,
+                bottomCenterWorld,
+                groupPosition,                      
+                tetherParticlesPerMeterScale,       
+                tetherParticlesCap                 
+            );
+        }
 
         // Select objects inside
         List<GameObject> lassoedObjects = SelectObjectsInLasso();
@@ -271,9 +353,25 @@ public class LassoController : MonoBehaviour
     private IEnumerator ShowFeedbackSequence((double pointBonus, double pointMult, double currencyBonus, double currencyMult) result)
     {
         float zDepth = Mathf.Abs(Camera.main.transform.position.z);
-        Vector3 screenBase = new Vector3(Screen.width / 2f, 100f, zDepth);
-        Vector3 baseWorld = Camera.main.ScreenToWorldPoint(screenBase);
+
+        float xSpread = 0.12f; // max % of screen width
+        // pick a random in [0,1], square it for bias, reapply sign
+        float u = Random.value;            // 0–1
+        float power = 1.4f; // closer to 1.0 = less bias, 2.0 = stronger bias
+        float biased = Mathf.Pow(u, power);
+        float sign = Random.value < 0.5f ? -1f : 1f;
+        float randX = sign * biased * Screen.width * xSpread;
+
+        Vector3 bottomCenter = new Vector3(Screen.width / 2f, 100f, zDepth); // fixed height above bottom
+        Vector3 screenPos = new Vector3(bottomCenter.x + randX, bottomCenter.y, zDepth);
+
+        Vector3 baseWorld = Camera.main.ScreenToWorldPoint(screenPos);
         baseWorld.z = 0f;
+
+        // === tilt toward left/right ===
+        float tiltMax = 10f;
+        float normalizedX = randX / (Screen.width * xSpread);
+        float angle = Mathf.Lerp(0f, tiltMax, Mathf.Abs(normalizedX));
 
         List<GameObject> createdGroups = new();
 
@@ -289,8 +387,10 @@ public class LassoController : MonoBehaviour
         if (true)
         {
             Vector3 offset = new Vector3(0, row++ * 1f, 0);
+
             GameObject group = Instantiate(feedbackTextGroupPrefab, baseWorld + offset, Quaternion.identity);
             createdGroups.Add(group);
+            group.transform.rotation = Quaternion.Euler(0, 0, normalizedX < 0 ? angle : -angle);
 
             var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
             var multText = bonusText.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
@@ -301,6 +401,9 @@ public class LassoController : MonoBehaviour
                 localization.localPointsPopup.RefreshString();
                 bonusText.text = localization.pointsPopup;
                 bonusText.color = result.pointBonus >= 0 ? pointBonusColor : negativePointBonusColor;
+                var bonusMat = bonusText.fontMaterial;
+                bonusMat.SetColor("_GlowColor", bonusText.color);
+                bonusMat.SetFloat("_GlowPower", result.pointBonus >= 0 ? .02f : 0f);
             }
 
             if (multText != null)
@@ -309,6 +412,15 @@ public class LassoController : MonoBehaviour
                 {
                     multText.text = $"x{FormatMult(result.pointMult)}";
                     multText.color = result.pointMult > 1f ? positiveMultColor : negativeMultColor;
+                    var multMat = multText.fontMaterial;
+                    multMat.SetColor("_GlowColor", multText.color);
+
+                    float clampedMult = Mathf.Clamp((float)result.pointMult, 0f, 10f);
+                    float t = clampedMult / 10f;
+                    t = Mathf.SmoothStep(0f, 1f, t);
+                    float glowPower = Mathf.Lerp(0.05f, 0.2f, t);
+                    multMat.SetFloat("_GlowPower", glowPower);
+
                     multText.gameObject.SetActive(false); // Hide initially
                 }
                 else
@@ -322,6 +434,15 @@ public class LassoController : MonoBehaviour
             else
                 AudioManager.Instance.PlaySFX("no_points");
 
+            if (TutorialManager._instance != null)
+            {
+                TutorialManager._instance.pointsThisRound += result.pointBonus;
+            }
+            else
+            {
+                GameController.gameManager.pointsThisRound += result.pointBonus;
+            }
+
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();
             pop.Append(group.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
@@ -334,21 +455,6 @@ public class LassoController : MonoBehaviour
                 {
                     multPointsShown = true;
                     ShowMultiplierPopIn(multText, bonusText, result.pointBonus, result.pointMult, true);
-                }
-
-                if (bonusPointsShown && multPointsShown)
-                {
-                    double totalPoints = Math.Round(result.pointBonus * result.pointMult);
-                    if (TutorialManager._instance != null)
-                    {
-                        TutorialManager._instance.pointsThisRound += totalPoints;
-                    }
-                    else
-                    {
-                        GameController.gameManager.pointsThisRound += totalPoints;
-                    }
-
-                    Debug.Log($"Points added: {totalPoints}");
                 }
             });
 
@@ -368,8 +474,10 @@ public class LassoController : MonoBehaviour
         if (result.currencyBonus != 0)
         {
             Vector3 offset = new Vector3(0, row++ * 1f, 0);
+
             GameObject group = Instantiate(feedbackTextGroupPrefab, baseWorld + offset, Quaternion.identity);
             createdGroups.Add(group);
+            group.transform.rotation = Quaternion.Euler(0, 0, normalizedX < 0 ? angle : -angle);
 
             var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
             var multText = bonusText.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
@@ -380,6 +488,9 @@ public class LassoController : MonoBehaviour
                 localization.localCashPopup.RefreshString();
                 bonusText.text = localization.cashPopup;
                 bonusText.color = result.currencyBonus >= 0 ? cashBonusColor : negativeCashBonusColor;
+                var bonusMat = bonusText.fontMaterial;
+                bonusMat.SetColor("_GlowColor", bonusText.color);
+                bonusMat.SetFloat("_GlowPower", result.pointBonus >= 0 ? .02f : 0f);
             }
 
             if (multText != null)
@@ -388,6 +499,15 @@ public class LassoController : MonoBehaviour
                 {
                     multText.text = $"x{FormatMult(result.currencyMult)}";
                     multText.color = result.currencyMult > 1f ? positiveMultColor : negativeMultColor;
+                    var multMat = multText.fontMaterial;
+                    multMat.SetColor("_GlowColor", multText.color);
+
+                    float clampedMult = Mathf.Clamp((float)result.currencyMult, 0f, 10f);
+                    float t = clampedMult / 10f;
+                    t = Mathf.SmoothStep(0f, 1f, t);
+                    float glowPower = Mathf.Lerp(0.05f, 0.2f, t);
+                    multMat.SetFloat("_GlowPower", glowPower);
+
                     multText.gameObject.SetActive(false); // Hide initially
                 }
                 else
@@ -402,6 +522,8 @@ public class LassoController : MonoBehaviour
             else
                 AudioManager.Instance.PlaySFX("no_cash");
 
+            GameController.player.playerCurrency += result.currencyBonus;
+
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();
             pop.Append(group.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
@@ -412,15 +534,9 @@ public class LassoController : MonoBehaviour
 
                 if (!multCashShown && multText != null)
                 {
+                    // multiplier pop-in exists, so update after
                     multCashShown = true;
                     ShowMultiplierPopIn(multText, bonusText, result.currencyBonus, result.currencyMult, false);
-                }
-
-                if (bonusCashShown && multCashShown)
-                {
-                    double totalCash = Math.Round(result.currencyBonus * result.currencyMult);
-                    GameController.player.playerCurrency += totalCash;
-                    Debug.Log($"Cash added: {totalCash}");
                 }
             });
 
@@ -486,12 +602,17 @@ public class LassoController : MonoBehaviour
             localization.localPointsPopup.Arguments[0] = FormatNumber(newTotal);
             localization.localPointsPopup.RefreshString();
             bonusText.text = localization.pointsPopup;
+            //subtract base since we already added on initial popup
+            GameController.gameManager.pointsThisRound += newTotal - baseValue;
+
         }
         else
         {
             localization.localCashPopup.Arguments[0] = FormatNumber(newTotal);
             localization.localCashPopup.RefreshString();
             bonusText.text = localization.cashPopup;
+            //subtract base since we already added on initial popup
+            GameController.player.playerCurrency += newTotal - baseValue;
         }
 
         if (multiplier > 1f)
@@ -513,12 +634,23 @@ public class LassoController : MonoBehaviour
         multText.transform.localScale = Vector3.zero;
         multText.transform.localRotation = Quaternion.identity;
 
+        // Scale size based on multiplier
+        float minScale = 1.0f;
+        float maxScale = 1.5f;
+        float maxMult = 50f;
+
+        float clampedMult = Mathf.Clamp((float)multiplier, 1f, maxMult);
+        float t = (clampedMult - 1f) / (maxMult - 1f);
+        float targetScale = Mathf.Lerp(minScale, maxScale, t);
+
+        multText.transform.localScale = Vector3.one * targetScale;
+
         Sequence multPop = DOTween.Sequence();
-        multPop.Append(multText.transform.DOScale(1.2f, 0.1f).SetEase(Ease.OutBack));
+        multPop.Append(multText.transform.DOScale(targetScale * 1.2f, 0.1f).SetEase(Ease.OutBack));
         multPop.Join(multText.transform.DOLocalRotate(new Vector3(0, 0, -15f), 0.05f));
         multPop.Append(multText.transform.DOLocalRotate(new Vector3(0, 0, 15f), 0.1f));
         multPop.Append(multText.transform.DOLocalRotate(Vector3.zero, 0.05f));
-        multPop.Append(multText.transform.DOScale(1f, 0.1f).SetEase(Ease.OutCubic));
+        multPop.Append(multText.transform.DOScale(targetScale, 0.1f).SetEase(Ease.OutCubic));
     }
 
     // ===== Geometry/utility =====
@@ -859,30 +991,212 @@ public class LassoController : MonoBehaviour
     }
 
     float GetScreenWorldAreaThreshold()
-{
-    float z = Mathf.Abs(Camera.main.transform.position.z);
-    Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
-    Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
-    float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
-    return screenWorldArea * 0.004f;   
-}
+    {
+        float z = Mathf.Abs(Camera.main.transform.position.z);
+        Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
+        Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
+        float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
+        return screenWorldArea * 0.004f;
+    }
 
-bool TryComputeCandidateLoopArea(int hitIndex, out float area)
-{
-    area = 0f;
-    int count = rawPoints.Count - hitIndex;
-    if (count < 3) return false;
+    bool TryComputeCandidateLoopArea(int hitIndex, out float area)
+    {
+        area = 0f;
+        int count = rawPoints.Count - hitIndex;
+        if (count < 3) return false;
 
-    var loop = new List<Vector2>(count + 1);
-    for (int i = hitIndex; i < rawPoints.Count; i++) loop.Add(rawPoints[i]);
+        var loop = new List<Vector2>(count + 1);
+        for (int i = hitIndex; i < rawPoints.Count; i++) loop.Add(rawPoints[i]);
 
-    PruneConsecutiveDuplicates(loop, 1e-8f);
-    if (loop.Count < 3) return false;
+        PruneConsecutiveDuplicates(loop, 1e-8f);
+        if (loop.Count < 3) return false;
 
-    if ((loop[loop.Count - 1] - loop[0]).sqrMagnitude > 1e-6f)
-        loop.Add(loop[0]);
+        if ((loop[loop.Count - 1] - loop[0]).sqrMagnitude > 1e-6f)
+            loop.Add(loop[0]);
 
-    area = CalculatePolygonAreaNormalized(loop);
-    return true;
-}
+        area = CalculatePolygonAreaNormalized(loop);
+        return true;
+    }
+
+    void CopyLineRendererStyle(LineRenderer src, LineRenderer dst)
+    {
+        dst.material = src.material;
+        dst.widthMultiplier = src.widthMultiplier;
+        dst.widthCurve = src.widthCurve;
+        dst.numCornerVertices = src.numCornerVertices;
+        dst.numCapVertices = src.numCapVertices;
+        dst.textureMode = src.textureMode;
+        dst.alignment = src.alignment;
+        dst.colorGradient = src.colorGradient;
+        dst.shadowCastingMode = src.shadowCastingMode;
+        dst.receiveShadows = src.receiveShadows;
+        dst.sortingLayerID = src.sortingLayerID;
+        dst.sortingOrder = src.sortingOrder;
+    }
+
+    void BurstParticlesAlongLoop(IList<Vector3> loop)
+    {
+        if (drawParticles == null || particlesPerMeter <= 0f) return;
+        if (loop == null || loop.Count < 2) return;
+
+        var main = drawParticles.main;
+        main.simulationSpace = ParticleSystemSimulationSpace.World;
+
+        // clear existing
+        drawParticles.Clear(false);
+        if (!drawParticles.isPlaying) drawParticles.Play(false);
+
+        //total length
+        float length = 0f;
+        for (int i = 1; i < loop.Count; i++)
+            length += Vector3.Distance(loop[i - 1], loop[i]);
+
+        int targetCount = Mathf.Min(particlesCap, Mathf.CeilToInt(length * particlesPerMeter));
+        if (targetCount <= 0 || length <= 1e-5f) return;
+
+        // --- build distances 
+        int bMin = Mathf.Max(1, burstMin);
+        int bMax = Mathf.Max(bMin, burstMax);
+
+        float expectedSpacing = length / Mathf.Max(1, targetCount);
+        float jitter = Mathf.Clamp(spacingJitter, 0.5f, 2f);
+
+        List<float> emitDistances = new List<float>(targetCount);
+        float next = UnityEngine.Random.Range(expectedSpacing / jitter, expectedSpacing * jitter);
+
+        while (emitDistances.Count < targetCount && next <= length)
+        {
+            // push one burst event
+            emitDistances.Add(next);
+            next += UnityEngine.Random.Range(expectedSpacing / jitter, expectedSpacing * jitter);
+        }
+        if (emitDistances.Count == 0) return;
+
+        // centroid to decide "outward" 
+        Vector3 centroid = Vector3.zero;
+        for (int i = 0; i < loop.Count; i++) centroid += loop[i];
+        centroid /= loop.Count;
+
+        // place bursts
+        int distIdx = 0;
+        float traveled = 0f;
+
+        for (int i = 0; i < loop.Count - 1 && distIdx < emitDistances.Count; i++)
+        {
+            Vector3 a = loop[i];
+            Vector3 b = loop[i + 1];
+            Vector3 seg = b - a;
+            float segLen = seg.magnitude;
+            if (segLen < 1e-4f) { continue; }
+
+            Vector3 dir = seg / segLen;            // tangent
+            Vector3 n = new Vector3(-dir.y, dir.x, 0f); // left normal
+            if (Vector3.Dot(n, (a - centroid)) < 0f) n = -n; // flip to outward
+
+            // place all emits 
+            while (distIdx < emitDistances.Count && emitDistances[distIdx] <= traveled + segLen)
+            {
+                float dAlong = emitDistances[distIdx] - traveled;
+                Vector3 p = a + dir * dAlong;
+
+                int burstSize = UnityEngine.Random.Range(bMin, bMax + 1);
+                int remaining = targetCount - (distIdx); 
+                burstSize = Mathf.Min(burstSize, remaining);
+
+                for (int k = 0; k < burstSize; k++)
+                {
+                    // random 2D unit vector
+                    Vector2 rv = UnityEngine.Random.insideUnitCircle.normalized;
+                    Vector3 randDir = new Vector3(rv.x, rv.y, 0f);
+
+                    // bias toward outward normal
+                    float t = Mathf.Clamp01(particleOutwardBias);
+                    Vector3 outDir = (n * t + randDir * (1f - t));
+                    if (outDir.sqrMagnitude < 1e-6f) outDir = n;
+                    outDir.Normalize();
+
+                    // small angular wobble
+                    if (particleOutwardJitterDeg > 0f)
+                    {
+                        float ang = UnityEngine.Random.Range(-particleOutwardJitterDeg, particleOutwardJitterDeg) * Mathf.Deg2Rad;
+                        outDir = Rotate2D(outDir, ang);
+                    }
+
+                    float speed = particleOutwardSpeed * UnityEngine.Random.Range(0.85f, 1.15f);
+
+                    var ep = new ParticleSystem.EmitParams
+                    {
+                        position = p,
+                        velocity = outDir * speed,
+                        applyShapeToPosition = false
+                    };
+                    drawParticles.Emit(ep, 1);
+                }
+
+                distIdx++;
+            }
+
+            traveled += segLen;
+        }
+    }
+
+    void BurstParticlesAlongSegment(Vector3 a, Vector3 b, Vector3 outwardRef, float densityScale, int cap)
+    {
+        if (!drawParticles || particlesPerMeter <= 0f) return;
+
+        float segLen = Vector3.Distance(a, b);
+        if (segLen <= 1e-5f) return;
+
+        int target = Mathf.Min(cap, Mathf.CeilToInt(segLen * particlesPerMeter * Mathf.Max(0f, densityScale)));
+        if (target <= 0) return;
+
+        Vector3 dir = (b - a) / segLen;
+        Vector3 n = new Vector3(-dir.y, dir.x, 0f); // left normal
+
+        // Flip normal to point away from outwardRef (midpoint heuristic)
+        Vector3 mid = (a + b) * 0.5f;
+        if (Vector3.Dot(n, (mid - outwardRef)) < 0f) n = -n;
+
+        float spacing = segLen / target;
+        float d = 0f;
+
+        for (int i = 0; i < target; i++)
+        {
+            Vector3 p = a + dir * d;
+
+            // random unit direction (mostly random, biased outward)
+            Vector2 rv = UnityEngine.Random.insideUnitCircle.normalized;
+            Vector3 rand = new Vector3(rv.x, rv.y, 0f);
+            Vector3 outDir = Vector3.Lerp(rand, n, particleOutwardBias).normalized;
+
+            if (particleOutwardJitterDeg > 0f)
+                outDir = Rotate2D(outDir, UnityEngine.Random.Range(-particleOutwardJitterDeg, particleOutwardJitterDeg) * Mathf.Deg2Rad);
+
+            var ep = new ParticleSystem.EmitParams
+            {
+                position = p,
+                velocity = outDir * particleOutwardSpeed,
+                applyShapeToPosition = false
+            };
+            drawParticles.Emit(ep, 1);
+
+            d += spacing;
+        }
+    }
+
+    static Vector3 Rotate2D(Vector3 v, float radians)
+    {
+        float c = Mathf.Cos(radians), s = Mathf.Sin(radians);
+        return new Vector3(v.x * c - v.y * s, v.x * s + v.y * c, v.z);
+    }
+
+    void PrepareParticlesForBurst(bool clear)
+    {
+        if (!drawParticles) return;
+        var main = drawParticles.main;
+        main.simulationSpace = ParticleSystemSimulationSpace.World; // stays in world
+        if (clear) drawParticles.Clear(false);
+        if (!drawParticles.isPlaying) drawParticles.Play(false);
+    }
+
 }

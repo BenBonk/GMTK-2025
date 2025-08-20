@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 318ada237789186458a274d59028a36f
+guid: 18efb92df78a3c84f8d671d00f4904d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7986654248832738406
-    second: LassoTexture_0
+      213: 4723773857567925805
+    second: CircleSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,12 +37,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LassoTexture_0
+      name: CircleSprite_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 24
-        height: 2
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9bd57a9644b92190800000000000000
-      internalID: -7986654248832738406
+      spriteID: d26ec9bbb473e8140800000000000000
+      internalID: 4723773857567925805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleSprite_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6aa08007a8d22f40872a93feff8b3d3
+      internalID: -396753369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleSprite_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 3
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119318a08debb28479ddf239ccb62fee
+      internalID: 514798098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CircleSprite_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 4
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db11cc94843f6274c88487f1ae29695f
+      internalID: 1821243063
       vertices: []
       indices: 
       edges: []
@@ -138,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1046fd297ce54ed4bb8880d614cae791
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +214,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LassoTexture_0: -7986654248832738406
+      CircleSprite_0: 4723773857567925805
+      CircleSprite_1: -396753369
+      CircleSprite_2: 514798098
+      CircleSprite_3: 1821243063
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
