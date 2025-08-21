@@ -752,7 +752,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7b084c6fc51ec3e49a1eb6c9ec9002c7, type: 3}
     volume: 1
   - name: no_cash_mult
-    clip: {fileID: 8300000, guid: 8cf13afb97a7b9349b09aa84fd2ceecf, type: 3}
+    clip: {fileID: 8300000, guid: 3e59b76362dd62947baa83c187802328, type: 3}
     volume: 1
   - name: barn_door
     clip: {fileID: 8300000, guid: 3779055c58eddff4dba964f99a2e9448, type: 3}
@@ -2540,6 +2540,7 @@ MonoBehaviour:
   localAnimalLevelManager: {fileID: 1472841081}
   localPredatorSelect: {fileID: 0}
   localDescriptionManager: {fileID: 0}
+  localLocalizationManager: {fileID: 0}
 --- !u!4 &1594076252
 Transform:
   m_ObjectHideFlags: 0

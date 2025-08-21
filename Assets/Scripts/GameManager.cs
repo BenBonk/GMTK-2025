@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public bool isTesting;
     
     public Player player;
-    public int[] roundsPointsRequirement;
+    public double startingPointRequirement = 65;
     public int roundNumber;
     public bool roundInProgress;
     public bool playerReady;
@@ -68,8 +68,8 @@ public class GameManager : MonoBehaviour
             {
                 _pointsThisRound = value;
                 OnPointsChanged?.Invoke(_pointsThisRound);
-                localization.localPointsString.Arguments[0] = pointsThisRound;
-                localization.localPointsString.Arguments[1] = roundsPointsRequirement[roundNumber];
+                localization.localPointsString.Arguments[0] = LassoController.FormatNumber(pointsThisRound);
+                localization.localPointsString.Arguments[1] = LassoController.FormatNumber(GetPointsRequirement());
                 localization.localPointsString.RefreshString();
             }
         }
@@ -95,15 +95,6 @@ public class GameManager : MonoBehaviour
         {
             roundDuration = 3;
             player.playerCurrency = 10000;
-        }
-        else
-        {
-            for (int i = 0; i < roundsPointsRequirement.Length; i++)
-            {
-                float rawScore = 65 * Mathf.Pow(pointsRequirementGrowthRate, i);
-                int roundedToFive = Mathf.RoundToInt(rawScore / 5f) * 5;
-                roundsPointsRequirement[i] = roundedToFive;
-            }   
         }
         elapsedTime = 0;
         //lassosUsed = 0;
@@ -168,7 +159,7 @@ public class GameManager : MonoBehaviour
 
         //UNCOMMENT BELOW FOR PROD
 
-        if (pointsThisRound < roundsPointsRequirement[roundNumber])
+        if (pointsThisRound < GetPointsRequirement())
         {
             //GameOver
             roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
@@ -181,10 +172,17 @@ public class GameManager : MonoBehaviour
         StartCoroutine(EndRoundRoutine());
     }
 
+    public double GetPointsRequirement()
+    {
+        double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, roundNumber);
+        return Math.Round(value / 5.0) * 5.0;
+    }
+
+
     IEnumerator CheckIfStillDead()
     {
         yield return new WaitForSeconds(2);
-        if (pointsThisRound >= roundsPointsRequirement[roundNumber])
+        if (pointsThisRound >= GetPointsRequirement())
         {
             deathPanel.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
             GameController.predatorSelect.darkCover.DOFade(0f, 0.5f);
@@ -264,7 +262,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreDisplay(double newPoints)
     {
-        scoreDisplay.text = $"POINTS: {LassoController.FormatNumber(newPoints)} / {LassoController.FormatNumber(roundsPointsRequirement[roundNumber])}";
+        scoreDisplay.text = $"POINTS: {LassoController.FormatNumber(newPoints)} / {LassoController.FormatNumber(GetPointsRequirement())}";
         scoreDisplay.transform.localScale = Vector3.one * 1.1f;
         scoreDisplay.transform.localRotation = Quaternion.identity; // reset
 
