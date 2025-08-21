@@ -93,6 +93,8 @@ public class GameManager : MonoBehaviour
         localization = GameController.localizationManager;
         if (isTesting)
         {
+            pointsRequirementGrowthRate = 0;
+            startingPointRequirement = 0;
             roundDuration = 3;
             player.playerCurrency = 10000;
         }

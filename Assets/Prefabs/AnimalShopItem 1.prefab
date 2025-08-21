@@ -425,7 +425,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &5744103828992790376
 GameObject:
@@ -461,8 +461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000079274, y: -6}
-  m_SizeDelta: {x: 275.11, y: 33.16}
+  m_AnchoredPosition: {x: 0.0000079274, y: -5.0946}
+  m_SizeDelta: {x: 275.11, y: 89.629}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5727547022982048739
 CanvasRenderer:
@@ -492,9 +492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Points: 100
-
-    Cash: 10 '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   m_sharedMaterial: {fileID: -2546489003944781649, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
@@ -524,9 +522,9 @@ MonoBehaviour:
   m_fontSize: 23.74
   m_fontSizeBase: 23.74
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
