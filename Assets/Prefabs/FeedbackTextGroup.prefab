@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 808111975977770490}
   - component: {fileID: 1911014316829746077}
   - component: {fileID: 366185970759350959}
+  - component: {fileID: 632633171635708953}
   m_Layer: 5
   m_Name: BonusText
   m_TagString: Untagged
@@ -228,6 +229,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &632633171635708953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742783953725697025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterialOverride: {fileID: 2100000, guid: e968795b2b479984eb740066e46cf9e5, type: 2}
+  localMaterialOverride: {fileID: 2100000, guid: 0d44fd50c1600d343b9bc477b0f5e603, type: 2}
 --- !u!1 &4757389553327569001
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +255,7 @@ GameObject:
   - component: {fileID: 4829172429794478240}
   - component: {fileID: 4114019628727834238}
   - component: {fileID: 8585925529416273117}
+  - component: {fileID: 3787523792527387011}
   m_Layer: 5
   m_Name: MultiplierText
   m_TagString: Untagged
@@ -419,3 +435,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &3787523792527387011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757389553327569001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterialOverride: {fileID: 2100000, guid: e968795b2b479984eb740066e46cf9e5, type: 2}
+  localMaterialOverride: {fileID: 2100000, guid: 0d44fd50c1600d343b9bc477b0f5e603, type: 2}

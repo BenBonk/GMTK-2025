@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: "PRONTOS?,APONTAR,LA\xC7AR!"
+    m_Localized: PREPARAR?
     m_Metadata:
       m_Items:
       - rid: 241711563893112946
@@ -484,6 +484,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 110
     m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843862691840
+    m_Localized: DEFINIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843892051968
+    m_Localized: "LA\xC7O!"
     m_Metadata:
       m_Items: []
   references:

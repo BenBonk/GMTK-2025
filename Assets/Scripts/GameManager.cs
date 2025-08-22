@@ -86,7 +86,9 @@ public class GameManager : MonoBehaviour
     public TMP_Text roundNumberDeath;
     public LassoController lassoController;
     public float pointsRequirementGrowthRate;
-    
+    public LocalizedString localReady;
+    public LocalizedString localSet;
+    public LocalizedString localLasso;
 
     private void Start()
     {
@@ -332,13 +334,13 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ShowReadySetLassoSequence()
     {
-        
+        string[] readySetLasso = { localReady.GetLocalizedString(), localSet.GetLocalizedString(), localLasso.GetLocalizedString() };
         for (int i = 0; i < 3; i++)
         {
             if (i == 2)
             {
                 // Use lasso material for the last word
-                DisplayPopupWord(localization.readySetLasso.Split(',')[i], wordScaleDuration, wordDisplayDuration, true,
+                DisplayPopupWord(readySetLasso[i], wordScaleDuration, wordDisplayDuration, true,
                     lassoMaterialPreset);
                 AudioManager.Instance.PlayNextPlaylistTrack();
                 AudioManager.Instance.PlaySFX("rooster");
@@ -348,7 +350,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 // Use default material for other words
-                DisplayPopupWord(localization.readySetLasso.Split(',')[i], wordScaleDuration, wordDisplayDuration, false,
+                DisplayPopupWord(readySetLasso[i], wordScaleDuration, wordDisplayDuration, false,
                     defaultMaterialPreset);
                 AudioManager.Instance.PlaySFX("ready");
             }

@@ -78,7 +78,7 @@ public class DescriptionManager : MonoBehaviour
             description += $"{cashMult.GetLocalizedString()} x{synergyData.currencyMult}\n";
         }
 
-        return description;
+        return description.TrimEnd('\n');
     }
 
     public string GetAnimalLevelDescription(AnimalData animalData)

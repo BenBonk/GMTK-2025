@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: FERTIG, LASSO!
+    m_Localized: BEREIT?
     m_Metadata:
       m_Items:
       - rid: 241711563893112940
@@ -492,6 +492,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 110
     m_Localized: Lernprogramm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843862691840
+    m_Localized: SATZ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843892051968
+    m_Localized: LASSO!
     m_Metadata:
       m_Items: []
   references:

@@ -328,7 +328,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!1 &2284217046175194587
 GameObject:
@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 5087073285633612981}
   - component: {fileID: 7997754850579490664}
   - component: {fileID: 2610408313631133441}
+  - component: {fileID: 1708032274047779269}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -466,6 +467,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1708032274047779269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284217046175194587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3603850326635549477
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +490,7 @@ GameObject:
   - component: {fileID: 6422015606394536428}
   - component: {fileID: 1771489448323150024}
   - component: {fileID: 6860113055035492433}
+  - component: {fileID: 8197238711261306293}
   m_Layer: 5
   m_Name: Desc
   m_TagString: Untagged
@@ -602,6 +616,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8197238711261306293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3603850326635549477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6532823061565076754
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +654,7 @@ RectTransform:
   m_GameObject: {fileID: 6532823061565076754}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2104676834723775943}
@@ -661,7 +687,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!1 &7866310356001365729
 GameObject:
@@ -726,6 +752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: {fileID: 4861225634360310261}
   desc: {fileID: 6860113055035492433}
+  desc2: {fileID: 2610408313631133441}
   icon: {fileID: 3122615936035191174}
   hoverPopup: {fileID: 8162438419569462793}
   bounch: 1
@@ -856,6 +883,7 @@ GameObject:
   - component: {fileID: 4235094531303922196}
   - component: {fileID: 9211288484757285267}
   - component: {fileID: 4861225634360310261}
+  - component: {fileID: 4291919515400137858}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -981,3 +1009,15 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4291919515400137858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215806136569359782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

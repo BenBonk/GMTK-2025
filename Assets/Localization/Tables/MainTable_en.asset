@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: READY?,SET,LASSO!
+    m_Localized: READY?
     m_Metadata:
       m_Items:
       - rid: 241711563893112937
@@ -479,6 +479,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 110
     m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843862691840
+    m_Localized: SET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843892051968
+    m_Localized: LASSO!
     m_Metadata:
       m_Items: []
   references:

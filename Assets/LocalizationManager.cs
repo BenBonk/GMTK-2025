@@ -7,7 +7,6 @@ public class LocalizationManager : MonoBehaviour
     public LocalizedString localPointsString;
     public LocalizedString localTimeString;
     public LocalizedString localCashString;
-    public LocalizedString localReadySetLasso;
     public LocalizedString localCloseCall;
     public LocalizedString localTimesUp;
     public LocalizedString localDayComplete;
@@ -17,7 +16,6 @@ public class LocalizationManager : MonoBehaviour
 
     [HideInInspector] public string closeCall;
     [HideInInspector] public string timesUp;
-    [HideInInspector] public string readySetLasso;
     [HideInInspector] public string dayComplete;
     [HideInInspector] public string pointsPopup;
     [HideInInspector] public string cashPopup;
@@ -43,7 +41,6 @@ public class LocalizationManager : MonoBehaviour
 
         localCloseCall.StringChanged += UpdateCloseCall;
         localTimesUp.StringChanged += UpdateTimesUp;
-        localReadySetLasso.StringChanged += UpdateReadySetLasso;
     }
 
     private void OnDisable()
@@ -53,7 +50,6 @@ public class LocalizationManager : MonoBehaviour
         localCashString.StringChanged -= UpdateCash;
         localCloseCall.StringChanged -= UpdateCloseCall;
         localTimesUp.StringChanged -= UpdateTimesUp;
-        localReadySetLasso.StringChanged -= UpdateReadySetLasso;
         localPointsPopup.StringChanged -= UpdatePointsPopup;
         localCashPopup.StringChanged -= UpdateCashPopup;
     }
@@ -62,7 +58,6 @@ public class LocalizationManager : MonoBehaviour
     void UpdateCash(string value) => GameController.gameManager.currencyDisplay.text = value;
     void UpdateCloseCall(string value) => closeCall = value;
     void UpdateTimesUp(string value) => timesUp = value;
-    void UpdateReadySetLasso(string value) => readySetLasso = value;
     void UpdateDayComplete(string value) => dayComplete = value;
     void UpdatePointsPopup(string value) => pointsPopup = value;
     void UpdateCashPopup(string value) => cashPopup = value;

@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: PRONTI? PARTENZA, LASSO!
+    m_Localized: PRONTO?
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
@@ -482,6 +482,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 110
     m_Localized: Esercitazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843862691840
+    m_Localized: IMPOSTATO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843892051968
+    m_Localized: LASSO!
     m_Metadata:
       m_Items: []
   references:

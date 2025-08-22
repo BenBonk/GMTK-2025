@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: "\xBFLISTOS?, \xA1LISTOS, LAZO!"
+    m_Localized: "\xBFLISTO?"
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
@@ -415,7 +415,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "\xA1Ahora intenta enlazar a estas dos criaturas!"
+    m_Localized: "\xA1Ahora intenta unir a estas dos criaturas con un lazo!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
@@ -483,6 +483,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 110
     m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843862691840
+    m_Localized: COLOCAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843892051968
+    m_Localized: "\xA1LAZO!"
     m_Metadata:
       m_Items: []
   references:

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9209503541528169595}
   - component: {fileID: 7373578659155927935}
   - component: {fileID: 3779133393976615405}
+  - component: {fileID: 7824294464197157240}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -136,6 +137,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7824294464197157240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780330820368758314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1904933942433195597
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,11 +248,14 @@ MonoBehaviour:
   descriptionText: {fileID: 4255429784487378705}
   priceText: {fileID: 5303916646635992721}
   upgradeArt: {fileID: 3691112163462475384}
+  buttonFX: {fileID: 0}
   price: 0
   canPurchase: 1
   hoverPopup: {fileID: 5750213239509073650}
   possibleSynergies:
   - {fileID: 11400000, guid: e016151f80b615b46bd4ccfbda854f88, type: 2}
+  synergySlots: {fileID: 0}
+  desc2: {fileID: 0}
 --- !u!114 &930844215755840276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +368,7 @@ GameObject:
   - component: {fileID: 3666935616556916138}
   - component: {fileID: 2973181082273820004}
   - component: {fileID: 4255429784487378705}
+  - component: {fileID: 7508581905088210474}
   m_Layer: 5
   m_Name: Desc
   m_TagString: Untagged
@@ -477,6 +494,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7508581905088210474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065426897698737520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3473223979833219867
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +668,7 @@ GameObject:
   - component: {fileID: 5876311571831757928}
   - component: {fileID: 2753372272804834503}
   - component: {fileID: 5303916646635992721}
+  - component: {fileID: 654083503770767173}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -764,6 +794,18 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &654083503770767173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6155555323226985786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7775409770838341673
 GameObject:
   m_ObjectHideFlags: 0

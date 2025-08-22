@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2227225399520453448}
   - component: {fileID: 3071441367770201595}
   - component: {fileID: -1823248209117110151}
+  - component: {fileID: 6619576884971066708}
   m_Layer: 5
   m_Name: PopupText
   m_TagString: Untagged
@@ -191,3 +192,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6619576884971066708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3484454060116296803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterialOverride: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
+  localMaterialOverride: {fileID: 2100000, guid: 9a55bc2297f73834aa5f56ac5e9f916a, type: 2}

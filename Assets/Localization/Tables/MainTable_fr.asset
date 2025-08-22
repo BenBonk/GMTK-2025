@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: "PR\xCATS ?, PR\xCATS, LASSO !"
+    m_Localized: "PR\xCAT?"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Pr\xE9dateur. Poursuit les non-pr\xE9dateurs."
+    m_Localized: "Pr\xE9dateur. Chasse les non-pr\xE9dateurs."
     m_Metadata:
       m_Items: []
   - m_Id: 41
@@ -485,6 +485,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 110
     m_Localized: Tutoriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843862691840
+    m_Localized: ENSEMBLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843892051968
+    m_Localized: LASSO!
     m_Metadata:
       m_Items: []
   references:

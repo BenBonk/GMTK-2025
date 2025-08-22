@@ -34,7 +34,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3
-    m_Localized: GOTOWI?, DO STARTU, LASSO!
+    m_Localized: GOTOWY?
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -502,6 +502,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 110
     m_Localized: Seminarium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843862691840
+    m_Localized: "USTAWI\u0106"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1416843892051968
+    m_Localized: LASSO!
     m_Metadata:
       m_Items: []
   references:
