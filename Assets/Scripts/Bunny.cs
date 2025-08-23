@@ -39,7 +39,7 @@ public class Bunny : Animal
 
     protected override Vector3 ComputeMove()
     {
-        // Compute phase progress BEFORE we potentially decrement timer
+        // Compute phase progress 
         float prog = PhaseProgress(); // 0..1
 
         // Base position for this frame
@@ -55,7 +55,6 @@ public class Bunny : Animal
                 break;
 
             default:
-                // All other phases are full stop; keep position as-is.
                 break;
         }
 
@@ -105,8 +104,6 @@ public class Bunny : Animal
         currentTilt = desiredTilt;
         transform.rotation = Quaternion.Euler(0f, 0f, currentTilt);
     }
-
-    // ---------- helpers ----------
 
     private void EnterPhase(Phase p, float duration)
     {
