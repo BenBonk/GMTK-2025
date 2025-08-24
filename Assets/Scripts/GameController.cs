@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
@@ -15,6 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] LocalizationManager localLocalizationManager;
     [SerializeField] TMP_FontAsset localDefaultFont;
     [SerializeField] TMP_FontAsset localLocalizedFont;
+    [SerializeField] SaveManager localSaveManager;
     void Awake()
     {
         instance = this;
@@ -69,5 +69,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localLocalizedFont; }
         set { instance.localLocalizedFont = value; }
+    }
+    public static SaveManager saveManager
+    {
+        get { return instance.localSaveManager; }
+        set { instance.localSaveManager = value; }
     }
 }

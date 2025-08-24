@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,30 +7,33 @@ public class AnimalLevelManager : MonoBehaviour
 
     private void Awake()
     {
-        animalLevels["Sheep"] = 0;
-        animalLevels["Pig"] = 0;
-        animalLevels["Cow"] = 0;
-        animalLevels["Wolf"] = 0;
-        animalLevels["Chicken"] = 0;
-        animalLevels["Fox"] = 0;
-        animalLevels["Bear"] = 0;
-        animalLevels["Horse"] = 0;
-        animalLevels["Goat"] = 0;
-        animalLevels["Dog"] = 0;
+        InitAnimal("Sheep");
+        InitAnimal("Pig");
+        InitAnimal("Cow");
+        InitAnimal("Wolf");
+        InitAnimal("Chicken");
+        InitAnimal("Fox");
+        InitAnimal("Bear");
+        InitAnimal("Horse");
+        InitAnimal("Goat");
+        InitAnimal("Dog");
     }
 
-    public int GetLevel(string name)
+    private void InitAnimal(string animalName)
     {
-        if (animalLevels.TryGetValue(name, out int level))
-        {
-            return level;
-        }
-        
-        return 0; //Default level
+        int level = PlayerPrefs.GetInt(animalName, 0); // default 0 if not set
+        animalLevels[animalName] = level;
     }
 
-    public void SetLevel(string name, int newLevel)
+    public int GetLevel(string animalName)
     {
-        animalLevels[name] = newLevel;
+        return animalLevels.TryGetValue(animalName, out int level) ? level : 0;
+    }
+
+    public void SetLevel(string animalName, int level)
+    {
+        animalLevels[animalName] = level;
+        PlayerPrefs.SetInt(animalName, level);
+        PlayerPrefs.Save();
     }
 }
