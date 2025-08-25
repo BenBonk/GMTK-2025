@@ -119,10 +119,10 @@ TextureImporter:
       name: Horse_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 28
-        height: 20
+        x: 1
+        y: 3
+        width: 31
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Horse_1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 0
-        width: 28
-        height: 20
+        x: 32
+        y: 3
+        width: 31
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

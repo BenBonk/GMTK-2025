@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 8534bccdb4d42cf4ea11c1dae72674f7
+guid: 5cbfcb88aa0218449945999efd11cab9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7232521027535748977
-    second: Cat_0
+      213: 5163236881460400774
+    second: Puma_0
   - first:
-      213: 6519482211609779390
-    second: Cat_1
+      213: -8941060787407241225
+    second: Puma_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,45 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cat_0
+      name: Puma_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 1
-        width: 22
-        height: 15
+        width: 37
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f80403be17ce0ab90800000000000000
-      internalID: -7232521027535748977
+      spriteID: 68294a2769087a740800000000000000
+      internalID: 5163236881460400774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cat_1
+      name: Puma_1
       rect:
         serializedVersion: 2
-        x: 25
+        x: 36
         y: 1
-        width: 22
-        height: 15
+        width: 36
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebc9a7e978ad97a50800000000000000
-      internalID: 6519482211609779390
+      spriteID: 7ffba6be598fae380800000000000000
+      internalID: -8941060787407241225
       vertices: []
       indices: 
       edges: []
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 39f1e373911a77246a51997a6a25a5e8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cat_0: -7232521027535748977
-      Cat_1: 6519482211609779390
+      Puma_0: 5163236881460400774
+      Puma_1: -8941060787407241225
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

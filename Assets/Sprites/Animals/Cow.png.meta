@@ -119,10 +119,10 @@ TextureImporter:
       name: Cow_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 16
+        x: 1
+        y: 3
+        width: 29
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Cow_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 16
+        x: 32
+        y: 3
+        width: 29
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
