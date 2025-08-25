@@ -6,7 +6,7 @@ public class AnimalLevelManager : MonoBehaviour
 {
     private Dictionary<string, int> animalLevels = new Dictionary<string, int>();
 
-    private void Awake()
+    private void Start()
     {
         InitAnimal("Sheep");
         InitAnimal("Pig");

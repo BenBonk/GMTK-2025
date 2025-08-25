@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 1741734572}
-  canOpenClose: 1
+  canOpenClose: 0
   isOpen: 0
 --- !u!1 &150976152
 GameObject:
@@ -11718,6 +11718,7 @@ MonoBehaviour:
   localDefaultFont: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   localLocalizedFont: {fileID: 11400000, guid: d54505607bd63d348a9eaf192a9b3d54, type: 2}
   localSaveManager: {fileID: 1720502510}
+  localPauseMenu: {fileID: 122370105}
 --- !u!4 &1239491768
 Transform:
   m_ObjectHideFlags: 0
