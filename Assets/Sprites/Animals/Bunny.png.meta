@@ -119,10 +119,10 @@ TextureImporter:
       name: Bunny_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 15
-        height: 16
+        width: 13
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Bunny_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 0
-        width: 15
-        height: 15
+        width: 13
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f08446a1ecacdb841a5f727f569f04b6
     internalID: 0
     vertices: []
     indices: 
