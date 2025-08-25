@@ -474,7 +474,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: Start
+    m_Localized: New Game
     m_Metadata:
       m_Items: []
   - m_Id: 110
@@ -487,6 +487,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1416843892051968
     m_Localized: LASSO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524680130113536
+    m_Localized: Continue
     m_Metadata:
       m_Items: []
   references:

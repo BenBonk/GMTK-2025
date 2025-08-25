@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -477,7 +477,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: Inizio
+    m_Localized: Nuovo gioco
     m_Metadata:
       m_Items: []
   - m_Id: 110
@@ -490,6 +490,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1416843892051968
     m_Localized: LASSO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524680130113536
+    m_Localized: Continuare
     m_Metadata:
       m_Items: []
   references:

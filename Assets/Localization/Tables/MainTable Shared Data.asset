@@ -460,11 +460,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Key: startScreen.start
+    m_Key: startScreen.newGame
     m_Metadata:
       m_Items: []
   - m_Id: 110
     m_Key: startScreen.tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524680130113536
+    m_Key: startScreen.continue
     m_Metadata:
       m_Items: []
   m_Metadata:

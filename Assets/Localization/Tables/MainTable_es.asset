@@ -415,7 +415,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "\xA1Ahora intenta unir a estas dos criaturas con un lazo!"
+    m_Localized: "\xA1Ahora intenta enlazar a estas dos criaturas!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
@@ -478,7 +478,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: Comenzar
+    m_Localized: Nuevo juego
     m_Metadata:
       m_Items: []
   - m_Id: 110
@@ -491,6 +491,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1416843892051968
     m_Localized: "\xA1LAZO!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524680130113536
+    m_Localized: Continuar
     m_Metadata:
       m_Items: []
   references:

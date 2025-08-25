@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Pr\xE9dateur. Chasse les non-pr\xE9dateurs."
+    m_Localized: "Pr\xE9dateur. Poursuit les non-pr\xE9dateurs."
     m_Metadata:
       m_Items: []
   - m_Id: 41
@@ -480,7 +480,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: Commencer
+    m_Localized: Nouveau jeu
     m_Metadata:
       m_Items: []
   - m_Id: 110
@@ -493,6 +493,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1416843892051968
     m_Localized: LASSO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524680130113536
+    m_Localized: Continuer
     m_Metadata:
       m_Items: []
   references:

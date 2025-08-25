@@ -234,7 +234,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: Contando Ovelhas
+    m_Localized: Contando ovelhas
     m_Metadata:
       m_Items: []
   - m_Id: 52
@@ -266,7 +266,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: Raposa em um galinheiro
+    m_Localized: Raposa no Galinheiro
     m_Metadata:
       m_Items: []
   - m_Id: 60
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Os Tr\xEAs Porquinhos"
+    m_Localized: "Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -479,7 +479,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: "Come\xE7ar"
+    m_Localized: Novo jogo
     m_Metadata:
       m_Items: []
   - m_Id: 110
@@ -492,6 +492,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1416843892051968
     m_Localized: "LA\xC7O!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524680130113536
+    m_Localized: Continuar
     m_Metadata:
       m_Items: []
   references:

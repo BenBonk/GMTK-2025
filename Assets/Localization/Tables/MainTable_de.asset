@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein
+      mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -248,7 +248,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
+      Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -487,7 +488,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 109
-    m_Localized: Start
+    m_Localized: Neues Spiel
     m_Metadata:
       m_Items: []
   - m_Id: 110
@@ -500,6 +501,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1416843892051968
     m_Localized: LASSO!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2524680130113536
+    m_Localized: Weitermachen
     m_Metadata:
       m_Items: []
   references:
