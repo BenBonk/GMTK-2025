@@ -76,8 +76,7 @@ public class GameManager : MonoBehaviour
     }
 
     public event System.Action<double> OnPointsChanged;
-
-
+    
     public TextMeshProUGUI scoreDisplay;
     public TextMeshProUGUI timerDisplay;
     public TextMeshProUGUI currencyDisplay;
@@ -89,10 +88,12 @@ public class GameManager : MonoBehaviour
     public LocalizedString localReady;
     public LocalizedString localSet;
     public LocalizedString localLasso;
-
+    private SaveManager saveManager;
     private void Start()
     {
+        saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
+        saveManager.LoadGameData();
         if (isTesting)
         {
             pointsRequirementGrowthRate = 0;
@@ -104,7 +105,6 @@ public class GameManager : MonoBehaviour
         //lassosUsed = 0;
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
-
         Invoke("StartRound", 1);
     }
 
@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
         pointsThisRound = 0;
         UpdateUI();
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
+        saveManager.SaveGameData();
         roundNumber++;
         UpdateScoreDisplay(0);
         roundInProgress = true;
@@ -166,6 +167,7 @@ public class GameManager : MonoBehaviour
         if (pointsThisRound < GetPointsRequirement())
         {
             //GameOver
+            saveManager.ClearGame();
             roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);

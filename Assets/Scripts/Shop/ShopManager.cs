@@ -32,10 +32,11 @@ public class ShopManager : MonoBehaviour
     public LocalizedString cashLocalString;
     //continue
 
-    private void Start()
+    private IEnumerator Start()
     {
         descriptionManager = GameController.descriptionManager;
         player = GameController.player;
+        yield return new WaitForEndOfFrame();
         InitializeAllUpgrades();
     }
 

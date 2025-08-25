@@ -6,11 +6,21 @@ public class StartScreenManager : MonoBehaviour
 {
     public GameObject[] animalsToSpawn;
     public Transform[] spawnPositions;
+    public GameObject hasSaveData;
+    public GameObject noSaveData;
 
     private void Start()
     {
         InvokeRepeating("SpawnAnimal", 1,Random.Range(1.5f, 2.5f));
         AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,true);
+        if (GameController.saveManager.PlayerHasSave())
+        {
+            hasSaveData.SetActive(true);
+        }
+        else
+        {
+            noSaveData.SetActive(true);
+        }
     }
 
     void SpawnAnimal()

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -19,6 +20,10 @@ public class LocalizationManager : MonoBehaviour
     [HideInInspector] public string dayComplete;
     [HideInInspector] public string pointsPopup;
     [HideInInspector] public string cashPopup;
+
+    public TMP_Text cashText;
+    public TMP_Text scoreText;
+    public TMP_Text timerText;
     private void OnEnable()
     {
         localPointsString.Arguments = new object[] { 0, 85 };
@@ -53,9 +58,9 @@ public class LocalizationManager : MonoBehaviour
         localPointsPopup.StringChanged -= UpdatePointsPopup;
         localCashPopup.StringChanged -= UpdateCashPopup;
     }
-    void UpdatePoints(string value) => GameController.gameManager.scoreDisplay.text = value;
-    void UpdateTime(string value) => GameController.gameManager.timerDisplay.text = value;
-    void UpdateCash(string value) => GameController.gameManager.currencyDisplay.text = value;
+    void UpdatePoints(string value) => scoreText.text = value;
+    void UpdateTime(string value) => timerText.text = value;
+    void UpdateCash(string value) => cashText.text = value;
     void UpdateCloseCall(string value) => closeCall = value;
     void UpdateTimesUp(string value) => timesUp = value;
     void UpdateDayComplete(string value) => dayComplete = value;

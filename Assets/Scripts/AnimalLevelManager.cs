@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,9 +20,20 @@ public class AnimalLevelManager : MonoBehaviour
         InitAnimal("Dog");
     }
 
+    public void ResetLevels()
+    {
+        var keys = new List<string>(animalLevels.Keys);
+        foreach (var animalName in keys)
+        {
+            animalLevels[animalName] = 0;
+            FBPP.SetInt(animalName, 0);
+        }
+        FBPP.Save();
+    }
+
     private void InitAnimal(string animalName)
     {
-        int level = PlayerPrefs.GetInt(animalName, 0); // default 0 if not set
+        int level = FBPP.GetInt(animalName, 0);
         animalLevels[animalName] = level;
     }
 
@@ -33,7 +45,7 @@ public class AnimalLevelManager : MonoBehaviour
     public void SetLevel(string animalName, int level)
     {
         animalLevels[animalName] = level;
-        PlayerPrefs.SetInt(animalName, level);
-        PlayerPrefs.Save();
+        FBPP.SetInt(animalName, level);
+        FBPP.Save();
     }
 }

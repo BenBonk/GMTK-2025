@@ -5,6 +5,8 @@ public class SaveManager : MonoBehaviour
 {
     public AnimalData[] animalDatas;
     public Synergy[] synergyDatas;
+    public Player player;
+    public GameManager gameManager;
     void Awake()
     {
            var config = new FBPPConfig()
@@ -21,51 +23,70 @@ public class SaveManager : MonoBehaviour
 
     public bool PlayerHasSave()
     {
-        return FBPP.GetBool("playerHasSave");
+        return FBPP.GetBool("playerHasSave", false);
     }
 
-    public void ClearSave()
+    public void NewGame()
     {
-        
+        ResetVars();
+        FBPP.SetBool("playerHasSave", true);
+        FBPP.Save();
+    }
+    public void ClearGame()
+    {
+        ResetVars();
+        FBPP.SetBool("playerHasSave", false);
+        FBPP.Save();
+    }
+
+    void ResetVars()
+    {
+        FBPP.SetInt("cash", 0);
+        FBPP.SetInt("round", 0);
+        FBPP.SetString("animalsInDeck", "");
+        FBPP.SetString("synergiesInDeck", "");
+        GameController.animalLevelManager.ResetLevels();
     }
 
     public void SaveGameData()
     {
         FBPP.SetInt("cash", (int)GameController.player.playerCurrency);
         FBPP.SetInt("round", GameController.gameManager.roundNumber);
-        FBPP.SetString("animalsInDeck", GetSOList(GameController.player.animalsInDeck));
-        FBPP.SetString("synergiesInDeck", GetSOList(GameController.player.synergiesInDeck));
+        FBPP.SetString("animalsInDeck", GetSOList(player.animalsInDeck));
+        FBPP.SetString("synergiesInDeck", GetSOList(player.synergiesInDeck));
         FBPP.Save();
     }
 
     public void LoadGameData()
     {
-        GameController.player.playerCurrency = FBPP.GetInt("cash");
-        GameController.gameManager.roundNumber = FBPP.GetInt("round");
+        player.playerCurrency =  FBPP.GetInt("cash");
+        gameManager.roundNumber = FBPP.GetInt("round");
+        if (FBPP.GetString("animalsInDeck")=="")
+        {
+            return;
+        }
+        Debug.Log(FBPP.GetString("animalsInDeck"));
+        player.animalsInDeck.Clear();
+        player.synergiesInDeck.Clear();
         foreach (var animal in FBPP.GetString("animalsInDeck").Split(","))
         {
             var match = animalDatas.FirstOrDefault(a => a.name == animal);
             if (match != null)
             {
-                GameController.player.animalsInDeck.Add(match);
+                player.animalsInDeck.Add(match);
                 Debug.Log("Loaded: " + animal);
             }
         }
-        foreach (var synergy in FBPP.GetString("animalsInDeck").Split(","))
+        foreach (var synergy in FBPP.GetString("synergiesInDeck").Split(","))
         {
             var match = synergyDatas.FirstOrDefault(a => a.name == synergy);
             if (match != null)
             {
-                GameController.player.synergiesInDeck.Add(match);
+                player.synergiesInDeck.Add(match);
                 Debug.Log("Loaded: " + synergy);
             }
         }
     }
-
-    string GetSOList<T>(List<T> objects) where T : ScriptableObject
-    {
-        return objects == null || objects.Count == 0
-            ? string.Empty
-            : string.Join(", ", objects.Select(o => o.name));
-    }
+    string GetSOList<T>(List<T> list) where T : ScriptableObject =>
+        string.Join(",", list.Select(o => o.name));
 }

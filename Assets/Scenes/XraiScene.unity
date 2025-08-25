@@ -1426,6 +1426,9 @@ MonoBehaviour:
   dayComplete: 
   pointsPopup: 
   cashPopup: 
+  cashText: {fileID: 512336462}
+  scoreText: {fileID: 1403220863}
+  timerText: {fileID: 1792826536}
   references:
     version: 2
     RefIds: []
@@ -10829,7 +10832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 0
+  isTesting: 1
   player: {fileID: 1887224207}
   startingPointRequirement: 65
   roundNumber: 0
@@ -10954,6 +10957,7 @@ MonoBehaviour:
   localLocalizationManager: {fileID: 269736286}
   localDefaultFont: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   localLocalizedFont: {fileID: 11400000, guid: d54505607bd63d348a9eaf192a9b3d54, type: 2}
+  localSaveManager: {fileID: 1720502510}
 --- !u!4 &1239491768
 Transform:
   m_ObjectHideFlags: 0
@@ -13837,6 +13841,89 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_crunch
+--- !u!1 &1720502509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720502511}
+  - component: {fileID: 1720502510}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1720502510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720502509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db1b77a6e3d3d5418bcd69b88c819e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalDatas:
+  - {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
+  - {fileID: 11400000, guid: dd5f3d014a70c4c4794954f608059d4b, type: 2}
+  - {fileID: 11400000, guid: 61624a01d96a1c94289577fc134ae6ff, type: 2}
+  - {fileID: 11400000, guid: af25408ade403b34cbf9a46a842a8ebd, type: 2}
+  - {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
+  - {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
+  - {fileID: 11400000, guid: 74903cbb3ccf3604982132ca7eee3dfa, type: 2}
+  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
+  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
+  - {fileID: 11400000, guid: ccc8f9eb0d075ab4283b8a82efe0fc60, type: 2}
+  - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
+  synergyDatas:
+  - {fileID: 11400000, guid: 3339c7266c6abc4479256473092c0551, type: 2}
+  - {fileID: 11400000, guid: d38fd4da9616c4f4bb24bc198062fddd, type: 2}
+  - {fileID: 11400000, guid: f7a146b3aa9547845b55ce4d31f25e2a, type: 2}
+  - {fileID: 11400000, guid: e94501e725114c34ea382b23c1e8575c, type: 2}
+  - {fileID: 11400000, guid: f19ad0ec2fbac914cbec24740c405a37, type: 2}
+  - {fileID: 11400000, guid: 1d5ea38b1f5f22645aa9121a5ba32145, type: 2}
+  - {fileID: 11400000, guid: f15f956facc45f149b02c5853edcfe00, type: 2}
+  - {fileID: 11400000, guid: 894fcb1e4a3ac5d4f8aca576f77394c8, type: 2}
+  - {fileID: 11400000, guid: ef729bebd3ee10e4b9515c304de07696, type: 2}
+  - {fileID: 11400000, guid: b646522c2120ce344859435b69db2c80, type: 2}
+  - {fileID: 11400000, guid: 9f4c96bb191d3ed4eb4edd3742cab192, type: 2}
+  - {fileID: 11400000, guid: 03d16fe17bfeb8f4089891c96f8154ca, type: 2}
+  - {fileID: 11400000, guid: ddba252abc66a9843a30b458ad03bc27, type: 2}
+  - {fileID: 11400000, guid: e1c7f742772ada34fb5f78d216dd6f36, type: 2}
+  - {fileID: 11400000, guid: 28f89142716f45445808fb696749853c, type: 2}
+  - {fileID: 11400000, guid: 8c19eb5a0e50ff644965ddce634caf78, type: 2}
+  - {fileID: 11400000, guid: 6a2cd4c1eb5c94f4ea14f7a2aeb3373f, type: 2}
+  - {fileID: 11400000, guid: cf5bdd8c29af0cd4ab4e6a40f35d001a, type: 2}
+  - {fileID: 11400000, guid: 0a678183432292443b20155adff3f8fd, type: 2}
+  - {fileID: 11400000, guid: 08880d81d31f47c4aada3c9b178762ed, type: 2}
+  - {fileID: 11400000, guid: a2d02adab76bb494ca21775fa7d565e1, type: 2}
+  - {fileID: 11400000, guid: b78b171fa64b6004db7e8e07149ab1cf, type: 2}
+  - {fileID: 11400000, guid: 2605d99b1eb1d2b45b9d02c58eed44c1, type: 2}
+  - {fileID: 11400000, guid: 850a7b19dccde4f40a252d03e3228849, type: 2}
+  player: {fileID: 1887224207}
+  gameManager: {fileID: 1220268107}
+--- !u!4 &1720502511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720502509}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1723090392
 GameObject:
   m_ObjectHideFlags: 0
@@ -16058,4 +16145,5 @@ SceneRoots:
   - {fileID: 1362747940}
   - {fileID: 269736287}
   - {fileID: 1109025963}
+  - {fileID: 1720502511}
   - {fileID: 6960587619749267759}
