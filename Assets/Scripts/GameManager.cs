@@ -89,8 +89,10 @@ public class GameManager : MonoBehaviour
     public LocalizedString localSet;
     public LocalizedString localLasso;
     private SaveManager saveManager;
+    private PauseMenu pauseMenu;
     private void Start()
     {
+        pauseMenu = GameController.pauseMenu;
         saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
         saveManager.LoadGameData();
@@ -216,7 +218,7 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.PlaySFX("cash_register");
         GameController.player.playerCurrency += endDayCash;
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
-
+        pauseMenu.canOpenClose = false;
         // After both messages
         if (roundNumber % predatorRoundFrequency == 0)
         {
@@ -358,6 +360,8 @@ public class GameManager : MonoBehaviour
             }
             yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
         }
+
+        pauseMenu.canOpenClose = true;
     }
 
     private Vector3 GetCenterScreenWorldPosition()
