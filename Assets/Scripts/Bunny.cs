@@ -30,6 +30,8 @@ public class Bunny : Animal
     private float tiltStartAngle = 0f;
     private float tiltEndAngle = 0f;
 
+    private bool leavingScreen = false;
+
     public override void Start()
     {
         base.Start();
@@ -69,6 +71,11 @@ public class Bunny : Animal
 
     protected override void ApplyRunTilt()
     {
+        if (leavingScreen)
+        {
+            base.ApplyRunTilt();
+            return;
+        }
         float prog = PhaseProgress(); // 0..1 within current phase
 
         float desiredTilt = currentTilt; // default: hold
@@ -172,6 +179,16 @@ public class Bunny : Animal
     {
         // 0 at phase start, 1 at phase end
         return 1f - Mathf.Clamp01(phaseTimer / Mathf.Max(0.0001f, phaseDuration));
+    }
+
+    public override Vector3 LeaveScreen()
+    {
+        tiltFrequency = 6;
+        maxTiltAmplitude = 8;
+        currentSpeed = 3;
+        leavingScreen = true;
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        return transform.position + Vector3.left * 5 * Time.deltaTime;
     }
 }
 

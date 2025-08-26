@@ -107,7 +107,7 @@ public class Animal : MonoBehaviour
         return transform.position + Vector3.left * currentSpeed * Time.deltaTime;
     }
 
-    public Vector3 LeaveScreen()
+    public virtual Vector3 LeaveScreen()
     {
         transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         return transform.position + Vector3.left * 5 * Time.deltaTime;

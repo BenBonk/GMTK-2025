@@ -122,7 +122,7 @@ TextureImporter:
         x: 3
         y: 1
         width: 20
-        height: 21
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Alpaca_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 40
         y: 1
         width: 20
-        height: 20
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
