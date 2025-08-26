@@ -120,9 +120,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 0
-        width: 25
-        height: 30
+        y: 1
+        width: 20
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: Alpaca_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 25
-        height: 29
+        x: 38
+        y: 1
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9ddf14fa8e495824fb9c71bbd4d8c1a3
     internalID: 0
     vertices: []
     indices: 
