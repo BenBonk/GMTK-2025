@@ -15,14 +15,14 @@ public class Bunny : Animal
     public float tiltNeutralDuration = 0.18f; // tilt back to neutral while paused
 
     [Header("Tilt Angles")]
-    public float tiltBackAngle = -18f;         // lean back (takeoff)
-    public float tiltForwardAngle = -18f;      // lean forward (landing)
+    public float tiltBackAngle = -18f;        
+    public float tiltForwardAngle = -18f;      
 
     private enum Phase { Pause1, TiltUp, Pause2, Jump, Pause3, TiltNeutral }
     private Phase phase = Phase.Pause1;
 
-    private float phaseTimer;       // counts down
-    private float phaseDuration;    // fixed per phase
+    private float phaseTimer;       
+    private float phaseDuration;    
     private float startYForJump;    // baseline for current jump arc
 
     // tilt interpolation
@@ -44,7 +44,7 @@ public class Bunny : Animal
         // Compute phase progress 
         float prog = PhaseProgress(); // 0..1
 
-        // Base position for this frame
+        // Base position
         Vector3 pos = transform.position;
 
         switch (phase)
@@ -65,7 +65,7 @@ public class Bunny : Animal
         if (phaseTimer <= 0f)
             AdvancePhase();
 
-        // Return pos; base Move() will add any externalOffset and clamp Y.
+        // base Move() will add any externalOffset and clamp Y.
         return pos;
     }
 
@@ -78,7 +78,7 @@ public class Bunny : Animal
         }
         float prog = PhaseProgress(); // 0..1 within current phase
 
-        float desiredTilt = currentTilt; // default: hold
+        float desiredTilt = currentTilt; 
 
         switch (phase)
         {

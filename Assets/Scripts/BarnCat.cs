@@ -11,27 +11,26 @@ public class BarnCat : Animal
     public float pauseBeforeTiltUp = 0.15f;   // pause (no tilt)
     public float tiltUpDuration = 0.10f;      // tilt up while paused
     public float pauseAfterTiltUp = 0.10f;    // pause, holding tilt up
-    public float tiltNeutralDuration = 0.18f; // tilt back to neutral (paused)
+    public float tiltNeutralDuration = 0.18f; // tilt back to neutral 
 
     [Header("Long Rest")]
-    public int hopsPerLongRest = 3;         // after this many COMPLETE hops (incl. return-to-neutral)
+    public int hopsPerLongRest = 3;         
     public float longRestDuration = 2.5f;
 
     [Header("Tilt Angles")]
-    public float tiltBackAngle = 16f;         // lean back (takeoff)
-    public float tiltForwardAngle = 16f;      // lean forward (landing)
+    public float tiltBackAngle = 16f;         
+    public float tiltForwardAngle = 16f;     
 
     [Header("Vertical Drift (normal, during Jump)")]
     public float verticalDriftSpeed = 0.25f;  // units/sec; positive = up
     public float driftEdgeMargin = 0.05f;   // buffer from screen edge for bouncing
     public float edgeBiasMargin = 0.5f;    // if starting a hop near an edge, drift away
 
-    // Phases: no Pause3 per your latest spec
     private enum Phase { Pause1, TiltUp, Pause2, Jump, TiltNeutral, LongRest }
     private Phase phase = Phase.Pause1;
 
-    private float phaseTimer;         // counts down
-    private float phaseDuration;      // fixed per phase
+    private float phaseTimer;        
+    private float phaseDuration;      
     private float startYForJump;      // baseline Y at the start of this hop
     private int hopsCompleted = 0;  // increments AFTER TiltNeutral completes
 
@@ -40,7 +39,7 @@ public class BarnCat : Animal
     private float tiltStartAngle = 0f;
     private float tiltEndAngle = 0f;
 
-    // drift (normal mode only)
+    // drift (normal mode)
     private int driftDir = 1;     // 1 = up, -1 = down
     private float driftOffset = 0f;    // accumulated drift relative to startYForJump
 
@@ -48,9 +47,9 @@ public class BarnCat : Animal
     private bool isChasing = false;
     private Mouse chaseTarget = null;
 
-    // facing (assumes sprite art faces LEFT by default)
     private int facingSign = -1; // -1 = face left, +1 = face right
     private float prevHopYOffset = 0f;
+    private bool leavingScreen = false;
 
     protected override void Awake()
     {
@@ -84,7 +83,7 @@ public class BarnCat : Animal
 
                     if (isChasing && chaseTarget != null)
                     {
-                        // Move directly toward the mouse (diagonal)
+                        // Move directly toward the mouse
                         Vector3 dir = chaseTarget.transform.position - pos;
                         if (dir.sqrMagnitude > 0.0001f)
                         {
@@ -96,7 +95,7 @@ public class BarnCat : Animal
                             // Base pursuit step
                             pos += dir * hopSpeed * Time.deltaTime;
 
-                            // Apply hop bob as a DELTA so it doesn't accumulate
+                            // Apply hop bob
                             float bobDelta = yOffset - prevHopYOffset;
                             prevHopYOffset = yOffset;
                             pos.y += bobDelta;
@@ -140,17 +139,16 @@ public class BarnCat : Animal
                 }
 
             case Phase.LongRest:
-                // During long rest, try to acquire a mouse and break rest immediately
+                // During long rest, try to acquire a mouse
                 if (TryAcquireMouseTarget())
                 {
                     isChasing = true;
                     EnterPhase(Phase.Pause1, pauseBeforeTiltUp); // resume hopping cycle (no long rest while chasing)
                 }
-                // otherwise full stop (base class still applies externalOffset & clamps)
                 break;
 
             default:
-                // all other phases are full stop (no movement)
+                // all other phases are full stop
                 break;
         }
 
@@ -164,6 +162,11 @@ public class BarnCat : Animal
 
     protected override void ApplyRunTilt()
     {
+        if (leavingScreen)
+        {
+            base.ApplyRunTilt();
+            return;
+        }
         float prog = PhaseProgress(); // 0..1
         float desiredTilt = currentTilt;
 
@@ -229,7 +232,7 @@ public class BarnCat : Animal
                 break;
 
             case Phase.LongRest:
-                // no special setup; hold neutral
+                //hold neutral
                 break;
 
             default:
@@ -257,12 +260,10 @@ public class BarnCat : Animal
                 break;
 
             case Phase.Jump:
-                // no extra landing pause,  go straight to neutral
                 EnterPhase(Phase.TiltNeutral, tiltNeutralDuration);
                 break;
 
             case Phase.TiltNeutral:
-                // hop completes only AFTER returning to neutral
                 hopsCompleted++;
 
                 if (isChasing)
@@ -307,7 +308,7 @@ public class BarnCat : Animal
 
     private int ChooseDriftDir()
     {
-        // During normal mode, bias drift away from edges at hop start
+        // During normal mode, bias drift away from edges
         float y = transform.position.y;
         if (y <= bottomLimitY + edgeBiasMargin) return 1;   // go up
         if (y >= topLimitY - edgeBiasMargin) return -1;  // go down
@@ -324,7 +325,7 @@ public class BarnCat : Animal
         {
             if (m == null || m.isLassoed) continue;
 
-            // must be to the LEFT of the cat right now (as requested)
+            // must be to the LEFT of the cat
             float dx = transform.position.x - m.transform.position.x;
             if (dx > 0f && dx < bestDx)
             {
@@ -337,7 +338,6 @@ public class BarnCat : Animal
         return chaseTarget != null;
     }
 
-    // Assumes sprite artwork faces LEFT by default
     private void FaceDirection(int sign)
     {
         // sign: -1 = face left, +1 = face right
@@ -348,5 +348,15 @@ public class BarnCat : Animal
         float abs = Mathf.Abs(sc.x);
         sc.x = (sign < 0) ? abs : -abs;
         transform.localScale = sc;
+    }
+
+    public override Vector3 LeaveScreen()
+    {
+        tiltFrequency = 8;
+        maxTiltAmplitude = 6;
+        currentSpeed = 3;
+        leavingScreen = true;
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        return transform.position + Vector3.left * 5 * Time.deltaTime;
     }
 }
