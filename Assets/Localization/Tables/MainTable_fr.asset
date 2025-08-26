@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+Esp\xE8ces\_: {0}"
+    m_Localized: "+ Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Pr\xE9dateur. Poursuit les non-pr\xE9dateurs."
+    m_Localized: "Pr\xE9dateur. Chasse les non-pr\xE9dateurs."
     m_Metadata:
       m_Items: []
   - m_Id: 41
@@ -497,6 +497,136 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: Continuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139489218560
+    m_Localized: Bienvenue dans le Journal de Bord !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Localized: "Cliquez sur un onglet ci-dessus pour afficher vos statistiques
+      et vos records\_!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Localized: Fermer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Localized: Animaux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Localized: "Nombre total d'animaux contr\xF4l\xE9s :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Localized: "Top 3 des animaux les plus achet\xE9s :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Localized: "Nombre d'animaux achet\xE9s :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Localized: 'Le plus grand lasso :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Localized: "Points les plus \xE9lev\xE9s dans un seul lasso\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Localized: Avantages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Localized: "Top 3 des avantages les plus achet\xE9s\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Localized: "Nombre de bienfaits achet\xE9s\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Localized: "Nombre d'am\xE9liorations d'animaux achet\xE9es\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Localized: "Niveau animal le plus \xE9lev\xE9 atteint\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Localized: "\xC9conomie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Localized: 'Le plus gros gain en un seul lasso :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Localized: "Montant le plus \xE9lev\xE9 de liquidit\xE9s d\xE9tenues \xE0 la
+      fois :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Localized: "Plus grand nombre de relances en une seule partie\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Localized: "Total des relances\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Localized: Enregistrements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Localized: "Num\xE9ro rond le plus \xE9lev\xE9 :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Localized: "Num\xE9ro de manche le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Localized: "Nombre d'appels rapproch\xE9s :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Localized: Maison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Localized: Animaux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Localized: Avantages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Localized: "\xC9conomie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Localized: Enregistrements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Localized: Jeu en pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Localized: "Param\xE8tres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Localized: Registre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Localized: Reprendre
     m_Metadata:
       m_Items: []
   references:

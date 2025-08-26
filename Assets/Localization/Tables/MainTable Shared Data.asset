@@ -471,6 +471,134 @@ MonoBehaviour:
     m_Key: startScreen.continue
     m_Metadata:
       m_Items: []
+  - m_Id: 3154139489218560
+    m_Key: logbook.welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Key: logbook.instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Key: logbook.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Key: logbook.animals.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Key: logbook.animals.stat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Key: logbook.animals.stat2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Key: logbook.animals.stat3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Key: logbook.animals.stat4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Key: logbook.animals.stat5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Key: logbook.boons.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Key: logbook.boons.stat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Key: logbook.boons.stat2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Key: logbook.boons.stat3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Key: logbook.boons.stat4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Key: logbook.economy.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Key: logbook.economy.stat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Key: logbook.economy.stat2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Key: logbook.economy.stat3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Key: logbook.economy.stat4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Key: logbook.records.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Key: logbook.records.stat1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Key: logbook.records.stat2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Key: logbook.records.stat3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Key: logbook.buttons.home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Key: logbook.buttons.animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Key: logbook.buttons.boons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Key: logbook.buttons.economy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Key: logbook.buttons.records
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Key: pause.gamePaused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Key: pause.settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Key: pause.logbook
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Key: pause.resume
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

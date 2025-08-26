@@ -415,7 +415,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "\xA1Ahora intenta enlazar a estas dos criaturas!"
+    m_Localized: "\xA1Ahora intenta unir a estas dos criaturas con un lazo!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
@@ -495,6 +495,135 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139489218560
+    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Localized: "\xA1Haga clic en una pesta\xF1a de arriba para ver sus estad\xEDsticas
+      y r\xE9cords!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Localized: Cerca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Localized: Animales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Localized: 'Total de animales controlados:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Localized: "Los 3 animales m\xE1s comprados:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Localized: "N\xFAmero de animales comprados:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Localized: "El lazo m\xE1s grande:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Localized: "Puntos m\xE1s altos en un solo lazo:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Localized: Bendiciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Localized: "Los 3 beneficios m\xE1s comprados:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Localized: "N\xFAmero de beneficios adquiridos:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Localized: "N\xFAmero de mejoras de animales adquiridas:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Localized: "Nivel animal m\xE1s alto alcanzado:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Localized: "Econom\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Localized: 'Mayor cantidad de dinero en un solo lazo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Localized: 'Mayor cantidad de efectivo disponible al mismo tiempo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Localized: 'La mayor cantidad de repeticiones en un solo juego:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Localized: 'Repeticiones totales:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Localized: Archivos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Localized: "N\xFAmero redondo m\xE1s alto:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Localized: "N\xFAmero redondo m\xE1s alto en m\xE1xima dificultad:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Localized: "N\xFAmero de situaciones l\xEDmite:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Localized: Hogar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Localized: Animales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Localized: Bendiciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Localized: "Econom\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Localized: Archivos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Localized: Juego en pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Localized: Ajustes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Localized: Cuaderno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Localized: Reanudar
     m_Metadata:
       m_Items: []
   references:

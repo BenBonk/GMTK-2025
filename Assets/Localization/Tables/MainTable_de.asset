@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Goldesel
+    m_Localized: Cash Cow
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein.
+      mit dem Lasso ein
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -505,6 +505,135 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: Weitermachen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139489218560
+    m_Localized: Willkommen im Logbuch!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Localized: Klicken Sie oben auf eine Registerkarte, um Ihre Statistiken und
+      Aufzeichnungen anzuzeigen!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Localized: "Schlie\xDFen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Localized: Tiere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Localized: 'Gesamtzahl der gefesselten Tiere:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Localized: "Top 3 der am h\xE4ufigsten gekauften Tiere:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Localized: 'Anzahl der gekauften Tiere:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Localized: "Gr\xF6\xDFtes Lasso:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Localized: "H\xF6chste Punkte in einem einzelnen Lasso:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Localized: Segen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Localized: "Top 3 der am h\xE4ufigsten gekauften Segnungen:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Localized: 'Anzahl der gekauften Segnungen:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Localized: 'Anzahl der gekauften Tier-Upgrades:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Localized: "H\xF6chstes erreichtes Tierlevel:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Localized: Wirtschaft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Localized: "H\xF6chster Bargeldbetrag mit einem einzigen Lasso:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Localized: "H\xF6chster gleichzeitig gehaltener Bargeldbestand:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Localized: 'Die meisten Wiederholungen in einem einzigen Spiel:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Localized: 'Gesamtzahl der Wiederholungen:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Localized: Aufzeichnungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Localized: "H\xF6chste Rundenzahl:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Localized: "H\xF6chste Rundenzahl bei maximalem Schwierigkeitsgrad:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Localized: "Anzahl der Beinaheunf\xE4lle:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Localized: Heim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Localized: Tiere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Localized: Segen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Localized: Wirtschaft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Localized: Aufzeichnungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Localized: Spiel pausiert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Localized: Einstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Localized: Logbuch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Localized: Wieder aufnehmen
     m_Metadata:
       m_Items: []
   references:

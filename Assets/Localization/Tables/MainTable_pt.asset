@@ -226,7 +226,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: Chicken Jockey
+    m_Localized: "Frango J\xF3quei"
     m_Metadata:
       m_Items: []
   - m_Id: 50
@@ -234,7 +234,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: Contando ovelhas
+    m_Localized: Contando Ovelhas
     m_Metadata:
       m_Items: []
   - m_Id: 52
@@ -496,6 +496,134 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139489218560
+    m_Localized: "Bem-vindo ao Di\xE1rio de Bordo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Localized: "Clique em uma aba acima para ver suas estat\xEDsticas e registros!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Localized: Fechar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Localized: Animais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Localized: 'Total de animais controlados:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Localized: 'Os 3 animais mais comprados:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Localized: "N\xFAmero de animais comprados:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Localized: "Maior La\xE7o:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Localized: "Pontos mais altos em um \xFAnico la\xE7o:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Localized: "B\xEAn\xE7\xE3os"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Localized: "Os 3 benef\xEDcios mais comprados:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Localized: "N\xFAmero de B\xEAn\xE7\xE3os Compradas:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Localized: "N\xFAmero de atualiza\xE7\xF5es de animais adquiridas:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Localized: "N\xEDvel animal mais alto alcan\xE7ado:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Localized: Economia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Localized: "Maior quantidade de dinheiro em um \xFAnico la\xE7o:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Localized: 'Maior quantidade de dinheiro retido simultaneamente:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Localized: "Mais repeti\xE7\xF5es em um \xFAnico jogo:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Localized: 'Total de Rerolls:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Localized: Registros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Localized: "Maior n\xFAmero redondo:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Localized: "Maior n\xFAmero redondo na dificuldade m\xE1xima:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Localized: "N\xFAmero de quase acidentes:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Localized: Lar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Localized: Animais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Localized: "B\xEAn\xE7\xE3os"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Localized: Economia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Localized: Registros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Localized: Jogo pausado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Localized: "Configura\xE7\xF5es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Localized: "Di\xE1rio de bordo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Localized: Retomar
     m_Metadata:
       m_Items: []
   references:

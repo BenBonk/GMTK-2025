@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
-      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
-      dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -514,6 +514,136 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: "Kontynuowa\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139489218560
+    m_Localized: Witamy w Dzienniku!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Localized: "Kliknij zak\u0142adk\u0119 powy\u017Cej, aby zobaczy\u0107 swoje
+      statystyki i rekordy!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Localized: "Zamkn\u0105\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Localized: "Zwierz\u0119ta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Localized: "\u0141\u0105czna liczba z\u0142apanych zwierz\u0105t:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Localized: "3 najch\u0119tniej kupowane zwierz\u0119ta:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Localized: "Liczba zakupionych zwierz\u0105t:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Localized: "Najwi\u0119ksze lasso:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Localized: "Najwy\u017Csze punkty w pojedynczym lasso:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Localized: Dobrodziejstwa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Localized: "3 najcz\u0119\u015Bciej kupowane prezenty:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Localized: 'Liczba zakupionych dobrodziejstw:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Localized: "Liczba zakupionych ulepsze\u0144 zwierz\u0105t:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Localized: "Najwy\u017Cszy osi\u0105gni\u0119ty poziom zwierz\u0119cia:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Localized: Gospodarka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Localized: "Najwi\u0119ksza ilo\u015B\u0107 got\xF3wki w jednym lasso:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Localized: "Najwi\u0119ksza ilo\u015B\u0107 got\xF3wki posiadanej jednocze\u015Bnie:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Localized: "Najwi\u0119cej ponownych rzut\xF3w w jednej grze:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Localized: "\u0141\u0105czna liczba ponownych rzut\xF3w:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Localized: Dokumentacja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Localized: "Najwy\u017Csza liczba okr\u0105g\u0142a:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Localized: "Najwy\u017Csza liczba okr\u0105g\u0142a przy maksymalnym poziomie
+      trudno\u015Bci:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Localized: 'Liczba niebezpiecznych sytuacji:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Localized: Dom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Localized: "Zwierz\u0119ta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Localized: Dobrodziejstwa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Localized: Gospodarka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Localized: Dokumentacja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Localized: Gra wstrzymana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Localized: Ustawienia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Localized: "Dziennik okr\u0119towy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Localized: "Wznawia\u0107"
     m_Metadata:
       m_Items: []
   references:

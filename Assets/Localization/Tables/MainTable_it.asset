@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -494,6 +494,135 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: Continuare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139489218560
+    m_Localized: Benvenuti al diario di bordo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Localized: Fai clic su una scheda qui sopra per visualizzare le tue statistiche
+      e i tuoi record!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Localized: Vicino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Localized: Animali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Localized: 'Numero totale di animali catturati:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Localized: "I 3 animali pi\xF9 acquistati:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Localized: 'Numero di animali acquistati:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Localized: "Il lazo pi\xF9 grande:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Localized: "Punti pi\xF9 alti in un singolo lazo:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Localized: Doni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Localized: 'Numero di benefici acquistati:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Localized: 'Numero di potenziamenti per animali acquistati:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Localized: "Livello animale pi\xF9 alto raggiunto:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Localized: Economia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Localized: 'Il massimo di denaro in un singolo lazo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Localized: 'Massimo importo di denaro contante detenuto contemporaneamente:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Localized: 'Maggior numero di rilanci in una singola partita:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Localized: 'Totale rilanci:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Localized: Registrazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Localized: "Numero tondo pi\xF9 alto:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Localized: "Numero di round pi\xF9 alto alla massima difficolt\xE0:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Localized: 'Numero di situazioni pericolose:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Localized: Casa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Localized: Animali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Localized: Doni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Localized: Economia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Localized: Registrazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Localized: Gioco in pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Localized: Impostazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Localized: Diario di bordo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Localized: Riprendere
     m_Metadata:
       m_Items: []
   references:

@@ -493,6 +493,134 @@ MonoBehaviour:
     m_Localized: Continue
     m_Metadata:
       m_Items: []
+  - m_Id: 3154139489218560
+    m_Localized: Welcome to the Logbook!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355904
+    m_Localized: Click a tab above to view your stats and records!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355905
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355906
+    m_Localized: Animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355907
+    m_Localized: 'Total Animals Wrangled:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355908
+    m_Localized: 'Top 3 Most Purchased Animals:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355909
+    m_Localized: 'Number of Animals Purchased:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355910
+    m_Localized: 'Biggest Lasso:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355911
+    m_Localized: 'Highest Points in a Single Lasso:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355912
+    m_Localized: Boons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355913
+    m_Localized: 'Top 3 Most Purchaed Boons:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355914
+    m_Localized: 'Number of Boons Purchased:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355915
+    m_Localized: 'Number of Animal Upgrades Purchased:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355916
+    m_Localized: 'Highest Animal Level Achieved:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355917
+    m_Localized: Economy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355918
+    m_Localized: 'Highest Cash in a Single Lasso:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355919
+    m_Localized: 'Highest Cash Held at Once:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139535355920
+    m_Localized: 'Most Rerolls in a Single Game:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550208
+    m_Localized: 'Total Rerolls:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550209
+    m_Localized: Records
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550210
+    m_Localized: 'Highest Round Number:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550211
+    m_Localized: 'Highest Round Number at Max Difficulty:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3154139539550212
+    m_Localized: 'Number of Close Calls:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548288
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548289
+    m_Localized: Animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548290
+    m_Localized: Boons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548291
+    m_Localized: Economy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548292
+    m_Localized: Records
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548293
+    m_Localized: Game Paused
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548294
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548295
+    m_Localized: Logbook
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3161374273548296
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
