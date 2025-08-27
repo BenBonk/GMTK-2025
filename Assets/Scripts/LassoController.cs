@@ -443,6 +443,10 @@ public class LassoController : MonoBehaviour
                 GameController.gameManager.pointsThisRound += result.pointBonus;
             }
 
+            if (result.pointBonus > FBPP.GetFloat("highestPointsPerLasso"))
+            {
+                FBPP.SetFloat("highestPointsPerLasso", (float)result.pointBonus);
+            }
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();
             pop.Append(group.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
@@ -517,11 +521,17 @@ public class LassoController : MonoBehaviour
                 }
             }
 
-            if (result.pointBonus > 0)
+            if (result.currencyBonus > 0)
                 AudioManager.Instance.PlaySFX("cash");
             else
                 AudioManager.Instance.PlaySFX("no_cash");
 
+            if (result.currencyBonus > FBPP.GetFloat("highestCashPerLasso"))
+            {
+                FBPP.SetFloat("highestCashPerLasso", (float)result.currencyBonus);
+            }
+            
+            
             GameController.player.playerCurrency += result.currencyBonus;
 
             group.transform.localScale = Vector3.zero;

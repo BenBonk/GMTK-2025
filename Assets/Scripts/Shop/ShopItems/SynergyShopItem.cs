@@ -35,6 +35,8 @@ public class SynergyShopItem : ShopItem
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
+            FBPP.SetInt(chosenSynergy.name, FBPP.GetInt(chosenSynergy.name)+1);
+            FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased")+1);
             upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
             if (GameController.player.synergiesInDeck.Count<3)
             {

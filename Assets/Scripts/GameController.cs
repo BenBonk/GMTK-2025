@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     [SerializeField] TMP_FontAsset localLocalizedFont;
     [SerializeField] SaveManager localSaveManager;
     [SerializeField] PauseMenu localPauseMenu;
+    [SerializeField] Logbook localLogbook;
     void Awake()
     {
         instance = this;
@@ -80,5 +81,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localPauseMenu; }
         set { instance.localPauseMenu = value; }
+    }
+    public static Logbook logbook
+    {
+        get { return instance.localLogbook; }
+        set { instance.localLogbook = value; }
     }
 }

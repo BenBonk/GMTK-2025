@@ -59,6 +59,11 @@ public class CaptureManager : MonoBehaviour
             }
             CaptureAnimal(animal);
         }
+        
+        if (animalsCaptured.Length > FBPP.GetInt("largestCapture"))
+        {
+            FBPP.SetInt("largestCapture", animalsCaptured.Length);
+        }
 
         if (totalNonPredatorCount > 1)
         {
@@ -84,8 +89,9 @@ public class CaptureManager : MonoBehaviour
         currencyBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.animalData.currencyToGive;
         currencyMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;
         pointBonus += GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.animalData.pointsToGive;
-        pointMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.animalData.pointsMultToGive;    
-        Debug.Log($"Captured animal: {capturedAnimal.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
+        pointMult *= GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.animalData.pointsMultToGive;
+        int numberAnimalsWrangled = FBPP.GetInt("numberAnimalsWrangled");
+        FBPP.SetInt("numberAnimalsWrangled", numberAnimalsWrangled+1);
     }
 
     private Dictionary<string, int> GetNameCounts(IEnumerable<string> animals)

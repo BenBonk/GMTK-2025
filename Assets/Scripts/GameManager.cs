@@ -139,6 +139,10 @@ public class GameManager : MonoBehaviour
         roundCompleted = false;
         barnAnimator.Play("Closed", 0, 0.1f);
         StartCoroutine(ShowReadySetLassoSequence());
+        if (roundNumber > FBPP.GetFloat("highestRound"))
+        {
+            FBPP.SetFloat("highestRound", roundNumber);
+        }
     }
 
     public void UpdateUI()
@@ -197,6 +201,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             DisplayPopupWord(localization.closeCall, .3f, .5f, false);
             //think we need some sfx here
+            FBPP.SetInt("closeCalls", FBPP.GetInt("closeCalls")+1);
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(EndRoundRoutine());
             deathPanel.gameObject.SetActive(false);
@@ -294,6 +299,10 @@ public class GameManager : MonoBehaviour
         currencyDisplay.text = $"CASH: {LassoController.FormatNumber(newcurrency)}";
         currencyDisplay.transform.localScale = Vector3.one * 1.1f;
         currencyDisplay.transform.localRotation = Quaternion.identity; // reset
+        if (newcurrency > FBPP.GetFloat("highestCash"))
+        {
+            FBPP.SetFloat("highestCash", (float)newcurrency);
+        }
 
         float angle = UnityEngine.Random.Range(-10f, 10f);
 
