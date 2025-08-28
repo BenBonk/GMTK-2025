@@ -30,20 +30,20 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  price: 0
-  sprite: {fileID: 0}
-  sprite2: {fileID: 0}
+  sprite: {fileID: -357421434760999972, guid: 396ac5e846a84e742af47415caab14eb, type: 3}
+  sprite2: {fileID: 1506059532727745469, guid: 396ac5e846a84e742af47415caab14eb, type: 3}
   deckIcon: {fileID: 0}
   animSpeed: 0
-  animalPrefab: {fileID: 0}
-  currencyToGive: 0
+  animalPrefab: {fileID: 1617273539469480319, guid: 4b83940e91801614788454d802687ed9, type: 3}
   pointsToGive: 0
-  currencyMultToGive: 0
   pointsMultToGive: 0
+  currencyToGive: 0
+  currencyMultToGive: 0
   pointsLevelUpIncrease: 0
   pointsLevelUpMult: 0
   currencyLevelUpIncrease: 0
   currencyLevelUpMult: 0
+  price: 0
   upgradeCost: 0
   references:
     version: 2
