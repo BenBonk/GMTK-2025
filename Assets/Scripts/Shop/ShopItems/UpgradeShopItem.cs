@@ -7,6 +7,7 @@ public class UpgradeShopItem : ShopItem
 {
     private AnimalData[] possibleAnimals;
     private AnimalData chosenAnimal;
+    
     public override void Initialize()
     {
         possibleAnimals = GameController.player.animalsInDeck.ToArray();
@@ -32,6 +33,7 @@ public class UpgradeShopItem : ShopItem
             canPurchase = false;
             FBPP.SetInt("totalUpgradesPurchased", FBPP.GetInt("totalUpgradesPurchased")+1);
             GameController.animalLevelManager.SetLevel(chosenAnimal.animalName.GetLocalizedString(), GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString())+1);
+            Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             if (GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) > FBPP.GetInt("highestAnimalLevel"))
             {
                 FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()));

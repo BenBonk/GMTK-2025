@@ -9,6 +9,8 @@ public class SynergyShopItem : ShopItem
     public SynergySlots synergySlots;
     public TMP_Text desc2;
     private int value;
+    
+    
     public void SetInt(int val)
     {
         value = val;
@@ -38,6 +40,7 @@ public class SynergyShopItem : ShopItem
             FBPP.SetInt(chosenSynergy.name, FBPP.GetInt(chosenSynergy.name)+1);
             FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased")+1);
             upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
+            Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             if (GameController.player.synergiesInDeck.Count<3)
             {
                 GameController.player.AddSynergyToDeck(chosenSynergy);

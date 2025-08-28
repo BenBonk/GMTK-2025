@@ -30,6 +30,7 @@ public class ShopManager : MonoBehaviour
     public bool isTut;
     public TMP_Text cashText;
     public LocalizedString cashLocalString;
+    public GameObject purchaseParticles;
     //continue
 
     private IEnumerator Start()
@@ -76,6 +77,17 @@ public class ShopManager : MonoBehaviour
     public void UpdateCashText()
     {
         cashText.text = cashLocalString.GetLocalizedString() + LassoController.FormatNumber(player.playerCurrency);
+        Sequence pulse = DOTween.Sequence();
+        pulse.Append(cashText.transform.DOScale(1.10f, 0.1f).SetEase(Ease.OutBack));
+        pulse.Append(cashText.transform.DOShakeRotation(
+            duration: 0.15f,
+            strength: new Vector3(0f, 0f, 6f), 
+            vibrato: 5,
+            randomness: 90,
+            fadeOut: true
+        ));
+        pulse.Append(cashText.transform.DOScale(1f, 0.15f).SetEase(Ease.OutExpo));
+        pulse.Join(cashText.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
     }
 
     public void UpdateSynergies()

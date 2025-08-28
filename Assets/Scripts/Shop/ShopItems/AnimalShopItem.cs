@@ -62,6 +62,7 @@ public class AnimalShopItem : ShopItem
             FBPP.SetInt("totalAnimalsPurchased", FBPP.GetInt("totalAnimalsPurchased")+1);
             GameController.player.AddAnimalToDeck(chosenAnimal);
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
+            Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             shopManager.UpdateDeck();
         }
     }
