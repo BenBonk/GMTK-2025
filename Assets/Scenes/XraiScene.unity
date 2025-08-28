@@ -1574,6 +1574,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: rt
+      value: 
+      objectReference: {fileID: 1761591397}
     - target: {fileID: 6072429973145566574, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_Name
       value: AnimalShopItem
@@ -2608,6 +2612,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: rt
+      value: 
+      objectReference: {fileID: 2048850563}
     - target: {fileID: 6072429973145566574, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_Name
       value: AnimalShopItem (1)
@@ -3546,6 +3554,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterialOverride: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
   localMaterialOverride: {fileID: 2100000, guid: 9a55bc2297f73834aa5f56ac5e9f916a, type: 2}
+--- !u!224 &465523963 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 273292032486981524, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+  m_PrefabInstance: {fileID: 1747353839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &467729256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4942,6 +4955,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573234384}
   m_CullTransparentMesh: 1
+--- !u!224 &578010034 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 273292032486981524, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+  m_PrefabInstance: {fileID: 1510462766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &584759538
 GameObject:
   m_ObjectHideFlags: 0
@@ -18190,6 +18208,10 @@ PrefabInstance:
       value: 4289385706
       objectReference: {fileID: 0}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: rt
+      value: 
+      objectReference: {fileID: 1483620397}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: desc2
       value: 
       objectReference: {fileID: 1231435527}
@@ -18502,6 +18524,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!224 &1483620397 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4669459998929177703, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+  m_PrefabInstance: {fileID: 1483620391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1510462766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18590,6 +18617,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: rt
+      value: 
+      objectReference: {fileID: 578010034}
     - target: {fileID: 7310025862920069743, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -20151,6 +20182,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4289385706
       objectReference: {fileID: 0}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: rt
+      value: 
+      objectReference: {fileID: 465523963}
     - target: {fileID: 7473698674869216222, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: m_Name
       value: AnimalUpgradeShopItem (1)
@@ -20241,6 +20276,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_TargetDisplay: 0
+--- !u!224 &1761591397 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8369571419308926127, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+  m_PrefabInstance: {fileID: 175759935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1781559412
 GameObject:
   m_ObjectHideFlags: 0
@@ -20548,6 +20588,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: rt
+      value: 
+      objectReference: {fileID: 2040139531}
     - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: priceText
       value: 
@@ -22625,6 +22669,16 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!224 &2040139531 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8369571419308926127, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+  m_PrefabInstance: {fileID: 1808476958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2048850563 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8369571419308926127, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+  m_PrefabInstance: {fileID: 373462332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2050775190
 GameObject:
   m_ObjectHideFlags: 0

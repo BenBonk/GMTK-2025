@@ -262,12 +262,12 @@ public class GameManager : MonoBehaviour
 
     public void LeaveShop()
     {
-        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
-        shopButtonBlocker.SetActive(true);
         if (GameController.shopManager.cantPurchaseItem)
         {
             return;
         }
+        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
+        shopButtonBlocker.SetActive(true);
         UpdateUI();
         barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
         cameraController.ResetToStartPosition(1f);
