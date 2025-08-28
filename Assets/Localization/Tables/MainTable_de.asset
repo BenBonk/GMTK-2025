@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Cash Cow
+    m_Localized: Goldesel
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -549,7 +549,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "Top 3 der am h\xE4ufigsten gekauften Segnungen:"
+    m_Localized: "Die 3 am h\xE4ufigsten gekauften Segen:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914

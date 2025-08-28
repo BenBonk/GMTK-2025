@@ -139,9 +139,9 @@ public class GameManager : MonoBehaviour
         roundCompleted = false;
         barnAnimator.Play("Closed", 0, 0.1f);
         StartCoroutine(ShowReadySetLassoSequence());
-        if (roundNumber > FBPP.GetFloat("highestRound"))
+        if (roundNumber > FBPP.GetInt("highestRound"))
         {
-            FBPP.SetFloat("highestRound", roundNumber);
+            FBPP.SetInt("highestRound", roundNumber);
         }
     }
 

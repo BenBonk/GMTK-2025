@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -19,6 +20,12 @@ public class SaveManager : MonoBehaviour
    
            };
            FBPP.Start(config);
+    }
+
+    //Not sure if we want this for production
+    private void OnApplicationQuit()
+    {
+        FBPP.Save();
     }
 
     public bool PlayerHasSave()

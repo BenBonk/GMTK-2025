@@ -116,7 +116,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22
     m_Localized: "Predador. Puxa predadores pr\xF3ximos em sua dire\xE7\xE3o. Imune
-      a efeitos de puxar e empurrar."
+      a efeitos de empurrar e puxar."
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -234,7 +234,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: Contando Ovelhas
+    m_Localized: Contando ovelhas
     m_Metadata:
       m_Items: []
   - m_Id: 52
@@ -539,7 +539,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "Os 3 benef\xEDcios mais comprados:"
+    m_Localized: 'Os 3 presentes mais comprados:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914

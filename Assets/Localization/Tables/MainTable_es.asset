@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Efectivo multi:'
+    m_Localized: "Multiplicaci\xF3n de efectivo:"
     m_Metadata:
       m_Items: []
   - m_Id: 17
