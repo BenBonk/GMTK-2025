@@ -174,7 +174,6 @@ public class AudioManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         currentMusicSource.volume = volume;
-
     }
     public void PlayNextPlaylistTrack(float fadeOutDuration = -1f)
     {

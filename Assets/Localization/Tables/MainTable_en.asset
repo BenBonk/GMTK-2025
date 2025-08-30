@@ -621,6 +621,50 @@ MonoBehaviour:
     m_Localized: Resume
     m_Metadata:
       m_Items: []
+  - m_Id: 4287678683262976
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206016
+    m_Localized: Fullscreen Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206017
+    m_Localized: Framerate Cap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206018
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206019
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206020
+    m_Localized: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206021
+    m_Localized: Vsync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206022
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206023
+    m_Localized: Maximized Window
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206024
+    m_Localized: Windowed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206025
+    m_Localized: Unlimited
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

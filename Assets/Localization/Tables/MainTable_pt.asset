@@ -226,7 +226,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: "Frango J\xF3quei"
+    m_Localized: Chicken Jockey
     m_Metadata:
       m_Items: []
   - m_Id: 50
@@ -234,7 +234,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: Contando ovelhas
+    m_Localized: Contando Ovelhas
     m_Metadata:
       m_Items: []
   - m_Id: 52
@@ -266,7 +266,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: Raposa no Galinheiro
+    m_Localized: Raposa em um galinheiro
     m_Metadata:
       m_Items: []
   - m_Id: 60
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Tr\xEAs Porquinhos"
+    m_Localized: "Os Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -624,6 +624,50 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3161374273548296
     m_Localized: Retomar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678683262976
+    m_Localized: "Resolu\xE7\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206016
+    m_Localized: Modo de tela cheia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206017
+    m_Localized: Limite de taxa de quadros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206018
+    m_Localized: Linguagem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206019
+    m_Localized: "M\xFAsica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206020
+    m_Localized: Efeitos sonoros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206021
+    m_Localized: "Sincroniza\xE7\xE3o vertical"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206022
+    m_Localized: Tela cheia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206023
+    m_Localized: Janela maximizada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206024
+    m_Localized: Janela
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206025
+    m_Localized: Ilimitado
     m_Metadata:
       m_Items: []
   references:

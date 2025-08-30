@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+ Esp\xE8ces\_: {0}"
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -586,7 +586,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "Num\xE9ro de manche le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
+    m_Localized: "Num\xE9ro de tour le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
@@ -627,6 +627,50 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3161374273548296
     m_Localized: Reprendre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678683262976
+    m_Localized: "R\xE9solution"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206016
+    m_Localized: "Mode plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206017
+    m_Localized: "Limite de fr\xE9quence d'images"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206018
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206019
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206020
+    m_Localized: Effets sonores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206021
+    m_Localized: Synchronisation verticale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206022
+    m_Localized: "Plein \xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206023
+    m_Localized: "Fen\xEAtre maximis\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206024
+    m_Localized: "Fen\xEAtr\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206025
+    m_Localized: "Illimit\xE9"
     m_Metadata:
       m_Items: []
   references:

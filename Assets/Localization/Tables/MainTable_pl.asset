@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Strata punkt\xF3w:"
+    m_Localized: "Utrata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -644,6 +644,50 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3161374273548296
     m_Localized: "Wznawia\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678683262976
+    m_Localized: Rezolucja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206016
+    m_Localized: "Tryb pe\u0142noekranowy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206017
+    m_Localized: "Limit liczby klatek na sekund\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206018
+    m_Localized: "J\u0119zyk"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206019
+    m_Localized: Muzyka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206020
+    m_Localized: Efekty specjalne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206021
+    m_Localized: Synchronizacja pionowa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206022
+    m_Localized: "Pe\u0142ny ekran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206023
+    m_Localized: Zmaksymalizowane okno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206024
+    m_Localized: Okienkowy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206025
+    m_Localized: Nieograniczony
     m_Metadata:
       m_Items: []
   references:

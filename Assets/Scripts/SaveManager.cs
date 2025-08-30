@@ -72,7 +72,7 @@ public class SaveManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log(FBPP.GetString("animalsInDeck"));
+        //Debug.Log(FBPP.GetString("animalsInDeck"));
         player.animalsInDeck.Clear();
         player.synergiesInDeck.Clear();
         foreach (var animal in FBPP.GetString("animalsInDeck").Split(","))
@@ -81,7 +81,7 @@ public class SaveManager : MonoBehaviour
             if (match != null)
             {
                 player.animalsInDeck.Add(match);
-                Debug.Log("Loaded: " + animal);
+                //Debug.Log("Loaded: " + animal);
             }
         }
         foreach (var synergy in FBPP.GetString("synergiesInDeck").Split(","))
@@ -90,7 +90,7 @@ public class SaveManager : MonoBehaviour
             if (match != null)
             {
                 player.synergiesInDeck.Add(match);
-                Debug.Log("Loaded: " + synergy);
+                //Debug.Log("Loaded: " + synergy);
             }
         }
     }

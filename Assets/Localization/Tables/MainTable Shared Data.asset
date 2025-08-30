@@ -599,6 +599,50 @@ MonoBehaviour:
     m_Key: pause.resume
     m_Metadata:
       m_Items: []
+  - m_Id: 4287678683262976
+    m_Key: settings.resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206016
+    m_Key: settings.fullScreenMode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206017
+    m_Key: settings.framerateCap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206018
+    m_Key: settings.language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206019
+    m_Key: settings.music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206020
+    m_Key: settings.sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206021
+    m_Key: settings.vsync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206022
+    m_Key: settings.fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206023
+    m_Key: settings.maximizedWindow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206024
+    m_Key: settings.windowed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4287678725206025
+    m_Key: settings.unlimited
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
