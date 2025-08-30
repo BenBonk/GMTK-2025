@@ -643,6 +643,10 @@ MonoBehaviour:
     m_Key: settings.unlimited
     m_Metadata:
       m_Items: []
+  - m_Id: 4515109050494976
+    m_Key: pause.quit
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

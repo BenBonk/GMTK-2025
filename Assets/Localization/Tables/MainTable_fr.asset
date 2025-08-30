@@ -218,7 +218,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: "Vache \xE0 lait"
+    m_Localized: t
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -586,7 +586,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "Num\xE9ro de tour le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
+    m_Localized: "Num\xE9ro de manche le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
@@ -671,6 +671,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4287678725206025
     m_Localized: "Illimit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4515109050494976
+    m_Localized: Quitter
     m_Metadata:
       m_Items: []
   references:

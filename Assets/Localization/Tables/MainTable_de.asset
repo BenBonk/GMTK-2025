@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Goldesel
+    m_Localized: T
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein
+      mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -248,7 +248,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
+      Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -677,6 +678,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4287678725206025
     m_Localized: Unbegrenzt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4515109050494976
+    m_Localized: "Aufh\xF6ren"
     m_Metadata:
       m_Items: []
   references:

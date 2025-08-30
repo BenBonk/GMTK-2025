@@ -217,7 +217,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Mucca da soldi
+    m_Localized: T
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -667,6 +667,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4287678725206025
     m_Localized: Illimitato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4515109050494976
+    m_Localized: Esentato
     m_Metadata:
       m_Items: []
   references:

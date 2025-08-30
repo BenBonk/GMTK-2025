@@ -218,7 +218,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Vaca leiteira
+    m_Localized: t
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -266,7 +266,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: Raposa em um galinheiro
+    m_Localized: Raposa no Galinheiro
     m_Metadata:
       m_Items: []
   - m_Id: 60
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Os Tr\xEAs Porquinhos"
+    m_Localized: "Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -668,6 +668,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4287678725206025
     m_Localized: Ilimitado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4515109050494976
+    m_Localized: Desistir
     m_Metadata:
       m_Items: []
   references:

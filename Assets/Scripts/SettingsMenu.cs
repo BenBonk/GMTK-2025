@@ -15,6 +15,8 @@ public class SettingsMenu : MonoBehaviour
     public TMP_Dropdown fullScreenModeDropdown;
     public TMP_Dropdown languageDropdown;
     public TMP_Dropdown framerateDropdown;
+    public Slider musicSlider;
+    public Slider sfxSlider;
     public Toggle vsyncToggle;
     public TMP_Text musicValueText;
     public TMP_Text sfxValueText;
@@ -115,8 +117,8 @@ public class SettingsMenu : MonoBehaviour
         }
         resolutionValue = FBPP.GetInt("resolutionValue");
         fullscreenModeValue = FBPP.GetInt("fullscreenModeValue", 0);
-        sfxValue = FBPP.GetFloat("sfxValue", 0);
-        musicValue = FBPP.GetFloat("musicValue", 0);
+        sfxValue = FBPP.GetFloat("sfxValue", 0.5f);
+        musicValue = FBPP.GetFloat("musicValue", 0.5f);
         languageValue = FBPP.GetInt("languageValue");
         vsyncValue = FBPP.GetBool("vsyncValue", true);
         framerateCapValue = FBPP.GetInt("framerateCapValue");
@@ -128,8 +130,10 @@ public class SettingsMenu : MonoBehaviour
         SetLanguage(languageValue);
         SetFramerateCap(framerateCapValue);
         StartCoroutine(WaitSetResolution());
-        
-        
+
+
+        musicSlider.value = musicValue;
+        sfxSlider.value = sfxValue;
         musicValueText.text = ""+musicValue.ToString("F2");
         sfxValueText.text = ""+sfxValue.ToString("F2");
         
@@ -145,6 +149,19 @@ public class SettingsMenu : MonoBehaviour
     }
     IEnumerator WaitSetResolution()
     {
+        if (FBPP.GetInt("FirstOpen",0)==0)
+        {
+            FBPP.SetInt("FirstOpen", 1);
+            for (int i = 0; i < uniqueResolutions.Length; i++)
+            {
+                if (Screen.currentResolution.width == uniqueResolutions[i].width && Screen.currentResolution.height == uniqueResolutions[i].height)
+                {
+                    resolutionValue = i;
+                    FBPP.SetInt("resolutionValue", i);
+                }
+            }
+        }
+        
         SetFullscreenMode(fullscreenModeValue);
         yield return new WaitForEndOfFrame(); //needed because of how unity handles fullscreenMode
         SetResolution(resolutionValue);

@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Utrata punkt\xF3w:"
+    m_Localized: "Strata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Dojna krowa
+    m_Localized: T
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
-      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
-      na dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
+      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
+      dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -688,6 +688,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4287678725206025
     m_Localized: Nieograniczony
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4515109050494976
+    m_Localized: "Zrezygnowa\u0107"
     m_Metadata:
       m_Items: []
   references:

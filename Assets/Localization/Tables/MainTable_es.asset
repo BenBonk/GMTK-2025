@@ -217,7 +217,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Vaca lechera
+    m_Localized: el
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -415,7 +415,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "\xA1Ahora intenta enlazar a estas dos criaturas!"
+    m_Localized: "\xA1Ahora intenta unir a estas dos criaturas con un lazo!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
@@ -668,6 +668,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4287678725206025
     m_Localized: Ilimitado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4515109050494976
+    m_Localized: Abandonar
     m_Metadata:
       m_Items: []
   references:
