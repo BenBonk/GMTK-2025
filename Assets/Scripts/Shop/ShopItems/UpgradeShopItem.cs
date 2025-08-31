@@ -7,6 +7,8 @@ public class UpgradeShopItem : ShopItem
 {
     private AnimalData[] possibleAnimals;
     private AnimalData chosenAnimal;
+    public UpgradeShopItem partnerUpgrade;
+    public AnimalShopItem[] animalShopItems;
     
     public override void Initialize()
     {
@@ -15,7 +17,7 @@ public class UpgradeShopItem : ShopItem
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
         int animalLevel = levelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
 
-        descriptionText.text = GameController.descriptionManager.GetAnimalLevelDescription(chosenAnimal);
+        UpdateDescription();
 
         titleText.text = chosenAnimal.animalName.GetLocalizedString();
         price = Math.Round(chosenAnimal.upgradeCost * Math.Pow(1.5, animalLevel));
@@ -23,6 +25,11 @@ public class UpgradeShopItem : ShopItem
         upgradeArt.sprite = chosenAnimal.deckIcon;
         upgradeArt.transform.DOScale(Vector3.one, 0);
         upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.one, .25f);
+    }
+
+    void UpdateDescription()
+    {
+        descriptionText.text = GameController.descriptionManager.GetAnimalLevelDescription(chosenAnimal);
     }
     public override void PurchaseUpgrade()
     {
@@ -37,6 +44,27 @@ public class UpgradeShopItem : ShopItem
             if (GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) > FBPP.GetInt("highestAnimalLevel"))
             {
                 FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()));
+            }
+
+            if (!shopManager.cantPurchaseItem)
+            {
+                partnerUpgrade.UpdateDescription();
+            }
+
+            foreach (var a in animalShopItems)
+            {
+                if (a.chosenAnimal.animalName==chosenAnimal.animalName)
+                {
+                    a.descriptionText.text = GameController.descriptionManager.GetAnimalDescription(a.chosenAnimal);
+                }
+            }
+
+            foreach (var card in FindObjectsOfType<DeckCard>(true))
+            {
+                if (!card.bounch && card.icon.sprite == chosenAnimal.deckIcon)
+                {
+                    card.desc.text = GameController.descriptionManager.GetAnimalDescription(chosenAnimal);
+                }
             }
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);

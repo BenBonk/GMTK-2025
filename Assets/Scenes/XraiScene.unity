@@ -1040,6 +1040,14 @@ PrefabInstance:
       propertyPath: rt
       value: 
       objectReference: {fileID: 1761591397}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: possibleAnimals.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[0]'
+      value: 
+      objectReference: {fileID: 6660122831339244413, guid: a50a71460273671499dfbb3900b93489, type: 3}
     - target: {fileID: 6072429973145566574, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_Name
       value: AnimalShopItem
@@ -10907,7 +10915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 0
+  isTesting: 1
   player: {fileID: 1887224207}
   startingPointRequirement: 65
   roundNumber: 0
@@ -13252,6 +13260,26 @@ PrefabInstance:
       propertyPath: rt
       value: 
       objectReference: {fileID: 578010034}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: partnerUpgrade
+      value: 
+      objectReference: {fileID: 1747353840}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: animalShopItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'animalShopItems.Array.data[0]'
+      value: 
+      objectReference: {fileID: 175759936}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'animalShopItems.Array.data[1]'
+      value: 
+      objectReference: {fileID: 373462333}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'animalShopItems.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1808476959}
     - target: {fileID: 7310025862920069743, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -14299,6 +14327,26 @@ PrefabInstance:
       propertyPath: rt
       value: 
       objectReference: {fileID: 465523963}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: partnerUpgrade
+      value: 
+      objectReference: {fileID: 1510462767}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: animalShopItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'animalShopItems.Array.data[0]'
+      value: 
+      objectReference: {fileID: 175759936}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'animalShopItems.Array.data[1]'
+      value: 
+      objectReference: {fileID: 373462333}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'animalShopItems.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1808476959}
     - target: {fileID: 7473698674869216222, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: m_Name
       value: AnimalUpgradeShopItem (1)

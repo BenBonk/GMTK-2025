@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class AnimalShopItem : ShopItem
 {
     public Animal[] possibleAnimals;
-    private AnimalData chosenAnimal;
+    [HideInInspector] public AnimalData chosenAnimal;
     private Sprite sprite1;
     private Sprite sprite2;
     private float animSpeed;
