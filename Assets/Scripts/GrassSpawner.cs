@@ -20,6 +20,11 @@ public class GrassSpawner : MonoBehaviour
 
     void Start()
     {
+       //SpawnGrass();
+    }
+
+    public void SpawnGrass()
+    {
         if (spawnAreaRectTransform == null)
         {
             return;
@@ -57,6 +62,7 @@ public class GrassSpawner : MonoBehaviour
     {
         if (grassSprites.Length == 0 || colorPalette.Count == 0)
         {
+            Debug.Log("aaaaaaa");
             return false;
         }
 

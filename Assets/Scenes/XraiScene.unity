@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2392157, g: 0.5372549, b: 0.2784314, a: 1}
+  m_Color: {r: 0.23137257, g: 0.5058824, b: 0.2627451, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10972,6 +10972,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  schemeManager: {fileID: 2082549783}
   references:
     version: 2
     RefIds: []
@@ -16132,16 +16133,58 @@ MonoBehaviour:
     extraItemsFrequency: 0
     extraItems: []
     shouldSpawnGrass: 1
+    grassColors:
+    - {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
+    - {r: 0.14509805, g: 0.36078432, b: 0.25490198, a: 1}
+    - {r: 0.098039225, g: 0.23137257, b: 0.2392157, a: 1}
+    - {r: 0.9176471, g: 0.8313726, b: 0.6666667, a: 1}
+    - {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
+    - {r: 0.14509805, g: 0.36078432, b: 0.25490198, a: 1}
+    - {r: 0.098039225, g: 0.23137257, b: 0.2392157, a: 1}
+    - {r: 0.14509805, g: 0.36078432, b: 0.25490198, a: 1}
+    - {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
   - mainColor: {r: 0.6901961, g: 0.41960788, b: 0.3019608, a: 1}
     darkColor: {r: 0.43529415, g: 0.23137257, b: 0.21176472, a: 0.28235295}
-    extraItemsFrequency: 0
-    extraItems: []
-    shouldSpawnGrass: 0
+    extraItemsFrequency: 9
+    extraItems:
+    - {fileID: 1187462644570448779, guid: d8d299c6bd025fe46a20967e35af675e, type: 3}
+    - {fileID: 4172675806396030800, guid: 4104e9cbadc758646b69c9e4d2175657, type: 3}
+    - {fileID: 4785031561181078593, guid: 78a306eb4ad4bb845a817483a09688ea, type: 3}
+    - {fileID: 3627413140138375012, guid: 4b7790c5f35a0fd45a38c6cf8631d198, type: 3}
+    - {fileID: 4625497268693916973, guid: c0916ff423752c840998ec472c7b6526, type: 3}
+    - {fileID: 2457037185567604089, guid: 0f17795c6e9e75e47ab76bdab19877b5, type: 3}
+    - {fileID: 4867058518212665160, guid: 066409cf015e03943acb1765532e62fb, type: 3}
+    - {fileID: 251783052827016220, guid: ce4435331ce7d9248979e992bac69fce, type: 3}
+    - {fileID: 7809703828312095940, guid: 691d0f1bbad72df4db393c510dc3a688, type: 3}
+    shouldSpawnGrass: 1
+    grassColors:
+    - {r: 0.6784314, g: 0.41176474, b: 0.29411766, a: 1}
+    - {r: 0.8588236, g: 0.62352943, b: 0.43529415, a: 1}
+    - {r: 0.8705883, g: 0.78823537, b: 0.6392157, a: 1}
+    - {r: 0.23137257, g: 0.14509805, b: 0.1764706, a: 1}
+    - {r: 0.427451, g: 0.227451, b: 0.20784315, a: 1}
+    - {r: 0.6784314, g: 0.40784317, b: 0.29411766, a: 1}
   - mainColor: {r: 0.8745099, g: 0.48235297, b: 0.27450982, a: 1}
     darkColor: {r: 0.75294125, g: 0.2901961, b: 0.18431373, a: 0.28235295}
-    extraItemsFrequency: 0
-    extraItems: []
-    shouldSpawnGrass: 0
+    extraItemsFrequency: 6
+    extraItems:
+    - {fileID: 8892788614900116604, guid: 77bc2d717d7c9ef40b5bbbee2b3c9fc7, type: 3}
+    - {fileID: 1160554788803493538, guid: 364dea881015c904a9e5400595c2e2a2, type: 3}
+    - {fileID: 7177454295661033228, guid: 1f9cd0f35d2f6824d97fee8659f89b57, type: 3}
+    - {fileID: 8490010362496563579, guid: b54b3ebb1eeccbe468fbdb608f215d29, type: 3}
+    - {fileID: 3918037955665845763, guid: 2df98f899f0e4e64888d88ea1b53a75f, type: 3}
+    - {fileID: 351763423357239812, guid: 1ddbd4bd748672840894f41f9ff55749, type: 3}
+    - {fileID: 2716140822329631950, guid: c5545ebf0fbaff44e8bd4562335fceee, type: 3}
+    - {fileID: 774860881137881056, guid: c4f7f6ea59f4d1c458c36ea08ca797ba, type: 3}
+    - {fileID: 4611719977709918514, guid: 38b1f2f517b2eeb4584fc6845df107dd, type: 3}
+    shouldSpawnGrass: 1
+    grassColors:
+    - {r: 0.7294118, g: 0.28235295, b: 0.18039216, a: 1}
+    - {r: 0.9960785, g: 0.70980394, b: 0.21176472, a: 1}
+    - {r: 0.9960785, g: 0.48627454, b: 0.14117648, a: 1}
+    - {r: 0.94117653, g: 0.854902, b: 0.6862745, a: 1}
+    - {r: 0.6745098, g: 0.25882354, b: 0.16470589, a: 1}
+    - {r: 0.8235295, g: 0.45882356, b: 0.2627451, a: 1}
 --- !u!4 &2082549784
 Transform:
   m_ObjectHideFlags: 0

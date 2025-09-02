@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
     public LocalizedString localLasso;
     private SaveManager saveManager;
     private PauseMenu pauseMenu;
+    public SchemeManager schemeManager;
     private void Start()
     {
         pauseMenu = GameController.pauseMenu;
@@ -266,6 +267,8 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
+
+        schemeManager.SetRandomScheme();
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
         UpdateUI();
