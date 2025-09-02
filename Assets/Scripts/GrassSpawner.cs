@@ -76,7 +76,7 @@ public class GrassSpawner : MonoBehaviour
         sr.sprite = grassSprites[Random.Range(0, grassSprites.Length)];
         sr.color = colorPalette[Random.Range(0, colorPalette.Count)];
         sr.sortingOrder = sortingOrder;
-
+        grassGO.tag = "SchemeDeco";
         grassGO.transform.position = tryPosition;
         grassGO.transform.SetParent(this.transform);
 
