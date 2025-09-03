@@ -647,6 +647,10 @@ MonoBehaviour:
     m_Key: pause.quit
     m_Metadata:
       m_Items: []
+  - m_Id: 5772790197366784
+    m_Key: shop.rerollShop
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

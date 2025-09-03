@@ -232,6 +232,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            GameController.rerollManager.Reset();
             GameController.shopManager.InitializeAllUpgrades();
             GoToShop();
         }

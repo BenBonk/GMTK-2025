@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     [SerializeField] SaveManager localSaveManager;
     [SerializeField] PauseMenu localPauseMenu;
     [SerializeField] Logbook localLogbook;
+    [SerializeField] RerollManager localRerollManager;
     void Awake()
     {
         instance = this;
@@ -86,5 +87,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localLogbook; }
         set { instance.localLogbook = value; }
+    }
+    public static RerollManager rerollManager
+    {
+        get { return instance.localRerollManager; }
+        set { instance.localRerollManager = value; }
     }
 }

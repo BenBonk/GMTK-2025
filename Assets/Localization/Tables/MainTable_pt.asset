@@ -116,7 +116,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22
     m_Localized: "Predador. Puxa predadores pr\xF3ximos em sua dire\xE7\xE3o. Imune
-      a efeitos de empurrar e puxar."
+      a efeitos de puxar e empurrar."
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -218,7 +218,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: t
+    m_Localized: Vaca leiteira
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -266,7 +266,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 59
-    m_Localized: Raposa no Galinheiro
+    m_Localized: Raposa em um galinheiro
     m_Metadata:
       m_Items: []
   - m_Id: 60
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Tr\xEAs Porquinhos"
+    m_Localized: "Os Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -672,6 +672,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4515109050494976
     m_Localized: Desistir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5772790197366784
+    m_Localized: Loja de Reroll?
     m_Metadata:
       m_Items: []
   references:

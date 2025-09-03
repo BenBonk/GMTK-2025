@@ -115,8 +115,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs \xE0 proximit\xE9. Immunis\xE9
-      contre les effets de pouss\xE9e et d'attraction."
+    m_Localized: "Pr\xE9dateur. Attire les cr\xE9atures non pr\xE9datrices \xE0 proximit\xE9.
+      Immunis\xE9 contre les effets de pouss\xE9e et d'attraction."
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -218,7 +218,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: t
+    m_Localized: "Vache \xE0 lait"
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -586,7 +586,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "Num\xE9ro de manche le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
+    m_Localized: "Num\xE9ro de tour le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
@@ -675,6 +675,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4515109050494976
     m_Localized: Quitter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5772790197366784
+    m_Localized: Reroll Shop ?
     m_Metadata:
       m_Items: []
   references:

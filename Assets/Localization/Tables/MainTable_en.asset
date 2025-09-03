@@ -217,7 +217,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: t
+    m_Localized: Cash Cow
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -667,6 +667,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4515109050494976
     m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5772790197366784
+    m_Localized: Reroll Shop?
     m_Metadata:
       m_Items: []
   references:

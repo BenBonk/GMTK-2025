@@ -52,6 +52,7 @@ public class SaveManager : MonoBehaviour
         FBPP.SetInt("round", 0);
         FBPP.SetString("animalsInDeck", "");
         FBPP.SetString("synergiesInDeck", "");
+        FBPP.DeleteInt("rerollPrice");
         GameController.animalLevelManager.ResetLevels();
     }
 

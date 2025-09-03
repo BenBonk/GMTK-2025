@@ -21,6 +21,7 @@ public class GrassSpawner : MonoBehaviour
     void Start()
     {
        //SpawnGrass();
+       CalculateSpawnAreaFromRectTransform();
     }
 
     public void SpawnGrass()
@@ -29,8 +30,6 @@ public class GrassSpawner : MonoBehaviour
         {
             return;
         }
-
-        CalculateSpawnAreaFromRectTransform();
 
         int attempts = 0;
         int placed = 0;

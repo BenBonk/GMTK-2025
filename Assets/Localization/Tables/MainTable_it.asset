@@ -217,7 +217,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: T
+    m_Localized: Mucca da soldi
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -671,6 +671,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4515109050494976
     m_Localized: Esentato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5772790197366784
+    m_Localized: Negozio di riavvolgimento?
     m_Metadata:
       m_Items: []
   references:

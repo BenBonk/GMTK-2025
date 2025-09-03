@@ -66,6 +66,7 @@ public class ShopManager : MonoBehaviour
         }
         foreach (var shopItem in shopItems)
         {
+            Instantiate(purchaseParticles, shopItem.rt.position, Quaternion.identity);
             shopItem.canPurchase = true;
             shopItem.Initialize();
             shopItem.transform.DOScale(Vector3.one, .3f).SetEase(Ease.OutBack);
@@ -173,5 +174,5 @@ public class ShopManager : MonoBehaviour
             synergiesPanel.DOAnchorPosX(1577, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>synergiesVisual.SetActive(false));
         }
     }
-    
+
 }
