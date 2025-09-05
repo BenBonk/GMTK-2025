@@ -455,6 +455,26 @@ MonoBehaviour:
     m_Key: death.home
     m_Metadata:
       m_Items: []
+  - m_Id: 6436971002093568
+    m_Key: win.win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619520
+    m_Key: win.survive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619521
+    m_Key: win.round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619522
+    m_Key: win.endless
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619523
+    m_Key: win.menu
+    m_Metadata:
+      m_Items: []
   - m_Id: 108
     m_Key: startScreen.wrangleRanch
     m_Metadata:

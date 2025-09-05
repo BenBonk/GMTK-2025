@@ -461,7 +461,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: 'Redondo:'
+    m_Localized: "D\xEDa:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
@@ -676,6 +676,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 5772790197366784
     m_Localized: "\xBFTienda de reroll?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971002093568
+    m_Localized: "\xA1T\xFA ganas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619520
+    m_Localized: Sobreviviste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619521
+    m_Localized: "D\xEDas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619522
+    m_Localized: Modo sin fin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619523
+    m_Localized: "Men\xFA principal"
     m_Metadata:
       m_Items: []
   references:

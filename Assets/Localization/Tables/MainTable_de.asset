@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Bauerndilemma
+    m_Localized: Das Dilemma der Bauern
     m_Metadata:
       m_Items: []
   - m_Id: 56
@@ -470,7 +470,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: 'Runden:'
+    m_Localized: 'Tag:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112940
@@ -685,6 +685,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 5772790197366784
     m_Localized: Reroll-Shop?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971002093568
+    m_Localized: Sie gewinnen!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619520
+    m_Localized: "Du hast \xFCberlebt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619521
+    m_Localized: Tage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619522
+    m_Localized: Endlosmodus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619523
+    m_Localized: "Hauptmen\xFC"
     m_Metadata:
       m_Items: []
   references:

@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Os Tr\xEAs Porquinhos"
+    m_Localized: "Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -462,7 +462,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: 'Redondo:'
+    m_Localized: 'Dia:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112946
@@ -676,6 +676,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 5772790197366784
     m_Localized: Loja de Reroll?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971002093568
+    m_Localized: "Voc\xEA venceu!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619520
+    m_Localized: "Voc\xEA sobreviveu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619521
+    m_Localized: Dias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619522
+    m_Localized: Modo Infinito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619523
+    m_Localized: Menu principal
     m_Metadata:
       m_Items: []
   references:

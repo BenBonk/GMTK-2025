@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
+using UnityEngine.WSA;
 using Random = UnityEngine.Random;
 
 public class ShopManager : MonoBehaviour
@@ -30,6 +31,8 @@ public class ShopManager : MonoBehaviour
     public bool isTut;
     public TMP_Text cashText;
     public LocalizedString cashLocalString;
+    public TMP_Text roundText;
+    public LocalizedString roundLocalString;
     public GameObject purchaseParticles;
     //continue
 
@@ -77,7 +80,8 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateCashText()
     {
-        cashText.text = cashLocalString.GetLocalizedString() + LassoController.FormatNumber(player.playerCurrency);
+        cashText.text = cashLocalString.GetLocalizedString() +" "+ LassoController.FormatNumber(player.playerCurrency);
+        roundText.text = roundLocalString.GetLocalizedString() +" "+ (GameController.gameManager.roundNumber);
         Sequence pulse = DOTween.Sequence();
         pulse.Append(cashText.transform.DOScale(1.10f, 0.1f).SetEase(Ease.OutBack));
         pulse.Append(cashText.transform.DOShakeRotation(

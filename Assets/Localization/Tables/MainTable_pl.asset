@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Utrata punkt\xF3w:"
+    m_Localized: "Strata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
-      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
-      na dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
+      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
+      dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -480,7 +480,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: "Okr\u0105g\u0142y:"
+    m_Localized: "Dzie\u0144:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -696,6 +696,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 5772790197366784
     m_Localized: Sklep Reroll?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971002093568
+    m_Localized: Wygrywasz!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619520
+    m_Localized: "Prze\u017Cy\u0142e\u015B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619521
+    m_Localized: Dni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619522
+    m_Localized: "Tryb niesko\u0144czony"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619523
+    m_Localized: "Menu g\u0142\xF3wne"
     m_Metadata:
       m_Items: []
   references:

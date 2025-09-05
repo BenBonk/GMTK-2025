@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool playerReady;
     public bool roundCompleted;
     public float roundDuration = 20f;
+    public int roundsToWin = 20;
     private float elapsedTime;
     public int predatorRoundFrequency;
 
@@ -41,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject shopButtonBlocker;
 
-    private int endDayCash = 50;
+    public int endDayCash = 50;
+    private bool endlessSelected = false;
 
 
     //private int _lassosUsedThisRound;
@@ -82,7 +84,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI currencyDisplay;
     public TextMeshProUGUI lassosDisplay;
     public RectTransform deathPanel;
+    public RectTransform winPanel;
     public TMP_Text roundNumberDeath;
+    public TMP_Text winRoundsText;
     public LassoController lassoController;
     public float pointsRequirementGrowthRate;
     public LocalizedString localReady;
@@ -217,13 +221,41 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.PlaySFX("time_up");
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // wait before next
 
+        if (roundNumber == roundsToWin)
+        {
+            endlessSelected = false;
+            winRoundsText.text = localization.localWinRound.GetLocalizedString() + " " + roundsToWin + " " + localization.localRound.GetLocalizedString();
+            winPanel.gameObject.SetActive(true);
+            foreach (var ps in winPanel.GetComponentsInChildren<ParticleSystem>(true))
+            {
+                ps.Play();
+            }
+            RectTransform children = winPanel.Find("Children") as RectTransform;
+            children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
+            GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
+            while (!endlessSelected)
+            {
+                yield return null;
+            }
+            children.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
+            GameController.predatorSelect.darkCover.DOFade(0f, 0.5f);
+            foreach (var ps in winPanel.GetComponentsInChildren<ParticleSystem>(true))
+            {
+                ps.Stop();
+            }
+            yield return new WaitForSeconds(.5f);
+        }
+
         // Second message
         localization.localPointsString.Arguments[0] = pointsThisRound;
         localization.localPointsString.RefreshString();
+        localization.localDayComplete.Arguments[0] = endDayCash;
+        localization.localDayComplete.RefreshString();
         DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");
         GameController.player.playerCurrency += endDayCash;
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
+        winPanel.gameObject.SetActive(false);
         pauseMenu.canOpenClose = false;
         // After both messages
         if (roundNumber % predatorRoundFrequency == 0)
@@ -236,6 +268,11 @@ public class GameManager : MonoBehaviour
             GameController.shopManager.InitializeAllUpgrades();
             GoToShop();
         }
+    }
+
+    public void GoEndless()
+    {
+        endlessSelected = true;
     }
 
     public void GoToShop()

@@ -457,7 +457,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 105
-    m_Localized: 'Round:'
+    m_Localized: 'Day:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112937
@@ -671,6 +671,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 5772790197366784
     m_Localized: Reroll Shop?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971002093568
+    m_Localized: You Win!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619520
+    m_Localized: You Survived
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619521
+    m_Localized: Days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619522
+    m_Localized: Endless Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6436971056619523
+    m_Localized: Main Menu
     m_Metadata:
       m_Items: []
   references:
