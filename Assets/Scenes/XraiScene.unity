@@ -26889,6 +26889,14 @@ PrefabInstance:
       propertyPath: synergySlots
       value: 
       objectReference: {fileID: 441562321}
+    - target: {fileID: 4669459998929177703, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 237.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669459998929177703, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 237.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5385334182874001711, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -26969,6 +26977,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5579212792475426288, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 46294fbc6c1dd61489a4a5d955b02879, type: 3}
     - target: {fileID: 6666804812995013461, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -33648,7 +33660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1436592585
 Animator:
   serializedVersion: 7
