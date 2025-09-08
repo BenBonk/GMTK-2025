@@ -66,7 +66,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Shop verlassen
+    m_Localized: Verlassen
     m_Metadata:
       m_Items:
       - rid: 241711563893112940
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Das Dilemma der Bauern
+    m_Localized: Bauerndilemma
     m_Metadata:
       m_Items: []
   - m_Id: 56

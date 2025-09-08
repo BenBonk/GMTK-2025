@@ -65,7 +65,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Salir de la tienda
+    m_Localized: Dejar
     m_Metadata:
       m_Items:
       - rid: 241711563893112938
@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: 'Efectivo multi:'
+    m_Localized: "Multiplicaci\xF3n de efectivo:"
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -415,7 +415,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "\xA1Ahora intenta enlazar a estas dos criaturas!"
+    m_Localized: "\xA1Ahora intenta unir a estas dos criaturas con un lazo!"
     m_Metadata:
       m_Items: []
   - m_Id: 96

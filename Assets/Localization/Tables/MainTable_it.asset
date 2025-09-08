@@ -65,7 +65,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Lascia il negozio
+    m_Localized: Partire
     m_Metadata:
       m_Items:
       - rid: 241711563893112941
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boon pi\xF9 acquistati:"
+    m_Localized: "I 3 Boons pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914

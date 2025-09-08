@@ -65,7 +65,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10
-    m_Localized: Sair da loja
+    m_Localized: Deixar
     m_Metadata:
       m_Items:
       - rid: 241711563893112946
