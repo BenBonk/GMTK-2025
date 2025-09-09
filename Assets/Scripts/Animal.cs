@@ -1,7 +1,9 @@
 using DG.Tweening;
 using System;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Animal : MonoBehaviour
 {
@@ -110,7 +112,12 @@ public class Animal : MonoBehaviour
     public virtual Vector3 LeaveScreen()
     {
         transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        return transform.position + Vector3.left * 5 * Time.deltaTime;
+        float leaveSpeed = 5f;
+        if (SceneManager.GetActiveScene().name == "TitleScreen")
+        {
+            leaveSpeed = 8f;
+        }
+        return transform.position + Vector3.left * leaveSpeed * Time.deltaTime;
     }
 
     public void Update()

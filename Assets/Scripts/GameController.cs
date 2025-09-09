@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     [SerializeField] PauseMenu localPauseMenu;
     [SerializeField] Logbook localLogbook;
     [SerializeField] RerollManager localRerollManager;
+    [SerializeField] FarmerSelectManager localFarmerSelectManager;
     void Awake()
     {
         instance = this;
@@ -92,5 +93,11 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localRerollManager; }
         set { instance.localRerollManager = value; }
+    }
+
+    public static FarmerSelectManager farmerSelectManager
+    {
+        get { return instance.localFarmerSelectManager; }
+        set { instance.localFarmerSelectManager = value; }
     }
 }
