@@ -2,16 +2,16 @@ using UnityEngine;
 
 public enum ShopPriceSetting
 {
-    Normal,
-    Reduced,
-    Increased
+    Novice,
+    Veteran,
+    Expert
 }
 
 public enum PointQuotaSetting
 {
-    Normal,
-    Reduced,
-    Increased
+    Novice,
+    Veteran,
+    Expert
 }
 
 [CreateAssetMenu(fileName = "HarvestData", menuName = "Scriptable Objects/HarvestData")]

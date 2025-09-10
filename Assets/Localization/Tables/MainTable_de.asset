@@ -707,6 +707,70 @@ MonoBehaviour:
     m_Localized: "Hauptmen\xFC"
     m_Metadata:
       m_Items: []
+  - m_Id: 8554514694254592
+    m_Localized: Demo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809024
+    m_Localized: "W\xE4hlen Sie Ihren Landwirt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809025
+    m_Localized: Alter Macdonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809026
+    m_Localized: "Erh\xE4lt nach jeder Runde das doppelte Tagesgeld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809027
+    m_Localized: Spieleinstellungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809028
+    m_Localized: Spiel starten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809029
+    m_Localized: "Rundenl\xE4nge:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809030
+    m_Localized: "T\xE4gliches Bargeld:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809031
+    m_Localized: 'Anzahl der Tage:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809032
+    m_Localized: 'Raubtiere starten:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809033
+    m_Localized: 'Shop-Preise:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809034
+    m_Localized: 'Punktequoten:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809035
+    m_Localized: 'Erntestufe:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809036
+    m_Localized: "Anf\xE4nger"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809037
+    m_Localized: Veteran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809038
+    m_Localized: Experte
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.Localization;
+
 public class HarvestLevelManager : MonoBehaviour
 {
     [Header("UI References")]
@@ -10,6 +12,14 @@ public class HarvestLevelManager : MonoBehaviour
     public TMP_Text shopPricesText;
     public TMP_Text pointQuotasText;
     public TMP_Text harvestLevelText;
+    
+    public LocalizedString roundLengthLocalized;
+    public LocalizedString dailyCashLocalized;
+    public LocalizedString numberOfDaysLocalized;
+    public LocalizedString startingPredatorsLocalized;
+    public LocalizedString shopPricesLocalized;
+    public LocalizedString pointQuotasLocalized;
+    public LocalizedString[] difficultyLevels;
 
     public GameObject decreaseButton;
     void Start()
@@ -42,12 +52,12 @@ public class HarvestLevelManager : MonoBehaviour
 
         HarvestData data = GameController.saveManager.harvestDatas[levelIndex];
 
-        roundLengthText.text = $"Round Length: {data.roundLength}";
-        dailyCashText.text = $"Daily Cash: {data.dailyCash}";
-        numberOfDaysText.text = $"Number of Days: {data.numberOfDays}";
-        startingPredatorsText.text = $"Starting Predators: +{data.startingPredators}";
-        shopPricesText.text = $"Shop Prices: {data.shopPrices}";
-        pointQuotasText.text = $"Point Quotas: {data.pointQuotas}";
+        roundLengthText.text = $"{roundLengthLocalized.GetLocalizedString()} {data.roundLength}";
+        dailyCashText.text = $"{dailyCashLocalized.GetLocalizedString()} {data.dailyCash}";
+        numberOfDaysText.text = $"{numberOfDaysLocalized.GetLocalizedString()} {data.numberOfDays}";
+        startingPredatorsText.text = $"{startingPredatorsLocalized.GetLocalizedString()} +{data.startingPredators}";
+        shopPricesText.text = $"{shopPricesLocalized.GetLocalizedString()} {difficultyLevels[(int)data.shopPrices].GetLocalizedString()}";
+        pointQuotasText.text = $"{pointQuotasLocalized.GetLocalizedString()} {difficultyLevels[(int)data.pointQuotas].GetLocalizedString()}";
         harvestLevelText.text = $"{data.harvestLevel}";
     }
 

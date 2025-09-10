@@ -17,5 +17,5 @@ MonoBehaviour:
   dailyCash: 50
   numberOfDays: 20
   startingPredators: 0
-  shopPrices: 1
-  pointQuotas: 1
+  shopPrices: 0
+  pointQuotas: 0

@@ -671,6 +671,70 @@ MonoBehaviour:
     m_Key: shop.rerollShop
     m_Metadata:
       m_Items: []
+  - m_Id: 8554514694254592
+    m_Key: farmerSelect.demo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809024
+    m_Key: farmerSelect.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809025
+    m_Key: farmerSelect.oldMacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809026
+    m_Key: farmerSelect.oldMacDonaldDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809027
+    m_Key: farmerSelect.gameSettings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809028
+    m_Key: farmerSelect.startGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809029
+    m_Key: farmerSelect.roundLength
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809030
+    m_Key: farmerSelect.dailyCash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809031
+    m_Key: farmerSelect.numDays
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809032
+    m_Key: farmerSelect.startingPredators
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809033
+    m_Key: farmerSelect.shopPrices
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809034
+    m_Key: farmerSelect.pointQuotas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809035
+    m_Key: farmerSelect.harvestLevel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809036
+    m_Key: farmerSelect.novice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809037
+    m_Key: farmerSelect.veteran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809038
+    m_Key: farmerSelect.expert
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

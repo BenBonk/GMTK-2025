@@ -47,10 +47,10 @@ public class StartScreenManager : MonoBehaviour
 
     public void LoadFarmers()
     {
-        hasSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 0.5f).SetEase(Ease.InOutBack);
-        noSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 0.5f).SetEase(Ease.InOutBack);
-        title.GetComponent<RectTransform>().DOAnchorPosX(-2000, 0.5f).SetEase(Ease.InOutBack);
-        farmerSelect.GetComponent<RectTransform>().DOAnchorPosX(210, 0.5f).SetEase(Ease.OutQuad).SetDelay(0.5f);
+        hasSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1.25f).SetEase(Ease.InOutBack);
+        noSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1.25f).SetEase(Ease.InOutBack);
+        title.GetComponent<RectTransform>().DOAnchorPosX(-2000, .75f).SetEase(Ease.InOutBack);
+        farmerSelect.GetComponent<RectTransform>().DOAnchorPosX(210, .6f).SetEase(Ease.OutBack).SetDelay(0.4f);
         GameController.gameManager.roundCompleted = true;
         CancelInvoke("SpawnAnimal");
     }

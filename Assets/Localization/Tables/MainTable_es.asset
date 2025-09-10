@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: "Multiplicaci\xF3n de efectivo:"
+    m_Localized: 'Efectivo multi:'
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -415,7 +415,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "\xA1Ahora intenta unir a estas dos criaturas con un lazo!"
+    m_Localized: "\xA1Ahora intenta enlazar a estas dos criaturas!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
@@ -696,6 +696,71 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 6436971056619523
     m_Localized: "Men\xFA principal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514694254592
+    m_Localized: "\xA1Manifestaci\xF3n!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809024
+    m_Localized: Elige a tu agricultor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809025
+    m_Localized: Viejo Macdonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809026
+    m_Localized: "Recibe el doble de dinero en efectivo diariamente despu\xE9s de
+      cada ronda."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809027
+    m_Localized: "Configuraci\xF3n del juego"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809028
+    m_Localized: Iniciar juego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809029
+    m_Localized: 'Longitud redonda:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809030
+    m_Localized: 'Efectivo diario:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809031
+    m_Localized: "N\xFAmero de d\xEDas:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809032
+    m_Localized: 'Depredadores iniciales:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809033
+    m_Localized: 'Precios de la tienda:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809034
+    m_Localized: 'Cuotas de puntos:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809035
+    m_Localized: 'Nivel de cosecha:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809036
+    m_Localized: Principiante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809037
+    m_Localized: Veterano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809038
+    m_Localized: Experto
     m_Metadata:
       m_Items: []
   references:

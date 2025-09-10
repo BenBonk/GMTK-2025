@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Tr\xEAs Porquinhos"
+    m_Localized: "Os Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -696,6 +696,70 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 6436971056619523
     m_Localized: Menu principal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514694254592
+    m_Localized: "Demonstra\xE7\xE3o!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809024
+    m_Localized: Escolha seu fazendeiro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809025
+    m_Localized: Velho Macdonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809026
+    m_Localized: "Recebe o dobro de dinheiro di\xE1rio ap\xF3s cada rodada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809027
+    m_Localized: "Configura\xE7\xF5es do jogo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809028
+    m_Localized: Iniciar jogo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809029
+    m_Localized: 'Comprimento redondo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809030
+    m_Localized: "Dinheiro di\xE1rio:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809031
+    m_Localized: "N\xFAmero de dias:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809032
+    m_Localized: 'Predadores iniciais:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809033
+    m_Localized: "Pre\xE7os da loja:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809034
+    m_Localized: 'Cotas de pontos:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809035
+    m_Localized: "N\xEDvel de colheita:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809036
+    m_Localized: Novato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809037
+    m_Localized: Veterano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8554514727809038
+    m_Localized: Especialista
     m_Metadata:
       m_Items: []
   references:
