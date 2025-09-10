@@ -12219,7 +12219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12efdb391e9c6974ba7e1d0ce3707d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canOverrideSynergy: 0
+  canOverrideBoon: 0
 --- !u!114 &441562322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27624,6 +27624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTesting: 1
   player: {fileID: 1887224207}
+  harvestLevel: 1
   startingPointRequirement: 65
   roundNumber: 0
   roundInProgress: 0
@@ -35962,6 +35963,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6417d69e25b360a41bdd25298dcc0b3c, type: 2}
   - {fileID: 11400000, guid: f958019ea33af704f917b75028f49f9f, type: 2}
   - {fileID: 11400000, guid: 6f4291e2e3eedad4c91d53189bbe3afa, type: 2}
+  harvestDatas:
+  - {fileID: 11400000, guid: 81e1b63c61ccadd49841ee01e914fdc9, type: 2}
+  - {fileID: 11400000, guid: b006248c959069d44be4e0ae76c9cfbf, type: 2}
   player: {fileID: 1887224207}
   gameManager: {fileID: 1220268107}
 --- !u!4 &1720502511
@@ -42577,7 +42581,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  lassosPerRound: 5
   boonsInDeck: []
 --- !u!4 &1887224208
 Transform:
