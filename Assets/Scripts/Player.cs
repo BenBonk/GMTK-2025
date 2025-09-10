@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     //public int timeToSpawnAnimals;
     
     public List<AnimalData> animalsInDeck;
-    public int lassosPerRound;
     public List<Boon> boonsInDeck;
     private BoonManager boonManager;
 

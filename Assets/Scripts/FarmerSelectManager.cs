@@ -7,8 +7,10 @@ public class FarmerSelectManager : MonoBehaviour
     public GameObject harvestLevelPanel;
     public GameObject startGameButton;
     public GameObject titleObject;
+    public int selectedFarmerIndex = -1;
     public void SelectFarmer(int index)
     {
+        selectedFarmerIndex = index;
         foreach (var dude in farmers)
         {
             if (dude.farmerIndex != index)

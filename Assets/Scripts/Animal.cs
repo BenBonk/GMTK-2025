@@ -117,7 +117,7 @@ public class Animal : MonoBehaviour
         float leaveSpeed = 5f;
         if (SceneManager.GetActiveScene().name == "TitleScreen")
         {
-            leaveSpeed = 8f;
+            leaveSpeed = 16f;
         }
         return transform.position + Vector3.left * leaveSpeed * Time.deltaTime;
     }

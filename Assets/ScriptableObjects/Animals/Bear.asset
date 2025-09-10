@@ -35,7 +35,11 @@ MonoBehaviour:
   deckIcon: {fileID: 7976311676407056975, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 1
   animalPrefab: {fileID: 1086039005306102819, guid: 8c3128233cd69cb44a14147edba5745b, type: 3}
+<<<<<<< Updated upstream
   legendaryBoon: {fileID: 11400000, guid: 0b4aed0f19d85f44f9e050621c1d4ecd, type: 2}
+=======
+  isPredator: 1
+>>>>>>> Stashed changes
   pointsToGive: 0
   pointsMultToGive: 0.1
   currencyToGive: 0

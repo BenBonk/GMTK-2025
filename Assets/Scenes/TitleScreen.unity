@@ -1083,6 +1083,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 511311563}
+        m_TargetAssemblyTypeName: StartScreenManager, Assembly-CSharp
+        m_MethodName: InitializeGameData
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1194034895}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2092878435}
         m_TargetAssemblyTypeName: Level.LevelLoader, Assembly-CSharp
         m_MethodName: LoadCertainScene
@@ -2662,9 +2674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b109459bd8a9dd54085afe01f92c0ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  harvestLevels:
-  - {fileID: 11400000, guid: 81e1b63c61ccadd49841ee01e914fdc9, type: 2}
-  - {fileID: 11400000, guid: b006248c959069d44be4e0ae76c9cfbf, type: 2}
   roundLengthText: {fileID: 654836570}
   dailyCashText: {fileID: 1912365319}
   numberOfDaysText: {fileID: 2087169365}
@@ -4395,6 +4404,7 @@ MonoBehaviour:
   harvestLevelPanel: {fileID: 476617334}
   startGameButton: {fileID: 235097114}
   titleObject: {fileID: 1926407860}
+  selectedFarmerIndex: -1
 --- !u!1 &803046001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,6 +5707,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ccc8f9eb0d075ab4283b8a82efe0fc60, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   boonDatas: []
+  harvestDatas:
+  - {fileID: 11400000, guid: 81e1b63c61ccadd49841ee01e914fdc9, type: 2}
+  - {fileID: 11400000, guid: b006248c959069d44be4e0ae76c9cfbf, type: 2}
   player: {fileID: 0}
   gameManager: {fileID: 0}
 --- !u!4 &1284890556
@@ -6523,6 +6536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTesting: 0
   player: {fileID: 0}
+  harvestLevel: 1
   startingPointRequirement: 65
   roundNumber: 0
   roundInProgress: 0
@@ -8906,6 +8920,30 @@ PrefabInstance:
       propertyPath: unlockedSprite
       value: 
       objectReference: {fileID: -162484466967000372, guid: b82c31750219d6245996303aebceb571, type: 3}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: startingDeck.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: 'startingDeck.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: 'startingDeck.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: 'startingDeck.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: 'startingDeck.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: 'startingDeck.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
     - target: {fileID: 6878084352702544965, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Sprite
       value: 
