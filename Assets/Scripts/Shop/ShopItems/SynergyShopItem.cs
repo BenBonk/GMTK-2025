@@ -41,7 +41,7 @@ public class SynergyShopItem : ShopItem
             FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased")+1);
             upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
-            if (GameController.player.synergiesInDeck.Count<3)
+            if (GameController.player.synergiesInDeck.Count<GameController.gameManager.maxSynergies)
             {
                 GameController.player.AddSynergyToDeck(chosenSynergy);
                 shopManager.UpdateSynergies();

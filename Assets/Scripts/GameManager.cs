@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool roundCompleted;
     public float roundDuration = 20f;
     public int roundsToWin = 20;
+    public int maxSynergies;
     private float elapsedTime;
     public int predatorRoundFrequency;
 
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     public int endDayCash = 50;
     private bool endlessSelected = false;
+    
 
 
     //private int _lassosUsedThisRound;
