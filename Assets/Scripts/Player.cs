@@ -8,14 +8,14 @@ public class Player : MonoBehaviour
     
     public List<AnimalData> animalsInDeck;
     public int lassosPerRound;
-    public List<Synergy> synergiesInDeck;
+    public List<Boon> boonsInDeck;
     public void AddAnimalToDeck(AnimalData animal)
     {
         animalsInDeck.Add(animal);
     }
-    public void AddSynergyToDeck(Synergy synergy)
+    public void AddBoonToDeck(Boon boon)
     {
-        synergiesInDeck.Add(synergy);
+        boonsInDeck.Add(boon);
     }
 
     private double _playerCurrency;

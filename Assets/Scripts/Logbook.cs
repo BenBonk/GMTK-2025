@@ -104,7 +104,7 @@ public class Logbook : MonoBehaviour
         animalStatTexts[3].text = $"{animalStat4.GetLocalizedString()} {FBPP.GetInt("largestCapture")}";
         animalStatTexts[4].text = $"{animalStat5.GetLocalizedString()} {FBPP.GetFloat("highestPointsPerLasso")}";
         
-        List<string> top3Boons = saveManager.synergyDatas
+        List<string> top3Boons = saveManager.boonDatas
             .OrderByDescending(a => FBPP.GetInt(a.name))  // sort by value
             .Take(3)                                       // take top 3
             .Select(a => a.synergyName.GetLocalizedString())                           // select the names

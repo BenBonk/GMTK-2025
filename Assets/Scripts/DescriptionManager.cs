@@ -51,31 +51,42 @@ public class DescriptionManager : MonoBehaviour
         return description;
     }
     
-    public string GetSynergyDescription(Synergy synergyData)
+    public string GetBoonDescription(Boon boonData)
     {
+        if (boonData is SpecialtyBoon specialtyBoon)
+        {
+            return specialtyBoon.desc.GetLocalizedString();
+        }
+        if (boonData is LegendaryBoon legendaryBoon)
+        {
+            return legendaryBoon.desc.GetLocalizedString();
+        }
+
+        BasicBoon basicBoon = (BasicBoon)boonData;
+        
         string description = "";
-        if (synergyData.pointsBonus != 0)
+        if (basicBoon.pointsBonus != 0)
         {
-            description += synergyData.pointsBonus < 0
-                ? $"{pointsLoss.GetLocalizedString()}{synergyData.pointsBonus}\n"
-                : $"{pointsBonus.GetLocalizedString()} +{synergyData.pointsBonus}\n";
+            description += basicBoon.pointsBonus < 0
+                ? $"{pointsLoss.GetLocalizedString()}{basicBoon.pointsBonus}\n"
+                : $"{pointsBonus.GetLocalizedString()} +{basicBoon.pointsBonus}\n";
         }
 
-        if (synergyData.pointsMult != 1)
+        if (basicBoon.pointsMult != 1)
         {
-            description += $"{pointsMult.GetLocalizedString()} x{synergyData.pointsMult}\n";
+            description += $"{pointsMult.GetLocalizedString()} x{basicBoon.pointsMult}\n";
         }
 
-        if (synergyData.currencyBonus != 0)
+        if (basicBoon.currencyBonus != 0)
         {
-            description += synergyData.currencyBonus < 0
-                ? $"{cashLoss.GetLocalizedString()} {synergyData.currencyBonus}\n"
-                : $"{cashBonus.GetLocalizedString()} +{synergyData.currencyBonus}\n";
+            description += basicBoon.currencyBonus < 0
+                ? $"{cashLoss.GetLocalizedString()} {basicBoon.currencyBonus}\n"
+                : $"{cashBonus.GetLocalizedString()} +{basicBoon.currencyBonus}\n";
         }
 
-        if (synergyData.currencyMult != 1)
+        if (basicBoon.currencyMult != 1)
         {
-            description += $"{cashMult.GetLocalizedString()} x{synergyData.currencyMult}\n";
+            description += $"{cashMult.GetLocalizedString()} x{basicBoon.currencyMult}\n";
         }
 
         return description.TrimEnd('\n');

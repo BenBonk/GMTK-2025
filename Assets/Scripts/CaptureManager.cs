@@ -8,7 +8,6 @@ public class CaptureManager : MonoBehaviour
 {
     private Player player;
     private GameManager gameManager;
-    // private List<HashSet<string>> synergySets = new List<HashSet<string>>();
 
     private double pointBonus = 0;
     private double pointMult = 1;
@@ -30,23 +29,26 @@ public class CaptureManager : MonoBehaviour
 
         var capturedCounts = GetNameCounts(animalsCaptured);
 
-        for (int i = 0; i < player.synergiesInDeck.Count; i++)
+        for (int i = 0; i < player.boonsInDeck.Count; i++)
         {
-            var synergy = player.synergiesInDeck[i];
-            var neededCounts = GetNameCounts(synergy.animalsNeeded);
-            Debug.Log($"Checking synergy {synergy.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
+            if (player.boonsInDeck[i] is not BasicBoon boon)
+            {
+                continue;
+            }
+            var neededCounts = GetNameCounts(boon.animalsNeeded);
+            Debug.Log($"Checking boon {boon.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
 
-            if (!synergy.isExactMatch)
+            if (!boon.isExactMatch)
             {
                 bool subset = IsSubset(neededCounts, capturedCounts);
-                Debug.Log($"Non-exact match check for {synergy.name}: Result = {subset}");
-                if (subset) ActivateSynergy(i);
+                Debug.Log($"Non-exact match check for {boon.name}: Result = {subset}");
+                if (subset) ActivateBoon(boon);
             }
 
             else
             {
                 if (AreCountsEqual(neededCounts, capturedCounts))
-                    ActivateSynergy(i);
+                    ActivateBoon(boon);
             }
         }
 
@@ -75,13 +77,13 @@ public class CaptureManager : MonoBehaviour
         return (pointBonus, pointMult, currencyBonus, currencyMult);
     }
 
-    public void ActivateSynergy(int index)
+    public void ActivateBoon(BasicBoon boon)
     {
-        currencyBonus += player.synergiesInDeck[index].currencyBonus;
-        currencyMult *= player.synergiesInDeck[index].currencyMult;
-        pointBonus += player.synergiesInDeck[index].pointsBonus;
-        pointMult *= player.synergiesInDeck[index].pointsMult;
-        Debug.Log($"Synergy activated: {player.synergiesInDeck[index].name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
+        currencyBonus += boon.currencyBonus;
+        currencyMult *= boon.currencyMult;
+        pointBonus += boon.pointsBonus;
+        pointMult *=  boon.pointsMult;
+        Debug.Log($"Boon activated: {boon.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
     }
 
     public virtual void CaptureAnimal(Animal capturedAnimal)

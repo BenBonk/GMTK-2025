@@ -5,7 +5,7 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour
 {
     public AnimalData[] animalDatas;
-    public Synergy[] synergyDatas;
+    public Boon[] boonDatas;
     public Player player;
     public GameManager gameManager;
     void Awake()
@@ -51,7 +51,7 @@ public class SaveManager : MonoBehaviour
         FBPP.SetInt("cash", 0);
         FBPP.SetInt("round", 0);
         FBPP.SetString("animalsInDeck", "");
-        FBPP.SetString("synergiesInDeck", "");
+        FBPP.SetString("boonsInDeck", "");
         FBPP.DeleteInt("rerollPrice");
         GameController.animalLevelManager.ResetLevels();
     }
@@ -61,7 +61,7 @@ public class SaveManager : MonoBehaviour
         FBPP.SetInt("cash", (int)GameController.player.playerCurrency);
         FBPP.SetInt("round", GameController.gameManager.roundNumber);
         FBPP.SetString("animalsInDeck", GetSOList(player.animalsInDeck));
-        FBPP.SetString("synergiesInDeck", GetSOList(player.synergiesInDeck));
+        FBPP.SetString("boonsInDeck", GetSOList(player.boonsInDeck));
         FBPP.Save();
     }
 
@@ -75,7 +75,7 @@ public class SaveManager : MonoBehaviour
         }
         //Debug.Log(FBPP.GetString("animalsInDeck"));
         player.animalsInDeck.Clear();
-        player.synergiesInDeck.Clear();
+        player.boonsInDeck.Clear();
         foreach (var animal in FBPP.GetString("animalsInDeck").Split(","))
         {
             var match = animalDatas.FirstOrDefault(a => a.name == animal);
@@ -85,12 +85,12 @@ public class SaveManager : MonoBehaviour
                 //Debug.Log("Loaded: " + animal);
             }
         }
-        foreach (var synergy in FBPP.GetString("synergiesInDeck").Split(","))
+        foreach (var booon in FBPP.GetString("boonsInDeck").Split(","))
         {
-            var match = synergyDatas.FirstOrDefault(a => a.name == synergy);
+            var match = boonDatas.FirstOrDefault(a => a.name == booon);
             if (match != null)
             {
-                player.synergiesInDeck.Add(match);
+                player.boonsInDeck.Add(match);
                 //Debug.Log("Loaded: " + synergy);
             }
         }

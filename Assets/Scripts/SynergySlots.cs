@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SynergySlots : MonoBehaviour
 {
-    public bool canOverrideSynergy;
+    public bool canOverrideBoon;
     private ShopManager shopManager;
     private DeckCard[] deckCards;
     private Player player;
@@ -19,13 +19,13 @@ public class SynergySlots : MonoBehaviour
 
     public void OverrideSynergy(int index)
     {
-        if (canOverrideSynergy)
+        if (canOverrideBoon)
         {
-            Synergy newSynergy = shopManager.overridingSynergy;
-            canOverrideSynergy = false;
-            deckCards[index].Initialize(newSynergy.synergyName.GetLocalizedString(), newSynergy.desc.GetLocalizedString(), newSynergy.art, descriptionManager.GetSynergyDescription(newSynergy));
-            player.synergiesInDeck[index] = newSynergy;
-            shopManager.overridingSynergy = null;
+            Boon newBoon = shopManager.overridingBoon;
+            canOverrideBoon = false;
+            deckCards[index].Initialize(newBoon.synergyName.GetLocalizedString(), newBoon.desc.GetLocalizedString(), newBoon.art, descriptionManager.GetBoonDescription(newBoon));
+            player.boonsInDeck[index] = newBoon;
+            shopManager.overridingBoon = null;
             shopManager.cantPurchaseItem = false;
             shopManager.darkCover.DOFade(0f, 0.5f);
             shopManager.instructionsText.DOFade(0f, 0.5f);

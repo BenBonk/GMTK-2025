@@ -24,7 +24,7 @@ public class ShopManager : MonoBehaviour
     private bool deckOpen;
     [HideInInspector]public bool synergiesOpen;
 
-    [HideInInspector]public Synergy overridingSynergy;
+    [HideInInspector]public Boon overridingBoon;
     public Image darkCover;
     public bool cantPurchaseItem;
     public bool isTut;
@@ -48,23 +48,23 @@ public class ShopManager : MonoBehaviour
         UpdateCashText();
         
         //needs to be called when entering shop
-        List<int> synergyIndexes = new List<int>();
-        while (synergyIndexes.Count<3)
+        List<int> boonIndexes = new List<int>();
+        while (boonIndexes.Count<3)
         {
             int val = Random.Range(0, 24);
             if (!isTut)
             {
-                if (synergyIndexes.Contains(val) || player.synergiesInDeck.Contains(shopItems[0].GetComponent<SynergyShopItem>().possibleSynergies[val]))
+                if (boonIndexes.Contains(val) || player.boonsInDeck.Contains(shopItems[0].GetComponent<SynergyShopItem>().possibleSynergies[val]))
                 {
                     continue;
                 }   
             }
-            synergyIndexes.Add(val);
+            boonIndexes.Add(val);
         }
 
         for (int i = 0; i < 3; i++)
         {
-            shopItems[i].GetComponent<SynergyShopItem>().SetInt(synergyIndexes[i]);
+            shopItems[i].GetComponent<SynergyShopItem>().SetInt(boonIndexes[i]);
         }
         foreach (var shopItem in shopItems)
         {
@@ -101,10 +101,10 @@ public class ShopManager : MonoBehaviour
             synergyCard.gameObject.SetActive(false);
         }
 
-        for (int i = 0; i < player.synergiesInDeck.Count; i++)
+        for (int i = 0; i < player.boonsInDeck.Count; i++)
         {
             synergyCards[i].gameObject.SetActive(true);
-            synergyCards[i].Initialize( player.synergiesInDeck[i].synergyName.GetLocalizedString(), player.synergiesInDeck[i].desc.GetLocalizedString(), player.synergiesInDeck[i].art, descriptionManager.GetSynergyDescription(player.synergiesInDeck[i]));
+            synergyCards[i].Initialize( player.boonsInDeck[i].synergyName.GetLocalizedString(), player.boonsInDeck[i].desc.GetLocalizedString(), player.boonsInDeck[i].art, descriptionManager.GetBoonDescription(player.boonsInDeck[i]));
         }
     }
 
