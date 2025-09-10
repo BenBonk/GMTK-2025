@@ -14,6 +14,7 @@ public class AnimalData : ScriptableObject
     public float animSpeed;
     public GameObject animalPrefab;
     public LegendaryBoon legendaryBoon;
+    public bool isPredator;
     
     [Space(10), Header("Base Data")]
     public int pointsToGive;
