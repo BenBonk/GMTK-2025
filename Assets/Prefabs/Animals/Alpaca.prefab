@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalData: {fileID: 0}
+  legendaryBoon: {fileID: 11400000, guid: 8ddaef5691259284b9cbed83155c28cc, type: 2}
   isPredator: 0
   speed: 4
   currentSpeed: 0
@@ -158,5 +159,6 @@ MonoBehaviour:
   bottomLimitY: 0
   tiltFrequency: 5
   maxTiltAmplitude: 6
+  legendary: 0
   driftSpeedRatio: 0.4
   loopRadius: 1.5

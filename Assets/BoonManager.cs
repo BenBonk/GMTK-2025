@@ -12,7 +12,9 @@ public class BoonManager : MonoBehaviour
     {
         player = GameController.player;
     }
-
+    
+    
+    
     public bool ContainsBoon(string boon)
     {
         return player.boonsInDeck.Any(s => s.name == boon);

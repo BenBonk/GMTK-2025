@@ -1,7 +1,6 @@
 using DG.Tweening;
 using System;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -40,7 +39,7 @@ public class Animal : MonoBehaviour
     private float tiltProgress = 0f;
     private Vector3 previousPosition;
     public float actualSpeed { get; private set; } // total movement speed
-
+    public bool legendary;
 
     protected virtual void Awake()
     {
@@ -53,7 +52,10 @@ public class Animal : MonoBehaviour
         gameManager = GameController.gameManager;
         player = GameController.player;
         //level = levelManager.GetLevel(name);
-
+        if (GameController.boonManager.ContainsBoon(animalData.legendaryBoon.name))
+        {
+            legendary = true;
+        }
         Camera cam = Camera.main;
         if (cam != null)
         {

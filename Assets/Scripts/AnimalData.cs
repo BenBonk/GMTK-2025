@@ -13,6 +13,7 @@ public class AnimalData : ScriptableObject
     public Sprite deckIcon;
     public float animSpeed;
     public GameObject animalPrefab;
+    public LegendaryBoon legendaryBoon;
     
     [Space(10), Header("Base Data")]
     public int pointsToGive;
