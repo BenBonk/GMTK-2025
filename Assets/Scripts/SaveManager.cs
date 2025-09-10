@@ -90,7 +90,7 @@ public class SaveManager : MonoBehaviour
             var match = boonDatas.FirstOrDefault(a => a.name == booon);
             if (match != null)
             {
-                player.boonsInDeck.Add(match);
+                player.AddBoonToDeck(match);
                 //Debug.Log("Loaded: " + synergy);
             }
         }

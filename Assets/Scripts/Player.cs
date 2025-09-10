@@ -9,6 +9,13 @@ public class Player : MonoBehaviour
     public List<AnimalData> animalsInDeck;
     public int lassosPerRound;
     public List<Boon> boonsInDeck;
+    private BoonManager boonManager;
+
+    private void Start()
+    {
+        boonManager = GameController.boonManager;
+    }
+
     public void AddAnimalToDeck(AnimalData animal)
     {
         animalsInDeck.Add(animal);
@@ -16,6 +23,8 @@ public class Player : MonoBehaviour
     public void AddBoonToDeck(Boon boon)
     {
         boonsInDeck.Add(boon);
+        boonManager.AddBoon(boon);
+        
     }
 
     private double _playerCurrency;
