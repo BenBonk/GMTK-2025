@@ -52,9 +52,15 @@ public class Animal : MonoBehaviour
         gameManager = GameController.gameManager;
         player = GameController.player;
         //level = levelManager.GetLevel(name);
-        if (GameController.boonManager.ContainsBoon(animalData.legendaryBoon.name))
+        try
         {
-            legendary = true;
+            if (GameController.boonManager.ContainsBoon(animalData.legendaryBoon.name))
+            {
+                legendary = true;
+            }
+        }
+        catch (Exception e)
+        { //
         }
         Camera cam = Camera.main;
         if (cam != null)

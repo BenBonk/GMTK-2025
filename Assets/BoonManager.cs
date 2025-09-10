@@ -6,6 +6,7 @@ using UnityEngine;
 public class BoonManager : MonoBehaviour
 {
     private Player player;
+    
 
     // Dictionary for fast lookup: key = boon name, value = Boon object
     private Dictionary<string, Boon> boonDict = new Dictionary<string, Boon>();
