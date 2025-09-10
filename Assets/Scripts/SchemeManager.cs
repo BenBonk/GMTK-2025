@@ -20,7 +20,7 @@ public class SchemeManager : MonoBehaviour
     public void SetRandomScheme()
     {
         int odds = Random.Range(0, 100);
-        if (odds <= 70)
+        if (odds < 70)
         {
             ChangeScheme(0);
         }
