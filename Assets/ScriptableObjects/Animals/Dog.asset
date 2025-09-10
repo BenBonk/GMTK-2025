@@ -30,20 +30,21 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  price: 150
   sprite: {fileID: -3994744024693093290, guid: 3505c7501cd1bd5439c88d7002a5b20e, type: 3}
   sprite2: {fileID: 3704152636332655822, guid: 3505c7501cd1bd5439c88d7002a5b20e, type: 3}
   deckIcon: {fileID: -7066902412895447660, guid: bc1eda58cd949234b8f12e6100484d7a, type: 3}
   animSpeed: 0.4
   animalPrefab: {fileID: 5660066743077353431, guid: c7f16862f707fd34384f68dd262add9f, type: 3}
-  currencyToGive: 6
+  legendaryBoon: {fileID: 11400000, guid: c216efaab03e16a4a82c9a041a5f2e58, type: 2}
   pointsToGive: 10
-  currencyMultToGive: 1
   pointsMultToGive: 1.2
+  currencyToGive: 6
+  currencyMultToGive: 1
   pointsLevelUpIncrease: 3
   pointsLevelUpMult: 0
   currencyLevelUpIncrease: 0
   currencyLevelUpMult: 0.3
+  price: 150
   upgradeCost: 150
   references:
     version: 2

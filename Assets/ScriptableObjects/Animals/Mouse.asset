@@ -35,6 +35,7 @@ MonoBehaviour:
   deckIcon: {fileID: 0}
   animSpeed: 0
   animalPrefab: {fileID: 1617273539469480319, guid: 4b83940e91801614788454d802687ed9, type: 3}
+  legendaryBoon: {fileID: 11400000, guid: b6edc94cecfeee3439dcf492b056d57e, type: 2}
   pointsToGive: 0
   pointsMultToGive: 0
   currencyToGive: 0
