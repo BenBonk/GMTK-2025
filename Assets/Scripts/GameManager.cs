@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool isTesting;
     
     public Player player;
+    public int harvestLevel = 1;
     public double startingPointRequirement = 65;
     public int roundNumber;
     public bool roundInProgress;
@@ -103,6 +104,7 @@ public class GameManager : MonoBehaviour
         saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
         saveManager.LoadGameData();
+        ApplyHarvestLevel();
         if (isTesting)
         {
             pointsRequirementGrowthRate = 0;
@@ -115,6 +117,15 @@ public class GameManager : MonoBehaviour
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         Invoke("StartRound", 1);
+    }
+
+    private void ApplyHarvestLevel()
+    {
+        Debug.Log("Applying harvest level: " + harvestLevel);
+        Debug.Log("Total harvest levels available: " + saveManager.harvestDatas.Length);
+        roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
+        endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
+        roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
     }
 
     private void Update()

@@ -2,10 +2,6 @@ using UnityEngine;
 using TMPro;
 public class HarvestLevelManager : MonoBehaviour
 {
-
-    [Header("Harvest Levels")]
-    public HarvestData[] harvestLevels;
-
     [Header("UI References")]
     public TMP_Text roundLengthText;
     public TMP_Text dailyCashText;
@@ -34,9 +30,9 @@ public class HarvestLevelManager : MonoBehaviour
             decreaseButton.SetActive(true);
         }
 
-        if (levelIndex < 0 || levelIndex >= harvestLevels.Length)
+        if (levelIndex < 0 || levelIndex >= GameController.saveManager.harvestDatas.Length)
         {
-            if (levelIndex >= harvestLevels.Length)
+            if (levelIndex >= GameController.saveManager.harvestDatas.Length)
             {
                 GetComponent<StampPopup>().ShowStampAtMouse();
             }
@@ -44,7 +40,7 @@ public class HarvestLevelManager : MonoBehaviour
             return;
         }
 
-        HarvestData data = harvestLevels[levelIndex];
+        HarvestData data = GameController.saveManager.harvestDatas[levelIndex];
 
         roundLengthText.text = $"Round Length: {data.roundLength}";
         dailyCashText.text = $"Daily Cash: {data.dailyCash}";

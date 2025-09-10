@@ -9,6 +9,7 @@ public class Farmer : MonoBehaviour
     public int farmerIndex;
     public Sprite unlockedSprite;
     public bool isUnlocked;
+    public AnimalData[] startingDeck;
 
     private void Start()
     {

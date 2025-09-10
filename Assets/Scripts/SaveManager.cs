@@ -6,6 +6,7 @@ public class SaveManager : MonoBehaviour
 {
     public AnimalData[] animalDatas;
     public Boon[] boonDatas;
+    public HarvestData[] harvestDatas;
     public Player player;
     public GameManager gameManager;
     void Awake()
@@ -48,7 +49,7 @@ public class SaveManager : MonoBehaviour
 
     void ResetVars()
     {
-        FBPP.SetInt("cash", 0);
+        FBPP.SetString("cash", "0");
         FBPP.SetInt("round", 0);
         FBPP.SetString("animalsInDeck", "");
         FBPP.SetString("boonsInDeck", "");
@@ -56,19 +57,47 @@ public class SaveManager : MonoBehaviour
         GameController.animalLevelManager.ResetLevels();
     }
 
+    public void InitializeSaveData(int harvestLevel, int farmerIndex)
+    {
+        bool extraPredators = false;
+        List<AnimalData> startingAnimals = new List<AnimalData>();
+        foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].startingDeck)
+        {
+            if (animalData.isPredator && !extraPredators)
+            {
+                extraPredators = true;
+                for (int i = 0; i < GameController.saveManager.harvestDatas[harvestLevel-1].startingPredators; i++)
+                {
+                    startingAnimals.Add(animalData);
+                }
+            }
+            startingAnimals.Add(animalData);
+        }
+        FBPP.SetString("cash", "0");
+        FBPP.SetInt("round", 0);
+        FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
+        FBPP.SetString("boonsInDeck", "");
+        FBPP.DeleteInt("rerollPrice");
+        FBPP.SetInt("harvestLevel", harvestLevel);
+        GameController.animalLevelManager.ResetLevels();
+        FBPP.Save();
+    }
+
     public void SaveGameData()
     {
-        FBPP.SetInt("cash", (int)GameController.player.playerCurrency);
+        FBPP.SetString("cash", GameController.player.playerCurrency.ToString(System.Globalization.CultureInfo.InvariantCulture));
         FBPP.SetInt("round", GameController.gameManager.roundNumber);
         FBPP.SetString("animalsInDeck", GetSOList(player.animalsInDeck));
         FBPP.SetString("boonsInDeck", GetSOList(player.boonsInDeck));
+        FBPP.SetInt("harvestLevel", GameController.gameManager.harvestLevel);
         FBPP.Save();
     }
 
     public void LoadGameData()
     {
-        player.playerCurrency =  FBPP.GetInt("cash");
+        player.playerCurrency =  double.Parse(FBPP.GetString("cash"), System.Globalization.CultureInfo.InvariantCulture);
         gameManager.roundNumber = FBPP.GetInt("round");
+        gameManager.harvestLevel = FBPP.GetInt("harvestLevel", 1);
         if (FBPP.GetString("animalsInDeck")=="")
         {
             return;
