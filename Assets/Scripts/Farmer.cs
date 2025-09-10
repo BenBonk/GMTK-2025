@@ -35,6 +35,7 @@ public class Farmer : MonoBehaviour
             else
             {
                 //not available in demo!
+                GetComponent<StampPopup>().ShowStampAtMouse();
             }
         }
     }

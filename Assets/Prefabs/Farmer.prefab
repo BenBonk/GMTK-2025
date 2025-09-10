@@ -409,6 +409,7 @@ GameObject:
   - component: {fileID: 6878084352702544965}
   - component: {fileID: 5383154539177650040}
   - component: {fileID: 6244642506297171879}
+  - component: {fileID: 5318655626611540348}
   m_Layer: 5
   m_Name: Farmer
   m_TagString: Untagged
@@ -543,6 +544,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   farmerInfo: {fileID: 9182650547871771769}
+  farmerImg: {fileID: 0}
+  farmerIndex: 0
+  unlockedSprite: {fileID: 0}
+  isUnlocked: 0
+--- !u!114 &5318655626611540348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098921900127377828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d391e1d28a57b294caaba7aee761279d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  stampPrefab: {fileID: 258547166803280199, guid: 9b6f019ec0f7aec488fd7f3910ea0aef, type: 3}
+  optionalParent: {fileID: 0}
+  startScale: 1.6
+  dropYOffset: 64
+  dropDuration: 0.18
+  dropEase: 9
+  tiltAngle: 14
+  tiltDuration: 0.35
+  exitDelay: 0.05
+  exitDuration: 0.2
+  exitEase: 26
 --- !u!1 &1164991427884157147
 GameObject:
   m_ObjectHideFlags: 0

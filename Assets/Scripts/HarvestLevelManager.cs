@@ -36,6 +36,10 @@ public class HarvestLevelManager : MonoBehaviour
 
         if (levelIndex < 0 || levelIndex >= harvestLevels.Length)
         {
+            if (levelIndex >= harvestLevels.Length)
+            {
+                GetComponent<StampPopup>().ShowStampAtMouse();
+            }
             Debug.LogWarning($"Invalid harvest level index: {levelIndex}");
             return;
         }
