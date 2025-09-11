@@ -14,7 +14,7 @@ public class SchemeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ChangeScheme(3);
+        ChangeScheme(0);
     }
 
     public void SetRandomScheme()
@@ -24,13 +24,17 @@ public class SchemeManager : MonoBehaviour
         {
             ChangeScheme(0);
         }
-        else if (odds <= 85)
+        else if (odds <= 80)
         {
             ChangeScheme(1);
         }
-        else
+        else if (odds <= 90)
         {
             ChangeScheme(2);
+        }
+        else
+        {
+            ChangeScheme(3);
         }
     }
 
