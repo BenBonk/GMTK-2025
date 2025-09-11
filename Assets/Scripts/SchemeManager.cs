@@ -14,7 +14,7 @@ public class SchemeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ChangeScheme(0);
+        ChangeScheme(3);
     }
 
     public void SetRandomScheme()
@@ -48,7 +48,7 @@ public class SchemeManager : MonoBehaviour
             grass.color = chosenScheme.darkColor;
         }
 
-        List<Vector2> spawnPoints = GenerateNonOverlappingPositions(chosenScheme.extraItemsFrequency, 3f); // minDistance
+        List<Vector2> spawnPoints = GenerateNonOverlappingPositions(chosenScheme.extraItemsFrequency, chosenScheme.minDistanceBetweenExtraItems);
         foreach (var pos in spawnPoints)
         {
             GameObject prefab = chosenScheme.extraItems[Random.Range(0, chosenScheme.extraItems.Length)];
@@ -100,7 +100,8 @@ public class Scheme
 {
     public Color mainColor;
     public Color darkColor;
-    [Range(0, 10)] public int extraItemsFrequency;
+    [Range(0, 1000)] public int extraItemsFrequency;
+    public float minDistanceBetweenExtraItems;
     public GameObject[] extraItems;
     public bool shouldSpawnGrass;
     public List<Color> grassColors;
