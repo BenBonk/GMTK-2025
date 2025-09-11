@@ -43753,10 +43753,10 @@ MonoBehaviour:
     - {r: 0.94117653, g: 0.854902, b: 0.6862745, a: 1}
     - {r: 0.6745098, g: 0.25882354, b: 0.16470589, a: 1}
     - {r: 0.8235295, g: 0.45882356, b: 0.2627451, a: 1}
-  - mainColor: {r: 0.2392157, g: 0.53333336, b: 0.27450982, a: 1}
-    darkColor: {r: 0.40784317, g: 0.7960785, b: 0.30588236, a: 0.28235295}
-    extraItemsFrequency: 750
-    minDistanceBetweenExtraItems: 0.01
+  - mainColor: {r: 0.4039216, g: 0.7803922, b: 0.3019608, a: 1}
+    darkColor: {r: 0.27450982, g: 0.5254902, b: 0.3019608, a: 0.28235295}
+    extraItemsFrequency: 175
+    minDistanceBetweenExtraItems: 0.25
     extraItems:
     - {fileID: 4611719977709918514, guid: 6de7de906228d1049bbb32d8470255e6, type: 3}
     - {fileID: 4611719977709918514, guid: ec93cb304cfa2be41b69e9291a51fab8, type: 3}
@@ -43791,11 +43791,26 @@ MonoBehaviour:
     - {fileID: 4611719977709918514, guid: 55b83d61696bb0747a62ec2add25c4ce, type: 3}
     - {fileID: 4611719977709918514, guid: 2538cd1c7ab237c46856cc5beaf048b7, type: 3}
     - {fileID: 4611719977709918514, guid: 236a9296b7623f346a92061e69cd74da, type: 3}
-    shouldSpawnGrass: 0
+    - {fileID: 4611719977709918514, guid: 323fc15d788ff744798bfbf619ad6ca1, type: 3}
+    - {fileID: 4611719977709918514, guid: 2da226e4973cdd749b92a76eb1eb9d38, type: 3}
+    - {fileID: 4611719977709918514, guid: 236a9296b7623f346a92061e69cd74da, type: 3}
+    - {fileID: 4611719977709918514, guid: 2538cd1c7ab237c46856cc5beaf048b7, type: 3}
+    - {fileID: 4611719977709918514, guid: 55b83d61696bb0747a62ec2add25c4ce, type: 3}
+    - {fileID: 4611719977709918514, guid: 236a9296b7623f346a92061e69cd74da, type: 3}
+    - {fileID: 4611719977709918514, guid: f9e3d802779e8b543942b9a05b7ee5cc, type: 3}
+    - {fileID: 4611719977709918514, guid: 236a9296b7623f346a92061e69cd74da, type: 3}
+    - {fileID: 4611719977709918514, guid: 3afeffec4e1b20a4388c48c8cb022490, type: 3}
+    - {fileID: 4611719977709918514, guid: 6de7de906228d1049bbb32d8470255e6, type: 3}
+    - {fileID: 4611719977709918514, guid: ec93cb304cfa2be41b69e9291a51fab8, type: 3}
+    - {fileID: 4611719977709918514, guid: f51248294cf121845911d860c21cea79, type: 3}
+    - {fileID: 4611719977709918514, guid: 236a9296b7623f346a92061e69cd74da, type: 3}
+    - {fileID: 4611719977709918514, guid: 236a9296b7623f346a92061e69cd74da, type: 3}
+    - {fileID: 4611719977709918514, guid: 2538cd1c7ab237c46856cc5beaf048b7, type: 3}
+    - {fileID: 4611719977709918514, guid: 55b83d61696bb0747a62ec2add25c4ce, type: 3}
+    shouldSpawnGrass: 1
     grassColors:
-    - {r: 0.39607847, g: 0.77647066, b: 0.29803923, a: 1}
-    - {r: 0.14117648, g: 0.34509805, b: 0.24313727, a: 1}
-    - {r: 0.3921569, g: 0.7725491, b: 0.29803923, a: 1}
+    - {r: 0.9960785, g: 0.9568628, b: 0.4039216, a: 1}
+    - {r: 0.27450982, g: 0.5254902, b: 0.3019608, a: 1}
 --- !u!4 &2082549784
 Transform:
   m_ObjectHideFlags: 0
