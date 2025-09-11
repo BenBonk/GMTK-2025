@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 32b5def3b9b9e324b92eb06cc5235ae7
+guid: 0a50b58dff5a6be44934cb9591cc133c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8376675294977953347
-    second: SpecialtySynergies_0
+      213: 4251784161245922892
+    second: LegendarySynergies_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpecialtySynergies_0
+      name: LegendarySynergies_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +115,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34e83fb9ccdef3470800000000000000
-      internalID: 8376675294977953347
+      spriteID: c4602b0fa2f510b30800000000000000
+      internalID: 4251784161245922892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_1
+      name: LegendarySynergies_1
       rect:
         serializedVersion: 2
         x: 16
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd4b491e0967d0243af15e207d232458
-      internalID: -1041232733
+      spriteID: 4c27d90fe83c8734499432bb617fe275
+      internalID: 1179539576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_2
+      name: LegendarySynergies_2
       rect:
         serializedVersion: 2
         x: 32
@@ -159,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eea53be2460b0d64999d0f214f965ee2
-      internalID: -1223495869
+      spriteID: 9b33f124300ae994b861032e5d68f923
+      internalID: -1421261132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_3
+      name: LegendarySynergies_3
       rect:
         serializedVersion: 2
         x: 48
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e4fe1edc172fef42b78d19e8101a439
-      internalID: 1377950196
+      spriteID: ea87e85f7fe372d4e9cf6711b29881c5
+      internalID: 566272700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_4
+      name: LegendarySynergies_4
       rect:
         serializedVersion: 2
         x: 64
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7078a1771e1ea1749aed65f8751d7bc8
-      internalID: 1139545416
+      spriteID: 462922917b8cf4e4c9e0c0bb666e68c3
+      internalID: -1132062087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_5
+      name: LegendarySynergies_5
       rect:
         serializedVersion: 2
         x: 80
@@ -225,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04391b33299f3c743a5114fc20298745
-      internalID: -1447870217
+      spriteID: 36e65ea7c848cb2468784fd5489d6ae3
+      internalID: -768035087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_6
+      name: LegendarySynergies_6
       rect:
         serializedVersion: 2
         x: 96
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c569b25e07a17174c99978125fa7a877
-      internalID: 1558210565
+      spriteID: 7e91673e766b694498cfea60622a0b05
+      internalID: -1510483385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_7
+      name: LegendarySynergies_7
       rect:
         serializedVersion: 2
         x: 112
@@ -269,14 +269,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c73071d6722516f46bbba706e5830d0f
-      internalID: -1595233445
+      spriteID: 527355b22bb1beb469b6b9fa5cae2c12
+      internalID: -988767128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_8
+      name: LegendarySynergies_8
       rect:
         serializedVersion: 2
         x: 128
@@ -291,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 040ad75d7c3c0264194872308a097fbc
-      internalID: -1245586710
+      spriteID: f1aeaed618261cb45b166211ce48acaa
+      internalID: 800896063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_9
+      name: LegendarySynergies_9
       rect:
         serializedVersion: 2
         x: 144
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1d0e988c58e2a4a943b5a0066e3bdb
-      internalID: -1441707902
+      spriteID: 3ef7a20491a3f9346b1e8810db8317b1
+      internalID: 2008939725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_10
+      name: LegendarySynergies_10
       rect:
         serializedVersion: 2
         x: 160
@@ -335,14 +335,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dac3d093d00e976429a886f1a5e73d28
-      internalID: -943157772
+      spriteID: fb752c5d119a1b549995cb31b77cdeeb
+      internalID: -1894289860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_11
+      name: LegendarySynergies_11
       rect:
         serializedVersion: 2
         x: 176
@@ -357,14 +357,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f4baf59e2370041a91b83e3b62b159
-      internalID: 1347153455
+      spriteID: d2df80f5bd5a55640b1db112a7363023
+      internalID: 233617896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_12
+      name: LegendarySynergies_12
       rect:
         serializedVersion: 2
         x: 192
@@ -379,14 +379,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68a9b82bad4a6254e89cc82eb6b5c85a
-      internalID: 1134243945
+      spriteID: c6d26751c54d7ff40ac229ec97f2c7dc
+      internalID: 1939683961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_13
+      name: LegendarySynergies_13
       rect:
         serializedVersion: 2
         x: 208
@@ -401,14 +401,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f6f91e0c43c98b4698b601da4fcf237
-      internalID: 818590719
+      spriteID: cf6c67ff52dd9ee44af07bec815e6f1e
+      internalID: 1621538725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_14
+      name: LegendarySynergies_14
       rect:
         serializedVersion: 2
         x: 224
@@ -423,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c045a59a0d7707b4bb471fa3c9698f8e
-      internalID: -562894041
+      spriteID: 1e11cc50899f6b346bf76487bbcf8646
+      internalID: -146945504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialtySynergies_15
+      name: LegendarySynergies_15
       rect:
         serializedVersion: 2
         x: 240
@@ -445,8 +445,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f40ad5baff5eb458ca3d4785e06f6d
-      internalID: -588289270
+      spriteID: 3b47dbc343defc548abe37859b181e86
+      internalID: -851207526
       vertices: []
       indices: 
       edges: []
@@ -455,7 +455,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3288689946f68134e9b064ceb75ff9ec
+    spriteID: 0c1b0ce105898264fa09a1223f148c51
     internalID: 0
     vertices: []
     indices: 
@@ -465,22 +465,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SpecialtySynergies_0: 8376675294977953347
-      SpecialtySynergies_1: -1041232733
-      SpecialtySynergies_10: -943157772
-      SpecialtySynergies_11: 1347153455
-      SpecialtySynergies_12: 1134243945
-      SpecialtySynergies_13: 818590719
-      SpecialtySynergies_14: -562894041
-      SpecialtySynergies_15: -588289270
-      SpecialtySynergies_2: -1223495869
-      SpecialtySynergies_3: 1377950196
-      SpecialtySynergies_4: 1139545416
-      SpecialtySynergies_5: -1447870217
-      SpecialtySynergies_6: 1558210565
-      SpecialtySynergies_7: -1595233445
-      SpecialtySynergies_8: -1245586710
-      SpecialtySynergies_9: -1441707902
+      LegendarySynergies_0: 4251784161245922892
+      LegendarySynergies_1: 1179539576
+      LegendarySynergies_10: -1894289860
+      LegendarySynergies_11: 233617896
+      LegendarySynergies_12: 1939683961
+      LegendarySynergies_13: 1621538725
+      LegendarySynergies_14: -146945504
+      LegendarySynergies_15: -851207526
+      LegendarySynergies_2: -1421261132
+      LegendarySynergies_3: 566272700
+      LegendarySynergies_4: -1132062087
+      LegendarySynergies_5: -768035087
+      LegendarySynergies_6: -1510483385
+      LegendarySynergies_7: -988767128
+      LegendarySynergies_8: 800896063
+      LegendarySynergies_9: 2008939725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
