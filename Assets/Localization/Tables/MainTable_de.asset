@@ -771,6 +771,279 @@ MonoBehaviour:
     m_Localized: Experte
     m_Metadata:
       m_Items: []
+  - m_Id: 8932396685721600
+    m_Localized: Wird noch bekannt gegeben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607680
+    m_Localized: Wird noch bekannt gegeben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607681
+    m_Localized: Schwarzes Schaf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607682
+    m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
+      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607683
+    m_Localized: Wird noch bekannt gegeben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607684
+    m_Localized: Wird noch bekannt gegeben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607685
+    m_Localized: Nachahmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607686
+    m_Localized: Katzen werden zum wertvollsten Tier in Ihrem Lasso, wenn sie gefangen
+      werden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607687
+    m_Localized: "F\xFCr immer schneller"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607688
+    m_Localized: Bonus bei Gefangennahme mitten im Sprung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607689
+    m_Localized: Guter Junge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607690
+    m_Localized: "H\xFCtehunde verjagen Raubtiere. H\xFCtehunde sind f\xFCnfmal so
+      viel wert, wenn sie mit einem Raubtier eingefangen werden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607691
+    m_Localized: "\xDCberwintern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607692
+    m_Localized: "B\xE4ren haben die M\xF6glichkeit, Winterschlaf zu halten und im
+      Schlaf Punkte zu sammeln"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607693
+    m_Localized: Halten Sie Ihre Pferde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607694
+    m_Localized: Pferde sind langsamer und bleiben kurz am linken Bildschirmrand
+      stehen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607695
+    m_Localized: Muh-Trinkgeldgeber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607696
+    m_Localized: "Jede gefangene Kuh ergibt das 0,25-fache des globalen Multiplikators,
+      der jede Runde oder beim Fang eines Raubtiers zur\xFCckgesetzt wird"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801984
+    m_Localized: "Schweine mit H\xFCten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801985
+    m_Localized: "Schweine k\xF6nnen zuf\xE4llig mit einem Zylinder erscheinen, in
+      diesem Fall sind sie +25 Bargeld wert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801986
+    m_Localized: Hasenpfote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801987
+    m_Localized: Hasen haben eine 25%ige Chance, doppelte Punkte zu sammeln, wenn
+      sie mit dem Lasso eingefangen werden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801988
+    m_Localized: "S\xFCndenbock"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801989
+    m_Localized: "Ziegen ziehen jetzt alle Raubtiere auf dem Bildschirm an, x2 Multiplikator
+      f\xFCr jedes mit einer Ziege gefangene Raubtier"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801990
+    m_Localized: Dieb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801991
+    m_Localized: Foxes tauschen Statistiken mit einem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801992
+    m_Localized: "Drei blinde M\xE4use"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801993
+    m_Localized: "Jede Maus, die Sie fangen, z\xE4hlt als drei M\xE4use, M\xE4use
+      bewegen sich jetzt zuf\xE4llig"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801994
+    m_Localized: Wolfsrudel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801995
+    m_Localized: "W\xF6lfe laichen jetzt in Rudeln von zwei oder drei"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801996
+    m_Localized: Absoluter Wert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801997
+    m_Localized: Alle negativen Zahlen werden jetzt ignoriert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801998
+    m_Localized: Auktionator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801999
+    m_Localized: "Die Tierpreise im Shop werden jetzt zuf\xE4llig festgelegt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802000
+    m_Localized: "Biodiversit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802001
+    m_Localized: "Verdienen Sie +5 Punkte f\xFCr jede unterschiedliche Art, die Sie
+      mit dem Lasso fangen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802002
+    m_Localized: Reiche Ernte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802003
+    m_Localized: +15 Bargeld am Ende der Runde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802004
+    m_Localized: Capture Clock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802005
+    m_Localized: "Jedes erfolgreiche Lasso verl\xE4ngert den Rundentimer um 0,5 Sekunden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802006
+    m_Localized: Bargeldfang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802007
+    m_Localized: +1 Bargeld pro eingefangenem Tier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802008
+    m_Localized: "M\xFCnzbeutel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802009
+    m_Localized: Erhalten Sie am Ende jeder Runde 5 % Zinsen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802010
+    m_Localized: "Fr\xFChbucher"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802011
+    m_Localized: Der erste Nicht-Raubtier, der in jeder Runde erscheint, ist doppelte
+      Punkte und Bargeld wert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802012
+    m_Localized: Feenflasche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802013
+    m_Localized: "Wenn Sie diesen Segen halten, verhindern Sie das n\xE4chste Mal,
+      dass Sie die Punkteanforderung verlieren und werfen Sie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802014
+    m_Localized: "Frische Br\xFChe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802015
+    m_Localized: "Gew\xE4hrt 2 Reroll-M\xF6glichkeiten pro Shop"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802016
+    m_Localized: Ave Maria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802017
+    m_Localized: Alle mit dem Lasso eingefangenen Punkte werden in den letzten 10
+      Sekunden jeder Runde verdoppelt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802018
+    m_Localized: "Herdenmentalit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802019
+    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
+      Lasso, statt 10 %"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802020
+    m_Localized: Taschenuhr
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802021
+    m_Localized: +5 Sekunden pro Runde zum Lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802022
+    m_Localized: Spitze Freunde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802023
+    m_Localized: +3 Punkte pro eingefangenem Tier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802024
+    m_Localized: "Raubtier-S\xE4uberung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802025
+    m_Localized: Der Predator-Auswahlbildschirm erscheint jetzt nur noch alle 5 Runden
+      statt alle 3 Runden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802026
+    m_Localized: Landarbeiter-Veteran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802027
+    m_Localized: "W\xE4hrend des Haltens wird das Level aller Tiere um 2 erh\xF6ht"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069376
+    m_Localized: Eggstravagant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069377
+    m_Localized: "H\xFChner k\xF6nnen jetzt Eier legen, die beim Einfangen mit dem
+      Lasso 1,5 Punkte bringen."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

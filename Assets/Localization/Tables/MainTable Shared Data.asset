@@ -735,6 +735,262 @@ MonoBehaviour:
     m_Key: farmerSelect.expert
     m_Metadata:
       m_Items: []
+  - m_Id: 8932396685721600
+    m_Key: boons.alpacaLegendary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607680
+    m_Key: boons.alpacaLegendaryDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607681
+    m_Key: boons.blackSheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607682
+    m_Key: boons.blackSheepDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607683
+    m_Key: boons.boarLegendary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607684
+    m_Key: boons.boarLegendaryDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607685
+    m_Key: boons.copycat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607686
+    m_Key: boons.copycatDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069376
+    m_Key: boons.eggstravagant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069377
+    m_Key: boons.eggstravagantDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607687
+    m_Key: boons.foreverFaster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607688
+    m_Key: boons.foreverFasterDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607689
+    m_Key: boons.goodBoy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607690
+    m_Key: boons.goodBoyDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607691
+    m_Key: boons.hibernate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607692
+    m_Key: boons.hibernateDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607693
+    m_Key: boons.holdYourHorses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607694
+    m_Key: boons.holdYourHorsesDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607695
+    m_Key: boons.mootiplier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607696
+    m_Key: boons.mootiplierDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801984
+    m_Key: boons.pigsWithHats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801985
+    m_Key: boons.pigsWithHatsDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801986
+    m_Key: boons.rabbitsFoot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801987
+    m_Key: boons.rabbitsFootDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801988
+    m_Key: boons.scapeGoat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801989
+    m_Key: boons.scapeGoatDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801990
+    m_Key: boons.thief
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801991
+    m_Key: boons.thiefDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801992
+    m_Key: boons.threeBlindMice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801993
+    m_Key: boons.threeBlindMiceDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801994
+    m_Key: boons.wolfpack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801995
+    m_Key: boons.wolfpackDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801996
+    m_Key: boons.absoluteValue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801997
+    m_Key: boons.absoluteValueDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801998
+    m_Key: boons.auctioneer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801999
+    m_Key: boons.auctioneerDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802000
+    m_Key: boons.biodiversity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802001
+    m_Key: boons.biodiversityDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802002
+    m_Key: boons.bountifulHarvest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802003
+    m_Key: boons.bountifulHarvestDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802004
+    m_Key: boons.captureClock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802005
+    m_Key: boons.captureClockDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802006
+    m_Key: boons.cashCatch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802007
+    m_Key: boons.cashCatchDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802008
+    m_Key: boons.coinPouch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802009
+    m_Key: boons.coinPouchDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802010
+    m_Key: boons.earlyBird
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802011
+    m_Key: boons.earlyBirdDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802012
+    m_Key: boons.fairyBottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802013
+    m_Key: boons.fairyBottleDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802014
+    m_Key: boons.freshStock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802015
+    m_Key: boons.freshStockDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802016
+    m_Key: boons.hailMary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802017
+    m_Key: boons.hailMaryDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802018
+    m_Key: boons.herdMentality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802019
+    m_Key: boons.herdMentalityDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802020
+    m_Key: boons.pocketwatch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802021
+    m_Key: boons.pocketwatchDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802022
+    m_Key: boons.pointyPals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802023
+    m_Key: boons.pointyPalsDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802024
+    m_Key: boons.predatorPurge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802025
+    m_Key: boons.predatorPurgeDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802026
+    m_Key: boons.veteranFarmhand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802027
+    m_Key: boons.veteranFarmhandDesc
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

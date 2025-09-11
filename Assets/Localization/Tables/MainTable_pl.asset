@@ -783,6 +783,282 @@ MonoBehaviour:
     m_Localized: Ekspert
     m_Metadata:
       m_Items: []
+  - m_Id: 8932396685721600
+    m_Localized: Do ustalenia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607680
+    m_Localized: Do ustalenia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607681
+    m_Localized: Czarna owca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607682
+    m_Localized: "Szansa na to, \u017Ce owca b\u0119dzie czarn\u0105 owc\u0105, ponowne
+      uruchomienie lassa po z\u0142apaniu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607683
+    m_Localized: Do ustalenia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607684
+    m_Localized: Do ustalenia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607685
+    m_Localized: "Na\u015Bladowca"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607686
+    m_Localized: "Koty staj\u0105 si\u0119 najcenniejszymi zwierz\u0119tami na twoim
+      lassie, gdy zostan\u0105 z\u0142apane"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607687
+    m_Localized: Na zawsze szybciej
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607688
+    m_Localized: Bonus po schwytaniu w trakcie skoku
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607689
+    m_Localized: "Grzeczny ch\u0142opiec"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607690
+    m_Localized: "Psy pasterskie odstraszaj\u0105 drapie\u017Cniki. Psy pasterskie
+      s\u0105 warte x5, gdy z\u0142api\u0105 na lasso dowolnego drapie\u017Cnika."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607691
+    m_Localized: "Hibernowa\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607692
+    m_Localized: "Nied\u017Awiedzie maj\u0105 szans\u0119 zapa\u015B\u0107 w sen
+      zimowy i zdoby\u0107 punkty podczas snu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607693
+    m_Localized: Wstrzymaj konie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607694
+    m_Localized: "Konie s\u0105 wolniejsze i zatrzymuj\u0105 si\u0119 na chwil\u0119
+      przy lewej kraw\u0119dzi ekranu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607695
+    m_Localized: Moo-tiplier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607696
+    m_Localized: "Ka\u017Cda schwytana krowa daje 0,25x globalnego mno\u017Cnika,
+      resetuj\u0105c si\u0119 w ka\u017Cdej rundzie lub gdy drapie\u017Cnik zostanie
+      schwytany"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801984
+    m_Localized: "\u015Awinie w kapeluszach"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801985
+    m_Localized: "\u015Awinie mog\u0105 pojawia\u0107 si\u0119 losowo z cylindrem,
+      je\u015Bli tak si\u0119 stanie, s\u0105 warte +25 got\xF3wki"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801986
+    m_Localized: "Kr\xF3licza stopa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801987
+    m_Localized: "Kr\xF3liczki maj\u0105 25% szans na podwojenie punkt\xF3w, gdy
+      zostan\u0105 z\u0142apane na lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801988
+    m_Localized: Koza ofiarna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801989
+    m_Localized: "Kozy teraz przyci\u0105gaj\u0105 wszystkie drapie\u017Cniki na
+      ekranie, mno\u017C\u0105c x2 za ka\u017Cdego drapie\u017Cnika z\u0142apanego
+      przez koz\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801990
+    m_Localized: "Z\u0142odziej"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801991
+    m_Localized: "Lisy wymieniaj\u0105 si\u0119 statystykami z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801992
+    m_Localized: "Trzy \u015Blepe myszy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801993
+    m_Localized: "Ka\u017Cda z\u0142apana mysz liczy si\u0119 jako trzy myszy, myszy
+      poruszaj\u0105 si\u0119 teraz losowo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801994
+    m_Localized: Wilczy wataha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801995
+    m_Localized: "Wilki pojawiaj\u0105 si\u0119 teraz w grupach po dwa lub trzy osobniki"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801996
+    m_Localized: "Warto\u015B\u0107 bezwzgl\u0119dna"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801997
+    m_Localized: "Wszystkie liczby ujemne s\u0105 teraz ignorowane"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801998
+    m_Localized: Licytator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801999
+    m_Localized: "Ceny zwierz\u0105t w sklepie s\u0105 teraz losowe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802000
+    m_Localized: "R\xF3\u017Cnorodno\u015B\u0107 biologiczna"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802001
+    m_Localized: "Zdob\u0105d\u017A +5 punkt\xF3w za ka\u017Cdy inny gatunek upolowany
+      za pomoc\u0105 lassa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802002
+    m_Localized: Obfite zbiory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802003
+    m_Localized: "+15 got\xF3wki na koniec rundy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802004
+    m_Localized: Przechwytywanie zegara
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802005
+    m_Localized: "Ka\u017Cde udane lasso dodaje 0,5 sekundy do czasu trwania rundy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802006
+    m_Localized: "Z\u0142ap got\xF3wk\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802007
+    m_Localized: "+1 got\xF3wki za ka\u017Cde z\u0142apane zwierz\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802008
+    m_Localized: Saszetka na monety
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802009
+    m_Localized: "Zdob\u0105d\u017A 5% odsetek got\xF3wkowych na koniec ka\u017Cdej
+      rundy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802010
+    m_Localized: Wczesny ptaszek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802011
+    m_Localized: "Pierwszy osobnik nieb\u0119d\u0105cy drapie\u017Cnikiem, kt\xF3ry
+      pojawi si\u0119 w ka\u017Cdej rundzie, jest wart podw\xF3jne punkty i got\xF3wk\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802012
+    m_Localized: "Butelka Wr\xF3\u017Cki"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802013
+    m_Localized: "Je\u015Bli posiadasz ten dar, zapobiegnij kolejnej sytuacji, w
+      kt\xF3rej przegrasz z wymaganiem punktowym i odrzu\u0107 go"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802014
+    m_Localized: "\u015Awie\u017Cy zapas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802015
+    m_Localized: "Zapewnia 2 mo\u017Cliwo\u015Bci ponownego rzutu na sklep"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802016
+    m_Localized: "Zdrowa\u015B Maryjo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802017
+    m_Localized: "Wszystkie zdobyte punkty s\u0105 podwajane w ostatnich 10 sekundach
+      ka\u017Cdej rundy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802018
+    m_Localized: "Mentalno\u015B\u0107 stadna"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802019
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
+      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802020
+    m_Localized: Zegarek kieszonkowy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802021
+    m_Localized: "+5 sekund na rund\u0119 do lassa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802022
+    m_Localized: Pointy Pals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802023
+    m_Localized: "+3 punkty za ka\u017Cde z\u0142apane zwierz\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802024
+    m_Localized: "Czystka drapie\u017Cnik\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802025
+    m_Localized: "Ekran wyboru Predatora pojawia si\u0119 teraz tylko co 5 rund,
+      a nie co 3 rundy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802026
+    m_Localized: Weteran-robotnik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802027
+    m_Localized: "Podczas trzymania poziom wszystkich zwierz\u0105t wzrasta o 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069376
+    m_Localized: Jajeczny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069377
+    m_Localized: "Kury mog\u0105 teraz znosi\u0107 jaja, kt\xF3re daj\u0105 mno\u017Cnik
+      x1,5 po z\u0142apaniu na lasso"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -757,6 +757,271 @@ MonoBehaviour:
     m_Localized: Expert
     m_Metadata:
       m_Items: []
+  - m_Id: 8932396685721600
+    m_Localized: TBD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607680
+    m_Localized: TBD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607681
+    m_Localized: Black Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607682
+    m_Localized: Chance for a sheep to be a black sheep, retriggering your lasso
+      once when lassoed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607683
+    m_Localized: TBD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607684
+    m_Localized: TBD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607685
+    m_Localized: Copycat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607686
+    m_Localized: Cats become the most valuable animal in your lasso when captured
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607687
+    m_Localized: Forever Faster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607688
+    m_Localized: Bonus when captured mid pounce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607689
+    m_Localized: Good Boy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607690
+    m_Localized: Herding dogs chase predators away. Herding dogs are worth x5 cash
+      when lassoed with any predator
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607691
+    m_Localized: Hibernate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607692
+    m_Localized: Bears have a chance to hibernate and gain points while sleeping
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607693
+    m_Localized: Hold Your Horses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607694
+    m_Localized: Horses are slower and stop briefly at the left edge of the screen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607695
+    m_Localized: Moo-tiplier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607696
+    m_Localized: Every cow captured gives 0.25x global mult, reseting each round
+      or when a predator is captured
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801984
+    m_Localized: Pigs With Hats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801985
+    m_Localized: Pigs can randomly spawn with a top hat, if so they are worth +25
+      cash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801986
+    m_Localized: Rabbit's Foot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801987
+    m_Localized: Bunnies have a 25% chance to double banked points when lassoed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801988
+    m_Localized: Scape Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801989
+    m_Localized: Goats now attrract all predators on the screen, x2 mult for each
+      predator captured with a goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801990
+    m_Localized: Theif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801991
+    m_Localized: Foxes trade stats with a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801992
+    m_Localized: Three Blind Mice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801993
+    m_Localized: Each mouse you capture counts as three mice, mice now move randomly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801994
+    m_Localized: Wolfpack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801995
+    m_Localized: Wolves now spawn in packs of two or three
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801996
+    m_Localized: Absolute Value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801997
+    m_Localized: All negative numbers are now ignored
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801998
+    m_Localized: Auctioneer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801999
+    m_Localized: Animal prices are now randomized in the shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802000
+    m_Localized: Biodiversity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802001
+    m_Localized: Earn +5 points for each different species wrangled per lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802002
+    m_Localized: Bountiful Harvest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802003
+    m_Localized: +15 cash at end of round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802004
+    m_Localized: Capture Clock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802005
+    m_Localized: Each successful lasso adds .5 seconds to the round timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802006
+    m_Localized: Cash Catch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802007
+    m_Localized: +1 cash per animal lassoed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802008
+    m_Localized: Coin Pouch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802009
+    m_Localized: Gain 5% cash interest at the end of each round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802010
+    m_Localized: Early Bird
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802011
+    m_Localized: The first non-predator spawned each round is worth double points
+      and cash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802012
+    m_Localized: Fairy Bottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802013
+    m_Localized: If holding this boon, prevent the next time you would lose to the
+      points requirement and discard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802014
+    m_Localized: Fresh Stock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802015
+    m_Localized: Grants 2 reroll opportunities per shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802016
+    m_Localized: Hail Mary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802017
+    m_Localized: All lassoed points are doubled in the last 10 seconds of each round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802018
+    m_Localized: Herd Mentality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802019
+    m_Localized: Gain +20% points bonus for each non-predator in a lasso, instead
+      of 10%
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802020
+    m_Localized: Pocketwatch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802021
+    m_Localized: +5 seconds per round to lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802022
+    m_Localized: Pointy Pals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802023
+    m_Localized: +3 points per animal lassoed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802024
+    m_Localized: Predator Purge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802025
+    m_Localized: Predator select screen now only appears every 5 rounds instead of
+      every 3 rounds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802026
+    m_Localized: Veteran Farmhand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802027
+    m_Localized: While holding, all animals have their level increased by 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069376
+    m_Localized: Eggstravagant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069377
+    m_Localized: 'Chickens can now lay eggs which give x1.5 points mult when lassoed '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

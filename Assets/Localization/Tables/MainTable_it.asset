@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -759,6 +759,279 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8554514727809038
     m_Localized: Esperto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396685721600
+    m_Localized: Da definire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607680
+    m_Localized: Da definire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607681
+    m_Localized: Pecora nera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607682
+    m_Localized: "Possibilit\xE0 che una pecora sia una pecora nera, riattivando
+      il tuo lazo una volta quando sei stata presa al lazo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607683
+    m_Localized: Da definire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607684
+    m_Localized: Da definire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607685
+    m_Localized: Imitatore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607686
+    m_Localized: "I gatti diventano l'animale pi\xF9 prezioso nel tuo lazo quando
+      vengono catturati"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607687
+    m_Localized: "Sempre pi\xF9 veloce"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607688
+    m_Localized: "Bonus quando catturato a met\xE0 balzo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607689
+    m_Localized: Bravo ragazzo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607690
+    m_Localized: I cani da pastore scacciano i predatori. I cani da pastore valgono
+      x5 in contanti quando vengono catturati con il lazo da un predatore.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607691
+    m_Localized: Ibernare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607692
+    m_Localized: "Gli orsi hanno la possibilit\xE0 di andare in letargo e guadagnare
+      punti mentre dormono"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607693
+    m_Localized: Tieni a freno i cavalli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607694
+    m_Localized: "I cavalli sono pi\xF9 lenti e si fermano brevemente sul bordo sinistro
+      dello schermo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607695
+    m_Localized: Moo-tiplier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607696
+    m_Localized: "Ogni mucca catturata d\xE0 un moltiplicatore globale di 0,25x,
+      che si azzera a ogni round o quando viene catturato un predatore"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801984
+    m_Localized: Maiali con cappelli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801985
+    m_Localized: I maiali possono apparire casualmente con un cappello a cilindro,
+      in tal caso valgono +25 contanti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801986
+    m_Localized: Zampa di coniglio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801987
+    m_Localized: "I conigli hanno il 25% di possibilit\xE0 di raddoppiare i punti
+      accumulati quando vengono catturati con il lazo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801988
+    m_Localized: Capro espiatorio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801989
+    m_Localized: Le capre ora attraggono tutti i predatori sullo schermo, moltiplica
+      x2 per ogni predatore catturato con una capra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801990
+    m_Localized: Ladro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801991
+    m_Localized: Le volpi scambiano le statistiche con un
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801992
+    m_Localized: Tre topi ciechi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801993
+    m_Localized: Ogni topo che catturi conta come tre topi, i topi ora si muovono
+      in modo casuale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801994
+    m_Localized: branco di lupi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801995
+    m_Localized: I lupi ora si generano in branchi di due o tre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801996
+    m_Localized: Valore assoluto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801997
+    m_Localized: Tutti i numeri negativi vengono ora ignorati
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801998
+    m_Localized: Banditore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801999
+    m_Localized: I prezzi degli animali ora sono casuali nel negozio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802000
+    m_Localized: "Biodiversit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802001
+    m_Localized: Guadagna +5 punti per ogni specie diversa catturata con il lazo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802002
+    m_Localized: Raccolto abbondante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802003
+    m_Localized: +15 contanti alla fine del round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802004
+    m_Localized: Cattura orologio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802005
+    m_Localized: Ogni lazo riuscito aggiunge 0,5 secondi al timer del round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802006
+    m_Localized: Cattura di denaro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802007
+    m_Localized: +1 denaro contante per animale catturato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802008
+    m_Localized: Portamonete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802009
+    m_Localized: Guadagna il 5% di interessi in contanti alla fine di ogni round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802010
+    m_Localized: Early Bird
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802011
+    m_Localized: Il primo non predatore generato in ogni round vale il doppio dei
+      punti e del denaro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802012
+    m_Localized: Bottiglia delle fate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802013
+    m_Localized: Se hai questo vantaggio, evita la prossima volta che perderai il
+      requisito dei punti e scartalo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802014
+    m_Localized: Brodo fresco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802015
+    m_Localized: "Concede 2 opportunit\xE0 di rilancio per negozio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802016
+    m_Localized: Ave Maria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802017
+    m_Localized: Tutti i punti catturati vengono raddoppiati negli ultimi 10 secondi
+      di ogni round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802018
+    m_Localized: "Mentalit\xE0 del gregge"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802019
+    m_Localized: Ottieni un bonus di punti del +20% per ogni non predatore in un
+      lazo, invece del 10%
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802020
+    m_Localized: Orologio da tasca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802021
+    m_Localized: +5 secondi per round per usare il lazo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802022
+    m_Localized: Amici a punta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802023
+    m_Localized: +3 punti per ogni animale catturato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802024
+    m_Localized: Purga dei predatori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802025
+    m_Localized: La schermata di selezione del predatore ora appare solo ogni 5 round
+      invece che ogni 3 round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802026
+    m_Localized: bracciante agricolo veterano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802027
+    m_Localized: Mentre si tiene premuto, il livello di tutti gli animali aumenta
+      di 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069376
+    m_Localized: Stravagante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069377
+    m_Localized: Le galline ora possono deporre uova che danno x1,5 punti moltiplicati
+      quando vengono catturate con il lazo
     m_Metadata:
       m_Items: []
   references:

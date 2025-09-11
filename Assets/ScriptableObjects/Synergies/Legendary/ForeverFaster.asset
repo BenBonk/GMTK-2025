@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   synergyName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 8932396769607688
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   desc:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 8932396769607688
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  art: {fileID: 0}
+  art: {fileID: -768035087, guid: 0a50b58dff5a6be44934cb9591cc133c, type: 3}
   price: 0
   references:
     version: 2

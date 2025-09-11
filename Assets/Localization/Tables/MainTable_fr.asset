@@ -765,6 +765,283 @@ MonoBehaviour:
     m_Localized: Expert
     m_Metadata:
       m_Items: []
+  - m_Id: 8932396685721600
+    m_Localized: "\xC0 d\xE9terminer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607680
+    m_Localized: "\xC0 d\xE9terminer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607681
+    m_Localized: Mouton noir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607682
+    m_Localized: "Possibilit\xE9 pour un mouton d'\xEAtre un mouton noir, en red\xE9clenchant
+      votre lasso une fois lorsqu'il est pris au lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607683
+    m_Localized: "\xC0 d\xE9terminer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607684
+    m_Localized: "\xC0 d\xE9terminer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607685
+    m_Localized: Copieur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607686
+    m_Localized: "Les chats deviennent l'animal le plus pr\xE9cieux de votre lasso
+      lorsqu'ils sont captur\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607687
+    m_Localized: Toujours plus rapide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607688
+    m_Localized: Bonus en cas de capture en plein bond
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607689
+    m_Localized: "Bon gar\xE7on"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607690
+    m_Localized: "Les chiens de berger chassent les pr\xE9dateurs. Ils valent cinq
+      fois plus cher lorsqu'ils sont pris au lasso avec un pr\xE9dateur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607691
+    m_Localized: Hiberner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607692
+    m_Localized: Les ours ont une chance d'hiberner et de gagner des points pendant
+      leur sommeil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607693
+    m_Localized: Retenez vos chevaux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607694
+    m_Localized: "Les chevaux sont plus lents et s'arr\xEAtent bri\xE8vement sur
+      le bord gauche de l'\xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607695
+    m_Localized: Moo-tiplier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607696
+    m_Localized: "Chaque vache captur\xE9e donne 0,25x de multiplicateur global,
+      r\xE9initialis\xE9 \xE0 chaque tour ou lorsqu'un pr\xE9dateur est captur\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801984
+    m_Localized: Cochons avec des chapeaux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801985
+    m_Localized: "Les cochons peuvent appara\xEEtre al\xE9atoirement avec un chapeau
+      haut de forme, si c'est le cas, ils valent +25 en esp\xE8ces"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801986
+    m_Localized: patte de lapin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801987
+    m_Localized: "Les lapins ont 25 % de chances de doubler leurs points accumul\xE9s
+      lorsqu'ils sont captur\xE9s au lasso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801988
+    m_Localized: "Bouc \xE9missaire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801989
+    m_Localized: "Les ch\xE8vres attirent d\xE9sormais tous les pr\xE9dateurs \xE0
+      l'\xE9cran, x2 multiplicateur pour chaque pr\xE9dateur captur\xE9 avec une
+      ch\xE8vre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801990
+    m_Localized: Voleur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801991
+    m_Localized: "Les Foxes \xE9changent des statistiques avec un"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801992
+    m_Localized: Trois souris aveugles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801993
+    m_Localized: "Chaque souris que vous capturez compte comme trois souris, les
+      souris se d\xE9placent d\xE9sormais de mani\xE8re al\xE9atoire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801994
+    m_Localized: Meute de loups
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801995
+    m_Localized: "Les loups apparaissent d\xE9sormais en meutes de deux ou trois"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801996
+    m_Localized: Valeur absolue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801997
+    m_Localized: "Tous les nombres n\xE9gatifs sont d\xE9sormais ignor\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801998
+    m_Localized: Commissaire-priseur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801999
+    m_Localized: "Les prix des animaux sont d\xE9sormais randomis\xE9s dans la boutique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802000
+    m_Localized: "Biodiversit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802001
+    m_Localized: "Gagnez +5 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
+      par lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802002
+    m_Localized: "R\xE9colte abondante"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802003
+    m_Localized: "+15 cash \xE0 la fin du tour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802004
+    m_Localized: Capture d'horloge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802005
+    m_Localized: "Chaque lasso r\xE9ussi ajoute 0,5 seconde au chronom\xE8tre du
+      tour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802006
+    m_Localized: Cash Catch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802007
+    m_Localized: "+1 cash par animal captur\xE9 au lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802008
+    m_Localized: "Pochette \xE0 monnaie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802009
+    m_Localized: "Gagnez 5 % d'int\xE9r\xEAt en esp\xE8ces \xE0 la fin de chaque
+      tour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802010
+    m_Localized: "L\xE8ve-t\xF4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802011
+    m_Localized: "Le premier non-pr\xE9dateur engendr\xE9 \xE0 chaque tour vaut le
+      double de points et d'argent"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802012
+    m_Localized: "Bouteille de f\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802013
+    m_Localized: "Si vous d\xE9tenez ce don, \xE9vitez la prochaine fois que vous
+      perdriez face aux points requis et d\xE9faussez-le."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802014
+    m_Localized: bouillon frais
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802015
+    m_Localized: "Accorde 2 opportunit\xE9s de relance par boutique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802016
+    m_Localized: Je vous salue Marie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802017
+    m_Localized: "Tous les points lasso\xE9s sont doubl\xE9s dans les 10 derni\xE8res
+      secondes de chaque tour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802018
+    m_Localized: "Mentalit\xE9 gr\xE9gaire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802019
+    m_Localized: "Gagnez +20% de points bonus pour chaque non-pr\xE9dateur dans un
+      lasso, au lieu de 10%"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802020
+    m_Localized: Montre de poche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802021
+    m_Localized: +5 secondes par tour pour capturer au lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802022
+    m_Localized: Copains pointus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802023
+    m_Localized: "+3 points par animal captur\xE9 au lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802024
+    m_Localized: "Purge des pr\xE9dateurs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802025
+    m_Localized: "L'\xE9cran de s\xE9lection des pr\xE9dateurs n'appara\xEEt d\xE9sormais
+      que tous les 5 tours au lieu de tous les 3 tours"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802026
+    m_Localized: "V\xE9t\xE9ran ouvrier agricole"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802027
+    m_Localized: "En maintenant, tous les animaux voient leur niveau augment\xE9
+      de 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069376
+    m_Localized: Eggstravagant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069377
+    m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui rapportent
+      x1,5 points lorsqu'elles sont captur\xE9es au lasso"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

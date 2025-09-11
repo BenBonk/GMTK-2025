@@ -762,6 +762,279 @@ MonoBehaviour:
     m_Localized: Especialista
     m_Metadata:
       m_Items: []
+  - m_Id: 8932396685721600
+    m_Localized: A definir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607680
+    m_Localized: A definir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607681
+    m_Localized: Ovelha Negra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607682
+    m_Localized: "Chance de uma ovelha ser uma ovelha negra, reativando seu la\xE7o
+      uma vez quando la\xE7ada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607683
+    m_Localized: A definir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607684
+    m_Localized: A definir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607685
+    m_Localized: Imitador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607686
+    m_Localized: "Os gatos se tornam o animal mais valioso em seu la\xE7o quando
+      capturados"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607687
+    m_Localized: "Para sempre mais r\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607688
+    m_Localized: "B\xF4nus quando capturado no meio do ataque"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607689
+    m_Localized: Bom menino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607690
+    m_Localized: "C\xE3es pastores afugentam predadores. C\xE3es pastores valem x5
+      em dinheiro quando la\xE7ados com qualquer predador."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607691
+    m_Localized: Hibernar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607692
+    m_Localized: "Os ursos t\xEAm a chance de hibernar e ganhar pontos enquanto dormem"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607693
+    m_Localized: Segure seus cavalos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607694
+    m_Localized: "Os cavalos s\xE3o mais lentos e param brevemente na borda esquerda
+      da tela"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607695
+    m_Localized: Moo-tiplier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396769607696
+    m_Localized: "Cada vaca capturada d\xE1 0,25x de multiplica\xE7\xE3o global,
+      reiniciando a cada rodada ou quando um predador \xE9 capturado"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801984
+    m_Localized: "Porcos com chap\xE9us"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801985
+    m_Localized: Os porcos podem aparecer aleatoriamente com uma cartola, se assim
+      for, eles valem +25 em dinheiro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801986
+    m_Localized: "P\xE9 de coelho"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801987
+    m_Localized: "Os coelhos t\xEAm 25% de chance de dobrar os pontos acumulados
+      quando la\xE7ados"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801988
+    m_Localized: "Bode expiat\xF3rio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801989
+    m_Localized: As cabras agora atraem todos os predadores na tela, multiplicado
+      por 2 para cada predador capturado com uma cabra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801990
+    m_Localized: "Ladr\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801991
+    m_Localized: "As raposas trocam estat\xEDsticas com um"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801992
+    m_Localized: "Tr\xEAs ratos cegos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801993
+    m_Localized: "Cada rato que voc\xEA captura conta como tr\xEAs ratos, os ratos
+      agora se movem aleatoriamente"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801994
+    m_Localized: Alcateia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801995
+    m_Localized: "Os lobos agora aparecem em grupos de dois ou tr\xEAs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801996
+    m_Localized: Valor Absoluto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801997
+    m_Localized: "Todos os n\xFAmeros negativos agora s\xE3o ignorados"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801998
+    m_Localized: Leiloeiro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773801999
+    m_Localized: "Os pre\xE7os dos animais agora s\xE3o aleat\xF3rios na loja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802000
+    m_Localized: Biodiversidade
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802001
+    m_Localized: "Ganhe +5 pontos para cada esp\xE9cie diferente controlada por la\xE7o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802002
+    m_Localized: Colheita abundante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802003
+    m_Localized: +15 em dinheiro no final da rodada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802004
+    m_Localized: "Rel\xF3gio de captura"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802005
+    m_Localized: "Cada la\xE7o bem-sucedido adiciona 0,5 segundos ao cron\xF4metro
+      da rodada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802006
+    m_Localized: Captura de dinheiro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802007
+    m_Localized: "+1 dinheiro por animal la\xE7ado"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802008
+    m_Localized: Bolsa para moedas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802009
+    m_Localized: Ganhe 5% de juros em dinheiro no final de cada rodada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802010
+    m_Localized: Madrugador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802011
+    m_Localized: "O primeiro n\xE3o predador gerado em cada rodada vale o dobro de
+      pontos e dinheiro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802012
+    m_Localized: Garrafa de fada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802013
+    m_Localized: "Se voc\xEA tiver essa b\xEAn\xE7\xE3o, evite a pr\xF3xima vez que
+      perder para o requisito de pontos e descarte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802014
+    m_Localized: Estoque fresco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802015
+    m_Localized: Concede 2 oportunidades de nova rodada por loja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802016
+    m_Localized: Ave Maria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802017
+    m_Localized: "Todos os pontos la\xE7ados s\xE3o duplicados nos \xFAltimos 10
+      segundos de cada rodada"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802018
+    m_Localized: Mentalidade de rebanho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802019
+    m_Localized: "Ganhe +20% de b\xF4nus em pontos para cada n\xE3o predador em um
+      la\xE7o, em vez de 10%"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802020
+    m_Localized: "Rel\xF3gio de bolso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802021
+    m_Localized: "+5 segundos por rodada para la\xE7ar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802022
+    m_Localized: Amigos Pontudos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802023
+    m_Localized: "+3 pontos por animal la\xE7ado"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802024
+    m_Localized: Expurgo de Predadores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802025
+    m_Localized: "A tela de sele\xE7\xE3o de predadores agora s\xF3 aparece a cada
+      5 rodadas em vez de a cada 3 rodadas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802026
+    m_Localized: Trabalhador rural veterano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8932396773802027
+    m_Localized: "Enquanto estiver segurando, todos os animais ter\xE3o seu n\xEDvel
+      aumentado em 2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069376
+    m_Localized: Extravagante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8933137060069377
+    m_Localized: "As galinhas agora podem botar ovos que d\xE3o x1,5 pontos de multiplica\xE7\xE3o
+      quando la\xE7adas"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
