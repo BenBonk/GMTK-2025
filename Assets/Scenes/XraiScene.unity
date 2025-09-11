@@ -35883,7 +35883,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.060679436, y: -0.00000047683716}
+  m_Offset: {x: 0.060679436, y: -5.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -35893,7 +35893,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 19.787477, y: 10.61588}
+  m_Size: {x: 21.81, y: 23.7}
   m_EdgeRadius: 0
 --- !u!4 &1671915077
 Transform:
@@ -36134,7 +36134,7 @@ MonoBehaviour:
   - {fileID: 1758266379, guid: 180e0267646243c4ea998eb892dfe7a0, type: 3}
   - {fileID: -1855679618, guid: 180e0267646243c4ea998eb892dfe7a0, type: 3}
   - {fileID: -1945411015, guid: 180e0267646243c4ea998eb892dfe7a0, type: 3}
-  numberOfGrassObjects: 100
+  numberOfGrassObjects: 135
   colorPalette:
   - {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
   - {r: 0.14509805, g: 0.36078432, b: 0.25490198, a: 1}
@@ -43696,6 +43696,7 @@ MonoBehaviour:
   - mainColor: {r: 0.24313727, g: 0.53333336, b: 0.2784314, a: 1}
     darkColor: {r: 0.15294118, g: 0.36078432, b: 0.25490198, a: 0.28235295}
     extraItemsFrequency: 0
+    minDistanceBetweenExtraItems: 3
     extraItems: []
     shouldSpawnGrass: 1
     grassColors:
@@ -43710,7 +43711,8 @@ MonoBehaviour:
     - {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
   - mainColor: {r: 0.6901961, g: 0.41960788, b: 0.3019608, a: 1}
     darkColor: {r: 0.43529415, g: 0.23137257, b: 0.21176472, a: 0.28235295}
-    extraItemsFrequency: 9
+    extraItemsFrequency: 0
+    minDistanceBetweenExtraItems: 3
     extraItems:
     - {fileID: 1187462644570448779, guid: d8d299c6bd025fe46a20967e35af675e, type: 3}
     - {fileID: 4172675806396030800, guid: 4104e9cbadc758646b69c9e4d2175657, type: 3}
@@ -43731,7 +43733,8 @@ MonoBehaviour:
     - {r: 0.6784314, g: 0.40784317, b: 0.29411766, a: 1}
   - mainColor: {r: 0.8745099, g: 0.48235297, b: 0.27450982, a: 1}
     darkColor: {r: 0.75294125, g: 0.2901961, b: 0.18431373, a: 0.28235295}
-    extraItemsFrequency: 6
+    extraItemsFrequency: 0
+    minDistanceBetweenExtraItems: 3
     extraItems:
     - {fileID: 8892788614900116604, guid: 77bc2d717d7c9ef40b5bbbee2b3c9fc7, type: 3}
     - {fileID: 1160554788803493538, guid: 364dea881015c904a9e5400595c2e2a2, type: 3}
@@ -43750,6 +43753,49 @@ MonoBehaviour:
     - {r: 0.94117653, g: 0.854902, b: 0.6862745, a: 1}
     - {r: 0.6745098, g: 0.25882354, b: 0.16470589, a: 1}
     - {r: 0.8235295, g: 0.45882356, b: 0.2627451, a: 1}
+  - mainColor: {r: 0.2392157, g: 0.53333336, b: 0.27450982, a: 1}
+    darkColor: {r: 0.40784317, g: 0.7960785, b: 0.30588236, a: 0.28235295}
+    extraItemsFrequency: 750
+    minDistanceBetweenExtraItems: 0.01
+    extraItems:
+    - {fileID: 4611719977709918514, guid: 6de7de906228d1049bbb32d8470255e6, type: 3}
+    - {fileID: 4611719977709918514, guid: ec93cb304cfa2be41b69e9291a51fab8, type: 3}
+    - {fileID: 4611719977709918514, guid: 3262945a8aa67c443a6fb92c1f61f256, type: 3}
+    - {fileID: 4611719977709918514, guid: 917a8ee712c41d04f8f5e485e7bd8133, type: 3}
+    - {fileID: 4611719977709918514, guid: f51248294cf121845911d860c21cea79, type: 3}
+    - {fileID: 4611719977709918514, guid: 168c453db75f303428538cbda4ed384a, type: 3}
+    - {fileID: 4611719977709918514, guid: 80e1271a29b12aa44a953ab19a2dc1c0, type: 3}
+    - {fileID: 4611719977709918514, guid: b835318c751ede248ab049669986a8e8, type: 3}
+    - {fileID: 4611719977709918514, guid: 5589b7fd079620049841063cb0f3591b, type: 3}
+    - {fileID: 4611719977709918514, guid: 88a88092c3b0e864d860f35fc7d3641c, type: 3}
+    - {fileID: 4611719977709918514, guid: 88a88092c3b0e864d860f35fc7d3641c, type: 3}
+    - {fileID: 4611719977709918514, guid: 88a88092c3b0e864d860f35fc7d3641c, type: 3}
+    - {fileID: 4611719977709918514, guid: 5589b7fd079620049841063cb0f3591b, type: 3}
+    - {fileID: 4611719977709918514, guid: 5589b7fd079620049841063cb0f3591b, type: 3}
+    - {fileID: 4611719977709918514, guid: b835318c751ede248ab049669986a8e8, type: 3}
+    - {fileID: 4611719977709918514, guid: b835318c751ede248ab049669986a8e8, type: 3}
+    - {fileID: 4611719977709918514, guid: 80e1271a29b12aa44a953ab19a2dc1c0, type: 3}
+    - {fileID: 4611719977709918514, guid: 80e1271a29b12aa44a953ab19a2dc1c0, type: 3}
+    - {fileID: 4611719977709918514, guid: 168c453db75f303428538cbda4ed384a, type: 3}
+    - {fileID: 4611719977709918514, guid: 168c453db75f303428538cbda4ed384a, type: 3}
+    - {fileID: 4611719977709918514, guid: f51248294cf121845911d860c21cea79, type: 3}
+    - {fileID: 4611719977709918514, guid: f51248294cf121845911d860c21cea79, type: 3}
+    - {fileID: 4611719977709918514, guid: 917a8ee712c41d04f8f5e485e7bd8133, type: 3}
+    - {fileID: 4611719977709918514, guid: 917a8ee712c41d04f8f5e485e7bd8133, type: 3}
+    - {fileID: 4611719977709918514, guid: 3262945a8aa67c443a6fb92c1f61f256, type: 3}
+    - {fileID: 4611719977709918514, guid: 3262945a8aa67c443a6fb92c1f61f256, type: 3}
+    - {fileID: 4611719977709918514, guid: ec93cb304cfa2be41b69e9291a51fab8, type: 3}
+    - {fileID: 4611719977709918514, guid: ec93cb304cfa2be41b69e9291a51fab8, type: 3}
+    - {fileID: 4611719977709918514, guid: 6de7de906228d1049bbb32d8470255e6, type: 3}
+    - {fileID: 4611719977709918514, guid: 6de7de906228d1049bbb32d8470255e6, type: 3}
+    - {fileID: 4611719977709918514, guid: 55b83d61696bb0747a62ec2add25c4ce, type: 3}
+    - {fileID: 4611719977709918514, guid: 2538cd1c7ab237c46856cc5beaf048b7, type: 3}
+    - {fileID: 4611719977709918514, guid: 236a9296b7623f346a92061e69cd74da, type: 3}
+    shouldSpawnGrass: 0
+    grassColors:
+    - {r: 0.39607847, g: 0.77647066, b: 0.29803923, a: 1}
+    - {r: 0.14117648, g: 0.34509805, b: 0.24313727, a: 1}
+    - {r: 0.3921569, g: 0.7725491, b: 0.29803923, a: 1}
 --- !u!4 &2082549784
 Transform:
   m_ObjectHideFlags: 0
