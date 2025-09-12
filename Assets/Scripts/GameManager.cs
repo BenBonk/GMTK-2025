@@ -153,6 +153,10 @@ public class GameManager : MonoBehaviour
         {
             roundDuration += 5;
         }
+        if (boonManager.ContainsBoon("BountifulHarvest"))
+        {
+            endDayCash += 15;
+        }
         pointsThisRound = 0;
         UpdateUI();
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
@@ -280,6 +284,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
         winPanel.gameObject.SetActive(false);
         pauseMenu.canOpenClose = false;
+        if (boonManager.ContainsBoon("BountifulHarvest"))
+        {
+            endDayCash -= 15;
+        }
         // After both messages
         if (roundNumber % predatorRoundFrequency == 0)
         {
