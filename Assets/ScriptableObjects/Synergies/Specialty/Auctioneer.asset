@@ -31,7 +31,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: -1041232733, guid: 32b5def3b9b9e324b92eb06cc5235ae7, type: 3}
-  price: 0
+  price: 100
   references:
     version: 2
     RefIds: []

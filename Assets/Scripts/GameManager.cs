@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpriteRenderer barn;
     [SerializeField] private Transform barnCameraTarget;
     [SerializeField] private Animator barnAnimator;
+    private BoonManager boonManager;
     private LocalizationManager localization;
 
 
@@ -103,6 +104,7 @@ public class GameManager : MonoBehaviour
         pauseMenu = GameController.pauseMenu;
         saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
+        boonManager = GameController.boonManager;
         saveManager.LoadGameData();
         ApplyHarvestLevel();
         if (isTesting)
@@ -147,6 +149,10 @@ public class GameManager : MonoBehaviour
 
     public void StartRound()
     {
+        if (boonManager.ContainsBoon("Pocketwatch"))
+        {
+            roundDuration += 5;
+        }
         pointsThisRound = 0;
         UpdateUI();
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
@@ -176,6 +182,10 @@ public class GameManager : MonoBehaviour
 
     public void EndRound()
     {
+        if (boonManager.ContainsBoon("Pocketwatch"))
+        {
+            roundDuration -= 5;
+        }
         if (lassoController.lineRenderer != null)
         {
             Destroy(lassoController.lineRenderer.gameObject);
