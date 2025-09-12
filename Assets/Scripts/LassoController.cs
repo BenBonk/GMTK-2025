@@ -10,6 +10,7 @@ public class LassoController : MonoBehaviour
 {
     [HideInInspector] public LineRenderer lineRenderer;
     public GameObject lassoPrefab;
+    private BoonManager boonManager;
 
 
     [Header("Lasso Particles")]
@@ -81,6 +82,7 @@ public class LassoController : MonoBehaviour
     private void Start()
     {
         localization = GameController.localizationManager;
+        boonManager = GameController.boonManager;
     }
 
     void Update()
@@ -384,6 +386,10 @@ public class LassoController : MonoBehaviour
         int row = 0;
 
         // === POINTS BONUS ===
+        if (boonManager.ContainsBoon("PointyPals"))
+        {
+            result.pointBonus += 3;
+        }
         if (true)
         {
             Vector3 offset = new Vector3(0, row++ * 1f, 0);
@@ -475,6 +481,11 @@ public class LassoController : MonoBehaviour
         }
 
         // === CURRENCY BONUS ===
+        if (boonManager.ContainsBoon("CashCatch"))
+        {
+            result.currencyBonus += 1;
+        }
+        
         if (result.currencyBonus != 0)
         {
             Vector3 offset = new Vector3(0, row++ * 1f, 0);
