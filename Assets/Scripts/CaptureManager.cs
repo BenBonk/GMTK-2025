@@ -80,6 +80,11 @@ public class CaptureManager : MonoBehaviour
             FBPP.SetInt("largestCapture", animalsCaptured.Length);
         }
 
+        if (animalsCaptured.Length>0 && boonManager.ContainsBoon("CaptureClock"))
+        {
+            gameManager.roundDuration += 0.5f;
+        }
+
         if (totalNonPredatorCount > 1)
         {
             pointMult *= 1 + (0.1f * animalsCaptured.Length);
