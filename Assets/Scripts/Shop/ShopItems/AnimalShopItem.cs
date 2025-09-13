@@ -29,8 +29,12 @@ public class AnimalShopItem : ShopItem
 
         chosenAnimal = weightedList[Random.Range(0, weightedList.Count)].animalData;
         titleText.text = chosenAnimal.animalName.GetLocalizedString();
-        priceText.text = chosenAnimal.price.ToString();
         price = chosenAnimal.price;
+        if (GameController.boonManager.ContainsBoon("Auctioneer"))
+        {
+            price = Random.Range(25, 201);
+        }
+        priceText.text = price.ToString();
         upgradeArt.sprite = chosenAnimal.sprite;
         upgradeArt.SetNativeSize();
         sprite1 = chosenAnimal.sprite;
