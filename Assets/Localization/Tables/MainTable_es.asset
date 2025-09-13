@@ -955,8 +955,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: El primer no depredador que aparezca en cada ronda vale el doble
-      de puntos y dinero en efectivo.
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012

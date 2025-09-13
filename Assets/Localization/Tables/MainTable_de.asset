@@ -248,7 +248,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
+      Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -963,8 +964,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Der erste Nicht-Raubtier, der in jeder Runde erscheint, ist doppelte
-      Punkte und Bargeld wert
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -998,8 +998,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
-      Lasso, statt 10 %"
+    m_Localized: "Erhalten Sie f\xFCr jeden Nicht-Raubtier im Lasso einen Punktebonus
+      von +20 % statt 10 %"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020

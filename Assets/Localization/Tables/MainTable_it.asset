@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boon pi\xF9 acquistati:"
+    m_Localized: "I 3 Boons pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -884,7 +884,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -952,8 +952,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Il primo non predatore generato in ogni round vale il doppio dei
-      punti e del denaro
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012

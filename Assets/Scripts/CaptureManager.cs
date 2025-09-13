@@ -14,6 +14,7 @@ public class CaptureManager : MonoBehaviour
     private double pointMult = 1;
     private double currencyBonus = 0;
     private double currencyMult = 1;
+    [HideInInspector]public bool firstCapture;
 
     private void Start()
     {
@@ -90,6 +91,13 @@ public class CaptureManager : MonoBehaviour
             pointMult *= 1 + (0.1f * animalsCaptured.Length);
             int groupsOf3 = totalNonPredatorCount / 3;
             currencyBonus += groupsOf3;
+        }
+
+        if (!firstCapture && boonManager.ContainsBoon("EarlyBird"))
+        {
+            firstCapture = true;
+            pointMult *= 2;
+            currencyMult *= 2;
         }
 
         return (pointBonus, pointMult, currencyBonus, currencyMult);

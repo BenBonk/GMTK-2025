@@ -19,7 +19,6 @@ public class AnimalSpawner : MonoBehaviour
     private void SpawnRandomAnimal()
     {
         GameObject animal = Instantiate(GameController.player.animalsInDeck[Random.Range(0,GameController.player.animalsInDeck.Count)].animalPrefab);
-
         float topBuffer = 0.25f;
         float bottomBuffer = 0.25f;
         

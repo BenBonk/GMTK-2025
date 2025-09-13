@@ -295,6 +295,7 @@ public class GameManager : MonoBehaviour
             endDayCash -= 15;
         }
 
+        GameController.captureManager.firstCapture = false;
         cashInterest = 0;
 
         predatorRoundFrequency = 3;

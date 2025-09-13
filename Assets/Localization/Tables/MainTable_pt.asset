@@ -116,7 +116,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22
     m_Localized: "Predador. Puxa predadores pr\xF3ximos em sua dire\xE7\xE3o. Imune
-      a efeitos de puxar e empurrar."
+      a efeitos de empurrar e puxar."
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Os Tr\xEAs Porquinhos"
+    m_Localized: "Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -953,8 +953,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: "O primeiro n\xE3o predador gerado em cada rodada vale o dobro de
-      pontos e dinheiro"
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012

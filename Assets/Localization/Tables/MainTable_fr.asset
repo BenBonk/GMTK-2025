@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+Esp\xE8ces\_: {0}"
+    m_Localized: "+ Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -586,7 +586,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "Num\xE9ro de tour le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
+    m_Localized: "Num\xE9ro de manche le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
@@ -778,7 +778,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Possibilit\xE9 pour un mouton d'\xEAtre un mouton noir, en red\xE9clenchant
+    m_Localized: "Possibilit\xE9 pour un mouton de devenir un mouton noir, en red\xE9clenchant
       votre lasso une fois lorsqu'il est pris au lasso"
     m_Metadata:
       m_Items: []
@@ -813,7 +813,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607690
     m_Localized: "Les chiens de berger chassent les pr\xE9dateurs. Ils valent cinq
-      fois plus cher lorsqu'ils sont pris au lasso avec un pr\xE9dateur."
+      fois plus cher lorsqu'ils sont pris au pi\xE8ge d'un pr\xE9dateur."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -960,8 +960,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: "Le premier non-pr\xE9dateur engendr\xE9 \xE0 chaque tour vaut le
-      double de points et d'argent"
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
