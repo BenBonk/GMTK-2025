@@ -99,6 +99,10 @@ public class CaptureManager : MonoBehaviour
             pointMult *= 2;
             currencyMult *= 2;
         }
+        if (boonManager.ContainsBoon("HailMary") && (gameManager.roundDuration-gameManager.elapsedTime)<10f)
+        {
+            pointMult *= 2;
+        }
 
         return (pointBonus, pointMult, currencyBonus, currencyMult);
     }

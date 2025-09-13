@@ -27647,6 +27647,7 @@ MonoBehaviour:
   roundDuration: 45
   roundsToWin: 20
   maxSynergies: 5
+  elapsedTime: 0
   predatorRoundFrequency: 3
   wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
   endRoundPrefab: {fileID: 3484454060116296803, guid: c01d5805210ba0c459e6a670098a123a, type: 3}
@@ -36613,6 +36614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad85463a7b7150419a2c6f803718846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstCapture: 0
 --- !u!4 &1781559414
 Transform:
   m_ObjectHideFlags: 0
@@ -42596,7 +42598,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   boonsInDeck:
-  - {fileID: 11400000, guid: 9f910c08119327242801306e022185da, type: 2}
+  - {fileID: 11400000, guid: 813fb77ca38b6124783ff00435cb83b1, type: 2}
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public float roundDuration = 20f;
     public int roundsToWin = 20;
     public int maxSynergies;
-    private float elapsedTime;
+    [HideInInspector] public float elapsedTime;
     public int predatorRoundFrequency;
 
     public GameObject wordPrefab; // Assign in inspector
