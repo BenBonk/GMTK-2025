@@ -8,6 +8,7 @@ public class CaptureManager : MonoBehaviour
 {
     private Player player;
     private GameManager gameManager;
+    private BoonManager boonManager;
 
     private double pointBonus = 0;
     private double pointMult = 1;
@@ -16,6 +17,7 @@ public class CaptureManager : MonoBehaviour
 
     private void Start()
     {
+        boonManager = GameController.boonManager;
         gameManager = GameController.gameManager;
         player = GameController.player;
     }
@@ -53,6 +55,7 @@ public class CaptureManager : MonoBehaviour
         }
 
         int totalNonPredatorCount = 0;
+        int biodiversityBonus = 0;
         foreach (var animal in animalsCaptured)
         {
             if (!animal.isPredator)
@@ -60,6 +63,16 @@ public class CaptureManager : MonoBehaviour
                 totalNonPredatorCount++;
             }
             CaptureAnimal(animal);
+        }
+        
+        if (boonManager.ContainsBoon("Biodiversity"))
+        {
+            HashSet<string> uniqueAnimalNames = new HashSet<string>();
+            foreach (var a in animalsCaptured)
+            {
+                uniqueAnimalNames.Add(a.name);
+            }
+            pointBonus += (5 * uniqueAnimalNames.Count);
         }
         
         if (animalsCaptured.Length > FBPP.GetInt("largestCapture"))
