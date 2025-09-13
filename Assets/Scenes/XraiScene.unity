@@ -25692,6 +25692,7 @@ MonoBehaviour:
   hoverPopup: {fileID: 951094376}
   priceText: {fileID: 426302352}
   canReroll: 1
+  rerollsPerShop: 1
 --- !u!1 &1002700804
 GameObject:
   m_ObjectHideFlags: 0
@@ -42595,7 +42596,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   boonsInDeck:
-  - {fileID: 11400000, guid: f6f7601e974249c4b9bf4877ecc9a2e4, type: 2}
+  - {fileID: 11400000, guid: dc2e041383319df49bade4eb85f974bd, type: 2}
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0

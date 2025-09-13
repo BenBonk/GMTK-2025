@@ -15,11 +15,15 @@ public class RerollManager : MonoBehaviour
     private Tween b;
     public bool canReroll;
     private ShopManager shopManager;
+    private BoonManager boonManager;
+
+    public int rerollsPerShop = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //FOR TESTING
         FBPP.SetInt("rerollPrice", 50);
+        boonManager = GameController.boonManager;
         rerollPrice = FBPP.GetInt("rerollPrice", startingRerollPrice);
         priceText.text = rerollPrice.ToString();
         shopManager = GameController.shopManager;
@@ -42,23 +46,36 @@ public class RerollManager : MonoBehaviour
     }
     public void Reroll()
     {
-        if (!canReroll)
+        if (!canReroll || rerollsPerShop <= 0)
         {
             return;
         }
-        shopManager.InitializeAllUpgrades();
 
-        transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
-        canReroll = false;
+        rerollsPerShop--;
+        shopManager.InitializeAllUpgrades();
         GameController.player.playerCurrency -= rerollPrice;
         shopManager.UpdateCashText();
         rerollPrice = Mathf.RoundToInt(rerollPrice * rerollMultIncrease);
         FBPP.SetInt("rerollPrice", rerollPrice);
+        if (rerollsPerShop<=0)
+        {
+            transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
+            canReroll = false;
+        }
+        else
+        {
+            priceText.text = rerollPrice.ToString();
+        }
         
     }
 
     public void Reset()
     {
+        rerollsPerShop = 1;
+        if (boonManager.ContainsBoon("FreshStock"))
+        {
+            rerollsPerShop = 2;
+        }
         transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0);
         canReroll = true;
         priceText.text = rerollPrice.ToString();
