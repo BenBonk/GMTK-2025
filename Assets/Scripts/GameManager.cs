@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     public GameObject shopButtonBlocker;
 
     public int endDayCash = 50;
+    private int cashInterest = 0;
     private bool endlessSelected = false;
     
 
@@ -156,6 +157,11 @@ public class GameManager : MonoBehaviour
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
             endDayCash += 15;
+        }
+
+        if (boonManager.ContainsBoon("CoinPouch"))
+        {
+            cashInterest = Mathf.RoundToInt(((int)player.playerCurrency + endDayCash) * .05f);
         }
         pointsThisRound = 0;
         UpdateUI();
@@ -276,11 +282,11 @@ public class GameManager : MonoBehaviour
         // Second message
         localization.localPointsString.Arguments[0] = pointsThisRound;
         localization.localPointsString.RefreshString();
-        localization.localDayComplete.Arguments[0] = endDayCash;
+        localization.localDayComplete.Arguments[0] = endDayCash+cashInterest;
         localization.localDayComplete.RefreshString();
         DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");
-        GameController.player.playerCurrency += endDayCash;
+        GameController.player.playerCurrency += (endDayCash+cashInterest);
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
         winPanel.gameObject.SetActive(false);
         pauseMenu.canOpenClose = false;
@@ -288,6 +294,8 @@ public class GameManager : MonoBehaviour
         {
             endDayCash -= 15;
         }
+
+        cashInterest = 0;
 
         predatorRoundFrequency = 3;
         if (boonManager.ContainsBoon("PredatorPurge"))
