@@ -288,6 +288,12 @@ public class GameManager : MonoBehaviour
         {
             endDayCash -= 15;
         }
+
+        predatorRoundFrequency = 3;
+        if (boonManager.ContainsBoon("PredatorPurge"))
+        {
+            predatorRoundFrequency = 5;
+        }
         // After both messages
         if (roundNumber % predatorRoundFrequency == 0)
         {
