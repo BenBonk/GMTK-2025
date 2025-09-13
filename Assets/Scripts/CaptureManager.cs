@@ -15,6 +15,7 @@ public class CaptureManager : MonoBehaviour
     private double currencyBonus = 0;
     private double currencyMult = 1;
     [HideInInspector]public bool firstCapture;
+    public float herdPointMultBonus;
 
     private void Start()
     {
@@ -85,10 +86,10 @@ public class CaptureManager : MonoBehaviour
         {
             gameManager.roundDuration += 0.5f;
         }
-
+        
         if (totalNonPredatorCount > 1)
         {
-            pointMult *= 1 + (0.1f * animalsCaptured.Length);
+            pointMult *= 1 + (herdPointMultBonus * animalsCaptured.Length);
             int groupsOf3 = totalNonPredatorCount / 3;
             currencyBonus += groupsOf3;
         }

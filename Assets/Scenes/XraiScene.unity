@@ -36615,6 +36615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstCapture: 0
+  herdPointMultBonus: 0.1
 --- !u!4 &1781559414
 Transform:
   m_ObjectHideFlags: 0
@@ -42598,7 +42599,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   boonsInDeck:
-  - {fileID: 11400000, guid: 813fb77ca38b6124783ff00435cb83b1, type: 2}
+  - {fileID: 11400000, guid: ad965be32e71c424ea8e48f1765bba92, type: 2}
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0

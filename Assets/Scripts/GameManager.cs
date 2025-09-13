@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Color timerWarningColor = Color.red;
 
     public GameObject shopButtonBlocker;
+    private CaptureManager captureManager;
 
     public int endDayCash = 50;
     private int cashInterest = 0;
@@ -106,6 +107,7 @@ public class GameManager : MonoBehaviour
         saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
         boonManager = GameController.boonManager;
+        captureManager = GameController.captureManager;
         saveManager.LoadGameData();
         ApplyHarvestLevel();
         if (isTesting)
@@ -157,6 +159,11 @@ public class GameManager : MonoBehaviour
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
             endDayCash += 15;
+        }
+        captureManager.herdPointMultBonus = 0.1f;
+        if (boonManager.ContainsBoon("HerdMentality"))
+        {
+            captureManager.herdPointMultBonus = .2f;
         }
 
         if (boonManager.ContainsBoon("CoinPouch"))
@@ -295,7 +302,7 @@ public class GameManager : MonoBehaviour
             endDayCash -= 15;
         }
 
-        GameController.captureManager.firstCapture = false;
+        captureManager.firstCapture = false;
         cashInterest = 0;
 
         predatorRoundFrequency = 3;
