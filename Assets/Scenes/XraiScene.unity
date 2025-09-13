@@ -11147,6 +11147,15 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  fairyBottle:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 9587820992790528
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   closeCall: 
   timesUp: 
   dayComplete: 
@@ -27701,6 +27710,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   schemeManager: {fileID: 2082549783}
+  fairyBottleInstance: {fileID: 11400000, guid: 2e3525a5b1c76ca468ae4964bfb81180, type: 2}
   references:
     version: 2
     RefIds: []
@@ -42599,7 +42609,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   boonsInDeck:
-  - {fileID: 11400000, guid: ad965be32e71c424ea8e48f1765bba92, type: 2}
+  - {fileID: 11400000, guid: 2e3525a5b1c76ca468ae4964bfb81180, type: 2}
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0

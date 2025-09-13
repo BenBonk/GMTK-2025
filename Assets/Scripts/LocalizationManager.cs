@@ -16,6 +16,7 @@ public class LocalizationManager : MonoBehaviour
     public LocalizedString localDeathRound;
     public LocalizedString localWinRound;
     public LocalizedString localRound;
+    public LocalizedString fairyBottle;
 
     [HideInInspector] public string closeCall;
     [HideInInspector] public string timesUp;

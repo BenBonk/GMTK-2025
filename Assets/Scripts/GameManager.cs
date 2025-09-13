@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
     private SaveManager saveManager;
     private PauseMenu pauseMenu;
     public SchemeManager schemeManager;
+    public Boon fairyBottleInstance;
     private void Start()
     {
         pauseMenu = GameController.pauseMenu;
@@ -215,7 +216,7 @@ public class GameManager : MonoBehaviour
 
         //UNCOMMENT BELOW FOR PROD
 
-        if (pointsThisRound < GetPointsRequirement())
+        if (pointsThisRound < GetPointsRequirement() )
         {
             //GameOver
             saveManager.ClearGame();
@@ -239,12 +240,20 @@ public class GameManager : MonoBehaviour
     IEnumerator CheckIfStillDead()
     {
         yield return new WaitForSeconds(2);
-        if (pointsThisRound >= GetPointsRequirement())
+        if (pointsThisRound >= GetPointsRequirement() || boonManager.ContainsBoon("FairyBottle"))
         {
             deathPanel.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
             GameController.predatorSelect.darkCover.DOFade(0f, 0.5f);
             yield return new WaitForSeconds(.5f);
-            DisplayPopupWord(localization.closeCall, .3f, .5f, false);
+            if (boonManager.ContainsBoon("FairyBottle"))
+            {
+                DisplayPopupWord(localization.fairyBottle.GetLocalizedString(), .3f, 1f, false);
+                boonManager.RemoveBoon(fairyBottleInstance);
+            }
+            else
+            {
+                DisplayPopupWord(localization.closeCall, .3f, .5f, false);   
+            }
             //think we need some sfx here
             FBPP.SetInt("closeCalls", FBPP.GetInt("closeCalls")+1);
             yield return new WaitForSeconds(1.5f);

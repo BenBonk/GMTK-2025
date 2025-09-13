@@ -991,6 +991,10 @@ MonoBehaviour:
     m_Key: boons.veteranFarmhandDesc
     m_Metadata:
       m_Items: []
+  - m_Id: 9587820992790528
+    m_Key: boons.fairyBottleSaved
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

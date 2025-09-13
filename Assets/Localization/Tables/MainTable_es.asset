@@ -955,7 +955,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Loading...
+    m_Localized: El primer lazo de cada ronda vale el doble de puntos y dinero en
+      efectivo.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -972,7 +973,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Otorga 2 oportunidades de cambio de tirada por tienda.
+    m_Localized: "Otorga 2 oportunidades de renovaci\xF3n por tienda."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -1034,6 +1035,10 @@ MonoBehaviour:
   - m_Id: 8933137060069377
     m_Localized: "Las gallinas ahora pueden poner huevos que otorgan x1,5 puntos
       de multiplicaci\xF3n cuando se les lanza un lazo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9587820992790528
+    m_Localized: "\xA1Salvado!"
     m_Metadata:
       m_Items: []
   references:

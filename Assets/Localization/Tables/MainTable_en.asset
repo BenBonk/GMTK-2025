@@ -1021,6 +1021,10 @@ MonoBehaviour:
     m_Localized: 'Chickens can now lay eggs which give x1.5 points mult when lassoed '
     m_Metadata:
       m_Items: []
+  - m_Id: 9587820992790528
+    m_Localized: Saved!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -744,7 +744,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: "D\u0142ugo\u015B\u0107 rundy:"
+    m_Localized: "D\u0142ugo\u015B\u0107 ca\u0142kowita:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -978,7 +978,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Loading...
+    m_Localized: "Pierwsze lasso w ka\u017Cdej rundzie jest warte podw\xF3jne punkty
+      i got\xF3wk\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -1056,6 +1057,10 @@ MonoBehaviour:
   - m_Id: 8933137060069377
     m_Localized: "Kury mog\u0105 teraz znosi\u0107 jaja, kt\xF3re daj\u0105 mno\u017Cnik
       x1,5 po z\u0142apaniu na lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9587820992790528
+    m_Localized: Zapisane!
     m_Metadata:
       m_Items: []
   references:

@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Goldesel
+    m_Localized: Cash Cow
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein
+      mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -899,7 +899,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "W\xF6lfe laichen jetzt in Rudeln von zwei oder drei"
+    m_Localized: "W\xF6lfe vermehren sich jetzt in Rudeln von zwei oder drei"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -964,7 +964,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Loading...
+    m_Localized: Das erste Lasso jeder Runde bringt die doppelte Punktzahl und Bargeld
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -1042,6 +1042,10 @@ MonoBehaviour:
   - m_Id: 8933137060069377
     m_Localized: "H\xFChner k\xF6nnen jetzt Eier legen, die beim Einfangen mit dem
       Lasso 1,5 Punkte bringen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9587820992790528
+    m_Localized: Gespeichert!
     m_Metadata:
       m_Items: []
   references:

@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -722,7 +722,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -884,7 +884,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Branco di lupi
+    m_Localized: branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -952,7 +952,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Loading...
+    m_Localized: Il primo lazo di ogni round vale il doppio dei punti e denaro
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -1031,6 +1031,10 @@ MonoBehaviour:
   - m_Id: 8933137060069377
     m_Localized: Le galline ora possono deporre uova che danno x1,5 punti moltiplicati
       quando vengono catturate con il lazo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9587820992790528
+    m_Localized: Salvato!
     m_Metadata:
       m_Items: []
   references:

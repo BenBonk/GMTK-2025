@@ -813,7 +813,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607690
     m_Localized: "Les chiens de berger chassent les pr\xE9dateurs. Ils valent cinq
-      fois plus cher lorsqu'ils sont pris au pi\xE8ge d'un pr\xE9dateur."
+      fois plus cher lorsqu'ils sont pris au lasso avec un pr\xE9dateur."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -960,7 +960,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Loading...
+    m_Localized: Le premier lasso de chaque tour vaut le double de points et d'argent
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -1007,7 +1007,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
-    m_Localized: Copains pointus
+    m_Localized: Pointy Pals
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802023
@@ -1039,6 +1039,10 @@ MonoBehaviour:
   - m_Id: 8933137060069377
     m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui rapportent
       x1,5 points lorsqu'elles sont captur\xE9es au lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9587820992790528
+    m_Localized: "Sauv\xE9!"
     m_Metadata:
       m_Items: []
   references:

@@ -193,7 +193,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: Baaaa!
+    m_Localized: Baaaaa!
     m_Metadata:
       m_Items: []
   - m_Id: 42
@@ -234,7 +234,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: Contando Ovelhas
+    m_Localized: Contando ovelhas
     m_Metadata:
       m_Items: []
   - m_Id: 52
@@ -953,7 +953,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Loading...
+    m_Localized: "O primeiro la\xE7o de cada rodada vale o dobro de pontos e dinheiro"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -1031,7 +1031,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "As galinhas agora podem botar ovos que d\xE3o x1,5 pontos de multiplica\xE7\xE3o
-      quando la\xE7adas"
+      quando la\xE7ados"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9587820992790528
+    m_Localized: Salvo!
     m_Metadata:
       m_Items: []
   references:
