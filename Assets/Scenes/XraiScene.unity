@@ -42596,7 +42596,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   boonsInDeck:
-  - {fileID: 11400000, guid: f2b1fa4d8ef87e44187ea65a65893990, type: 2}
+  - {fileID: 11400000, guid: 9f910c08119327242801306e022185da, type: 2}
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0
