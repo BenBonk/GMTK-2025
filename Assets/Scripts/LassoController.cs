@@ -603,6 +603,18 @@ public class LassoController : MonoBehaviour
             }
         }
 
+        var eggs = GameObject.FindGameObjectsWithTag("ChickenEgg");
+        foreach (var egg in eggs)
+        {
+            var col = egg.GetComponent<Collider2D>();
+            Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)egg.transform.position;
+
+            if (IsPointInPolygon(point, rawPoints))
+            {
+                list.Add(egg.gameObject);
+            }
+        }
+
         return list;
     }
 

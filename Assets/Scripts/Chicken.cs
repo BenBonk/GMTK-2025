@@ -20,6 +20,7 @@ public class Chicken : Animal
 
     private int movesCompleted = 0;
     private bool exiting = false;
+    public GameObject chickenEgg;
 
     public override void Start()
     {
@@ -104,6 +105,11 @@ public class Chicken : Animal
         moveDirection = (target - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, target);
         moveTimer = distance / speed;
+
+        if (legendary && Random.Range(0,3)==0)
+        {
+            Instantiate(chickenEgg,transform.position, Quaternion.identity);
+        }
     }
 
     private void BeginExit()
