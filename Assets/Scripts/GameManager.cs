@@ -313,6 +313,7 @@ public class GameManager : MonoBehaviour
 
         captureManager.firstCapture = false;
         cashInterest = 0;
+        captureManager.mootiplierMult = 0;
 
         predatorRoundFrequency = 3;
         if (boonManager.ContainsBoon("PredatorPurge"))

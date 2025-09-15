@@ -14,8 +14,9 @@ public class CaptureManager : MonoBehaviour
     private double pointMult = 1;
     private double currencyBonus = 0;
     private double currencyMult = 1;
-    [HideInInspector]public bool firstCapture;
+    [HideInInspector] public bool firstCapture;
     public float herdPointMultBonus;
+    [HideInInspector] public float mootiplierMult=0;
 
     private void Start()
     {
@@ -93,6 +94,31 @@ public class CaptureManager : MonoBehaviour
             int groupsOf3 = totalNonPredatorCount / 3;
             currencyBonus += groupsOf3;
         }
+        
+        if (boonManager.ContainsBoon("Mootiplier"))
+        {
+            int cowCount = 0;
+            foreach (var animal in animalsCaptured)
+            {
+                if (animal.isPredator)
+                {
+                    mootiplierMult = 0;
+                }
+                if (animal.animalData.name=="Cow")
+                {
+                    cowCount++;
+                }
+            }
+            if (cowCount == 0)
+            {
+                mootiplierMult = 0;
+            }
+            else
+            {
+                mootiplierMult += (.25f*cowCount);
+            }
+        }
+        pointMult += mootiplierMult;
 
         if (!firstCapture && boonManager.ContainsBoon("EarlyBird"))
         {
