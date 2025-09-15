@@ -148,7 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalData: {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-  legendaryBoon: {fileID: 11400000, guid: 124721a69160a9c4fa3232bbd08df274, type: 2}
   isPredator: 0
   speed: 2
   currentSpeed: 0
@@ -162,3 +161,4 @@ MonoBehaviour:
   legendary: 0
   waveAmplitude: 1
   waveFrequency: 0.4
+  pigWithHat: {fileID: 2630175251441690724, guid: a433732e46a29dd40833dc8bf91451af, type: 3}

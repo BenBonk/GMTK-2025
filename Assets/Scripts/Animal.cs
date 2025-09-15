@@ -57,6 +57,7 @@ public class Animal : MonoBehaviour
             if (GameController.boonManager.ContainsBoon(animalData.legendaryBoon.name))
             {
                 legendary = true;
+                ActivateLegendary();
             }
         }
         catch (Exception e)
@@ -74,6 +75,11 @@ public class Animal : MonoBehaviour
             transform.position = startPos;
         }
         currentSpeed = speed;
+    }
+
+    public virtual void ActivateLegendary()
+    {
+        
     }
 
     public void Move()

@@ -7,6 +7,16 @@ public class Pig : Animal
 
     private bool initialized = false;
     private float waveProgress = 0f;
+    public Sprite pigWithHat;
+    public override void ActivateLegendary()
+    {
+        if (Random.Range(0, 3) == 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = pigWithHat;
+            gameObject.tag = "PigWithHat";
+        }
+    }
+        
     protected override Vector3 ComputeMove()
     {
         if (!initialized)
@@ -26,7 +36,7 @@ public class Pig : Animal
         float verticalOffset = externalOffset.y;
         baseMove.y = startY + yOffset + verticalOffset;
 
-        // Zero out the vertical offset so it isn’t double-counted later
+        // Zero out the vertical offset so it isnâ€™t double-counted later
         externalOffset.y = 0f;
 
         return baseMove;

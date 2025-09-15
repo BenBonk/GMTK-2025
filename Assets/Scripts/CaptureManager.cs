@@ -76,7 +76,7 @@ public class CaptureManager : MonoBehaviour
             }
             pointBonus += (5 * uniqueAnimalNames.Count);
         }
-        
+
         if (animalsCaptured.Length > FBPP.GetInt("largestCapture"))
         {
             FBPP.SetInt("largestCapture", animalsCaptured.Length);
@@ -121,9 +121,11 @@ public class CaptureManager : MonoBehaviour
     {
         int bonus = 0;
         if (boonManager.ContainsBoon("VeteranFarmhand"))
-        {
             bonus = 2;
-        }
+
+        if (capturedAnimal.gameObject.CompareTag("PigWithHat"))
+            currencyBonus += 25;
+        
         currencyBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.animalData.currencyToGive;
         currencyMult *= (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;
         pointBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.animalData.pointsToGive;
