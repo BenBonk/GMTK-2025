@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private CameraController cameraController;
     [SerializeField] private SpriteRenderer barn;
-    [SerializeField] private Transform barnCameraTarget;
+    [SerializeField] private RectTransform barnCameraTarget;
     [SerializeField] private Animator barnAnimator;
     private BoonManager boonManager;
     private LocalizationManager localization;
@@ -340,8 +340,8 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
-        cameraController.AnimateToTarget(
-            barnCameraTarget.transform,
+        cameraController.AnimateToRect(
+            barnCameraTarget,
             delay: .5f,
         onZoomMidpoint: () =>
         {

@@ -27,7 +27,7 @@ public class TutorialManager : MonoBehaviour
 
     [SerializeField] private CameraController cameraController;
     [SerializeField] private SpriteRenderer barn;
-    [SerializeField] private Transform barnCameraTarget;
+    [SerializeField] private RectTransform barnCameraTarget;
     [SerializeField] private Animator barnAnimator;
 
 
@@ -168,8 +168,8 @@ public class TutorialManager : MonoBehaviour
 
     public void GoToShop()
     {
-        cameraController.AnimateToTarget(
-            barnCameraTarget.transform,
+        cameraController.AnimateToRect(
+            barnCameraTarget,
             delay: 0.1f,
         onZoomMidpoint: () =>
         {

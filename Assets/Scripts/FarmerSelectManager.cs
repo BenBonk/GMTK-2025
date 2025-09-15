@@ -28,7 +28,7 @@ public class FarmerSelectManager : MonoBehaviour
         if (!startGameButton.activeInHierarchy)
         {
             startGameButton.SetActive(true);
-            startGameButton.GetComponent<RectTransform>().DOAnchorPosY(14f, 0.5f).SetEase(Ease.InOutBack).SetDelay(0.25f);
+            startGameButton.GetComponent<RectTransform>().DOAnchorPosY(0f, 0.5f).SetEase(Ease.InOutBack).SetDelay(0.25f);
         }
     }
 }
