@@ -1,10 +1,20 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AnimalSpawner : MonoBehaviour
 {
     public float spawnRate; // Time in seconds between spawns
     private float timeSinceLastSpawn = 0f;
+
+    private BoonManager boonManager;
+
+    private void Start()
+    {
+        boonManager = GameController.boonManager;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -18,7 +28,9 @@ public class AnimalSpawner : MonoBehaviour
 
     private void SpawnRandomAnimal()
     {
-        GameObject animal = Instantiate(GameController.player.animalsInDeck[Random.Range(0,GameController.player.animalsInDeck.Count)].animalPrefab);
+        var selectedAnimal =
+            GameController.player.animalsInDeck[Random.Range(0, GameController.player.animalsInDeck.Count)];
+        GameObject animal = Instantiate(selectedAnimal.animalPrefab);
         float topBuffer = 0.25f;
         float bottomBuffer = 0.25f;
         
@@ -41,5 +53,13 @@ public class AnimalSpawner : MonoBehaviour
         float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x + sr.bounds.extents.x;
 
         animal.transform.position = new Vector3(rightEdgeX, randomY, 0f);
+        if (boonManager.ContainsBoon("Wolfpack") && selectedAnimal.name=="Wolf")
+        {
+            Instantiate(selectedAnimal.animalPrefab, new Vector3(rightEdgeX+Random.Range(2f,4f), randomY+Random.Range(0.5f, 1.5f), 0f), Quaternion.identity);
+            if (Random.Range(0,2)==0)
+            {
+                Instantiate(selectedAnimal.animalPrefab, new Vector3(rightEdgeX+Random.Range(2f,4f), randomY+Random.Range(-1.5f, 0.5f), 0f), Quaternion.identity);
+            }
+        }
     }
 }
