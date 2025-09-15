@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System;
+using System.Collections;
 using UnityEngine;
 using static Unity.VisualScripting.Metadata;
 using DG.Tweening;
@@ -15,8 +16,9 @@ public class StartScreenManager : MonoBehaviour
     public GameObject title;
     public GameObject farmerSelect;
 
-    private void Start()
+    private IEnumerator Start()
     {
+            
         InvokeRepeating("SpawnAnimal", 1,Random.Range(0.8f, 1.5f));
         AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,true);
         if (GameController.saveManager.PlayerHasSave())
@@ -26,6 +28,12 @@ public class StartScreenManager : MonoBehaviour
         else
         {
             noSaveData.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(5);
+        if (!GameController.gameManager.roundCompleted)
+        {
+            GameController.wishlistPanel.Open();   
         }
     }
 
@@ -54,5 +62,4 @@ public class StartScreenManager : MonoBehaviour
         GameController.gameManager.roundCompleted = true;
         CancelInvoke("SpawnAnimal");
     }
-
 }

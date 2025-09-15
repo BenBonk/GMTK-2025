@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+ Esp\xE8ces\_: {0}"
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Pr\xE9dateur. Chasse les non-pr\xE9dateurs."
+    m_Localized: "Pr\xE9dateur. Poursuit les non-pr\xE9dateurs."
     m_Metadata:
       m_Items: []
   - m_Id: 41
@@ -778,7 +778,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Possibilit\xE9 pour un mouton de devenir un mouton noir, en red\xE9clenchant
+    m_Localized: "Possibilit\xE9 pour un mouton d'\xEAtre un mouton noir, en red\xE9clenchant
       votre lasso une fois lorsqu'il est pris au lasso"
     m_Metadata:
       m_Items: []
@@ -1007,7 +1007,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
-    m_Localized: Pointy Pals
+    m_Localized: Copains pointus
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802023
@@ -1043,6 +1043,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9587820992790528
     m_Localized: "Sauv\xE9!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423383060480
+    m_Localized: "Ajoutez-les \xE0 votre liste de souhaits maintenant\_!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169344
+    m_Localized: "\xC0 venir dans le jeu complet :"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169345
+    m_Localized: "20 nouveaux modes de difficult\xE9\_!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169346
+    m_Localized: 6 nouveaux animaux !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169347
+    m_Localized: 7 nouveaux agriculteurs !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169348
+    m_Localized: Encore plus d'avantages !
     m_Metadata:
       m_Items: []
   references:

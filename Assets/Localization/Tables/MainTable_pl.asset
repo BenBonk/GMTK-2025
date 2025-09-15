@@ -744,7 +744,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: "D\u0142ugo\u015B\u0107 ca\u0142kowita:"
+    m_Localized: "D\u0142ugo\u015B\u0107 rundy:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -1013,8 +1013,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
-      w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% premii punktowej za ka\u017Cdego drapie\u017Cnika w
+      lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1043,7 +1043,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-Pracownik Rolny
+    m_Localized: Weteran-robotnik
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
@@ -1061,6 +1061,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9587820992790528
     m_Localized: Zapisane!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423383060480
+    m_Localized: "Dodaj do listy \u017Cycze\u0144 ju\u017C teraz!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169344
+    m_Localized: "W pe\u0142nej wersji gry:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169345
+    m_Localized: "20 nowych poziom\xF3w trudno\u015Bci!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169346
+    m_Localized: "6 nowych zwierz\u0105t!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169347
+    m_Localized: "7 nowych rolnik\xF3w!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169348
+    m_Localized: "Mn\xF3stwo dodatkowych korzy\u015Bci!"
     m_Metadata:
       m_Items: []
   references:

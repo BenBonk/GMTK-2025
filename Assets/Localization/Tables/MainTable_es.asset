@@ -973,7 +973,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Otorga 2 oportunidades de renovaci\xF3n por tienda."
+    m_Localized: Otorga 2 oportunidades de cambio de tirada por tienda.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -1039,6 +1039,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9587820992790528
     m_Localized: "\xA1Salvado!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423383060480
+    m_Localized: "\xA1Agrega tu lista de deseos ahora!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169344
+    m_Localized: 'Viene en juego completo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169345
+    m_Localized: "\xA120 nuevos modos de dificultad!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169346
+    m_Localized: "\xA16 nuevos animales!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169347
+    m_Localized: "\xA17 nuevos agricultores!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169348
+    m_Localized: "\xA1Muchas m\xE1s ventajas!"
     m_Metadata:
       m_Items: []
   references:

@@ -116,7 +116,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22
     m_Localized: "Predador. Puxa predadores pr\xF3ximos em sua dire\xE7\xE3o. Imune
-      a efeitos de empurrar e puxar."
+      a efeitos de puxar e empurrar."
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: Baaaaa!
+    m_Localized: Baaaa!
     m_Metadata:
       m_Items: []
   - m_Id: 42
@@ -234,7 +234,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: Contando ovelhas
+    m_Localized: Contando Ovelhas
     m_Metadata:
       m_Items: []
   - m_Id: 52
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Tr\xEAs Porquinhos"
+    m_Localized: "Os Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -1031,11 +1031,35 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "As galinhas agora podem botar ovos que d\xE3o x1,5 pontos de multiplica\xE7\xE3o
-      quando la\xE7ados"
+      quando la\xE7adas"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
     m_Localized: Salvo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423383060480
+    m_Localized: Lista de desejos agora!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169344
+    m_Localized: 'Chegando no jogo completo:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169345
+    m_Localized: 20 novos modos de dificuldade!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169346
+    m_Localized: 6 novos animais!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169347
+    m_Localized: 7 novos fazendeiros!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169348
+    m_Localized: Muito mais vantagens!
     m_Metadata:
       m_Items: []
   references:

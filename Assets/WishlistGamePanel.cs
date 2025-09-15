@@ -46,4 +46,8 @@ public class WishlistGamePanel : MonoBehaviour
         canOpenClose = true;
         pauseMenu.canOpenClose = true;
     }
+    public void WishlistGame()
+    {
+        Application.OpenURL("https://store.steampowered.com/app/3974620/Wrangle_Ranch/");
+    }
 }
