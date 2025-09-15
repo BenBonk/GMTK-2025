@@ -3691,7 +3691,6 @@ GameObject:
   - component: {fileID: 557625535}
   - component: {fileID: 557625540}
   - component: {fileID: 557625539}
-  - component: {fileID: 557625538}
   - component: {fileID: 557625537}
   - component: {fileID: 557625536}
   - component: {fileID: 557625541}
@@ -3775,28 +3774,6 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
---- !u!95 &557625538
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557625534}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f571424119cd2da48ade6f91be9b3ed2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &557625539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3917,10 +3894,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.9960785, g: 0.7137255, b: 0.21568629, a: 1}
-    m_HighlightedColor: {r: 0.9294118, g: 0.24313727, b: 0.27450982, a: 1}
-    m_PressedColor: {r: 0.61960787, g: 0.14509805, b: 0.19215688, a: 1}
-    m_SelectedColor: {r: 0.9294118, g: 0.24313727, b: 0.27450982, a: 1}
+    m_NormalColor: {r: 0.9960785, g: 0.47450984, b: 0.5019608, a: 1}
+    m_HighlightedColor: {r: 0.6901961, g: 0.3019608, b: 0.52156866, a: 1}
+    m_PressedColor: {r: 0.40784317, g: 0.21176472, b: 0.4156863, a: 1}
+    m_SelectedColor: {r: 0.6901961, g: 0.3019608, b: 0.52156866, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
