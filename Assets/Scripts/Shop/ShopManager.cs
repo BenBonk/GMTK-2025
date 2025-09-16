@@ -156,11 +156,11 @@ public class ShopManager : MonoBehaviour
         if (deckOpen)
         {
             deckPanel.gameObject.SetActive(true);
-            deckPanel.DOAnchorPosX(-1059, .35f).SetEase(Ease.OutBack);
+            deckPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack);
         }
         else
         {
-            deckPanel.DOAnchorPosX(-1469, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>deckPanel.gameObject.SetActive(false));
+            deckPanel.DOAnchorPosX(-415, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>deckPanel.gameObject.SetActive(false));
         }
     }
 
