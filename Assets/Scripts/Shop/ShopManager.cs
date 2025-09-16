@@ -170,11 +170,11 @@ public class ShopManager : MonoBehaviour
         if (synergiesOpen)
         {
             synergiesVisual.SetActive(true);
-            synergiesPanel.DOAnchorPosX(1148, .35f).SetEase(Ease.OutBack);
+            synergiesPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack);
         }
         else
         {
-            synergiesPanel.DOAnchorPosX(1577, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>synergiesVisual.SetActive(false));
+            synergiesPanel.DOAnchorPosX(415, .25f).SetEase(Ease.InOutQuad).OnComplete(() => deckPanel.gameObject.SetActive(false));
         }
     }
 
