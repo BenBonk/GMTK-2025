@@ -995,6 +995,30 @@ MonoBehaviour:
     m_Key: boons.fairyBottleSaved
     m_Metadata:
       m_Items: []
+  - m_Id: 10403423383060480
+    m_Key: wishlist.wishlistNow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169344
+    m_Key: wishlist.coming
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169345
+    m_Key: wishlist.difficultyModes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169346
+    m_Key: wishlist.newAnimals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169347
+    m_Key: wishlist.newFarmers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169348
+    m_Key: wishlist.newBoons
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

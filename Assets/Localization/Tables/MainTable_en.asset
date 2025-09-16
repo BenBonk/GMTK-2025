@@ -1025,6 +1025,30 @@ MonoBehaviour:
     m_Localized: Saved!
     m_Metadata:
       m_Items: []
+  - m_Id: 10403423383060480
+    m_Localized: Wishlist Now!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169344
+    m_Localized: 'Coming in full game:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169345
+    m_Localized: 20 New Difficulty Modes!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169346
+    m_Localized: 6 New Animals!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169347
+    m_Localized: 7 New Farmers!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10403423450169348
+    m_Localized: Loads more boons!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
