@@ -25,12 +25,34 @@ public class CaptureManager : MonoBehaviour
         player = GameController.player;
     }
 
-    public (double, double, double, double) MakeCapture(Animal[] animalsCaptured)
+    public (double, double, double, double) MakeCapture(GameObject[] objectsCaptured)
     {
         pointBonus = 0;
         pointMult = 1;
         currencyBonus = 0;
         currencyMult = 1;
+
+        List<Animal> animalsCaptured = new List<Animal>();
+        List<Lassoable> lassoablesCaptured = new List<Lassoable>();
+        foreach (var item in objectsCaptured)
+        {
+            if (item.CompareTag("NonAnimalLassoable"))
+            {
+                Lassoable lassoable = item.GetComponent<Lassoable>();
+                if (lassoable != null)
+                {
+                    lassoablesCaptured.Add(lassoable);
+                }
+            }
+            else
+            {
+                Animal animal = item.GetComponent<Animal>();
+                if (animal != null)
+                {
+                    animalsCaptured.Add(animal);
+                }
+            }
+        }
 
         var capturedCounts = GetNameCounts(animalsCaptured);
 
@@ -78,19 +100,19 @@ public class CaptureManager : MonoBehaviour
             pointBonus += (5 * uniqueAnimalNames.Count);
         }
 
-        if (animalsCaptured.Length > FBPP.GetInt("largestCapture"))
+        if (animalsCaptured.Count > FBPP.GetInt("largestCapture"))
         {
-            FBPP.SetInt("largestCapture", animalsCaptured.Length);
+            FBPP.SetInt("largestCapture", animalsCaptured.Count);
         }
 
-        if (animalsCaptured.Length>0 && boonManager.ContainsBoon("CaptureClock"))
+        if (animalsCaptured.Count >0 && boonManager.ContainsBoon("CaptureClock"))
         {
             gameManager.roundDuration += 0.5f;
         }
         
         if (totalNonPredatorCount > 1)
         {
-            pointMult *= 1 + (herdPointMultBonus * animalsCaptured.Length);
+            pointMult *= 1 + (herdPointMultBonus * animalsCaptured.Count);
             int groupsOf3 = totalNonPredatorCount / 3;
             currencyBonus += groupsOf3;
         }

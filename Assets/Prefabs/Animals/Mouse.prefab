@@ -158,6 +158,7 @@ MonoBehaviour:
   bottomLimitY: 0
   tiltFrequency: 11
   maxTiltAmplitude: 10
+  legendary: 0
   screenEdgePadding: 0.25
   arrivalThreshold: 0.05
   acceleration: 0.5

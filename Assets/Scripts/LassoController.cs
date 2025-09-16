@@ -344,7 +344,7 @@ public class LassoController : MonoBehaviour
             .SetEase(Ease.InOutCubic)
             .OnComplete(() =>
             {
-                var captureResult = GameController.captureManager.MakeCapture(lassoedAnimals.ToArray());
+                var captureResult = GameController.captureManager.MakeCapture(lassoedObjects.ToArray());
                 Destroy(group);
                 ShowCaptureFeedback(captureResult);
             });

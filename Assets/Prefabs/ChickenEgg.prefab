@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1131875474210646395}
   - component: {fileID: 3399065950325804166}
   - component: {fileID: 3426447474629447145}
+  - component: {fileID: -3538488706717729117}
   m_Layer: 0
   m_Name: ChickenEgg
-  m_TagString: ChickenEgg
+  m_TagString: NonAnimalLassoable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,3 +135,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.375, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &-3538488706717729117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465896840286953389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8728edf3acbf1140a2445b55e14c471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsToGive: 0
+  pointsMultToGive: 1.5
+  currencyToGive: 0
+  currencyMultToGive: 1

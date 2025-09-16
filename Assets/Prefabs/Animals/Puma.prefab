@@ -158,6 +158,7 @@ MonoBehaviour:
   bottomLimitY: 0
   tiltFrequency: 3
   maxTiltAmplitude: 20
+  legendary: 0
   hopSpeed: 5
   hopHeight: 0.2
   hopDuration: 0.1

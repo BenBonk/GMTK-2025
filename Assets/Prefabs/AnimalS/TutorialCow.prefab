@@ -158,6 +158,7 @@ MonoBehaviour:
   bottomLimitY: 0
   tiltFrequency: 3.5
   maxTiltAmplitude: 6
+  legendary: 0
   minMoveDuration: 1.5
   maxMoveDuration: 3
   minPauseDuration: 0.5

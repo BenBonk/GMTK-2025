@@ -148,10 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalData: {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
-  currencyToGive: -10
-  pointsToGive: -10
-  currencyMultToGive: 1
-  pointsMultToGive: 1
   isPredator: 1
   speed: 2.5
   currentSpeed: 0
@@ -162,6 +158,7 @@ MonoBehaviour:
   bottomLimitY: 0
   tiltFrequency: 5
   maxTiltAmplitude: 4
+  legendary: 0
   baseAmplitude: 1
   baseFrequency: 0.1
   amplitudeVariation: 0.75
