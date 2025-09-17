@@ -40,7 +40,7 @@ public class Animal : MonoBehaviour
     private Vector3 previousPosition;
     public float actualSpeed { get; private set; } // total movement speed
     public bool legendary;
-
+    [HideInInspector] public int bonusPoints;
     protected virtual void Awake()
     {
         SetVerticalLimits();

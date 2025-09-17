@@ -178,6 +178,7 @@ public class CaptureManager : MonoBehaviour
         currencyMult *= (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;
         pointBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.animalData.pointsToGive;
         pointMult *= (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.animalData.pointsMultToGive;
+        pointBonus += capturedAnimal.bonusPoints;
         int numberAnimalsWrangled = FBPP.GetInt("numberAnimalsWrangled");
         FBPP.SetInt("numberAnimalsWrangled", numberAnimalsWrangled+1);
     }

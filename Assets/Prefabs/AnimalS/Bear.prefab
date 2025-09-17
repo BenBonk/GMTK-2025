@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6399998972165305901}
   - component: {fileID: 1338540220119750252}
   - component: {fileID: 5991392108353192311}
+  - component: {fileID: 553747372856575961}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -159,9 +160,33 @@ MonoBehaviour:
   tiltFrequency: 3
   maxTiltAmplitude: 8
   legendary: 0
+  bonusPoints: 0
   pauseDuration: 3.5
   attractionRadius: 4
   attractionStrength: 5.5
   acceleration: 0.5
   stopThreshold: 0.05
   decelerationDurationMultiplier: 1.8
+  anim: {fileID: 553747372856575961}
+--- !u!95 &553747372856575961
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086039005306102819}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 557613a222e0a4e42b4f02de6f18789f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

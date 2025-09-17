@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class Bear : Animal
@@ -22,6 +24,7 @@ public class Bear : Animal
     [Range(1f, 2f)] public float decelerationDurationMultiplier = 1.25f;
 
     public override bool IsRepelImmune => true;
+    public Animator anim;
 
     public override void Start()
     {
@@ -78,11 +81,30 @@ public class Bear : Animal
             pauseTimer = pauseDuration;
             currentSpeed = 0f;
             speedVelocity = 0f;
+            StartCoroutine(TryHibernate());
             return transform.position;
         }
 
         Vector3 step = moveDirection * currentSpeed * Time.deltaTime;
         return transform.position + step;
+    }
+
+    IEnumerator TryHibernate()
+    {
+        if (legendary && Random.Range(0,3)==0)
+        {
+            anim.SetTrigger("Sleep");
+            pauseTimer = Random.Range(5, 11);
+            int timesToLoop = Mathf.RoundToInt(pauseTimer);
+            int finalPointsToGive = Random.Range(1000, 2001);
+            float waitPerLoop = pauseTimer / timesToLoop;
+            for (int i = 0; i < timesToLoop; i++)
+            {
+                yield return new WaitForSeconds(waitPerLoop);
+                bonusPoints += finalPointsToGive / timesToLoop;
+            }
+            anim.SetTrigger("StopSleep");
+        }
     }
 
     private Vector3 PauseAtCenter()
