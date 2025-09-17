@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - SchemeDeco
-  - ChickenEgg
   - PigWithHat
+  - NonAnimalLassoable
   layers:
   - Default
   - TransparentFX

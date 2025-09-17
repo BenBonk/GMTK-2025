@@ -56,7 +56,7 @@ public class Wolf : Animal
 
         foreach (var a in allAnimals)
         {
-            if (a == this || a.isPredator || a.transform.position.x >= transform.position.x || a.CompareTag("ChickenEgg"))
+            if (a == this || a.isPredator || a.transform.position.x >= transform.position.x)
                 continue;
 
             float dist = Vector3.Distance(transform.position, a.transform.position);
