@@ -106,7 +106,7 @@ public class Chicken : Animal
         float distance = Vector3.Distance(transform.position, target);
         moveTimer = distance / speed;
 
-        if (legendary && Random.Range(0,3)==0)
+        if (legendary && Random.Range(0,4)==0)
         {
             Instantiate(chickenEgg,transform.position, Quaternion.identity);
         }

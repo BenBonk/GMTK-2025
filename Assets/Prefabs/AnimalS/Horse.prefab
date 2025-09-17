@@ -157,5 +157,13 @@ MonoBehaviour:
   topLimitY: 0
   bottomLimitY: 0
   tiltFrequency: 4
-  maxTiltAmplitude: 14
+  maxTiltAmplitude: 12
   legendary: 0
+  bonusPoints: 0
+  decelDistance: 1
+  StopOffsetMin: 1.5
+  StopOffsetMax: 3.5
+  smoothTime: 0.5
+  stopThreshold: 0.02
+  pauseAtEdge: 2.5
+  exitSpeedMultiplier: 1
