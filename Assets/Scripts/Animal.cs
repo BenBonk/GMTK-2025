@@ -76,11 +76,7 @@ public class Animal : MonoBehaviour
         }
         currentSpeed = speed;
     }
-
-    public virtual void ActivateLegendary()
-    {
-        
-    }
+    
 
     public void Move()
     {
@@ -208,6 +204,9 @@ public class Animal : MonoBehaviour
             }
         }
     }
-
+    public virtual void ActivateLegendary()
+    {
+        
+    }
 
 }

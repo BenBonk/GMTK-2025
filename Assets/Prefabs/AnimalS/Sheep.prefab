@@ -159,3 +159,5 @@ MonoBehaviour:
   tiltFrequency: 5
   maxTiltAmplitude: 4
   legendary: 0
+  bonusPoints: 0
+  blackSheep: {fileID: 21300000, guid: ce8b9758b0564774fa908221c104edc6, type: 3}
