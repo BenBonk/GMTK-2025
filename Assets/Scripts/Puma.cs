@@ -156,6 +156,12 @@ public class Puma : Animal
 
     protected override void ApplyRunTilt()
     {
+        if (forceExit || (GameController.gameManager != null && GameController.gameManager.roundCompleted))
+        {
+            base.ApplyRunTilt();
+            return;
+        }
+
         float desiredTilt = currentTilt;
 
         switch (phase)

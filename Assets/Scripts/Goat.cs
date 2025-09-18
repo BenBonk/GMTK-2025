@@ -22,6 +22,10 @@ public class Goat : Animal
     private float speedVelocity = 0f;
     private bool isPaused = false;
 
+    [Header("Predator Attraction")]
+    public float attractionRadius = 6f;     // how far the goat attracts predators
+    public float attractStickTime = 3f; //how long a predator is attracted
+
     public override void Start()
     {
         base.Start();
@@ -55,6 +59,7 @@ public class Goat : Animal
                 if (Mathf.Abs(currentSpeed) < stopThreshold)
                 {
                     isPaused = true;
+                    BroadcastPredatorAttraction();
                     stateTimer = Random.Range(minPauseDuration, maxPauseDuration);
                 }
             }
@@ -92,6 +97,29 @@ public class Goat : Animal
                 float finalSpeed = Mathf.Max(proposedSpeed, minSpeed);
 
                 other.currentSpeed = Mathf.Min(other.currentSpeed, finalSpeed);
+            }
+        }
+    }
+
+    private void BroadcastPredatorAttraction()
+    {
+        if (!legendary) return;
+
+        Animal[] all = FindObjectsOfType<Animal>();
+        Vector3 myPos = transform.position;
+        float r2 = attractionRadius * attractionRadius;
+
+        for (int i = 0; i < all.Length; i++)
+        {
+            var a = all[i];
+            if (a == null || a == this) continue;
+            if (!a.isPredator) continue;   // only predators get attracted
+            if (a.isLassoed) continue;
+
+            // inside radius? tag with an attraction target for a short time
+            if ((a.transform.position - myPos).sqrMagnitude <= r2)
+            {
+                a.SetAttractTarget(this, attractStickTime);
             }
         }
     }

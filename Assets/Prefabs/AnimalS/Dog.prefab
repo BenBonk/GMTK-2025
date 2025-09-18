@@ -159,9 +159,14 @@ MonoBehaviour:
   tiltFrequency: 5
   maxTiltAmplitude: 6
   legendary: 0
+  forceExit: 0
+  bonusPoints: 0
   zigZagAngle: 10
   zigZagDuration: 2
   pushRadius: 4
   pushStrength: 5
   xPushFactor: 0.1
   yPushFactor: 1
+  detectionRadius: 8
+  chaseRadius: 3
+  approachSteer: 0.75

@@ -32,7 +32,7 @@ public class Horse : Animal
 
     public override void ActivateLegendary()
     {
-        speed *= 0.4f;
+        speed *= 0.35f;
         currentSpeed = speed;
     }
 

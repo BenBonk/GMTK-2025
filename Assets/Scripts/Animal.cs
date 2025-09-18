@@ -40,6 +40,7 @@ public class Animal : MonoBehaviour
     private Vector3 previousPosition;
     public float actualSpeed { get; private set; } // total movement speed
     public bool legendary;
+    public bool forceExit = false;
     [HideInInspector] public int bonusPoints;
     protected virtual void Awake()
     {
@@ -82,15 +83,22 @@ public class Animal : MonoBehaviour
     {
         ApplyRepelFromNearbyAnimals();
 
+        overriddenByAttraction = false;
+
         Vector3 nextPos;
-        if (GameController.gameManager!= null && GameController.gameManager.roundCompleted)
+        if ((GameController.gameManager != null && GameController.gameManager.roundCompleted) || forceExit)
         {
             nextPos = LeaveScreen();
+        }
+        else if (TryPredatorAttractionOverride(out nextPos))
+        {
+            overriddenByAttraction = true; // for custom predator tilts to fall back to base tilt
         }
         else
         {
             nextPos = ComputeMove();
         }
+
         nextPos += externalOffset;
 
         nextPos.y = ClampY(nextPos.y);
@@ -204,6 +212,45 @@ public class Animal : MonoBehaviour
             }
         }
     }
+
+
+    //Attraction override
+    protected bool overriddenByAttraction = false;
+    protected Animal attractTarget = null;
+    protected float attractTTL = 0f;   // seconds remaining for this override
+    public void SetAttractTarget(Animal a, float durationSeconds)
+    {
+        attractTarget = a;
+        attractTTL = Mathf.Max(0f, durationSeconds);
+    }
+
+    /// If this animal is a predator and currently has a valid attraction target,
+    /// return a pursuit step toward that target and consume TTL.
+    protected virtual bool TryPredatorAttractionOverride(out Vector3 nextPos)
+    {
+        nextPos = transform.position;
+
+        if (!isPredator) return false;
+        if (attractTarget == null || attractTTL <= 0f) return false;
+
+        // If target got disabled/destroyed, clear override
+        if (!attractTarget.gameObject.activeInHierarchy || attractTarget.isLassoed)
+        {
+            attractTarget = null;
+            attractTTL = 0f;
+            return false;
+        }
+
+        Vector3 to = attractTarget.transform.position - transform.position;
+        if (to.sqrMagnitude > 0.000001f)
+        {
+            nextPos = transform.position + to.normalized * currentSpeed * Time.deltaTime;
+        }
+
+        attractTTL -= Time.deltaTime;
+        return true;
+    }
+
     public virtual void ActivateLegendary()
     {
         

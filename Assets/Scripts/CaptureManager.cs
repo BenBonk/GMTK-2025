@@ -109,29 +109,36 @@ public class CaptureManager : MonoBehaviour
         {
             gameManager.roundDuration += 0.5f;
         }
-        
+
         if (totalNonPredatorCount > 1)
         {
             pointMult *= 1 + (herdPointMultBonus * animalsCaptured.Count);
             int groupsOf3 = totalNonPredatorCount / 3;
             currencyBonus += groupsOf3;
         }
-        
+
+        bool hasPredator = false;
+        foreach (var animal in animalsCaptured)
+        {
+            if (animal.isPredator) { hasPredator = true; break; }
+        }
+
+        if (boonManager.ContainsBoon("GoodBoy"))
+        {
+            if (hasPredator) currencyMult *= 5f;
+        }
+
         if (boonManager.ContainsBoon("Mootiplier"))
         {
             int cowCount = 0;
             foreach (var animal in animalsCaptured)
             {
-                if (animal.isPredator)
-                {
-                    mootiplierMult = 0;
-                }
                 if (animal.animalData.name=="Cow")
                 {
                     cowCount++;
                 }
             }
-            if (cowCount == 0)
+            if (cowCount == 0 || hasPredator)
             {
                 mootiplierMult = 0;
             }

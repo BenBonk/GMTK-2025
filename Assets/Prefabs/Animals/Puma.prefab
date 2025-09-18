@@ -156,9 +156,11 @@ MonoBehaviour:
   startPos: {x: 0, y: 0, z: 0}
   topLimitY: 0
   bottomLimitY: 0
-  tiltFrequency: 3
-  maxTiltAmplitude: 20
+  tiltFrequency: 6
+  maxTiltAmplitude: 6
   legendary: 0
+  forceExit: 0
+  bonusPoints: 0
   hopSpeed: 5
   hopHeight: 0.2
   hopDuration: 0.1
