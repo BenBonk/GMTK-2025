@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112946
   - m_Id: 6
-    m_Localized: "DIA CONCLU\xCDDO! + {0} EM DINHEIRO!"
+    m_Localized: "DIA CONCLU\xCDDO! + {0} DINHEIRO!"
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -57,7 +57,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: POR UM ACASO!
+    m_Localized: POR UM PRAZER!
     m_Metadata:
       m_Items: []
   - m_Id: 9
@@ -116,7 +116,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22
     m_Localized: "Predador. Puxa predadores pr\xF3ximos em sua dire\xE7\xE3o. Imune
-      a efeitos de puxar e empurrar."
+      a efeitos de empurrar e puxar."
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -290,7 +290,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65
-    m_Localized: Hay There
+    m_Localized: "Feno l\xE1"
     m_Metadata:
       m_Items: []
   - m_Id: 66
@@ -307,7 +307,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 69
-    m_Localized: "Lobo solit\xE1rio"
+    m_Localized: "Lobo Solit\xE1rio"
     m_Metadata:
       m_Items: []
   - m_Id: 70
@@ -320,7 +320,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 72
     m_Localized: "La\xE7o: um grupo de animais contendo uma galinha, uma vaca, uma
-      cabra, um cavalo, um cachorro, uma ovelha e um porco"
+      cabra, um cavalo, um cachorro, uma ovelha e um porco."
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -372,7 +372,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 85
-    m_Localized: "Os Tr\xEAs Porquinhos"
+    m_Localized: "Tr\xEAs Porquinhos"
     m_Metadata:
       m_Items: []
   - m_Id: 86
@@ -425,8 +425,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: "Quando o dia termina, podemos voltar ao celeiro para gastar o dinheiro
-      que ganhamos com tanto esfor\xE7o!"
+    m_Localized: Quando o dia termina, podemos voltar ao celeiro para gastar nosso
+      dinheiro suado!
     m_Metadata:
       m_Items: []
   - m_Id: 98
@@ -571,7 +571,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
-    m_Localized: 'Total de Rerolls:'
+    m_Localized: "Total de Repeti\xE7\xF5es:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550209
@@ -663,7 +663,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206024
-    m_Localized: Janela
+    m_Localized: Janelado
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206025
@@ -835,8 +835,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Cada vaca capturada d\xE1 0,25x de multiplica\xE7\xE3o global,
-      reiniciando a cada rodada ou quando um predador \xE9 capturado"
+    m_Localized: "Cada vaca capturada d\xE1 0,25x mult global, reiniciando a cada
+      rodada ou quando um predador \xE9 capturado"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984
@@ -863,7 +863,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801989
     m_Localized: As cabras agora atraem todos os predadores na tela, multiplicado
-      por 2 para cada predador capturado com uma cabra
+      por x2 para cada predador capturado com uma cabra
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -871,7 +871,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "As raposas trocam estat\xEDsticas com um"
+    m_Localized: "As raposas trocam estat\xEDsticas com"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -961,8 +961,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802013
-    m_Localized: "Se voc\xEA tiver essa b\xEAn\xE7\xE3o, evite a pr\xF3xima vez que
-      perder para o requisito de pontos e descarte"
+    m_Localized: "Se voc\xEA tiver essa vantagem, evite a pr\xF3xima vez que perder
+      para o requisito de pontos e descarte"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802014
@@ -970,7 +970,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Concede 2 oportunidades de nova rodada por loja
+    m_Localized: Concede 2 oportunidades de nova rolagem por loja
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -1031,7 +1031,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "As galinhas agora podem botar ovos que d\xE3o x1,5 pontos de multiplica\xE7\xE3o
-      quando la\xE7adas"
+      quando la\xE7ados"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528

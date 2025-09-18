@@ -9,7 +9,8 @@ public class SynergyShopItem : ShopItem
     public SynergySlots synergySlots;
     public TMP_Text desc2;
     private int value;
-    
+    public AnimalShopItem animalShopItem;
+    private Animal chosenToSteal;
     
     public void SetInt(int val)
     {
@@ -27,8 +28,12 @@ public class SynergyShopItem : ShopItem
         priceText.text = chosenBoon.price.ToString();
         price = chosenBoon.price;
         upgradeArt.sprite = chosenBoon.art;
-
         desc2.text = GameController.descriptionManager.GetBoonDescription(chosenBoon);
+        if (chosenBoon.name=="Thief")
+        {
+            chosenToSteal = animalShopItem.possibleAnimals[Random.Range(0, animalShopItem.possibleAnimals.Length)];
+            descriptionText.text = chosenBoon.desc.GetLocalizedString() + " " + chosenToSteal.name + ".";
+        }
     }
     public override void PurchaseUpgrade()
     {
@@ -41,6 +46,11 @@ public class SynergyShopItem : ShopItem
             FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased")+1);
             upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
+            
+            if (chosenBoon.name=="Thief")
+            {
+                GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
+            }
             if (GameController.player.boonsInDeck.Count<GameController.gameManager.maxSynergies)
             {
                 GameController.player.AddBoonToDeck(chosenBoon);

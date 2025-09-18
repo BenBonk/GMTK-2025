@@ -102,6 +102,7 @@ public class GameManager : MonoBehaviour
     private PauseMenu pauseMenu;
     public SchemeManager schemeManager;
     public Boon fairyBottleInstance;
+    [HideInInspector] public AnimalData foxThiefStolenStats;
     private void Start()
     {
         pauseMenu = GameController.pauseMenu;

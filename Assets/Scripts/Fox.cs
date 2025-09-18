@@ -25,6 +25,11 @@ public class Fox : Animal
         initialized = true;
     }
 
+    public override void ActivateLegendary()
+    {
+        animalData = GameController.gameManager.foxThiefStolenStats;
+    }
+
     protected override Vector3 ComputeMove()
     {
         // Smoothly return to base speed

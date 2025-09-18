@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Bauerndilemma
+    m_Localized: Das Dilemma der Bauern
     m_Metadata:
       m_Items: []
   - m_Id: 56
@@ -881,7 +881,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Foxes tauschen Statistiken mit einem
+    m_Localized: "F\xFCchse tauschen Statistiken mit"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992

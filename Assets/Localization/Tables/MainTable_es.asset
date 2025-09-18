@@ -61,7 +61,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: "Selecciona un depredador para a\xF1adir a tu establo"
+    m_Localized: Seleccione un depredador para agregar a su establo
     m_Metadata:
       m_Items: []
   - m_Id: 10
@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Puntos multip:'
+    m_Localized: 'Puntos multi:'
     m_Metadata:
       m_Items: []
   - m_Id: 16
@@ -149,7 +149,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: "Depredador. Se mueve por el campo espor\xE1dicamente."
+    m_Localized: "Depredador. Se mueve arriba y abajo del campo espor\xE1dicamente."
     m_Metadata:
       m_Items: []
   - m_Id: 31
@@ -173,7 +173,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36
-    m_Localized: Meandros previsibles.
+    m_Localized: Serpentea de manera previsible.
     m_Metadata:
       m_Items: []
   - m_Id: 37
@@ -293,8 +293,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: Lazo un grupo de animales que contiene una vaca, una cabra, un caballo
-      y una oveja
+    m_Localized: 'Lazo: un grupo de animales que contiene una vaca, una cabra, un
+      caballo y una oveja.'
     m_Metadata:
       m_Items: []
   - m_Id: 67
@@ -359,7 +359,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: 'Lazo: un grupo de animales que contiene un oso, un lobo y un zorro.'
+    m_Localized: Lazo, un grupo de animales que contiene un oso, un lobo y un zorro.
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -367,7 +367,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: Lazo un grupo de animales que contiene un Caballo y un Perro
+    m_Localized: Lazo un grupo de animales que contiene un caballo y un perro
     m_Metadata:
       m_Items: []
   - m_Id: 85
@@ -425,7 +425,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 97
     m_Localized: "\xA1Cuando termine el d\xEDa, podremos regresar al granero para
-      gastar el dinero que ganamos con tanto esfuerzo!"
+      gastar el dinero que tanto nos cost\xF3 ganar!"
     m_Metadata:
       m_Items: []
   - m_Id: 98
@@ -453,7 +453,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: "Ahora que ya conoces los conceptos b\xE1sicos, \xA1comencemos!"
+    m_Localized: "Ahora que ya sabes lo b\xE1sico, \xA1comencemos!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -563,7 +563,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355919
-    m_Localized: 'Mayor cantidad de efectivo disponible al mismo tiempo:'
+    m_Localized: 'Mayor cantidad de efectivo retenido a la vez:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355920
@@ -855,7 +855,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801987
-    m_Localized: "Los conejos tienen un 25 % de posibilidades de duplicar sus puntos
+    m_Localized: "Los conejos tienen un 25% de posibilidades de duplicar sus puntos
       acumulados cuando est\xE1n enlazados."
     m_Metadata:
       m_Items: []
@@ -873,7 +873,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "Los Foxes intercambian estad\xEDsticas con un"
+    m_Localized: "Los zorros intercambian estad\xEDsticas con"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -906,7 +906,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: Los precios de los animales ahora son aleatorios en la tienda.
+    m_Localized: "Los precios de los animales ahora est\xE1n aleatorios en la tienda."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -964,8 +964,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802013
-    m_Localized: "Si mantiene esta bendici\xF3n, evite la pr\xF3xima vez que pierda
-      el requisito de puntos y descarte"
+    m_Localized: "Si mantienes esta ventaja, evita la pr\xF3xima vez que pierdas
+      el requisito de puntos y descarta"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802014
@@ -973,7 +973,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Otorga 2 oportunidades de cambio de tirada por tienda.
+    m_Localized: Otorga 2 oportunidades de cambio de tirada por tienda
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -990,8 +990,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Obt\xE9n un 20 % m\xE1s de bonificaci\xF3n en puntos por cada personaje
-      que no sea depredador en un lazo, en lugar del 10 %."
+    m_Localized: "Obt\xE9n un bono de puntos del +20% por cada personaje que no sea
+      depredador en un lazo, en lugar del 10%."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020

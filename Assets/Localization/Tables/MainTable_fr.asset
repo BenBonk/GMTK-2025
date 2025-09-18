@@ -57,7 +57,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: "IL A \xC9T\xC9 TROISI\xC8MEMENT TERMIN\xC9 !"
+    m_Localized: "IL A \xC9T\xC9 TROUV\xC9 DE TR\xC8S PR\xC8S!"
     m_Metadata:
       m_Items: []
   - m_Id: 9
@@ -115,7 +115,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs \xE0 proximit\xE9. Immunis\xE9
+    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs proches vers lui. Immunis\xE9
       contre les effets de pouss\xE9e et d'attraction."
     m_Metadata:
       m_Items: []
@@ -158,7 +158,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: "Ralentit les pr\xE9dateurs \xE0 proximit\xE9."
+    m_Localized: "Ralentit les pr\xE9dateurs proches."
     m_Metadata:
       m_Items: []
   - m_Id: 33
@@ -182,7 +182,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 38
-    m_Localized: Il court en ligne droite.
+    m_Localized: Il roule en ligne droite.
     m_Metadata:
       m_Items: []
   - m_Id: 39
@@ -190,11 +190,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Pr\xE9dateur. Poursuit les non-pr\xE9dateurs."
+    m_Localized: "Pr\xE9dateur. Chasse les non-pr\xE9dateurs."
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: "B\xEA\xEA\xEA\xEA !"
+    m_Localized: Baaaaa!
     m_Metadata:
       m_Items: []
   - m_Id: 42
@@ -226,7 +226,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: Chicken Jockey
+    m_Localized: Jockey de poulet
     m_Metadata:
       m_Items: []
   - m_Id: 50
@@ -324,7 +324,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: Photo-finish
+    m_Localized: Photo-Finish
     m_Metadata:
       m_Items: []
   - m_Id: 74
@@ -421,7 +421,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 96
     m_Localized: "Oh l\xE0 l\xE0, attention aux pr\xE9dateurs ! Vous perdrez des
-      points si vous les capturez avec vos animaux."
+      points si vous les enlacez avec vos animaux."
     m_Metadata:
       m_Items: []
   - m_Id: 97
@@ -549,11 +549,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355915
-    m_Localized: "Nombre d'am\xE9liorations d'animaux achet\xE9es\_:"
+    m_Localized: "Nombre d'am\xE9liorations animales achet\xE9es\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355916
-    m_Localized: "Niveau animal le plus \xE9lev\xE9 atteint\_:"
+    m_Localized: "Niveau animal le plus \xE9lev\xE9 atteint :"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355917
@@ -586,7 +586,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "Num\xE9ro de manche le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
+    m_Localized: "Num\xE9ro de tour le plus \xE9lev\xE9 \xE0 la difficult\xE9 maximale\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
@@ -682,7 +682,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6436971002093568
-    m_Localized: "Vous avez gagn\xE9 !"
+    m_Localized: "Vous avez gagn\xE9!"
     m_Metadata:
       m_Items: []
   - m_Id: 6436971056619520
@@ -702,7 +702,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514694254592
-    m_Localized: "D\xE9mo !"
+    m_Localized: "D\xE9mo!"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809024
@@ -778,7 +778,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Possibilit\xE9 pour un mouton d'\xEAtre un mouton noir, en red\xE9clenchant
+    m_Localized: "Possibilit\xE9 pour un mouton de devenir un mouton noir, en red\xE9clenchant
       votre lasso une fois lorsqu'il est pris au lasso"
     m_Metadata:
       m_Items: []
@@ -812,8 +812,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "Les chiens de berger chassent les pr\xE9dateurs. Ils valent cinq
-      fois plus cher lorsqu'ils sont pris au lasso avec un pr\xE9dateur."
+    m_Localized: "Les chiens de berger chassent les pr\xE9dateurs. Ils valent 5 fois
+      plus cher lorsqu'ils sont pris au pi\xE8ge d'un pr\xE9dateur."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -839,8 +839,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Chaque vache captur\xE9e donne 0,25x de multiplicateur global,
-      r\xE9initialis\xE9 \xE0 chaque tour ou lorsqu'un pr\xE9dateur est captur\xE9"
+    m_Localized: "Chaque vache captur\xE9e donne 0,25x multiplicateur global, r\xE9initialis\xE9
+      \xE0 chaque tour ou lorsqu'un pr\xE9dateur est captur\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984
@@ -858,7 +858,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801987
     m_Localized: "Les lapins ont 25 % de chances de doubler leurs points accumul\xE9s
-      lorsqu'ils sont captur\xE9s au lasso."
+      lorsqu'ils sont captur\xE9s au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801988
@@ -876,7 +876,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "Les Foxes \xE9changent des statistiques avec un"
+    m_Localized: "Les Foxes \xE9changent des statistiques avec"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -947,7 +947,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
-    m_Localized: "Pochette \xE0 monnaie"
+    m_Localized: "Pochette \xE0 pi\xE8ces"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
@@ -969,11 +969,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773802013
     m_Localized: "Si vous d\xE9tenez ce don, \xE9vitez la prochaine fois que vous
-      perdriez face aux points requis et d\xE9faussez-le."
+      perdriez face \xE0 l'exigence de points et d\xE9faussez-le"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802014
-    m_Localized: bouillon frais
+    m_Localized: Bouillon frais
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802023
-    m_Localized: "+3 points par animal captur\xE9 au lasso"
+    m_Localized: "+3 points par animal captur\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802024
@@ -1024,7 +1024,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: "V\xE9t\xE9ran ouvrier agricole"
+    m_Localized: "Ouvrier agricole v\xE9t\xE9ran"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
@@ -1037,8 +1037,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui rapportent
-      x1,5 points lorsqu'elles sont captur\xE9es au lasso"
+    m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui donnent
+      x1,5 points multiplicateurs lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528

@@ -538,7 +538,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -871,7 +871,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano le statistiche con un
+    m_Localized: Le volpi scambiano statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -884,7 +884,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Branco di lupi
+    m_Localized: branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995

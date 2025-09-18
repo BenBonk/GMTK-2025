@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Strata punkt\xF3w:"
+    m_Localized: "Utrata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
-      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
-      dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -744,7 +744,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: "D\u0142ugo\u015B\u0107 rundy:"
+    m_Localized: "D\u0142ugo\u015B\u0107 ca\u0142kowita:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -937,7 +937,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773802001
     m_Localized: "Zdob\u0105d\u017A +5 punkt\xF3w za ka\u017Cdy inny gatunek upolowany
-      na lasso"
+      za pomoc\u0105 lassa"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -1013,8 +1013,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% premii punktowej za ka\u017Cdego drapie\u017Cnika w
-      lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
+      w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1043,7 +1043,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-robotnik
+    m_Localized: Weteran-Pracownik Rolny
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
