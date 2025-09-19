@@ -27756,7 +27756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 0
+  isTesting: 1
   player: {fileID: 1887224207}
   harvestLevel: 1
   startingPointRequirement: 65
@@ -27779,6 +27779,7 @@ MonoBehaviour:
   barn: {fileID: 1436592586}
   barnCameraTarget: {fileID: 1466223220}
   barnAnimator: {fileID: 1436592585}
+  animalShopItem: {fileID: 175759936}
   timerNormalColor: {r: 0.75294125, g: 0.7960785, b: 0.86274517, a: 1}
   timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
   shopButtonBlocker: {fileID: 1168497080}

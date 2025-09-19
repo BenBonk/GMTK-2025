@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Animator barnAnimator;
     private BoonManager boonManager;
     private LocalizationManager localization;
+    public AnimalShopItem animalShopItem;
 
 
     private int lastDisplayedSecond = -1;

@@ -98,6 +98,7 @@ public class SaveManager : MonoBehaviour
         player.playerCurrency =  double.Parse(FBPP.GetString("cash"), System.Globalization.CultureInfo.InvariantCulture);
         gameManager.roundNumber = FBPP.GetInt("round");
         gameManager.harvestLevel = FBPP.GetInt("harvestLevel", 1);
+        gameManager.foxThiefStolenStats = gameManager.animalShopItem.possibleAnimals[FBPP.GetInt("chosenToStealIndex", 0)].animalData;
         if (FBPP.GetString("animalsInDeck")=="")
         {
             return;
