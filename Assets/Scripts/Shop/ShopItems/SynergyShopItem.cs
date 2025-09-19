@@ -1,6 +1,8 @@
+using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SynergyShopItem : ShopItem
 {
@@ -11,7 +13,14 @@ public class SynergyShopItem : ShopItem
     private int value;
     private Animal chosenToSteal;
     private int chosenToStealIndex;
-    
+    private SpriteRenderer bgSR;
+    public Sprite[] boonBgs;
+    public GameObject subPopup;
+    private void Awake()
+    {
+        bgSR = GetComponent<SpriteRenderer>();
+    }
+
     public void SetInt(int val)
     {
         value = val;

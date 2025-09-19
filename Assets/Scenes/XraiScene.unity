@@ -10190,6 +10190,11 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   clampAspectToRange: 1
+--- !u!1 &152700569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3537466514897990247, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+  m_PrefabInstance: {fileID: 1483620391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &159433007
 GameObject:
   m_ObjectHideFlags: 0
@@ -12688,6 +12693,10 @@ PrefabInstance:
       propertyPath: desc2
       value: 
       objectReference: {fileID: 2113491474}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: subPopup
+      value: 
+      objectReference: {fileID: 1171692264}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: hoverPopup
       value: 
@@ -27163,6 +27172,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1103029171}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: subPopup
+      value: 
+      objectReference: {fileID: 1614232175}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: synergySlots
       value: 
       objectReference: {fileID: 441562321}
@@ -27170,6 +27183,22 @@ PrefabInstance:
       propertyPath: animalShopItem
       value: 
       objectReference: {fileID: 175759936}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: boonBgs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: 'boonBgs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 55f08a37d81d29b418e36d6eb3b9f7ba, type: 3}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: 'boonBgs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 46294fbc6c1dd61489a4a5d955b02879, type: 3}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: 'boonBgs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 819e7dd9cc89c794dbf5af9d619bae12, type: 3}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: possibleSynergies.Array.size
       value: 24
@@ -27518,6 +27547,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168497080}
   m_CullTransparentMesh: 1
+--- !u!1 &1171692264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3537466514897990247, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+  m_PrefabInstance: {fileID: 490940687}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182770571
 GameObject:
   m_ObjectHideFlags: 0
@@ -29836,6 +29870,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1231435527}
     - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: subPopup
+      value: 
+      objectReference: {fileID: 152700569}
+    - target: {fileID: 4297145521449794566, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: hoverPopup
       value: 
       objectReference: {fileID: 1483620393}
@@ -30808,6 +30846,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1614232175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3537466514897990247, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+  m_PrefabInstance: {fileID: 1103029168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1615761882
 GameObject:
   m_ObjectHideFlags: 0
