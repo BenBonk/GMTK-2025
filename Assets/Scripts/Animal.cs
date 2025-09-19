@@ -180,15 +180,18 @@ public class Animal : MonoBehaviour
         // Advance the tilt cycle
         tiltProgress += Time.deltaTime * tiltFrequency;
 
-        // Normalize actual speed relative to base speed
-        float speedFactor = Mathf.Clamp01(actualSpeed / speed);
+        // Use a safe denominator; if speed is ~0, treat as 1 to avoid divide-by-zero
+        float denom = Mathf.Max(0.0001f, Mathf.Abs(speed));
+        float speedFactor = Mathf.Clamp01(actualSpeed / denom);
 
-        // Calculate the tilt angle using sine wave
         float amplitude = maxTiltAmplitude * speedFactor;
         float angle = Mathf.Sin(tiltProgress * Mathf.PI * 2f) * amplitude;
 
+        if (float.IsNaN(angle) || float.IsInfinity(angle)) angle = 0f;
+
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
+
 
     private void ApplyRepelFromNearbyAnimals()
     {
@@ -214,42 +217,94 @@ public class Animal : MonoBehaviour
     }
 
 
-    //Attraction override
     protected bool overriddenByAttraction = false;
     protected Animal attractTarget = null;
-    protected float attractTTL = 0f;   // seconds remaining for this override
-    public void SetAttractTarget(Animal a, float durationSeconds)
+    [SerializeField] protected bool leftIsPositiveScaleX = true;
+
+    public float attractBrakeRadius = 2.0f;  // start slowing down inside this radius
+    public float attractArriveRadius = 0.25f; // consider 'arrived' inside this radius
+    public float attractSmoothTime = 0.25f; // SmoothDamp time (you already have)
+    public float attractStopThreshold = 0.02f; // consider stopped below this speed
+    private float _attractSpeedVel = 0f;
+
+    public bool SetAttractTarget(Animal a, bool force = false)
     {
+        if (!force && attractTarget != null && attractTarget.gameObject.activeInHierarchy)
+            return false;
+
         attractTarget = a;
-        attractTTL = Mathf.Max(0f, durationSeconds);
+        _attractSpeedVel = 0f; 
+        return true;
     }
 
-    /// If this animal is a predator and currently has a valid attraction target,
-    /// return a pursuit step toward that target and consume TTL.
+    public void ClearAttractTarget()
+    {
+        attractTarget = null;
+    }
+
+    protected virtual void FaceByX(float xDir)
+    {
+        // Default: positive scale.x = facing LEFT
+        var sc = transform.localScale;
+        float abs = Mathf.Abs(sc.x);
+        if (leftIsPositiveScaleX)
+            sc.x = (xDir >= 0f) ? -abs : abs;   
+        else
+            sc.x = (xDir >= 0f) ? abs : -abs; 
+        transform.localScale = sc;
+    }
     protected virtual bool TryPredatorAttractionOverride(out Vector3 nextPos)
     {
         nextPos = transform.position;
 
         if (!isPredator) return false;
-        if (attractTarget == null || attractTTL <= 0f) return false;
+        if (attractTarget == null) return false;
 
-        // If target got disabled/destroyed, clear override
-        if (!attractTarget.gameObject.activeInHierarchy || attractTarget.isLassoed)
+        if (!attractTarget.gameObject.activeInHierarchy)
         {
             attractTarget = null;
-            attractTTL = 0f;
             return false;
         }
 
         Vector3 to = attractTarget.transform.position - transform.position;
-        if (to.sqrMagnitude > 0.000001f)
+        float dist = to.magnitude;
+
+        // --- Compute a *ramped* target speed ---
+        //  dist >= brakeRadius         -> full speed
+        //  arriveRadius < dist < brake -> scaled speed
+        //  dist <= arriveRadius        -> 0 (arrived)
+        float t = 1f; // scaling 0..1
+        if (dist <= attractArriveRadius)
+            t = 0f;
+        else if (dist < attractBrakeRadius)
+            t = Mathf.InverseLerp(attractArriveRadius, attractBrakeRadius, dist); // 0..1
+
+        float speedTarget = speed * t;
+
+        // Smoothly approach speedTarget
+        currentSpeed = Mathf.SmoothDamp(currentSpeed, speedTarget, ref _attractSpeedVel, attractSmoothTime);
+
+        // Face horizontally toward the target
+        if (Mathf.Abs(to.x) > 0.001f) FaceByX(to.x);
+
+        // Move toward the target (with overshoot clamp)
+        if (dist > 0.000001f && currentSpeed > 0f)
         {
-            nextPos = transform.position + to.normalized * currentSpeed * Time.deltaTime;
+            Vector3 dir = to / dist;
+            float step = currentSpeed * Time.deltaTime;
+            if (step > dist) step = dist;
+            nextPos = transform.position + dir * step;
         }
 
-        attractTTL -= Time.deltaTime;
-        return true;
+        // If firmly inside arrive radius and basically stopped, hold position
+        if (dist <= attractArriveRadius && currentSpeed <= attractStopThreshold)
+            nextPos = transform.position;
+
+        return true; // attraction owns movement this frame
     }
+
+
+
 
     public virtual void ActivateLegendary()
     {

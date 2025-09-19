@@ -119,7 +119,7 @@ public class Goat : Animal
             // inside radius? tag with an attraction target for a short time
             if ((a.transform.position - myPos).sqrMagnitude <= r2)
             {
-                a.SetAttractTarget(this, attractStickTime);
+                a.SetAttractTarget(this);
             }
         }
     }

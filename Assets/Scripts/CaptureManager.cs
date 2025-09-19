@@ -80,6 +80,7 @@ public class CaptureManager : MonoBehaviour
         }
 
         int totalNonPredatorCount = 0;
+        int totalPredatorCount = 0;
         int biodiversityBonus = 0;
         foreach (var animal in animalsCaptured)
         {
@@ -87,9 +88,20 @@ public class CaptureManager : MonoBehaviour
             {
                 totalNonPredatorCount++;
             }
-            CaptureAnimal(animal);
+            else
+            {
+                totalPredatorCount++;
+            }
+                CaptureAnimal(animal);
         }
-        
+        foreach (var lassoable in lassoablesCaptured)
+        {
+            currencyBonus += lassoable.currencyToGive;
+            currencyMult *= lassoable.currencyMultToGive;
+            pointBonus += lassoable.pointsToGive;
+            pointMult *= lassoable.pointsMultToGive;
+        }
+
         if (boonManager.ContainsBoon("Biodiversity"))
         {
             HashSet<string> uniqueAnimalNames = new HashSet<string>();
@@ -117,15 +129,15 @@ public class CaptureManager : MonoBehaviour
             currencyBonus += groupsOf3;
         }
 
-        bool hasPredator = false;
-        foreach (var animal in animalsCaptured)
-        {
-            if (animal.isPredator) { hasPredator = true; break; }
-        }
-
         if (boonManager.ContainsBoon("GoodBoy"))
         {
-            if (hasPredator) currencyMult *= 5f;
+            if (totalPredatorCount > 0) currencyMult *= 5f;
+        }
+
+        if (boonManager.ContainsBoon("ScapeGoat"))
+        {
+            currencyBonus += (8 * totalPredatorCount);
+            pointBonus += (8 * totalPredatorCount);
         }
 
         if (boonManager.ContainsBoon("Mootiplier"))
@@ -138,7 +150,7 @@ public class CaptureManager : MonoBehaviour
                     cowCount++;
                 }
             }
-            if (cowCount == 0 || hasPredator)
+            if (cowCount == 0 || totalPredatorCount > 0)
             {
                 mootiplierMult = 0;
             }
