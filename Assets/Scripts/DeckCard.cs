@@ -10,6 +10,7 @@ public class DeckCard : MonoBehaviour
     public TMP_Text desc2;
     public Image icon;
     public RectTransform hoverPopup;
+    public GameObject subPopup;
     private bool isPopup;
     private Tween a;
     private Tween b;
@@ -19,6 +20,11 @@ public class DeckCard : MonoBehaviour
         title.text = titleStr;
         desc.text = descStr;
         icon.sprite = iconSprite;
+        if (descStr2=="hidepopup")
+        {
+            subPopup.SetActive(false);
+            hoverPopup.DOLocalMoveY(hoverPopup.position.y - 100,0);
+        }
         if (descStr2!="")
         {
             desc2.text = descStr2;

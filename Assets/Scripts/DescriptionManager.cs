@@ -55,11 +55,11 @@ public class DescriptionManager : MonoBehaviour
     {
         if (boonData is SpecialtyBoon specialtyBoon)
         {
-            return specialtyBoon.desc.GetLocalizedString();
+            return "hidepopup";
         }
         if (boonData is LegendaryBoon legendaryBoon)
         {
-            return legendaryBoon.desc.GetLocalizedString();
+            return "hidepopup";
         }
 
         BasicBoon basicBoon = (BasicBoon)boonData;

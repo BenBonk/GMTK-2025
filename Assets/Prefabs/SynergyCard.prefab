@@ -479,6 +479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMaterialOverride: {fileID: 0}
+  localMaterialOverride: {fileID: 0}
 --- !u!1 &3603850326635549477
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +630,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMaterialOverride: {fileID: 0}
+  localMaterialOverride: {fileID: 0}
 --- !u!1 &6532823061565076754
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +759,7 @@ MonoBehaviour:
   desc2: {fileID: 2610408313631133441}
   icon: {fileID: 3122615936035191174}
   hoverPopup: {fileID: 8162438419569462793}
+  subPopup: {fileID: 2198630142194439344}
   bounch: 1
 --- !u!223 &1559342015706638166
 Canvas:
@@ -1021,3 +1026,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMaterialOverride: {fileID: 0}
+  localMaterialOverride: {fileID: 0}
