@@ -33,7 +33,7 @@ public class ShopManager : MonoBehaviour
     public TMP_Text roundText;
     public LocalizedString roundLocalString;
     public GameObject purchaseParticles;
-    //continue
+    public BoonShopPanel[] boonShopPanels;
 
     private IEnumerator Start()
     {
@@ -178,4 +178,13 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    [System.Serializable]
+    public class BoonShopPanel
+    {
+        public Sprite bgArt;
+        public Sprite popupArt;
+        public Color titleColor;
+        public Color costColor;
+        public Color popupColor;
+    }
 }

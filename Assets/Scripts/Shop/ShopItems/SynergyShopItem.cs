@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SynergyShopItem : ShopItem
@@ -13,12 +14,14 @@ public class SynergyShopItem : ShopItem
     private int value;
     private Animal chosenToSteal;
     private int chosenToStealIndex;
-    private SpriteRenderer bgSR;
+    private Image bgSR;
+    private Image popupBg;
     public Sprite[] boonBgs;
     public GameObject subPopup;
     private void Awake()
     {
-        bgSR = GetComponent<SpriteRenderer>();
+        bgSR = GetComponent<Image>();
+        popupBg = hoverPopup.gameObject.GetComponent<Image>();
     }
 
     public void SetInt(int val)
@@ -37,13 +40,37 @@ public class SynergyShopItem : ShopItem
         priceText.text = chosenBoon.price.ToString();
         price = chosenBoon.price;
         upgradeArt.sprite = chosenBoon.art;
-        desc2.text = GameController.descriptionManager.GetBoonDescription(chosenBoon);
-        if (chosenBoon.name=="Thief")
+        int index = 0;
+        if (chosenBoon is BasicBoon basicBoon)
         {
-            chosenToStealIndex = Random.Range(0, GameController.gameManager.animalShopItem.possibleAnimals.Length);
-            chosenToSteal = GameController.gameManager.animalShopItem.possibleAnimals[chosenToStealIndex];
-            descriptionText.text = chosenBoon.desc.GetLocalizedString() + " " + chosenToSteal.name + ".";
+            desc2.text = GameController.descriptionManager.GetBoonDescription(chosenBoon);
+            subPopup.SetActive(true);
         }
+        else if (chosenBoon is SpecialtyBoon specialtyBoon)
+        {
+            subPopup.SetActive(false);
+            index = 1;
+        }
+        else if (chosenBoon is LegendaryBoon legendaryBoon)
+        {
+            subPopup.SetActive(false);
+            if (chosenBoon.name=="Thief")
+            {
+                chosenToStealIndex = Random.Range(0, GameController.gameManager.animalShopItem.possibleAnimals.Length);
+                chosenToSteal = GameController.gameManager.animalShopItem.possibleAnimals[chosenToStealIndex];
+                descriptionText.text = chosenBoon.desc.GetLocalizedString() + " " + chosenToSteal.name + ".";
+            }
+            index = 2;
+        }
+
+        bgSR.sprite = shopManager.boonShopPanels[index].bgArt;
+        popupBg.sprite = shopManager.boonShopPanels[index].popupArt;
+        titleText.color = shopManager.boonShopPanels[index].titleColor;
+        priceText.color = shopManager.boonShopPanels[index].costColor;
+        descriptionText.color = shopManager.boonShopPanels[index].popupColor;
+        bgSR.SetNativeSize();
+        popupBg.SetNativeSize();
+        
     }
     public override void PurchaseUpgrade()
     {
