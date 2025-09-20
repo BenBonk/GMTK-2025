@@ -21,9 +21,7 @@ public class Player : MonoBehaviour
     }
     public void AddBoonToDeck(Boon boon)
     {
-        boonsInDeck.Add(boon);
         boonManager.AddBoon(boon);
-        
     }
 
     private double _playerCurrency;

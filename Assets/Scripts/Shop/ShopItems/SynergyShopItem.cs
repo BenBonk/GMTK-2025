@@ -76,6 +76,7 @@ public class SynergyShopItem : ShopItem
     {
         if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
+            Debug.Log("purchase upgrade");
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
