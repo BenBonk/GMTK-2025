@@ -34,6 +34,7 @@ public class ShopManager : MonoBehaviour
     public LocalizedString roundLocalString;
     public GameObject purchaseParticles;
     public BoonShopPanel[] boonShopPanels;
+    public BoonGroup[] boonGroups;
 
     private IEnumerator Start()
     {
@@ -46,35 +47,55 @@ public class ShopManager : MonoBehaviour
     public void InitializeAllUpgrades()
     {
         UpdateCashText();
-        
-        //needs to be called when entering shop
-        List<int> boonIndexes = new List<int>();
-        while (boonIndexes.Count<3)
+        List<Boon> chosenBoons = new List<Boon>();
+        while (chosenBoons.Count < 3)
         {
-            int val = Random.Range(0, 24);
+            Boon boon = GetRandomSynergy();
             if (!isTut)
             {
-                if (boonIndexes.Contains(val) || player.boonsInDeck.Contains(shopItems[0].GetComponent<SynergyShopItem>().possibleSynergies[val]))
-                {
+                if (chosenBoons.Contains(boon) || player.boonsInDeck.Contains(boon))
                     continue;
-                }   
             }
-            boonIndexes.Add(val);
+            chosenBoons.Add(boon);
         }
-
         for (int i = 0; i < 3; i++)
         {
-            shopItems[i].GetComponent<SynergyShopItem>().SetInt(boonIndexes[i]);
+            shopItems[i].GetComponent<SynergyShopItem>().SetBoon(chosenBoons[i]);
         }
         foreach (var shopItem in shopItems)
         {
             Instantiate(purchaseParticles, shopItem.rt.position, Quaternion.identity);
             shopItem.canPurchase = true;
             shopItem.Initialize();
-            shopItem.transform.DOScale(Vector3.one, .3f).SetEase(Ease.OutBack);
+            shopItem.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
         }
         UpdateDeck();
         UpdateSynergies();
+    }
+    private Boon GetRandomSynergy()
+    {
+        // 1. Calculate total weight
+        float totalWeight = 0f;
+        foreach (var group in boonGroups)
+            totalWeight += group.weight;
+
+        // 2. Roll a random value
+        float roll = Random.Range(0f, totalWeight);
+
+        // 3. Pick the group
+        foreach (var group in boonGroups)
+        {
+            if (roll < group.weight)
+            {
+                // 4. Pick a random synergy inside the group
+                int idx = Random.Range(0, group.boons.Count);
+                return group.boons[idx];
+            }
+            roll -= group.weight;
+        }
+
+        // fallback (shouldn’t happen)
+        return boonGroups[0].boons[0];
     }
 
     public void UpdateCashText()
@@ -186,5 +207,12 @@ public class ShopManager : MonoBehaviour
         public Color titleColor;
         public Color costColor;
         public Color popupColor;
+    }
+    [System.Serializable]
+    public class BoonGroup
+    {
+        public string groupName;
+        public float weight; // higher = more likely to be chosen
+        public List<Boon> boons;
     }
 }

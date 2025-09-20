@@ -7,11 +7,9 @@ using Random = UnityEngine.Random;
 
 public class SynergyShopItem : ShopItem
 {
-    public Boon[] possibleSynergies;
     private Boon chosenBoon;
     public SynergySlots synergySlots;
     public TMP_Text desc2;
-    private int value;
     private Animal chosenToSteal;
     private int chosenToStealIndex;
     private Image bgSR;
@@ -24,17 +22,12 @@ public class SynergyShopItem : ShopItem
         popupBg = hoverPopup.gameObject.GetComponent<Image>();
     }
 
-    public void SetInt(int val)
+    public void SetBoon(Boon boon)
     {
-        value = val;
+        chosenBoon = boon;
     }
     public override void Initialize()
     {
-        if (GameController.shopManager.isTut)
-        {
-            value = 0;
-        }
-        chosenBoon = possibleSynergies[value];
         titleText.text = chosenBoon.synergyName.GetLocalizedString();
         descriptionText.text = chosenBoon.desc.GetLocalizedString();
         priceText.text = chosenBoon.price.ToString();
