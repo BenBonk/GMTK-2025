@@ -29,7 +29,7 @@ public class WishlistGamePanel : MonoBehaviour
         pauseMenu.canOpenClose = false;
         isOpen = true;
         panel.gameObject.SetActive(true);
-        darkCover.DOFade(.5f, 0.5f);
+        darkCover.DOFade(.8f, 0.5f);
         panel.DOAnchorPosY(0, .5f).SetEase(Ease.OutBack).SetUpdate(true).OnComplete(()=> canOpenClose = true);
     }
     public void Close()

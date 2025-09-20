@@ -45,12 +45,14 @@ public class HarvestLevelManager : MonoBehaviour
             if (levelIndex >= GameController.saveManager.harvestDatas.Length)
             {
                 GetComponent<StampPopup>().ShowStampAtMouse();
+                AudioManager.Instance.PlaySFX("no_point_mult");
             }
             Debug.LogWarning($"Invalid harvest level index: {levelIndex}");
             return;
         }
 
         HarvestData data = GameController.saveManager.harvestDatas[levelIndex];
+        AudioManager.Instance.PlaySFX("ui_crunch");
 
         roundLengthText.text = $"{roundLengthLocalized.GetLocalizedString()} {data.roundLength}";
         dailyCashText.text = $"{dailyCashLocalized.GetLocalizedString()} {data.dailyCash}";

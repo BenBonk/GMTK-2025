@@ -15,11 +15,12 @@ public class StartScreenManager : MonoBehaviour
     public GameObject noSaveData;
     public GameObject title;
     public GameObject farmerSelect;
+    public GameObject wishlist;
 
     private IEnumerator Start()
     {
             
-        InvokeRepeating("SpawnAnimal", 1,Random.Range(0.8f, 1.5f));
+        InvokeRepeating("SpawnAnimal", 1,Random.Range(1f, 2f));
         AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,true);
         if (GameController.saveManager.PlayerHasSave())
         {
@@ -55,9 +56,10 @@ public class StartScreenManager : MonoBehaviour
 
     public void LoadFarmers()
     {
-        hasSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1.25f).SetEase(Ease.InOutBack);
-        noSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1.25f).SetEase(Ease.InOutBack);
+        hasSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1f).SetEase(Ease.InOutBack);
+        noSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1f).SetEase(Ease.InOutBack);
         title.GetComponent<RectTransform>().DOAnchorPosX(-2000, .75f).SetEase(Ease.InOutBack);
+        wishlist.GetComponent<RectTransform>().DOAnchorPosX(-2000, .5f).SetEase(Ease.InOutBack);
         farmerSelect.GetComponent<RectTransform>().DOAnchorPosX(210, .6f).SetEase(Ease.OutBack).SetDelay(0.4f);
         GameController.gameManager.roundCompleted = true;
         CancelInvoke("SpawnAnimal");

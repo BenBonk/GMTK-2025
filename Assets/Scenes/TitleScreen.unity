@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2119159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -369,6 +369,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 661384273}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: no_point_mult
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer (12)
@@ -551,7 +555,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -276}
-  m_SizeDelta: {x: 437.33, y: 102.91}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157308876
 MonoBehaviour:
@@ -863,6 +867,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 884356360}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: no_point_mult
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer (8)
@@ -1012,6 +1020,7 @@ GameObject:
   - component: {fileID: 235097118}
   - component: {fileID: 235097117}
   - component: {fileID: 235097116}
+  - component: {fileID: 235097119}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1157,6 +1166,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235097114}
   m_CullTransparentMesh: 1
+--- !u!114 &235097119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235097114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
 --- !u!1 &243231068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,8 +2083,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.699997, y: -3.8999996}
-  m_SizeDelta: {x: -11.7, y: 0}
+  m_AnchoredPosition: {x: 0, y: -4.0999985}
+  m_SizeDelta: {x: -60, y: -57.200005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &392918860
 MonoBehaviour:
@@ -2147,7 +2170,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281943417
-  m_fontColor: {r: 0.47450984, g: 0.27058825, b: 0.22352943, a: 1}
+  m_fontColor: {r: 0.36078432, g: 0.1882353, b: 0.1764706, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2164,7 +2187,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.6
+  m_fontSize: 29.2
   m_fontSizeBase: 37.5
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2224,6 +2247,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 661384273}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: no_point_mult
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer (11)
@@ -2779,6 +2806,9 @@ MonoBehaviour:
   - name: cash_register
     clip: {fileID: 8300000, guid: 5749392ddf7f97845a35bf1f3d307e3e, type: 3}
     volume: 0.4
+  - name: farmer_0
+    clip: {fileID: 8300000, guid: 42649ce41217a184d83b4a777da5b7b5, type: 3}
+    volume: 1
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}
@@ -2902,7 +2932,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 656.37, y: 950}
+  m_AnchoredPosition: {x: 656.37, y: 1020}
   m_SizeDelta: {x: 50, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476617336
@@ -3488,6 +3518,7 @@ MonoBehaviour:
   noSaveData: {fileID: 2119158}
   title: {fileID: 1792826534}
   farmerSelect: {fileID: 718314370}
+  wishlist: {fileID: 557625534}
 --- !u!4 &511311564
 Transform:
   m_ObjectHideFlags: 0
@@ -3611,7 +3642,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.75
+  orthographic size: 6.0044413
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3694,6 +3725,8 @@ GameObject:
   - component: {fileID: 557625537}
   - component: {fileID: 557625536}
   - component: {fileID: 557625541}
+  - component: {fileID: 557625542}
+  - component: {fileID: 557625543}
   m_Layer: 5
   m_Name: WishlistNow
   m_TagString: Untagged
@@ -3717,7 +3750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -500.79}
+  m_AnchoredPosition: {x: 0, y: -431.3}
   m_SizeDelta: {x: 1242.13, y: 78.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557625536
@@ -3929,6 +3962,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &557625542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557625534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
+--- !u!95 &557625543
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557625534}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eff0c3b84b481254aae4c4e4ed808592, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &571119858
 GameObject:
   m_ObjectHideFlags: 0
@@ -3970,7 +4039,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -67}
-  m_SizeDelta: {x: 656.51, y: 131.31}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571119860
 MonoBehaviour:
@@ -4314,6 +4383,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 661384273}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: no_point_mult
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer (13)
@@ -4470,6 +4543,14 @@ PrefabInstance:
     - target: {fileID: 1961257700228410109, guid: 941e090a8941b5c468db7c270fb8fe48, type: 3}
       propertyPath: m_fontSize
       value: 49.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251404939759873665, guid: 941e090a8941b5c468db7c270fb8fe48, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 36.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560739863241920402, guid: 941e090a8941b5c468db7c270fb8fe48, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100.899994
       objectReference: {fileID: 0}
     - target: {fileID: 2568214368653293576, guid: 941e090a8941b5c468db7c270fb8fe48, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5427,6 +5508,7 @@ GameObject:
   - component: {fileID: 765934400}
   - component: {fileID: 765934399}
   - component: {fileID: 765934398}
+  - component: {fileID: 765934401}
   m_Layer: 5
   m_Name: CloseButton (1)
   m_TagString: Untagged
@@ -5443,7 +5525,7 @@ RectTransform:
   m_GameObject: {fileID: 765934396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.0010211, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 392918859}
@@ -5451,8 +5533,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200.3}
-  m_SizeDelta: {x: 256.25, y: 50}
+  m_AnchoredPosition: {x: 0.87, y: 203.3}
+  m_SizeDelta: {x: 250, y: 87.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765934398
 MonoBehaviour:
@@ -5475,10 +5557,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.21960784}
-    m_PressedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 0.39607844}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.8616352, g: 0.8616352, b: 0.8616352, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5507,7 +5589,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: TitleScreen
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &765934399
@@ -5530,7 +5612,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb61684e60460dc4badb240da79e4243, type: 3}
+  m_Sprite: {fileID: -2341807999280410684, guid: ed5af4ae3f46bc042bb78a35c2da072a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5548,6 +5630,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765934396}
   m_CullTransparentMesh: 1
+--- !u!114 &765934401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765934396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
 --- !u!1 &803046001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5659,6 +5755,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 884356360}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: no_point_mult
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer (9)
@@ -5921,6 +6021,7 @@ GameObject:
   - component: {fileID: 940397091}
   - component: {fileID: 940397090}
   - component: {fileID: 940397089}
+  - component: {fileID: 940397092}
   m_Layer: 5
   m_Name: IncreaseButton
   m_TagString: Untagged
@@ -6041,6 +6142,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940397087}
   m_CullTransparentMesh: 1
+--- !u!114 &940397092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940397087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: 
 --- !u!224 &994241020 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7820206095430002056, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
@@ -6096,6 +6211,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 884356360}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: no_point_mult
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer (10)
@@ -6332,6 +6451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 661384273}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: no_point_mult
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer (14)
@@ -6667,6 +6790,7 @@ GameObject:
   - component: {fileID: 1213856073}
   - component: {fileID: 1213856072}
   - component: {fileID: 1213856071}
+  - component: {fileID: 1213856074}
   m_Layer: 5
   m_Name: DecreaseButton
   m_TagString: Untagged
@@ -6787,6 +6911,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213856069}
   m_CullTransparentMesh: 1
+--- !u!114 &1213856074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213856069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: 
 --- !u!1 &1253798464
 GameObject:
   m_ObjectHideFlags: 0
@@ -7915,6 +8053,7 @@ MonoBehaviour:
   barn: {fileID: 0}
   barnCameraTarget: {fileID: 0}
   barnAnimator: {fileID: 0}
+  animalShopItem: {fileID: 0}
   timerNormalColor: {r: 1, g: 1, b: 1, a: 1}
   timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
   shopButtonBlocker: {fileID: 0}
@@ -7958,6 +8097,7 @@ MonoBehaviour:
     m_LocalVariables: []
   schemeManager: {fileID: 0}
   fairyBottleInstance: {fileID: 0}
+  foxThiefStolenStats: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -10380,6 +10520,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 884356360}
     m_Modifications:
+    - target: {fileID: -2167468118316043833, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: clickSFX
+      value: farmer_0
+      objectReference: {fileID: 0}
     - target: {fileID: 1098921900127377828, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Name
       value: Farmer
