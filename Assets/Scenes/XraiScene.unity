@@ -28269,7 +28269,10 @@ MonoBehaviour:
     popupColor: {r: 0.5921569, g: 0.34901962, b: 0.24313726, a: 1}
   boonGroups:
   - groupName: Basic
-    weight: 75
+    weights:
+    - 80
+    - 80
+    - 75
     boons:
     - {fileID: 11400000, guid: 66dfdb2511d10c64ea7b7890968e1995, type: 2}
     - {fileID: 11400000, guid: f367a279e4b22ab4192fe43c68d6f3f3, type: 2}
@@ -28296,7 +28299,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f958019ea33af704f917b75028f49f9f, type: 2}
     - {fileID: 11400000, guid: 6f4291e2e3eedad4c91d53189bbe3afa, type: 2}
   - groupName: Specialty
-    weight: 20
+    weights:
+    - 20
+    - 17
+    - 18
     boons:
     - {fileID: 11400000, guid: b33eba2f3ae3f034594bb049e5bc0447, type: 2}
     - {fileID: 11400000, guid: 333e5d313ec9f2a45ad8ea4aaec0ddea, type: 2}
@@ -28315,7 +28321,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: af8b54b87f9741f49a2702425de55b22, type: 2}
     - {fileID: 11400000, guid: 9f910c08119327242801306e022185da, type: 2}
   - groupName: Legendary
-    weight: 5
+    weights:
+    - 0
+    - 3
+    - 7
     boons:
     - {fileID: 11400000, guid: 8ddaef5691259284b9cbed83155c28cc, type: 2}
     - {fileID: 11400000, guid: dc5e629fae05a044980da2c109ad8852, type: 2}

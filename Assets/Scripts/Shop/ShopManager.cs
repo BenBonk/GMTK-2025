@@ -74,27 +74,29 @@ public class ShopManager : MonoBehaviour
     }
     private Boon GetRandomSynergy()
     {
-        // 1. Calculate total weight
+        int weightIndex = 0;
+        if (GameController.gameManager.roundNumber>=2)
+        {
+            weightIndex = 1;
+        }
+        if (GameController.gameManager.roundNumber>=6)
+        {
+            weightIndex = 2;
+        }
         float totalWeight = 0f;
         foreach (var group in boonGroups)
-            totalWeight += group.weight;
-
-        // 2. Roll a random value
+            totalWeight += group.weights[weightIndex];
+        
         float roll = Random.Range(0f, totalWeight);
-
-        // 3. Pick the group
         foreach (var group in boonGroups)
         {
-            if (roll < group.weight)
+            if (roll < group.weights[weightIndex])
             {
-                // 4. Pick a random synergy inside the group
                 int idx = Random.Range(0, group.boons.Count);
                 return group.boons[idx];
             }
-            roll -= group.weight;
+            roll -= group.weights[weightIndex];
         }
-
-        // fallback (shouldn’t happen)
         return boonGroups[0].boons[0];
     }
 
@@ -212,7 +214,7 @@ public class ShopManager : MonoBehaviour
     public class BoonGroup
     {
         public string groupName;
-        public float weight; // higher = more likely to be chosen
+        public float[] weights; // higher = more likely to be chosen
         public List<Boon> boons;
     }
 }
