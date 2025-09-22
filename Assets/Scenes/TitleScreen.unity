@@ -402,6 +402,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 824864104}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 5
       objectReference: {fileID: 0}
@@ -896,6 +900,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 1688910666}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 1
       objectReference: {fileID: 0}
@@ -1008,6 +1016,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+--- !u!224 &233273934 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 1008548726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235097114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,6 +2252,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392918858}
   m_CullTransparentMesh: 1
+--- !u!224 &402898335 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 913224333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &408152389 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 579149727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &427091031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2279,6 +2302,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092878433}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 432682506}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 4
@@ -2392,6 +2419,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+--- !u!224 &432682506 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 427091031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456881768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3642,7 +3674,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.0044413
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4416,6 +4448,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 408152389}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 6
       objectReference: {fileID: 0}
@@ -4852,7 +4888,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281355715
-  m_fontColor: {r: 0.76470596, g: 0.3019608, b: 0.18823531, a: 1}
+  m_fontColor: {r: 0.92549026, g: 0.8352942, b: 0.6745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5691,6 +5727,11 @@ MonoBehaviour:
   firstCapture: 0
   herdPointMultBonus: 0
   mootiplierMult: 0
+--- !u!224 &824864104 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 115844322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &881715124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7820206095430002056, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
@@ -5783,6 +5824,10 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092878433}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 402898335}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 2
@@ -6244,6 +6289,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 233273934}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 3
       objectReference: {fileID: 0}
@@ -6484,6 +6533,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 1707369646}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 7
       objectReference: {fileID: 0}
@@ -6695,7 +6748,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281355715
-  m_fontColor: {r: 0.76470596, g: 0.3019608, b: 0.18823531, a: 1}
+  m_fontColor: {r: 0.9254902, g: 0.8352941, b: 0.6745098, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8358,6 +8411,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1688910666 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 227921942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1707369646 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 1116530719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1713482445 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+  m_PrefabInstance: {fileID: 3792466694117964155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1723090392
 GameObject:
   m_ObjectHideFlags: 0
@@ -10548,6 +10616,10 @@ PrefabInstance:
       propertyPath: farmerImg
       value: 
       objectReference: {fileID: 1413176611}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: farmerInfo
+      value: 
+      objectReference: {fileID: 1713482445}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: isUnlocked
       value: 1
