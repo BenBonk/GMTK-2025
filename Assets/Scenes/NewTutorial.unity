@@ -1756,6 +1756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_crunch
+  followClickSFX: 
 --- !u!114 &286678221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8343,6 +8344,72 @@ RectTransform:
   m_AnchoredPosition: {x: 238, y: 131}
   m_SizeDelta: {x: 476, y: 268}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &495358528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1449460421}
+    m_Modifications:
+    - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1887224207}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9958664
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.972538
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4480753
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863787977112469397, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: m_Name
+      value: SaveManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+--- !u!4 &495358529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+  m_PrefabInstance: {fileID: 495358528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &500124464
 GameObject:
   m_ObjectHideFlags: 0
@@ -10836,6 +10903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_click
+  followClickSFX: 
 --- !u!114 &765580112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11247,6 +11315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_click
+  followClickSFX: 
 --- !u!114 &806769841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22590,92 +22659,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049755713}
   m_CullTransparentMesh: 1
---- !u!1 &1115752120
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1115752121}
-  - component: {fileID: 1115752122}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1115752121
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115752120}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9958664, y: 9.972538, z: -1.4480753}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1449460421}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1115752122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115752120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db1b77a6e3d3d5418bcd69b88c819e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animalDatas:
-  - {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
-  - {fileID: 11400000, guid: dd5f3d014a70c4c4794954f608059d4b, type: 2}
-  - {fileID: 11400000, guid: 61624a01d96a1c94289577fc134ae6ff, type: 2}
-  - {fileID: 11400000, guid: af25408ade403b34cbf9a46a842a8ebd, type: 2}
-  - {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
-  - {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
-  - {fileID: 11400000, guid: 74903cbb3ccf3604982132ca7eee3dfa, type: 2}
-  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: ccc8f9eb0d075ab4283b8a82efe0fc60, type: 2}
-  - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  boonDatas:
-  - {fileID: 11400000, guid: 66dfdb2511d10c64ea7b7890968e1995, type: 2}
-  - {fileID: 11400000, guid: f367a279e4b22ab4192fe43c68d6f3f3, type: 2}
-  - {fileID: 11400000, guid: e71dff4384be78849b57707d40e0c563, type: 2}
-  - {fileID: 11400000, guid: 747b906aacb71a94a848fb5a4c28059e, type: 2}
-  - {fileID: 11400000, guid: 5c81eed77d7641548a5bcd22db803851, type: 2}
-  - {fileID: 11400000, guid: c54245e2bab4a71428dd89b00b877b30, type: 2}
-  - {fileID: 11400000, guid: c4a7fbfe7eb706c4d955e6838c5ccd40, type: 2}
-  - {fileID: 11400000, guid: c5aec9d5b1908a745847f95c353edba9, type: 2}
-  - {fileID: 11400000, guid: dcef91aa4e1986241bfa3a802b34f1a2, type: 2}
-  - {fileID: 11400000, guid: 03e7aa74177e15741854762bb0872233, type: 2}
-  - {fileID: 11400000, guid: c4387a6d010277542b94eef6761f3b36, type: 2}
-  - {fileID: 11400000, guid: fa5666d1f5675754e9f077dca4bb5e79, type: 2}
-  - {fileID: 11400000, guid: 7acefaaa408f8024e904f21338684b4c, type: 2}
-  - {fileID: 11400000, guid: c0439ff2d6026e741a83de4176d4efc4, type: 2}
-  - {fileID: 11400000, guid: 9dd5ceaf445f4a84299a1c9405a44465, type: 2}
-  - {fileID: 11400000, guid: 0ade8d9e59be8d94bb0862669d446936, type: 2}
-  - {fileID: 11400000, guid: 37a61166e6baa2242a4d52c0d02e65a5, type: 2}
-  - {fileID: 11400000, guid: 2f87256a0d7c9594abf6408d610e4bce, type: 2}
-  - {fileID: 11400000, guid: 1306ef3b5ee240249a5ddde499032b58, type: 2}
-  - {fileID: 11400000, guid: 7d7afcf44d4d52b4b931421c049ce555, type: 2}
-  - {fileID: 11400000, guid: 3ca39920b5437524181cc588797849df, type: 2}
-  - {fileID: 11400000, guid: 6417d69e25b360a41bdd25298dcc0b3c, type: 2}
-  - {fileID: 11400000, guid: f958019ea33af704f917b75028f49f9f, type: 2}
-  - {fileID: 11400000, guid: 6f4291e2e3eedad4c91d53189bbe3afa, type: 2}
-  harvestDatas:
-  - {fileID: 11400000, guid: 81e1b63c61ccadd49841ee01e914fdc9, type: 2}
-  - {fileID: 11400000, guid: b006248c959069d44be4e0ae76c9cfbf, type: 2}
-  player: {fileID: 1887224207}
-  gameManager: {fileID: 0}
 --- !u!1 &1118138558
 GameObject:
   m_ObjectHideFlags: 0
@@ -22766,6 +22749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_crunch
+  followClickSFX: 
 --- !u!114 &1118138562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23888,7 +23872,7 @@ MonoBehaviour:
   localLocalizationManager: {fileID: 1171903433}
   localDefaultFont: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   localLocalizedFont: {fileID: 11400000, guid: d54505607bd63d348a9eaf192a9b3d54, type: 2}
-  localSaveManager: {fileID: 1115752122}
+  localSaveManager: {fileID: 0}
   localPauseMenu: {fileID: 1610945725}
   localLogbook: {fileID: 2137739624}
   localRerollManager: {fileID: 1604126751}
@@ -24000,6 +23984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_crunch
+  followClickSFX: 
 --- !u!114 &1254849004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30976,7 +30961,7 @@ Transform:
   - {fileID: 1171903432}
   - {fileID: 667188654}
   - {fileID: 1932391474}
-  - {fileID: 1115752121}
+  - {fileID: 495358529}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455858250
@@ -36548,6 +36533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_click
+  followClickSFX: 
 --- !u!114 &1604126749
 MonoBehaviour:
   m_ObjectHideFlags: 0
