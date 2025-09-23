@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 7487871363670155234}
   - component: {fileID: 8208304713792981109}
   - component: {fileID: 7209851729694360734}
+  - component: {fileID: 3898845615706410201}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -579,6 +580,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3898845615706410201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532330549125425093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
+  followClickSFX: 
 --- !u!1 &4570021907059412678
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,14 +858,14 @@ MonoBehaviour:
   m_text: Game Paused
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
-  m_sharedMaterial: {fileID: -2546489003944781649, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 664a744b644b25342becb683bce687cb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281345597
-  m_fontColor: {r: 0.2392157, g: 0.14901961, b: 0.18823531, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -990,6 +1006,7 @@ GameObject:
   - component: {fileID: 8924906845169320143}
   - component: {fileID: 6536634296451590671}
   - component: {fileID: 3803135323725352514}
+  - component: {fileID: 2808198947877653107}
   m_Layer: 5
   m_Name: LogbookButton
   m_TagString: Untagged
@@ -1111,6 +1128,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2808198947877653107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414746824188952143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
+  followClickSFX: 
 --- !u!1 &6499382051004774456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1155,7 @@ GameObject:
   - component: {fileID: 9066606433707542713}
   - component: {fileID: 4891766697690332483}
   - component: {fileID: 3938493169921195463}
+  - component: {fileID: 5764883320060360555}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -1244,6 +1277,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5764883320060360555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6499382051004774456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
+  followClickSFX: 
 --- !u!1 &6949074185582126716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1612,7 @@ GameObject:
   - component: {fileID: 3096703982587883645}
   - component: {fileID: 3050626383963632237}
   - component: {fileID: 7031841098756319662}
+  - component: {fileID: 7020399491213752603}
   m_Layer: 5
   m_Name: HomeButton
   m_TagString: Untagged
@@ -1685,3 +1734,18 @@ MonoBehaviour:
           m_StringArgument: TitleScreen
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7020399491213752603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942088317025164786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe780f0c737f7964886db4bd683176e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightSFX: ui_hover
+  clickSFX: ui_click
+  followClickSFX: 

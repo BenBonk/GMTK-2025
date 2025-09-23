@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.UI;
+using JetBrains.Annotations;
 
 public class GameManager : MonoBehaviour
 {
@@ -271,9 +272,9 @@ public class GameManager : MonoBehaviour
         DisplayPopupWord(localization.timesUp, wordScaleDuration, wordDisplayDuration, true);
         AudioManager.Instance.PlaySFX("time_up");
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // wait before next
-
         if (roundNumber == roundsToWin)
         {
+            AudioManager.Instance.PlaySFX("round_win");
             endlessSelected = false;
             winRoundsText.text = localization.localWinRound.GetLocalizedString() + " " + roundsToWin + " " + localization.localRound.GetLocalizedString();
             winPanel.gameObject.SetActive(true);
@@ -298,13 +299,19 @@ public class GameManager : MonoBehaviour
         }
 
         // Second message
+        double cashGained = endDayCash + cashInterest;
+        //if farmer = farmer0
+        if (true)
+        {
+            cashGained *= 2;
+        }
         localization.localPointsString.Arguments[0] = pointsThisRound;
         localization.localPointsString.RefreshString();
-        localization.localDayComplete.Arguments[0] = endDayCash+cashInterest;
+        localization.localDayComplete.Arguments[0] = cashGained;
         localization.localDayComplete.RefreshString();
         DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");
-        GameController.player.playerCurrency += (endDayCash+cashInterest);
+        GameController.player.playerCurrency += cashGained;
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
         winPanel.gameObject.SetActive(false);
         pauseMenu.canOpenClose = false;

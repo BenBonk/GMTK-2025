@@ -5,6 +5,7 @@ public class ButtonFX : MonoBehaviour, IPointerEnterHandler, IPointerClickHandle
 {
     public string highlightSFX = "ui_hover";
     public string clickSFX = "ui_click";
+    public string followClickSFX = "";
 
     private bool hoveredThisFrame = false;
 
@@ -28,5 +29,7 @@ public class ButtonFX : MonoBehaviour, IPointerEnterHandler, IPointerClickHandle
     {
         if (!string.IsNullOrEmpty(clickSFX))
             AudioManager.Instance?.PlaySFX(clickSFX);
+        if (!string.IsNullOrEmpty(followClickSFX))
+            AudioManager.Instance?.PlaySFX(followClickSFX);
     }
 }

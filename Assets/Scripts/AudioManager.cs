@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -42,7 +43,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance != null)
         {
             Destroy(gameObject);
             return;
@@ -230,6 +231,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator PlaySequentialRoutine(string firstClipName, string secondClipName, float volumeMultiplier, float delayBetween)
     {
+        Debug.Log($" Playing sequential SFX: '{firstClipName}' then '{secondClipName}'");
         if (!sfxDict.TryGetValue(firstClipName, out var firstClip))
         {
             Debug.LogWarning($" First SFX '{firstClipName}' not found!");

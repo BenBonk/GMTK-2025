@@ -896,6 +896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_click
+  followClickSFX: coins
 --- !u!1 &8679000558824838261 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 780330820368758314, guid: 4b15a046ac82ce744873c2884580c370, type: 3}

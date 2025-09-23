@@ -782,6 +782,9 @@ MonoBehaviour:
   price: 0
   canPurchase: 1
   hoverPopup: {fileID: 7310025862920069743}
+  rt: {fileID: 0}
+  partnerUpgrade: {fileID: 0}
+  animalShopItems: []
 --- !u!114 &4565441969384559441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,6 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_click
+  followClickSFX: coins
 --- !u!1 &7235539232512068506
 GameObject:
   m_ObjectHideFlags: 0
