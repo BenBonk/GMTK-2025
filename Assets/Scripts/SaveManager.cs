@@ -2,28 +2,49 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+
 public class SaveManager : MonoBehaviour
 {
+    // ==== FBPP bootstrap (runs before first scene) ====
+    private static bool _fbppStarted;
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void BootstrapFBPP()
+    {
+        StartFBPPIfNeeded();
+    }
+
+    private static void StartFBPPIfNeeded()
+    {
+        if (_fbppStarted) return;
+
+        var config = new FBPPConfig
+        {
+            SaveFileName = "donotopenthislol.txt",
+            AutoSaveData = false,
+            ScrambleSaveData = true,
+            EncryptionSecret = "ifyouseethisyouareahacker",
+            SaveFilePath = Application.persistentDataPath
+        };
+
+        FBPP.Start(config);
+        _fbppStarted = true;
+    }
+    // ================================================
+
     public AnimalData[] animalDatas;
     public Boon[] boonDatas;
     public HarvestData[] harvestDatas;
     public Player player;
     public GameManager gameManager;
+
     void Awake()
     {
-           var config = new FBPPConfig()
-           {
-               SaveFileName = "donotopenthislol.txt",
-               AutoSaveData = false,
-               ScrambleSaveData = true,
-               EncryptionSecret = "ifyouseethisyouareahacker",
-               SaveFilePath = Application.persistentDataPath
-   
-           };
-           FBPP.Start(config);
+        // Safety net in case something tries to touch FBPP very early (e.g., in Editor reload)
+        StartFBPPIfNeeded();
     }
 
-    //Not sure if we want this for production
+    // Not sure if we want this for production
     private void OnApplicationQuit()
     {
         FBPP.Save();
