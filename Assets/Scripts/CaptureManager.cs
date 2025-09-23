@@ -32,146 +32,153 @@ public class CaptureManager : MonoBehaviour
         currencyBonus = 0;
         currencyMult = 1;
 
-        List<Animal> animalsCaptured = new List<Animal>();
-        List<Lassoable> lassoablesCaptured = new List<Lassoable>();
-        foreach (var item in objectsCaptured)
+        int triggers = 1;
+        if (boonManager.ContainsBoon("BlackSheep"))
         {
-            if (item.CompareTag("NonAnimalLassoable"))
+            triggers = 2;
+        }
+        for (int i = 0; i < triggers; i++)
+        {
+            List<Animal> animalsCaptured = new List<Animal>();
+            List<Lassoable> lassoablesCaptured = new List<Lassoable>();
+            foreach (var item in objectsCaptured)
             {
-                Lassoable lassoable = item.GetComponent<Lassoable>();
-                if (lassoable != null)
+                if (item.CompareTag("NonAnimalLassoable"))
                 {
-                    lassoablesCaptured.Add(lassoable);
+                    Lassoable lassoable = item.GetComponent<Lassoable>();
+                    if (lassoable != null)
+                    {
+                        lassoablesCaptured.Add(lassoable);
+                    }
+                }
+                else
+                {
+                    Animal animal = item.GetComponent<Animal>();
+                    if (animal != null)
+                    {
+                        animalsCaptured.Add(animal);
+                    }
                 }
             }
-            else
+
+            var capturedCounts = GetNameCounts(animalsCaptured);
+
+            for (int i = 0; i < player.boonsInDeck.Count; i++)
             {
-                Animal animal = item.GetComponent<Animal>();
-                if (animal != null)
+                if (player.boonsInDeck[i] is not BasicBoon boon)
                 {
-                    animalsCaptured.Add(animal);
+                    continue;
+                }
+                var neededCounts = GetNameCounts(boon.animalsNeeded);
+                Debug.Log($"Checking boon {boon.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
+
+                if (!boon.isExactMatch)
+                {
+                    bool subset = IsSubset(neededCounts, capturedCounts);
+                    Debug.Log($"Non-exact match check for {boon.name}: Result = {subset}");
+                    if (subset) ActivateBoon(boon);
+                }
+
+                else
+                {
+                    if (AreCountsEqual(neededCounts, capturedCounts))
+                        ActivateBoon(boon);
                 }
             }
-        }
 
-        var capturedCounts = GetNameCounts(animalsCaptured);
-
-        for (int i = 0; i < player.boonsInDeck.Count; i++)
-        {
-            if (player.boonsInDeck[i] is not BasicBoon boon)
-            {
-                continue;
-            }
-            var neededCounts = GetNameCounts(boon.animalsNeeded);
-            Debug.Log($"Checking boon {boon.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
-
-            if (!boon.isExactMatch)
-            {
-                bool subset = IsSubset(neededCounts, capturedCounts);
-                Debug.Log($"Non-exact match check for {boon.name}: Result = {subset}");
-                if (subset) ActivateBoon(boon);
-            }
-
-            else
-            {
-                if (AreCountsEqual(neededCounts, capturedCounts))
-                    ActivateBoon(boon);
-            }
-        }
-
-        int totalNonPredatorCount = 0;
-        int totalPredatorCount = 0;
-        int biodiversityBonus = 0;
-        foreach (var animal in animalsCaptured)
-        {
-            if (!animal.isPredator)
-            {
-                totalNonPredatorCount++;
-            }
-            else
-            {
-                totalPredatorCount++;
-            }
-                CaptureAnimal(animal);
-        }
-        foreach (var lassoable in lassoablesCaptured)
-        {
-            currencyBonus += lassoable.currencyToGive;
-            currencyMult *= lassoable.currencyMultToGive;
-            pointBonus += lassoable.pointsToGive;
-            pointMult *= lassoable.pointsMultToGive;
-        }
-
-        if (boonManager.ContainsBoon("Biodiversity"))
-        {
-            HashSet<string> uniqueAnimalNames = new HashSet<string>();
-            foreach (var a in animalsCaptured)
-            {
-                uniqueAnimalNames.Add(a.name);
-            }
-            pointBonus += (5 * uniqueAnimalNames.Count);
-        }
-
-        if (animalsCaptured.Count > FBPP.GetInt("largestCapture"))
-        {
-            FBPP.SetInt("largestCapture", animalsCaptured.Count);
-        }
-
-        if (animalsCaptured.Count >0 && boonManager.ContainsBoon("CaptureClock"))
-        {
-            gameManager.roundDuration += 0.5f;
-        }
-
-        if (totalNonPredatorCount > 1)
-        {
-            pointMult *= 1 + (herdPointMultBonus * animalsCaptured.Count);
-            int groupsOf3 = totalNonPredatorCount / 3;
-            currencyBonus += groupsOf3;
-        }
-
-        if (boonManager.ContainsBoon("GoodBoy"))
-        {
-            if (totalPredatorCount > 0) currencyMult *= 5f;
-        }
-
-        if (boonManager.ContainsBoon("ScapeGoat"))
-        {
-            currencyBonus += (8 * totalPredatorCount);
-            pointBonus += (8 * totalPredatorCount);
-        }
-
-        if (boonManager.ContainsBoon("Mootiplier"))
-        {
-            int cowCount = 0;
+            int totalNonPredatorCount = 0;
+            int totalPredatorCount = 0;
+            int biodiversityBonus = 0;
             foreach (var animal in animalsCaptured)
             {
-                if (animal.animalData.name=="Cow")
+                if (!animal.isPredator)
                 {
-                    cowCount++;
+                    totalNonPredatorCount++;
+                }
+                else
+                {
+                    totalPredatorCount++;
+                }
+                CaptureAnimal(animal);
+            }
+            foreach (var lassoable in lassoablesCaptured)
+            {
+                currencyBonus += lassoable.currencyToGive;
+                currencyMult *= lassoable.currencyMultToGive;
+                pointBonus += lassoable.pointsToGive;
+                pointMult *= lassoable.pointsMultToGive;
+            }
+
+            if (boonManager.ContainsBoon("Biodiversity"))
+            {
+                HashSet<string> uniqueAnimalNames = new HashSet<string>();
+                foreach (var a in animalsCaptured)
+                {
+                    uniqueAnimalNames.Add(a.name);
+                }
+                pointBonus += (5 * uniqueAnimalNames.Count);
+            }
+
+            if (animalsCaptured.Count > FBPP.GetInt("largestCapture"))
+            {
+                FBPP.SetInt("largestCapture", animalsCaptured.Count);
+            }
+
+            if (animalsCaptured.Count > 0 && boonManager.ContainsBoon("CaptureClock"))
+            {
+                gameManager.roundDuration += 0.5f;
+            }
+
+            if (totalNonPredatorCount > 1)
+            {
+                pointMult *= 1 + (herdPointMultBonus * animalsCaptured.Count);
+                int groupsOf3 = totalNonPredatorCount / 3;
+                currencyBonus += groupsOf3;
+            }
+
+            if (boonManager.ContainsBoon("GoodBoy"))
+            {
+                if (totalPredatorCount > 0) currencyMult *= 5f;
+            }
+
+            if (boonManager.ContainsBoon("ScapeGoat"))
+            {
+                currencyBonus += (8 * totalPredatorCount);
+                pointBonus += (8 * totalPredatorCount);
+            }
+
+            if (boonManager.ContainsBoon("Mootiplier"))
+            {
+                int cowCount = 0;
+                foreach (var animal in animalsCaptured)
+                {
+                    if (animal.animalData.name == "Cow")
+                    {
+                        cowCount++;
+                    }
+                }
+                if (cowCount == 0 || totalPredatorCount > 0)
+                {
+                    mootiplierMult = 0;
+                }
+                else
+                {
+                    mootiplierMult += (.25f * cowCount);
                 }
             }
-            if (cowCount == 0 || totalPredatorCount > 0)
-            {
-                mootiplierMult = 0;
-            }
-            else
-            {
-                mootiplierMult += (.25f*cowCount);
-            }
-        }
-        pointMult += mootiplierMult;
+            pointMult += mootiplierMult;
 
-        if (!firstCapture && boonManager.ContainsBoon("EarlyBird"))
-        {
-            firstCapture = true;
-            pointMult *= 2;
-            currencyMult *= 2;
+            if (!firstCapture && boonManager.ContainsBoon("EarlyBird"))
+            {
+                firstCapture = true;
+                pointMult *= 2;
+                currencyMult *= 2;
+            }
+            if (boonManager.ContainsBoon("HailMary") && (gameManager.roundDuration - gameManager.elapsedTime) < 10f)
+            {
+                pointMult *= 2;
+            }
         }
-        if (boonManager.ContainsBoon("HailMary") && (gameManager.roundDuration-gameManager.elapsedTime)<10f)
-        {
-            pointMult *= 2;
-        }
-
         return (pointBonus, pointMult, currencyBonus, currencyMult);
     }
 
