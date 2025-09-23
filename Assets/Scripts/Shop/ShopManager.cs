@@ -74,6 +74,10 @@ public class ShopManager : MonoBehaviour
     }
     private Boon GetRandomSynergy()
     {
+        if (isTut)
+        {
+            return boonGroups[0].boons[Random.Range(0,10)];
+        }
         int weightIndex = 0;
         if (GameController.gameManager.roundNumber>=2)
         {
@@ -103,7 +107,14 @@ public class ShopManager : MonoBehaviour
     public void UpdateCashText()
     {
         cashText.text = cashLocalString.GetLocalizedString() +" "+ LassoController.FormatNumber(player.playerCurrency);
-        roundText.text = roundLocalString.GetLocalizedString() +" "+ (GameController.gameManager.roundNumber);
+        if (!GameController.gameManager)
+        {
+            roundText.text = "";
+        }
+        else
+        {
+            roundText.text = roundLocalString.GetLocalizedString() +" "+ (GameController.gameManager.roundNumber);
+        }
         Sequence pulse = DOTween.Sequence();
         pulse.Append(cashText.transform.DOScale(1.10f, 0.1f).SetEase(Ease.OutBack));
         pulse.Append(cashText.transform.DOShakeRotation(
