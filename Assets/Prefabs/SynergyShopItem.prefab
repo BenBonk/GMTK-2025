@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.28, y: -3.4}
-  m_SizeDelta: {x: 275.11, y: 162.71}
+  m_AnchoredPosition: {x: -0.28, y: 2.5087}
+  m_SizeDelta: {x: 275.11, y: 143.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2719719121348847549
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Capturing exactly 3 pigs gives +100 points
+  m_text: Test description
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   m_sharedMaterial: {fileID: -2546489003944781649, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
@@ -96,9 +96,9 @@ MonoBehaviour:
   m_fontSize: 27.4
   m_fontSizeBase: 27.4
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 27.4
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
