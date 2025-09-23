@@ -178,6 +178,13 @@ public class CaptureManager : MonoBehaviour
             {
                 pointMult *= 2;
             }
+            if (boonManager.ContainsBoon("AbsoluteValue"))
+            {
+                pointBonus = Mathf.Abs((float)pointBonus);
+                pointMult = Mathf.Abs((float)pointMult);
+                currencyBonus = Mathf.Abs((float)currencyBonus);
+                currencyMult = Mathf.Abs((float)currencyMult);
+            }
         }
         return (pointBonus, pointMult, currencyBonus, currencyMult);
     }
