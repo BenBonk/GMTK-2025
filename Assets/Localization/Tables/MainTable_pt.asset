@@ -193,7 +193,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: Baaaa!
+    m_Localized: Baaaaa!
     m_Metadata:
       m_Items: []
   - m_Id: 42
@@ -226,7 +226,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: Chicken Jockey
+    m_Localized: "Frango J\xF3quei"
     m_Metadata:
       m_Items: []
   - m_Id: 50
@@ -444,17 +444,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: "Voc\xEA tamb\xE9m pode adicionar habilidades poderosas que lhe
+    m_Localized: "Voc\xEA tamb\xE9m pode adicionar benef\xEDcios poderosos que lhe
       dar\xE3o pontos extras ao la\xE7ar certas combina\xE7\xF5es de animais"
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: "Por fim, voc\xEA pode melhorar seus animais para que eles lhe d\xEAem
+    m_Localized: "Aqui, voc\xEA pode melhorar seus animais para que eles lhe d\xEAem
       mais pontos e dinheiro!"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: "Agora que voc\xEA sabe o b\xE1sico, vamos come\xE7ar!"
+    m_Localized: "Por fim, voc\xEA pode redefinir a loja uma vez por dia, a um custo
+      que aumenta permanentemente!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -844,8 +845,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801985
-    m_Localized: Os porcos podem aparecer aleatoriamente com uma cartola, se assim
-      for, eles valem +25 em dinheiro
+    m_Localized: Porcos podem aparecer aleatoriamente com uma cartola, se assim for,
+      eles valem +25 em dinheiro
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -1060,6 +1061,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: Muito mais vantagens!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13201600347766784
+    m_Localized: "Agora que voc\xEA sabe o b\xE1sico, vamos come\xE7ar!"
     m_Metadata:
       m_Items: []
   references:

@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -442,17 +442,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: "Puoi anche aggiungere potenti abilit\xE0 che ti daranno punti extra
-      quando prendi al lazo determinate combinazioni di animali"
+    m_Localized: Puoi anche aggiungere potenti doni che ti daranno punti extra quando
+      prendi al lazo determinate combinazioni di animali
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: "Infine, puoi potenziare i tuoi animali in modo che ti diano pi\xF9
+    m_Localized: "Qui puoi potenziare i tuoi animali in modo che ti diano pi\xF9
       punti e denaro!"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: Ora che conosci le basi, cominciamo!
+    m_Localized: Infine, puoi rinnovare il negozio una volta al giorno, a un costo
+      che aumenta in modo permanente!
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -722,7 +723,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -796,7 +797,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Sempre pi\xF9 veloce"
+    m_Localized: "Per sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -884,7 +885,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1059,6 +1060,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: Tanti altri vantaggi!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13201600347766784
+    m_Localized: Ora che conosci le basi, cominciamo!
     m_Metadata:
       m_Items: []
   references:

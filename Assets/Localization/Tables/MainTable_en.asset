@@ -439,17 +439,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: You can also add powerful abilities that will give you extra points
+    m_Localized: You can also add powerful boons that will give you extra points
       when lassoing certain combinations of animals
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: Lastly, you can upgrade your animals so that they will give you
-      more points and cash!
+    m_Localized: Here, you can upgrade your animals so that they will give you more
+      points and cash!
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: Now that you know the basics, let's get started!
+    m_Localized: Finally, you can reroll the shop once per day, at a cost that increases
+      permanently!
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -1047,6 +1048,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: Loads more boons!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13201600347766784
+    m_Localized: Now that you know the basics, let's get started!
     m_Metadata:
       m_Items: []
   references:

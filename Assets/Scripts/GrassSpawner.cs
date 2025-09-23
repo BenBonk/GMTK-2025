@@ -17,11 +17,16 @@ public class GrassSpawner : MonoBehaviour
     private Vector2 spawnAreaMin;
     private Vector2 spawnAreaMax;
     private List<Vector2> placedPositions = new List<Vector2>();
+    public bool spawnOnStart;
 
     void Start()
     {
        //SpawnGrass();
        CalculateSpawnAreaFromRectTransform();
+       if (spawnOnStart)
+       {
+           SpawnGrass();
+       }
     }
 
     public void SpawnGrass()

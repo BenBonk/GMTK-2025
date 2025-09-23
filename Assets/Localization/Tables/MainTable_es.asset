@@ -443,17 +443,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: "Tambi\xE9n puedes agregar habilidades poderosas que te dar\xE1n
-      puntos extra al enlazar ciertas combinaciones de animales."
+    m_Localized: "Tambi\xE9n puedes agregar beneficios poderosos que te dar\xE1n
+      puntos adicionales al enlazar ciertas combinaciones de animales."
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: "\xA1Por \xFAltimo, puedes mejorar tus animales para que te den
-      m\xE1s puntos y dinero!"
+    m_Localized: "\xA1Aqu\xED puedes mejorar tus animales para que te den m\xE1s
+      puntos y dinero!"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: "Ahora que ya sabes lo b\xE1sico, \xA1comencemos!"
+    m_Localized: "\xA1Por fin puedes renovar la tienda una vez al d\xEDa, con un
+      coste que aumenta permanentemente!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -498,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
+    m_Localized: "\xA1Bienvenido al Libro de Registro!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -1063,6 +1064,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: "\xA1Muchas m\xE1s ventajas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13201600347766784
+    m_Localized: "Ahora que ya sabes lo b\xE1sico, \xA1comencemos!"
     m_Metadata:
       m_Items: []
   references:

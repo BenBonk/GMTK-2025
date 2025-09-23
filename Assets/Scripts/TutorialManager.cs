@@ -54,6 +54,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject arrowSet2;
     public GameObject arrowSet3;
     public GameObject arrowSet4;
+    public GameObject arrowSet5;
 
     public static TutorialManager _instance;
     public LocalizedString[] tutorialStrings;
@@ -432,8 +433,11 @@ public class TutorialManager : MonoBehaviour
         buttonBlocker5.SetActive(false);
         buttonBlocker6.SetActive(true);
         arrowSet4.SetActive(true);  
-        yield return ShowMessage2(tutorialStrings[13].GetLocalizedString(), 7.5f);
-        yield return ShowMessage2(tutorialStrings[14].GetLocalizedString(),0.5f);
+        yield return ShowMessage2(tutorialStrings[13].GetLocalizedString(),7.5f);
+        buttonBlocker6.SetActive(false);
+        arrowSet5.SetActive(true);  
+        yield return ShowMessage2(tutorialStrings[14].GetLocalizedString(), 7.5f);
+        yield return ShowMessage2(tutorialStrings[15].GetLocalizedString(),0.5f);
         levelLoader.LoadCertainScene("TitleScreen");
     }
 
