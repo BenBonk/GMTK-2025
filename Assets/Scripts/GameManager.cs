@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI lassosDisplay;
     public RectTransform deathPanel;
     public RectTransform winPanel;
+    public RectTransform playArea;
     public TMP_Text roundNumberDeath;
     public TMP_Text winRoundsText;
     public LassoController lassoController;

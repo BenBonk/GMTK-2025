@@ -37,7 +37,7 @@ public class CaptureManager : MonoBehaviour
         {
             triggers = 2;
         }
-        for (int i = 0; i < triggers; i++)
+        for (int t = 0; t < triggers; t++)
         {
             List<Animal> animalsCaptured = new List<Animal>();
             List<Lassoable> lassoablesCaptured = new List<Lassoable>();

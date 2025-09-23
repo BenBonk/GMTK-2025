@@ -30,7 +30,27 @@ public class Dog : Animal
         // Initialize zig timer & initial vertical dir
         verticalDirection = (Random.value > 0.5f) ? +1 : -1;
         zigTimer = Mathf.Max(0.01f, zigZagDuration);
+        if (!legendary)
+        {
+            SetStartingEdge();
+        }
     }
+
+    private void SetStartingEdge()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        float halfHeight = sr != null ? sr.bounds.extents.y : 0.5f; // fallback if not found
+        float range = halfHeight; // 1 dog height range
+        bool startAtTop = Random.value > 0.5f;
+        float yMin = startAtTop ? (topLimitY - range) : (bottomLimitY);
+        float yMax = startAtTop ? (topLimitY) : (bottomLimitY + range);
+        Vector3 pos = transform.position;
+        pos.y = Random.Range(yMin, yMax);
+        transform.position = pos;
+        verticalDirection = startAtTop ? -1 : 1;
+    }
+
+
     public override void ActivateLegendary()
     {
         speed = 4.5f;
