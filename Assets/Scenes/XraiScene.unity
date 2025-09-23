@@ -10642,7 +10642,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &253319088
 RectTransform:
@@ -13190,6 +13190,7 @@ GameObject:
   - component: {fileID: 512336463}
   - component: {fileID: 512336462}
   - component: {fileID: 512336464}
+  - component: {fileID: 512336465}
   m_Layer: 5
   m_Name: CurrencyText
   m_TagString: Untagged
@@ -13329,6 +13330,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterialOverride: {fileID: 2100000, guid: 664a744b644b25342becb683bce687cb, type: 2}
   localMaterialOverride: {fileID: 2100000, guid: 527196cfb4be471449ff2f196f054f9e, type: 2}
+--- !u!223 &512336465
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512336460}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -14889,6 +14913,7 @@ GameObject:
   - component: {fileID: 778507703}
   - component: {fileID: 778507702}
   - component: {fileID: 778507704}
+  - component: {fileID: 778507705}
   m_Layer: 5
   m_Name: LassoText
   m_TagString: Untagged
@@ -15028,6 +15053,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterialOverride: {fileID: 0}
   localMaterialOverride: {fileID: 0}
+--- !u!223 &778507705
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778507700}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &784450389
 GameObject:
   m_ObjectHideFlags: 0
@@ -27343,7 +27391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 0
+  isTesting: 1
   player: {fileID: 1887224207}
   harvestLevel: 1
   startingPointRequirement: 65
@@ -28288,6 +28336,7 @@ GameObject:
   - component: {fileID: 1403220864}
   - component: {fileID: 1403220863}
   - component: {fileID: 1403220865}
+  - component: {fileID: 1403220866}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -28427,6 +28476,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterialOverride: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
   localMaterialOverride: {fileID: 2100000, guid: 9a55bc2297f73834aa5f56ac5e9f916a, type: 2}
+--- !u!223 &1403220866
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403220861}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &1405798327
 GameObject:
   m_ObjectHideFlags: 0
@@ -35580,6 +35652,7 @@ MonoBehaviour:
   minDistanceBetweenGrass: 0.5
   spawnAreaRectTransform: {fileID: 573234385}
   sortingOrder: -1
+  spawnOnStart: 0
 --- !u!1 &1730215459
 GameObject:
   m_ObjectHideFlags: 0
@@ -36266,6 +36339,7 @@ GameObject:
   - component: {fileID: 1792826537}
   - component: {fileID: 1792826536}
   - component: {fileID: 1792826539}
+  - component: {fileID: 1792826540}
   m_Layer: 5
   m_Name: TimerText
   m_TagString: Untagged
@@ -36405,6 +36479,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMaterialOverride: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
   localMaterialOverride: {fileID: 2100000, guid: 9a55bc2297f73834aa5f56ac5e9f916a, type: 2}
+--- !u!223 &1792826540
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792826534}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1001 &1808476958
 PrefabInstance:
   m_ObjectHideFlags: 0

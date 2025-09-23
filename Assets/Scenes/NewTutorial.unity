@@ -25836,6 +25836,7 @@ GameObject:
   - component: {fileID: 1409558982}
   - component: {fileID: 1409558981}
   - component: {fileID: 1409558980}
+  - component: {fileID: 1409558983}
   m_Layer: 5
   m_Name: TimerText
   m_TagString: Untagged
@@ -25975,6 +25976,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409558978}
   m_CullTransparentMesh: 1
+--- !u!223 &1409558983
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409558978}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &1411330701
 GameObject:
   m_ObjectHideFlags: 0
@@ -36450,6 +36474,7 @@ GameObject:
   - component: {fileID: 1595638470}
   - component: {fileID: 1595638469}
   - component: {fileID: 1595638468}
+  - component: {fileID: 1595638471}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -36589,6 +36614,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595638466}
   m_CullTransparentMesh: 1
+--- !u!223 &1595638471
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595638466}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &1604126745
 GameObject:
   m_ObjectHideFlags: 0
@@ -45042,6 +45090,7 @@ GameObject:
   - component: {fileID: 1998365624}
   - component: {fileID: 1998365623}
   - component: {fileID: 1998365622}
+  - component: {fileID: 1998365625}
   m_Layer: 5
   m_Name: LassoText
   m_TagString: Untagged
@@ -45181,6 +45230,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998365620}
   m_CullTransparentMesh: 1
+--- !u!223 &1998365625
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998365620}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &2033239592
 GameObject:
   m_ObjectHideFlags: 0
@@ -45193,6 +45265,7 @@ GameObject:
   - component: {fileID: 2033239596}
   - component: {fileID: 2033239595}
   - component: {fileID: 2033239594}
+  - component: {fileID: 2033239597}
   m_Layer: 5
   m_Name: CurrencyText
   m_TagString: Untagged
@@ -45332,6 +45405,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033239592}
   m_CullTransparentMesh: 1
+--- !u!223 &2033239597
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033239592}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1001 &2044476895
 PrefabInstance:
   m_ObjectHideFlags: 0
