@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 3184159518366690391, guid: b6ada73c9f252f149a349a2d2ca49cf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,5 +159,11 @@ MonoBehaviour:
   tiltFrequency: 5
   maxTiltAmplitude: 4
   legendary: 0
+  forceExit: 0
   bonusPoints: 0
+  leftIsPositiveScaleX: 1
+  attractBrakeRadius: 2
+  attractArriveRadius: 0.25
+  attractSmoothTime: 0.25
+  attractStopThreshold: 0.02
   blackSheep: {fileID: 21300000, guid: ce8b9758b0564774fa908221c104edc6, type: 3}
