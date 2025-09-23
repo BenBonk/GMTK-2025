@@ -136,7 +136,7 @@ public class TutorialManager : MonoBehaviour
     public void StartRound()
     {
         pointsThisRound = 0;
-        scoreDisplay.text = "POINTS: " + pointsThisRound + " / 50";
+        scoreDisplay.text = "POINTS: " + pointsThisRound + " / 100";
         timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
         currencyDisplay.text = "CASH: " + player.playerCurrency;
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
