@@ -71,6 +71,7 @@ public class LassoController : MonoBehaviour
     public Color positiveMultColor;
     public Color negativeMultColor;
     public bool canLasso;
+    private PauseMenu pauseMenu;
 
     LocalizationManager localization;
 
@@ -81,13 +82,14 @@ public class LassoController : MonoBehaviour
 
     private void Start()
     {
+        pauseMenu = GameController.pauseMenu;
         localization = GameController.localizationManager;
         boonManager = GameController.boonManager;
     }
 
     void Update()
     {
-        if (!canLasso) return;
+        if (!canLasso || pauseMenu.isOpen) return;
 
         if (Input.GetMouseButtonDown(0))
         {

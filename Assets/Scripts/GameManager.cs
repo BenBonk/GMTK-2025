@@ -315,7 +315,6 @@ public class GameManager : MonoBehaviour
         GameController.player.playerCurrency += cashGained;
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
         winPanel.gameObject.SetActive(false);
-        pauseMenu.canOpenClose = false;
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
             endDayCash -= 15;
@@ -461,6 +460,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ShowReadySetLassoSequence()
     {
+        pauseMenu.canOpenClose = true;
         string[] readySetLasso = { localReady.GetLocalizedString(), localSet.GetLocalizedString(), localLasso.GetLocalizedString() };
         for (int i = 0; i < 3; i++)
         {
@@ -483,8 +483,6 @@ public class GameManager : MonoBehaviour
             }
             yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // small delay before next word
         }
-
-        pauseMenu.canOpenClose = true;
     }
 
     private Vector3 GetCenterScreenWorldPosition()
