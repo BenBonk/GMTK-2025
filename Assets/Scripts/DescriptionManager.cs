@@ -70,27 +70,27 @@ public class DescriptionManager : MonoBehaviour
         if (basicBoon.pointsBonus != 0)
         {
             description += basicBoon.pointsBonus < 0
-                ? $"{pointsLoss.GetLocalizedString()}{basicBoon.pointsBonus}\n"
-                : $"{pointsBonus.GetLocalizedString()} +{basicBoon.pointsBonus}\n";
+                ? $"{pointsLoss.GetLocalizedString()} <color=#FEE761>{basicBoon.pointsBonus}</color>\n"
+                : $"{pointsBonus.GetLocalizedString()} <color=#FEE761>+{basicBoon.pointsBonus}</color>\n";
         }
 
         if (basicBoon.pointsMult != 1)
         {
-            description += $"{pointsMult.GetLocalizedString()} x{basicBoon.pointsMult}\n";
+            description += $"{pointsMult.GetLocalizedString()} <color=#F6757A>x{basicBoon.pointsMult}</color>\n";
         }
 
         if (basicBoon.currencyBonus != 0)
         {
             description += basicBoon.currencyBonus < 0
-                ? $"{cashLoss.GetLocalizedString()} {basicBoon.currencyBonus}\n"
-                : $"{cashBonus.GetLocalizedString()} +{basicBoon.currencyBonus}\n";
+                ? $"{cashLoss.GetLocalizedString()} <color=#FEE761>{basicBoon.currencyBonus}</color>\n"
+                : $"{cashBonus.GetLocalizedString()} <color=#FEE761>+{basicBoon.currencyBonus}</color>\n";
         }
 
         if (basicBoon.currencyMult != 0)
         {
             description += basicBoon.currencyMult < 0 
-                ? $"{cashMult.GetLocalizedString()}{basicBoon.currencyMult}\n"
-                : $"{cashMult.GetLocalizedString()} +{basicBoon.currencyMult}\n";
+                ? $"{cashMult.GetLocalizedString()} <color=#F6757A>{basicBoon.currencyMult}</color>\n"
+                : $"{cashMult.GetLocalizedString()} <color=#F6757A>+{basicBoon.currencyMult}</color>\n";
         }
 
         return description.TrimEnd('\n');
