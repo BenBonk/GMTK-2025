@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 5
   currencyMult: 0
   pointsBonus: 1
-  pointsMult: 0
+  pointsMult: 1
   animalsNeeded:
   - Pig
   references:

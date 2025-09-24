@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 25
   currencyMult: 1
   pointsBonus: 0
-  pointsMult: 0
+  pointsMult: 1
   animalsNeeded:
   - Horse
   - Horse

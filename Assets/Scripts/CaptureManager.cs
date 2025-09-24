@@ -106,7 +106,7 @@ public class CaptureManager : MonoBehaviour
                 currencyBonus += lassoable.currencyToGive;
                 currencyMult += lassoable.currencyMultToGive;
                 pointBonus += lassoable.pointsToGive;
-                pointMult += lassoable.pointsMultToGive;
+                pointMult *= lassoable.pointsMultToGive;
             }
 
             if (boonManager.ContainsBoon("Biodiversity"))
@@ -131,7 +131,7 @@ public class CaptureManager : MonoBehaviour
 
             if (totalNonPredatorCount > 1)
             {
-                pointMult += herdPointMultBonus * animalsCaptured.Count;
+                pointMult *= 1+ (herdPointMultBonus * animalsCaptured.Count);
                 int groupsOf3 = totalNonPredatorCount / 3;
                 currencyBonus += groupsOf3;
             }
@@ -171,12 +171,12 @@ public class CaptureManager : MonoBehaviour
             if (!firstCapture && boonManager.ContainsBoon("EarlyBird"))
             {
                 firstCapture = true;
-                pointMult += 2;
+                pointMult *= 2;
                 currencyMult += 2;
             }
             if (boonManager.ContainsBoon("HailMary") && (gameManager.roundDuration - gameManager.elapsedTime) < 10f)
             {
-                pointMult += 2;
+                pointMult *= 2;
             }
             if (boonManager.ContainsBoon("AbsoluteValue"))
             {
@@ -194,7 +194,7 @@ public class CaptureManager : MonoBehaviour
         currencyBonus += boon.currencyBonus;
         currencyMult += boon.currencyMult;
         pointBonus += boon.pointsBonus;
-        pointMult +=  boon.pointsMult;
+        pointMult *=  boon.pointsMult;
         Debug.Log($"Boon activated: {boon.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
     }
 
@@ -210,7 +210,7 @@ public class CaptureManager : MonoBehaviour
         currencyBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.animalData.currencyToGive;
         currencyMult += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;
         pointBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.pointsLevelUpIncrease + capturedAnimal.animalData.pointsToGive;
-        pointMult += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.animalData.pointsMultToGive;
+        pointMult *= (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.pointsLevelUpMult + capturedAnimal.animalData.pointsMultToGive;
         pointBonus += capturedAnimal.bonusPoints;
         int numberAnimalsWrangled = FBPP.GetInt("numberAnimalsWrangled");
         FBPP.SetInt("numberAnimalsWrangled", numberAnimalsWrangled+1);

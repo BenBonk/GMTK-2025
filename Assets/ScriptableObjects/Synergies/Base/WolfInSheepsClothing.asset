@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 11
   currencyMult: 1
   pointsBonus: 11
-  pointsMult: 1
+  pointsMult: 2
   animalsNeeded:
   - Wolf
   - Sheep

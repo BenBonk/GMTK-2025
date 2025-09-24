@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 10
   currencyMult: 0
   pointsBonus: 20
-  pointsMult: 0
+  pointsMult: 1
   animalsNeeded:
   - Wolf
   references:

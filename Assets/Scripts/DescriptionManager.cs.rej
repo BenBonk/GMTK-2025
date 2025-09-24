@@ -1,0 +1,17 @@
+diff a/Assets/Scripts/DescriptionManager.cs b/Assets/Scripts/DescriptionManager.cs	(rejected hunks)
+@@ -30,10 +30,13 @@
+                 ? $"{pointsLoss.GetLocalizedString()} {points}\n"
+                 : $"{pointsBonus.GetLocalizedString()} +{points}\n";
+         }
+-        if (animalData.pointsMultToGive != 1f)
++        if (animalData.pointsMultToGive != 0f)
+         {
++        
+             float mult = animalData.pointsMultToGive + (level * animalData.pointsLevelUpMult);
+-            description += $"{pointsMult.GetLocalizedString()} x{mult}\n";
++            description += mult < 0
++                ? $"{pointsMult.GetLocalizedString()} {mult}\n"
++                : $"{pointsMult.GetLocalizedString()} +{mult}\n";
+         }
+         if (animalData.currencyToGive != 0)
+         {

@@ -30,13 +30,10 @@ public class DescriptionManager : MonoBehaviour
                 ? $"{pointsLoss.GetLocalizedString()} {points}\n"
                 : $"{pointsBonus.GetLocalizedString()} +{points}\n";
         }
-        if (animalData.pointsMultToGive != 0f)
+        if (animalData.pointsMultToGive != 1f)
         {
-        
             float mult = animalData.pointsMultToGive + (level * animalData.pointsLevelUpMult);
-            description += mult < 0
-                ? $"{pointsMult.GetLocalizedString()} {mult}\n"
-                : $"{pointsMult.GetLocalizedString()} +{mult}\n";
+            description += $"{pointsMult.GetLocalizedString()} x{mult}\n";
         }
         if (animalData.currencyToGive != 0)
         {
@@ -77,11 +74,9 @@ public class DescriptionManager : MonoBehaviour
                 : $"{pointsBonus.GetLocalizedString()} +{basicBoon.pointsBonus}\n";
         }
 
-        if (basicBoon.pointsMult != 0)
+        if (basicBoon.pointsMult != 1)
         {
-            description += basicBoon.pointsMult < 0 
-                ? $"{pointsMult.GetLocalizedString()}{basicBoon.pointsMult}\n"
-                : $"{pointsMult.GetLocalizedString()} +{basicBoon.pointsMult}\n";
+            description += $"{pointsMult.GetLocalizedString()} x{basicBoon.pointsMult}\n";
         }
 
         if (basicBoon.currencyBonus != 0)
@@ -117,7 +112,7 @@ public class DescriptionManager : MonoBehaviour
         {
             float initial = animalLevel * animalData.pointsLevelUpMult + animalData.pointsMultToGive;
             float after = initial + animalData.pointsLevelUpMult;
-            description += $"{points.GetLocalizedString()} +{initial} -> +{after}\n";
+            description += $"{points.GetLocalizedString()} x{initial} -> x{after}\n";
         }
 
         if (animalData.currencyLevelUpIncrease != 0)

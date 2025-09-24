@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 10
   currencyMult: 0.5
   pointsBonus: 10
-  pointsMult: 0.5
+  pointsMult: 1.5
   animalsNeeded:
   - Fox
   - Chicken

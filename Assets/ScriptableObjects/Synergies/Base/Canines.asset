@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 10
   currencyMult: 1.5
   pointsBonus: 20
-  pointsMult: 1.5
+  pointsMult: 2.5
   animalsNeeded:
   - Dog
   - Wolf

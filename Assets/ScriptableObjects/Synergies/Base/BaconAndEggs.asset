@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 10
   currencyMult: 0
   pointsBonus: 0
-  pointsMult: 0.5
+  pointsMult: 1.5
   animalsNeeded:
   - Pig
   - Chicken

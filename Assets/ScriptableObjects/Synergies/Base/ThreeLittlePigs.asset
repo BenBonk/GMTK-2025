@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 3
   currencyMult: 1
   pointsBonus: 33
-  pointsMult: 2
+  pointsMult: 3
   animalsNeeded:
   - Pig
   - Pig
