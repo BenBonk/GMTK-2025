@@ -2,7 +2,6 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using UnityEngine;
-using static Unity.VisualScripting.Metadata;
 using DG.Tweening;
 using Random = UnityEngine.Random;
 using TMPro;
