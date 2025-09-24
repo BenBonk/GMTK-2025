@@ -73,7 +73,7 @@ public class DescriptionManager : MonoBehaviour
                 ? $"{pointsLoss.GetLocalizedString()} <color=#FEE761>{basicBoon.pointsBonus}</color>\n"
                 : $"{pointsBonus.GetLocalizedString()} <color=#FEE761>+{basicBoon.pointsBonus}</color>\n";
         }
-
+//tes
         if (basicBoon.pointsMult != 1)
         {
             description += $"{pointsMult.GetLocalizedString()} <color=#F6757A>x{basicBoon.pointsMult}</color>\n";
