@@ -34,9 +34,9 @@ MonoBehaviour:
   price: 210
   isExactMatch: 0
   currencyBonus: 3
-  currencyMult: 2
+  currencyMult: 1
   pointsBonus: 33
-  pointsMult: 3
+  pointsMult: 2
   animalsNeeded:
   - Pig
   - Pig

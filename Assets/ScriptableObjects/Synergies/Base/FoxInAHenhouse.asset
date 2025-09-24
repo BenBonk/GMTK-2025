@@ -34,9 +34,9 @@ MonoBehaviour:
   price: 250
   isExactMatch: 0
   currencyBonus: 0
-  currencyMult: 1
+  currencyMult: 0
   pointsBonus: 0
-  pointsMult: 6
+  pointsMult: 5
   animalsNeeded:
   - Fox
   - Chicken

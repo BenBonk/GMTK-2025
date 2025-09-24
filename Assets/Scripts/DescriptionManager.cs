@@ -30,10 +30,13 @@ public class DescriptionManager : MonoBehaviour
                 ? $"{pointsLoss.GetLocalizedString()} {points}\n"
                 : $"{pointsBonus.GetLocalizedString()} +{points}\n";
         }
-        if (animalData.pointsMultToGive != 1f)
+        if (animalData.pointsMultToGive != 0f)
         {
+        
             float mult = animalData.pointsMultToGive + (level * animalData.pointsLevelUpMult);
-            description += $"{pointsMult.GetLocalizedString()} x{mult}\n";
+            description += mult < 0
+                ? $"{pointsMult.GetLocalizedString()} {mult}\n"
+                : $"{pointsMult.GetLocalizedString()} +{mult}\n";
         }
         if (animalData.currencyToGive != 0)
         {
@@ -42,10 +45,12 @@ public class DescriptionManager : MonoBehaviour
                 ? $"{cashLoss.GetLocalizedString()} {cash}\n"
                 : $"{cashBonus.GetLocalizedString()} +{cash}\n";
         }
-        if (animalData.currencyMultToGive != 1f)
+        if (animalData.currencyMultToGive != 0f)
         {
             float mult = animalData.currencyMultToGive + (level * animalData.currencyLevelUpMult);
-            description += $"{cashMult.GetLocalizedString()} x{mult}\n";
+            description += mult < 0
+                ? $"{pointsMult.GetLocalizedString()} {mult}\n"
+                : $"{pointsMult.GetLocalizedString()} +{mult}\n";
         }
 
         return description;
@@ -72,9 +77,11 @@ public class DescriptionManager : MonoBehaviour
                 : $"{pointsBonus.GetLocalizedString()} +{basicBoon.pointsBonus}\n";
         }
 
-        if (basicBoon.pointsMult != 1)
+        if (basicBoon.pointsMult != 0)
         {
-            description += $"{pointsMult.GetLocalizedString()} x{basicBoon.pointsMult}\n";
+            description += basicBoon.pointsMult < 0 
+                ? $"{pointsMult.GetLocalizedString()}{basicBoon.pointsMult}\n"
+                : $"{pointsMult.GetLocalizedString()} +{basicBoon.pointsMult}\n";
         }
 
         if (basicBoon.currencyBonus != 0)
@@ -84,9 +91,11 @@ public class DescriptionManager : MonoBehaviour
                 : $"{cashBonus.GetLocalizedString()} +{basicBoon.currencyBonus}\n";
         }
 
-        if (basicBoon.currencyMult != 1)
+        if (basicBoon.currencyMult != 0)
         {
-            description += $"{cashMult.GetLocalizedString()} x{basicBoon.currencyMult}\n";
+            description += basicBoon.currencyMult < 0 
+                ? $"{cashMult.GetLocalizedString()}{basicBoon.currencyMult}\n"
+                : $"{cashMult.GetLocalizedString()} +{basicBoon.currencyMult}\n";
         }
 
         return description.TrimEnd('\n');
@@ -108,7 +117,7 @@ public class DescriptionManager : MonoBehaviour
         {
             float initial = animalLevel * animalData.pointsLevelUpMult + animalData.pointsMultToGive;
             float after = initial + animalData.pointsLevelUpMult;
-            description += $"{points.GetLocalizedString()} x{initial} -> x{after}\n";
+            description += $"{points.GetLocalizedString()} +{initial} -> +{after}\n";
         }
 
         if (animalData.currencyLevelUpIncrease != 0)
@@ -122,7 +131,7 @@ public class DescriptionManager : MonoBehaviour
         {
             float initial = animalLevel * animalData.currencyLevelUpMult + animalData.currencyMultToGive;
             float after = initial + animalData.currencyLevelUpMult;
-            description += $"{cash.GetLocalizedString()} x{initial} -> x{after}\n";
+            description += $"{cash.GetLocalizedString()} +{initial} -> +{after}\n";
         }
 
         return description;

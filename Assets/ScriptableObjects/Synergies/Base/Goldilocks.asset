@@ -36,7 +36,7 @@ MonoBehaviour:
   currencyBonus: 50
   currencyMult: 100
   pointsBonus: 1
-  pointsMult: 1
+  pointsMult: 0
   animalsNeeded:
   - Bear
   - Bear

@@ -34,9 +34,9 @@ MonoBehaviour:
   price: 200
   isExactMatch: 0
   currencyBonus: 10
-  currencyMult: 1
+  currencyMult: 0
   pointsBonus: 0
-  pointsMult: 1.5
+  pointsMult: 0.5
   animalsNeeded:
   - Pig
   - Chicken

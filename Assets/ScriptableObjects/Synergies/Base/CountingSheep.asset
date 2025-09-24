@@ -34,9 +34,9 @@ MonoBehaviour:
   price: 100
   isExactMatch: 0
   currencyBonus: 3
-  currencyMult: 1
+  currencyMult: 0
   pointsBonus: 0
-  pointsMult: 2.5
+  pointsMult: 1.5
   animalsNeeded:
   - Sheep
   - Sheep

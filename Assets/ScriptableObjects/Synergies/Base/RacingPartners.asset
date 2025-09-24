@@ -34,9 +34,9 @@ MonoBehaviour:
   price: 175
   isExactMatch: 0
   currencyBonus: 10
-  currencyMult: 1
+  currencyMult: 0
   pointsBonus: 50
-  pointsMult: 2
+  pointsMult: 1
   animalsNeeded:
   - Horse
   - Dog

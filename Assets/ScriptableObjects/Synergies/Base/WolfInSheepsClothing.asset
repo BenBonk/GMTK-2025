@@ -34,9 +34,9 @@ MonoBehaviour:
   price: 115
   isExactMatch: 0
   currencyBonus: 11
-  currencyMult: 2
+  currencyMult: 1
   pointsBonus: 11
-  pointsMult: 2
+  pointsMult: 1
   animalsNeeded:
   - Wolf
   - Sheep

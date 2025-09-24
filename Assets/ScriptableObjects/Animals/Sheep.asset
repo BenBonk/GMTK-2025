@@ -36,10 +36,11 @@ MonoBehaviour:
   animSpeed: 0.5
   animalPrefab: {fileID: 4343735686979232033, guid: a50a71460273671499dfbb3900b93489, type: 3}
   legendaryBoon: {fileID: 11400000, guid: dc5e629fae05a044980da2c109ad8852, type: 2}
+  isPredator: 0
   pointsToGive: 5
-  pointsMultToGive: 1
+  pointsMultToGive: 0
   currencyToGive: 2
-  currencyMultToGive: 1
+  currencyMultToGive: 0
   pointsLevelUpIncrease: 1
   pointsLevelUpMult: 0.01
   currencyLevelUpIncrease: 1

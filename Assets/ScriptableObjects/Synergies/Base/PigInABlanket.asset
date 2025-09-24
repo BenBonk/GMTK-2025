@@ -34,9 +34,9 @@ MonoBehaviour:
   price: 175
   isExactMatch: 0
   currencyBonus: 5
-  currencyMult: 1
+  currencyMult: 0
   pointsBonus: 30
-  pointsMult: 1.5
+  pointsMult: 0.5
   animalsNeeded:
   - Pig
   - Sheep

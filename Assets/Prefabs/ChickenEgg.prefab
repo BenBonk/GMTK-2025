@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToGive: 0
-  pointsMultToGive: 1.5
+  pointsMultToGive: 0.5
   currencyToGive: 0
-  currencyMultToGive: 1
+  currencyMultToGive: 0

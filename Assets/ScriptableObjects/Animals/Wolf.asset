@@ -38,9 +38,9 @@ MonoBehaviour:
   legendaryBoon: {fileID: 11400000, guid: acbe53ecfb7b89d48b751e020585f72a, type: 2}
   isPredator: 1
   pointsToGive: -2
-  pointsMultToGive: 0.5
+  pointsMultToGive: -0.5
   currencyToGive: -2
-  currencyMultToGive: 0.5
+  currencyMultToGive: -0.5
   pointsLevelUpIncrease: 2
   pointsLevelUpMult: 0.05
   currencyLevelUpIncrease: 0
