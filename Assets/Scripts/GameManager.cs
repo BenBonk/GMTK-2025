@@ -153,10 +153,13 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
-
+    
     public void StartRound()
     {
+        if (!pauseMenu.isOpen)
+        {
+            pauseMenu.canOpenClose = true;   
+        }
         if (boonManager.ContainsBoon("Pocketwatch"))
         {
             roundDuration += 5;
@@ -336,6 +339,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            pauseMenu.canOpenClose = false;
             GameController.rerollManager.Reset();
             GameController.shopManager.InitializeAllUpgrades();
             GoToShop();
@@ -366,6 +370,7 @@ public class GameManager : MonoBehaviour
                 {
                     GameController.shopManager.cantPurchaseItem = false;
                     shopButtonBlocker.SetActive(false);
+                    pauseMenu.canOpenClose = true;
                 });
             }
         );
@@ -378,6 +383,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        pauseMenu.canOpenClose = false;
         schemeManager.SetRandomScheme();
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
