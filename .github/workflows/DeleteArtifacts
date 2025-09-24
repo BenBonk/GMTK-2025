@@ -1,0 +1,16 @@
+name: Delete All Artifacts
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Cleanup
+        uses: jimschubert/delete-artifacts-action@v1
+        with:
+          min_bytes: '0'
+      
+      
+  
