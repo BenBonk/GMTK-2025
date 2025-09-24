@@ -160,48 +160,81 @@ public class Animal : MonoBehaviour
 
     public void SetVerticalLimits(RectTransform rect, Camera worldCam = null)
     {
-        if (!rect) return;
-        if (!worldCam) worldCam = Camera.main;
+        // Resolve camera: prefer the canvas camera if this rect is on a non-overlay canvas
+        if (!worldCam)
+        {
+            if (rect)
+            {
+                var root = rect.GetComponentInParent<Canvas>()?.rootCanvas;
+                if (root && root.renderMode != RenderMode.ScreenSpaceOverlay && root.worldCamera)
+                    worldCam = root.worldCamera;
+            }
+            if (!worldCam) worldCam = Camera.main;
+        }
+        if (!worldCam) return;
 
         // Distance from camera to this object along camera forward (works for ortho and perspective)
-        float zDist = Vector3.Dot(transform.position - worldCam.transform.position, worldCam.transform.forward);
+        float zDist = Mathf.Abs(Vector3.Dot(transform.position - worldCam.transform.position, worldCam.transform.forward));
 
-        // Sprite half-height (optional)
+        // Sprite half-height so we keep the whole sprite inside
         float halfHeight = 0f;
         var sr = GetComponent<SpriteRenderer>();
         if (sr) halfHeight = sr.bounds.extents.y;
 
-        // Determine which camera to use to convert UI world->screen
-        Camera uiCam = null;
-        var rootCanvas = rect.GetComponentInParent<Canvas>()?.rootCanvas;
-        if (rootCanvas && rootCanvas.renderMode != RenderMode.ScreenSpaceOverlay)
-            uiCam = rootCanvas.worldCamera ? rootCanvas.worldCamera : Camera.main;
-
-        // Get rect world corners, then convert to screen points
-        Vector3[] wc = new Vector3[4];
-        rect.GetWorldCorners(wc);
-        float minX = float.PositiveInfinity, maxX = float.NegativeInfinity;
-        float minY = float.PositiveInfinity, maxY = float.NegativeInfinity;
-
-        for (int i = 0; i < 4; i++)
+        if (rect)
         {
-            Vector2 sp = RectTransformUtility.WorldToScreenPoint(uiCam, wc[i]);
-            if (sp.x < minX) minX = sp.x;
-            if (sp.x > maxX) maxX = sp.x;
-            if (sp.y < minY) minY = sp.y;
-            if (sp.y > maxY) maxY = sp.y;
+            // Convert rect corners to screen pixels
+            Vector3[] wc = new Vector3[4];
+            rect.GetWorldCorners(wc);
+
+            var root = rect.GetComponentInParent<Canvas>()?.rootCanvas;
+            bool overlay = root && root.renderMode == RenderMode.ScreenSpaceOverlay;
+
+            float minX = float.PositiveInfinity, maxX = float.NegativeInfinity;
+            float minY = float.PositiveInfinity, maxY = float.NegativeInfinity;
+
+            for (int i = 0; i < 4; i++)
+            {
+                Vector2 sp = RectTransformUtility.WorldToScreenPoint(overlay ? null : worldCam, wc[i]);
+                if (sp.x < minX) minX = sp.x;
+                if (sp.x > maxX) maxX = sp.x;
+                if (sp.y < minY) minY = sp.y;
+                if (sp.y > maxY) maxY = sp.y;
+            }
+
+            // Clamp to the camera's visible pixel rect so offscreen UI does not skew results
+            Rect pr = worldCam.pixelRect;
+            minY = Mathf.Max(minY, pr.yMin);
+            maxY = Mathf.Min(maxY, pr.yMax);
+            float centerX = Mathf.Clamp(0.5f * (minX + maxX), pr.xMin, pr.xMax);
+
+            // If the rect is completely outside the camera view, fall back to camera bounds
+            if (minY > maxY)
+            {
+                Vector3 topV = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 1f, zDist));
+                Vector3 botV = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 0f, zDist));
+                topLimitY = topV.y - halfHeight;
+                bottomLimitY = botV.y + halfHeight;
+                return;
+            }
+
+            // Project those screen pixels back to the object plane
+            Vector3 topWorld = worldCam.ScreenToWorldPoint(new Vector3(centerX, maxY, zDist));
+            Vector3 botWorld = worldCam.ScreenToWorldPoint(new Vector3(centerX, minY, zDist));
+
+            topLimitY = topWorld.y - halfHeight;
+            bottomLimitY = botWorld.y + halfHeight;
         }
-
-        // Use the rect's horizontal center to reduce perspective skew
-        float centerX = 0.5f * (minX + maxX);
-
-        // Project screen Y back to world at the object plane
-        Vector3 topWorld = worldCam.ScreenToWorldPoint(new Vector3(centerX, maxY, zDist));
-        Vector3 botWorld = worldCam.ScreenToWorldPoint(new Vector3(centerX, minY, zDist));
-
-        topLimitY = topWorld.y - halfHeight;
-        bottomLimitY = botWorld.y + halfHeight;
+        else
+        {
+            // No rect provided: use full camera viewport (respects letterbox/pillarbox)
+            Vector3 topWorld = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 1f, zDist));
+            Vector3 botWorld = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 0f, zDist));
+            topLimitY = topWorld.y - halfHeight;
+            bottomLimitY = botWorld.y + halfHeight;
+        }
     }
+
 
     protected float ClampY(float y)
     {
