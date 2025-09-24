@@ -33,28 +33,6 @@ jobs:
           git lfs pull
           git add .
           git reset --hard  
-
-      - name: Conventional Changelog Action
-        uses: TriPSs/conventional-changelog-action@v3
-        id: github_release
-        with:
-           github-token: ${{ secrets.GITHUB_TOKEN }}
-           release-count: '0'
-           skip-tag: true
-            
-  #  test:
-    # name: Testing
-   #  runs-on: ubuntu-latest
-  #   steps:
-  #    - name: Testing
-    #    uses: game-ci/unity-test-runner@v4
-     #   env:
-     #     UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-     #     UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-    #      UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-    #    with:
-    #      githubToken: ${{ secrets.GITHUB_TOKEN }}
-
           
     buildForWindowsAndMac:
       needs: [prepare]
