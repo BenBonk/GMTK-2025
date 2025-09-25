@@ -130,11 +130,11 @@ public class DescriptionManager : MonoBehaviour
             float initial = animalLevel * animalData.pointsLevelUpMult + animalData.pointsMultToGive;
             float after = initial + animalData.pointsLevelUpMult;
             description += initial < 1
-                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{initial}</color> -> "
-                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{initial}</color> -> ";
+                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{initial.ToString("0.0", CultureInfo.InvariantCulture)}</color> -> "
+                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{initial.ToString("0.0", CultureInfo.InvariantCulture)}</color> -> ";
             description += after < 1
-                ? $"<color=#FC0043>x{after}</color>\n"
-                : $"<color=#FE7B81>x</color><color=#FEE761>{after}</color>\n";
+                ? $"<color=#FC0043>x{after.ToString("0.0", CultureInfo.InvariantCulture)}</color>\n"
+                : $"<color=#FE7B81>x</color><color=#FEE761>{after.ToString("0.0", CultureInfo.InvariantCulture)}</color>\n";
         }
 
         if (animalData.currencyLevelUpIncrease != 0)
@@ -154,11 +154,11 @@ public class DescriptionManager : MonoBehaviour
             float initial = animalLevel * animalData.currencyLevelUpMult + animalData.currencyMultToGive;
             float after = initial + animalData.currencyLevelUpMult;
             description += initial < 0
-                ? $"{cashMult.GetLocalizedString()} <color=#FC0043>{initial}x</color> -> "
-:               $"{cashMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{initial}x</color> -> ";
+                ? $"{cashMult.GetLocalizedString()} <color=#FC0043>{initial.ToString("0.0", CultureInfo.InvariantCulture)}x</color> -> "
+:               $"{cashMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{initial.ToString("0.0", CultureInfo.InvariantCulture)}x</color> -> ";
             description += after < 0
-                ? $"<color=#FC0043>{after}x</color>\n"
-                : $"<color=#68C84D>+</color><color=#FEE761>{after}x</color>\n";
+                ? $"<color=#FC0043>{after.ToString("0.0", CultureInfo.InvariantCulture)}x</color>\n"
+                : $"<color=#68C84D>+</color><color=#FEE761>{after.ToString("0.0", CultureInfo.InvariantCulture)}x</color>\n";
         }
 
         return description;
