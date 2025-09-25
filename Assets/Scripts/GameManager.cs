@@ -211,15 +211,11 @@ public class GameManager : MonoBehaviour
         {
             roundDuration -= 5;
         }
-        if (lassoController.lineRenderer != null)
-        {
-            Destroy(lassoController.lineRenderer.gameObject);
-        }
         roundCompleted = true;
         roundInProgress = false;
         elapsedTime = 0;
         playerReady = false;
-        lassoController.canLasso = false;
+        
 
         //UNCOMMENT BELOW FOR PROD
 
@@ -246,7 +242,13 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CheckIfStillDead()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.25f);
+        lassoController.canLasso = false;
+        if (lassoController.lineRenderer != null)
+        {
+            Destroy(lassoController.lineRenderer.gameObject);
+        }
+        yield return new WaitForSeconds(1.75f);
         if (pointsThisRound >= GetPointsRequirement() || boonManager.ContainsBoon("FairyBottle"))
         {
             deathPanel.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
@@ -275,7 +277,13 @@ public class GameManager : MonoBehaviour
         // First message
         DisplayPopupWord(localization.timesUp, wordScaleDuration, wordDisplayDuration, true);
         AudioManager.Instance.PlaySFX("time_up");
-        yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // wait before next
+        yield return new WaitForSeconds(0.25f);
+        lassoController.canLasso = false;
+        if (lassoController.lineRenderer != null)
+        {
+            Destroy(lassoController.lineRenderer.gameObject);
+        }
+        yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.25f); // wait before next
         if (roundNumber == roundsToWin)
         {
             AudioManager.Instance.PlaySFX("round_win");

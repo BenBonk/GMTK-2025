@@ -101,6 +101,7 @@ public class SaveManager : MonoBehaviour
         FBPP.DeleteInt("rerollPrice");
         FBPP.SetInt("harvestLevel", harvestLevel);
         GameController.animalLevelManager.ResetLevels();
+        FBPP.SetBool("playerHasSave", true);
         FBPP.Save();
     }
 
@@ -111,6 +112,7 @@ public class SaveManager : MonoBehaviour
         FBPP.SetString("animalsInDeck", GetSOList(player.animalsInDeck));
         FBPP.SetString("boonsInDeck", GetSOList(player.boonsInDeck));
         FBPP.SetInt("harvestLevel", GameController.gameManager.harvestLevel);
+        FBPP.SetBool("playerHasSave", true);
         FBPP.Save();
     }
 

@@ -23,10 +23,12 @@ public class StartScreenManager : MonoBehaviour
         AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,true);
         if (GameController.saveManager.PlayerHasSave())
         {
+            Debug.Log("Has Save Data");
             hasSaveData.SetActive(true);
         }
         else
         {
+            Debug.Log("No Save Data");
             noSaveData.SetActive(true);
         }
 
