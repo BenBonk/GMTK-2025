@@ -90,7 +90,7 @@ jobs:
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
           versioning: Semantic
-          buildName: Slimekeep
+          buildName: WrangleRanch
           customParameters:  -Development -CompressWithLz4HC
       - uses: actions/upload-artifact@v4
         with:
