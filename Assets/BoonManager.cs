@@ -9,7 +9,7 @@ public class BoonManager : MonoBehaviour
     
 
     // Dictionary for fast lookup: key = boon name, value = Boon object
-    private Dictionary<string, Boon> boonDict = new Dictionary<string, Boon>();
+    public Dictionary<string, Boon> boonDict = new Dictionary<string, Boon>();
 
     private void Start()
     {

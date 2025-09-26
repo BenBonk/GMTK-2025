@@ -24,9 +24,9 @@ public class SynergySlots : MonoBehaviour
             Boon newBoon = shopManager.overridingBoon;
             canOverrideBoon = false;
             deckCards[index].Initialize(newBoon.synergyName.GetLocalizedString(), newBoon.desc.GetLocalizedString(), newBoon.art, descriptionManager.GetBoonDescription(newBoon));
-            GameController.boonManager.RemoveBoon(player.boonsInDeck[index]);
+            GameController.boonManager.boonDict.Remove(player.boonsInDeck[index].name);
             player.boonsInDeck[index] = newBoon;
-            GameController.boonManager.AddBoon(player.boonsInDeck[index]);
+            GameController.boonManager.boonDict.Add(newBoon.name, newBoon);
             shopManager.overridingBoon = null;
             shopManager.cantPurchaseItem = false;
             shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);
