@@ -413,6 +413,7 @@ public class TutorialManager : MonoBehaviour
         yield return ShowMessage(tutorialStrings[8].GetLocalizedString(),1f);
 
         GoToShop();
+        GameController.gameManager.lassoController.canLasso = false;
         yield return new WaitForSeconds(4f);
 
         yield return ShowMessage2(tutorialStrings[9].GetLocalizedString(),1f);
@@ -435,6 +436,9 @@ public class TutorialManager : MonoBehaviour
         arrowSet4.SetActive(true);  
         yield return ShowMessage2(tutorialStrings[13].GetLocalizedString(),7.5f);
         buttonBlocker6.SetActive(false);
+        buttonBlocker2.SetActive(true);
+        buttonBlocker4.SetActive(false);
+        buttonBlocker7.SetActive(true);
         arrowSet5.SetActive(true);  
         yield return ShowMessage2(tutorialStrings[14].GetLocalizedString(), 7.5f);
         yield return ShowMessage2(tutorialStrings[15].GetLocalizedString(),0.5f);

@@ -900,6 +900,123 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2975289431060504662, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
   m_PrefabInstance: {fileID: 204327244}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &241790567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 241790569}
+  - component: {fileID: 241790568}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &241790568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241790567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTesting: 0
+  player: {fileID: 0}
+  harvestLevel: 1
+  startingPointRequirement: 65
+  roundNumber: 0
+  roundInProgress: 0
+  playerReady: 0
+  roundCompleted: 0
+  roundDuration: 45
+  roundsToWin: 20
+  maxSynergies: 5
+  elapsedTime: 0
+  predatorRoundFrequency: 3
+  wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
+  endRoundPrefab: {fileID: 3484454060116296803, guid: c01d5805210ba0c459e6a670098a123a, type: 3}
+  wordScaleDuration: 0.3
+  wordDisplayDuration: 0.7
+  lassoMaterialPreset: {fileID: 2100000, guid: d63150e0e8bb11a4bad9908e891b2c4b, type: 2}
+  defaultMaterialPreset: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
+  cameraController: {fileID: 0}
+  barn: {fileID: 0}
+  barnCameraTarget: {fileID: 0}
+  barnAnimator: {fileID: 0}
+  animalShopItem: {fileID: 0}
+  timerNormalColor: {r: 0.75294125, g: 0.7960785, b: 0.86274517, a: 1}
+  timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
+  shopButtonBlocker: {fileID: 0}
+  endDayCash: 50
+  isTutorial: 1
+  scoreDisplay: {fileID: 0}
+  timerDisplay: {fileID: 0}
+  currencyDisplay: {fileID: 0}
+  lassosDisplay: {fileID: 0}
+  deathPanel: {fileID: 0}
+  winPanel: {fileID: 0}
+  playArea: {fileID: 0}
+  roundNumberDeath: {fileID: 0}
+  winRoundsText: {fileID: 0}
+  lassoController: {fileID: 1615761884}
+  pointsRequirementGrowthRate: 1.3
+  localReady:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 3
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  localSet:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 1416843862691840
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  localLasso:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 1416843892051968
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  schemeManager: {fileID: 0}
+  fairyBottleInstance: {fileID: 11400000, guid: 2e3525a5b1c76ca468ae4964bfb81180, type: 2}
+  foxThiefStolenStats: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []
+--- !u!4 &241790569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241790567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9453896, y: -0.8987676, z: 0.03721572}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &242820955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23967,7 +24084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localPlayer: {fileID: 1887224207}
   localShopManager: {fileID: 1978151920}
-  localGameManager: {fileID: 0}
+  localGameManager: {fileID: 241790568}
   localCaptureManager: {fileID: 1180304515}
   localAnimalLevelManager: {fileID: 1455858252}
   localPredatorSelect: {fileID: 1969989785}
@@ -30928,7 +31045,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1436592585
 Animator:
   serializedVersion: 7
@@ -46744,3 +46861,4 @@ SceneRoots:
   - {fileID: 1436592587}
   - {fileID: 481510748}
   - {fileID: 1449460421}
+  - {fileID: 241790569}

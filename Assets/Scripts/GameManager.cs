@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     public int endDayCash = 50;
     private int cashInterest = 0;
     private bool endlessSelected = false;
-    
+    public bool isTutorial;
 
 
     //private int _lassosUsedThisRound;
@@ -113,6 +113,10 @@ public class GameManager : MonoBehaviour
         localization = GameController.localizationManager;
         boonManager = GameController.boonManager;
         captureManager = GameController.captureManager;
+        if (isTutorial)
+        {
+            return;
+        }
         saveManager.LoadGameData();
         ApplyHarvestLevel();
         if (isTesting)
