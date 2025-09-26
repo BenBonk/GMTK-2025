@@ -10044,7 +10044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1322.27, y: 634.5}
+  m_AnchoredPosition: {x: -1161.4, y: 634.5}
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150976154
@@ -13466,7 +13466,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -25351,7 +25351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1280.8, y: -590.8}
+  m_AnchoredPosition: {x: -1118, y: -590.8}
   m_SizeDelta: {x: 106.25, y: 106.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988524038
@@ -26343,7 +26343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1409.67, y: 634.5}
+  m_AnchoredPosition: {x: 1249, y: 634.5}
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071487690
@@ -27459,6 +27459,7 @@ MonoBehaviour:
   timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
   shopButtonBlocker: {fileID: 1168497080}
   endDayCash: 50
+  isTutorial: 0
   scoreDisplay: {fileID: 1403220863}
   timerDisplay: {fileID: 1792826536}
   currencyDisplay: {fileID: 512336462}
@@ -27858,22 +27859,16 @@ MonoBehaviour:
     - 3
     - 7
     boons:
-    - {fileID: 11400000, guid: 8ddaef5691259284b9cbed83155c28cc, type: 2}
     - {fileID: 11400000, guid: dc5e629fae05a044980da2c109ad8852, type: 2}
-    - {fileID: 11400000, guid: 793061f93357bfe4493791d0322b967d, type: 2}
-    - {fileID: 11400000, guid: e14922af93248674d8a179725e3d9d8c, type: 2}
     - {fileID: 11400000, guid: 897213f1e1e3cbc4cb797742f3269936, type: 2}
-    - {fileID: 11400000, guid: e7bc9af2f82e32c4bba8c2a54f518f32, type: 2}
+    - {fileID: 11400000, guid: acbe53ecfb7b89d48b751e020585f72a, type: 2}
     - {fileID: 11400000, guid: c216efaab03e16a4a82c9a041a5f2e58, type: 2}
     - {fileID: 11400000, guid: 0b4aed0f19d85f44f9e050621c1d4ecd, type: 2}
     - {fileID: 11400000, guid: c9888b5115fcb9f4e910de79b54d00a1, type: 2}
     - {fileID: 11400000, guid: 0574fa9d62ff30642881045a6de3b0ae, type: 2}
     - {fileID: 11400000, guid: 124721a69160a9c4fa3232bbd08df274, type: 2}
-    - {fileID: 11400000, guid: 8a7f2b85f6a83f645be6681b039276ea, type: 2}
     - {fileID: 11400000, guid: 79fdfc6af72fcb04a81be3a9b6104ac6, type: 2}
     - {fileID: 11400000, guid: 334e12ec41fdcd5439c029c789078886, type: 2}
-    - {fileID: 11400000, guid: b6edc94cecfeee3439dcf492b056d57e, type: 2}
-    - {fileID: 11400000, guid: acbe53ecfb7b89d48b751e020585f72a, type: 2}
   references:
     version: 2
     RefIds: []
@@ -35375,7 +35370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -318.96, y: -34.5}
+  m_AnchoredPosition: {x: -318.96, y: -33.2}
   m_SizeDelta: {x: 256.25, y: 93.75}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1667885209
