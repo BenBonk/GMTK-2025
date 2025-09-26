@@ -46,7 +46,7 @@ public class RerollManager : MonoBehaviour
     }
     public void Reroll()
     {
-        if (!canReroll || rerollsPerShop <= 0)
+        if (!canReroll || rerollsPerShop <= 0 || GameController.player.playerCurrency < rerollPrice)
         {
             return;
         }

@@ -361,6 +361,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
+        saveManager.SaveGameData();
         cameraController.AnimateToRect(
             barnCameraTarget,
             delay: .5f,
@@ -423,6 +424,10 @@ public class GameManager : MonoBehaviour
 
     private void UpdatecurrencyDisplay(double newcurrency)
     {
+        if (!roundInProgress)
+        {
+            saveManager.SaveGameData();
+        }
         currencyDisplay.text = $"CASH: {LassoController.FormatNumber(newcurrency)}";
         currencyDisplay.transform.localScale = Vector3.one * 1.1f;
         currencyDisplay.transform.localRotation = Quaternion.identity; // reset

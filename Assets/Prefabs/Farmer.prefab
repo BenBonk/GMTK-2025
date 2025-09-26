@@ -67,6 +67,7 @@ MonoBehaviour:
   desc2: {fileID: 0}
   icon: {fileID: 2683003770188258717}
   hoverPopup: {fileID: 8909807817854563293}
+  subPopup: {fileID: 0}
   bounch: 0
 --- !u!114 &5753062741602714539
 MonoBehaviour:
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: 
+  followClickSFX: 
 --- !u!1 &132465313493713779
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0352e4bfa27f8049aba5fbc89ca39ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  farmerInfo: {fileID: 9182650547871771769}
+  farmerInfo: {fileID: 7952567706955699301}
   farmerImg: {fileID: 0}
   farmerIndex: 0
   unlockedSprite: {fileID: 0}
@@ -588,6 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_click
+  followClickSFX: 
 --- !u!1 &1164991427884157147
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +909,7 @@ MonoBehaviour:
   desc2: {fileID: 0}
   icon: {fileID: 5817301982779929964}
   hoverPopup: {fileID: 1865804421105927161}
+  subPopup: {fileID: 0}
   bounch: 0
 --- !u!114 &2868968059082255063
 MonoBehaviour:
@@ -934,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: 
+  followClickSFX: 
 --- !u!1 &2032336145315191560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1257,7 @@ MonoBehaviour:
   desc2: {fileID: 0}
   icon: {fileID: 1887822848983770548}
   hoverPopup: {fileID: 4268373579701910385}
+  subPopup: {fileID: 0}
   bounch: 0
 --- !u!114 &6066155223554454342
 MonoBehaviour:
@@ -1280,6 +1286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: 
+  followClickSFX: 
 --- !u!1 &4165223933613735465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2165,7 @@ MonoBehaviour:
   desc2: {fileID: 0}
   icon: {fileID: 3609927530372923424}
   hoverPopup: {fileID: 6560053045217996605}
+  subPopup: {fileID: 0}
   bounch: 0
 --- !u!114 &3184828018057855072
 MonoBehaviour:
@@ -2186,6 +2194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: 
+  followClickSFX: 
 --- !u!1 &7410173844530616183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,5 +3039,5 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
