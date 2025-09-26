@@ -230,6 +230,7 @@ public class GameManager : MonoBehaviour
             roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
+            GameController.predatorSelect.darkCover.gameObject.SetActive(true);
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
             StartCoroutine(CheckIfStillDead());
             return;
@@ -256,7 +257,7 @@ public class GameManager : MonoBehaviour
         if (pointsThisRound >= GetPointsRequirement() || boonManager.ContainsBoon("FairyBottle"))
         {
             deathPanel.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
-            GameController.predatorSelect.darkCover.DOFade(0f, 0.5f);
+            GameController.predatorSelect.darkCover.DOFade(0f, 0.5f).OnComplete(()=>GameController.predatorSelect.darkCover.enabled=false);
             yield return new WaitForSeconds(.5f);
             if (boonManager.ContainsBoon("FairyBottle"))
             {
@@ -300,13 +301,14 @@ public class GameManager : MonoBehaviour
             }
             RectTransform children = winPanel.Find("Children") as RectTransform;
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
+            GameController.predatorSelect.darkCover.gameObject.SetActive(true);
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
             while (!endlessSelected)
             {
                 yield return null;
             }
             children.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
-            GameController.predatorSelect.darkCover.DOFade(0f, 0.5f);
+            GameController.predatorSelect.darkCover.DOFade(0f, 0.5f).OnComplete(() => GameController.predatorSelect.darkCover.enabled = false);
             foreach (var ps in winPanel.GetComponentsInChildren<ParticleSystem>(true))
             {
                 ps.Stop();

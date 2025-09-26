@@ -38,6 +38,7 @@ public class PredatorSelect : MonoBehaviour
         predatorPanel1.Initialize(predatorOptions[a].animalName.GetLocalizedString(),desc, predatorOptions[a].sprite, predatorOptions[a]);
         predatorPanel2.Initialize(predatorOptions[b].animalName.GetLocalizedString(),desc2, predatorOptions[b].sprite, predatorOptions[b]);
         yield return new WaitForSeconds(2f);
+        darkCover.enabled = true;
         darkCover.DOFade(0.5f, 0.5f);
         panel1.gameObject.SetActive(true);
         panel2.gameObject.SetActive(true);
@@ -52,7 +53,7 @@ public class PredatorSelect : MonoBehaviour
 
     public IEnumerator Exit()
     {
-        darkCover.DOFade(0, .5f);
+        darkCover.DOFade(0, .5f).OnComplete(() => darkCover.enabled = false);
         yield return new WaitForSeconds(.1f);
         titleText.DOAnchorPosY(530, .5f).SetEase(Ease.InBack).OnComplete(()=>titleText.gameObject.SetActive(false));
         yield return new WaitForSeconds(.25f);

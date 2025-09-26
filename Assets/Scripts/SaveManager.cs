@@ -143,6 +143,7 @@ public class SaveManager : MonoBehaviour
             var match = boonDatas.FirstOrDefault(a => a.name == booon);
             if (match != null)
             {
+                Debug.Log("Loading boon: " + match.name);
                 player.AddBoonToDeck(match);
                 //Debug.Log("Loaded: " + synergy);
             }

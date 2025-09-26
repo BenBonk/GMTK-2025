@@ -92,6 +92,7 @@ public class SynergyShopItem : ShopItem
             {
                 shopManager.synergiesOpen = false;
                 shopManager.ToggleSynergies();  
+                shopManager.darkCover.enabled = true;
                 shopManager.darkCover.DOFade(.75f, 0.5f);
                 shopManager.instructionsText.DOFade(1, 0.5f);
                 shopManager.cantPurchaseItem = true;

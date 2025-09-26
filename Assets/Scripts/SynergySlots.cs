@@ -29,9 +29,10 @@ public class SynergySlots : MonoBehaviour
             GameController.boonManager.AddBoon(player.boonsInDeck[index]);
             shopManager.overridingBoon = null;
             shopManager.cantPurchaseItem = false;
-            shopManager.darkCover.DOFade(0f, 0.5f);
+            shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);
             shopManager.instructionsText.DOFade(0f, 0.5f);
             shopManager.Invoke("ToggleSynergies", 1);
+            GameController.saveManager.SaveGameData();
         }
     }
 }

@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         panel.gameObject.SetActive(true);
         panel.DOAnchorPosY(0, .5f).SetEase(Ease.OutBack).SetUpdate(true);
+        darkCover.enabled = true;
         darkCover.DOFade(0.5f, .5f).OnComplete(()=> canOpenClose = true).SetUpdate(true);
     }
     public void Close()
@@ -42,6 +43,7 @@ public class PauseMenu : MonoBehaviour
     void DoneClose()
     {
         panel.gameObject.SetActive(false);
+        darkCover.enabled = false;
         canOpenClose = true;
     }
 

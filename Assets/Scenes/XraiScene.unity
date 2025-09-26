@@ -10044,7 +10044,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -1161.4, y: 634.5}
+=======
+  m_AnchoredPosition: {x: -1161.4, y: 767.5}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150976154
@@ -10991,6 +10995,7 @@ GameObject:
   - component: {fileID: 263320577}
   - component: {fileID: 263320576}
   - component: {fileID: 263320575}
+  - component: {fileID: 263320578}
   m_Layer: 5
   m_Name: DarkCover
   m_TagString: Untagged
@@ -11015,7 +11020,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 41.68, y: -7.58}
-  m_SizeDelta: {x: 2623.19, y: 1501.77}
+  m_SizeDelta: {x: 3422.04, y: 2360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &263320575
 Canvas:
@@ -11038,7 +11043,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &263320576
 MonoBehaviour:
@@ -11047,14 +11052,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263320573}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.14509805, g: 0.16470589, b: 0.2627451, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11078,6 +11083,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263320573}
   m_CullTransparentMesh: 1
+--- !u!114 &263320578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263320573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &269736285
 GameObject:
   m_ObjectHideFlags: 0
@@ -13459,14 +13481,18 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.055689096
     width: 1
-    height: 1
+    height: 0.8886218
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
+<<<<<<< Updated upstream
   orthographic size: 6.75
+=======
+  orthographic size: 8.007214
+>>>>>>> Stashed changes
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -14092,14 +14118,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584759538}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.09411766, g: 0.078431375, b: 0.14117648, a: 0}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14343,7 +14369,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &628416527
 MonoBehaviour:
@@ -25351,7 +25377,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -1118, y: -590.8}
+=======
+  m_AnchoredPosition: {x: -1118, y: -741}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 106.25, y: 106.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988524038
@@ -26112,7 +26142,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!222 &1026259430
 CanvasRenderer:
@@ -26343,7 +26373,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 1249, y: 634.5}
+=======
+  m_AnchoredPosition: {x: 1249, y: 767.5}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071487690
@@ -27362,7 +27396,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1000
   m_TargetDisplay: 0
 --- !u!114 &1209848616
 MonoBehaviour:
@@ -27431,7 +27465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 0
+  isTesting: 1
   player: {fileID: 1887224207}
   harvestLevel: 1
   startingPointRequirement: 65
@@ -28060,8 +28094,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1313342943}
   - component: {fileID: 1313342945}
-  - component: {fileID: 1313342944}
-  - component: {fileID: 1313342946}
   m_Layer: 5
   m_Name: SelectPredator
   m_TagString: Untagged
@@ -28091,29 +28123,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 88}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!223 &1313342944
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313342942}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 1
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 5
-  m_TargetDisplay: 0
 --- !u!114 &1313342945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28136,23 +28145,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
   - {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
---- !u!114 &1313342946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313342942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1 &1317398617
 GameObject:
   m_ObjectHideFlags: 0
@@ -35346,6 +35338,8 @@ GameObject:
   - component: {fileID: 1667885209}
   - component: {fileID: 1667885212}
   - component: {fileID: 1667885213}
+  - component: {fileID: 1667885215}
+  - component: {fileID: 1667885214}
   m_Layer: 5
   m_Name: LeaveShopButton
   m_TagString: Untagged
@@ -35370,7 +35364,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: -318.96, y: -33.2}
+=======
+  m_AnchoredPosition: {x: -307.6, y: -239.89}
+>>>>>>> Stashed changes
   m_SizeDelta: {x: 256.25, y: 93.75}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1667885209
@@ -35517,6 +35515,46 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   clampAspectToRange: 1
+--- !u!114 &1667885214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667885207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &1667885215
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667885207}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &1671915075
 GameObject:
   m_ObjectHideFlags: 0
@@ -37197,7 +37235,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!1 &1844727761
 GameObject:
