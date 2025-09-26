@@ -35,8 +35,8 @@ public class DescriptionManager : MonoBehaviour
         {
             float mult = animalData.pointsMultToGive + (level * animalData.pointsLevelUpMult);
             description += mult < 1
-                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{FormatAtLeastOneDecimal(mult)}\n</color>"
-                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{FormatAtLeastOneDecimal(mult)}</color>\n";
+                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{Format1or2(mult)}\n</color>"
+                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{Format1or2(mult)}</color>\n";
         }
         if (animalData.currencyToGive != 0)
         {
@@ -49,8 +49,8 @@ public class DescriptionManager : MonoBehaviour
         {
             float mult = animalData.currencyMultToGive + (level * animalData.currencyLevelUpMult);
             description += mult < 0
-                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>{FormatAtLeastOneDecimal(mult)}</color>\n"
-                : $"{pointsMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{FormatAtLeastOneDecimal(mult)}x</color>\n";
+                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>{Format1or2(mult)}x</color>\n"
+                : $"{pointsMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{Format1or2(mult)}x</color>\n";
         }
 
         return description;
@@ -87,8 +87,8 @@ public class DescriptionManager : MonoBehaviour
         if (basicBoon.pointsMult != 1)
         {
             description += basicBoon.pointsMult < 1
-                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{FormatAtLeastOneDecimal(basicBoon.pointsMult)}</color>\n"
-                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{FormatAtLeastOneDecimal(basicBoon.pointsMult)}</color>\n";
+                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{Format1or2(basicBoon.pointsMult)}</color>\n"
+                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{Format1or2(basicBoon.pointsMult)}</color>\n";
         }
 
         if (basicBoon.currencyBonus != 0)
@@ -101,8 +101,8 @@ public class DescriptionManager : MonoBehaviour
         if (basicBoon.currencyMult != 0)
         {
             description += basicBoon.currencyMult < 0
-                ? $"{cashMult.GetLocalizedString()} <color=#FC0043>{FormatAtLeastOneDecimal(basicBoon.currencyMult)}x</color>\n"
-                : $"{cashMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{FormatAtLeastOneDecimal(basicBoon.currencyMult)}x</color>\n";
+                ? $"{cashMult.GetLocalizedString()} <color=#FC0043>{Format1or2(basicBoon.currencyMult)}x</color>\n"
+                : $"{cashMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{Format1or2(basicBoon.currencyMult)}x</color>\n";
         }
 
         return description.TrimEnd('\n');
@@ -130,11 +130,11 @@ public class DescriptionManager : MonoBehaviour
             float initial = animalLevel * animalData.pointsLevelUpMult + animalData.pointsMultToGive;
             float after = initial + animalData.pointsLevelUpMult;
             description += initial < 1
-                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{FormatAtLeastOneDecimal(initial)}</color> -> "
-                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{FormatAtLeastOneDecimal(initial)}</color> -> ";
+                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{Format1or2(initial)}</color> -> "
+                : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{Format1or2(initial)}</color> -> ";
             description += after < 1
-                ? $"<color=#FC0043>x{FormatAtLeastOneDecimal(after)}</color>\n"
-                : $"<color=#FE7B81>x</color><color=#FEE761>{FormatAtLeastOneDecimal(after)}</color>\n";
+                ? $"<color=#FC0043>x{Format1or2(after)}</color>\n"
+                : $"<color=#FE7B81>x</color><color=#FEE761>{Format1or2(after)}</color>\n";
         }
 
         if (animalData.currencyLevelUpIncrease != 0)
@@ -154,23 +154,20 @@ public class DescriptionManager : MonoBehaviour
             float initial = animalLevel * animalData.currencyLevelUpMult + animalData.currencyMultToGive;
             float after = initial + animalData.currencyLevelUpMult;
             description += initial < 0
-                ? $"{cashMult.GetLocalizedString()} <color=#FC0043>{FormatAtLeastOneDecimal(initial)}x</color> -> "
-                : $"{cashMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{FormatAtLeastOneDecimal(initial)}x</color> -> ";
+                ? $"{cashMult.GetLocalizedString()} <color=#FC0043>{Format1or2(initial)}x</color> -> "
+                : $"{cashMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{Format1or2(initial)}x</color> -> ";
             description += after < 0
-                ? $"<color=#FC0043>{FormatAtLeastOneDecimal(after)}x</color>\n"
-                : $"<color=#68C84D>+</color><color=#FEE761>{FormatAtLeastOneDecimal(after)}x</color>\n";
+                ? $"<color=#FC0043>{Format1or2(after)}x</color>\n"
+                : $"<color=#68C84D>+</color><color=#FEE761>{Format1or2(after)}x</color>\n";
         }
 
         return description;
     }
-    static string FormatAtLeastOneDecimal(double x)
-    {
-        // Show as many decimals as needed (no trailing zeros, no scientific notation)
-        string s = x.ToString("0.############################", CultureInfo.InvariantCulture);
 
-        // If it had no decimal point, force one decimal place
-        if (s.IndexOf('.') < 0) s += ".0";
-        return s;
+    static string Format1or2(double x)
+    {
+        x = Math.Round(x, 2, MidpointRounding.AwayFromZero); // kill binary noise
+        return x.ToString("0.0#", CultureInfo.InvariantCulture); // 1 dec min, up to 2
     }
 }
 
