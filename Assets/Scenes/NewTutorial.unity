@@ -932,7 +932,7 @@ MonoBehaviour:
   isTesting: 0
   player: {fileID: 0}
   harvestLevel: 1
-  startingPointRequirement: 65
+  startingPointRequirement: 100
   roundNumber: 0
   roundInProgress: 0
   playerReady: 0
