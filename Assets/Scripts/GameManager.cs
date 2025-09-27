@@ -354,7 +354,6 @@ public class GameManager : MonoBehaviour
         else
         {
             pauseMenu.canOpenClose = false;
-            GameController.rerollManager.Reset();
             GameController.shopManager.InitializeAllUpgrades();
             GoToShop();
         }
@@ -367,6 +366,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
+        GameController.rerollManager.Reset();
         saveManager.SaveGameData();
         cameraController.AnimateToRect(
             barnCameraTarget,
