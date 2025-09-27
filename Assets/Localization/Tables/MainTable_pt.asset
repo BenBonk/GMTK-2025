@@ -863,8 +863,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: As cabras agora atraem todos os predadores na tela, multiplicado
-      por x2 para cada predador capturado com uma cabra
+    m_Localized: As cabras agora atraem todos os predadores na tela, x2 multiplicado
+      por cada predador capturado com uma cabra
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -1031,8 +1031,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "As galinhas agora podem botar ovos que d\xE3o x1,5 pontos de multiplica\xE7\xE3o
-      quando la\xE7ados"
+    m_Localized: "As galinhas agora podem botar ovos que d\xE3o +0,5 pontos de multiplica\xE7\xE3o
+      quando la\xE7adas"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1065,6 +1065,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13201600347766784
     m_Localized: "Agora que voc\xEA sabe o b\xE1sico, vamos come\xE7ar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14715454701920256
+    m_Localized: "Selecione um benef\xEDcio para substituir"
     m_Metadata:
       m_Items: []
   references:

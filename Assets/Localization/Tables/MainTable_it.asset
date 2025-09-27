@@ -872,7 +872,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano statistiche con
+    m_Localized: Le volpi scambiano le statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -885,7 +885,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Branco di lupi
+    m_Localized: branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1030,7 +1030,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: Le galline ora possono deporre uova che danno x1,5 punti moltiplicati
+    m_Localized: Le galline ora possono deporre uova che danno +0,5 punti moltiplicatori
       quando vengono catturate con il lazo
     m_Metadata:
       m_Items: []
@@ -1064,6 +1064,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13201600347766784
     m_Localized: Ora che conosci le basi, cominciamo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14715454701920256
+    m_Localized: Seleziona un vantaggio da sostituire
     m_Metadata:
       m_Items: []
   references:

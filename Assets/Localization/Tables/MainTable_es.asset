@@ -499,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Registro!"
+    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: Viejo Macdonald
+    m_Localized: El viejo Macdonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026
@@ -1034,7 +1034,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "Las gallinas ahora pueden poner huevos que otorgan x1,5 puntos
+    m_Localized: "Las gallinas ahora pueden poner huevos que otorgan +0,5 puntos
       de multiplicaci\xF3n cuando se les lanza un lazo."
     m_Metadata:
       m_Items: []
@@ -1068,6 +1068,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13201600347766784
     m_Localized: "Ahora que ya sabes lo b\xE1sico, \xA1comencemos!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14715454701920256
+    m_Localized: "Seleccione una bendici\xF3n para reemplazar"
     m_Metadata:
       m_Items: []
   references:

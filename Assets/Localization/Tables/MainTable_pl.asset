@@ -938,7 +938,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773802001
     m_Localized: "Zdob\u0105d\u017A +5 punkt\xF3w za ka\u017Cdy inny gatunek upolowany
-      na lasso"
+      za pomoc\u0105 lassa"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -1014,8 +1014,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
-      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
+      w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1056,8 +1056,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "Kury mog\u0105 teraz znosi\u0107 jaja, kt\xF3re daj\u0105 mno\u017Cnik
-      x1,5 po z\u0142apaniu na lasso"
+    m_Localized: "Kury mog\u0105 teraz znosi\u0107 jaja, kt\xF3re daj\u0105 +0,5
+      punkt\xF3w mno\u017Cnika po z\u0142apaniu na lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1090,6 +1090,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13201600347766784
     m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14715454701920256
+    m_Localized: "Wybierz dobro, kt\xF3re chcesz zast\u0105pi\u0107"
     m_Metadata:
       m_Items: []
   references:
