@@ -3220,14 +3220,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.055689096
+    y: 0
     width: 1
-    height: 0.8886218
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.007214
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10672,6 +10672,10 @@ PrefabInstance:
     - target: {fileID: 5082868301947154084, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
+      propertyPath: musicTracks.Array.data[0].volume
+      value: 0.17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
