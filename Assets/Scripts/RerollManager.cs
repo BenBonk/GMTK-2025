@@ -18,10 +18,13 @@ public class RerollManager : MonoBehaviour
     private BoonManager boonManager;
 
     public int rerollsPerShop = 1;
+
+    private int rerollsThisGame;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //FOR TESTING
+        rerollsThisGame = FBPP.GetInt("rerollsThisGame");
         FBPP.SetInt("rerollPrice", 50);
         boonManager = GameController.boonManager;
         rerollPrice = FBPP.GetInt("rerollPrice", startingRerollPrice);
@@ -57,6 +60,12 @@ public class RerollManager : MonoBehaviour
         shopManager.UpdateCashText();
         rerollPrice = Mathf.RoundToInt(rerollPrice * rerollMultIncrease);
         FBPP.SetInt("rerollPrice", rerollPrice);
+        FBPP.SetInt("totalRerolls", FBPP.GetInt("totalRerolls")+1);
+        rerollsThisGame++;
+        if (rerollsThisGame > FBPP.GetInt("mostRerollsInGame"))
+        {
+            FBPP.SetInt("mostRerollsInGame", rerollsThisGame);
+        }
         if (rerollsPerShop<=0)
         {
             transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);

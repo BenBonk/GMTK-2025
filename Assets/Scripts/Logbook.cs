@@ -117,8 +117,8 @@ public class Logbook : MonoBehaviour
         
         econStatTexts[0].text = $"{econStat1.GetLocalizedString()} {FBPP.GetFloat("highestCashPerLasso")}";
         econStatTexts[1].text = $"{econStat2.GetLocalizedString()} {FBPP.GetFloat("highestCash")}";
-        econStatTexts[2].text = $"{econStat3.GetLocalizedString()} TBD";
-        econStatTexts[3].text = $"{econStat4.GetLocalizedString()} TBD";
+        econStatTexts[2].text = $"{econStat3.GetLocalizedString()} {FBPP.GetInt("mostRerollsInGame")}";
+        econStatTexts[3].text = $"{econStat4.GetLocalizedString()} {FBPP.GetInt("totalRerolls")}";
         
         recordsStatTexts[0].text = $"{recordsStat1.GetLocalizedString()} {FBPP.GetInt("highestRound")}";
         recordsStatTexts[1].text = $"{recordsStat2.GetLocalizedString()} TBD";

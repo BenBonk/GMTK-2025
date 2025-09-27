@@ -75,6 +75,7 @@ public class SaveManager : MonoBehaviour
         FBPP.SetString("animalsInDeck", "");
         FBPP.SetString("boonsInDeck", "");
         FBPP.DeleteInt("rerollPrice");
+        FBPP.SetInt("mostRerollsInGame", 0);
         GameController.animalLevelManager.ResetLevels();
     }
 
