@@ -117,8 +117,8 @@ public class SettingsMenu : MonoBehaviour
         }
         resolutionValue = FBPP.GetInt("resolutionValue");
         fullscreenModeValue = FBPP.GetInt("fullscreenModeValue", 0);
-        sfxValue = FBPP.GetFloat("sfxValue", 0.5f);
-        musicValue = FBPP.GetFloat("musicValue", 0.5f);
+        sfxValue = FBPP.GetFloat("sfxValue", 0.75f);
+        musicValue = FBPP.GetFloat("musicValue", 0.75f);
         languageValue = FBPP.GetInt("languageValue");
         vsyncValue = FBPP.GetBool("vsyncValue", true);
         framerateCapValue = FBPP.GetInt("framerateCapValue");
