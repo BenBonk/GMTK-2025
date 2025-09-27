@@ -540,9 +540,10 @@ public class LassoController : MonoBehaviour
             else
                 AudioManager.Instance.PlaySFX("no_cash");
 
-            if (result.currencyBonus > FBPP.GetFloat("highestCashPerLasso"))
+            double total = result.currencyBonus * result.currencyMult;
+            if (total > FBPP.GetFloat("highestCashPerLasso"))
             {
-                FBPP.SetFloat("highestCashPerLasso", (float)result.currencyBonus);
+                FBPP.SetFloat("highestCashPerLasso", (float)total);
             }
             
             
