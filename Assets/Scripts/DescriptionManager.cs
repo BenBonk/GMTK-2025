@@ -49,8 +49,8 @@ public class DescriptionManager : MonoBehaviour
         {
             float mult = animalData.currencyMultToGive + (level * animalData.currencyLevelUpMult);
             description += mult < 0
-                ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>{Format1or2(mult)}x</color>\n"
-                : $"{pointsMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{Format1or2(mult)}x</color>\n";
+                ? $"{cashMult.GetLocalizedString()} <color=#FC0043>{Format1or2(mult)}x</color>\n"
+                : $"{cashMult.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{Format1or2(mult)}x</color>\n";
         }
 
         return description;

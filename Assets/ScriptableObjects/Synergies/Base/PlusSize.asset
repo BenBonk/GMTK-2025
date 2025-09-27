@@ -33,8 +33,8 @@ MonoBehaviour:
   art: {fileID: -2129282658, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
   price: 300
   isExactMatch: 0
-  currencyBonus: 1
-  currencyMult: 10
+  currencyBonus: 2
+  currencyMult: 1
   pointsBonus: 50
   pointsMult: 15
   animalsNeeded:

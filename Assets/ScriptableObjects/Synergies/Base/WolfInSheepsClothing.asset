@@ -34,7 +34,7 @@ MonoBehaviour:
   price: 115
   isExactMatch: 0
   currencyBonus: 11
-  currencyMult: 1
+  currencyMult: 0.5
   pointsBonus: 11
   pointsMult: 2
   animalsNeeded:
