@@ -20,7 +20,7 @@ public class StartScreenManager : MonoBehaviour
     {
             
         InvokeRepeating("SpawnAnimal", 1,Random.Range(1f, 2f));
-        AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,true);
+        AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,false);
         if (GameController.saveManager.PlayerHasSave())
         {
             Debug.Log("Has Save Data");
