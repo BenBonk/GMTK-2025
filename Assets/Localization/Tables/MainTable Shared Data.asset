@@ -67,6 +67,10 @@ MonoBehaviour:
     m_Key: shop.leaveShop
     m_Metadata:
       m_Items: []
+  - m_Id: 14715454701920256
+    m_Key: shop.synergyReplace
+    m_Metadata:
+      m_Items: []
   - m_Id: 11
     m_Key: shop.animalDescPointsLoss
     m_Metadata:

@@ -223,7 +223,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 46
     m_Localized: "\uAC1C, \uC5EC\uC6B0, \uB291\uB300\uAC00 \uD3EC\uD568\uB41C \uB3D9\uBB3C
-      \uADF8\uB8F9\uC744 \uC62C\uAC00\uBBF8\uB85C \uBB36\uC2B5\uB2C8\uB2E4."
+      \uADF8\uB8F9\uC744 \uC62C\uAC00\uBBF8\uB85C \uBB36\uC73C\uC138\uC694"
     m_Metadata:
       m_Items: []
   - m_Id: 47
@@ -349,8 +349,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 74
-    m_Localized: "2\uB9C8\uB9AC\uC758 \uB9D0\uC774 \uD3EC\uD568\uB41C \uB3D9\uBB3C
-      \uADF8\uB8F9\uC744 \uC62C\uAC00\uBBF8\uB85C \uBB36\uC2B5\uB2C8\uB2E4."
+    m_Localized: "2\uB9C8\uB9AC\uC758 \uB9D0\uC744 \uD3EC\uD568\uD558\uB294 \uB3D9\uBB3C
+      \uADF8\uB8F9\uC744 \uC62C\uAC00\uBBF8\uB85C \uBB36\uC73C\uC138\uC694"
     m_Metadata:
       m_Items: []
   - m_Id: 75
@@ -544,7 +544,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
-    m_Localized: "\uC704\uC758 \uD0ED\uC744 \uD074\uB9AD\uD558\uC5EC \uD1B5\uACC4\uC640
+    m_Localized: "\uC704\uC758 \uD0ED\uC744 \uD074\uB9AD\uD574\uC11C \uD1B5\uACC4\uC640
       \uAE30\uB85D\uC744 \uD655\uC778\uD558\uC138\uC694!"
     m_Metadata:
       m_Items: []
@@ -1105,8 +1105,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "\uC774\uC81C \uB2ED\uC740 \uC62C\uAC00\uBBF8\uB85C \uBB36\uC73C\uBA74
-      1.5\uBC30\uC758 \uD3EC\uC778\uD2B8\uB97C \uC5BB\uC744 \uC218 \uC788\uB294 \uC54C\uC744
-      \uB0B3\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+      +0.5\uD3EC\uC778\uD2B8 \uBC30\uC218\uB97C \uC8FC\uB294 \uC54C\uC744 \uB0B3\uC744
+      \uC218 \uC788\uC2B5\uB2C8\uB2E4."
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1141,6 +1141,10 @@ MonoBehaviour:
   - m_Id: 13201600347766784
     m_Localized: "\uC774\uC81C \uAE30\uBCF8 \uC0AC\uD56D\uC744 \uC54C\uC558\uC73C\uB2C8
       \uC2DC\uC791\uD574 \uBCF4\uACA0\uC2B5\uB2C8\uB2E4!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14715454701920256
+    m_Localized: "\uB300\uCCB4\uD560 \uD61C\uD0DD\uC744 \uC120\uD0DD\uD558\uC138\uC694"
     m_Metadata:
       m_Items: []
   references:

@@ -115,7 +115,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs proches vers lui. Immunis\xE9
+    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs \xE0 proximit\xE9. Immunis\xE9
       contre les effets de pouss\xE9e et d'attraction."
     m_Metadata:
       m_Items: []
@@ -918,7 +918,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Gagnez +5 points pour chaque esp\xE8ce diff\xE9rente ma\xEEtris\xE9e
+    m_Localized: "Gagnez +5 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
       par lasso"
     m_Metadata:
       m_Items: []
@@ -1039,7 +1039,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui donnent
-      x1,5 points multiplicateurs lorsqu'elles sont captur\xE9es au lasso"
+      +0,5 points multiplicateur lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1072,6 +1072,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13201600347766784
     m_Localized: "Maintenant que vous connaissez les bases, commen\xE7ons !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14715454701920256
+    m_Localized: "S\xE9lectionnez un avantage \xE0 remplacer"
     m_Metadata:
       m_Items: []
   references:
