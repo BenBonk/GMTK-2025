@@ -3104,6 +3104,7 @@ MonoBehaviour:
   title: {fileID: 1792826534}
   farmerSelect: {fileID: 718314370}
   wishlist: {fileID: 557625534}
+  cantPress: 0
 --- !u!4 &511311564
 Transform:
   m_ObjectHideFlags: 0
@@ -10297,6 +10298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 2038141871}
   transitionTime: 1
+  ss: {fileID: 511311563}
 --- !u!1 &2097036575
 GameObject:
   m_ObjectHideFlags: 0

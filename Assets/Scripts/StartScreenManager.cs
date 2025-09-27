@@ -49,14 +49,22 @@ public class StartScreenManager : MonoBehaviour
         Instantiate(animalsToSpawn[Random.Range(0, animalsToSpawn.Length)], spawnPositions[Random.Range(0, spawnPositions.Length)].position, Quaternion.identity);
     }
 
-
+    public bool cantPress;
     public void InitializeGameData(TMP_Text harvestLevelText)
     {
+        if (cantPress)
+        {
+            return;
+        }
         GameController.saveManager.InitializeSaveData(int.Parse(harvestLevelText.text),GameController.farmerSelectManager.selectedFarmerIndex);
     }
 
     public void ChangeScene()
     {
+        if (cantPress)
+        {
+            return;
+        }
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 2f, true);
     }
 

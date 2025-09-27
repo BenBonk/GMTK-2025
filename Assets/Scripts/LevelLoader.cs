@@ -8,6 +8,7 @@ namespace Level {
         public Animator transition;
         public float transitionTime = 1f;
         private string certainScened;
+        public StartScreenManager ss;
 
         /*
     private void Awake()
@@ -31,6 +32,15 @@ namespace Level {
 
         public void LoadCertainScene(string certainScene)
         {
+            if (ss!=null)
+            {
+                if (ss.cantPress)
+                {
+                    return;   
+                }
+                ss.cantPress = true;
+            }
+            
             Time.timeScale = 1f;
             StartCoroutine(LoadCertainScene());
             certainScened = certainScene;
