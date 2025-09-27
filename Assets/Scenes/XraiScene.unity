@@ -11327,6 +11327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
+      propertyPath: soundEffects.Array.data[15].volume
+      value: 0.55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
