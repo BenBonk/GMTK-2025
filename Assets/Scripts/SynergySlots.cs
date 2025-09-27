@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -31,8 +32,17 @@ public class SynergySlots : MonoBehaviour
             shopManager.cantPurchaseItem = false;
             shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);
             shopManager.instructionsText.DOFade(0f, 0.5f);
-            shopManager.Invoke("ToggleSynergies", 1);
+            StartCoroutine(Wait());
             GameController.saveManager.SaveGameData();
+        }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1);
+        if (shopManager.overridingBoon==null)
+        {
+            shopManager.ToggleSynergies();   
         }
     }
 }
