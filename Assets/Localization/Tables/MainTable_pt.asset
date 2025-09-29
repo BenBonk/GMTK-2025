@@ -845,8 +845,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801985
-    m_Localized: Porcos podem aparecer aleatoriamente com uma cartola, se assim for,
-      eles valem +25 em dinheiro
+    m_Localized: Os porcos podem aparecer aleatoriamente com uma cartola, se assim
+      for, eles valem +50 em dinheiro
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -863,8 +863,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: As cabras agora atraem todos os predadores na tela, x2 multiplicado
-      por cada predador capturado com uma cabra
+    m_Localized: As cabras agora atraem todos os predadores na tela, multiplicado
+      por x2 para cada predador capturado com uma cabra
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -897,7 +897,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Todos os n\xFAmeros negativos agora s\xE3o ignorados"
+    m_Localized: "Todos os n\xFAmeros negativos ser\xE3o pontuados como positivos"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -913,7 +913,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Ganhe +5 pontos para cada esp\xE9cie diferente controlada por la\xE7o"
+    m_Localized: "Ganhe +10 pontos para cada esp\xE9cie diferente controlada por
+      la\xE7o"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -921,7 +922,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +15 em dinheiro no final da rodada
+    m_Localized: "+20 em dinheiro di\xE1rio"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -938,7 +939,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: "+1 dinheiro por animal la\xE7ado"
+    m_Localized: "+2 dinheiro por animal la\xE7ado"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -946,7 +947,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: Ganhe 5% de juros em dinheiro no final de cada rodada
+    m_Localized: Ganhe 10% de juros em dinheiro no final de cada rodada
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802010
@@ -997,7 +998,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "+5 segundos por rodada para la\xE7ar"
+    m_Localized: "A dura\xE7\xE3o da rodada aumentou em 5 segundos"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1031,8 +1032,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "As galinhas agora podem botar ovos que d\xE3o +0,5 pontos de multiplica\xE7\xE3o
-      quando la\xE7adas"
+    m_Localized: "As galinhas agora podem botar ovos que d\xE3o x1,5 pontos de multiplica\xE7\xE3o
+      quando la\xE7ados"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1060,7 +1061,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169348
-    m_Localized: Muito mais vantagens!
+    m_Localized: Muitas outras vantagens!
     m_Metadata:
       m_Items: []
   - m_Id: 13201600347766784

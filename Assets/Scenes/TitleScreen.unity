@@ -3228,7 +3228,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.75
+  orthographic size: 6.750507
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7700,6 +7700,24 @@ MonoBehaviour:
   shopButtonBlocker: {fileID: 0}
   endDayCash: 50
   isTutorial: 0
+  cashLocalString:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  pointsLocalString:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   scoreDisplay: {fileID: 0}
   timerDisplay: {fileID: 0}
   currencyDisplay: {fileID: 0}

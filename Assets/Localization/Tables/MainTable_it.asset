@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -797,7 +797,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Per sempre pi\xF9 veloce"
+    m_Localized: "Sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -846,7 +846,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: I maiali possono apparire casualmente con un cappello a cilindro,
-      in tal caso valgono +25 contanti
+      in tal caso valgono +50 contanti
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -872,7 +872,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano le statistiche con
+    m_Localized: Le volpi scambiano statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -885,7 +885,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -897,7 +897,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: Tutti i numeri negativi vengono ora ignorati
+    m_Localized: Tutti i numeri negativi saranno valutati come positivi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -913,7 +913,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: Guadagna +5 punti per ogni specie diversa catturata con il lazo
+    m_Localized: Guadagna +10 punti per ogni specie diversa catturata con il lazo
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -921,7 +921,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +15 contanti alla fine del round
+    m_Localized: +20 contanti giornalieri
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -937,7 +937,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +1 denaro contante per animale catturato
+    m_Localized: +2 contanti per animale preso al lazo
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -945,7 +945,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: Guadagna il 5% di interessi in contanti alla fine di ogni round
+    m_Localized: Guadagna il 10% di interessi in contanti alla fine di ogni round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802010
@@ -996,7 +996,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: +5 secondi per round per usare il lazo
+    m_Localized: Durata del round aumentata di 5 secondi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1030,7 +1030,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: Le galline ora possono deporre uova che danno +0,5 punti moltiplicatori
+    m_Localized: Le galline ora possono deporre uova che danno x1,5 punti moltiplicati
       quando vengono catturate con il lazo
     m_Metadata:
       m_Items: []

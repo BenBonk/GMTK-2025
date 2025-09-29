@@ -33,7 +33,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Fallback Settings")]
     public string fallbackTrackName = "idle_loop";
-    private bool fallbackPending = false;
+    public bool fallbackPending = false;
 
     private int currentPlaylistIndex = -1;
     private string lastPlayedTrack = "";

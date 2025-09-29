@@ -21,6 +21,7 @@ public class StartScreenManager : MonoBehaviour
             
         InvokeRepeating("SpawnAnimal", 1,Random.Range(1f, 2f));
         AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,false);
+        AudioManager.Instance.fallbackPending = true;
         if (GameController.saveManager.PlayerHasSave())
         {
             Debug.Log("Has Save Data");
@@ -70,6 +71,7 @@ public class StartScreenManager : MonoBehaviour
 
     public void LoadFarmers()
     {
+        AudioManager.Instance.PlaySFX("woosh1");
         hasSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1f).SetEase(Ease.InOutBack);
         noSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1f).SetEase(Ease.InOutBack);
         title.GetComponent<RectTransform>().DOAnchorPosX(-2000, .75f).SetEase(Ease.InOutBack);

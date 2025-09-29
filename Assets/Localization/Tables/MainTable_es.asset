@@ -499,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
+    m_Localized: "\xA1Bienvenido al Libro de Registro!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -820,7 +820,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607692
-    m_Localized: Los osos tienen la oportunidad de hibernar y ganar puntos mientras
+    m_Localized: Los osos tienen la posibilidad de hibernar y ganar puntos mientras
       duermen.
     m_Metadata:
       m_Items: []
@@ -848,7 +848,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Los cerdos pueden aparecer aleatoriamente con un sombrero de copa,
-      si es as\xED valen +25 en efectivo"
+      si es as\xED valen +50 en efectivo"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -899,7 +899,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Ahora se ignoran todos los n\xFAmeros negativos"
+    m_Localized: "Todos los n\xFAmeros negativos se calificar\xE1n como positivos."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -907,7 +907,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Los precios de los animales ahora est\xE1n aleatorios en la tienda."
+    m_Localized: Los precios de los animales ahora son aleatorios en la tienda.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -915,7 +915,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: Gana +5 puntos por cada especie diferente capturada por lazo
+    m_Localized: Gana +10 puntos por cada especie diferente capturada por lazo
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -923,7 +923,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +15 en efectivo al final de la ronda
+    m_Localized: +20 efectivo diario
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -939,7 +939,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +1 en efectivo por animal enlazado
+    m_Localized: +2 en efectivo por animal enlazado
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -947,8 +947,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: "Obtenga un inter\xE9s en efectivo del 5% al \u200B\u200Bfinal de
-      cada ronda"
+    m_Localized: "Obtenga un inter\xE9s en efectivo del 10% al final de cada ronda"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802010
@@ -1000,7 +999,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: +5 segundos por ronda para enlazar
+    m_Localized: "La duraci\xF3n de la ronda aument\xF3 en 5 segundos"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1034,7 +1033,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "Las gallinas ahora pueden poner huevos que otorgan +0,5 puntos
+    m_Localized: "Las gallinas ahora pueden poner huevos que otorgan x1,5 puntos
       de multiplicaci\xF3n cuando se les lanza un lazo."
     m_Metadata:
       m_Items: []

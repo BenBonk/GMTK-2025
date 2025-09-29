@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein
+      mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -829,7 +829,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607692
     m_Localized: "B\xE4ren haben die M\xF6glichkeit, Winterschlaf zu halten und im
-      Schlaf Punkte zu sammeln"
+      Schlaf Punkte zu sammeln."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607693
@@ -856,7 +856,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Schweine k\xF6nnen zuf\xE4llig mit einem Zylinder erscheinen, in
-      diesem Fall sind sie +25 Bargeld wert"
+      diesem Fall sind sie +50 Bargeld wert"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -907,7 +907,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: Alle negativen Zahlen werden jetzt ignoriert
+    m_Localized: Alle negativen Zahlen werden als positiv gewertet
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -923,8 +923,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Verdienen Sie +5 Punkte f\xFCr jede unterschiedliche Art, die Sie
-      mit dem Lasso fangen."
+    m_Localized: "Verdienen Sie +10 Punkte f\xFCr jede unterschiedliche Art, die
+      Sie mit dem Lasso fangen."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -932,7 +932,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +15 Bargeld am Ende der Runde
+    m_Localized: "+20 t\xE4gliches Bargeld"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -948,7 +948,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +1 Bargeld pro eingefangenem Tier
+    m_Localized: +2 Bargeld pro eingefangenem Tier
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -956,7 +956,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: Erhalten Sie am Ende jeder Runde 5 % Zinsen
+    m_Localized: Erhalten Sie am Ende jeder Runde 10 % Zinsen
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802010
@@ -998,8 +998,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
-      Lasso, statt 10 %"
+    m_Localized: "Erhalten Sie f\xFCr jeden Nicht-Raubtier im Lasso einen Punktebonus
+      von +20 % statt 10 %"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1007,7 +1007,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: +5 Sekunden pro Runde zum Lasso
+    m_Localized: "Rundenl\xE4nge um 5 Sekunden erh\xF6ht"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1041,7 +1041,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "H\xFChner k\xF6nnen jetzt Eier legen, die beim Einfangen mit dem
-      Lasso einen Multiplikator von +0,5 Punkten ergeben"
+      Lasso 1,5 Punkte bringen."
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528

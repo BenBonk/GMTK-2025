@@ -25528,7 +25528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
-  clickSFX: ui_crunch
+  clickSFX: reroll
   followClickSFX: coins
 --- !u!114 &988524043
 MonoBehaviour:

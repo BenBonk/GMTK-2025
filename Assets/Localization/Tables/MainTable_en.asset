@@ -813,7 +813,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607692
-    m_Localized: Bears have a chance to hibernate and gain points while sleeping
+    m_Localized: Bears have a chance to hibernate and gain point value while sleeping
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607693
@@ -838,7 +838,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801985
-    m_Localized: Pigs can randomly spawn with a top hat, if so they are worth +25
+    m_Localized: Pigs can randomly spawn with a top hat, if so they are worth +50
       cash
     m_Metadata:
       m_Items: []
@@ -888,7 +888,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: All negative numbers are now ignored
+    m_Localized: 'All negative numbers will be scored as positives '
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -904,7 +904,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: Earn +5 points for each different species wrangled per lasso
+    m_Localized: Earn +10 points for each different species wrangled per lasso
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -912,7 +912,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +15 cash at end of round
+    m_Localized: +20 daily cash
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -928,7 +928,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +1 cash per animal lassoed
+    m_Localized: +2 cash per animal lassoed
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -936,7 +936,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: Gain 5% cash interest at the end of each round
+    m_Localized: Gain 10% cash interest at the end of each round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802010
@@ -986,7 +986,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: +5 seconds per round to lasso
+    m_Localized: Round length increased by 5 seconds
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1019,7 +1019,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: 'Chickens can now lay eggs which give +0.5 points mult when lassoed '
+    m_Localized: 'Chickens can now lay eggs which give x1.5 points mult when lassoed '
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528

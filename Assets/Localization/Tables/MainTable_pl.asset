@@ -841,7 +841,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607692
     m_Localized: "Nied\u017Awiedzie maj\u0105 szans\u0119 zapa\u015B\u0107 w sen
-      zimowy i zdoby\u0107 punkty podczas snu"
+      zimowy i zyska\u0107 punkty podczas snu"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607693
@@ -869,7 +869,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "\u015Awinie mog\u0105 pojawia\u0107 si\u0119 losowo z cylindrem,
-      je\u015Bli tak si\u0119 stanie, s\u0105 warte +25 got\xF3wki"
+      je\u015Bli tak si\u0119 stanie, s\u0105 warte +50 got\xF3wki"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -921,7 +921,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Wszystkie liczby ujemne s\u0105 teraz ignorowane"
+    m_Localized: "Wszystkie liczby ujemne b\u0119d\u0105 punktowane jako liczby dodatnie"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -937,8 +937,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Zdob\u0105d\u017A +5 punkt\xF3w za ka\u017Cdy inny gatunek upolowany
-      za pomoc\u0105 lassa"
+    m_Localized: "Zdob\u0105d\u017A +10 punkt\xF3w za ka\u017Cdy inny gatunek upolowany
+      na lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -946,7 +946,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+15 got\xF3wki na koniec rundy"
+    m_Localized: "+20 got\xF3wki dziennie"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -962,7 +962,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: "+1 got\xF3wki za ka\u017Cde z\u0142apane zwierz\u0119"
+    m_Localized: "+2 got\xF3wki za ka\u017Cde z\u0142apane zwierz\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -970,7 +970,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: "Zdob\u0105d\u017A 5% odsetek got\xF3wkowych na koniec ka\u017Cdej
+    m_Localized: "Zdob\u0105d\u017A 10% odsetek got\xF3wkowych na koniec ka\u017Cdej
       rundy"
     m_Metadata:
       m_Items: []
@@ -1023,7 +1023,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "+5 sekund na rund\u0119 do lassa"
+    m_Localized: "D\u0142ugo\u015B\u0107 rundy zwi\u0119kszona o 5 sekund"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1056,8 +1056,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "Kury mog\u0105 teraz znosi\u0107 jaja, kt\xF3re daj\u0105 +0,5
-      punkt\xF3w mno\u017Cnika po z\u0142apaniu na lasso"
+    m_Localized: "Kury mog\u0105 teraz znosi\u0107 jaja, kt\xF3re daj\u0105 mno\u017Cnik
+      x1,5 po z\u0142apaniu na lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528

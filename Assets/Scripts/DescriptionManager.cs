@@ -24,28 +24,28 @@ public class DescriptionManager : MonoBehaviour
     {
         int level = levelManager.GetLevel(animalData.name);
         string description = "";
-        if (animalData.pointsToGive != 0)
+        if (animalData.pointsToGive + (level * animalData.pointsLevelUpIncrease) != 0)
         {
             int points = animalData.pointsToGive + (level * animalData.pointsLevelUpIncrease);
             description += points < 0
                 ? $"{pointsLoss.GetLocalizedString()} <color=#FC0043>{points}</color>\n"
                 : $"{pointsBonus.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{points}</color>\n";
         }
-        if (animalData.pointsMultToGive != 1f)
+        if (animalData.pointsMultToGive + (level * animalData.pointsLevelUpMult) != 1f)
         {
             float mult = animalData.pointsMultToGive + (level * animalData.pointsLevelUpMult);
             description += mult < 1
                 ? $"{pointsMult.GetLocalizedString()} <color=#FC0043>x{Format1or2(mult)}\n</color>"
                 : $"{pointsMult.GetLocalizedString()} <color=#FE7B81>x</color><color=#FEE761>{Format1or2(mult)}</color>\n";
         }
-        if (animalData.currencyToGive != 0)
+        if (animalData.currencyToGive + (level * animalData.currencyLevelUpIncrease) != 0)
         {
             int cash = animalData.currencyToGive + (level * animalData.currencyLevelUpIncrease);
             description += cash < 0
                 ? $"{cashLoss.GetLocalizedString()} <color=#FC0043>{cash}</color>\n"
                 : $"{cashBonus.GetLocalizedString()} <color=#68C84D>+</color><color=#FEE761>{cash}</color>\n";
         }
-        if (animalData.currencyMultToGive != 0f)
+        if (animalData.currencyMultToGive + (level * animalData.currencyLevelUpMult) != 0f)
         {
             float mult = animalData.currencyMultToGive + (level * animalData.currencyLevelUpMult);
             description += mult < 0

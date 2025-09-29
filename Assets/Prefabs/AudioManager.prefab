@@ -147,6 +147,21 @@ MonoBehaviour:
   - name: round_win
     clip: {fileID: 8300000, guid: 4f752ee9dba9b0a47a52a576f9076480, type: 3}
     volume: 0.2
+  - name: round_lose
+    clip: {fileID: 8300000, guid: 1d210404f0b576943936b4ff1a2e7c27, type: 3}
+    volume: 0.5
+  - name: close_call
+    clip: {fileID: 8300000, guid: 47e7cae6fee46114dab8868a179f2665, type: 3}
+    volume: 0.5
+  - name: reroll
+    clip: {fileID: 8300000, guid: 675c4ef25b2548f44b22655bcac1e93a, type: 3}
+    volume: 1
+  - name: woosh1
+    clip: {fileID: 8300000, guid: a8f2f35822c602546800dad753fd58ae, type: 3}
+    volume: 0.4
+  - name: woosh2
+    clip: {fileID: 8300000, guid: eb14f08bef1ae174db4e5274ce8d13e9, type: 3}
+    volume: 0.5
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}
@@ -165,13 +180,14 @@ MonoBehaviour:
     volume: 0.2
   - name: ambient
     clip: {fileID: 8300000, guid: 3166efeb4b2db294a84a3857dbb68fa5, type: 3}
-    volume: 2
+    volume: 1.7
   playlistTrackNames:
   - wrangle_1
   - wrangle_2
   - wrangle_3
   playlistFadeOutTime: 2
   fallbackTrackName: ambient
+  fallbackPending: 0
 --- !u!82 &6805484118175544464
 AudioSource:
   m_ObjectHideFlags: 0

@@ -115,7 +115,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs \xE0 proximit\xE9. Immunis\xE9
+    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs proches vers lui. Immunis\xE9
       contre les effets de pouss\xE9e et d'attraction."
     m_Metadata:
       m_Items: []
@@ -805,7 +805,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus en cas de capture en plein bond
+    m_Localized: Bonus en cas de capture au milieu d'un bond
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
@@ -822,8 +822,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607692
-    m_Localized: Les ours ont une chance d'hiberner et de gagner des points pendant
-      leur sommeil
+    m_Localized: "Les ours ont la possibilit\xE9 d'hiberner et de gagner des points
+      pendant leur sommeil."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607693
@@ -850,7 +850,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Les cochons peuvent appara\xEEtre al\xE9atoirement avec un chapeau
-      haut de forme, si c'est le cas, ils valent +25 en esp\xE8ces"
+      haut de forme, si c'est le cas, ils valent +50 en esp\xE8ces"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -902,7 +902,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Tous les nombres n\xE9gatifs sont d\xE9sormais ignor\xE9s"
+    m_Localized: "Tous les nombres n\xE9gatifs seront consid\xE9r\xE9s comme positifs"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -918,7 +918,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Gagnez +5 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
+    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
       par lasso"
     m_Metadata:
       m_Items: []
@@ -927,7 +927,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+15 cash \xE0 la fin du tour"
+    m_Localized: +20 cash quotidien
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -944,7 +944,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: "+1 cash par animal captur\xE9"
+    m_Localized: "+2 esp\xE8ces par animal captur\xE9 au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -952,7 +952,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: "Gagnez 5 % d'int\xE9r\xEAt en esp\xE8ces \xE0 la fin de chaque
+    m_Localized: "Gagnez 10 % d'int\xE9r\xEAt en esp\xE8ces \xE0 la fin de chaque
       tour"
     m_Metadata:
       m_Items: []
@@ -1004,7 +1004,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: +5 secondes par tour pour capturer au lasso
+    m_Localized: "La dur\xE9e du round a \xE9t\xE9 augment\xE9e de 5 secondes"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1039,7 +1039,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui donnent
-      +0,5 points multiplicateur lorsqu'elles sont captur\xE9es au lasso"
+      x1,5 points mult lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528

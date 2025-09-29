@@ -129,6 +129,7 @@ public class GameManager : MonoBehaviour
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         Invoke("StartRound", 1);
+        UpdateTimerDisplay();   
     }
 
     private void ApplyHarvestLevel()
@@ -179,11 +180,10 @@ public class GameManager : MonoBehaviour
             cashInterest = Mathf.RoundToInt(((int)player.playerCurrency + endDayCash) * .1f);
         }
         pointsThisRound = 0;
-        UpdateUI();
-        //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
         saveManager.SaveGameData();
         roundNumber++;
         UpdateScoreDisplay(0);
+        UpdateTimerDisplay();
         roundInProgress = true;
         roundCompleted = false;
         barnAnimator.Play("Closed", 0, 0.1f);
@@ -192,17 +192,6 @@ public class GameManager : MonoBehaviour
         {
             FBPP.SetInt("highestRound", roundNumber);
         }
-    }
-
-    public void UpdateUI()
-    {
-        if (roundNumber==0)
-        {
-            return;
-        }
-        //scoreDisplay.text = "POINTS: " + LassoController.FormatNumber(pointsThisRound)  + " / " + LassoController.FormatNumber(roundsPointsRequirement[roundNumber]);
-        //timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
-        //currencyDisplay.text = "CASH: " + LassoController.FormatNumber(player.playerCurrency);
     }
 
     public void EndRound()
@@ -215,10 +204,8 @@ public class GameManager : MonoBehaviour
         roundInProgress = false;
         elapsedTime = 0;
         playerReady = false;
-        
 
-        //UNCOMMENT BELOW FOR PROD
-
+        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1.25f);
         if (pointsThisRound < GetPointsRequirement() )
         {
             //GameOver
@@ -243,6 +230,7 @@ public class GameManager : MonoBehaviour
     IEnumerator CheckIfStillDead()
     {
         yield return new WaitForSeconds(0.25f);
+        AudioManager.Instance.PlaySFX("round_lose");
         lassoController.canLasso = false;
         if (lassoController.lineRenderer != null)
         {
@@ -264,6 +252,7 @@ public class GameManager : MonoBehaviour
                 DisplayPopupWord(localization.closeCall, .3f, .5f, false);   
             }
             //think we need some sfx here
+            AudioManager.Instance.PlaySFX("close_call");
             FBPP.SetInt("closeCalls", FBPP.GetInt("closeCalls")+1);
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(EndRoundRoutine());
@@ -274,7 +263,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndRoundRoutine()
     {
-        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
+        //AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         // First message
         DisplayPopupWord(localization.timesUp, wordScaleDuration, wordDisplayDuration, true);
         AudioManager.Instance.PlaySFX("time_up");
@@ -321,8 +310,8 @@ public class GameManager : MonoBehaviour
         }
         //localization.localPointsString.Arguments[0] = pointsThisRound;
         //localization.localPointsString.RefreshString();
-        //localization.localDayComplete.Arguments[0] = cashGained;
-        //localization.localDayComplete.RefreshString();
+        localization.localDayComplete.Arguments[0] = cashGained;
+        localization.localDayComplete.RefreshString();
         DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");
         GameController.player.playerCurrency += cashGained;
@@ -398,7 +387,6 @@ public class GameManager : MonoBehaviour
         schemeManager.SetRandomScheme();
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
-        UpdateUI();
         barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
         cameraController.ResetToStartPosition(1f);
     }

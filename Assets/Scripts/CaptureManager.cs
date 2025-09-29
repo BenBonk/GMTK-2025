@@ -205,7 +205,7 @@ public class CaptureManager : MonoBehaviour
             bonus = 2;
 
         if (capturedAnimal.gameObject.CompareTag("PigWithHat"))
-            currencyBonus += 25;
+            currencyBonus += 50;
 
         currencyBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.animalData.currencyToGive;
         currencyMult += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;
