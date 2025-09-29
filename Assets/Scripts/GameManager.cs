@@ -67,7 +67,8 @@ public class GameManager : MonoBehaviour
             }
         }
     }*/
-
+    public LocalizedString cashLocalString;
+    public LocalizedString pointsLocalString;
     private double _pointsThisRound;
     public double pointsThisRound
     {
@@ -78,9 +79,6 @@ public class GameManager : MonoBehaviour
             {
                 _pointsThisRound = value;
                 OnPointsChanged?.Invoke(_pointsThisRound);
-                localization.localPointsString.Arguments[0] = LassoController.FormatNumber(pointsThisRound);
-                localization.localPointsString.Arguments[1] = LassoController.FormatNumber(GetPointsRequirement());
-                localization.localPointsString.RefreshString();
             }
         }
     }
@@ -135,8 +133,6 @@ public class GameManager : MonoBehaviour
 
     private void ApplyHarvestLevel()
     {
-        Debug.Log("Applying harvest level: " + harvestLevel);
-        Debug.Log("Total harvest levels available: " + saveManager.harvestDatas.Length);
         roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
         endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
@@ -170,7 +166,7 @@ public class GameManager : MonoBehaviour
         }
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
-            endDayCash += 15;
+            endDayCash += 20;
         }
         captureManager.herdPointMultBonus = 0.1f;
         if (boonManager.ContainsBoon("HerdMentality"))
@@ -180,7 +176,7 @@ public class GameManager : MonoBehaviour
 
         if (boonManager.ContainsBoon("CoinPouch"))
         {
-            cashInterest = Mathf.RoundToInt(((int)player.playerCurrency + endDayCash) * .05f);
+            cashInterest = Mathf.RoundToInt(((int)player.playerCurrency + endDayCash) * .1f);
         }
         pointsThisRound = 0;
         UpdateUI();
@@ -323,10 +319,10 @@ public class GameManager : MonoBehaviour
         {
             cashGained *= 2;
         }
-        localization.localPointsString.Arguments[0] = pointsThisRound;
-        localization.localPointsString.RefreshString();
-        localization.localDayComplete.Arguments[0] = cashGained;
-        localization.localDayComplete.RefreshString();
+        //localization.localPointsString.Arguments[0] = pointsThisRound;
+        //localization.localPointsString.RefreshString();
+        //localization.localDayComplete.Arguments[0] = cashGained;
+        //localization.localDayComplete.RefreshString();
         DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");
         GameController.player.playerCurrency += cashGained;
@@ -334,7 +330,7 @@ public class GameManager : MonoBehaviour
         winPanel.gameObject.SetActive(false);
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
-            endDayCash -= 15;
+            endDayCash -= 20;
         }
 
         captureManager.firstCapture = false;
@@ -409,7 +405,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreDisplay(double newPoints)
     {
-        scoreDisplay.text = $"POINTS: {LassoController.FormatNumber(newPoints)} / {LassoController.FormatNumber(GetPointsRequirement())}";
+        scoreDisplay.text = pointsLocalString.GetLocalizedString() + " " + LassoController.FormatNumber(newPoints) + " / " + LassoController.FormatNumber(GetPointsRequirement());
         scoreDisplay.transform.localScale = Vector3.one * 1.1f;
         scoreDisplay.transform.localRotation = Quaternion.identity; // reset
 

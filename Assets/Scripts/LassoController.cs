@@ -486,7 +486,7 @@ public class LassoController : MonoBehaviour
         // === CURRENCY BONUS ===
         if (boonManager.ContainsBoon("CashCatch"))
         {
-            result.currencyBonus += 1;
+            result.currencyBonus += 2;
         }
         
         if (result.currencyBonus != 0)

@@ -29,14 +29,14 @@ public class LocalizationManager : MonoBehaviour
     public TMP_Text timerText;
     private void OnEnable()
     {
-        localPointsString.Arguments = new object[] { 0, 105 };
-        localPointsString.StringChanged += UpdatePoints;
+        //localPointsString.Arguments = new object[] { "0", "90" };
+        //localPointsString.StringChanged += UpdatePoints;
         
         localTimeString.Arguments = new object[] { "45.0" };
         localTimeString.StringChanged += UpdateTime;
         
-        localCashString.Arguments = new object[] { "0" };
-        localCashString.StringChanged += UpdateCash;
+        //localCashString.Arguments = new object[] { "0" };
+        //localCashString.StringChanged += UpdateCash;
         
         localDayComplete.Arguments = new object[] { "25" };
         localDayComplete.StringChanged += UpdateDayComplete;
@@ -53,17 +53,17 @@ public class LocalizationManager : MonoBehaviour
 
     private void OnDisable()
     {
-        localPointsString.StringChanged -= UpdatePoints;
+        //localPointsString.StringChanged -= UpdatePoints;
         localTimeString.StringChanged -= UpdateTime;
-        localCashString.StringChanged -= UpdateCash;
+        //localCashString.StringChanged -= UpdateCash;
         localCloseCall.StringChanged -= UpdateCloseCall;
         localTimesUp.StringChanged -= UpdateTimesUp;
         localPointsPopup.StringChanged -= UpdatePointsPopup;
         localCashPopup.StringChanged -= UpdateCashPopup;
     }
-    void UpdatePoints(string value) => scoreText.text = value;
+    //void UpdatePoints(string value) => scoreText.text = value;
     void UpdateTime(string value) => timerText.text = value;
-    void UpdateCash(string value) => cashText.text = value;
+    //void UpdateCash(string value) => cashText.text = value;
     void UpdateCloseCall(string value) => closeCall = value;
     void UpdateTimesUp(string value) => timesUp = value;
     void UpdateDayComplete(string value) => dayComplete = value;

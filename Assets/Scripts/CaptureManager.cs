@@ -116,7 +116,7 @@ public class CaptureManager : MonoBehaviour
                 {
                     uniqueAnimalNames.Add(a.name);
                 }
-                pointBonus += (5 * uniqueAnimalNames.Count);
+                pointBonus += (10 * uniqueAnimalNames.Count);
             }
 
             if (animalsCaptured.Count > FBPP.GetInt("largestCapture"))

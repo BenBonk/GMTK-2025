@@ -54,11 +54,14 @@ public class RerollManager : MonoBehaviour
             return;
         }
 
-        rerollsPerShop--;
-        shopManager.InitializeAllUpgrades();
         GameController.player.playerCurrency -= rerollPrice;
+        rerollsPerShop--;
+        if (rerollsPerShop <= 0)
+        {
+            rerollPrice = Mathf.RoundToInt(rerollPrice * rerollMultIncrease);
+        }
+        shopManager.InitializeAllUpgrades();
         shopManager.UpdateCashText();
-        rerollPrice = Mathf.RoundToInt(rerollPrice * rerollMultIncrease);
         FBPP.SetInt("rerollPrice", rerollPrice);
         FBPP.SetInt("totalRerolls", FBPP.GetInt("totalRerolls")+1);
         rerollsThisGame++;
