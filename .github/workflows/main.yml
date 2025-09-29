@@ -91,7 +91,7 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
           versioning: Semantic
           buildName: WrangleRanch
-          customParameters:  -Development -CompressWithLz4HC
+          customParameters:  -CompressWithLz4HC
       - uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
