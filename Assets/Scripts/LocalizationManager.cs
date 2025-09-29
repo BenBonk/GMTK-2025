@@ -29,7 +29,7 @@ public class LocalizationManager : MonoBehaviour
     public TMP_Text timerText;
     private void OnEnable()
     {
-        localPointsString.Arguments = new object[] { 0, 85 };
+        localPointsString.Arguments = new object[] { 0, 105 };
         localPointsString.StringChanged += UpdatePoints;
         
         localTimeString.Arguments = new object[] { "45.0" };

@@ -11327,14 +11327,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
-      propertyPath: soundEffects.Array.data[15].volume
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
-      propertyPath: soundEffects.Array.data[31].volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12030,14 +12022,14 @@ MonoBehaviour:
   m_text: You hit the hay...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
-  m_sharedMaterial: {fileID: -2546489003944781649, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281345597
-  m_fontColor: {r: 0.2392157, g: 0.14901961, b: 0.18823531, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12158,8 +12150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterialOverride: {fileID: 0}
-  localMaterialOverride: {fileID: 0}
+  defaultMaterialOverride: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
+  localMaterialOverride: {fileID: 2100000, guid: 9a55bc2297f73834aa5f56ac5e9f916a, type: 2}
 --- !u!1 &441562319
 GameObject:
   m_ObjectHideFlags: 0
@@ -12609,6 +12601,14 @@ PrefabInstance:
     - target: {fileID: 1145096754787495141, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160823325625830184, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 137.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160823325625830184, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 1812969525710034112, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_text
@@ -13382,7 +13382,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &519420028
 GameObject:
@@ -26824,6 +26824,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoonShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 1160823325625830184, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 137.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160823325625830184, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.27
+      objectReference: {fileID: 0}
     - target: {fileID: 4268576474051728590, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_fontColor.b
       value: 0.16078432
@@ -28558,7 +28566,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &1405798327
 GameObject:
@@ -29166,6 +29174,14 @@ PrefabInstance:
     - target: {fileID: 1145096754787495141, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_Name
       value: BoonShopItem (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160823325625830184, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 137.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160823325625830184, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 2533997740195135031, guid: 0cd3d55f556942747a58948f6fdc52b8, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -36678,7 +36694,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1001 &1808476958
 PrefabInstance:
@@ -43659,6 +43675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1209848614}
   transitionTime: 1
+  ss: {fileID: 0}
 --- !u!1 &2102313272
 GameObject:
   m_ObjectHideFlags: 0

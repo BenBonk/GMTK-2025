@@ -63,6 +63,7 @@ public class SaveManager : MonoBehaviour
     }
     public void ClearGame()
     {
+        Debug.Log("clear game called");
         ResetVars();
         FBPP.SetBool("playerHasSave", false);
         FBPP.Save();
@@ -75,7 +76,7 @@ public class SaveManager : MonoBehaviour
         FBPP.SetString("animalsInDeck", "");
         FBPP.SetString("boonsInDeck", "");
         FBPP.DeleteInt("rerollPrice");
-        FBPP.SetInt("mostRerollsInGame", 0);
+        FBPP.SetInt("rerollsThisGame", 0);
         GameController.animalLevelManager.ResetLevels();
     }
 

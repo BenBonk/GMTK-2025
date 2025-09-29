@@ -226,7 +226,6 @@ public class GameManager : MonoBehaviour
         if (pointsThisRound < GetPointsRequirement() )
         {
             //GameOver
-            saveManager.ClearGame();
             roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
@@ -243,7 +242,7 @@ public class GameManager : MonoBehaviour
         double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, roundNumber);
         return Math.Round(value / 5.0) * 5.0;
     }
-
+    
 
     IEnumerator CheckIfStillDead()
     {
@@ -274,6 +273,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(EndRoundRoutine());
             deathPanel.gameObject.SetActive(false);
         }
+        saveManager.ClearGame();
     }
 
     private IEnumerator EndRoundRoutine()
@@ -605,4 +605,11 @@ public class GameManager : MonoBehaviour
         seq.AppendCallback(() => Destroy(wordObj, 0.6f));
     }
 
+    private void OnApplicationQuit()
+    {
+        if (pointsThisRound < GetPointsRequirement() && deathPanel.gameObject.activeInHierarchy)
+        {
+            saveManager.ClearGame();
+        }
+    }
 }
