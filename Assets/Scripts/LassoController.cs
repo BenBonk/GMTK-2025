@@ -457,6 +457,7 @@ public class LassoController : MonoBehaviour
             {
                 FBPP.SetFloat("highestPointsPerLasso", (float)total);
             }
+            //a
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();
             pop.Append(group.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
