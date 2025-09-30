@@ -18,7 +18,7 @@ public class StartScreenManager : MonoBehaviour
 
     private IEnumerator Start()
     {
-            
+        Cursor.lockState = CursorLockMode.Confined;
         InvokeRepeating("SpawnAnimal", 1,Random.Range(1f, 2f));
         AudioManager.Instance.PlayMusicWithFadeOutOld("main_theme", 2f,false);
         AudioManager.Instance.fallbackPending = true;
