@@ -79,11 +79,11 @@ public class ShopManager : MonoBehaviour
             return boonGroups[0].boons[Random.Range(0,10)];
         }
         int weightIndex = 0;
-        if (GameController.gameManager.roundNumber>=2)
+        if (GameController.gameManager.roundNumber>2)
         {
             weightIndex = 1;
         }
-        if (GameController.gameManager.roundNumber>=6)
+        if (GameController.gameManager.roundNumber>6)
         {
             weightIndex = 2;
         }
