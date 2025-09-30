@@ -707,8 +707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
-  clickSFX: ui_click
-  followClickSFX: coins
+  clickSFX: 
+  followClickSFX: 
 --- !u!1 &8619925793922179031
 GameObject:
   m_ObjectHideFlags: 0

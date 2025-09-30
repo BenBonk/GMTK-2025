@@ -51,9 +51,12 @@ public class RerollManager : MonoBehaviour
     {
         if (!canReroll || rerollsPerShop <= 0 || GameController.player.playerCurrency < rerollPrice)
         {
+            AudioManager.Instance.PlaySFX("no_point_mult");
             return;
         }
 
+        AudioManager.Instance.PlaySFX("reroll");
+        AudioManager.Instance.PlaySFX("coins");
         GameController.player.playerCurrency -= rerollPrice;
         rerollsPerShop--;
         if (rerollsPerShop <= 0)

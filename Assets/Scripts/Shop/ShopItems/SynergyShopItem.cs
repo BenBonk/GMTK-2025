@@ -69,7 +69,8 @@ public class SynergyShopItem : ShopItem
     {
         if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
-            Debug.Log("purchase upgrade");
+            AudioManager.Instance.PlaySFX("ui_click");
+            AudioManager.Instance.PlaySFX("coins");
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
@@ -100,6 +101,10 @@ public class SynergyShopItem : ShopItem
                 synergySlots.canOverrideBoon = true;
             }
 
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX("no_point_mult");
         }
     }
 }

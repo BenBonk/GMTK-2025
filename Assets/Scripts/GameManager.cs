@@ -288,7 +288,9 @@ public class GameManager : MonoBehaviour
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.gameObject.SetActive(true);
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
-            while (!endlessSelected)
+            yield return new WaitForSeconds(3);
+            GameController.wishlistPanel.Open();
+            while (!endlessSelected || GameController.wishlistPanel.isOpen)
             {
                 yield return null;
             }

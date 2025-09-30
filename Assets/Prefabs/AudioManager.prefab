@@ -143,7 +143,7 @@ MonoBehaviour:
     volume: 1
   - name: coins
     clip: {fileID: 8300000, guid: 6753930e5d60ac64badc16cec622db91, type: 3}
-    volume: 0.07
+    volume: 0.09
   - name: round_win
     clip: {fileID: 8300000, guid: 4f752ee9dba9b0a47a52a576f9076480, type: 3}
     volume: 0.2

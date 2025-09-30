@@ -59,6 +59,8 @@ public class AnimalShopItem : ShopItem
     {
         if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
+            AudioManager.Instance.PlaySFX("coins");
+            AudioManager.Instance.PlaySFX(chosenAnimal.name);
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
@@ -68,6 +70,10 @@ public class AnimalShopItem : ShopItem
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             shopManager.UpdateDeck();
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX("no_point_mult");
         }
     }
 

@@ -35,6 +35,8 @@ public class UpgradeShopItem : ShopItem
     {
         if (!shopManager.cantPurchaseItem && canPurchase && GameController.player.playerCurrency >= price)
         {
+            AudioManager.Instance.PlaySFX("ui_click");
+            AudioManager.Instance.PlaySFX("coins");
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
@@ -69,6 +71,10 @@ public class UpgradeShopItem : ShopItem
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX("no_point_mult");
         }
     }
 }
