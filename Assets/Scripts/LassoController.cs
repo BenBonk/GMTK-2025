@@ -452,9 +452,10 @@ public class LassoController : MonoBehaviour
                 GameController.gameManager.pointsThisRound += result.pointBonus;
             }
 
-            if (result.pointBonus > FBPP.GetFloat("highestPointsPerLasso"))
+            double total = result.pointBonus * result.pointMult;
+            if (total > FBPP.GetFloat("highestPointsPerLasso"))
             {
-                FBPP.SetFloat("highestPointsPerLasso", (float)result.pointBonus);
+                FBPP.SetFloat("highestPointsPerLasso", (float)total);
             }
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();

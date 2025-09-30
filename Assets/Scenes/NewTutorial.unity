@@ -958,6 +958,24 @@ MonoBehaviour:
   shopButtonBlocker: {fileID: 0}
   endDayCash: 50
   isTutorial: 1
+  cashLocalString:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  pointsLocalString:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   scoreDisplay: {fileID: 0}
   timerDisplay: {fileID: 0}
   currencyDisplay: {fileID: 0}
@@ -25642,6 +25660,7 @@ MonoBehaviour:
   - wrangle_3
   playlistFadeOutTime: 2
   fallbackTrackName: ambient
+  fallbackPending: 0
 --- !u!1 &1398808355
 GameObject:
   m_ObjectHideFlags: 0
@@ -36685,7 +36704,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 64
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -39608,6 +39627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1292856931}
   transitionTime: 1
+  ss: {fileID: 0}
 --- !u!114 &1901501076
 MonoBehaviour:
   m_ObjectHideFlags: 0
