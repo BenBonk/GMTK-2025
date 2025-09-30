@@ -35,6 +35,8 @@ public class ShopManager : MonoBehaviour
     public GameObject purchaseParticles;
     public BoonShopPanel[] boonShopPanels;
     public BoonGroup[] boonGroups;
+    private Tween animalDeckTween;
+    private Tween boonDeckTween;
 
     private IEnumerator Start()
     {
@@ -186,29 +188,37 @@ public class ShopManager : MonoBehaviour
         {
             return;
         }
+        if (animalDeckTween!=null)
+        {
+            animalDeckTween.Kill();
+        }
         deckOpen = !deckOpen;
         if (deckOpen)
         {
             deckPanel.gameObject.SetActive(true);
-            deckPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack);
+            animalDeckTween = deckPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack);
         }
         else
         {
-            deckPanel.DOAnchorPosX(-415, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>deckPanel.gameObject.SetActive(false));
+            animalDeckTween = deckPanel.DOAnchorPosX(-415, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>deckPanel.gameObject.SetActive(false));
         }
     }
 
     public void ToggleSynergies()
     {
+        if (boonDeckTween!=null)
+        {
+            boonDeckTween.Kill();
+        }
         synergiesOpen = !synergiesOpen;
         if (synergiesOpen)
         {
             synergiesVisual.SetActive(true);
-            synergiesPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack);
+            boonDeckTween = synergiesPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack);
         }
         else
         {
-            synergiesPanel.DOAnchorPosX(415, .25f).SetEase(Ease.InOutQuad).OnComplete(() => synergiesVisual.SetActive(false));
+            boonDeckTween = synergiesPanel.DOAnchorPosX(415, .25f).SetEase(Ease.InOutQuad).OnComplete(() => synergiesVisual.SetActive(false));
         }
     }
 
