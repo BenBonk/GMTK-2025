@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.GraphView.Port;
 using Random = UnityEngine.Random;
 
 public class ShopManager : MonoBehaviour
@@ -38,10 +39,14 @@ public class ShopManager : MonoBehaviour
     private Tween animalDeckTween;
     private Tween boonDeckTween;
 
+    private Queue<Boon> recentBoons;
+    int recentBoonCapacity = 3;
+
     private IEnumerator Start()
     {
         descriptionManager = GameController.descriptionManager;
         player = GameController.player;
+        recentBoons = new Queue<Boon>(recentBoonCapacity);
         yield return new WaitForEndOfFrame();
         InitializeAllUpgrades();
     }
@@ -55,7 +60,7 @@ public class ShopManager : MonoBehaviour
             Boon boon = GetRandomSynergy();
             if (!isTut)
             {
-                if (chosenBoons.Contains(boon) || player.boonsInDeck.Contains(boon))
+                if (chosenBoons.Contains(boon) || player.boonsInDeck.Contains(boon) || recentBoons.Contains(boon))
                     continue;
             }
             chosenBoons.Add(boon);
@@ -63,6 +68,8 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             shopItems[i].GetComponent<SynergyShopItem>().SetBoon(chosenBoons[i]);
+            recentBoons.Enqueue(chosenBoons[i]); 
+            if (recentBoons.Count > recentBoonCapacity) recentBoons.Dequeue();
         }
         foreach (var shopItem in shopItems)
         {
