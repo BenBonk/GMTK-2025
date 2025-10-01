@@ -18,4 +18,4 @@ MonoBehaviour:
   numberOfDays: 20
   startingPredators: 0
   shopPrices: 0
-  pointQuotas: 0
+  pointQuotas: 1
