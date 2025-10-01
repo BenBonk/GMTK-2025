@@ -45,7 +45,7 @@ MonoBehaviour:
   pointsLevelUpMult: 0
   currencyLevelUpIncrease: 2
   currencyLevelUpMult: 0
-  price: 100
+  price: 80
   upgradeCost: 40
   references:
     version: 2
