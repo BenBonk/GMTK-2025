@@ -95,7 +95,10 @@ public class GameManager : MonoBehaviour
     public TMP_Text roundNumberDeath;
     public TMP_Text winRoundsText;
     public LassoController lassoController;
-    public float pointsRequirementGrowthRate;
+    public float noviceRate = 1.25f;
+    public float veteranRate = 1.4f;
+    public float expertRate = 1.6f;
+    private float pointsRequirementGrowthRate;
     public LocalizedString localReady;
     public LocalizedString localSet;
     public LocalizedString localLasso;
@@ -134,9 +137,11 @@ public class GameManager : MonoBehaviour
 
     private void ApplyHarvestLevel()
     {
+
         roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
         endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
+        pointsRequirementGrowthRate = GetGrowthRate(saveManager.harvestDatas[harvestLevel - 1].pointQuotas);
     }
 
     private void Update()
@@ -163,7 +168,7 @@ public class GameManager : MonoBehaviour
         }
         if (boonManager.ContainsBoon("Pocketwatch"))
         {
-            roundDuration += 5;
+            roundDuration += 10;
         }
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
@@ -198,7 +203,7 @@ public class GameManager : MonoBehaviour
     {
         if (boonManager.ContainsBoon("Pocketwatch"))
         {
-            roundDuration -= 5;
+            roundDuration -= 10;
         }
         roundCompleted = true;
         roundInProgress = false;
@@ -467,6 +472,17 @@ public class GameManager : MonoBehaviour
 
             pulse.Join(timerDisplay.DOColor(timerNormalColor, 0.4f));
         }
+    }
+
+    public float GetGrowthRate(PointQuotaSetting setting)
+    {
+        return setting switch
+        {
+            PointQuotaSetting.Novice => noviceRate,
+            PointQuotaSetting.Veteran => veteranRate,
+            PointQuotaSetting.Expert => expertRate,
+            _ => 1.25f,
+        };
     }
 
     public IEnumerator ShowReadySetLassoSequence()
