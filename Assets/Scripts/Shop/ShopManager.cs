@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -104,8 +105,17 @@ public class ShopManager : MonoBehaviour
         {
             if (roll < group.weights[weightIndex])
             {
-                int idx = Random.Range(0, group.boons.Count);
-                return group.boons[idx];
+                List<Boon> validBoons = group.boons;
+                if (GameController.gameManager.roundNumber <= 2)
+                {
+                    validBoons = group.boons
+                        .Where(b => b.price < 350)
+                        .ToList();
+                    if (validBoons.Count == 0)
+                        validBoons = group.boons;
+                }
+                int idx = Random.Range(0, validBoons.Count);
+                return validBoons[idx];
             }
             roll -= group.weights[weightIndex];
         }

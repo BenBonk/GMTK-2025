@@ -27680,7 +27680,9 @@ MonoBehaviour:
   roundNumberDeath: {fileID: 1844727764}
   winRoundsText: {fileID: 584729533}
   lassoController: {fileID: 1615761884}
-  pointsRequirementGrowthRate: 1.4
+  noviceRate: 1.25
+  veteranRate: 1.4
+  expertRate: 1.6
   localReady:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
