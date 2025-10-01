@@ -53,7 +53,7 @@ MonoBehaviour:
   soundEffects:
   - name: rooster
     clip: {fileID: 8300000, guid: e5e44e3f87139ad41b3430acca9302a7, type: 3}
-    volume: 0.4
+    volume: 0.35
   - name: ready
     clip: {fileID: 8300000, guid: 572f0cb2ced07974cbb72496c2876f5d, type: 3}
     volume: 0.7
@@ -62,28 +62,28 @@ MonoBehaviour:
     volume: 1
   - name: points
     clip: {fileID: 8300000, guid: 9e9e0348a045ed24185aa2c9af410773, type: 3}
-    volume: 1
+    volume: 0.55
   - name: no_points
     clip: {fileID: 8300000, guid: 7f1ce78749263234c85e729d9e700c65, type: 3}
     volume: 0.4
   - name: cash
     clip: {fileID: 8300000, guid: 13f3eabf7a6c1554eb2e6dbbe8e33da7, type: 3}
-    volume: 1
+    volume: 0.55
   - name: no_cash
     clip: {fileID: 8300000, guid: 73ca424760f1bc74ebb8800af9a876e7, type: 3}
-    volume: 1
+    volume: 0.55
   - name: point_mult
     clip: {fileID: 8300000, guid: 23d4610699e827745846a265b25fb106, type: 3}
-    volume: 1
+    volume: 0.55
   - name: no_point_mult
     clip: {fileID: 8300000, guid: 8cf13afb97a7b9349b09aa84fd2ceecf, type: 3}
-    volume: 1
+    volume: 0.55
   - name: cash_mult
     clip: {fileID: 8300000, guid: 7b084c6fc51ec3e49a1eb6c9ec9002c7, type: 3}
-    volume: 1
+    volume: 0.55
   - name: no_cash_mult
     clip: {fileID: 8300000, guid: 3e59b76362dd62947baa83c187802328, type: 3}
-    volume: 1
+    volume: 0.55
   - name: barn_door
     clip: {fileID: 8300000, guid: 3779055c58eddff4dba964f99a2e9448, type: 3}
     volume: 1

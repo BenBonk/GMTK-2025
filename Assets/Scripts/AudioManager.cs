@@ -84,8 +84,8 @@ public class AudioManager : MonoBehaviour
         nextMusicSource = musicSourceB;
 
         // Load saved user volumes (defaults 0.5)
-        masterMusic01 = FBPP.GetFloat(KeyMusic, 0.5f);
-        masterSfx01 = FBPP.GetFloat(KeySfx, 0.5f);
+        masterMusic01 = FBPP.GetFloat(KeyMusic, 0.4f);
+        masterSfx01 = FBPP.GetFloat(KeySfx, 0.6f);
 
         ApplyMasterVolumes();
     }

@@ -25,7 +25,7 @@ public class RerollManager : MonoBehaviour
     {
         //FOR TESTING
         rerollsThisGame = FBPP.GetInt("rerollsThisGame");
-        FBPP.SetInt("rerollPrice", 50);
+        FBPP.SetInt("rerollPrice", 20);
         boonManager = GameController.boonManager;
         rerollPrice = FBPP.GetInt("rerollPrice", startingRerollPrice);
         priceText.text = rerollPrice.ToString();
