@@ -7248,7 +7248,9 @@ MonoBehaviour:
   roundNumberDeath: {fileID: 0}
   winRoundsText: {fileID: 0}
   lassoController: {fileID: 0}
-  pointsRequirementGrowthRate: 0
+  noviceRate: 1.25
+  veteranRate: 1.4
+  expertRate: 1.6
   localReady:
     m_TableReference:
       m_TableCollectionName: 
@@ -10064,6 +10066,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 5726340978611458138, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
+    - target: {fileID: 6952796685337078043, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: m_text
+      value: Receives double daily cash after each round.
+      objectReference: {fileID: 0}
     - target: {fileID: 7493094491465527454, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_text
       value: Old Macdonald
