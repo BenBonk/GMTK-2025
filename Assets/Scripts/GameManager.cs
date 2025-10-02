@@ -263,7 +263,10 @@ public class GameManager : MonoBehaviour
             StartCoroutine(EndRoundRoutine());
             deathPanel.gameObject.SetActive(false);
         }
-        saveManager.ClearGame();
+        else
+        {
+            saveManager.ClearGame();
+        }
     }
 
     private IEnumerator EndRoundRoutine()
