@@ -126,7 +126,7 @@ jobs:
           rootPath: build
           depot1Path: StandaloneWindows64
           depot2Path: StandaloneOSX
-          releaseBranch: beta
+          #releaseBranch: beta
          
       # Output
      # - uses: actions/upload-artifact@v3
