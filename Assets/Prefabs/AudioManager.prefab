@@ -162,6 +162,9 @@ MonoBehaviour:
   - name: woosh2
     clip: {fileID: 8300000, guid: eb14f08bef1ae174db4e5274ce8d13e9, type: 3}
     volume: 0.5
+  - name: predator_select
+    clip: {fileID: 8300000, guid: f2652b602386d4d45b72f0b64ce467a4, type: 3}
+    volume: 0.35
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}
