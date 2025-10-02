@@ -912,7 +912,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 daily cash
+    m_Localized: +20 additional cash at end of round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -969,7 +969,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802017
-    m_Localized: All lassoed points are doubled in the last 10 seconds of each round
+    m_Localized: All points are doubled in the last 10 seconds of each round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -986,7 +986,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: Round length increased by 5 seconds
+    m_Localized: Round length increased by 10 seconds
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022

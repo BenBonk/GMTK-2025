@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Cash Cow
+    m_Localized: Goldesel
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein.
+      mit dem Lasso ein
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -248,12 +248,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
-      Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Das Dilemma der Bauern
+    m_Localized: Bauerndilemma
     m_Metadata:
       m_Items: []
   - m_Id: 56
@@ -786,7 +785,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607682
     m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -899,7 +898,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "W\xF6lfe vermehren sich jetzt in Rudeln von zwei oder drei"
+    m_Localized: "W\xF6lfe laichen jetzt in Rudeln von zwei oder drei"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -932,7 +931,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+20 t\xE4gliches Bargeld"
+    m_Localized: "+20 zus\xE4tzliches Bargeld am Ende der Runde"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -989,8 +988,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802017
-    m_Localized: Alle mit dem Lasso eingefangenen Punkte werden in den letzten 10
-      Sekunden jeder Runde verdoppelt
+    m_Localized: Alle Punkte werden in den letzten 10 Sekunden jeder Runde verdoppelt
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -998,8 +996,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie f\xFCr jeden Nicht-Raubtier im Lasso einen Punktebonus
-      von +20 % statt 10 %"
+    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
+      Lasso, statt 10 %"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1007,7 +1005,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "Rundenl\xE4nge um 5 Sekunden erh\xF6ht"
+    m_Localized: "Rundenl\xE4nge um 10 Sekunden erh\xF6ht"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022

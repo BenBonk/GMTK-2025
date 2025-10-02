@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -539,7 +539,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boon pi\xF9 acquistati:"
+    m_Localized: "I 3 Boons pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -723,7 +723,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza tonda:'
+    m_Localized: 'Lunghezza del giro:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -872,7 +872,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano statistiche con
+    m_Localized: Le volpi scambiano le statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -921,7 +921,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 contanti giornalieri
+    m_Localized: +20 contanti aggiuntivi alla fine del round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -978,8 +978,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802017
-    m_Localized: Tutti i punti catturati vengono raddoppiati negli ultimi 10 secondi
-      di ogni round
+    m_Localized: Tutti i punti vengono raddoppiati negli ultimi 10 secondi di ogni
+      round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -996,7 +996,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: Durata del round aumentata di 5 secondi
+    m_Localized: Durata del round aumentata di 10 secondi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022

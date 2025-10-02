@@ -499,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Registro!"
+    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: El viejo Macdonald
+    m_Localized: Viejo Macdonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026
@@ -907,7 +907,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: Los precios de los animales ahora son aleatorios en la tienda.
+    m_Localized: "Los precios de los animales ahora est\xE1n aleatorios en la tienda."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -923,7 +923,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 efectivo diario
+    m_Localized: +20 en efectivo adicional al final de la ronda
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -981,8 +981,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802017
-    m_Localized: "Todos los puntos enlazados se duplican en los \xFAltimos 10 segundos
-      de cada ronda."
+    m_Localized: "Todos los puntos se duplican en los \xFAltimos 10 segundos de cada
+      ronda."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -999,7 +999,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "La duraci\xF3n de la ronda aument\xF3 en 5 segundos"
+    m_Localized: "La duraci\xF3n de la ronda aument\xF3 en 10 segundos"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022

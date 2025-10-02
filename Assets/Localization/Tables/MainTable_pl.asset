@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Strata punkt\xF3w:"
+    m_Localized: "Utrata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
-      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
-      dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -473,7 +473,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 103
     m_Localized: "Na koniec, mo\u017Cesz odnowi\u0107 sklep raz dziennie, a koszt
-      wzro\u015Bnie na sta\u0142e!"
+      ten wzro\u015Bnie na sta\u0142e!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -745,7 +745,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: "D\u0142ugo\u015B\u0107 ca\u0142kowita:"
+    m_Localized: "D\u0142ugo\u015B\u0107 rundy:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -946,7 +946,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+20 got\xF3wki dziennie"
+    m_Localized: "+20 dodatkowej got\xF3wki na koniec rundy"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1005,8 +1005,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802017
-    m_Localized: "Wszystkie zdobyte punkty s\u0105 podwajane w ostatnich 10 sekundach
-      ka\u017Cdej rundy"
+    m_Localized: "Wszystkie punkty s\u0105 podwajane w ostatnich 10 sekundach ka\u017Cdej
+      rundy"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -1014,8 +1014,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
-      w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
+      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1023,7 +1023,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "D\u0142ugo\u015B\u0107 rundy zwi\u0119kszona o 5 sekund"
+    m_Localized: "D\u0142ugo\u015B\u0107 rundy zwi\u0119kszona o 10 sekund"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1044,7 +1044,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-Pracownik Rolny
+    m_Localized: Weteran-robotnik
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027

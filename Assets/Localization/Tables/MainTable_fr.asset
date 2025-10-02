@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+ Esp\xE8ces\_: {0}"
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -805,7 +805,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus en cas de capture au milieu d'un bond
+    m_Localized: Bonus en cas de capture en plein bond
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
@@ -927,7 +927,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 cash quotidien
+    m_Localized: "+20 cash suppl\xE9mentaires \xE0 la fin du tour"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -986,8 +986,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802017
-    m_Localized: "Tous les points lasso\xE9s sont doubl\xE9s dans les 10 derni\xE8res
-      secondes de chaque tour"
+    m_Localized: "Tous les points sont doubl\xE9s dans les 10 derni\xE8res secondes
+      de chaque tour"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -1004,7 +1004,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "La dur\xE9e du round a \xE9t\xE9 augment\xE9e de 5 secondes"
+    m_Localized: "La dur\xE9e du round a \xE9t\xE9 augment\xE9e de 10 secondes"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
@@ -1039,7 +1039,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui donnent
-      x1,5 points mult lorsqu'elles sont captur\xE9es au lasso"
+      x1,5 points multiplicateurs lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
