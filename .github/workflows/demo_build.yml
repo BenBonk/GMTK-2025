@@ -1,0 +1,159 @@
+name: Beta Testing Release
+
+on: [push, pull_request]
+jobs:
+    prepare:
+      name: Prepare for build
+      runs-on: ubuntu-latest
+      if: github.ref == 'refs/heads/demo'
+      steps:
+
+      - name: Clear caches
+        uses: easimon/wipe-cache@main
+        with:
+          dry-run: 'true'
+        
+      - name: Checkout
+        uses: actions/checkout@v4
+         
+      # Git LFS
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard  
+          
+    buildForWindowsAndMac:
+      needs: [prepare]
+      name: Build for ${{ matrix.targetPlatform }}
+      runs-on: ubuntu-latest
+      strategy:
+        fail-fast: false
+        matrix:
+          targetPlatform:
+            - StandaloneWindows64 # Build a Windows 64-bit standalone.
+            - StandaloneOSX # Build a OSX 64-bit standalone.
+      outputs:
+        buildVersion: ${{ steps.extract_version.outputs.version }}
+      steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Extract Version
+        id: extract_version
+        run: echo "version=${{ steps.github_release.outputs.version }}" >> $GITHUB_ENV
+
+      # Git LFS
+      - name: Create LFS file list
+        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
+
+
+      - name: Restore LFS cache
+        uses: actions/cache@v3
+        id: lfs-cache
+        with:
+          path: .git/lfs
+          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
+
+      - name: Git LFS Pull
+        run: |
+          git lfs pull
+          git add .
+          git reset --hard  
+    
+      - uses: actions/cache@v3
+        with:
+          path: Library
+          key:
+            Library-${{ matrix.targetPlatform }}-${{ hashFiles('Assets/**', 'Packages/**',
+            'ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ matrix.targetPlatform }}-
+            Library-
+      - uses: game-ci/unity-builder@v4
+        id: build
+        env:
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
+          versioning: Semantic
+          buildName: WrangleRanch
+          customParameters:  -CompressWithLz4HC
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
+          retention-days: 1 
+
+    deployToSteam:
+      name: Deploy to Steam
+      needs: [buildForWindowsAndMac]
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download StandaloneWindows64 Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Build-StandaloneWindows64
+          path: build/StandaloneWindows64
+      - name: Download StandaloneOSX Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Build-StandaloneOSX
+          path: build/StandaloneOSX
+      - uses: game-ci/steam-deploy@v3
+        with:
+          username: ${{ secrets.STEAM_USERNAME }}
+          configVdf: ${{ secrets.STEAM_CONFIG_VDF}}
+          appId: ${{ secrets.STEAM_DEMO_APP_ID }}
+          buildDescription: v${{ needs.buildForWindowsAndMac.outputs.buildVersion }}
+          rootPath: build
+          depot1Path: StandaloneWindows64
+          depot2Path: StandaloneOSX
+          releaseBranch: beta
+         
+      # Output
+     # - uses: actions/upload-artifact@v3
+      #  with:
+      #    name: Build
+      #    path: build
+      #    retention-days: 1 
+      
+    cleanup:
+        name: Artifact Deletion
+        runs-on: ubuntu-latest
+        continue-on-error: false
+        needs: [deployToSteam]
+        steps:
+            - uses: actions/checkout@v1
+            - name: Artifact Cleanup
+              uses: jimschubert/delete-artifacts-action@v1
+              with: 
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  min_bytes: '0'
+                  artifact_name: 'Build-StandaloneOSX'
+
+            - uses: actions/checkout@v1
+            - name: Artifact Cleanup 2
+              uses: jimschubert/delete-artifacts-action@v1
+              with: 
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  min_bytes: '0'
+                  artifact_name: 'Build-StandaloneWindows64'
+                    
