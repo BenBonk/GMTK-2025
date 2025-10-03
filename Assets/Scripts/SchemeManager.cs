@@ -14,7 +14,7 @@ public class SchemeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ChangeScheme(3);
+        ChangeScheme(0);
     }
 
     public void SetRandomScheme()
@@ -59,6 +59,9 @@ public class SchemeManager : MonoBehaviour
             GameObject a = Instantiate(prefab, pos, Quaternion.identity);
             a.transform.SetParent(grassSpawner.transform);
         }
+
+        GameController.gameManager.scoreDisplay.color = chosenScheme.pointsTextColor;
+        GameController.gameManager.lassoController.pointBonusColor = chosenScheme.pointsTextColor;
 
         if (chosenScheme.shouldSpawnGrass)
         {
@@ -109,5 +112,6 @@ public class Scheme
     public GameObject[] extraItems;
     public bool shouldSpawnGrass;
     public List<Color> grassColors;
+    public Color pointsTextColor;
 
 }
