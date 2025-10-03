@@ -88,13 +88,9 @@ public class ShopManager : MonoBehaviour
             return boonGroups[0].boons[Random.Range(0,10)];
         }
         int weightIndex = 0;
-        if (GameController.gameManager.roundNumber>2)
+        if (GameController.gameManager.roundNumber>7)
         {
             weightIndex = 1;
-        }
-        if (GameController.gameManager.roundNumber>6)
-        {
-            weightIndex = 2;
         }
         float totalWeight = 0f;
         foreach (var group in boonGroups)
