@@ -38,7 +38,7 @@ public class LocalizationManager : MonoBehaviour
         //localCashString.Arguments = new object[] { "0" };
         //localCashString.StringChanged += UpdateCash;
         
-        localDayComplete.Arguments = new object[] { "25" };
+        localDayComplete.Arguments = new object[] { "1", "25" };
         localDayComplete.StringChanged += UpdateDayComplete;
         
         localPointsPopup.Arguments = new object[] { "0" };

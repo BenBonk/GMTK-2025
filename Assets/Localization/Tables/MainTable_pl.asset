@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 6
-    m_Localized: "DZIE\u0143 ZAKO\u0143CZONY! + {0} GOT\xD3WKI!"
+    m_Localized: "DZIE\u0143 {0} ZAKO\u0143CZONY! + {1} GOT\xD3WKA!"
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -858,9 +858,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Ka\u017Cda schwytana krowa daje 0,25x globalnego mno\u017Cnika,
-      resetuj\u0105c si\u0119 w ka\u017Cdej rundzie lub gdy drapie\u017Cnik zostanie
-      schwytany"
+    m_Localized: "Ka\u017Cda schwytana krowa daje mno\u017Cnik punkt\xF3w globalnych
+      0,25x, resetowany w ka\u017Cdej rundzie lub po schwytaniu drapie\u017Cnika"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984

@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112940
   - m_Id: 6
-    m_Localized: TAG ABGESCHLOSSEN! + {0} BARGELD!
+    m_Localized: TAG {0} ABGESCHLOSSEN! + {1} BARGELD!
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -845,8 +845,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Jede gefangene Kuh ergibt das 0,25-fache des globalen Multiplikators,
-      der jede Runde oder beim Fang eines Raubtiers zur\xFCckgesetzt wird"
+    m_Localized: "Jede gefangene Kuh ergibt das 0,25-fache des globalen Punktemultiplikators
+      und wird in jeder Runde oder beim Fang eines Raubtiers zur\xFCckgesetzt."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984

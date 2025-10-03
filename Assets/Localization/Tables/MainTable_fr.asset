@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 6
-    m_Localized: "JOURN\xC9E TERMIN\xC9E ! + {0} CASH !"
+    m_Localized: "JOUR {0} TERMIN\xC9\_! + {1} CASH\_!"
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -840,8 +840,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Chaque vache captur\xE9e donne 0,25x multiplicateur global, r\xE9initialis\xE9
-      \xE0 chaque tour ou lorsqu'un pr\xE9dateur est captur\xE9"
+    m_Localized: "Chaque vache captur\xE9e donne 0,25x points globaux multiplicateurs,
+      r\xE9initialis\xE9s \xE0 chaque tour ou lorsqu'un pr\xE9dateur est captur\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984

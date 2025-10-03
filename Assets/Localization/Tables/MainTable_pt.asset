@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112946
   - m_Id: 6
-    m_Localized: "DIA CONCLU\xCDDO! + {0} DINHEIRO!"
+    m_Localized: "DIA {0} CONCLU\xCDDO! + {1} DINHEIRO!"
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -836,7 +836,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Cada vaca capturada d\xE1 0,25x mult global, reiniciando a cada
+    m_Localized: "Cada vaca capturada d\xE1 0,25x pontos globais, reiniciando a cada
       rodada ou quando um predador \xE9 capturado"
     m_Metadata:
       m_Items: []

@@ -320,7 +320,8 @@ public class GameManager : MonoBehaviour
         }
         //localization.localPointsString.Arguments[0] = pointsThisRound;
         //localization.localPointsString.RefreshString();
-        localization.localDayComplete.Arguments[0] = cashGained;
+        localization.localDayComplete.Arguments[0] = roundNumber;
+        localization.localDayComplete.Arguments[1] = cashGained;
         localization.localDayComplete.RefreshString();
         DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
         AudioManager.Instance.PlaySFX("cash_register");

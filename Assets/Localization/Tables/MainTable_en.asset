@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112937
   - m_Id: 6
-    m_Localized: DAY COMPLETE! + {0} Cash!
+    m_Localized: DAY {0} COMPLETE! + {1} Cash!
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -829,8 +829,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Every cow captured gives 0.25x global mult, reseting each round
-      or when a predator is captured
+    m_Localized: Every cow captured gives 0.25x global points mult, reseting each
+      round or when a predator is captured
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984

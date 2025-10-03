@@ -49,7 +49,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112938
   - m_Id: 6
-    m_Localized: "\xA1D\xCDA COMPLETADO! + {0} \xA1EFECTIVO!"
+    m_Localized: "\xA1D\xCDA {0} COMPLETADO! + {1} \xA1EFECTIVO!"
     m_Metadata:
       m_Items: []
   - m_Id: 7
@@ -838,8 +838,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Cada vaca capturada otorga un multiplicador global de 0,25x, que
-      se reinicia en cada ronda o cuando se captura un depredador.
+    m_Localized: Cada vaca capturada otorga un multiplicador de puntos global de
+      0,25x, que se reinicia en cada ronda o cuando se captura un depredador.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984
