@@ -1030,7 +1030,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "W\xE4hrend des Haltens wird das Level aller Tiere um 2 erh\xF6ht"
+    m_Localized: "W\xE4hrend sie sich in deinem Segensdeck befinden, wird das Level
+      aller Tiere um 2 erh\xF6ht"
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376

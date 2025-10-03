@@ -1047,7 +1047,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "Podczas trzymania poziom wszystkich zwierz\u0105t wzrasta o 2"
+    m_Localized: "Gdy znajdujesz si\u0119 w talii dobrodziejstw, wszystkie zwierz\u0119ta
+      maj\u0105 zwi\u0119kszony poziom o 2"
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376

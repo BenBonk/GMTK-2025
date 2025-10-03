@@ -1024,8 +1024,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: Mientras se mantiene, todos los animales tienen su nivel aumentado
-      en 2
+    m_Localized: "Mientras est\xE9s en tu mazo de bendiciones, todos los animales
+      tendr\xE1n su nivel aumentado en 2"
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
