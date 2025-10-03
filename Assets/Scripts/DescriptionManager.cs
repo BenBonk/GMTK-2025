@@ -163,7 +163,8 @@ public class DescriptionManager : MonoBehaviour
 
         return description;
     }
-
+    
+    //what the heck is this lol
     static string Format1or2(double x)
     {
         x = Math.Round(x, 2, MidpointRounding.AwayFromZero); // kill binary noise
