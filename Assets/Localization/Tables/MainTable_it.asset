@@ -836,8 +836,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Ogni mucca catturata d\xE0 0,25x moltiplicatore di punti globali,
-      che si azzera a ogni round o quando viene catturato un predatore"
+    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
+      azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984

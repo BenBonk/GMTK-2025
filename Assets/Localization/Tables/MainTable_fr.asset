@@ -840,7 +840,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Chaque vache captur\xE9e donne 0,25x points globaux multiplicateurs,
+    m_Localized: "Chaque vache captur\xE9e cumule 0,25x points globaux multiplicateurs,
       r\xE9initialis\xE9s \xE0 chaque tour ou lorsqu'un pr\xE9dateur est captur\xE9"
     m_Metadata:
       m_Items: []

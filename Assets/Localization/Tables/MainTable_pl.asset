@@ -858,8 +858,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Ka\u017Cda schwytana krowa daje mno\u017Cnik punkt\xF3w globalnych
-      0,25x, resetowany w ka\u017Cdej rundzie lub po schwytaniu drapie\u017Cnika"
+    m_Localized: "Ka\u017Cda schwytana krowa generuje mno\u017Cnik punkt\xF3w globalnych
+      o warto\u015Bci 0,25x, resetuj\u0105c si\u0119 w ka\u017Cdej rundzie lub po
+      schwytaniu drapie\u017Cnika"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984

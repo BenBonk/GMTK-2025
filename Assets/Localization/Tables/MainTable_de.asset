@@ -845,7 +845,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Jede gefangene Kuh ergibt das 0,25-fache des globalen Punktemultiplikators
+    m_Localized: "Jede gefangene Kuh z\xE4hlt das 0,25-fache des globalen Punktemultiplikators
       und wird in jeder Runde oder beim Fang eines Raubtiers zur\xFCckgesetzt."
     m_Metadata:
       m_Items: []

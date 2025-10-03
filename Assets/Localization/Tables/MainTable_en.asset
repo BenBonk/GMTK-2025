@@ -829,7 +829,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Every cow captured gives 0.25x global points mult, reseting each
+    m_Localized: Every cow captured stacks 0.25x global points mult, reseting each
       round or when a predator is captured
     m_Metadata:
       m_Items: []

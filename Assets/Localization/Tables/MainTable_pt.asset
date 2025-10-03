@@ -836,8 +836,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Cada vaca capturada d\xE1 0,25x pontos globais, reiniciando a cada
-      rodada ou quando um predador \xE9 capturado"
+    m_Localized: "Cada vaca capturada acumula 0,25x pontos globais, reiniciando a
+      cada rodada ou quando um predador \xE9 capturado"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984
