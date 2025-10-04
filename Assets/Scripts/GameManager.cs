@@ -131,13 +131,13 @@ public class GameManager : MonoBehaviour
         //lassosUsed = 0;
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
+        scoreDisplay.text = pointsLocalString.GetLocalizedString() + " " + LassoController.FormatNumber(0) + " / " + LassoController.FormatNumber(GetPointsRequirement(roundNumber+1));
         Invoke("StartRound", 1);
         UpdateTimerDisplay();   
     }
-
+    
     private void ApplyHarvestLevel()
     {
-
         roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
         endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
@@ -230,7 +230,13 @@ public class GameManager : MonoBehaviour
         double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, roundNumber);
         return Math.Round(value / 5.0) * 5.0;
     }
-    
+
+    public double GetPointsRequirement(int round)
+    {
+        double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, round);
+        return Math.Round(value / 5.0) * 5.0;
+    }
+
 
     IEnumerator CheckIfStillDead()
     {

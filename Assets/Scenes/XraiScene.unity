@@ -27618,7 +27618,7 @@ MonoBehaviour:
   isTesting: 0
   player: {fileID: 1887224207}
   harvestLevel: 1
-  startingPointRequirement: 75
+  startingPointRequirement: 70
   roundNumber: 0
   roundInProgress: 0
   playerReady: 0
@@ -27673,8 +27673,8 @@ MonoBehaviour:
   winRoundsText: {fileID: 584729533}
   lassoController: {fileID: 1615761884}
   noviceRate: 1.25
-  veteranRate: 1.4
-  expertRate: 1.6
+  veteranRate: 1.35
+  expertRate: 1.5
   localReady:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
