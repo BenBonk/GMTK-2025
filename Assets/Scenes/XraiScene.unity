@@ -10044,7 +10044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1161.4, y: 634.5639}
+  m_AnchoredPosition: {x: -1161.6746, y: 634.5}
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150976154
@@ -10462,14 +10462,6 @@ PrefabInstance:
       propertyPath: rt
       value: 
       objectReference: {fileID: 1761591397}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: possibleAnimals.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
-      propertyPath: 'possibleAnimals.Array.data[0]'
-      value: 
-      objectReference: {fileID: 6660122831339244413, guid: a50a71460273671499dfbb3900b93489, type: 3}
     - target: {fileID: 6072429973145566574, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_Name
       value: AnimalShopItem
@@ -13609,7 +13601,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.750507
+  orthographic size: 6.7485604
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -25535,7 +25527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1118, y: -590.8722}
+  m_AnchoredPosition: {x: -1118.2778, y: -590.8}
   m_SizeDelta: {x: 106.25, y: 106.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988524038
@@ -26527,7 +26519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1249, y: 634.5639}
+  m_AnchoredPosition: {x: 1249.2742, y: 634.5}
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071487690
@@ -27953,11 +27945,11 @@ MonoBehaviour:
   - {fileID: 1103029169}
   - {fileID: 490940688}
   - {fileID: 1483620392}
-  - {fileID: 1510462767}
-  - {fileID: 1747353840}
   - {fileID: 175759936}
   - {fileID: 373462333}
   - {fileID: 1808476959}
+  - {fileID: 1510462767}
+  - {fileID: 1747353840}
   synergyCards:
   - {fileID: 1007404755}
   - {fileID: 74648203}
@@ -35547,7 +35539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -318.95453, y: -33.299347}
+  m_AnchoredPosition: {x: -318.96, y: -33.20222}
   m_SizeDelta: {x: 256.25, y: 93.75}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1667885209

@@ -13,7 +13,7 @@ public class UpgradeShopItem : ShopItem
     
     public override void Initialize()
     {
-        possibleAnimals = GameController.player.animalsInDeck;
+        possibleAnimals = new List<AnimalData>(GameController.player.animalsInDeck);
         foreach (var item in animalShopItems)
         {
             possibleAnimals.Add(item.chosenAnimal);

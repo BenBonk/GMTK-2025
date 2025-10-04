@@ -20,6 +20,11 @@ public class AnimalShopItem : ShopItem
         List<Animal> weightedList = new List<Animal>();
         foreach (var animal in possibleAnimals)
         {
+            if (GameController.gameManager.roundNumber == 1 && (animal.isPredator || animal.animalData.name == "Horse"))
+            {
+                Debug.Log("Skipping " + animal.animalData.name + " in round 1");
+                continue; // skip predators/horses in round 1
+            }
             int weight = animal.isPredator ? 1 : 5; // change weights as needed
             for (int i = 0; i < weight; i++)
             {
