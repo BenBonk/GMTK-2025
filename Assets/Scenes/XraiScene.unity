@@ -25696,7 +25696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a137cd03a25d1ca489f354749648d09a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingRerollPrice: 50
+  startingRerollPrice: 20
   rerollMultIncrease: 1.5
   hoverPopup: {fileID: 951094376}
   priceText: {fileID: 426302352}
