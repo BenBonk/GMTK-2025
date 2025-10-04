@@ -168,7 +168,11 @@ public class GameManager : MonoBehaviour
         }
         if (boonManager.ContainsBoon("Pocketwatch"))
         {
-            roundDuration += 10;
+            roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength + 10;
+        }
+        else
+        {
+            roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
         }
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
@@ -201,10 +205,6 @@ public class GameManager : MonoBehaviour
 
     public void EndRound()
     {
-        if (boonManager.ContainsBoon("Pocketwatch"))
-        {
-            roundDuration -= 10;
-        }
         roundCompleted = true;
         roundInProgress = false;
         elapsedTime = 0;

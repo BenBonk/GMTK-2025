@@ -1,20 +1,25 @@
 using DG.Tweening;
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 using Random = UnityEngine.Random;
 
 public class UpgradeShopItem : ShopItem
 {
-    private AnimalData[] possibleAnimals;
+    private List<AnimalData> possibleAnimals;
     private AnimalData chosenAnimal;
     public UpgradeShopItem partnerUpgrade;
     public AnimalShopItem[] animalShopItems;
     
     public override void Initialize()
     {
-        possibleAnimals = GameController.player.animalsInDeck.ToArray();
+        possibleAnimals = GameController.player.animalsInDeck;
+        foreach (var item in animalShopItems)
+        {
+            possibleAnimals.Add(item.chosenAnimal);
+        }
         AnimalLevelManager levelManager = GameController.animalLevelManager;
-        chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Length)];
+        chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Count)];
         int animalLevel = levelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
 
         UpdateDescription();

@@ -703,11 +703,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: Old Macdonald
+    m_Localized: Old MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026
-    m_Localized: Recieves double daily cash after each round.
+    m_Localized: Receives double daily cash after each round.
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809027
@@ -990,7 +990,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
-    m_Localized: Pointy Pals
+    m_Localized: Point Pals
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802023

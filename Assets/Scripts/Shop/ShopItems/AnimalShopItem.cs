@@ -32,7 +32,7 @@ public class AnimalShopItem : ShopItem
         price = chosenAnimal.price;
         if (GameController.boonManager.ContainsBoon("Auctioneer"))
         {
-            price = Random.Range(25, 201);
+            price = Random.Range(15, 201);
         }
         priceText.text = price.ToString();
         upgradeArt.sprite = chosenAnimal.sprite;
