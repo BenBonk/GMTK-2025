@@ -609,7 +609,7 @@ public class LassoController : MonoBehaviour
             }
         }
 
-        var eggs = GameObject.FindGameObjectsWithTag("ChickenEgg");
+        var eggs = GameObject.FindGameObjectsWithTag("NonAnimalLassoable");
         foreach (var egg in eggs)
         {
             var col = egg.GetComponent<Collider2D>();

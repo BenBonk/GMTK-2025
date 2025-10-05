@@ -25,19 +25,18 @@ public class CaptureManager : MonoBehaviour
         player = GameController.player;
     }
 
+    private int triggers = 1;
+    private int currentTrigger = 0;
     public (double, double, double, double) MakeCapture(GameObject[] objectsCaptured)
     {
         pointBonus = 0;
         pointMult = 1;
         currencyBonus = 0;
         currencyMult = 1;
+        triggers = 1;
+        currentTrigger = 0;
 
-        int triggers = 1;
-        if (boonManager.ContainsBoon("BlackSheep"))
-        {
-            triggers = 2;
-        }
-        for (int t = 0; t < triggers; t++)
+        for (currentTrigger = 0; currentTrigger < triggers; currentTrigger++)
         {
             List<Animal> animalsCaptured = new List<Animal>();
             List<Lassoable> lassoablesCaptured = new List<Lassoable>();
@@ -206,6 +205,9 @@ public class CaptureManager : MonoBehaviour
 
         if (capturedAnimal.gameObject.CompareTag("PigWithHat"))
             currencyBonus += 50;
+
+        if (capturedAnimal.gameObject.CompareTag("BlackSheep") && currentTrigger == 0)
+            triggers += 1;
 
         currencyBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.animalData.currencyToGive;
         currencyMult += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;
