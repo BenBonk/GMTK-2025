@@ -355,7 +355,7 @@ public class LassoController : MonoBehaviour
         DestroyLassoExit(false);
     }
 
-    private IEnumerator ShowFeedbackSequence((double pointBonus, double pointMult, double currencyBonus, double currencyMult) result)
+    private IEnumerator ShowFeedbackSequence((double pointBonus, double pointMult, double currencyBonus, double currencyMult, HashSet<Sprite> boonSprites) result)
     {
         float zDepth = Mathf.Abs(Camera.main.transform.position.z);
 
@@ -389,10 +389,6 @@ public class LassoController : MonoBehaviour
         int row = 0;
 
         // === POINTS BONUS ===
-        if (boonManager.ContainsBoon("PointyPals"))
-        {
-            result.pointBonus += 3;
-        }
         if (true)
         {
             Vector3 offset = new Vector3(0, row++ * 1f, 0);
@@ -486,11 +482,6 @@ public class LassoController : MonoBehaviour
         }
 
         // === CURRENCY BONUS ===
-        if (boonManager.ContainsBoon("CashCatch"))
-        {
-            result.currencyBonus += 2;
-        }
-        
         if (result.currencyBonus != 0)
         {
             Vector3 offset = new Vector3(0, row++ * 1f, 0);
@@ -624,7 +615,7 @@ public class LassoController : MonoBehaviour
         return list;
     }
 
-    public void ShowCaptureFeedback((double pointBonus, double pointMult, double currencyBonus, double currencyMult) result)
+    public void ShowCaptureFeedback((double pointBonus, double pointMult, double currencyBonus, double currencyMult, HashSet<Sprite> boonSprites) result)
     {
         StartCoroutine(ShowFeedbackSequence(result));
     }
