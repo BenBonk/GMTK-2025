@@ -395,7 +395,7 @@ public class GameManager : MonoBehaviour
 
     public void LeaveShop()
     {
-        if (GameController.shopManager.cantPurchaseItem)
+        if (GameController.shopManager.cantPurchaseItem || shopButtonBlocker.activeInHierarchy)
         {
             return;
         }

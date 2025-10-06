@@ -22,7 +22,6 @@ public class AnimalShopItem : ShopItem
         {
             if (GameController.gameManager.roundNumber == 1 && (animal.isPredator || animal.animalData.name == "Horse"))
             {
-                Debug.Log("Skipping " + animal.animalData.name + " in round 1");
                 continue; // skip predators/horses in round 1
             }
             int weight = animal.isPredator ? 1 : 5; // change weights as needed
