@@ -962,7 +962,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Grants 2 reroll opportunities per shop
+    m_Localized: Shop can now be rerolled twice instead of once, each time entered
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

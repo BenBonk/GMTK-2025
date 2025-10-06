@@ -982,7 +982,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Gew\xE4hrt 2 Reroll-M\xF6glichkeiten pro Shop"
+    m_Localized: "Der Shop kann jetzt bei jedem Betreten zweimal neu gew\xFCrfelt
+      werden, statt nur einmal."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

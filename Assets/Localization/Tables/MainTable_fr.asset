@@ -979,7 +979,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Accorde 2 opportunit\xE9s de relance par boutique"
+    m_Localized: "La boutique peut d\xE9sormais \xEAtre relanc\xE9e deux fois au
+      lieu d'une, \xE0 chaque fois qu'on y entre"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

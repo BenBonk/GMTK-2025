@@ -998,7 +998,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Zapewnia 2 mo\u017Cliwo\u015Bci ponownego rzutu na sklep"
+    m_Localized: "Teraz mo\u017Cna ponownie uruchomi\u0107 sklep dwa razy, a nie
+      raz, za ka\u017Cdym razem, gdy si\u0119 wchodzi"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

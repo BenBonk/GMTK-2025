@@ -972,7 +972,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Concede 2 oportunidades de nova rolagem por loja
+    m_Localized: A loja agora pode ser reiniciada duas vezes em vez de uma, cada
+      vez que for acessada
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

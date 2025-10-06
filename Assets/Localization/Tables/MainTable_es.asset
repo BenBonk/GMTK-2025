@@ -975,7 +975,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Otorga 2 oportunidades de cambio de tirada por tienda
+    m_Localized: Ahora se puede cambiar el nombre de la tienda dos veces en lugar
+      de una, cada vez que se ingresa.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

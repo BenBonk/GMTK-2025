@@ -84,6 +84,10 @@ public class SynergyShopItem : ShopItem
                 GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
                 FBPP.SetInt("chosenToStealIndex", chosenToStealIndex);
             }
+            if (chosenBoon.name=="FreshStock")
+            {
+               GameController.rerollManager.Reset();
+            }
             if (GameController.player.boonsInDeck.Count<GameController.gameManager.maxSynergies)
             {
                 GameController.player.AddBoonToDeck(chosenBoon);
