@@ -28070,6 +28070,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 124721a69160a9c4fa3232bbd08df274, type: 2}
     - {fileID: 11400000, guid: 79fdfc6af72fcb04a81be3a9b6104ac6, type: 2}
     - {fileID: 11400000, guid: 334e12ec41fdcd5439c029c789078886, type: 2}
+  upgradeShopItem: {fileID: 1747353840}
   references:
     version: 2
     RefIds: []

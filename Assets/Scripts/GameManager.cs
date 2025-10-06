@@ -178,6 +178,11 @@ public class GameManager : MonoBehaviour
         {
             endDayCash += 20;
         }
+
+        if (isTesting)
+        {
+            roundDuration = 3;
+        }
         captureManager.herdPointMultBonus = 0.1f;
         if (boonManager.ContainsBoon("HerdMentality"))
         {

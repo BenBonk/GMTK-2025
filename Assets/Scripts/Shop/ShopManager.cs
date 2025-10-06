@@ -38,6 +38,7 @@ public class ShopManager : MonoBehaviour
     public BoonGroup[] boonGroups;
     private Tween animalDeckTween;
     private Tween boonDeckTween;
+    public UpgradeShopItem upgradeShopItem;
 
     private Queue<Boon> recentBoons;
     int recentBoonCapacity = 3;
@@ -53,6 +54,17 @@ public class ShopManager : MonoBehaviour
 
     public void InitializeAllUpgrades()
     {
+        foreach (var shopItem in shopItems)
+        {
+            if (shopItem is SynergyShopItem)
+            {
+                continue;
+            }
+            Instantiate(purchaseParticles, shopItem.rt.position, Quaternion.identity);
+            shopItem.canPurchase = true;
+            shopItem.Initialize();
+            shopItem.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
+        }
         UpdateCashText();
         List<Boon> chosenBoons = new List<Boon>();
         while (chosenBoons.Count < 3)
@@ -73,6 +85,10 @@ public class ShopManager : MonoBehaviour
         }
         foreach (var shopItem in shopItems)
         {
+            if (shopItem is not SynergyShopItem)
+            {
+                continue;
+            }
             Instantiate(purchaseParticles, shopItem.rt.position, Quaternion.identity);
             shopItem.canPurchase = true;
             shopItem.Initialize();
@@ -107,6 +123,26 @@ public class ShopManager : MonoBehaviour
                     validBoons = group.boons
                         .Where(b => b.price < 350)
                         .ToList();
+                    if (validBoons.Count == 0)
+                        validBoons = group.boons;
+                } ;
+                if (group.groupName == "Legendary")
+                {
+                    List<string> allowedLegendaryBoons = new List<string>();
+                    foreach (var a in GameController.player.animalsInDeck)
+                    {
+                        allowedLegendaryBoons.Add(a.legendaryBoon.name);
+                    }
+                    foreach (var u in upgradeShopItem.animalShopItems)
+                    {
+                        allowedLegendaryBoons.Add(u.chosenAnimal.legendaryBoon.name);
+                    }
+
+                    validBoons = group.boons
+                        .Where(b => allowedLegendaryBoons.Contains(b.name))
+                        .ToList();
+
+                    // fallback if all were filtered out
                     if (validBoons.Count == 0)
                         validBoons = group.boons;
                 }
