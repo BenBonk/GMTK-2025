@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+Esp\xE8ces\_: {0}"
+    m_Localized: "+ Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -711,11 +711,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: Vieux Macdonald
+    m_Localized: Le vieux MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026
-    m_Localized: "Re\xE7oit le double d'argent par jour apr\xE8s chaque tour."
+    m_Localized: "Re\xE7oit le double d'argent quotidien apr\xE8s chaque tour."
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809027
@@ -805,7 +805,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus en cas de capture en plein bond
+    m_Localized: Bonus en cas de capture au milieu d'un bond
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689

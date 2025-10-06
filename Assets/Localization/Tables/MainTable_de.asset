@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein
+      mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Bauerndilemma
+    m_Localized: Das Dilemma der Bauern
     m_Metadata:
       m_Items: []
   - m_Id: 56
@@ -716,7 +716,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: Alter Macdonald
+    m_Localized: Alter MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026
@@ -785,7 +785,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607682
     m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -898,7 +898,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "W\xF6lfe laichen jetzt in Rudeln von zwei oder drei"
+    m_Localized: "W\xF6lfe vermehren sich jetzt in Rudeln von zwei oder drei"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -996,8 +996,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
-      Lasso, statt 10 %"
+    m_Localized: "Erhalten Sie f\xFCr jeden Nicht-Raubtier im Lasso einen Punktebonus
+      von +20 % statt 10 %"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020

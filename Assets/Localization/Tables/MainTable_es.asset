@@ -499,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
+    m_Localized: "\xA1Bienvenido al Libro de Registro!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -708,7 +708,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: Viejo Macdonald
+    m_Localized: El viejo MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026

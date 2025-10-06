@@ -25,19 +25,26 @@ public class CaptureManager : MonoBehaviour
         player = GameController.player;
     }
 
-    public (double, double, double, double) MakeCapture(GameObject[] objectsCaptured)
+    private int triggers = 1;
+    private int currentTrigger = 0;
+    private int totalPredatorCount = 0;
+    HashSet<Sprite> boonSprites = new HashSet<Sprite>();
+    public (double, double, double, double, HashSet<Sprite>) MakeCapture(GameObject[] objectsCaptured)
     {
         pointBonus = 0;
         pointMult = 1;
         currencyBonus = 0;
         currencyMult = 1;
-
-        int triggers = 1;
-        if (boonManager.ContainsBoon("BlackSheep"))
+        triggers = 1;
+        currentTrigger = 0;
+        totalPredatorCount = 0;
+        boonSprites = new HashSet<Sprite>();
+        if (objectsCaptured.Length == 0)
         {
-            triggers = 2;
+            return (pointBonus, pointMult, currencyBonus, currencyMult, boonSprites);
         }
-        for (int t = 0; t < triggers; t++)
+
+        for (currentTrigger = 0; currentTrigger < triggers; currentTrigger++)
         {
             List<Animal> animalsCaptured = new List<Animal>();
             List<Lassoable> lassoablesCaptured = new List<Lassoable>();
@@ -87,7 +94,7 @@ public class CaptureManager : MonoBehaviour
             }
 
             int totalNonPredatorCount = 0;
-            int totalPredatorCount = 0;
+
             int biodiversityBonus = 0;
             foreach (var animal in animalsCaptured)
             {
@@ -109,8 +116,9 @@ public class CaptureManager : MonoBehaviour
                 pointMult *= lassoable.pointsMultToGive;
             }
 
-            if (boonManager.ContainsBoon("Biodiversity"))
+            if (boonManager.ContainsBoon("Biodiversity") && animalsCaptured.Count > 0)
             {
+                boonSprites.Add(boonManager.boonDict["Biodiversity"].art);
                 HashSet<string> uniqueAnimalNames = new HashSet<string>();
                 foreach (var a in animalsCaptured)
                 {
@@ -126,6 +134,7 @@ public class CaptureManager : MonoBehaviour
 
             if (animalsCaptured.Count > 0 && boonManager.ContainsBoon("CaptureClock"))
             {
+                boonSprites.Add(boonManager.boonDict["CaptureClock"].art);
                 gameManager.roundDuration += 0.5f;
             }
 
@@ -134,17 +143,6 @@ public class CaptureManager : MonoBehaviour
                 pointMult *= 1+ (herdPointMultBonus * animalsCaptured.Count);
                 int groupsOf3 = totalNonPredatorCount / 3;
                 currencyBonus += groupsOf3;
-            }
-
-            if (boonManager.ContainsBoon("GoodBoy"))
-            {
-                if (totalPredatorCount > 0) currencyMult *= 5f;
-            }
-
-            if (boonManager.ContainsBoon("ScapeGoat"))
-            {
-                currencyBonus += (8 * totalPredatorCount);
-                pointBonus += (8 * totalPredatorCount);
             }
 
             if (boonManager.ContainsBoon("Mootiplier"))
@@ -163,6 +161,7 @@ public class CaptureManager : MonoBehaviour
                 }
                 else
                 {
+                    boonSprites.Add(boonManager.boonDict["Mootiplier"].art);
                     mootiplierMult += (.25f * cowCount);
                 }
             }
@@ -173,20 +172,26 @@ public class CaptureManager : MonoBehaviour
                 firstCapture = true;
                 pointMult *= 2;
                 currencyMult += 2;
+                boonSprites.Add(boonManager.boonDict["EarlyBird"].art);
             }
             if (boonManager.ContainsBoon("HailMary") && (gameManager.roundDuration - gameManager.elapsedTime) < 10f)
             {
                 pointMult *= 2;
+                boonSprites.Add(boonManager.boonDict["HailMary"].art);
             }
             if (boonManager.ContainsBoon("AbsoluteValue"))
             {
+                if (pointBonus * pointMult < 0 || currencyBonus*currencyMult < 0)
+                {
+                    boonSprites.Add(boonManager.boonDict["AbsoluteValue"].art);
+                }
                 pointBonus = Mathf.Abs((float)pointBonus);
                 pointMult = Mathf.Abs((float)pointMult);
                 currencyBonus = Mathf.Abs((float)currencyBonus);
                 currencyMult = Mathf.Abs((float)currencyMult);
             }
         }
-        return (pointBonus, pointMult, currencyBonus, currencyMult);
+        return (pointBonus, pointMult, currencyBonus, currencyMult, boonSprites);
     }
 
     public void ActivateBoon(BasicBoon boon)
@@ -195,6 +200,7 @@ public class CaptureManager : MonoBehaviour
         currencyMult += boon.currencyMult;
         pointBonus += boon.pointsBonus;
         pointMult *=  boon.pointsMult;
+        boonSprites.Add(boon.art);
         Debug.Log($"Boon activated: {boon.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
     }
 
@@ -206,6 +212,31 @@ public class CaptureManager : MonoBehaviour
 
         if (capturedAnimal.gameObject.CompareTag("PigWithHat"))
             currencyBonus += 50;
+
+        if (capturedAnimal.gameObject.CompareTag("BlackSheep") && currentTrigger == 0)
+            triggers += 1;
+
+        if (boonManager.ContainsBoon("PointyPals"))
+        {
+            pointBonus += 3;
+            boonSprites.Add(boonManager.boonDict["PointyPals"].art);
+        }
+        if (boonManager.ContainsBoon("CashCatch"))
+        {
+            currencyBonus += 2;
+            boonSprites.Add(boonManager.boonDict["CashCatch"].art);
+        }
+        if (boonManager.ContainsBoon("GoodBoy") && capturedAnimal.animalData.name == "Dog" && totalPredatorCount > 0)
+        {
+            currencyMult += 5f;
+            boonSprites.Add(boonManager.boonDict["GoodBoy"].art);
+        }
+        if (boonManager.ContainsBoon("ScapeGoat") && capturedAnimal.animalData.name == "Goat")
+        {
+            currencyBonus += (12 * totalPredatorCount);
+            pointBonus += (12 * totalPredatorCount);
+            boonSprites.Add(boonManager.boonDict["ScapeGoat"].art);
+        }
 
         currencyBonus += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpIncrease + capturedAnimal.animalData.currencyToGive;
         currencyMult += (GameController.animalLevelManager.GetLevel(capturedAnimal.animalData.name)+bonus) * capturedAnimal.animalData.currencyLevelUpMult + capturedAnimal.animalData.currencyMultToGive;

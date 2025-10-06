@@ -708,7 +708,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: Velho Macdonald
+    m_Localized: Velho MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026
@@ -863,8 +863,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: As cabras agora atraem todos os predadores na tela, multiplicado
-      por x2 para cada predador capturado com uma cabra
+    m_Localized: As cabras agora atraem todos os predadores na tela, x2 multiplicado
+      por cada predador capturado com uma cabra
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -1061,7 +1061,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169348
-    m_Localized: Muito mais vantagens!
+    m_Localized: Muitas outras vantagens!
     m_Metadata:
       m_Items: []
   - m_Id: 13201600347766784
@@ -1069,7 +1069,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
-    m_Localized: "Selecione uma ben\xE7\xE3o para substituir"
+    m_Localized: "Selecione um benef\xEDcio para substituir"
     m_Metadata:
       m_Items: []
   references:

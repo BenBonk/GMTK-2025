@@ -8,6 +8,7 @@ TagManager:
   - PigWithHat
   - NonAnimalLassoable
   - ChickenEgg
+  - BlackSheep
   layers:
   - Default
   - TransparentFX

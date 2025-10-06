@@ -20,6 +20,10 @@ public class AnimalShopItem : ShopItem
         List<Animal> weightedList = new List<Animal>();
         foreach (var animal in possibleAnimals)
         {
+            if (GameController.gameManager.roundNumber == 1 && (animal.isPredator || animal.animalData.name == "Horse"))
+            {
+                continue; // skip predators/horses in round 1
+            }
             int weight = animal.isPredator ? 1 : 5; // change weights as needed
             for (int i = 0; i < weight; i++)
             {
@@ -32,7 +36,7 @@ public class AnimalShopItem : ShopItem
         price = chosenAnimal.price;
         if (GameController.boonManager.ContainsBoon("Auctioneer"))
         {
-            price = Random.Range(25, 201);
+            price = Random.Range(15, 201);
         }
         priceText.text = price.ToString();
         upgradeArt.sprite = chosenAnimal.sprite;

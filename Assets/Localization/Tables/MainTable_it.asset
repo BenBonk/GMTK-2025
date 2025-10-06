@@ -707,7 +707,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809025
-    m_Localized: Vecchio Macdonald
+    m_Localized: Vecchio MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809026
@@ -723,7 +723,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -872,7 +872,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano le statistiche con
+    m_Localized: Le volpi scambiano statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -885,7 +885,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Branco di lupi
+    m_Localized: branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1021,8 +1021,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: Mentre sei nel tuo mazzo dei doni, tutti gli animali hanno il loro
-      livello aumentato di 2
+    m_Localized: Mentre sei nel tuo mazzo dei doni, il livello di tutti gli animali
+      aumenta di 2
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376

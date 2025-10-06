@@ -10,6 +10,7 @@ public class Sheep : Animal
         {
             legendary = true;
             GetComponent<SpriteRenderer>().sprite = blackSheep;
+            gameObject.tag = "BlackSheep";
         }
     }
 }
