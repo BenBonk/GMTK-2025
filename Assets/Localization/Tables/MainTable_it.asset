@@ -897,7 +897,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: Tutti i numeri negativi saranno valutati come positivi
+    m_Localized: "Se il risultato finale di un lazo \xE8 negativo, sar\xE0 invece
+      positivo"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998

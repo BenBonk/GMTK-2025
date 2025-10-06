@@ -900,7 +900,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Todos los n\xFAmeros negativos se calificar\xE1n como positivos."
+    m_Localized: "Si el resultado final de un lazo es negativo, ser\xE1 positivo
+      en su lugar"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998

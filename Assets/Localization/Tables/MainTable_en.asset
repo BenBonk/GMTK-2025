@@ -888,7 +888,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: 'All negative numbers will be scored as positives '
+    m_Localized: If the final result of a lasso is negative, it will be positive
+      instead
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998

@@ -921,7 +921,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Wszystkie liczby ujemne b\u0119d\u0105 punktowane jako liczby dodatnie"
+    m_Localized: "Je\u015Bli ko\u0144cowy wynik lassa b\u0119dzie negatywny, to zamiast
+      tego b\u0119dzie pozytywny"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998

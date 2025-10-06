@@ -907,7 +907,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: Alle negativen Zahlen werden als positiv gewertet
+    m_Localized: Wenn das Endergebnis eines Lassos negativ ist, wird es stattdessen
+      positiv sein
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998

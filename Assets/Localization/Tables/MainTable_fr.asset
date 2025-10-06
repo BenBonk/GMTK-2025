@@ -902,7 +902,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Tous les nombres n\xE9gatifs seront consid\xE9r\xE9s comme positifs"
+    m_Localized: "Si le r\xE9sultat final d'un lasso est n\xE9gatif, il sera positif
+      \xE0 la place"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998

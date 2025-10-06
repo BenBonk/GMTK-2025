@@ -897,7 +897,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Todos os n\xFAmeros negativos ser\xE3o pontuados como positivos"
+    m_Localized: "Se o resultado final de um la\xE7o for negativo, ele ser\xE1 positivo"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
