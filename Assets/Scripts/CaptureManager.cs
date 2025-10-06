@@ -15,7 +15,6 @@ public class CaptureManager : MonoBehaviour
     private double currencyBonus = 0;
     private double currencyMult = 1;
     [HideInInspector] public bool firstCapture;
-    public float herdPointMultBonus;
     [HideInInspector] public float mootiplierMult=0;
 
     private void Start()
@@ -140,7 +139,15 @@ public class CaptureManager : MonoBehaviour
 
             if (totalNonPredatorCount > 1)
             {
-                pointMult *= 1+ (herdPointMultBonus * animalsCaptured.Count);
+                if (boonManager.ContainsBoon("HerdMentality"))
+                {
+                    pointMult *= 1 + (.2f * totalNonPredatorCount);
+                    boonSprites.Add(boonManager.boonDict["HerdMentality"].art);
+                }
+                else
+                {
+                    pointMult *= 1 + (.1f * totalNonPredatorCount);
+                }
                 int groupsOf3 = totalNonPredatorCount / 3;
                 currencyBonus += groupsOf3;
             }

@@ -183,11 +183,6 @@ public class GameManager : MonoBehaviour
         {
             roundDuration = 3;
         }
-        captureManager.herdPointMultBonus = 0.1f;
-        if (boonManager.ContainsBoon("HerdMentality"))
-        {
-            captureManager.herdPointMultBonus = .2f;
-        }
 
         if (boonManager.ContainsBoon("CoinPouch"))
         {

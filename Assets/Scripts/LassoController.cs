@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -355,6 +356,51 @@ public class LassoController : MonoBehaviour
         DestroyLassoExit(false);
     }
 
+
+
+    [Header("Boon Icon Layout")]
+    public Vector2 boonIconOffset = new Vector2(0f, 1f);  // local offset from the group center
+    public float boonIconSpacing = 0.9f;                     // gap between icons (world units)
+    public float boonIconScale = 0.9f;                      // icon scale relative to 1
+    public int boonIconSortingOrder = 6;
+    private List<SpriteRenderer> CreateBoonIcons(Transform anchor, IEnumerable<Sprite> sprites)
+    {
+        var list = new List<SpriteRenderer>();
+        if (sprites == null) return list;
+
+        // materialize to count once
+        var arr = sprites.Where(s => s != null).ToArray();
+        int n = arr.Length;
+        if (n == 0) return list;
+
+        // Center the icons horizontally around anchor + offset.
+        // If n=1 -> sits exactly at offset.x
+        // If n=2 -> gap centered on offset.x
+        // If n=3 -> middle at offset.x, etc.
+        float totalSpan = (n - 1) * boonIconSpacing;
+        float startX = boonIconOffset.x - totalSpan * 0.5f;
+
+        for (int i = 0; i < n; i++)
+        {
+            var sp = arr[i];
+            var go = new GameObject($"BoonIcon_{i}");
+            go.transform.SetParent(anchor, worldPositionStays: false);
+
+            float x = startX + i * boonIconSpacing;
+            go.transform.localPosition = new Vector3(x, boonIconOffset.y, 0f);
+            go.transform.localScale = Vector3.one * boonIconScale;
+
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.sprite = sp;
+            sr.sortingOrder = boonIconSortingOrder;
+
+            var c = sr.color; c.a = 1f; sr.color = c;
+
+            list.Add(sr);
+        }
+        return list;
+    }
+
     private IEnumerator ShowFeedbackSequence((double pointBonus, double pointMult, double currencyBonus, double currencyMult, HashSet<Sprite> boonSprites) result)
     {
         float zDepth = Mathf.Abs(Camera.main.transform.position.z);
@@ -379,6 +425,7 @@ public class LassoController : MonoBehaviour
         float angle = Mathf.Lerp(0f, tiltMax, Mathf.Abs(normalizedX));
 
         List<GameObject> createdGroups = new();
+        bool boonsPlaced = false;
 
         bool bonusPointsShown = result.pointBonus == 0;
         bool multPointsShown = Math.Abs(result.pointMult - 1f) <= 0.01f || result.pointBonus == 0;
@@ -387,6 +434,7 @@ public class LassoController : MonoBehaviour
         bool multCashShown = Math.Abs(result.currencyMult - 1f) <= 0.01f || result.currencyBonus == 0;
 
         int row = 0;
+
 
         // === POINTS BONUS ===
         if (true)
@@ -455,6 +503,12 @@ public class LassoController : MonoBehaviour
             }
             //a
             group.transform.localScale = Vector3.zero;
+
+            if (result.currencyBonus == 0 && result.boonSprites.Count > 0)
+            {
+                CreateBoonIcons(group.transform, result.boonSprites);
+            }
+
             Sequence pop = DOTween.Sequence();
             pop.Append(group.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack));
             pop.Append(group.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
@@ -538,9 +592,13 @@ public class LassoController : MonoBehaviour
             {
                 FBPP.SetFloat("highestCashPerLasso", (float)total);
             }
-            
-            
+      
             GameController.player.playerCurrency += result.currencyBonus;
+
+            if (result.boonSprites.Count > 0)
+            {
+                CreateBoonIcons(group.transform, result.boonSprites);
+            }
 
             group.transform.localScale = Vector3.zero;
             Sequence pop = DOTween.Sequence();
@@ -575,6 +633,9 @@ public class LassoController : MonoBehaviour
             {
                 txt.DOFade(0f, fadeDuration).SetEase(Ease.InOutQuad);
             }
+
+            foreach (SpriteRenderer sr in group.GetComponentsInChildren<SpriteRenderer>())
+                sr.DOFade(0f, fadeDuration).SetEase(Ease.InOutQuad);
 
             Destroy(group, fadeDuration + 0.1f);
         }
