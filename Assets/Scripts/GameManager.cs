@@ -217,7 +217,7 @@ public class GameManager : MonoBehaviour
             roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
-            GameController.predatorSelect.darkCover.gameObject.SetActive(true);
+            GameController.predatorSelect.darkCover.enabled = true;
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
             StartCoroutine(CheckIfStillDead());
             return;
@@ -300,7 +300,7 @@ public class GameManager : MonoBehaviour
             }
             RectTransform children = winPanel.Find("Children") as RectTransform;
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
-            GameController.predatorSelect.darkCover.gameObject.SetActive(true);
+            GameController.predatorSelect.darkCover.enabled=true;
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
             yield return new WaitForSeconds(3);
             GameController.wishlistPanel.Open();
