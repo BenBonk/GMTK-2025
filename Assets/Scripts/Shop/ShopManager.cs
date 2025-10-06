@@ -146,6 +146,29 @@ public class ShopManager : MonoBehaviour
                     if (validBoons.Count == 0)
                         validBoons = group.boons;
                 }
+                if (group.groupName == "Basic")
+                {
+                    List<string> animalsInDeckShop = new List<string>();
+                    foreach (var a in GameController.player.animalsInDeck)
+                    {
+                        animalsInDeckShop.Add(a.name);
+                    }
+                    foreach (var u in upgradeShopItem.animalShopItems)
+                    {
+                        animalsInDeckShop.Add(u.chosenAnimal.name);
+                    }
+                    
+                    List<BasicBoon> validBasicBoons = group.boons
+                        .OfType<BasicBoon>()
+                        .Where(b => b.animalsNeeded.Any(animal => animalsInDeckShop.Contains(animal)))
+                        .ToList();
+                    validBoons = validBasicBoons.OfType<Boon>().ToList();
+                    
+                    // fallback if all were filtered out
+                    if (validBoons.Count == 0)
+                        validBoons = group.boons;
+                }
+                
                 int idx = Random.Range(0, validBoons.Count);
                 return validBoons[idx];
             }
