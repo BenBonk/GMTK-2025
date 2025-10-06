@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.UI;
@@ -93,7 +94,7 @@ public class Logbook : MonoBehaviour
     public void UpdateLogbook()
     {
         List<string> top3Animals = saveManager.animalDatas
-            .OrderByDescending(a => FBPP.GetInt(a.name))  // sort by value
+            .OrderByDescending(a => FBPP.GetInt(a.animalName.GetLocalizedString(),0))  // sort by value
             .Take(3)                                       // take top 3
             .Select(a => a.name)                           // select the names
             .ToList();

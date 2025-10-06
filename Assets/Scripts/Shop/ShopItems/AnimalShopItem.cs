@@ -68,7 +68,7 @@ public class AnimalShopItem : ShopItem
             GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
-            FBPP.SetInt(chosenAnimal.name, FBPP.GetInt(chosenAnimal.name)+1);
+            FBPP.SetInt(chosenAnimal.animalName.GetLocalizedString(), FBPP.GetInt(chosenAnimal.animalName.GetLocalizedString())+1);
             FBPP.SetInt("totalAnimalsPurchased", FBPP.GetInt("totalAnimalsPurchased")+1);
             GameController.player.AddAnimalToDeck(chosenAnimal);
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
