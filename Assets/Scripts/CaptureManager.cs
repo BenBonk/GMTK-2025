@@ -226,10 +226,10 @@ public class CaptureManager : MonoBehaviour
         if (capturedAnimal.gameObject.CompareTag("BlackSheep") && currentTrigger == 0)
             triggers += 1;
 
-        if (boonManager.ContainsBoon("PointyPals"))
+        if (boonManager.ContainsBoon("PointPals"))
         {
             pointBonus += 3;
-            boonSprites.Add(boonManager.boonDict["PointyPals"].art);
+            boonSprites.Add(boonManager.boonDict["PointPals"].art);
         }
         if (boonManager.ContainsBoon("CashCatch"))
         {
