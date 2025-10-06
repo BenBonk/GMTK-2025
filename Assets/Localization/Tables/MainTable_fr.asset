@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+ Esp\xE8ces\_: {0}"
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -805,7 +805,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus en cas de capture au milieu d'un bond
+    m_Localized: Bonus en cas de capture en plein bond
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
@@ -813,8 +813,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "Les chiens de berger chassent les pr\xE9dateurs. Ils valent 5 fois
-      plus cher lorsqu'ils sont pris au pi\xE8ge d'un pr\xE9dateur."
+    m_Localized: "Les chiens chassent les pr\xE9dateurs. Leur valeur est multipli\xE9e
+      par 5 lorsqu'ils sont pris au pi\xE8ge d'un pr\xE9dateur."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -850,7 +850,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Les cochons peuvent appara\xEEtre al\xE9atoirement avec un chapeau
-      haut de forme, si c'est le cas, ils valent +50 en esp\xE8ces"
+      haut de forme, si c'est le cas, ils valent +50 esp\xE8ces et +25 points"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -868,8 +868,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801989
     m_Localized: "Les ch\xE8vres attirent d\xE9sormais tous les pr\xE9dateurs \xE0
-      l'\xE9cran, x2 multiplicateur pour chaque pr\xE9dateur captur\xE9 avec une
-      ch\xE8vre"
+      l'\xE9cran. Les ch\xE8vres valent +12 points et +12 esp\xE8ces pour chaque
+      pr\xE9dateur captur\xE9 avec une ch\xE8vre"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -918,7 +918,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
+    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente ma\xEEtris\xE9e
       par lasso"
     m_Metadata:
       m_Items: []

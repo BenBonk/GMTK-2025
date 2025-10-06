@@ -804,8 +804,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: Herding dogs chase predators away. Herding dogs are worth x5 cash
-      when lassoed with any predator
+    m_Localized: Dogs chase predators away. Dogs are worth +5.0x cash when lassoed
+      with any predator
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -839,7 +839,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: Pigs can randomly spawn with a top hat, if so they are worth +50
-      cash
+      cash and +25 points
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -855,8 +855,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: Goats now attrract all predators on the screen, x2 mult for each
-      predator captured with a goat
+    m_Localized: Goats now attrract all predators on the screen, Goats are worth
+      +12 points and +12 cash for each predator captured with a goat
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990

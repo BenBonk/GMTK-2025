@@ -213,7 +213,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: "La\xE7o um grupo de animais contendo um c\xE3o, uma raposa e um
+    m_Localized: "La\xE7o: um grupo de animais contendo um c\xE3o, uma raposa e um
       lobo"
     m_Metadata:
       m_Items: []
@@ -810,8 +810,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "C\xE3es pastores afugentam predadores. C\xE3es pastores valem x5
-      em dinheiro quando la\xE7ados com qualquer predador."
+    m_Localized: "C\xE3es afugentam predadores. C\xE3es valem +5,0x em dinheiro quando
+      la\xE7ados com qualquer predador."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -846,7 +846,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: Os porcos podem aparecer aleatoriamente com uma cartola, se assim
-      for, eles valem +50 em dinheiro
+      for, eles valem +50 em dinheiro e +25 pontos
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -863,8 +863,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: As cabras agora atraem todos os predadores na tela, x2 multiplicado
-      por cada predador capturado com uma cabra
+    m_Localized: As cabras agora atraem todos os predadores na tela. As cabras valem
+      +12 pontos e +12 em dinheiro para cada predador capturado com uma cabra.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -1061,7 +1061,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169348
-    m_Localized: Muitas outras vantagens!
+    m_Localized: Muito mais vantagens!
     m_Metadata:
       m_Items: []
   - m_Id: 13201600347766784

@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein.
+      mit dem Lasso ein
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Das Dilemma der Bauern
+    m_Localized: Bauerndilemma
     m_Metadata:
       m_Items: []
   - m_Id: 56
@@ -818,8 +818,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "H\xFCtehunde verjagen Raubtiere. H\xFCtehunde sind f\xFCnfmal so
-      viel wert, wenn sie mit einem Raubtier eingefangen werden."
+    m_Localized: Hunde verjagen Raubtiere. Hunde sind +5,0x Bargeld wert, wenn sie
+      mit einem Raubtier eingefangen werden
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -855,7 +855,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Schweine k\xF6nnen zuf\xE4llig mit einem Zylinder erscheinen, in
-      diesem Fall sind sie +50 Bargeld wert"
+      diesem Fall sind sie +50 Bargeld und +25 Punkte wert"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -872,8 +872,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: "Ziegen ziehen jetzt alle Raubtiere auf dem Bildschirm an, x2 Multiplikator
-      f\xFCr jedes mit einer Ziege gefangene Raubtier"
+    m_Localized: "Ziegen ziehen jetzt alle Raubtiere auf dem Bildschirm an. Ziegen
+      sind +12 Punkte und +12 Bargeld f\xFCr jedes mit einer Ziege gefangene Raubtier
+      wert"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990

@@ -211,7 +211,10 @@ public class CaptureManager : MonoBehaviour
             bonus = 2;
 
         if (capturedAnimal.gameObject.CompareTag("PigWithHat"))
+        {
             currencyBonus += 50;
+            pointBonus += 25;
+        }
 
         if (capturedAnimal.gameObject.CompareTag("BlackSheep") && currentTrigger == 0)
             triggers += 1;

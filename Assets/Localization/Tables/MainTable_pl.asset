@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
-      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
-      dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -473,7 +473,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 103
     m_Localized: "Na koniec, mo\u017Cesz odnowi\u0107 sklep raz dziennie, a koszt
-      wzro\u015Bnie na sta\u0142e!"
+      ten wzro\u015Bnie na sta\u0142e!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -831,8 +831,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "Psy pasterskie odstraszaj\u0105 drapie\u017Cniki. Psy pasterskie
-      s\u0105 warte x5, gdy z\u0142api\u0105 na lasso dowolnego drapie\u017Cnika."
+    m_Localized: "Psy odstraszaj\u0105 drapie\u017Cniki. Psy s\u0105 warte +5,0x
+      got\xF3wki, gdy s\u0105 z\u0142apane na lasso przez dowolnego drapie\u017Cnika."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -868,8 +868,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801985
-    m_Localized: "\u015Awinie mog\u0105 pojawia\u0107 si\u0119 losowo z cylindrem,
-      je\u015Bli tak si\u0119 stanie, s\u0105 warte +50 got\xF3wki"
+    m_Localized: "\u015Awinie mog\u0105 pojawia\u0107 si\u0119 losowo z cylindrem.
+      Je\u015Bli tak si\u0119 stanie, b\u0119d\u0105 warte +50 got\xF3wki i +25 punkt\xF3w."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -887,8 +887,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801989
     m_Localized: "Kozy teraz przyci\u0105gaj\u0105 wszystkie drapie\u017Cniki na
-      ekranie, mno\u017C\u0105c x2 za ka\u017Cdego drapie\u017Cnika z\u0142apanego
-      przez koz\u0119"
+      ekranie. Kozy s\u0105 warte +12 punkt\xF3w i +12 got\xF3wki za ka\u017Cdego
+      drapie\u017Cnika schwytanego przez koz\u0119."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -1014,8 +1014,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
-      w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
+      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1044,7 +1044,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-Pracownik Rolny
+    m_Localized: Weteran-robotnik
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027

@@ -809,8 +809,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: I cani da pastore scacciano i predatori. I cani da pastore valgono
-      x5 in contanti quando vengono catturati con il lazo da un predatore.
+    m_Localized: I cani scacciano i predatori. I cani valgono +5,0x denaro quando
+      vengono catturati da un predatore.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -846,7 +846,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: I maiali possono apparire casualmente con un cappello a cilindro,
-      in tal caso valgono +50 contanti
+      in tal caso valgono +50 contanti e +25 punti
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -863,8 +863,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: Le capre ora attraggono tutti i predatori sullo schermo, moltiplica
-      x2 per ogni predatore catturato con una capra
+    m_Localized: Le capre ora attraggono tutti i predatori sullo schermo, le capre
+      valgono +12 punti e +12 soldi per ogni predatore catturato con una capra
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -872,7 +872,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano statistiche con
+    m_Localized: Le volpi scambiano le statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -885,7 +885,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1021,8 +1021,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: Mentre sei nel tuo mazzo dei doni, il livello di tutti gli animali
-      aumenta di 2
+    m_Localized: Mentre sei nel tuo mazzo dei doni, tutti gli animali hanno il loro
+      livello aumentato di 2
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376

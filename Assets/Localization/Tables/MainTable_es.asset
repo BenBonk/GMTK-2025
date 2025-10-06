@@ -499,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Registro!"
+    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -811,8 +811,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "Los perros pastores ahuyentan a los depredadores. Valen 5 veces
-      m\xE1s dinero cuando se les enlaza con cualquier depredador."
+    m_Localized: Los perros ahuyentan a los depredadores. Los perros valen +5.0x
+      de efectivo cuando se les enlaza con cualquier depredador.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -848,7 +848,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Los cerdos pueden aparecer aleatoriamente con un sombrero de copa,
-      si es as\xED valen +50 en efectivo"
+      si es as\xED valen +50 en efectivo y +25 puntos."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -865,8 +865,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: Las cabras ahora atraen a todos los depredadores en la pantalla,
-      multiplicado por x2 por cada depredador capturado con una cabra
+    m_Localized: Las cabras ahora atraen a todos los depredadores en la pantalla.
+      Las cabras valen +12 puntos y +12 en efectivo por cada depredador capturado
+      con una cabra.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
