@@ -94,8 +94,8 @@ public class ShopManager : MonoBehaviour
             shopItem.Initialize();
             shopItem.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
         }
-        UpdateDeck();
-        UpdateSynergies();
+        UpdateDeck(deckParent);
+        UpdateSynergies(synergyCards);
     }
     private Boon GetRandomSynergy()
     {
@@ -201,23 +201,23 @@ public class ShopManager : MonoBehaviour
         pulse.Join(cashText.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
     }
 
-    public void UpdateSynergies()
+    public void UpdateSynergies(DeckCard[] synergyCardss)
     {
-        foreach (DeckCard synergyCard in synergyCards)
+        foreach (DeckCard synergyCard in synergyCardss)
         {
             synergyCard.gameObject.SetActive(false);
         }
 
         for (int i = 0; i < player.boonsInDeck.Count; i++)
         {
-            synergyCards[i].gameObject.SetActive(true);
-            synergyCards[i].Initialize( player.boonsInDeck[i].synergyName.GetLocalizedString(), player.boonsInDeck[i].desc.GetLocalizedString(), player.boonsInDeck[i].art, descriptionManager.GetBoonDescription(player.boonsInDeck[i]));
+            synergyCardss[i].gameObject.SetActive(true);
+            synergyCardss[i].Initialize( player.boonsInDeck[i].synergyName.GetLocalizedString(), player.boonsInDeck[i].desc.GetLocalizedString(), player.boonsInDeck[i].art, descriptionManager.GetBoonDescription(player.boonsInDeck[i]));
         }
     }
 
-    public void UpdateDeck()
+    public void UpdateDeck(RectTransform deckParentt)
     {
-        foreach (Transform child in deckParent.transform)
+        foreach (Transform child in deckParentt.transform)
         {
             Destroy(child.gameObject);
         }
@@ -247,7 +247,7 @@ public class ShopManager : MonoBehaviour
             AnimalData reference = entry.Value.reference;
             string desc = descriptionManager.GetAnimalDescription(reference);
             
-            GameObject card = Instantiate(deckCardPrefab, deckParent);
+            GameObject card = Instantiate(deckCardPrefab, deckParentt);
             card.GetComponent<DeckCard>().Initialize("x" + count, desc, reference.deckIcon);
         }
     }

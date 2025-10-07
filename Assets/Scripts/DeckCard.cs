@@ -34,18 +34,18 @@ public class DeckCard : MonoBehaviour
     {
         if (bounch)
         {
-            a = hoverPopup.DOScale(Vector3.one, 0.25f).SetEase(Ease.OutBack);      
+            a = hoverPopup.DOScale(Vector3.one, 0.25f).SetEase(Ease.OutBack).SetUpdate(true);      
         }
         else
         {
-            a = hoverPopup.DOScale(Vector3.one, 0.15f).SetEase(Ease.InOutQuad);      
+            a = hoverPopup.DOScale(Vector3.one, 0.15f).SetEase(Ease.InOutQuad).SetUpdate(true);      
         }
         b.Kill();
     }
 
     public void HoverOverExit()
     {
-        b = hoverPopup.DOScale(Vector3.zero, 0.2f).SetEase(Ease.InOutQuad);   
+        b = hoverPopup.DOScale(Vector3.zero, 0.2f).SetEase(Ease.InOutQuad).SetUpdate(true);   
         a.Kill();
     }
 }

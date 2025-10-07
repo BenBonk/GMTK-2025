@@ -91,7 +91,7 @@ public class SynergyShopItem : ShopItem
             if (GameController.player.boonsInDeck.Count<GameController.gameManager.maxSynergies)
             {
                 GameController.player.AddBoonToDeck(chosenBoon);
-                shopManager.UpdateSynergies();
+                shopManager.UpdateSynergies(shopManager.synergyCards);
             }
             else
             {

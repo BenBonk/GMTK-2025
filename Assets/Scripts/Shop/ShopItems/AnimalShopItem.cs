@@ -73,7 +73,7 @@ public class AnimalShopItem : ShopItem
             GameController.player.AddAnimalToDeck(chosenAnimal);
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
-            shopManager.UpdateDeck();
+            shopManager.UpdateDeck(shopManager.deckParent);
         }
         else
         {

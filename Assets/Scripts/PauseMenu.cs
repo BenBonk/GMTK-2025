@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,25 @@ public class PauseMenu : MonoBehaviour
     public bool canOpenClose;
     public bool isOpen;
     
+    private Tween animalDeckTween;
+    private Tween boonDeckTween;
+    public RectTransform deckPanel;
+    public RectTransform synergiesPanel;
+    public GameObject synergiesVisual;
+    public RectTransform deckParent;
+    public DeckCard[] synergyCards;
+    private bool deckOpen;
+    private bool synergiesOpen;
+    private ShopManager shopManager;
+    private Logbook logbook;
+    public SettingsMenu settings;
+
+    private void Start()
+    {
+        logbook = GameController.logbook;
+        shopManager = GameController.shopManager;
+    }
+
     private void Update()
     {
         if (canOpenClose && !isOpen && Input.GetKeyDown(KeyCode.Escape))
@@ -30,6 +50,12 @@ public class PauseMenu : MonoBehaviour
         panel.DOAnchorPosY(0, .5f).SetEase(Ease.OutBack).SetUpdate(true);
         darkCover.enabled = true;
         darkCover.DOFade(0.5f, .5f).OnComplete(()=> canOpenClose = true).SetUpdate(true);
+        deckPanel.DOAnchorPosX(-415, 0f).SetEase(Ease.InOutQuad).OnComplete(()=>deckPanel.gameObject.SetActive(false)).SetUpdate(true);
+        boonDeckTween = synergiesPanel.DOAnchorPosX(415, 0f).SetEase(Ease.InOutQuad).OnComplete(() => synergiesVisual.SetActive(false)).SetUpdate(true);
+        deckOpen = false;
+        synergiesOpen = false;
+        shopManager.UpdateDeck(deckParent);
+        shopManager.UpdateSynergies(synergyCards);
     }
     public void Close()
     {
@@ -51,5 +77,47 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
-    
+    public void ToggleDeck()
+    {
+        if (settings.isOpen || logbook.isOpen)
+        {
+            return;
+        }
+        if (animalDeckTween!=null)
+        {
+            animalDeckTween.Kill();
+        }
+        deckOpen = !deckOpen;
+        if (deckOpen)
+        {
+            deckPanel.gameObject.SetActive(true);
+            animalDeckTween = deckPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack).SetUpdate(true);
+        }
+        else
+        {
+            animalDeckTween = deckPanel.DOAnchorPosX(-415, .25f).SetEase(Ease.InOutQuad).OnComplete(()=>deckPanel.gameObject.SetActive(false)).SetUpdate(true);
+        }
+    }
+
+    public void ToggleSynergies()
+    {
+        if (settings.isOpen || logbook.isOpen)
+        {
+            return;
+        }
+        if (boonDeckTween!=null)
+        {
+            boonDeckTween.Kill();
+        }
+        synergiesOpen = !synergiesOpen;
+        if (synergiesOpen)
+        {
+            synergiesVisual.SetActive(true);
+            boonDeckTween = synergiesPanel.DOAnchorPosX(0, .35f).SetEase(Ease.OutBack).SetUpdate(true);
+        }
+        else
+        {
+            boonDeckTween = synergiesPanel.DOAnchorPosX(415, .25f).SetEase(Ease.InOutQuad).OnComplete(() => synergiesVisual.SetActive(false)).SetUpdate(true);
+        }
+    }
 }
