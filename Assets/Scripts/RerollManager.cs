@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class RerollManager : MonoBehaviour
     public bool canReroll;
     private ShopManager shopManager;
     private BoonManager boonManager;
+    //private HashSet<Sprite> rrBoonSprites;
 
     public int rerollsPerShop = 1;
 
@@ -24,6 +26,7 @@ public class RerollManager : MonoBehaviour
     void Start()
     {
         //FOR TESTING
+        //rrBoonSprites = new HashSet<Sprite>();
         rerollsThisGame = FBPP.GetInt("rerollsThisGame");
         boonManager = GameController.boonManager;
         rerollPrice = FBPP.GetInt("rerollPrice", startingRerollPrice);
@@ -78,6 +81,7 @@ public class RerollManager : MonoBehaviour
         }
         else
         {
+            //LassoController.CreateBoonIcons(transform, rrBoonSprites);
             priceText.text = rerollPrice.ToString();
         }
         
@@ -86,9 +90,11 @@ public class RerollManager : MonoBehaviour
     public void Reset()
     {
         rerollsPerShop = 1;
+        //rrBoonSprites.Clear();
         if (boonManager.ContainsBoon("FreshStock"))
         {
             rerollsPerShop = 2;
+            //rrBoonSprites.Add(boonManager.boonDict["FreshStock"].art);
         }
         transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0);
         canReroll = true;

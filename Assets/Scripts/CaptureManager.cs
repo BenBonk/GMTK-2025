@@ -113,6 +113,10 @@ public class CaptureManager : MonoBehaviour
                 currencyMult += lassoable.currencyMultToGive;
                 pointBonus += lassoable.pointsToGive;
                 pointMult *= lassoable.pointsMultToGive;
+                if (lassoable.gameObject.name == "ChickenEgg(Clone)")
+                {
+                    boonSprites.Add(boonManager.boonDict["Eggstravagant"].art);
+                }
             }
 
             if (boonManager.ContainsBoon("Biodiversity") && animalsCaptured.Count > 0)
@@ -221,10 +225,14 @@ public class CaptureManager : MonoBehaviour
         {
             currencyBonus += 50;
             pointBonus += 25;
+            boonSprites.Add(boonManager.boonDict["PigWithHat"].art);
         }
 
         if (capturedAnimal.gameObject.CompareTag("BlackSheep") && currentTrigger == 0)
+        {
             triggers += 1;
+            boonSprites.Add(boonManager.boonDict["BlackSheep"].art);
+        }
 
         if (boonManager.ContainsBoon("PointPals"))
         {

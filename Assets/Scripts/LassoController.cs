@@ -358,12 +358,7 @@ public class LassoController : MonoBehaviour
 
 
 
-    [Header("Boon Icon Layout")]
-    public Vector2 boonIconOffset = new Vector2(0f, 1f);  // local offset from the group center
-    public float boonIconSpacing = 0.9f;                     // gap between icons (world units)
-    public float boonIconScale = 0.9f;                      // icon scale relative to 1
-    public int boonIconSortingOrder = 6;
-    private List<SpriteRenderer> CreateBoonIcons(Transform anchor, IEnumerable<Sprite> sprites)
+    public static List<SpriteRenderer> CreateBoonIcons(Transform anchor, IEnumerable<Sprite> sprites , float boonIconScale = 1f, float boonIconSpacing = 0.9f, float offsetX = 0, float offsetY = 0.9f)
     {
         var list = new List<SpriteRenderer>();
         if (sprites == null) return list;
@@ -378,7 +373,7 @@ public class LassoController : MonoBehaviour
         // If n=2 -> gap centered on offset.x
         // If n=3 -> middle at offset.x, etc.
         float totalSpan = (n - 1) * boonIconSpacing;
-        float startX = boonIconOffset.x - totalSpan * 0.5f;
+        float startX = offsetX - totalSpan * 0.5f;
 
         for (int i = 0; i < n; i++)
         {
@@ -387,12 +382,12 @@ public class LassoController : MonoBehaviour
             go.transform.SetParent(anchor, worldPositionStays: false);
 
             float x = startX + i * boonIconSpacing;
-            go.transform.localPosition = new Vector3(x, boonIconOffset.y, 0f);
+            go.transform.localPosition = new Vector3(x, offsetY, 0f);
             go.transform.localScale = Vector3.one * boonIconScale;
 
             var sr = go.AddComponent<SpriteRenderer>();
             sr.sprite = sp;
-            sr.sortingOrder = boonIconSortingOrder;
+            sr.sortingOrder = 6;
 
             var c = sr.color; c.a = 1f; sr.color = c;
 
@@ -506,7 +501,7 @@ public class LassoController : MonoBehaviour
 
             if (result.currencyBonus == 0 && result.boonSprites.Count > 0)
             {
-                CreateBoonIcons(group.transform, result.boonSprites);
+                CreateBoonIcons(group.transform, result.boonSprites,1f,0.9f);
             }
 
             Sequence pop = DOTween.Sequence();
@@ -931,7 +926,7 @@ public class LassoController : MonoBehaviour
         return true;
     }
 
-    void DestroyLassoExit(bool discardLineObject)
+    public void DestroyLassoExit(bool discardLineObject)
     {
         // Kill the floating tip if it exists
         if (tipXform != null)

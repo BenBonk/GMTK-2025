@@ -7,6 +7,7 @@ using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 using JetBrains.Annotations;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -174,20 +175,12 @@ public class GameManager : MonoBehaviour
         {
             roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
         }
-        if (boonManager.ContainsBoon("BountifulHarvest"))
-        {
-            endDayCash += 20;
-        }
 
         if (isTesting)
         {
             roundDuration = 3;
         }
 
-        if (boonManager.ContainsBoon("CoinPouch"))
-        {
-            cashInterest = Mathf.RoundToInt(((int)player.playerCurrency + endDayCash) * .1f);
-        }
         pointsThisRound = 0;
         saveManager.SaveGameData();
         roundNumber++;
@@ -243,24 +236,21 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         AudioManager.Instance.PlaySFX("round_lose");
         lassoController.canLasso = false;
-        if (lassoController.lineRenderer != null)
-        {
-            Destroy(lassoController.lineRenderer.gameObject);
-        }
+        lassoController.DestroyLassoExit(true);
         yield return new WaitForSeconds(1.75f);
         if (pointsThisRound >= GetPointsRequirement() || boonManager.ContainsBoon("FairyBottle"))
         {
             deathPanel.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
             GameController.predatorSelect.darkCover.DOFade(0f, 0.5f).OnComplete(()=>GameController.predatorSelect.darkCover.enabled=false);
             yield return new WaitForSeconds(.5f);
-            if (boonManager.ContainsBoon("FairyBottle"))
+            if (pointsThisRound >= GetPointsRequirement())
             {
-                DisplayPopupWord(localization.fairyBottle.GetLocalizedString(), .3f, 1f, false);
-                boonManager.RemoveBoon(fairyBottleInstance);
+                DisplayPopupWord(localization.closeCall, .3f, .5f, false);
             }
             else
             {
-                DisplayPopupWord(localization.closeCall, .3f, .5f, false);   
+                DisplayPopupWord(localization.fairyBottle.GetLocalizedString(), .3f, 1f, false,null,new HashSet<Sprite>() { boonManager.boonDict["FairyBottle"].art });
+                boonManager.RemoveBoon(fairyBottleInstance);
             }
             //think we need some sfx here
             AudioManager.Instance.PlaySFX("close_call");
@@ -283,10 +273,7 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.PlaySFX("time_up");
         yield return new WaitForSeconds(0.25f);
         lassoController.canLasso = false;
-        if (lassoController.lineRenderer != null)
-        {
-            Destroy(lassoController.lineRenderer.gameObject);
-        }
+        lassoController.DestroyLassoExit(true);
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.25f); // wait before next
         if (roundNumber == roundsToWin)
         {
@@ -300,7 +287,7 @@ public class GameManager : MonoBehaviour
             }
             RectTransform children = winPanel.Find("Children") as RectTransform;
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
-            GameController.predatorSelect.darkCover.enabled=true;
+            GameController.predatorSelect.darkCover.enabled = true;
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
             yield return new WaitForSeconds(3);
             GameController.wishlistPanel.Open();
@@ -317,6 +304,19 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(.5f);
         }
 
+        cashInterest = 0;
+        HashSet<Sprite> endDayBoonSprites = new HashSet<Sprite>();
+        if (boonManager.ContainsBoon("CoinPouch"))
+        {
+            cashInterest = Mathf.RoundToInt(((int)player.playerCurrency + endDayCash) * .1f);
+            endDayBoonSprites.Add(boonManager.boonDict["CoinPouch"].art);
+        }
+        if (boonManager.ContainsBoon("BountifulHarvest"))
+        {
+            cashInterest += 20;
+            endDayBoonSprites.Add(boonManager.boonDict["BountifulHarvest"].art);
+        }
+
         // Second message
         double cashGained = endDayCash + cashInterest;
         //if farmer = farmer0
@@ -329,18 +329,13 @@ public class GameManager : MonoBehaviour
         localization.localDayComplete.Arguments[0] = roundNumber;
         localization.localDayComplete.Arguments[1] = cashGained;
         localization.localDayComplete.RefreshString();
-        DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false);
+        DisplayCashWord(localization.dayComplete, wordScaleDuration, wordDisplayDuration, false,null,endDayBoonSprites);
         AudioManager.Instance.PlaySFX("cash_register");
         GameController.player.playerCurrency += cashGained;
         yield return new WaitForSeconds(wordDisplayDuration + wordScaleDuration + 0.5f); // final wait
         winPanel.gameObject.SetActive(false);
-        if (boonManager.ContainsBoon("BountifulHarvest"))
-        {
-            endDayCash -= 20;
-        }
 
         captureManager.firstCapture = false;
-        cashInterest = 0;
         captureManager.mootiplierMult = 0;
 
         predatorRoundFrequency = 3;
@@ -368,6 +363,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
+        LassoCleaner.CleanupAll();
         GameController.rerollManager.Reset();
         saveManager.SaveGameData();
         cameraController.AnimateToRect(
@@ -532,7 +528,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void DisplayPopupWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null)
+    public void DisplayPopupWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null, HashSet<Sprite> boonSprites = null)
     {
         GameObject wordObj = Instantiate(wordPrefab, transform);
         TMP_Text wordText = wordObj.GetComponent<TMP_Text>();
@@ -550,6 +546,8 @@ public class GameManager : MonoBehaviour
         wordObj.transform.rotation = Quaternion.identity;
         wordObj.SetActive(true);
 
+        LassoController.CreateBoonIcons(wordObj.transform, boonSprites,1.5f, 1.4f, 0f, 1.4f);
+
         Sequence seq = DOTween.Sequence();
 
         // Scale pop-in
@@ -570,12 +568,16 @@ public class GameManager : MonoBehaviour
 
         // Fade out and destroy
         seq.AppendInterval(displayDuration);
-        seq.AppendCallback(() => wordText.DOFade(0f, 0.5f));
-        seq.AppendCallback(() => Destroy(wordObj, 0.6f));
+        seq.Append(wordText.DOFade(0f, 0.5f));
+        foreach (var sr in wordObj.GetComponentsInChildren<SpriteRenderer>())
+        {
+            seq.Join(sr.DOFade(0f, 0.5f));
+        }
+        seq.OnComplete(() => Destroy(wordObj));
     }
 
 
-    public void DisplayCashWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null)
+    public void DisplayCashWord(string word, float scaleDuration = 0.3f, float displayDuration = 1.2f, bool shake = false, Material overrideMaterial = null, HashSet<Sprite> boonSprites = null)
     {
         GameObject wordObj = Instantiate(endRoundPrefab, transform);
         TMP_Text wordText = wordObj.GetComponent<TMP_Text>();
@@ -593,6 +595,8 @@ public class GameManager : MonoBehaviour
         wordObj.transform.rotation = Quaternion.identity;
         wordObj.SetActive(true);
 
+        LassoController.CreateBoonIcons(wordObj.transform, boonSprites,1.5f,1.4f,0f,1.4f);
+
         Sequence seq = DOTween.Sequence();
 
         // Scale pop-in
@@ -613,8 +617,12 @@ public class GameManager : MonoBehaviour
 
         // Fade out and destroy
         seq.AppendInterval(displayDuration);
-        seq.AppendCallback(() => wordText.DOFade(0f, 0.5f));
-        seq.AppendCallback(() => Destroy(wordObj, 0.6f));
+        seq.Append(wordText.DOFade(0f, 0.5f));
+        foreach (var sr in wordObj.GetComponentsInChildren<SpriteRenderer>())
+        {
+            seq.Join(sr.DOFade(0f, 0.5f));     
+        }
+        seq.OnComplete(() => Destroy(wordObj));
     }
 
     private void OnApplicationQuit()
