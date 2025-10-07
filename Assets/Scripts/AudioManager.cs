@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -205,19 +206,23 @@ public class AudioManager : MonoBehaviour
     private IEnumerator FadeOutOldTrack(AudioSource sourceToFade, float duration)
     {
         float startVolume = sourceToFade.volume;
-        float t = 0f;
 
-        while (t < duration)
-        {
-            sourceToFade.volume = Mathf.Lerp(startVolume, 0f, t / duration);
-            t += Time.deltaTime;
-            yield return null;
-        }
+        // Tween the volume from startVolume to 0 over duration seconds
+        Tween tween = DOTween.To(
+            () => sourceToFade.volume,
+            x => sourceToFade.volume = x,
+            0f,
+            duration
+        );
+
+        // Wait until the tween finishes
+        yield return tween.WaitForCompletion();
 
         sourceToFade.Stop();
         sourceToFade.volume = startVolume;
         fadeOutRoutine = null;
     }
+
 
     public void StopMusicImmediately()
     {
