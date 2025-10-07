@@ -319,8 +319,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: "La\xE7o: um grupo de animais contendo uma galinha, uma vaca, uma
-      cabra, um cavalo, um cachorro, uma ovelha e um porco."
+    m_Localized: "La\xE7o: um grupo de animais contendo uma galinha, uma vaca, um
+      cavalo, uma ovelha e um porco"
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -972,8 +972,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: A loja agora pode ser reiniciada duas vezes em vez de uma, cada
-      vez que for acessada
+    m_Localized: A loja agora pode ser reiniciada duas vezes por loja, em vez de
+      uma vez
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

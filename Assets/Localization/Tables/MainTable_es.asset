@@ -318,8 +318,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: 'Lazo: un grupo de animales que contiene un pollo, una vaca, una
-      cabra, un caballo, un perro, una oveja y un cerdo.'
+    m_Localized: Lazo, un grupo de animales que contiene un pollo, una vaca, un caballo,
+      una oveja y un cerdo.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -975,8 +975,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Ahora se puede cambiar el nombre de la tienda dos veces en lugar
-      de una, cada vez que se ingresa.
+    m_Localized: Ahora se puede cambiar el nombre de la tienda dos veces por tienda,
+      en lugar de una.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

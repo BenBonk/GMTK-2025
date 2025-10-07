@@ -322,8 +322,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren ein, darunter ein Huhn, eine Kuh,
-      eine Ziege, ein Pferd, ein Hund, ein Schaf und ein Schwein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
+      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -982,8 +982,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Der Shop kann jetzt bei jedem Betreten zweimal neu gew\xFCrfelt
-      werden, statt nur einmal."
+    m_Localized: "Der Shop kann jetzt zweimal pro Shop neu gew\xFCrfelt werden, statt
+      einmal"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

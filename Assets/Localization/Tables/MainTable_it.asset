@@ -318,8 +318,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Lazo un gruppo di animali contenente un pollo, una mucca, una capra,
-      un cavallo, un cane, una pecora e un maiale
+    m_Localized: Lazo un gruppo di animali contenente un pollo, una mucca, un cavallo,
+      una pecora e un maiale
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -971,8 +971,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Ora il negozio pu\xF2 essere riattivato due volte invece di una,
-      ogni volta che si entra"
+    m_Localized: "Ora \xE8 possibile rinnovare il negozio due volte per negozio,
+      invece di una volta"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

@@ -319,8 +319,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: "Lasso un groupe d'animaux contenant un poulet, une vache, une ch\xE8vre,
-      un cheval, un chien, un mouton et un cochon"
+    m_Localized: Lasso un groupe d'animaux contenant un poulet, une vache, un cheval,
+      un mouton et un cochon
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -919,7 +919,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente ma\xEEtris\xE9e
+    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
       par lasso"
     m_Metadata:
       m_Items: []
@@ -979,8 +979,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "La boutique peut d\xE9sormais \xEAtre relanc\xE9e deux fois au
-      lieu d'une, \xE0 chaque fois qu'on y entre"
+    m_Localized: "La boutique peut d\xE9sormais \xEAtre relanc\xE9e deux fois par
+      boutique, au lieu d'une"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

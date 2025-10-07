@@ -330,7 +330,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 72
     m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
-      z kurczaka, krowy, kozy, konia, psa, owcy i \u015Bwini"
+      z kurczaka, krowy, konia, owcy i \u015Bwini"
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -998,8 +998,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Teraz mo\u017Cna ponownie uruchomi\u0107 sklep dwa razy, a nie
-      raz, za ka\u017Cdym razem, gdy si\u0119 wchodzi"
+    m_Localized: "Sklep mo\u017Cna teraz przerzuca\u0107 dwa razy na sklep, zamiast
+      raz"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016

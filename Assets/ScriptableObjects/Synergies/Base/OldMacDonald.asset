@@ -31,7 +31,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: -824223596, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 500
+  price: 300
   isExactMatch: 0
   currencyBonus: 50
   currencyMult: 10
@@ -40,9 +40,7 @@ MonoBehaviour:
   animalsNeeded:
   - Chicken
   - Cow
-  - Goat
   - Horse
-  - Dog
   - Sheep
   - Pig
   references:
