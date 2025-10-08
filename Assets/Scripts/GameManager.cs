@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     
     public Player player;
     public int harvestLevel = 1;
+    public int farmerID = 0;
     public double startingPointRequirement = 65;
     public int roundNumber;
     public bool roundInProgress;
@@ -319,8 +320,7 @@ public class GameManager : MonoBehaviour
 
         // Second message
         double cashGained = endDayCash + cashInterest;
-        //if farmer = farmer0
-        if (true)
+        if (farmerID == 0)
         {
             cashGained *= 2;
         }

@@ -102,6 +102,7 @@ public class SaveManager : MonoBehaviour
         FBPP.SetString("boonsInDeck", "");
         FBPP.DeleteInt("rerollPrice");
         FBPP.SetInt("harvestLevel", harvestLevel);
+        FBPP.SetInt("farmerID", farmerIndex);
         GameController.animalLevelManager.ResetLevels();
         FBPP.SetBool("playerHasSave", true);
         FBPP.Save();
@@ -123,6 +124,7 @@ public class SaveManager : MonoBehaviour
         player.playerCurrency =  double.Parse(FBPP.GetString("cash"), System.Globalization.CultureInfo.InvariantCulture);
         gameManager.roundNumber = FBPP.GetInt("round");
         gameManager.harvestLevel = FBPP.GetInt("harvestLevel", 1);
+        gameManager.farmerID = FBPP.GetInt("farmerID", 0);
         gameManager.foxThiefStolenStats = gameManager.animalShopItem.possibleAnimals[FBPP.GetInt("chosenToStealIndex", 0)].animalData;
         if (FBPP.GetString("animalsInDeck")=="")
         {
