@@ -707,15 +707,6 @@ MonoBehaviour:
     m_Localized: Elige a tu agricultor
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809025
-    m_Localized: El viejo MacDonald
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809026
-    m_Localized: "Recibe el doble de dinero en efectivo diariamente despu\xE9s de
-      cada ronda."
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809027
     m_Localized: "Configuraci\xF3n del juego"
     m_Metadata:
@@ -1074,6 +1065,27 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "Seleccione una bendici\xF3n para reemplazar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117449703424
+    m_Localized: El viejo MacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755328
+    m_Localized: "Recibe el doble de dinero en efectivo diariamente despu\xE9s de
+      cada ronda."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755329
+    m_Localized: Bubba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949632
+    m_Localized: "Hay 3 opciones para mejorar animales en la tienda. Son m\xE1s econ\xF3micas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949633
+    m_Localized: Completa el juego una vez para desbloquear a este granjero.
     m_Metadata:
       m_Items: []
   references:

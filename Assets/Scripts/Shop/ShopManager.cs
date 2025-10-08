@@ -56,7 +56,7 @@ public class ShopManager : MonoBehaviour
     {
         foreach (var shopItem in shopItems)
         {
-            if (shopItem is SynergyShopItem)
+            if (shopItem is SynergyShopItem || !shopItem.gameObject.activeInHierarchy)
             {
                 continue;
             }

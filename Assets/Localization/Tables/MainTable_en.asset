@@ -702,14 +702,6 @@ MonoBehaviour:
     m_Localized: Choose Your Farmer
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809025
-    m_Localized: Old MacDonald
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809026
-    m_Localized: Receives double daily cash after each round.
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809027
     m_Localized: Game Settings
     m_Metadata:
@@ -1058,6 +1050,27 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14715454701920256
     m_Localized: Select a boon to replace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117449703424
+    m_Localized: Old MacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755328
+    m_Localized: Receives double daily cash after each round.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755329
+    m_Localized: Bubba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949632
+    m_Localized: Has 3 choices for animal upgrades in the shop. Animal upgrades are
+      cheaper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949633
+    m_Localized: Beat the game once to unlock this farmer.
     m_Metadata:
       m_Items: []
   references:

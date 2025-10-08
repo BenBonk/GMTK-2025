@@ -687,12 +687,24 @@ MonoBehaviour:
     m_Key: farmerSelect.title
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809025
-    m_Key: farmerSelect.oldMacDonald
+  - m_Id: 18706117449703424
+    m_Key: farmerSelect.farmer0Name
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809026
-    m_Key: farmerSelect.oldMacDonaldDesc
+  - m_Id: 18706117558755328
+    m_Key: farmerSelect.farmer0Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755329
+    m_Key: farmerSelect.farmer1Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949632
+    m_Key: farmerSelect.farmer1Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949633
+    m_Key: farmerSelect.farmer1Unlock
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809027

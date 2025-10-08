@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+Esp\xE8ces\_: {0}"
+    m_Localized: "+ Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -710,14 +710,6 @@ MonoBehaviour:
     m_Localized: Choisissez votre agriculteur
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809025
-    m_Localized: Le vieux MacDonald
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809026
-    m_Localized: "Re\xE7oit le double d'argent quotidien apr\xE8s chaque tour."
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809027
     m_Localized: "Param\xE8tres du jeu"
     m_Metadata:
@@ -1078,6 +1070,27 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "S\xE9lectionnez un avantage \xE0 remplacer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117449703424
+    m_Localized: Le vieux MacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755328
+    m_Localized: "Re\xE7oit le double d'argent quotidien apr\xE8s chaque tour."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755329
+    m_Localized: Bubba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949632
+    m_Localized: "La boutique propose trois options d'am\xE9liorations pour les animaux.
+      Ces am\xE9liorations sont moins ch\xE8res."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949633
+    m_Localized: "Terminez le jeu une fois pour d\xE9bloquer ce fermier."
     m_Metadata:
       m_Items: []
   references:

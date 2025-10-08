@@ -1,5 +1,6 @@
-using UnityEngine;
 using DG.Tweening;
+using System;
+using UnityEngine;
 
 public class FarmerSelectManager : MonoBehaviour
 {
@@ -11,13 +12,9 @@ public class FarmerSelectManager : MonoBehaviour
     public void SelectFarmer(int index)
     {
         selectedFarmerIndex = index;
-        foreach (var dude in farmers)
-        {
-            if (dude.farmerIndex != index)
-            {
-                dude.HideFarmerInfo();
-            }
-        }
+
+        HideAllFarmerInfo(index);
+
         if (!harvestLevelPanel.activeInHierarchy)
         {
             harvestLevelPanel.SetActive(true);
@@ -29,6 +26,15 @@ public class FarmerSelectManager : MonoBehaviour
         {
             startGameButton.SetActive(true);
             startGameButton.GetComponent<RectTransform>().DOAnchorPosY(0f, 0.5f).SetEase(Ease.InOutBack).SetDelay(0.25f);
+        }
+    }
+
+    public void HideAllFarmerInfo(int except)
+    {
+        foreach (var dude in farmers)
+        {
+            if (dude.farmerIndex != except)
+                dude.HideFarmerInfo();
         }
     }
 }

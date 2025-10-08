@@ -896,6 +896,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -7.15
       objectReference: {fileID: 0}
+    - target: {fileID: 3849446991117801784, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 18706117558755329
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849446991117801784, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+      objectReference: {fileID: 0}
     - target: {fileID: 5318655626611540348, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: canvas
       value: 
@@ -910,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 1688910666}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: isUnlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
@@ -927,7 +935,7 @@ PrefabInstance:
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: 'startingDeck.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
+      objectReference: {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: 'startingDeck.Array.data[1]'
       value: 
@@ -936,6 +944,14 @@ PrefabInstance:
       propertyPath: 'startingDeck.Array.data[2]'
       value: 
       objectReference: {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: unlockDescription.m_TableEntryReference.m_KeyId
+      value: 18706117562949633
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: unlockDescription.m_TableReference.m_TableCollectionName
+      value: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+      objectReference: {fileID: 0}
     - target: {fileID: 6250446043872799259, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -958,7 +974,7 @@ PrefabInstance:
       objectReference: {fileID: -6841065387944932691, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
     - target: {fileID: 7493094491465527454, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_text
-      value: Bubba
+      value: ???
       objectReference: {fileID: 0}
     - target: {fileID: 7820206095430002056, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_Pivot.x
@@ -1039,6 +1055,14 @@ PrefabInstance:
     - target: {fileID: 7820206095430002056, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331823796649793383, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 18706117562949632
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331823796649793383, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:67f652bb649f23a4dbde2d1bd75f61ed
       objectReference: {fileID: 0}
     - target: {fileID: 9182650547871771769, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_IsActive
@@ -3068,7 +3092,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.751592
+  orthographic size: 6.751043
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7460,6 +7484,7 @@ MonoBehaviour:
     m_LocalVariables: []
   schemeManager: {fileID: 0}
   fairyBottleInstance: {fileID: 0}
+  extraUpgradeSlot: {fileID: 0}
   foxThiefStolenStats: {fileID: 0}
   references:
     version: 2
@@ -10220,7 +10245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3849446991117801784, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
-      value: 8554514727809025
+      value: 18706117449703424
       objectReference: {fileID: 0}
     - target: {fileID: 3849446991117801784, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
@@ -10380,7 +10405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8331823796649793383, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
-      value: 8554514727809026
+      value: 18706117558755328
       objectReference: {fileID: 0}
     - target: {fileID: 8331823796649793383, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_StringReference.m_TableReference.m_TableCollectionName

@@ -25,7 +25,12 @@ public class UpgradeShopItem : ShopItem
         UpdateDescription();
 
         titleText.text = chosenAnimal.animalName.GetLocalizedString();
-        price = Math.Round(chosenAnimal.upgradeCost * Math.Pow(1.5, animalLevel));
+        double priceIncrease = 1.5;
+        if (GameController.gameManager.farmerID == 1)
+        {
+            priceIncrease = 1.3;
+        }
+        price = Math.Round(chosenAnimal.upgradeCost * Math.Pow(priceIncrease, animalLevel));
         priceText.text = LassoController.FormatNumber(price);
         upgradeArt.sprite = chosenAnimal.deckIcon;
         upgradeArt.transform.DOScale(Vector3.one, 0);

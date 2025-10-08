@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
-      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
-      na dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
+      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
+      dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -725,15 +725,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8554514727809024
     m_Localized: Wybierz swojego rolnika
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809025
-    m_Localized: Stary MacDonald
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809026
-    m_Localized: "Otrzymuje podw\xF3jn\u0105 dzienn\u0105 got\xF3wk\u0119 po ka\u017Cdej
-      rundzie."
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809027
@@ -1097,6 +1088,28 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "Wybierz dobro, kt\xF3re chcesz zast\u0105pi\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117449703424
+    m_Localized: Stary MacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755328
+    m_Localized: "Otrzymuje podw\xF3jn\u0105 dzienn\u0105 got\xF3wk\u0119 po ka\u017Cdej
+      rundzie."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755329
+    m_Localized: Bubba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949632
+    m_Localized: "W sklepie dost\u0119pne s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t.
+      Ulepszenia zwierz\u0105t s\u0105 ta\u0144sze."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949633
+    m_Localized: "Uko\u0144cz gr\u0119 raz, aby odblokowa\u0107 tego rolnika."
     m_Metadata:
       m_Items: []
   references:

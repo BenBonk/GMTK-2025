@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
     private PauseMenu pauseMenu;
     public SchemeManager schemeManager;
     public Boon fairyBottleInstance;
+    public GameObject extraUpgradeSlot;
     [HideInInspector] public AnimalData foxThiefStolenStats;
     private void Start()
     {
@@ -121,7 +122,15 @@ public class GameManager : MonoBehaviour
             return;
         }
         saveManager.LoadGameData();
-        ApplyHarvestLevel();
+        if (farmerID == 1)
+        {
+            extraUpgradeSlot.SetActive(true);
+        }
+        else
+        {
+            extraUpgradeSlot.SetActive(false);
+        }
+            ApplyHarvestLevel();
         if (isTesting)
         {
             pointsRequirementGrowthRate = 0;

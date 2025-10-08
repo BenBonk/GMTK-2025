@@ -213,7 +213,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: "La\xE7o: um grupo de animais contendo um c\xE3o, uma raposa e um
+    m_Localized: "La\xE7o um grupo de animais contendo um c\xE3o, uma raposa e um
       lobo"
     m_Metadata:
       m_Items: []
@@ -707,14 +707,6 @@ MonoBehaviour:
     m_Localized: Escolha seu fazendeiro
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809025
-    m_Localized: Velho MacDonald
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809026
-    m_Localized: "Recebe o dobro de dinheiro di\xE1rio ap\xF3s cada rodada."
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809027
     m_Localized: "Configura\xE7\xF5es do jogo"
     m_Metadata:
@@ -1071,6 +1063,27 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "Selecione um benef\xEDcio para substituir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117449703424
+    m_Localized: Velho MacDonald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755328
+    m_Localized: "Recebe o dobro de dinheiro di\xE1rio ap\xF3s cada rodada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117558755329
+    m_Localized: Bubba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949632
+    m_Localized: "Tem 3 op\xE7\xF5es de melhorias para animais na loja. Melhorias
+      para animais s\xE3o mais baratas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18706117562949633
+    m_Localized: "Ven\xE7a o jogo uma vez para desbloquear este fazendeiro."
     m_Metadata:
       m_Items: []
   references:
