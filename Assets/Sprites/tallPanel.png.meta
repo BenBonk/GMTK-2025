@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: a8b54e6f9b958c14eb4aac5c8b3cf5b4
+guid: c476571bc8fda0b47a47af7852ee1a1f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6529048803842486747
-    second: Farmer2_0
-  - first:
-      213: -7670472900175178147
-    second: Farmer2_1
+      213: -5186383362109975223
+    second: tallPanel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Farmer1_0
+      name: tallPanel_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 4
-        width: 16
-        height: 23
+        x: 0
+        y: 0
+        width: 56
+        height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81a7ae3dfa721e24ca5dad525f745a6b
-      internalID: 2052330414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Farmer1_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 4
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b6a625e80d337d4eb28655b31b5e661
-      internalID: 118001882
+      spriteID: 94550709fc34608b0800000000000000
+      internalID: -5186383362109975223
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b1b08aa14efb87f418789ae4c1db77ef
+    spriteID: 3c66fe46f6684ec42943f9b601c0ce15
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Farmer1_0: 2052330414
-      Farmer1_1: 118001882
+      tallPanel_0: -5186383362109975223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

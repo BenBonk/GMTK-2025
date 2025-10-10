@@ -402,10 +402,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 824864104}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 5
       objectReference: {fileID: 0}
@@ -909,13 +905,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerImg
+      propertyPath: farmerData
       value: 
-      objectReference: {fileID: 1943048221}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 1688910666}
+      objectReference: {fileID: 11400000, guid: a14aa737d286e994bb5cf459cd05b9ae, type: 2}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: isUnlocked
       value: 0
@@ -972,6 +964,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6841065387944932691, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
+    - target: {fileID: 6878084352702544965, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7493094491465527454, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_text
       value: ???
@@ -1073,11 +1069,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
---- !u!224 &233273934 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 1008548726}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &235097114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,16 +2111,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 30}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &402898335 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 913224333}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &408152389 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 579149727}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &427091031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2170,10 +2151,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092878433}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 432682506}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 4
@@ -2287,11 +2264,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
---- !u!224 &432682506 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 427091031}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &456881773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3534349351404177832, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
@@ -2520,6 +2492,7 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   decreaseButton: {fileID: 1213856069}
+  increaseButton: {fileID: 940397087}
   references:
     version: 2
     RefIds: []
@@ -3092,7 +3065,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.751043
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3867,10 +3840,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092878433}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 408152389}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 6
@@ -4860,11 +4829,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstCapture: 0
   mootiplierMult: 0
---- !u!224 &824864104 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 115844322}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &881715124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7820206095430002056, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
@@ -4957,10 +4921,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092878433}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 402898335}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 2
@@ -5478,10 +5438,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 233273934}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 3
       objectReference: {fileID: 0}
@@ -5721,10 +5677,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2092878433}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 1707369646}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: farmerIndex
       value: 7
@@ -6876,17 +6828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0352e4bfa27f8049aba5fbc89ca39ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1413176611 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6878084352702544965, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 3792466694117964155}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1436592584
 GameObject:
   m_ObjectHideFlags: 0
@@ -7485,6 +7426,7 @@ MonoBehaviour:
   schemeManager: {fileID: 0}
   fairyBottleInstance: {fileID: 0}
   extraUpgradeSlot: {fileID: 0}
+  unlockPanel: {fileID: 0}
   foxThiefStolenStats: {fileID: 0}
   references:
     version: 2
@@ -7746,21 +7688,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!224 &1688910666 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 227921942}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1707369646 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 1116530719}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1713482445 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7952567706955699301, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 3792466694117964155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1723090392
 GameObject:
   m_ObjectHideFlags: 0
@@ -8558,6 +8485,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 470009086}
     m_Modifications:
+    - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: farmerDatas.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: 'farmerDatas.Array.data[0]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
+      propertyPath: 'farmerDatas.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9958664
@@ -9421,17 +9360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0352e4bfa27f8049aba5fbc89ca39ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1943048221 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6878084352702544965, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-  m_PrefabInstance: {fileID: 227921942}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1951387931 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 258547166803280199, guid: 9b6f019ec0f7aec488fd7f3910ea0aef, type: 3}
@@ -10256,13 +10184,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2092878433}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerImg
+      propertyPath: farmerData
       value: 
-      objectReference: {fileID: 1413176611}
-    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
-      propertyPath: farmerInfo
-      value: 
-      objectReference: {fileID: 1713482445}
+      objectReference: {fileID: 11400000, guid: 4606dd3161c1d3b4aa50abe96be4c49a, type: 2}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: isUnlocked
       value: 1

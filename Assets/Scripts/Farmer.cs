@@ -9,15 +9,12 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class Farmer : MonoBehaviour
 {
+    public FarmerData farmerData;
     public RectTransform farmerInfo;
     public Image farmerImg;
-    public int farmerIndex;
-    public Sprite unlockedSprite;
     public bool isUnlocked;
-    public AnimalData[] startingDeck;
     public TextMeshProUGUI[] animalCountTexts;
     public Image[] animalImages;
-    public LocalizedString unlockDescription;
     public TextMeshProUGUI unlockText;
     public TextMeshProUGUI farmerName;
 
@@ -26,9 +23,10 @@ public class Farmer : MonoBehaviour
         HideFarmerInfo();
         if (isUnlocked)
         {
-            farmerImg.sprite = unlockedSprite;
+            farmerImg.sprite = farmerData.sprite;
+            GetComponent<ButtonFX>().clickSFX = farmerData.audioClipName;
             Dictionary<string, (int count, AnimalData reference)> uniqueObjects = new Dictionary<string, (int, AnimalData)>();
-            foreach (AnimalData obj in startingDeck)
+            foreach (AnimalData obj in farmerData.startingDeck)
             {
                 string name = obj.animalName.GetLocalizedString();
 
@@ -52,6 +50,13 @@ public class Farmer : MonoBehaviour
                 i++;
             }
         }
+        else
+        {
+            if (farmerData != null)
+            {
+                farmerImg.sprite = farmerData.lockedSprite;
+            }
+        }
     }
 
     public void ShowFarmerInfo()
@@ -64,27 +69,27 @@ public class Farmer : MonoBehaviour
         {
             if (isUnlocked)
             {
-                GameController.farmerSelectManager.SelectFarmer(farmerIndex);
+                GameController.farmerSelectManager.SelectFarmer(farmerData.farmerIndex);
                 farmerInfo.gameObject.SetActive(true);
                 farmerInfo.DOScale(new Vector3(3.571429f, 3.571429f, 3.571429f), .25f).SetEase(Ease.OutBack);
             }
             else
             {
-                if (unlockedSprite == null)
+                if (farmerData == null)
                 {
                     //not available in demo!
                     GetComponent<StampPopup>().ShowStampAtMouse();
                 }
                 else
                 {
-                    GameController.farmerSelectManager.HideAllFarmerInfo(farmerIndex);
+                    GameController.farmerSelectManager.HideAllFarmerInfo(farmerData.farmerIndex);
                     farmerInfo.gameObject.SetActive(true);
                     farmerInfo.DOScale(new Vector3(3.571429f, 3.571429f, 3.571429f), .25f).SetEase(Ease.OutBack);
                     foreach (var image in animalImages)
                     {
                         image.transform.parent.gameObject.SetActive(false);
                     }
-                    unlockText.text = unlockDescription.GetLocalizedString();
+                    unlockText.text = farmerData.unlockDescription.GetLocalizedString();
                     farmerName.text = "???";
                 }
             }

@@ -29,11 +29,25 @@ public class FarmerSelectManager : MonoBehaviour
         }
     }
 
+    public void CheckUnlokcedFarmers()
+    {
+        foreach (var dude in farmers)
+        {
+            if (dude.farmerData != null)
+            {
+                if (FBPP.GetBool("farmer" + dude.farmerData.farmerIndex,false))
+                {
+                    dude.isUnlocked = true;
+                }
+            }
+        }
+    }
+
     public void HideAllFarmerInfo(int except)
     {
         foreach (var dude in farmers)
         {
-            if (dude.farmerIndex != except)
+            if (dude.farmerData != null && dude.farmerData.farmerIndex != except)
                 dude.HideFarmerInfo();
         }
     }

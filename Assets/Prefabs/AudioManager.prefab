@@ -140,7 +140,7 @@ MonoBehaviour:
     volume: 0.4
   - name: farmer_0
     clip: {fileID: 8300000, guid: 42649ce41217a184d83b4a777da5b7b5, type: 3}
-    volume: 1
+    volume: 1.3
   - name: coins
     clip: {fileID: 8300000, guid: 6753930e5d60ac64badc16cec622db91, type: 3}
     volume: 0.09
@@ -165,6 +165,9 @@ MonoBehaviour:
   - name: predator_select
     clip: {fileID: 8300000, guid: f2652b602386d4d45b72f0b64ce467a4, type: 3}
     volume: 0.35
+  - name: farmer_1
+    clip: {fileID: 8300000, guid: ced80bb3821749a4b8ef32d21601eb33, type: 3}
+    volume: 1.5
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}

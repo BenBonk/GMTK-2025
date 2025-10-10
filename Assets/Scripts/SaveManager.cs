@@ -35,6 +35,7 @@ public class SaveManager : MonoBehaviour
     public AnimalData[] animalDatas;
     public Boon[] boonDatas;
     public HarvestData[] harvestDatas;
+    public FarmerData[] farmerDatas;
     public Player player;
     public GameManager gameManager;
 
@@ -84,7 +85,7 @@ public class SaveManager : MonoBehaviour
     {
         bool extraPredators = false;
         List<AnimalData> startingAnimals = new List<AnimalData>();
-        foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].startingDeck)
+        foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].farmerData.startingDeck)
         {
             if (animalData.isPredator && !extraPredators)
             {
@@ -128,7 +129,21 @@ public class SaveManager : MonoBehaviour
         gameManager.foxThiefStolenStats = gameManager.animalShopItem.possibleAnimals[FBPP.GetInt("chosenToStealIndex", 0)].animalData;
         if (FBPP.GetString("animalsInDeck")=="")
         {
-            return;
+            List<AnimalData> startingAnimals = new List<AnimalData>();
+            bool extraPredators = false;
+            foreach (var animalData in farmerDatas[FBPP.GetInt("farmerID", 0)].startingDeck)
+            {
+                if (animalData.isPredator && !extraPredators)
+                {
+                    extraPredators = true;
+                    for (int i = 0; i < harvestDatas[FBPP.GetInt("harvestLevel", 1)-1].startingPredators; i++)
+                    {
+                        startingAnimals.Add(animalData);
+                    }
+                }
+                startingAnimals.Add(animalData);
+            }
+            FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
         }
         //Debug.Log(FBPP.GetString("animalsInDeck"));
         player.animalsInDeck.Clear();
@@ -147,7 +162,6 @@ public class SaveManager : MonoBehaviour
             var match = boonDatas.FirstOrDefault(a => a.name == booon);
             if (match != null)
             {
-                Debug.Log("Loading boon: " + match.name);
                 player.AddBoonToDeck(match);
                 //Debug.Log("Loaded: " + synergy);
             }

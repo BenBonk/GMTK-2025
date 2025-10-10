@@ -470,7 +470,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 5726340978611458138, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -546,12 +546,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0352e4bfa27f8049aba5fbc89ca39ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  farmerData: {fileID: 0}
   farmerInfo: {fileID: 7952567706955699301}
   farmerImg: {fileID: 6878084352702544965}
-  farmerIndex: 0
-  unlockedSprite: {fileID: 0}
   isUnlocked: 0
-  startingDeck: []
   animalCountTexts:
   - {fileID: 4830605710111891944}
   - {fileID: 5140554405171818753}
@@ -562,20 +560,8 @@ MonoBehaviour:
   - {fileID: 5817301982779929964}
   - {fileID: 1887822848983770548}
   - {fileID: 2683003770188258717}
-  unlockDescription:
-    m_TableReference:
-      m_TableCollectionName: 
-    m_TableEntryReference:
-      m_KeyId: 0
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
   unlockText: {fileID: 6952796685337078043}
   farmerName: {fileID: 7493094491465527454}
-  references:
-    version: 2
-    RefIds: []
 --- !u!114 &5318655626611540348
 MonoBehaviour:
   m_ObjectHideFlags: 0
