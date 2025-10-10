@@ -13247,7 +13247,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -24854,7 +24854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1280.8, y: -590.8}
+  m_AnchoredPosition: {x: -1118, y: -590.8}
   m_SizeDelta: {x: 106.25, y: 106.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988524038
@@ -42991,7 +42991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 656672193975587671, guid: 3021cd6a08b52534b87b22ca777a4dce, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1322.27
+      value: -1161.4
       objectReference: {fileID: 0}
     - target: {fileID: 656672193975587671, guid: 3021cd6a08b52534b87b22ca777a4dce, type: 3}
       propertyPath: m_AnchoredPosition.y
