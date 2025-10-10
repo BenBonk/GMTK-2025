@@ -84,7 +84,7 @@ public class SaveManager : MonoBehaviour
     {
         bool extraPredators = false;
         List<AnimalData> startingAnimals = new List<AnimalData>();
-        foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].startingDeck)
+        foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].farmerData.startingDeck)
         {
             if (animalData.isPredator && !extraPredators)
             {
@@ -136,6 +136,7 @@ public class SaveManager : MonoBehaviour
         foreach (var animal in FBPP.GetString("animalsInDeck").Split(","))
         {
             var match = animalDatas.FirstOrDefault(a => a.name == animal);
+            Debug.Log("Loading animal: " + animal);
             if (match != null)
             {
                 player.animalsInDeck.Add(match);

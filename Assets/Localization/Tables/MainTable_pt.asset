@@ -1054,7 +1054,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169348
-    m_Localized: Muito mais vantagens!
+    m_Localized: Muitas outras vantagens!
     m_Metadata:
       m_Items: []
   - m_Id: 13201600347766784
@@ -1084,6 +1084,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: "Ven\xE7a o jogo uma vez para desbloquear este fazendeiro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415612813312
+    m_Localized: Yeehaw!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415726059520
+    m_Localized: "Voc\xEA desbloqueou:"
     m_Metadata:
       m_Items: []
   references:

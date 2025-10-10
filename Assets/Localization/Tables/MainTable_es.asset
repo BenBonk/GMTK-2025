@@ -900,7 +900,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Los precios de los animales ahora est\xE1n aleatorios en la tienda."
+    m_Localized: Los precios de los animales ahora son aleatorios en la tienda.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -1086,6 +1086,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: Completa el juego una vez para desbloquear a este granjero.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415612813312
+    m_Localized: "\xA1Yuehaw!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415726059520
+    m_Localized: 'Desbloqueaste:'
     m_Metadata:
       m_Items: []
   references:

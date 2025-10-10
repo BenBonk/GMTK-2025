@@ -1073,6 +1073,14 @@ MonoBehaviour:
     m_Localized: Beat the game once to unlock this farmer.
     m_Metadata:
       m_Items: []
+  - m_Id: 19090415612813312
+    m_Localized: Yeehaw!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415726059520
+    m_Localized: 'You Unlocked:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -22,6 +22,7 @@ public class HarvestLevelManager : MonoBehaviour
     public LocalizedString[] difficultyLevels;
 
     public GameObject decreaseButton;
+    public GameObject increaseButton;
     void Start()
     {
         SetHarvestLevel(1); // Initialize to level 1
@@ -31,6 +32,7 @@ public class HarvestLevelManager : MonoBehaviour
     {
         levelIndex--; // Convert to 0-based index
 
+        increaseButton.SetActive(true);
         if (levelIndex == 0)
         {
             decreaseButton.SetActive(false);
@@ -40,15 +42,18 @@ public class HarvestLevelManager : MonoBehaviour
             decreaseButton.SetActive(true);
         }
 
-        if (levelIndex < 0 || levelIndex >= GameController.saveManager.harvestDatas.Length)
+        if (levelIndex < 0 || levelIndex >= FBPP.GetInt("harvestLevelsUnlocked", 1)-1)
         {
             if (levelIndex >= GameController.saveManager.harvestDatas.Length)
             {
                 GetComponent<StampPopup>().ShowStampAtMouse();
                 AudioManager.Instance.PlaySFX("no_point_mult");
+                return;
             }
-            Debug.LogWarning($"Invalid harvest level index: {levelIndex}");
-            return;
+            else
+            {
+                increaseButton.SetActive(false);
+            }
         }
 
         HarvestData data = GameController.saveManager.harvestDatas[levelIndex];

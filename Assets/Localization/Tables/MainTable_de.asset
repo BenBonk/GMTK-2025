@@ -248,7 +248,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
+      Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -322,8 +323,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
-      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, darunter ein Huhn, eine Kuh,
+      ein Pferd, ein Schaf und ein Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -777,7 +778,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607682
     m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -891,7 +892,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "W\xF6lfe laichen jetzt in Rudeln von zwei oder drei"
+    m_Localized: "W\xF6lfe vermehren sich jetzt in Rudeln von zwei oder drei"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -991,8 +992,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
-      Lasso, statt 10 %"
+    m_Localized: "Erhalten Sie f\xFCr jeden Nicht-Raubtier im Lasso einen Punktebonus
+      von +20 % statt 10 %"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1093,6 +1094,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: Spielen Sie das Spiel einmal durch, um diesen Farmer freizuschalten.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415612813312
+    m_Localized: Juhuu!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415726059520
+    m_Localized: 'Du hast freigeschaltet:'
     m_Metadata:
       m_Items: []
   references:

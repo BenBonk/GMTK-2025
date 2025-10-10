@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: a8b54e6f9b958c14eb4aac5c8b3cf5b4
+guid: b82c31750219d6245996303aebceb571
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6529048803842486747
-    second: Farmer2_0
+      213: -162484466967000372
+    second: Farmer1_0
   - first:
-      213: -7670472900175178147
-    second: Farmer2_1
+      213: -4740349956597079772
+    second: Farmer1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -112,16 +112,29 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Farmer1_0
+      name: Farmer0_0
       rect:
         serializedVersion: 2
         x: 5
         y: 4
-        width: 16
+        width: 15
         height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -131,19 +144,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81a7ae3dfa721e24ca5dad525f745a6b
-      internalID: 2052330414
+      spriteID: ac751f9d16ed38e42ab5384fc071a2b6
+      internalID: 288025901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Farmer1_1
+      name: Farmer0_1
       rect:
         serializedVersion: 2
-        x: 28
+        x: 30
         y: 4
-        width: 16
+        width: 15
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b6a625e80d337d4eb28655b31b5e661
-      internalID: 118001882
+      spriteID: f9c443928b0cf1648a75134a866aabb9
+      internalID: 234909619
       vertices: []
       indices: 
       edges: []
@@ -163,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b1b08aa14efb87f418789ae4c1db77ef
+    spriteID: 66c550d66a1d39c4abee86fc883164d6
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Farmer1_0: 2052330414
-      Farmer1_1: 118001882
+      Farmer0_0: 288025901
+      Farmer0_1: 234909619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

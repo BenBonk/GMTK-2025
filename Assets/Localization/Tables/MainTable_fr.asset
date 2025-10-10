@@ -797,7 +797,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus en cas de capture en plein bond
+    m_Localized: Bonus en cas de capture au milieu d'un bond
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
@@ -842,7 +842,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Les cochons peuvent appara\xEEtre al\xE9atoirement avec un chapeau
-      haut de forme, si c'est le cas, ils valent +50 esp\xE8ces et +25 points"
+      haut de forme, si c'est le cas, ils valent +50 en esp\xE8ces et +25 points"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -1033,7 +1033,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui donnent
-      x1,5 points multiplicateurs lorsqu'elles sont captur\xE9es au lasso"
+      x1,5 points mult lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1091,6 +1091,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: "Terminez le jeu une fois pour d\xE9bloquer ce fermier."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415612813312
+    m_Localized: Ouaip !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415726059520
+    m_Localized: "Vous avez d\xE9bloqu\xE9\_:"
     m_Metadata:
       m_Items: []
   references:

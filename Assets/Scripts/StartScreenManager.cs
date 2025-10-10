@@ -32,6 +32,7 @@ public class StartScreenManager : MonoBehaviour
             Debug.Log("No Save Data");
             noSaveData.SetActive(true);
         }
+        GameController.farmerSelectManager.CheckUnlokcedFarmers();
 
         yield return new WaitForSeconds(5);
         if (!GameController.gameManager.roundCompleted)
@@ -72,6 +73,7 @@ public class StartScreenManager : MonoBehaviour
     public void LoadFarmers()
     {
         AudioManager.Instance.PlaySFX("woosh1");
+        
         hasSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1f).SetEase(Ease.InOutBack);
         noSaveData.GetComponent<RectTransform>().DOAnchorPosX(-2000, 1f).SetEase(Ease.InOutBack);
         title.GetComponent<RectTransform>().DOAnchorPosX(-2000, .75f).SetEase(Ease.InOutBack);

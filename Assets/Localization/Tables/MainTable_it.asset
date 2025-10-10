@@ -715,7 +715,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -789,7 +789,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Sempre pi\xF9 veloce"
+    m_Localized: "Per sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -801,8 +801,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: I cani scacciano i predatori. I cani valgono +5x denaro se catturati
-      con un predatore.
+    m_Localized: I cani scacciano i predatori. I cani valgono +5,0x denaro quando
+      vengono catturati da un predatore.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -828,7 +828,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
+    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -864,7 +864,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano le statistiche con
+    m_Localized: Le volpi scambiano statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -1015,8 +1015,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: Mentre sei nel tuo mazzo dei doni, tutti gli animali hanno il loro
-      livello aumentato di 2
+    m_Localized: Mentre sei nel tuo mazzo dei doni, il livello di tutti gli animali
+      aumenta di 2
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
@@ -1083,6 +1083,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: Completa il gioco una volta per sbloccare questo contadino.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415612813312
+    m_Localized: Evviva!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19090415726059520
+    m_Localized: 'Hai sbloccato:'
     m_Metadata:
       m_Items: []
   references:

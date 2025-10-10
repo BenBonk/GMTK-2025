@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour
     public SchemeManager schemeManager;
     public Boon fairyBottleInstance;
     public GameObject extraUpgradeSlot;
+    public GameObject unlockPanel;
     [HideInInspector] public AnimalData foxThiefStolenStats;
     private void Start()
     {
@@ -130,7 +131,7 @@ public class GameManager : MonoBehaviour
         {
             extraUpgradeSlot.SetActive(false);
         }
-            ApplyHarvestLevel();
+        ApplyHarvestLevel();
         if (isTesting)
         {
             pointsRequirementGrowthRate = 0;
@@ -299,8 +300,20 @@ public class GameManager : MonoBehaviour
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.enabled = true;
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
-            yield return new WaitForSeconds(3);
-            GameController.wishlistPanel.Open();
+            yield return new WaitForSeconds(1.5f);
+            if (FBPP.GetInt("harvestLevelsUnlocked",1) <= harvestLevel && harvestLevel < saveManager.harvestDatas.Length)
+            {
+                FBPP.SetInt("harvestLevelsUnlocked", harvestLevel + 1);
+                FBPP.Save();
+                UnlockHarvestLevel(harvestLevel + 1);
+            }
+            if (!FBPP.GetBool("farmer1",false))
+            {
+                FBPP.SetBool("farmer1", true);
+                FBPP.Save();
+                UnlockFarmer(1);
+            }
+
             while (!endlessSelected || GameController.wishlistPanel.isOpen)
             {
                 yield return null;
@@ -640,5 +653,21 @@ public class GameManager : MonoBehaviour
         {
             saveManager.ClearGame();
         }
+    }
+
+    private void UnlockFarmer(int farmerID)
+    {
+        Debug.Log("Unlocking farmer " + farmerID);
+        GameObject newPanel = Instantiate(unlockPanel,GameObject.Find("UI").transform);
+        newPanel.GetComponent<UnlockPanel>().SetupFarmerUnlock(farmerID);
+        newPanel.GetComponent<UnlockPanel>().Open();
+    }
+
+    private void UnlockHarvestLevel(int level)
+    {
+        Debug.Log("Unlocking harvest level " + level);
+        GameObject newPanel = Instantiate(unlockPanel,GameObject.Find("UI").transform);
+        newPanel.GetComponent<UnlockPanel>().SetupHarvestLevelUnlock(level);
+        newPanel.GetComponent<UnlockPanel>().Open();
     }
 }
