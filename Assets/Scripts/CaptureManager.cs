@@ -158,7 +158,15 @@ public class CaptureManager : MonoBehaviour
                     pointMult *= 1 + (.1f * totalNonPredatorCount);
                 }
                 int groupsOf3 = totalNonPredatorCount / 3;
-                currencyBonus += groupsOf3;
+                if (boonManager.ContainsBoon("DustyDividend"))
+                {
+                    boonSprites.Add(boonManager.boonDict["DustyDividend"].art);
+                    currencyBonus += groupsOf3*2;
+                }
+                else
+                {
+                    currencyBonus += groupsOf3;   
+                }
             }
 
             if (boonManager.ContainsBoon("Mootiplier"))
