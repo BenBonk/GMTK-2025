@@ -129,6 +129,10 @@ public class CaptureManager : MonoBehaviour
                 }
                 pointBonus += (10 * uniqueAnimalNames.Count);
             }
+            if (boonManager.ContainsBoon("BoonsBonus")   )
+            {
+                pointBonus += (2 * player.boonsInDeck.Count);
+            }
 
             if (animalsCaptured.Count > FBPP.GetInt("largestCapture"))
             {
