@@ -31,11 +31,11 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: 1836224642, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 50
+  price: 80
   isExactMatch: 0
-  currencyBonus: 5
+  currencyBonus: 4
   currencyMult: 0
-  pointsBonus: 1
+  pointsBonus: 3
   pointsMult: 1
   animalsNeeded:
   - Pig

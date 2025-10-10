@@ -43,7 +43,9 @@ MonoBehaviour:
   lockedSprite: {fileID: -6841065387944932691, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
   startingDeck:
   - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
-  - {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
+  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
+  - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
+  - {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
   - {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
   audioClipName: farmer_1
   farmerIndex: 1
