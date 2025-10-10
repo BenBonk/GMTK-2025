@@ -483,6 +483,14 @@ MonoBehaviour:
     m_Key: win.menu
     m_Metadata:
       m_Items: []
+  - m_Id: 19461608561684480
+    m_Key: win.yeehaw
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608628793344
+    m_Key: win.unlock
+    m_Metadata:
+      m_Items: []
   - m_Id: 108
     m_Key: startScreen.wrangleRanch
     m_Metadata:
@@ -1013,6 +1021,70 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 9587820992790528
     m_Key: boons.fairyBottleSaved
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376256
+    m_Key: boons.freeroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376257
+    m_Key: boons.freerollDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376258
+    m_Key: boons.boonsBonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376259
+    m_Key: boons.boonsBonusDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376260
+    m_Key: boons.maskOfMany
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376261
+    m_Key: boons.maskOfManyDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376262
+    m_Key: boons.hourglass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376263
+    m_Key: boons.hourglassDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376264
+    m_Key: boons.scarecrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376265
+    m_Key: boons.scarecrowDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376266
+    m_Key: boons.dustyDividend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376267
+    m_Key: boons.dustyDividendDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376268
+    m_Key: boons.bnpl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376269
+    m_Key: boons.bnplDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376270
+    m_Key: boons.noahsArk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376271
+    m_Key: boons.noahsArkDesc
     m_Metadata:
       m_Items: []
   - m_Id: 10403423383060480

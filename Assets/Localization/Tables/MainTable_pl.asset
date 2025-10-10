@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
-      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
-      dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -1110,6 +1110,84 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: "Uko\u0144cz gr\u0119 raz, aby odblokowa\u0107 tego rolnika."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608561684480
+    m_Localized: Ooo, brawo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608628793344
+    m_Localized: "Odblokowa\u0142e\u015B:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376256
+    m_Localized: Freeroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376257
+    m_Localized: Przyznaje 1 darmowy ponowny rzut na sklep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376258
+    m_Localized: Bonus Boons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376259
+    m_Localized: "Przyznaje +2 punkty za ka\u017Cde dobrodziejstwo w talii za ka\u017Cde
+      udane lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376260
+    m_Localized: Maska Wielu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376261
+    m_Localized: "Najcz\u0119\u015Bciej wyst\u0119puj\u0105ce zwierz\u0119 w Twojej
+      talii pojawi si\u0119 w ka\u017Cdym sklepie do kupienia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376262
+    m_Localized: Klepsydra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376263
+    m_Localized: "-10 sekund na rund\u0119, mno\u017Cnik punkt\xF3w 1,5x za ka\u017Cde
+      udane lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376264
+    m_Localized: "Strach na wr\xF3ble"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376265
+    m_Localized: "Zmniejszona cz\u0119stotliwo\u015B\u0107 tar\u0142a drapie\u017Cnik\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376266
+    m_Localized: Dusty Dywidenda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376267
+    m_Localized: "Zwi\u0119kszona premia pieni\u0119\u017Cna za ka\u017Cde lasso
+      z 3 lub wi\u0119ksz\u0105 liczb\u0105 zwierz\u0105t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376268
+    m_Localized: BNPL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376269
+    m_Localized: "Gracz mo\u017Ce teraz zaci\u0105gn\u0105\u0107 w sklepie d\u0142ug
+      w wysoko\u015Bci do 100 dolar\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376270
+    m_Localized: Arka Noego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376271
+    m_Localized: "Za ka\u017Cdym razem, gdy z\u0142apiesz na lasso dok\u0142adnie
+      2 identyczne zwierz\u0119ta, istnieje 1 szansa na 20 na ulepszenie tego zwierz\u0119cia"
     m_Metadata:
       m_Items: []
   references:

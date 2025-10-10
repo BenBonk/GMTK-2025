@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein.
+      mit dem Lasso ein
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -1093,6 +1093,82 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: Spielen Sie das Spiel einmal durch, um diesen Farmer freizuschalten.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608561684480
+    m_Localized: Juhuu!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608628793344
+    m_Localized: 'Du hast freigeschaltet:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376256
+    m_Localized: Freeroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376257
+    m_Localized: "Gew\xE4hrt 1 kostenlosen Reroll pro Shop"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376258
+    m_Localized: Segensbonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376259
+    m_Localized: "Gew\xE4hrt +2 Punkte pro Segen in deinem Deck f\xFCr jedes erfolgreiche
+      Lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376260
+    m_Localized: Maske der Vielen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376261
+    m_Localized: "Das in Ihrem Deck am h\xE4ufigsten vorkommende Tier wird in jedem
+      Gesch\xE4ft zum Kauf angeboten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376262
+    m_Localized: Sanduhr
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376263
+    m_Localized: "-10 Sekunden pro Runde, 1,5-faches Punktemultiplikator f\xFCr jedes
+      erfolgreiche Lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376264
+    m_Localized: Vogelscheuche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376265
+    m_Localized: Verringerte Raubtier-Spawnrate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376266
+    m_Localized: Dusty Dividend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376267
+    m_Localized: "Erh\xF6hter Bargeldbonus pro Lasso bei 3 oder mehr Tieren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376268
+    m_Localized: BNPL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376269
+    m_Localized: "Spieler k\xF6nnen jetzt im Shop Schulden von bis zu 100 $ machen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376270
+    m_Localized: Arche Noah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376271
+    m_Localized: Wenn Sie genau zwei identische Tiere einfangen, besteht eine Chance
+      von 1 zu 20, dieses Tier zu verbessern.
     m_Metadata:
       m_Items: []
   references:

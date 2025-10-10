@@ -1088,6 +1088,81 @@ MonoBehaviour:
     m_Localized: Completa el juego una vez para desbloquear a este granjero.
     m_Metadata:
       m_Items: []
+  - m_Id: 19461608561684480
+    m_Localized: "\xA1Yuehaw!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608628793344
+    m_Localized: 'Desbloqueaste:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376256
+    m_Localized: Torneo gratuito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376257
+    m_Localized: "Otorga 1 renovaci\xF3n gratuita por tienda"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376258
+    m_Localized: "Bonificaci\xF3n de beneficios"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376259
+    m_Localized: "Otorga +2 puntos por bendici\xF3n en tu mazo por cada lazo exitoso."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376260
+    m_Localized: "M\xE1scara de muchos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376261
+    m_Localized: "El animal m\xE1s com\xFAn de tu mazo aparecer\xE1 en todas las
+      tiendas para su compra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376262
+    m_Localized: Reloj de arena
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376263
+    m_Localized: "-10 segundos por ronda, multiplicaci\xF3n de puntos por 1,5x por
+      cada lazo exitoso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376264
+    m_Localized: "Espantap\xE1jaros"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376265
+    m_Localized: "Disminuci\xF3n de la tasa de reproducci\xF3n de depredadores"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376266
+    m_Localized: Dividendo polvoriento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376267
+    m_Localized: "Bono en efectivo aumentado por lazos con 3 o m\xE1s animales"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376268
+    m_Localized: BNPL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376269
+    m_Localized: El jugador ahora puede endeudarse hasta $100 en la tienda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376270
+    m_Localized: "El arca de No\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376271
+    m_Localized: "Siempre que laces exactamente 2 animales id\xE9nticos, hay una
+      probabilidad de 1 en 20 de mejorar ese animal."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

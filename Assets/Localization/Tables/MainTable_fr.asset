@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+ Esp\xE8ces\_: {0}"
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -1091,6 +1091,83 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117562949633
     m_Localized: "Terminez le jeu une fois pour d\xE9bloquer ce fermier."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608561684480
+    m_Localized: Ouaip !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608628793344
+    m_Localized: "Vous avez d\xE9bloqu\xE9\_:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376256
+    m_Localized: Freeroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376257
+    m_Localized: Accorde 1 relance gratuite par boutique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376258
+    m_Localized: Bonus d'avantages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376259
+    m_Localized: "Accorde +2 points par avantage dans votre deck pour chaque lasso
+      r\xE9ussi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376260
+    m_Localized: Masque de la multitude
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376261
+    m_Localized: "L'animal le plus commun de votre deck appara\xEEtra dans chaque
+      boutique pour \xEAtre achet\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376262
+    m_Localized: Sablier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376263
+    m_Localized: "-10 secondes par tour, 1,5x points multiplicateurs pour chaque
+      lasso r\xE9ussi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376264
+    m_Localized: "\xC9pouvantail"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376265
+    m_Localized: "Diminution du taux de reproduction des pr\xE9dateurs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376266
+    m_Localized: "Dividende poussi\xE9reux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376267
+    m_Localized: "Bonus en esp\xE8ces augment\xE9 par lasso avec 3 animaux ou plus"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376268
+    m_Localized: BNPL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376269
+    m_Localized: "Le joueur peut d\xE9sormais s'endetter jusqu'\xE0 100 $ dans la
+      boutique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376270
+    m_Localized: "Arche de No\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376271
+    m_Localized: "Chaque fois que vous capturez exactement 2 animaux identiques,
+      vous avez 1 chance sur 20 d'am\xE9liorer cet animal."
     m_Metadata:
       m_Items: []
   references:

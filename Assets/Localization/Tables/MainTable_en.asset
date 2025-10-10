@@ -1073,6 +1073,80 @@ MonoBehaviour:
     m_Localized: Beat the game once to unlock this farmer.
     m_Metadata:
       m_Items: []
+  - m_Id: 19461608561684480
+    m_Localized: Yeehaw!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608628793344
+    m_Localized: 'You Unlocked:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376256
+    m_Localized: Freeroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376257
+    m_Localized: Grants 1 free reroll per shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376258
+    m_Localized: Boons Bonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376259
+    m_Localized: Grants +2 points per boon in your deck for each successful lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376260
+    m_Localized: Mask of Many
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376261
+    m_Localized: The most common animal in your deck will appear in every shop for
+      purchase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376262
+    m_Localized: Hourglass
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376263
+    m_Localized: -10 seconds per round, 1.5x points mult for each successful lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376264
+    m_Localized: Scarecrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376265
+    m_Localized: Decreased predator spawn rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376266
+    m_Localized: Dusty Dividend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376267
+    m_Localized: Increased cash bonus per lassos with 3 or more animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376268
+    m_Localized: BNPL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376269
+    m_Localized: Player can now go into up to $100 of debt in the shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376270
+    m_Localized: Noah's Ark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19461608641376271
+    m_Localized: Whenever you lasso exactly 2 identical animals, there is a 1 in
+      20 chance to upgrade that animal
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
