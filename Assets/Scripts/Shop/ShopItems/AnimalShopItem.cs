@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class AnimalShopItem : ShopItem
     private float animSpeed;
     private Coroutine animCo;
     public TMP_Text descriptionText2;
+    public bool leftAnimal;
     public override void Initialize()
     {
         // Bias: non-predators get weight 5, predators get weight 1
@@ -32,6 +34,17 @@ public class AnimalShopItem : ShopItem
         }
 
         chosenAnimal = weightedList[Random.Range(0, weightedList.Count)].animalData;
+        if (leftAnimal && GameController.boonManager.ContainsBoon("MaskOfMany"))
+        {
+            Dictionary<AnimalData, int> animalsCount = new Dictionary<AnimalData, int>();
+            foreach (var a in GameController.player.animalsInDeck)
+            {
+                if (!animalsCount.ContainsKey(a))
+                    animalsCount[a] = 0;
+                animalsCount[a]++;
+            }
+            chosenAnimal = animalsCount.OrderByDescending(kv => kv.Value).First().Key;
+        }
         titleText.text = chosenAnimal.animalName.GetLocalizedString();
         price = chosenAnimal.price;
         if (GameController.boonManager.ContainsBoon("Auctioneer"))

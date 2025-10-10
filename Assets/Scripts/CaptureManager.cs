@@ -131,6 +131,7 @@ public class CaptureManager : MonoBehaviour
             }
             if (boonManager.ContainsBoon("BoonsBonus")   )
             {
+                boonSprites.Add(boonManager.boonDict["BoonsBonus"].art);
                 pointBonus += (2 * player.boonsInDeck.Count);
             }
 
