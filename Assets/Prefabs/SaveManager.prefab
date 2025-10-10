@@ -122,5 +122,8 @@ MonoBehaviour:
   harvestDatas:
   - {fileID: 11400000, guid: 81e1b63c61ccadd49841ee01e914fdc9, type: 2}
   - {fileID: 11400000, guid: b006248c959069d44be4e0ae76c9cfbf, type: 2}
+  farmerDatas:
+  - {fileID: 11400000, guid: 4606dd3161c1d3b4aa50abe96be4c49a, type: 2}
+  - {fileID: 11400000, guid: a14aa737d286e994bb5cf459cd05b9ae, type: 2}
   player: {fileID: 0}
   gameManager: {fileID: 0}

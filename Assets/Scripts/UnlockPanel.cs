@@ -25,7 +25,6 @@ public class UnlockPanel : MonoBehaviour
 
     public TextMeshProUGUI unlockText;
     public Image unlockImage;
-    public FarmerData[] farmerDatas;
     public LocalizedString harvestLevelText;
     public Sprite harvestLevelSprite;
 
@@ -38,8 +37,8 @@ public class UnlockPanel : MonoBehaviour
 
     public void SetupFarmerUnlock(int farmerID)
     {
-        unlockText.text = farmerDatas[farmerID].farmerName.GetLocalizedString();
-        unlockImage.sprite = farmerDatas[farmerID].sprite;
+        unlockText.text = GameController.saveManager.farmerDatas[farmerID].farmerName.GetLocalizedString();
+        unlockImage.sprite = GameController.saveManager.farmerDatas[farmerID].sprite;
         unlockImage.SetNativeSize();
     }
 

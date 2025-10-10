@@ -35,6 +35,7 @@ public class SaveManager : MonoBehaviour
     public AnimalData[] animalDatas;
     public Boon[] boonDatas;
     public HarvestData[] harvestDatas;
+    public FarmerData[] farmerDatas;
     public Player player;
     public GameManager gameManager;
 
@@ -128,7 +129,21 @@ public class SaveManager : MonoBehaviour
         gameManager.foxThiefStolenStats = gameManager.animalShopItem.possibleAnimals[FBPP.GetInt("chosenToStealIndex", 0)].animalData;
         if (FBPP.GetString("animalsInDeck")=="")
         {
-            return;
+            List<AnimalData> startingAnimals = new List<AnimalData>();
+            bool extraPredators = false;
+            foreach (var animalData in farmerDatas[FBPP.GetInt("farmerID", 0)].startingDeck)
+            {
+                if (animalData.isPredator && !extraPredators)
+                {
+                    extraPredators = true;
+                    for (int i = 0; i < harvestDatas[FBPP.GetInt("harvestLevel", 1)-1].startingPredators; i++)
+                    {
+                        startingAnimals.Add(animalData);
+                    }
+                }
+                startingAnimals.Add(animalData);
+            }
+            FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
         }
         //Debug.Log(FBPP.GetString("animalsInDeck"));
         player.animalsInDeck.Clear();
@@ -136,7 +151,6 @@ public class SaveManager : MonoBehaviour
         foreach (var animal in FBPP.GetString("animalsInDeck").Split(","))
         {
             var match = animalDatas.FirstOrDefault(a => a.name == animal);
-            Debug.Log("Loading animal: " + animal);
             if (match != null)
             {
                 player.animalsInDeck.Add(match);
@@ -148,7 +162,6 @@ public class SaveManager : MonoBehaviour
             var match = boonDatas.FirstOrDefault(a => a.name == booon);
             if (match != null)
             {
-                Debug.Log("Loading boon: " + match.name);
                 player.AddBoonToDeck(match);
                 //Debug.Log("Loaded: " + synergy);
             }

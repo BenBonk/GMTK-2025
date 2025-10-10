@@ -45,7 +45,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
   - {fileID: 11400000, guid: 316bee90008d1a94797c563f7a49f7eb, type: 2}
   - {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
-  audioClipName: 
+  audioClipName: farmer_1
   farmerIndex: 1
   references:
     version: 2
