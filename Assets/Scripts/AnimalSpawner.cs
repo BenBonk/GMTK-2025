@@ -30,6 +30,11 @@ public class AnimalSpawner : MonoBehaviour
     {
         var selectedAnimal =
             GameController.player.animalsInDeck[Random.Range(0, GameController.player.animalsInDeck.Count)];
+        if (selectedAnimal.isPredator && Random.Range(0,4)==0 &&boonManager.ContainsBoon("Scarecrow"))
+        {
+            selectedAnimal =
+                GameController.player.animalsInDeck[Random.Range(0, GameController.player.animalsInDeck.Count)];
+        }
         GameObject animal = Instantiate(selectedAnimal.animalPrefab);
         float topBuffer = 0.25f;
         float bottomBuffer = 0.25f;
