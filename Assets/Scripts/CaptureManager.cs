@@ -203,6 +203,12 @@ public class CaptureManager : MonoBehaviour
                 pointMult *= 2;
                 boonSprites.Add(boonManager.boonDict["HailMary"].art);
             }
+            if (boonManager.ContainsBoon("HighFive") && animalsCaptured.Count==5)
+            {
+                currencyBonus +=5;
+                pointBonus += 5;
+                boonSprites.Add(boonManager.boonDict["HighFive"].art);
+            }
             if (boonManager.ContainsBoon("AbsoluteValue"))
             {
                 if (pointBonus * pointMult < 0 || currencyBonus*currencyMult < 0)
