@@ -135,6 +135,16 @@ public class CaptureManager : MonoBehaviour
                 pointBonus += (2 * player.boonsInDeck.Count);
             }
 
+            if (boonManager.ContainsBoon("Yahtzee"))
+            {
+                bool hasFive = capturedCounts.Values.Any(v => v == 5);
+                if (hasFive)
+                {
+                    pointMult *= 2;
+                    boonSprites.Add(boonManager.boonDict["Yahtzee"].art);
+                }
+            }
+
             if (animalsCaptured.Count > FBPP.GetInt("largestCapture"))
             {
                 FBPP.SetInt("largestCapture", animalsCaptured.Count);
