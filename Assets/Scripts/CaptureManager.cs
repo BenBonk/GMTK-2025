@@ -159,7 +159,7 @@ public class CaptureManager : MonoBehaviour
                 }
                 int groupsOf3 = totalNonPredatorCount / 3;
                 if (boonManager.ContainsBoon("DustyDividend"))
-                {
+                { 
                     boonSprites.Add(boonManager.boonDict["DustyDividend"].art);
                     currencyBonus += groupsOf3*2;
                 }
