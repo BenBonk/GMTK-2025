@@ -1109,7 +1109,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "Otorga +2 puntos por bendici\xF3n en tu mazo por cada lazo exitoso."
+    m_Localized: "+2 puntos por cada bendici\xF3n en tu mazo por cada lazo exitoso"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1170,6 +1170,32 @@ MonoBehaviour:
   - m_Id: 19552395433586688
     m_Localized: "Ocasionalmente, aparecer\xE1n topos durante el d\xEDa, ofreciendo
       +5 en efectivo y +5 puntos cuando se les ata con un lazo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: Choca esos cinco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: +5 en efectivo y puntos por lazos con exactamente 5 animales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: Yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: x2 puntos multiplicados al capturar 5 animales de la misma especie
+      con un solo lazo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: Plato limpio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: +25 en efectivo si no hay animales en la pantalla cuando termina
+      cada ronda
     m_Metadata:
       m_Items: []
   references:

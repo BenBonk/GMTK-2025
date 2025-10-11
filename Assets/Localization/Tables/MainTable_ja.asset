@@ -1074,7 +1074,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "\u6295\u3052\u7E04\u6210\u529F\u3054\u3068\u306B\u30C7\u30C3\u30AD\u5185\u306E\u6069\u6075\u3054\u3068\u306B+2\u30DD\u30A4\u30F3\u30C8\u4ED8\u4E0E"
+    m_Localized: "\u6295\u3052\u7E04\u6210\u529F\u3054\u3068\u306B\u30C7\u30C3\u30AD\u5185\u306E\u6069\u60751\u3064\u306B\u3064\u304D+2\u30DD\u30A4\u30F3\u30C8"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1131,6 +1131,31 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19552395433586688
     m_Localized: "\u30E2\u30B0\u30E9\u306F\u65E5\u4E2D\u306B\u6642\u3005\u73FE\u308C\u3001\u6295\u3052\u7E04\u3067\u6355\u307E\u3048\u308B\u3068\u73FE\u91D1+5\u3068\u30DD\u30A4\u30F3\u30C8+5\u3092\u7372\u5F97\u3067\u304D\u307E\u3059\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: "\u30CF\u30A4\u30BF\u30C3\u30C1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: "\u3061\u3087\u3046\u30695\u5339\u306E\u52D5\u7269\u3092\u6295\u3052\u7E04\u3067\u6355\u307E\u3048\u308B\u3068\u3001\u73FE\u91D1\u3068\u30DD\u30A4\u30F3\u30C8\u304C+5\u30DD\u30A4\u30F3\u30C8\u7372\u5F97"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: "\u30E4\u30C3\u30C4\u30A3\u30FC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: "\u540C\u3058\u7A2E\u985E\u306E\u52D5\u7269\u30921\u56DE\u6295\u3052\u7E04\u30675\u5339\u6355\u307E\u3048\u308B\u3068\u3001\u30DD\u30A4\u30F3\u30C8\u304C2\u500D\u306B\u306A\u308A\u307E\u3059"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: "\u30AF\u30EA\u30FC\u30F3\u30D7\u30EC\u30FC\u30C8"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: "\u5404\u30E9\u30A6\u30F3\u30C9\u306E\u7D42\u4E86\u6642\u306B\u753B\u9762\u4E0A\u306B\u52D5\u7269\u304C\u3044\u306A\u3044\u5834\u5408\u306F\u3001+25
+      \u30AD\u30E3\u30C3\u30B7\u30E5"
     m_Metadata:
       m_Items: []
   references:

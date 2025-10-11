@@ -1095,6 +1095,30 @@ MonoBehaviour:
     m_Key: boons.whackAMoleDesc
     m_Metadata:
       m_Items: []
+  - m_Id: 19740713324621824
+    m_Key: boons.highFive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Key: boons.highFiveDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Key: boons.yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Key: boons.yahtzeeDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Key: boons.cleanPlate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Key: boons.cleanPlateDesc
+    m_Metadata:
+      m_Items: []
   - m_Id: 10403423383060480
     m_Key: wishlist.wishlistNow
     m_Metadata:

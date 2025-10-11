@@ -1116,8 +1116,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "Gew\xE4hrt +2 Punkte pro Segen in deinem Deck f\xFCr jedes erfolgreiche
-      Lasso"
+    m_Localized: "+2 Punkte pro Segen in deinem Deck f\xFCr jedes erfolgreiche Lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1178,6 +1177,32 @@ MonoBehaviour:
   - m_Id: 19552395433586688
     m_Localized: "Maulw\xFCrfe tauchen gelegentlich im Laufe des Tages auf und bieten
       +5 Bargeld und +5 Punkte, wenn sie mit dem Lasso gefangen werden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: "Gib f\xFCnf"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: "+5 Cash und Punkte f\xFCr Lassos mit genau 5 Tieren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: Yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: x2 Punkte Multiplikator beim Fangen von 5 Tieren der gleichen Art
+      mit einem einzigen Lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: Saubere Platte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: +25 Bargeld, wenn am Ende jeder Runde keine Tiere auf dem Bildschirm
+      sind
     m_Metadata:
       m_Items: []
   references:

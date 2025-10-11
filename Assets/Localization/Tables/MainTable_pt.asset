@@ -1107,8 +1107,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "Concede +2 pontos por d\xE1diva no seu baralho para cada la\xE7o
-      bem-sucedido"
+    m_Localized: "+2 pontos por d\xE1diva no seu baralho para cada la\xE7o bem-sucedido"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1169,6 +1168,32 @@ MonoBehaviour:
   - m_Id: 19552395433586688
     m_Localized: "As toupeiras aparecer\xE3o ocasionalmente durante o dia, oferecendo
       +5 em dinheiro e +5 pontos quando la\xE7adas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: Toca aqui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: "+5 dinheiro e pontos para la\xE7os com exatamente 5 animais"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: Yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: "x2 pontos mult ao capturar 5 animais da mesma esp\xE9cie em um
+      \xFAnico la\xE7o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: Prato Limpo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: "+25 em dinheiro se n\xE3o houver animais na tela quando cada rodada
+      terminar"
     m_Metadata:
       m_Items: []
   references:

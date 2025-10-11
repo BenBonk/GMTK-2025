@@ -1106,8 +1106,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: Concede +2 punti per ogni beneficio nel tuo mazzo per ogni lazo
-      riuscito
+    m_Localized: +2 punti per ogni beneficio nel tuo mazzo per ogni lazo riuscito
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1167,6 +1166,32 @@ MonoBehaviour:
   - m_Id: 19552395433586688
     m_Localized: Le talpe appariranno occasionalmente durante il giorno, offrendo
       +5 soldi e +5 punti quando vengono catturate con il lazo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: Cinque alto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: +5 soldi e punti per i lazo con esattamente 5 animali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: Yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: moltiplicatore x2 punti quando si catturano 5 animali dello stesso
+      tipo con un singolo lazo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: Piatto pulito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: +25 contanti se non ci sono animali sullo schermo quando finisce
+      ogni round
     m_Metadata:
       m_Items: []
   references:

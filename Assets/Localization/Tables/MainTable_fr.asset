@@ -1114,8 +1114,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "Accorde +2 points par avantage dans votre deck pour chaque lasso
-      r\xE9ussi"
+    m_Localized: "+2 points par avantage dans votre deck pour chaque lasso r\xE9ussi"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1177,6 +1176,32 @@ MonoBehaviour:
   - m_Id: 19552395433586688
     m_Localized: "Des taupes appara\xEEtront occasionnellement au cours de la journ\xE9e,
       offrant +5 en esp\xE8ces et +5 points lorsqu'elles sont captur\xE9es au lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: High Five
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: +5 cash et points pour les lassos avec exactement 5 animaux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: Yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: "x2 points multiplicateur lors de la capture de 5 animaux du m\xEAme
+      type avec un seul lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: Assiette propre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: "+25 esp\xE8ces si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin
+      de chaque tour"
     m_Metadata:
       m_Items: []
   references:

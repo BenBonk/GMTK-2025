@@ -1133,8 +1133,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "Przyznaje +2 punkty za ka\u017Cde dobrodziejstwo w talii za ka\u017Cde
-      udane lasso"
+    m_Localized: "+2 punkty za ka\u017Cdy dar w talii za ka\u017Cde udane lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1198,6 +1197,32 @@ MonoBehaviour:
     m_Localized: "Krety b\u0119d\u0105 si\u0119 od czasu do czasu pojawia\u0107 w
       ci\u0105gu dnia, oferuj\u0105c +5 got\xF3wki i +5 punkt\xF3w po z\u0142apaniu
       na lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: "Przybij pi\u0105tk\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: "+5 got\xF3wki i punkt\xF3w za lassa z dok\u0142adnie 5 zwierz\u0119tami"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: Yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: "x2 punkty mno\u017Cone za z\u0142apanie 5 zwierz\u0105t tego samego
+      gatunku na jednym lassie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: Czysty talerz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: "+25 got\xF3wki, je\u015Bli na ko\u0144cu ka\u017Cdej rundy na ekranie
+      nie b\u0119dzie \u017Cadnych zwierz\u0105t"
     m_Metadata:
       m_Items: []
   references:

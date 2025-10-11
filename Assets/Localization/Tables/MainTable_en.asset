@@ -1094,7 +1094,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: Grants +2 points per boon in your deck for each successful lasso
+    m_Localized: +2 points per boon in your deck for each successful lasso
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1154,6 +1154,31 @@ MonoBehaviour:
   - m_Id: 19552395433586688
     m_Localized: Moles will ocassionally popup during the day, offering +5 cash and
       +5 points when lassoed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713324621824
+    m_Localized: High Five
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713400119296
+    m_Localized: +5 cash and points for lassos with exactly 5 animals
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313600
+    m_Localized: Yahtzee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313601
+    m_Localized: x2 points mult when capturing 5 animals of the same kind in a single
+      lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313602
+    m_Localized: Clean Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19740713404313603
+    m_Localized: +25 cash if no animals are on screen when each round ends
     m_Metadata:
       m_Items: []
   references:
