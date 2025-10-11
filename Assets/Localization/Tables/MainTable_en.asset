@@ -1147,6 +1147,15 @@ MonoBehaviour:
       20 chance to upgrade that animal
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: Whack a Mole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: Moles will ocassionally popup during the day, offering +5 cash and
+      +5 points when lassoed
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
