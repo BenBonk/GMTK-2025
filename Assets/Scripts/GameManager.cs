@@ -8,6 +8,8 @@ using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 using JetBrains.Annotations;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour
     private BoonManager boonManager;
     private LocalizationManager localization;
     public AnimalShopItem animalShopItem;
+    public BoxCollider2D moleBounds;
+    public GameObject mole;
 
 
     private int lastDisplayedSecond = -1;
@@ -192,6 +196,10 @@ public class GameManager : MonoBehaviour
             roundDuration = 3;
         }
 
+        if (boonManager.ContainsBoon("WhackAMole"))
+        {
+            Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
+        }
         pointsThisRound = 0;
         saveManager.SaveGameData();
         roundNumber++;
@@ -670,4 +678,18 @@ public class GameManager : MonoBehaviour
         newPanel.GetComponent<UnlockPanel>().SetupHarvestLevelUnlock(level);
         newPanel.GetComponent<UnlockPanel>().Open();
     }
+
+    void SpawnMole()
+    {
+        Bounds bounds = moleBounds.bounds;
+        Vector2 pos = new Vector2(
+            Random.Range(bounds.min.x, bounds.max.x),
+            Random.Range(bounds.min.y, bounds.max.y));
+        Instantiate(mole, pos, Quaternion.identity);
+        if (!roundCompleted && roundDuration>0)
+        {
+            Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
+        }
+    }
+    
 }

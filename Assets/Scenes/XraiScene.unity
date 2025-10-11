@@ -11163,6 +11163,84 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1405798328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &275072176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275072177}
+  - component: {fileID: 275072178}
+  m_Layer: 0
+  m_Name: MoleBounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275072177
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275072176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.89, y: 18.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2082549784}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &275072178
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275072176}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.060679436, y: -0.00059843063}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 21.81, y: 12.501197}
+  m_EdgeRadius: 0
 --- !u!224 &295473479 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 123306690279326649, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
@@ -26339,6 +26417,8 @@ MonoBehaviour:
   barnCameraTarget: {fileID: 1466223220}
   barnAnimator: {fileID: 1436592585}
   animalShopItem: {fileID: 175759936}
+  moleBounds: {fileID: 275072178}
+  mole: {fileID: 5465896840286953389, guid: 4ef3aa53ebbac2347bbcda39deabf051, type: 3}
   timerNormalColor: {r: 0.75294125, g: 0.7960785, b: 0.86274517, a: 1}
   timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
   shopButtonBlocker: {fileID: 1168497080}
@@ -40676,7 +40756,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  boonsInDeck: []
+  boonsInDeck:
+  - {fileID: 11400000, guid: 7d38ecdb74fcb3c4d85a74afd082df2d, type: 2}
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0
@@ -42190,6 +42271,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1671915077}
+  - {fileID: 275072177}
   m_Father: {fileID: 1405798328}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2092878430
