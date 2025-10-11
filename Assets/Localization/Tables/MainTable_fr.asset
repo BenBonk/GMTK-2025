@@ -1170,6 +1170,15 @@ MonoBehaviour:
       vous avez 1 chance sur 20 d'am\xE9liorer cet animal."
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: Frappez une taupe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: "Des taupes appara\xEEtront occasionnellement au cours de la journ\xE9e,
+      offrant +5 en esp\xE8ces et +5 points lorsqu'elles sont captur\xE9es au lasso"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -1171,6 +1171,15 @@ MonoBehaviour:
       von 1 zu 20, dieses Tier zu verbessern.
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: Schlag einen Maulwurf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: "Maulw\xFCrfe tauchen gelegentlich im Laufe des Tages auf und bieten
+      +5 Bargeld und +5 Punkte, wenn sie mit dem Lasso gefangen werden"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

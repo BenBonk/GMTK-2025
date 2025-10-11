@@ -1162,6 +1162,15 @@ MonoBehaviour:
       h\xE1 uma chance em 20 de melhorar esse animal"
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: Bata numa toupeira
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: "As toupeiras aparecer\xE3o ocasionalmente durante o dia, oferecendo
+      +5 em dinheiro e +5 pontos quando la\xE7adas"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

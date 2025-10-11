@@ -1243,6 +1243,16 @@ MonoBehaviour:
       \uC5C5\uADF8\uB808\uC774\uB4DC\uD560 \uD655\uB960\uC774 20\uBD84\uC758 1\uC785\uB2C8\uB2E4."
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: "\uB450\uB354\uC9C0\uB97C \uB54C\uB824\uB77C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: "\uB450\uB354\uC9C0\uB294 \uB0AE \uB3D9\uC548 \uAC00\uB054 \uB098\uD0C0\uB098\uC11C
+      \uC62C\uAC00\uBBF8\uB85C \uC7A1\uC73C\uBA74 \uD604\uAE08 +5, \uD3EC\uC778\uD2B8
+      +5\uB97C \uC81C\uACF5\uD569\uB2C8\uB2E4."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

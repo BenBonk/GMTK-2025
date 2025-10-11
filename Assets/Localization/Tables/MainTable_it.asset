@@ -1160,6 +1160,15 @@ MonoBehaviour:
       una probabilit\xE0 su 20 di potenziare quell'animale"
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: Colpisci la talpa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: Le talpe appariranno occasionalmente durante il giorno, offrendo
+      +5 soldi e +5 punti quando vengono catturate con il lazo
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -1163,6 +1163,15 @@ MonoBehaviour:
       probabilidad de 1 en 20 de mejorar ese animal."
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: Golpea a un topo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: "Ocasionalmente, aparecer\xE1n topos durante el d\xEDa, ofreciendo
+      +5 en efectivo y +5 puntos cuando se les ata con un lazo."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

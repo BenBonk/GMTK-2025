@@ -1190,6 +1190,16 @@ MonoBehaviour:
       2 identyczne zwierz\u0119ta, istnieje 1 szansa na 20 na ulepszenie tego zwierz\u0119cia"
     m_Metadata:
       m_Items: []
+  - m_Id: 19552395341312000
+    m_Localized: Uderz kreta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19552395433586688
+    m_Localized: "Krety b\u0119d\u0105 si\u0119 od czasu do czasu pojawia\u0107 w
+      ci\u0105gu dnia, oferuj\u0105c +5 got\xF3wki i +5 punkt\xF3w po z\u0142apaniu
+      na lasso"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
