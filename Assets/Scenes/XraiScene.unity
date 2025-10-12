@@ -26855,6 +26855,14 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 43ad143c5b7f2d0429fe4f349327038c, type: 2}
     - {fileID: 11400000, guid: af8b54b87f9741f49a2702425de55b22, type: 2}
     - {fileID: 11400000, guid: 9f910c08119327242801306e022185da, type: 2}
+    - {fileID: 11400000, guid: 9f5b82029efe3354793401bf368cc720, type: 2}
+    - {fileID: 11400000, guid: 7d38ecdb74fcb3c4d85a74afd082df2d, type: 2}
+    - {fileID: 11400000, guid: cb6a725067bfad845845e278f5c32709, type: 2}
+    - {fileID: 11400000, guid: 25142f93c67025845bc02817db7621eb, type: 2}
+    - {fileID: 11400000, guid: 5a8bd03e47c2386439a6ae9294208258, type: 2}
+    - {fileID: 11400000, guid: 32293c8aa07685e4a8cddf8da3e72aad, type: 2}
+    - {fileID: 11400000, guid: d129c96bb6b77c04985a04d9a89da115, type: 2}
+    - {fileID: 11400000, guid: c5d8e2b9c857a364a86edbd032f31034, type: 2}
   - groupName: Legendary
     weights:
     - 0
@@ -40756,8 +40764,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  boonsInDeck:
-  - {fileID: 11400000, guid: cb6a725067bfad845845e278f5c32709, type: 2}
+  boonsInDeck: []
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0
