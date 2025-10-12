@@ -50,6 +50,7 @@ public class Wolf : Animal
 
     private void FindTarget()
     {
+    //a
         Animal[] allAnimals = FindObjectsOfType<Animal>();
         float closestDistance = Mathf.Infinity;
         GameObject closest = null;
