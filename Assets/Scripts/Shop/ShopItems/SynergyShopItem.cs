@@ -84,7 +84,7 @@ public class SynergyShopItem : ShopItem
                 GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
                 FBPP.SetInt("chosenToStealIndex", chosenToStealIndex);
             }
-            if (chosenBoon.name=="FreshStock")
+            if (chosenBoon.name=="FreshStock" || chosenBoon.name == "Freeroll")
             {
                GameController.rerollManager.Reset();
             }

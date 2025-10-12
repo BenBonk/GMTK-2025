@@ -145,6 +145,20 @@ public class CaptureManager : MonoBehaviour
                 }
             }
 
+            if (boonManager.ContainsBoon("NoahsArk") && animalsCaptured.Count == 2 && capturedCounts.Keys.Count == 1)
+            {
+                if (UnityEngine.Random.value < .04f)
+                {
+                    boonSprites.Add(boonManager.boonDict["NoahsArk"].art);
+                    Animal chosenAnimal = animalsCaptured[0];
+                    GameController.animalLevelManager.SetLevel(chosenAnimal.animalData.animalName.GetLocalizedString(), GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.animalName.GetLocalizedString()) + 1);
+                    if (GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.animalName.GetLocalizedString()) > FBPP.GetInt("highestAnimalLevel"))
+                    {
+                        FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.animalName.GetLocalizedString()));
+                    }
+                }
+            }
+
             if (animalsCaptured.Count > FBPP.GetInt("largestCapture"))
             {
                 FBPP.SetInt("largestCapture", animalsCaptured.Count);
@@ -212,6 +226,11 @@ public class CaptureManager : MonoBehaviour
             {
                 pointMult *= 2;
                 boonSprites.Add(boonManager.boonDict["HailMary"].art);
+            }
+            if (boonManager.ContainsBoon("TimeIsMoney"))
+            {
+                currencyMult += 0.33;
+                boonSprites.Add(boonManager.boonDict["TimeIsMoney"].art);
             }
             if (boonManager.ContainsBoon("HighFive") && animalsCaptured.Count==5)
             {

@@ -989,7 +989,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Sklep mo\u017Cna teraz przerzuca\u0107 dwa razy na sklep, zamiast
+    m_Localized: "Sklep mo\u017Cna teraz przerzuca\u0107 trzy razy na sklep, zamiast
       raz"
     m_Metadata:
       m_Items: []
@@ -1145,15 +1145,6 @@ MonoBehaviour:
       talii pojawi si\u0119 w ka\u017Cdym sklepie do kupienia"
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376262
-    m_Localized: Klepsydra
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376263
-    m_Localized: "-10 sekund na rund\u0119, mno\u017Cnik punkt\xF3w 1,5x za ka\u017Cde
-      udane lasso"
-    m_Metadata:
-      m_Items: []
   - m_Id: 19461608641376264
     m_Localized: "Strach na wr\xF3ble"
     m_Metadata:
@@ -1186,7 +1177,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Za ka\u017Cdym razem, gdy z\u0142apiesz na lasso dok\u0142adnie
-      2 identyczne zwierz\u0119ta, istnieje 1 szansa na 20 na ulepszenie tego zwierz\u0119cia"
+      2 identyczne zwierz\u0119ta, istnieje 1 szansa na 25 na ulepszenie tego zwierz\u0119cia"
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1223,6 +1214,15 @@ MonoBehaviour:
   - m_Id: 19740713404313603
     m_Localized: "+25 got\xF3wki, je\u015Bli na ko\u0144cu ka\u017Cdej rundy na ekranie
       nie b\u0119dzie \u017Cadnych zwierz\u0105t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222100799488
+    m_Localized: "Czas to pieni\u0105dz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222205657088
+    m_Localized: "-10 sekund na rund\u0119, +0,33x mno\u017Cnik got\xF3wki za ka\u017Cde
+      udane lasso"
     m_Metadata:
       m_Items: []
   references:

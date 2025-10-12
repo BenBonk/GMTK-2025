@@ -971,7 +971,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "La boutique peut d\xE9sormais \xEAtre relanc\xE9e deux fois par
+    m_Localized: "La boutique peut d\xE9sormais \xEAtre relanc\xE9e trois fois par
       boutique, au lieu d'une"
     m_Metadata:
       m_Items: []
@@ -1126,15 +1126,6 @@ MonoBehaviour:
       boutique pour \xEAtre achet\xE9"
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376262
-    m_Localized: Sablier
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376263
-    m_Localized: "-10 secondes par tour, 1,5x points multiplicateurs pour chaque
-      lasso r\xE9ussi"
-    m_Metadata:
-      m_Items: []
   - m_Id: 19461608641376264
     m_Localized: "\xC9pouvantail"
     m_Metadata:
@@ -1166,7 +1157,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Chaque fois que vous capturez exactement 2 animaux identiques,
-      vous avez 1 chance sur 20 d'am\xE9liorer cet animal."
+      vous avez 1 chance sur 25 d'am\xE9liorer cet animal."
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1202,6 +1193,14 @@ MonoBehaviour:
   - m_Id: 19740713404313603
     m_Localized: "+25 esp\xE8ces si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin
       de chaque tour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222100799488
+    m_Localized: Le temps, c'est de l'argent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222205657088
+    m_Localized: "-10 secondes par tour, +0,33x cash mult pour chaque lasso r\xE9ussi"
     m_Metadata:
       m_Items: []
   references:

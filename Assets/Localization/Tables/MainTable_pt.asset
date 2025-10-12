@@ -213,7 +213,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: "La\xE7o: um grupo de animais contendo um c\xE3o, uma raposa e um
+    m_Localized: "La\xE7o um grupo de animais contendo um c\xE3o, uma raposa e um
       lobo"
     m_Metadata:
       m_Items: []
@@ -964,8 +964,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: A loja agora pode ser reiniciada duas vezes por loja, em vez de
-      uma vez
+    m_Localized: "A loja agora pode ser reiniciada tr\xEAs vezes por loja, em vez
+      de uma vez"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -1119,15 +1119,6 @@ MonoBehaviour:
       para compra"
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376262
-    m_Localized: Ampulheta
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376263
-    m_Localized: "-10 segundos por rodada, 1,5x pontos multiplicados por cada la\xE7o
-      bem-sucedido"
-    m_Metadata:
-      m_Items: []
   - m_Id: 19461608641376264
     m_Localized: Espantalho
     m_Metadata:
@@ -1158,7 +1149,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Sempre que voc\xEA la\xE7ar exatamente 2 animais id\xEAnticos,
-      h\xE1 uma chance em 20 de melhorar esse animal"
+      h\xE1 uma chance em 25 de melhorar esse animal"
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1194,6 +1185,15 @@ MonoBehaviour:
   - m_Id: 19740713404313603
     m_Localized: "+25 em dinheiro se n\xE3o houver animais na tela quando cada rodada
       terminar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222100799488
+    m_Localized: "Tempo \xE9 dinheiro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222205657088
+    m_Localized: "-10 segundos por rodada, +0,33x multiplicador de dinheiro para
+      cada la\xE7o bem-sucedido"
     m_Metadata:
       m_Items: []
   references:

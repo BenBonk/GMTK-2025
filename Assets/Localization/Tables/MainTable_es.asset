@@ -966,7 +966,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Ahora se puede cambiar el nombre de la tienda dos veces por tienda,
+    m_Localized: Ahora se puede cambiar el nombre de la tienda tres veces por tienda,
       en lugar de una.
     m_Metadata:
       m_Items: []
@@ -1117,17 +1117,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376261
-    m_Localized: "El animal m\xE1s com\xFAn de tu mazo aparecer\xE1 en todas las
+    m_Localized: "El animal m\xE1s com\xFAn en tu mazo aparecer\xE1 en todas las
       tiendas para su compra."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376262
-    m_Localized: Reloj de arena
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376263
-    m_Localized: "-10 segundos por ronda, multiplicaci\xF3n de puntos por 1,5x por
-      cada lazo exitoso"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376264
@@ -1160,7 +1151,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Siempre que laces exactamente 2 animales id\xE9nticos, hay una
-      probabilidad de 1 en 20 de mejorar ese animal."
+      probabilidad de 1 en 25 de mejorar ese animal."
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1196,6 +1187,15 @@ MonoBehaviour:
   - m_Id: 19740713404313603
     m_Localized: +25 en efectivo si no hay animales en la pantalla cuando termina
       cada ronda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222100799488
+    m_Localized: El tiempo es dinero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222205657088
+    m_Localized: -10 segundos por ronda, +0,33x multiplicador de efectivo por cada
+      lazo exitoso
     m_Metadata:
       m_Items: []
   references:

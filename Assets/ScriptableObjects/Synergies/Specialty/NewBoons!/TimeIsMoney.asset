@@ -16,7 +16,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 19461608641376262
+      m_KeyId: 20226222100799488
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -25,13 +25,13 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 19461608641376263
+      m_KeyId: 20226222205657088
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: 103649205, guid: 32b5def3b9b9e324b92eb06cc5235ae7, type: 3}
-  price: 300
+  price: 350
   references:
     version: 2
     RefIds: []

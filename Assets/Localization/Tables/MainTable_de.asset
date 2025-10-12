@@ -248,7 +248,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
+      Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -891,7 +892,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "W\xF6lfe laichen jetzt in Rudeln von zwei oder drei"
+    m_Localized: "W\xF6lfe vermehren sich jetzt in Rudeln von zwei oder drei"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -974,7 +975,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Der Shop kann jetzt zweimal pro Shop neu gew\xFCrfelt werden, statt
+    m_Localized: "Der Shop kann jetzt dreimal pro Shop neu gew\xFCrfelt werden, statt
       einmal"
     m_Metadata:
       m_Items: []
@@ -1128,15 +1129,6 @@ MonoBehaviour:
       Gesch\xE4ft zum Kauf angeboten."
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376262
-    m_Localized: Sanduhr
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376263
-    m_Localized: "-10 Sekunden pro Runde, 1,5-faches Punktemultiplikator f\xFCr jedes
-      erfolgreiche Lasso"
-    m_Metadata:
-      m_Items: []
   - m_Id: 19461608641376264
     m_Localized: Vogelscheuche
     m_Metadata:
@@ -1167,7 +1159,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: Wenn Sie genau zwei identische Tiere einfangen, besteht eine Chance
-      von 1 zu 20, dieses Tier zu verbessern.
+      von 1 zu 25, dieses Tier zu verbessern.
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1180,7 +1172,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
-    m_Localized: "Gib f\xFCnf"
+    m_Localized: "Gib mir f\xFCnf"
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
@@ -1203,6 +1195,15 @@ MonoBehaviour:
   - m_Id: 19740713404313603
     m_Localized: +25 Bargeld, wenn am Ende jeder Runde keine Tiere auf dem Bildschirm
       sind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222100799488
+    m_Localized: Zeit ist Geld
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222205657088
+    m_Localized: "-10 Sekunden pro Runde, +0,33x Cash-Multiplikator f\xFCr jedes
+      erfolgreiche Lasso"
     m_Metadata:
       m_Items: []
   references:

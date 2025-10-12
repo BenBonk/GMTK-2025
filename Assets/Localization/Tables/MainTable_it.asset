@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -864,7 +864,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano le statistiche con
+    m_Localized: Le volpi scambiano statistiche con
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -930,7 +930,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +2 contanti per animale preso al lazo
+    m_Localized: +2 contanti per animale catturato
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -963,8 +963,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Ora \xE8 possibile rinnovare il negozio due volte per negozio,
-      invece di una volta"
+    m_Localized: "Ora \xE8 possibile rinnovare il negozio tre volte per negozio,
+      invece di una volta sola"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -1118,14 +1118,6 @@ MonoBehaviour:
       per l'acquisto"
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376262
-    m_Localized: Clessidra
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376263
-    m_Localized: -10 secondi per round, moltiplicatore punti 1,5x per ogni lazo riuscito
-    m_Metadata:
-      m_Items: []
   - m_Id: 19461608641376264
     m_Localized: Spaventapasseri
     m_Metadata:
@@ -1156,7 +1148,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Ogni volta che prendi al lazo esattamente 2 animali identici, c'\xE8
-      una probabilit\xE0 su 20 di potenziare quell'animale"
+      una probabilit\xE0 su 25 di potenziare quell'animale"
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1192,6 +1184,15 @@ MonoBehaviour:
   - m_Id: 19740713404313603
     m_Localized: +25 contanti se non ci sono animali sullo schermo quando finisce
       ogni round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222100799488
+    m_Localized: "Il tempo \xE8 denaro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222205657088
+    m_Localized: -10 secondi per round, +0,33x moltiplicatore di denaro per ogni
+      lazo riuscito
     m_Metadata:
       m_Items: []
   references:

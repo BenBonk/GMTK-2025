@@ -1047,12 +1047,12 @@ MonoBehaviour:
     m_Key: boons.maskOfManyDesc
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376262
-    m_Key: boons.hourglass
+  - m_Id: 20226222100799488
+    m_Key: boons.timeIsMoney
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376263
-    m_Key: boons.hourglassDesc
+  - m_Id: 20226222205657088
+    m_Key: boons.timeIsMoneyDesc
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376264

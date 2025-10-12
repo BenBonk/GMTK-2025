@@ -7,6 +7,8 @@ public class RerollManager : MonoBehaviour
 {
     public int startingRerollPrice;
     private int rerollPrice;
+    private int rerollsThisShop;
+    private int rerollPriceThisShop;
     public float rerollMultIncrease;
     
     [HideInInspector] private bool cantHoverOver;
@@ -51,20 +53,23 @@ public class RerollManager : MonoBehaviour
     }
     public void Reroll()
     {
-        if (!canReroll || rerollsPerShop <= 0 || GameController.player.playerCurrency < rerollPrice)
+        if (!canReroll || rerollsThisShop >= rerollsPerShop || GameController.player.playerCurrency < rerollPrice)
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
             return;
         }
-
         AudioManager.Instance.PlaySFX("reroll");
         AudioManager.Instance.PlaySFX("coins");
-        GameController.player.playerCurrency -= rerollPrice;
-        rerollsPerShop--;
-        if (rerollsPerShop <= 0)
+        //first paid reroll
+        if (boonManager.ContainsBoon("Freeroll") && rerollsThisShop == 1 || !boonManager.ContainsBoon("Freeroll") && rerollsThisShop == 0)
         {
             rerollPrice = Mathf.RoundToInt(rerollPrice * rerollMultIncrease);
         }
+        if (rerollsThisShop > 0 || !boonManager.ContainsBoon("Freeroll"))
+        {
+            GameController.player.playerCurrency -= rerollPriceThisShop;
+        }
+        rerollsThisShop++;
         shopManager.InitializeAllUpgrades();
         shopManager.UpdateCashText();
         FBPP.SetInt("rerollPrice", rerollPrice);
@@ -90,14 +95,24 @@ public class RerollManager : MonoBehaviour
     public void Reset()
     {
         rerollsPerShop = 1;
+        rerollsThisShop = 0;
+        rerollPriceThisShop = rerollPrice;
         //rrBoonSprites.Clear();
         if (boonManager.ContainsBoon("FreshStock"))
         {
-            rerollsPerShop = 2;
+            rerollsPerShop = 3;
             //rrBoonSprites.Add(boonManager.boonDict["FreshStock"].art);
+        }
+        if (boonManager.ContainsBoon("Freeroll"))
+        {
+            rerollsPerShop += 1;
+            priceText.text = 0.ToString();
+        }
+        else
+        {
+            priceText.text = rerollPrice.ToString();
         }
         transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0);
         canReroll = true;
-        priceText.text = rerollPrice.ToString();
     }
 }

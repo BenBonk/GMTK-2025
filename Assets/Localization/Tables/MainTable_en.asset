@@ -954,7 +954,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: Shop can now be rerolled twice per shop, instead of once
+    m_Localized: Shop can now be rerolled three times per shop, instead of once
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -1106,14 +1106,6 @@ MonoBehaviour:
       purchase
     m_Metadata:
       m_Items: []
-  - m_Id: 19461608641376262
-    m_Localized: Hourglass
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19461608641376263
-    m_Localized: -10 seconds per round, 1.5x points mult for each successful lasso
-    m_Metadata:
-      m_Items: []
   - m_Id: 19461608641376264
     m_Localized: Scarecrow
     m_Metadata:
@@ -1144,7 +1136,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: Whenever you lasso exactly 2 identical animals, there is a 1 in
-      20 chance to upgrade that animal
+      25 chance to upgrade that animal
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1179,6 +1171,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19740713404313603
     m_Localized: +25 cash if no animals are on screen when each round ends
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222100799488
+    m_Localized: Time Is Money
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20226222205657088
+    m_Localized: -10 seconds per round, +0.33x cash mult for each successful lasso
     m_Metadata:
       m_Items: []
   references:
