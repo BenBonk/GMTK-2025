@@ -1,4 +1,4 @@
-1234567890->PUNTOS: {0} / {1}	POINTS : {0} / {1}	PUNKTE: {0} / {1}	PUNTI: {0} / {1}	积分：{0} / {1}	ポイント: {0} / {1}	포인트: {0} / {1}	PUNKTY: {0} / {1}	PONTOS: {0} / {1}	БАЛЛЫ: {0} / {1}
+Русский	한국인	日本語	中国人1234567890->PUNTOS: {0} / {1}	POINTS : {0} / {1}	PUNKTE: {0} / {1}	PUNTI: {0} / {1}	积分：{0} / {1}	ポイント: {0} / {1}	포인트: {0} / {1}	PUNKTY: {0} / {1}	PONTOS: {0} / {1}	БАЛЛЫ: {0} / {1}
 TIEMPO: {0}S	TEMPS : {0} S	ZEIT: {0}S	TEMPO: {0}S	时间：{0}秒	時間: {0}秒	시간: {0}초	CZAS: {0} S	TEMPO: {0}S	ВРЕМЯ: {0}С
 EFECTIVO: {0}	ESPÈCES : {0}	BARGELD: {0}	CONTANTI: {0}	现金：{0}	現金: {0}	현금: {0}	GOTÓWKA: {0}	DINHEIRO: {0}	НАЛИЧНЫЕ: {0}
 ¿LISTO?	PRÊT?	BEREIT?	PRONTO?	准备好？	準備ができて？	준비가 된?	GOTOWY?	PREPARAR?	ГОТОВЫЙ?

@@ -448,6 +448,12 @@ MonoBehaviour:
   darkCover: {fileID: 0}
   canOpenClose: 0
   isOpen: 0
+  deckPanel: {fileID: 0}
+  synergiesPanel: {fileID: 0}
+  synergiesVisual: {fileID: 0}
+  deckParent: {fileID: 0}
+  synergyCards: []
+  settings: {fileID: 0}
 --- !u!223 &7197053014243491839
 Canvas:
   m_ObjectHideFlags: 0
@@ -994,8 +1000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 617d531856aba724f9a6fa5f127dc4ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultMaterialOverride: {fileID: 0}
-  localMaterialOverride: {fileID: 0}
+  defaultMaterialOverride: {fileID: 2100000, guid: 5115e62d173cad44592c7813550357e7, type: 2}
+  localMaterialOverride: {fileID: 2100000, guid: 9a55bc2297f73834aa5f56ac5e9f916a, type: 2}
 --- !u!114 &501284422754596415
 MonoBehaviour:
   m_ObjectHideFlags: 0
