@@ -1120,7 +1120,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: Increased cash bonus per lassos with 3 or more animals
+    m_Localized: For every 3 non-predator animals in a lasso, gain +3 cash instead
+      of the usual +1 cash
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268

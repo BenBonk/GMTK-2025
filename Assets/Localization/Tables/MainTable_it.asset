@@ -1132,7 +1132,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "Bonus in denaro aumentato per ogni lazo con 3 o pi\xF9 animali"
+    m_Localized: Per ogni 3 animali non predatori in un lazo, guadagni +3 contanti
+      invece del solito +1 contanti
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268

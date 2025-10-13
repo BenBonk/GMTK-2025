@@ -1133,7 +1133,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "Aumento do b\xF4nus em dinheiro por la\xE7os com 3 ou mais animais"
+    m_Localized: "Para cada 3 animais n\xE3o predadores em um la\xE7o, ganhe +3 em
+      dinheiro em vez do +1 em dinheiro usual"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268

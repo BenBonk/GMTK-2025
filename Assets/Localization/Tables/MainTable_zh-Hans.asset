@@ -1111,7 +1111,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "\u6355\u83B7 3 \u53EA\u6216\u66F4\u591A\u52A8\u7269\u65F6\uFF0C\u6BCF\u6761\u5957\u7D22\u53EF\u83B7\u5F97\u66F4\u9AD8\u7684\u73B0\u91D1\u5956\u52B1"
+    m_Localized: "\u6BCF\u5957\u7D22\u6355\u83B7 3 \u53EA\u975E\u6355\u98DF\u52A8\u7269\uFF0C\u5373\u53EF\u83B7\u5F97
+      +3 \u73B0\u91D1\uFF0C\u800C\u4E0D\u662F\u901A\u5E38\u7684 +1 \u73B0\u91D1"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268

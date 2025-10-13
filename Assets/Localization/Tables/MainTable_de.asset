@@ -1143,7 +1143,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "Erh\xF6hter Bargeldbonus pro Lasso bei 3 oder mehr Tieren"
+    m_Localized: "F\xFCr jeweils 3 Nicht-Raubtiere in einem Lasso erhalten Sie +3
+      Bargeld anstelle des \xFCblichen +1 Bargelds"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268

@@ -1135,7 +1135,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "Bono en efectivo aumentado por lazos con 3 o m\xE1s animales"
+    m_Localized: Por cada 3 animales no depredadores en un lazo, gana +3 en efectivo
+      en lugar del +1 en efectivo habitual.
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268

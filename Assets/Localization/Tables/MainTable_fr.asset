@@ -1140,7 +1140,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "Bonus en esp\xE8ces augment\xE9 par lasso avec 3 animaux ou plus"
+    m_Localized: "Pour chaque groupe de 3 animaux non pr\xE9dateurs dans un lasso,
+      gagnez +3 esp\xE8ces au lieu du +1 habituel."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268
