@@ -186,7 +186,7 @@ public class CaptureManager : MonoBehaviour
                 if (boonManager.ContainsBoon("DustyDividend"))
                 { 
                     boonSprites.Add(boonManager.boonDict["DustyDividend"].art);
-                    currencyBonus += groupsOf3*2;
+                    currencyBonus += groupsOf3*3;
                 }
                 else
                 {
