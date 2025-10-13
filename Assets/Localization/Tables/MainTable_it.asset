@@ -1106,7 +1106,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: +2 punti per ogni beneficio nel tuo mazzo per ogni lazo riuscito
+    m_Localized: +2 punti e +1 denaro per ogni beneficio nel tuo mazzo per ogni lazo
+      riuscito
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260

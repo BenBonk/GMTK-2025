@@ -1117,7 +1117,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "+2 Punkte pro Segen in deinem Deck f\xFCr jedes erfolgreiche Lasso"
+    m_Localized: "+2 Punkte und +1 Bargeld pro Segen in deinem Deck f\xFCr jedes
+      erfolgreiche Lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260

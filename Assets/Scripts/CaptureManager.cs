@@ -133,6 +133,7 @@ public class CaptureManager : MonoBehaviour
             {
                 boonSprites.Add(boonManager.boonDict["BoonsBonus"].art);
                 pointBonus += (2 * player.boonsInDeck.Count);
+                currencyBonus += player.boonsInDeck.Count;
             }
 
             if (boonManager.ContainsBoon("Yahtzee"))

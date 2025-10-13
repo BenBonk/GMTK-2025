@@ -1114,7 +1114,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "+2 points par avantage dans votre deck pour chaque lasso r\xE9ussi"
+    m_Localized: "+2 points et +1 cash par avantage dans votre deck pour chaque lasso
+      r\xE9ussi"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260

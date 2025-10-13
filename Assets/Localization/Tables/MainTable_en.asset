@@ -1094,7 +1094,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: +2 points per boon in your deck for each successful lasso
+    m_Localized: +2 points and +1 cash per boon in your deck for each successful
+      lasso
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260

@@ -1109,7 +1109,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "+2 puntos por cada bendici\xF3n en tu mazo por cada lazo exitoso"
+    m_Localized: +2 puntos y +1 en efectivo por cada beneficio en tu mazo por cada
+      lazo exitoso
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
