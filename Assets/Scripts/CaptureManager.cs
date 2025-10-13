@@ -145,7 +145,17 @@ public class CaptureManager : MonoBehaviour
                     boonSprites.Add(boonManager.boonDict["Yahtzee"].art);
                 }
             }
-
+            /*
+            if (boonManager.ContainsBoon("Wolfpack"))
+            {
+                Debug.Log(capturedCounts["Wolf"]);
+                if (capturedCounts["Wolf"] >=5)
+                {
+                    Debug.Log("wolfpack");
+                    pointMult *= 5;
+                }
+            }
+            */
             if (boonManager.ContainsBoon("NoahsArk") && animalsCaptured.Count == 2 && capturedCounts.Keys.Count == 1)
             {
                 if (UnityEngine.Random.value < .04f)

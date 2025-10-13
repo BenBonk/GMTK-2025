@@ -10436,6 +10436,10 @@ PrefabInstance:
       propertyPath: rt
       value: 
       objectReference: {fileID: 1761591397}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: leftAnimal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6072429973145566574, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_Name
       value: AnimalShopItem
