@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 159433007}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -379, y: 511.93, z: -8100}
+  m_LocalPosition: {x: -529, y: 511.93, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -717,7 +717,7 @@ Transform:
   m_GameObject: {fileID: 167456735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -379, y: -1597.6, z: -8100}
+  m_LocalPosition: {x: -529, y: -1597.6, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -932,6 +932,7 @@ MonoBehaviour:
   isTesting: 0
   player: {fileID: 0}
   harvestLevel: 1
+  farmerID: 0
   startingPointRequirement: 100
   roundNumber: 0
   roundInProgress: 0
@@ -953,6 +954,8 @@ MonoBehaviour:
   barnCameraTarget: {fileID: 0}
   barnAnimator: {fileID: 0}
   animalShopItem: {fileID: 0}
+  moleBounds: {fileID: 0}
+  mole: {fileID: 0}
   timerNormalColor: {r: 0.75294125, g: 0.7960785, b: 0.86274517, a: 1}
   timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
   shopButtonBlocker: {fileID: 0}
@@ -986,7 +989,9 @@ MonoBehaviour:
   roundNumberDeath: {fileID: 0}
   winRoundsText: {fileID: 0}
   lassoController: {fileID: 1615761884}
-  pointsRequirementGrowthRate: 1.3
+  noviceRate: 1.25
+  veteranRate: 1.4
+  expertRate: 1.6
   localReady:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
@@ -1016,6 +1021,8 @@ MonoBehaviour:
     m_LocalVariables: []
   schemeManager: {fileID: 0}
   fairyBottleInstance: {fileID: 11400000, guid: 2e3525a5b1c76ca468ae4964bfb81180, type: 2}
+  extraUpgradeSlot: {fileID: 0}
+  unlockPanel: {fileID: 0}
   foxThiefStolenStats: {fileID: 0}
   references:
     version: 2
@@ -1839,7 +1846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1161.4, y: 634.5}
+  m_AnchoredPosition: {x: -1322.27, y: 634.5}
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286678219
@@ -8109,7 +8116,7 @@ Transform:
   m_GameObject: {fileID: 426364587}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 791, y: -191.2, z: -8100}
+  m_LocalPosition: {x: 641, y: -191.2, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8832,7 +8839,7 @@ Transform:
   m_GameObject: {fileID: 510624084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -379, y: -894.47003, z: -8100}
+  m_LocalPosition: {x: -529, y: -894.47003, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10525,6 +10532,7 @@ MonoBehaviour:
     - {r: 0.098039225, g: 0.23137257, b: 0.2392157, a: 1}
     - {r: 0.14509805, g: 0.36078432, b: 0.25490198, a: 1}
     - {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
+    pointsTextColor: {r: 0, g: 0, b: 0, a: 0}
   - mainColor: {r: 0.6901961, g: 0.41960788, b: 0.3019608, a: 1}
     darkColor: {r: 0.43529415, g: 0.23137257, b: 0.21176472, a: 0.28235295}
     extraItemsFrequency: 0
@@ -10547,6 +10555,7 @@ MonoBehaviour:
     - {r: 0.23137257, g: 0.14509805, b: 0.1764706, a: 1}
     - {r: 0.427451, g: 0.227451, b: 0.20784315, a: 1}
     - {r: 0.6784314, g: 0.40784317, b: 0.29411766, a: 1}
+    pointsTextColor: {r: 0, g: 0, b: 0, a: 0}
   - mainColor: {r: 0.8745099, g: 0.48235297, b: 0.27450982, a: 1}
     darkColor: {r: 0.75294125, g: 0.2901961, b: 0.18431373, a: 0.28235295}
     extraItemsFrequency: 0
@@ -10569,6 +10578,7 @@ MonoBehaviour:
     - {r: 0.94117653, g: 0.854902, b: 0.6862745, a: 1}
     - {r: 0.6745098, g: 0.25882354, b: 0.16470589, a: 1}
     - {r: 0.8235295, g: 0.45882356, b: 0.2627451, a: 1}
+    pointsTextColor: {r: 0, g: 0, b: 0, a: 0}
   - mainColor: {r: 0.4039216, g: 0.7803922, b: 0.3019608, a: 1}
     darkColor: {r: 0.27450982, g: 0.5254902, b: 0.3019608, a: 0.28235295}
     extraItemsFrequency: 175
@@ -10627,6 +10637,7 @@ MonoBehaviour:
     grassColors:
     - {r: 0.9960785, g: 0.9568628, b: 0.4039216, a: 1}
     - {r: 0.27450982, g: 0.5254902, b: 0.3019608, a: 1}
+    pointsTextColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &684499489
 GameObject:
   m_ObjectHideFlags: 0
@@ -22926,7 +22937,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -318.96, y: -33.2}
+  m_AnchoredPosition: {x: -318.96, y: -34.5}
   m_SizeDelta: {x: 256.25, y: 93.75}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1118138560
@@ -23356,7 +23367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstCapture: 0
-  herdPointMultBonus: 0.1
   mootiplierMult: 0
 --- !u!1 &1182770571
 GameObject:
@@ -23384,7 +23394,7 @@ Transform:
   m_GameObject: {fileID: 1182770571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 791, y: -1597.6001, z: -8100}
+  m_LocalPosition: {x: 641, y: -1597.6001, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24170,7 +24180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1249, y: 634.5}
+  m_AnchoredPosition: {x: 1409.67, y: 634.5}
   m_SizeDelta: {x: 177.99, y: 177.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254849002
@@ -31342,7 +31352,7 @@ Transform:
   m_GameObject: {fileID: 1461076926}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -379, y: -191.2, z: -8100}
+  m_LocalPosition: {x: -529, y: -191.2, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36813,7 +36823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1118, y: -590.8}
+  m_AnchoredPosition: {x: -1280.8, y: -590.8}
   m_SizeDelta: {x: 106.25, y: 106.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1604126747
@@ -37049,7 +37059,7 @@ Transform:
   m_GameObject: {fileID: 1608394156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 791, y: -894.47003, z: -8100}
+  m_LocalPosition: {x: 641, y: -894.47003, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39992,11 +40002,11 @@ MonoBehaviour:
   - {fileID: 400946810}
   - {fileID: 382980495}
   - {fileID: 242820956}
-  - {fileID: 1828516898}
-  - {fileID: 853965360}
-  - {fileID: 2044476896}
   - {fileID: 204327245}
   - {fileID: 2066005023}
+  - {fileID: 2044476896}
+  - {fileID: 1828516898}
+  - {fileID: 853965360}
   synergyCards:
   - {fileID: 1044294132}
   - {fileID: 801855994}
@@ -40126,6 +40136,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 334e12ec41fdcd5439c029c789078886, type: 2}
     - {fileID: 11400000, guid: b6edc94cecfeee3439dcf492b056d57e, type: 2}
     - {fileID: 11400000, guid: acbe53ecfb7b89d48b751e020585f72a, type: 2}
+  upgradeShopItem: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -45154,7 +45165,7 @@ Transform:
   m_GameObject: {fileID: 1991529057}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 791, y: 511.93, z: -8100}
+  m_LocalPosition: {x: 641, y: 511.93, z: -8100}
   m_LocalScale: {x: 90, y: 90, z: 90}
   m_ConstrainProportionsScale: 0
   m_Children: []

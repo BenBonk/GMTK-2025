@@ -430,6 +430,7 @@ public class TutorialManager : MonoBehaviour
         buttonBlocker5.SetActive(true);
         buttonBlocker7.SetActive(true);
         arrowSet3.SetActive(true);
+        GameController.shopManager.CloseDeck();
         yield return ShowMessage2(tutorialStrings[12].GetLocalizedString(),7.5f);
         buttonBlocker5.SetActive(false);
         buttonBlocker6.SetActive(true);
@@ -439,7 +440,7 @@ public class TutorialManager : MonoBehaviour
         buttonBlocker2.SetActive(true);
         buttonBlocker4.SetActive(false);
         buttonBlocker7.SetActive(true);
-        arrowSet5.SetActive(true);  
+        arrowSet5.SetActive(true);
         yield return ShowMessage2(tutorialStrings[14].GetLocalizedString(), 7.5f);
         yield return ShowMessage2(tutorialStrings[15].GetLocalizedString(),0.5f);
         levelLoader.LoadCertainScene("TitleScreen");

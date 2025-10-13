@@ -275,6 +275,15 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    public void CloseDeck()
+    {
+        if (deckOpen)
+        {
+            animalDeckTween = deckPanel.DOAnchorPosX(-415, .25f).SetEase(Ease.InOutQuad).OnComplete(() => deckPanel.gameObject.SetActive(false));
+            deckOpen = false;
+        }
+    }
+
     public void ToggleSynergies()
     {
         if (boonDeckTween!=null)
