@@ -39,6 +39,7 @@ public class GrassSpawner : MonoBehaviour
         int attempts = 0;
         int placed = 0;
         int maxAttempts = numberOfGrassObjects * 10;
+        placedPositions.Clear();
 
         while (placed < numberOfGrassObjects && attempts < maxAttempts)
         {
@@ -47,6 +48,7 @@ public class GrassSpawner : MonoBehaviour
 
             attempts++;
         }
+        Debug.Log(placed);
     }
 
     void CalculateSpawnAreaFromRectTransform()
