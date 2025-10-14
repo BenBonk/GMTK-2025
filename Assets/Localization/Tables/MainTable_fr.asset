@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+ Esp\xE8ces\_: {0}"
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -1024,8 +1024,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "Tant qu'ils sont dans votre deck de b\xE9n\xE9dictions, tous les
-      animaux voient leur niveau augment\xE9 de 2"
+    m_Localized: "Jusqu'\xE0 ce que cet avantage soit remplac\xE9, tous les animaux
+      voient leur niveau augment\xE9 de 2"
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
@@ -1194,8 +1194,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313603
-    m_Localized: "+25 cash si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin de chaque
-      tour"
+    m_Localized: "+25 esp\xE8ces si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin
+      de chaque tour"
     m_Metadata:
       m_Items: []
   - m_Id: 20226222100799488

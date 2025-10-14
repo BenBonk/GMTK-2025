@@ -248,7 +248,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
+      Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -322,8 +323,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, darunter ein Huhn, eine Kuh,
-      ein Pferd, ein Schaf und ein Schwein, mit dem Lasso ein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
+      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -777,7 +778,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607682
     m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -1026,8 +1027,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "W\xE4hrend sie sich in deinem Segensdeck befinden, wird das Level
-      aller Tiere um 2 erh\xF6ht"
+    m_Localized: "Bis dieser Segen ersetzt wird, wird das Level aller Tiere um 2
+      erh\xF6ht"
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376

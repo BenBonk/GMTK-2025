@@ -1006,7 +1006,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: While in your boon deck, all animals have their level increased
+    m_Localized: Until this boon is replaced, all animals have their level increased
       by 2
     m_Metadata:
       m_Items: []

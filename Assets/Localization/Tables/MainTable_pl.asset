@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Strata punkt\xF3w:"
+    m_Localized: "Utrata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
-      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
-      dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -473,7 +473,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 103
     m_Localized: "Na koniec, mo\u017Cesz odnowi\u0107 sklep raz dziennie, a koszt
-      wzro\u015Bnie na sta\u0142e!"
+      ten wzro\u015Bnie na sta\u0142e!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -736,7 +736,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: "D\u0142ugo\u015B\u0107 ca\u0142kowita:"
+    m_Localized: "D\u0142ugo\u015B\u0107 rundy:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -1039,12 +1039,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-Pracownik Rolny
+    m_Localized: Weteran-robotnik
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "Gdy znajdujesz si\u0119 w talii dobrodziejstw, wszystkie zwierz\u0119ta
-      maj\u0105 zwi\u0119kszony poziom o 2"
+    m_Localized: "Dop\xF3ki ta korzy\u015B\u0107 nie zostanie zast\u0105piona, poziom
+      wszystkich zwierz\u0105t wzro\u015Bnie o 2"
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
@@ -1106,8 +1106,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949632
-    m_Localized: "W sklepie s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t. Ulepszenia
-      zwierz\u0105t s\u0105 ta\u0144sze."
+    m_Localized: "W sklepie dost\u0119pne s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t.
+      Ulepszenia zwierz\u0105t s\u0105 ta\u0144sze."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
