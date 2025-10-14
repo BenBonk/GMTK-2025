@@ -18,6 +18,11 @@ public class UpgradeShopItem : ShopItem
         {
             possibleAnimals.Add(item.chosenAnimal);
         }
+
+        if (GameController.boonManager.ContainsBoon("Thief"))
+        {
+            possibleAnimals.RemoveAll(a => a.name == "Fox");
+        }
         AnimalLevelManager levelManager = GameController.animalLevelManager;
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Count)];
         int animalLevel = levelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());

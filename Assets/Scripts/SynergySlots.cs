@@ -24,7 +24,12 @@ public class SynergySlots : MonoBehaviour
         {
             Boon newBoon = shopManager.overridingBoon;
             canOverrideBoon = false;
-            deckCards[index].Initialize(newBoon.synergyName.GetLocalizedString(), newBoon.desc.GetLocalizedString(), newBoon.art, descriptionManager.GetBoonDescription(newBoon));
+            string desc = newBoon.desc.GetLocalizedString();
+            if (newBoon.name=="Thief")
+            {
+                desc = newBoon.desc.GetLocalizedString() + " " + GameController.gameManager.foxThiefStolenStats.animalName.GetLocalizedString() + ".";
+            }
+            deckCards[index].Initialize(newBoon.synergyName.GetLocalizedString(), desc, newBoon.art, descriptionManager.GetBoonDescription(newBoon));
             if (newBoon is BasicBoon && !deckCards[index].subPopup.activeInHierarchy)
             {
                 Debug.Log("call");

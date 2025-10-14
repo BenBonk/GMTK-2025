@@ -211,7 +211,13 @@ public class ShopManager : MonoBehaviour
         for (int i = 0; i < player.boonsInDeck.Count; i++)
         {
             synergyCardss[i].gameObject.SetActive(true);
-            synergyCardss[i].Initialize( player.boonsInDeck[i].synergyName.GetLocalizedString(), player.boonsInDeck[i].desc.GetLocalizedString(), player.boonsInDeck[i].art, descriptionManager.GetBoonDescription(player.boonsInDeck[i]));
+            string desc = player.boonsInDeck[i].desc.GetLocalizedString();
+            if (player.boonsInDeck[i].name == "Thief")
+            {
+                desc = player.boonsInDeck[i].desc.GetLocalizedString() + " " + GameController.gameManager.foxThiefStolenStats.animalName.GetLocalizedString() + ".";
+            }
+            synergyCardss[i].Initialize( player.boonsInDeck[i].synergyName.GetLocalizedString(), desc, player.boonsInDeck[i].art, descriptionManager.GetBoonDescription(player.boonsInDeck[i]));
+            
         }
     }
 

@@ -72,7 +72,7 @@ public class SynergyShopItem : ShopItem
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
             GameController.player.playerCurrency -= price;
-            shopManager. UpdateCashText();
+            shopManager.UpdateCashText();
             canPurchase = false;
             FBPP.SetInt(chosenBoon.name, FBPP.GetInt(chosenBoon.name)+1);
             FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased")+1);
