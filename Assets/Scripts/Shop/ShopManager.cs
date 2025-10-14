@@ -24,8 +24,9 @@ public class ShopManager : MonoBehaviour
     public TMP_Text instructionsText;
     private bool deckOpen;
     [HideInInspector]public bool synergiesOpen;
-
-    [HideInInspector]public Boon overridingBoon;
+    [HideInInspector]public SynergyShopItem overridingBoonItem;
+    public Image cancelOverride;
+    public GameObject leaveShopButton;
     public Image darkCover;
     public bool cantPurchaseItem;
     public bool isTut;
