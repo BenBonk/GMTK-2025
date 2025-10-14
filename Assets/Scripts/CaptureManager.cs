@@ -15,7 +15,7 @@ public class CaptureManager : MonoBehaviour
     private double currencyBonus = 0;
     private double currencyMult = 1;
     [HideInInspector] public bool firstCapture;
-    [HideInInspector] public float mootiplierMult=1;
+    [HideInInspector] public float mootiplier=1;
 
     private void Start()
     {
@@ -219,15 +219,15 @@ public class CaptureManager : MonoBehaviour
                 }
                 if (cowCount == 0 || totalPredatorCount > 0)
                 {
-                    mootiplierMult = 1;
+                    mootiplier = 1;
                 }
                 else
                 {
                     boonSprites.Add(boonManager.boonDict["Mootiplier"].art);
-                    mootiplierMult += (.25f * cowCount);
+                    mootiplier += (.25f * cowCount);
                 }
+                pointMult *= mootiplier;
             }
-            pointMult *= mootiplierMult;
 
             if (boonManager.ContainsBoon("HoldYourHorses") && capturedCounts["horse"] > 0)
             {
@@ -292,7 +292,7 @@ public class CaptureManager : MonoBehaviour
         {
             currencyBonus += 50;
             pointBonus += 25;
-            boonSprites.Add(boonManager.boonDict["PigWithHat"].art);
+            boonSprites.Add(boonManager.boonDict["PigsWithHats"].art);
         }
 
         if (capturedAnimal.gameObject.CompareTag("BlackSheep") && currentTrigger == 0)

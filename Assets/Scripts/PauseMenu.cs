@@ -54,8 +54,11 @@ public class PauseMenu : MonoBehaviour
         boonDeckTween = synergiesPanel.DOAnchorPosX(415, 0f).SetEase(Ease.InOutQuad).OnComplete(() => synergiesVisual.SetActive(false)).SetUpdate(true);
         deckOpen = false;
         synergiesOpen = false;
-        shopManager.UpdateDeck(deckParent);
-        shopManager.UpdateSynergies(synergyCards);
+        if (shopManager != null)
+        {
+            shopManager.UpdateDeck(deckParent);
+            shopManager.UpdateSynergies(synergyCards);
+        }
     }
     public void Close()
     {

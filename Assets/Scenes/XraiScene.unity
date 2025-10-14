@@ -34914,7 +34914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstCapture: 0
-  mootiplierMult: 0
+  mootiplier: 1
 --- !u!4 &1781559414
 Transform:
   m_ObjectHideFlags: 0
@@ -40771,8 +40771,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  boonsInDeck:
-  - {fileID: 11400000, guid: acbe53ecfb7b89d48b751e020585f72a, type: 2}
+  boonsInDeck: []
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0
@@ -43068,7 +43067,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 270374104836688852, guid: c815d058f9b83914c8bad2b7793533d3, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 1554822741}
     - targetCorrespondingSourceObject: {fileID: 270374104836688852, guid: c815d058f9b83914c8bad2b7793533d3, type: 3}
       insertIndex: -1

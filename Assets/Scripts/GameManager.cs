@@ -366,7 +366,7 @@ public class GameManager : MonoBehaviour
         winPanel.gameObject.SetActive(false);
 
         captureManager.firstCapture = false;
-        captureManager.mootiplierMult = 0;
+        captureManager.mootiplier = 1;
 
         predatorRoundFrequency = 3;
         if (boonManager.ContainsBoon("PredatorPurge"))
