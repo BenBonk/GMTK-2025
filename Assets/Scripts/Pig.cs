@@ -10,7 +10,7 @@ public class Pig : Animal
     public Sprite pigWithHat;
     public override void ActivateLegendary()
     {
-        if (Random.Range(0, 3) == 0)
+        if (Random.Range(0, 5) == 0)
         {
             GetComponent<SpriteRenderer>().sprite = pigWithHat;
             gameObject.tag = "PigWithHat";
