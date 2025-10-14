@@ -539,7 +539,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -789,7 +789,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Sempre pi\xF9 veloce"
+    m_Localized: "Per sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -801,8 +801,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: I cani scacciano i predatori. I cani valgono +5,0x denaro quando
-      vengono catturati da un predatore.
+    m_Localized: I cani scacciano i predatori. I cani valgono +5x denaro se catturati
+      con un predatore.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -820,7 +820,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: "I cavalli sono pi\xF9 lenti e si fermano brevemente sul bordo sinistro
-      dello schermo"
+      dello schermo. Ogni lazo contenente un cavallo vale +10 punti."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -828,7 +828,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
+    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -864,7 +864,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Le volpi scambiano statistiche con
+    m_Localized: Le volpi hanno le stesse statistiche di
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -877,11 +877,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Branco di lupi
+    m_Localized: branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: I lupi ora si generano in branchi di due o tre
+    m_Localized: "I lupi ora si generano in branchi di 2 o 3, catturare almeno 5
+      lupi con un singolo lazo d\xE0 x20 punti moltiplicatori"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -930,7 +931,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +2 contanti per animale catturato
+    m_Localized: +2 contanti per animale preso al lazo
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -1015,8 +1016,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: Mentre sei nel tuo mazzo dei doni, tutti gli animali hanno il loro
-      livello aumentato di 2
+    m_Localized: Mentre sei nel tuo mazzo dei doni, il livello di tutti gli animali
+      aumenta di 2
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
@@ -1132,7 +1133,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: Per ogni 3 animali non predatori in un lazo, guadagni +3 contanti
+    m_Localized: Per ogni 3 animali non predatori in un lazo, guadagni +5 contanti
       invece del solito +1 contanti
     m_Metadata:
       m_Items: []
@@ -1141,7 +1142,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Il giocatore ora pu\xF2 indebitarsi fino a 100 $ nel negozio"
+    m_Localized: Ora puoi indebitarti fino a 200$ nel negozio
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1154,12 +1155,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Colpisci la talpa
+    m_Localized: Colpisci una talpa
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
     m_Localized: Le talpe appariranno occasionalmente durante il giorno, offrendo
-      +5 soldi e +5 punti quando vengono catturate con il lazo
+      +7 soldi e +7 punti quando vengono catturate con il lazo
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
@@ -1167,7 +1168,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: +5 soldi e punti per i lazo con esattamente 5 animali
+    m_Localized: +5 soldi e punti per i lazo con esattamente 5 animali.
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600

@@ -813,7 +813,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607694
-    m_Localized: Horses are slower and stop briefly at the left edge of the screen
+    m_Localized: Horses are slower and stop briefly at the left edge of the screen.
+      Any lasso containing a horse is worth +10 points
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -856,7 +857,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Foxes trade stats with
+    m_Localized: Foxes have the same stats as
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -872,7 +873,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: Wolves now spawn in packs of two or three
+    m_Localized: Wolves now spawn in packs of 2 or 3, capturing at least 5 wolves
+      in a single lasso gives x20 points mult
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -1120,7 +1122,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: For every 3 non-predator animals in a lasso, gain +3 cash instead
+    m_Localized: For every 3 non-predator animals in a lasso, gain +5 cash instead
       of the usual +1 cash
     m_Metadata:
       m_Items: []
@@ -1129,7 +1131,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: Player can now go into up to $100 of debt in the shop
+    m_Localized: You can now go into up to $200 of debt in the shop
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1146,8 +1148,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
-    m_Localized: Moles will ocassionally popup during the day, offering +5 cash and
-      +5 points when lassoed
+    m_Localized: Moles will ocassionally popup during the day, offering +7 cash and
+      +7 points when lassoed
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
@@ -1155,7 +1157,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: +5 cash and points for lassos with exactly 5 animals
+    m_Localized: +5 cash and points for lassos with exactly 5 animals.
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600

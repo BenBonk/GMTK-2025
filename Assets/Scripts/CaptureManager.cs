@@ -15,7 +15,7 @@ public class CaptureManager : MonoBehaviour
     private double currencyBonus = 0;
     private double currencyMult = 1;
     [HideInInspector] public bool firstCapture;
-    [HideInInspector] public float mootiplierMult=0;
+    [HideInInspector] public float mootiplierMult=1;
 
     private void Start()
     {
@@ -68,6 +68,10 @@ public class CaptureManager : MonoBehaviour
             }
 
             var capturedCounts = GetNameCounts(animalsCaptured);
+            foreach (var key in capturedCounts.Keys)
+            {
+                Debug.Log(key + ": " + capturedCounts[key]);
+            }
 
             for (int i = 0; i < player.boonsInDeck.Count; i++)
             {
@@ -145,17 +149,16 @@ public class CaptureManager : MonoBehaviour
                     boonSprites.Add(boonManager.boonDict["Yahtzee"].art);
                 }
             }
-            /*
-            if (boonManager.ContainsBoon("Wolfpack"))
+            
+           if (boonManager.ContainsBoon("Wolfpack"))
             {
-                Debug.Log(capturedCounts["Wolf"]);
-                if (capturedCounts["Wolf"] >=5)
+                if (capturedCounts["wolf"] >=5)
                 {
-                    Debug.Log("wolfpack");
-                    pointMult *= 5;
+                    pointMult *= 20;
+                    boonSprites.Add(boonManager.boonDict["Wolfpack"].art);
                 }
             }
-            */
+            
             if (boonManager.ContainsBoon("NoahsArk") && animalsCaptured.Count == 2 && capturedCounts.Keys.Count == 1)
             {
                 if (UnityEngine.Random.value < .04f)
@@ -196,7 +199,7 @@ public class CaptureManager : MonoBehaviour
                 if (boonManager.ContainsBoon("DustyDividend"))
                 { 
                     boonSprites.Add(boonManager.boonDict["DustyDividend"].art);
-                    currencyBonus += groupsOf3*3;
+                    currencyBonus += groupsOf3*5;
                 }
                 else
                 {
@@ -216,7 +219,7 @@ public class CaptureManager : MonoBehaviour
                 }
                 if (cowCount == 0 || totalPredatorCount > 0)
                 {
-                    mootiplierMult = 0;
+                    mootiplierMult = 1;
                 }
                 else
                 {
@@ -224,7 +227,12 @@ public class CaptureManager : MonoBehaviour
                     mootiplierMult += (.25f * cowCount);
                 }
             }
-            pointMult += mootiplierMult;
+            pointMult *= mootiplierMult;
+
+            if (boonManager.ContainsBoon("HoldYourHorses") && capturedCounts["horse"] > 0)
+            {
+                pointBonus += 10;
+            }
 
             if (!firstCapture && boonManager.ContainsBoon("EarlyBird"))
             {

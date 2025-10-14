@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8728edf3acbf1140a2445b55e14c471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsToGive: 5
+  pointsToGive: 7
   pointsMultToGive: 1
-  currencyToGive: 5
+  currencyToGive: 7
   currencyMultToGive: 0
 --- !u!114 &2098945205651189147
 MonoBehaviour:

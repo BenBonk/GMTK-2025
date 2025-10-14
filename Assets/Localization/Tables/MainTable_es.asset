@@ -821,7 +821,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: "Los caballos son m\xE1s lentos y se detienen brevemente en el borde
-      izquierdo de la pantalla."
+      izquierdo de la pantalla. Cualquier lazo que contenga un caballo vale +10 puntos."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -866,7 +866,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "Los zorros intercambian estad\xEDsticas con"
+    m_Localized: "Los zorros tienen las mismas estad\xEDsticas que"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -883,7 +883,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: Los lobos ahora aparecen en grupos de dos o tres.
+    m_Localized: "Los lobos ahora aparecen en grupos de 2 o 3, y capturar al menos
+      5 lobos con un solo lazo otorga x20 puntos multipl\xEDcalos."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -1135,7 +1136,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: Por cada 3 animales no depredadores en un lazo, gana +3 en efectivo
+    m_Localized: Por cada 3 animales no depredadores en un lazo, gana +5 en efectivo
       en lugar del +1 en efectivo habitual.
     m_Metadata:
       m_Items: []
@@ -1144,7 +1145,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: El jugador ahora puede endeudarse hasta $100 en la tienda
+    m_Localized: Ahora puedes endeudarte hasta $200 en la tienda
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1162,7 +1163,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19552395433586688
     m_Localized: "Ocasionalmente, aparecer\xE1n topos durante el d\xEDa, ofreciendo
-      +5 en efectivo y +5 puntos cuando se les ata con un lazo."
+      +7 en efectivo y +7 puntos cuando se les ata con un lazo."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
@@ -1170,7 +1171,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: +5 en efectivo y puntos por lazos con exactamente 5 animales
+    m_Localized: +5 en efectivo y puntos por lazos con exactamente 5 animales.
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600

@@ -248,8 +248,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
-      Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -323,8 +322,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
-      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, darunter ein Huhn, eine Kuh,
+      ein Pferd, ein Schaf und ein Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -778,7 +777,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607682
     m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -830,7 +829,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: Pferde sind langsamer und bleiben kurz am linken Bildschirmrand
-      stehen
+      stehen. Jedes Lasso mit einem Pferd ist +10 Punkte wert
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -875,7 +874,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "F\xFCchse tauschen Statistiken mit"
+    m_Localized: "F\xFCchse haben die gleichen Werte wie"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -892,7 +891,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "W\xF6lfe vermehren sich jetzt in Rudeln von zwei oder drei"
+    m_Localized: "W\xF6lfe erscheinen jetzt in Rudeln von 2 oder 3. Das Einfangen
+      von mindestens 5 W\xF6lfen mit einem einzigen Lasso gibt 20 Punkte mehr"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -1143,7 +1143,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "F\xFCr jeweils 3 Nicht-Raubtiere in einem Lasso erhalten Sie +3
+    m_Localized: "F\xFCr jeweils 3 Nicht-Raubtiere in einem Lasso erhalten Sie +5
       Bargeld anstelle des \xFCblichen +1 Bargelds"
     m_Metadata:
       m_Items: []
@@ -1152,7 +1152,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Spieler k\xF6nnen jetzt im Shop Schulden von bis zu 100 $ machen"
+    m_Localized: "Sie k\xF6nnen jetzt im Gesch\xE4ft Schulden von bis zu 200 $ machen"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1170,7 +1170,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19552395433586688
     m_Localized: "Maulw\xFCrfe tauchen gelegentlich im Laufe des Tages auf und bieten
-      +5 Bargeld und +5 Punkte, wenn sie mit dem Lasso gefangen werden"
+      +7 Bargeld und +7 Punkte, wenn sie mit dem Lasso gefangen werden"
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
@@ -1178,7 +1178,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: "+5 Cash und Punkte f\xFCr Lassos mit genau 5 Tieren"
+    m_Localized: "+5 Bargeld und Punkte f\xFCr Lassos mit genau 5 Tieren."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600

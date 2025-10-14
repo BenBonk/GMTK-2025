@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+Esp\xE8ces\_: {0}"
+    m_Localized: "+ Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -823,8 +823,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607694
-    m_Localized: "Les chevaux sont plus lents et s'arr\xEAtent bri\xE8vement sur
-      le bord gauche de l'\xE9cran"
+    m_Localized: "Les chevaux sont plus lents et s'arr\xEAtent bri\xE8vement \xE0
+      gauche de l'\xE9cran. Tout lasso contenant un cheval rapporte +10 points."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -869,7 +869,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "Les Foxes \xE9changent des statistiques avec"
+    m_Localized: "Les renards ont les m\xEAmes statistiques que"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -886,7 +886,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "Les loups apparaissent d\xE9sormais en meutes de deux ou trois"
+    m_Localized: "Les loups apparaissent d\xE9sormais en meutes de 2 ou 3, capturer
+      au moins 5 loups dans un seul lasso donne x20 points mult"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -1141,7 +1142,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376267
     m_Localized: "Pour chaque groupe de 3 animaux non pr\xE9dateurs dans un lasso,
-      gagnez +3 esp\xE8ces au lieu du +1 habituel."
+      gagnez +5 en esp\xE8ces au lieu du +1 habituel en esp\xE8ces"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268
@@ -1149,7 +1150,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Le joueur peut d\xE9sormais s'endetter jusqu'\xE0 100 $ dans la
+    m_Localized: "Vous pouvez d\xE9sormais vous endetter jusqu'\xE0 200 $ dans la
       boutique"
     m_Metadata:
       m_Items: []
@@ -1168,7 +1169,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19552395433586688
     m_Localized: "Des taupes appara\xEEtront occasionnellement au cours de la journ\xE9e,
-      offrant +5 en esp\xE8ces et +5 points lorsqu'elles sont captur\xE9es au lasso"
+      offrant +7 en esp\xE8ces et +7 points lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
@@ -1176,7 +1177,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: +5 cash et points pour les lassos avec exactement 5 animaux
+    m_Localized: +5 cash et points pour les lassos avec exactement 5 animaux.
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600
@@ -1193,8 +1194,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313603
-    m_Localized: "+25 esp\xE8ces si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin
-      de chaque tour"
+    m_Localized: "+25 cash si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin de chaque
+      tour"
     m_Metadata:
       m_Items: []
   - m_Id: 20226222100799488
