@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     [SerializeField] FarmerSelectManager localFarmerSelectManager;
     [SerializeField] BoonManager localBoonManager;
     [SerializeField] WishlistGamePanel localWishlistPanel;
+    [SerializeField] RandomEventManager localRandomEventManager;
     void Awake()
     {
         instance = this;
@@ -110,5 +111,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localWishlistPanel; }
         set { instance.localWishlistPanel = value; }
+    }
+    public static RandomEventManager randomEventManager
+    {
+        get { return instance.localRandomEventManager; }
+        set { instance.localRandomEventManager = value; }
     }
 }

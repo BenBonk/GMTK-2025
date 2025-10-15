@@ -3065,7 +3065,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4903,7 +4903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstCapture: 0
-  mootiplierMult: 0
+  mootiplier: 1
 --- !u!224 &881715124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7820206095430002056, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
@@ -7440,8 +7440,6 @@ MonoBehaviour:
   barnCameraTarget: {fileID: 0}
   barnAnimator: {fileID: 0}
   animalShopItem: {fileID: 0}
-  moleBounds: {fileID: 0}
-  mole: {fileID: 0}
   timerNormalColor: {r: 1, g: 1, b: 1, a: 1}
   timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
   shopButtonBlocker: {fileID: 0}
@@ -7590,6 +7588,7 @@ MonoBehaviour:
   localFarmerSelectManager: {fileID: 718314375}
   localBoonManager: {fileID: 0}
   localWishlistPanel: {fileID: 579157837}
+  localRandomEventManager: {fileID: 0}
 --- !u!4 &1594076252
 Transform:
   m_ObjectHideFlags: 0

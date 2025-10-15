@@ -43,8 +43,6 @@ public class GameManager : MonoBehaviour
     private BoonManager boonManager;
     private LocalizationManager localization;
     public AnimalShopItem animalShopItem;
-    public BoxCollider2D moleBounds;
-    public GameObject mole;
 
 
     private int lastDisplayedSecond = -1;
@@ -115,8 +113,10 @@ public class GameManager : MonoBehaviour
     public GameObject extraUpgradeSlot;
     public GameObject unlockPanel;
     [HideInInspector] public AnimalData foxThiefStolenStats;
+    private RandomEventManager randomEventManager;
     private void Start()
     {
+        randomEventManager = GameController.randomEventManager;
         pauseMenu = GameController.pauseMenu;
         saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
@@ -194,11 +194,6 @@ public class GameManager : MonoBehaviour
         if (isTesting)
         {
             roundDuration = 3;
-        }
-
-        if (boonManager.ContainsBoon("WhackAMole"))
-        {
-            Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
         }
         pointsThisRound = 0;
         saveManager.SaveGameData();
@@ -427,6 +422,7 @@ public class GameManager : MonoBehaviour
         }
 
         pauseMenu.canOpenClose = false;
+        randomEventManager.TryRandomEvent();
         schemeManager.SetRandomScheme();
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
@@ -674,22 +670,9 @@ public class GameManager : MonoBehaviour
     private void UnlockHarvestLevel(int level)
     {
         Debug.Log("Unlocking harvest level " + level);
-        GameObject newPanel = Instantiate(unlockPanel,GameObject.Find("UI").transform);
+        GameObject newPanel = Instantiate(unlockPanel, GameObject.Find("UI").transform);
         newPanel.GetComponent<UnlockPanel>().SetupHarvestLevelUnlock(level);
         newPanel.GetComponent<UnlockPanel>().Open();
     }
 
-    void SpawnMole()
-    {
-        Bounds bounds = moleBounds.bounds;
-        Vector2 pos = new Vector2(
-            Random.Range(bounds.min.x, bounds.max.x),
-            Random.Range(bounds.min.y, bounds.max.y));
-        Instantiate(mole, pos, Quaternion.identity);
-        if (!roundCompleted && roundDuration>0)
-        {
-            Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
-        }
-    }
-    
 }

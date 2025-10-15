@@ -13046,6 +13046,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &511870740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511870741}
+  - component: {fileID: 511870742}
+  m_Layer: 0
+  m_Name: RandomEventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &511870741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511870740}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1405798328}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511870742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511870740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbb09ddd1797c14bb29666bdbb0ab2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moleBounds: {fileID: 275072178}
+  mole: {fileID: 5465896840286953389, guid: 4ef3aa53ebbac2347bbcda39deabf051, type: 3}
 --- !u!1 &512336460
 GameObject:
   m_ObjectHideFlags: 0
@@ -26421,8 +26467,6 @@ MonoBehaviour:
   barnCameraTarget: {fileID: 1466223220}
   barnAnimator: {fileID: 1436592585}
   animalShopItem: {fileID: 175759936}
-  moleBounds: {fileID: 275072178}
-  mole: {fileID: 5465896840286953389, guid: 4ef3aa53ebbac2347bbcda39deabf051, type: 3}
   timerNormalColor: {r: 0.75294125, g: 0.7960785, b: 0.86274517, a: 1}
   timerWarningColor: {r: 1, g: 0, b: 0, a: 1}
   shopButtonBlocker: {fileID: 1168497080}
@@ -26566,6 +26610,7 @@ MonoBehaviour:
   localFarmerSelectManager: {fileID: 0}
   localBoonManager: {fileID: 811504389}
   localWishlistPanel: {fileID: 356016160}
+  localRandomEventManager: {fileID: 511870742}
 --- !u!4 &1239491768
 Transform:
   m_ObjectHideFlags: 0
@@ -26860,7 +26905,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: af8b54b87f9741f49a2702425de55b22, type: 2}
     - {fileID: 11400000, guid: 9f910c08119327242801306e022185da, type: 2}
     - {fileID: 11400000, guid: 9f5b82029efe3354793401bf368cc720, type: 2}
-    - {fileID: 11400000, guid: 7d38ecdb74fcb3c4d85a74afd082df2d, type: 2}
     - {fileID: 11400000, guid: cb6a725067bfad845845e278f5c32709, type: 2}
     - {fileID: 11400000, guid: 25142f93c67025845bc02817db7621eb, type: 2}
     - {fileID: 11400000, guid: 5a8bd03e47c2386439a6ae9294208258, type: 2}
@@ -27551,6 +27595,7 @@ Transform:
   - {fileID: 2082549784}
   - {fileID: 811504388}
   - {fileID: 360264598}
+  - {fileID: 511870741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1436592584
@@ -42722,7 +42767,7 @@ PrefabInstance:
       objectReference: {fileID: 1220268107}
     - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
       propertyPath: boonDatas.Array.size
-      value: 67
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
       propertyPath: animalDatas.Array.size
@@ -42767,7 +42812,7 @@ PrefabInstance:
     - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
       propertyPath: 'boonDatas.Array.data[65]'
       value: 
-      objectReference: {fileID: 11400000, guid: 7d38ecdb74fcb3c4d85a74afd082df2d, type: 2}
+      objectReference: {fileID: 11400000, guid: cb6a725067bfad845845e278f5c32709, type: 2}
     - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
       propertyPath: 'boonDatas.Array.data[66]'
       value: 
