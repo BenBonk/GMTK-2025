@@ -4,6 +4,7 @@ using Random = UnityEngine.Random;
 
 public class RandomEventManager : MonoBehaviour
 {
+    public GameObject mole;
     public BoxCollider2D moleBounds;
     public GameObject[] butterflies;
     private GameManager gameManager;
@@ -54,7 +55,7 @@ public class RandomEventManager : MonoBehaviour
         float bottomBuffer = 0.25f;
         
         // Get vertical bounds of the camera in world space
-        float z = Mathf.Abs(Camera.main.transform.position.z - animal.transform.position.z);
+        float z = Mathf.Abs(Camera.main.transform.position.z - mole.transform.position.z);
         Vector3 screenBottom = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, z));
         Vector3 screenTop = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 1f, z));
 
