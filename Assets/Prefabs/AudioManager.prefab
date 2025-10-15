@@ -95,7 +95,7 @@ MonoBehaviour:
     volume: 1
   - name: ui_hover
     clip: {fileID: 8300000, guid: 6c84e94d08fcf68498f98c777c3ac367, type: 3}
-    volume: 0.2
+    volume: 0.25
   - name: ui_click
     clip: {fileID: 8300000, guid: 2e88061b4c3ec71408c0d4bcee4acdd0, type: 3}
     volume: 0.55

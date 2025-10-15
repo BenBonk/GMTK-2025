@@ -7,11 +7,11 @@ using Random = UnityEngine.Random;
 
 public class SynergyShopItem : ShopItem
 {
-    private Boon chosenBoon;
+    [HideInInspector] public Boon chosenBoon;
     public SynergySlots synergySlots;
     public TMP_Text desc2;
-    private Animal chosenToSteal;
-    private int chosenToStealIndex;
+    [HideInInspector] public Animal chosenToSteal;
+    [HideInInspector] public int chosenToStealIndex;
     private Image bgSR;
     private Image popupBg;
     public Sprite[] boonBgs;
@@ -71,25 +71,26 @@ public class SynergyShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
-            GameController.player.playerCurrency -= price;
-            shopManager.UpdateCashText();
-            canPurchase = false;
-            FBPP.SetInt(chosenBoon.name, FBPP.GetInt(chosenBoon.name)+1);
-            FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased")+1);
-            upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
-            Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
-            
-            if (chosenBoon.name=="Thief")
-            {
-                GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
-                FBPP.SetInt("chosenToStealIndex", chosenToStealIndex);
-            }
-            if (chosenBoon.name=="FreshStock" || chosenBoon.name == "Freeroll")
-            {
-               GameController.rerollManager.Reset();
-            }
+
             if (GameController.player.boonsInDeck.Count<GameController.gameManager.maxSynergies)
             {
+                GameController.player.playerCurrency -= price;
+                shopManager.UpdateCashText();
+                canPurchase = false;
+                FBPP.SetInt(chosenBoon.name, FBPP.GetInt(chosenBoon.name) + 1);
+                FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased") + 1);
+                upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
+                Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
+
+                if (chosenBoon.name == "Thief")
+                {
+                    GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
+                    FBPP.SetInt("chosenToStealIndex", chosenToStealIndex);
+                }
+                if (chosenBoon.name == "FreshStock" || chosenBoon.name == "Freeroll")
+                {
+                    GameController.rerollManager.Reset();
+                }
                 GameController.player.AddBoonToDeck(chosenBoon);
                 shopManager.UpdateSynergies(shopManager.synergyCards);
             }
@@ -101,7 +102,11 @@ public class SynergyShopItem : ShopItem
                 shopManager.darkCover.DOFade(.75f, 0.5f);
                 shopManager.instructionsText.DOFade(1, 0.5f);
                 shopManager.cantPurchaseItem = true;
-                shopManager.overridingBoon = chosenBoon;
+                shopManager.overridingBoonItem = this;
+                shopManager.cancelOverride.enabled = true;
+                shopManager.cancelOverride.DOFade(1, 0.5f);
+                GameController.rerollManager.transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
+                shopManager.leaveShopButton.transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
                 synergySlots.canOverrideBoon = true;
             }
 
