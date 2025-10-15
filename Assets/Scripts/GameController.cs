@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     [SerializeField] CaptureManager localCaptureManager;
     [SerializeField] AnimalLevelManager localAnimalLevelManager;
     [SerializeField] PredatorSelect localPredatorSelect;
+    [SerializeField] ChallengeRewardSelect localChallengeRewardSelect;
     [SerializeField] DescriptionManager localDescriptionManager;
     [SerializeField] LocalizationManager localLocalizationManager;
     [SerializeField] TMP_FontAsset localDefaultFont;
@@ -116,5 +117,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localRandomEventManager; }
         set { instance.localRandomEventManager = value; }
+    }
+    public static ChallengeRewardSelect challengeRewardSelect
+    {
+        get { return instance.localChallengeRewardSelect; }
+        set { instance.localChallengeRewardSelect = value; }
     }
 }

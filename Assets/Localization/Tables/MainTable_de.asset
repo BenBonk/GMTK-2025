@@ -248,8 +248,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
-      Wolf
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Hund und ein Wolf
     m_Metadata:
       m_Items: []
   - m_Id: 55
@@ -778,7 +777,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607682
     m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -1207,6 +1206,35 @@ MonoBehaviour:
   - m_Id: 20226222205657088
     m_Localized: "-10 Sekunden pro Runde, +0,33x Cash-Multiplikator f\xFCr jedes
       erfolgreiche Lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007566807040
+    m_Localized: "W\xE4hlen Sie eine Herausforderungsbelohnung!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276032
+    m_Localized: Spawnrate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276033
+    m_Localized: "Erh\xF6hen Sie die Anzahl der Tiere, die w\xE4hrend einer Runde
+      erscheinen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276034
+    m_Localized: Boon Slot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276035
+    m_Localized: "Du kannst 1 zus\xE4tzlichen Segen halten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276036
+    m_Localized: Deckentfernung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276037
+    m_Localized: Entferne 2 Tiere von deinem Tierdeck
     m_Metadata:
       m_Items: []
   references:

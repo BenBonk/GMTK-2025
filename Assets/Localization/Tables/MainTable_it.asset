@@ -801,8 +801,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: I cani scacciano i predatori. I cani valgono +5,0x denaro quando
-      vengono catturati da un predatore.
+    m_Localized: I cani scacciano i predatori. I cani valgono +5x denaro se catturati
+      con un predatore.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -828,7 +828,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
+    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -931,7 +931,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +2 contanti per animale catturato
+    m_Localized: +2 contanti per animale preso al lazo
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -1155,7 +1155,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Colpisci la talpa
+    m_Localized: Colpisci una talpa
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
@@ -1196,6 +1196,34 @@ MonoBehaviour:
   - m_Id: 20226222205657088
     m_Localized: -10 secondi per round, +0,33x moltiplicatore di denaro per ogni
       lazo riuscito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007566807040
+    m_Localized: Seleziona una ricompensa per la sfida!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276032
+    m_Localized: Tasso di generazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276033
+    m_Localized: "Aumenta la quantit\xE0 di animali che appaiono durante un round"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276034
+    m_Localized: Slot Boon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276035
+    m_Localized: Puoi tenere 1 beneficio aggiuntivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276036
+    m_Localized: Rimozione del ponte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276037
+    m_Localized: Rimuovi 2 animali dal tuo mazzo animali
     m_Metadata:
       m_Items: []
   references:

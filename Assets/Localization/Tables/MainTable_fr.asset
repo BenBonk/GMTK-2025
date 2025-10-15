@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+Esp\xE8ces\_: {0}"
+    m_Localized: "+ Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -1204,6 +1204,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20226222205657088
     m_Localized: "-10 secondes par tour, +0,33x cash mult pour chaque lasso r\xE9ussi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007566807040
+    m_Localized: "S\xE9lectionnez une r\xE9compense de d\xE9fi\_!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276032
+    m_Localized: Taux d'apparition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276033
+    m_Localized: Augmenter le nombre d'animaux qui apparaissent au cours d'un tour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276034
+    m_Localized: Emplacement Boon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276035
+    m_Localized: "Vous pouvez d\xE9tenir 1 avantage suppl\xE9mentaire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276036
+    m_Localized: Retrait du pont
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276037
+    m_Localized: Retirez 2 animaux de votre deck d'animaux
     m_Metadata:
       m_Items: []
   references:

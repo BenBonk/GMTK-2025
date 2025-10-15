@@ -1063,7 +1063,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
-    m_Localized: "Selecione uma ben\xE7\xE3o para substituir"
+    m_Localized: "Selecione um benef\xEDcio para substituir"
     m_Metadata:
       m_Items: []
   - m_Id: 18706117449703424
@@ -1197,6 +1197,34 @@ MonoBehaviour:
   - m_Id: 20226222205657088
     m_Localized: "-10 segundos por rodada, +0,33x multiplicador de dinheiro para
       cada la\xE7o bem-sucedido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007566807040
+    m_Localized: Selecione uma recompensa de desafio!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276032
+    m_Localized: Taxa de Spawn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276033
+    m_Localized: Aumentar a quantidade de animais que aparecem durante uma rodada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276034
+    m_Localized: Slot de Boon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276035
+    m_Localized: "Voc\xEA pode ter 1 benef\xEDcio adicional"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276036
+    m_Localized: "Remo\xE7\xE3o de deck"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276037
+    m_Localized: Remova 2 animais do seu baralho de animais
     m_Metadata:
       m_Items: []
   references:

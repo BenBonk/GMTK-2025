@@ -80,12 +80,12 @@ public class CaptureManager : MonoBehaviour
                     continue;
                 }
                 var neededCounts = GetNameCounts(boon.animalsNeeded);
-                Debug.Log($"Checking boon {boon.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
+                //Debug.Log($"Checking boon {boon.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
 
                 if (!boon.isExactMatch)
                 {
                     bool subset = IsSubset(neededCounts, capturedCounts);
-                    Debug.Log($"Non-exact match check for {boon.name}: Result = {subset}");
+                    //Debug.Log($"Non-exact match check for {boon.name}: Result = {subset}");
                     if (subset) ActivateBoon(boon);
                 }
 

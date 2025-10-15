@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public int maxSynergies;
     [HideInInspector] public float elapsedTime;
     public int predatorRoundFrequency;
+    public int challengeRoundFrequency;
 
     public GameObject wordPrefab; // Assign in inspector
     public GameObject endRoundPrefab;
@@ -373,6 +374,10 @@ public class GameManager : MonoBehaviour
         {
             GameController.predatorSelect.StartCoroutine("Intro");
         }
+        /*else if (roundNumber % challengeRoundFrequency == 0)
+        {
+            GameController.challengeRewardSelect.StartCoroutine("Intro");
+        }*/
         else
         {
             pauseMenu.canOpenClose = false;
