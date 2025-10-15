@@ -30,13 +30,15 @@ public class Animal : MonoBehaviour
     public float MinimumSpacing => minimumSpacing;
     private float repelForce = 4; 
     public virtual bool IsRepelImmune => false;
+    public virtual bool CanBeLassoed => true;
+    protected virtual bool ShouldClampY => attractTarget == null;
 
     // run animation parameters
     private float tiltAngle = 0f;
     public float tiltFrequency = 3f; // how fast the tilt cycles 
     public float maxTiltAmplitude = 20f; // degrees at full speed
 
-    private float tiltProgress = 0f;
+    protected float tiltProgress = 0f;
     private Vector3 previousPosition;
     public float actualSpeed { get; private set; } // total movement speed
     public bool legendary;
@@ -101,7 +103,10 @@ public class Animal : MonoBehaviour
 
         nextPos += externalOffset;
 
-        nextPos.y = ClampY(nextPos.y);
+        if (ShouldClampY)
+        {
+            nextPos.y = ClampY(nextPos.y);
+        }
 
         transform.position = nextPos;
         externalOffset = Vector3.zero;
@@ -285,6 +290,7 @@ public class Animal : MonoBehaviour
 
     protected bool overriddenByAttraction = false;
     protected Animal attractTarget = null;
+    public Animal AttractTarget => attractTarget;
     [SerializeField] protected bool leftIsPositiveScaleX = true;
 
     public float attractBrakeRadius = 2.0f;  // start slowing down inside this radius

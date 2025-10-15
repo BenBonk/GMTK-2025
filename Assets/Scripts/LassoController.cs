@@ -645,7 +645,8 @@ public class LassoController : MonoBehaviour
 
         foreach (var animal in animals)
         {
-            // Use collider center if present; fall back to transform.position
+            if (!animal.CanBeLassoed) continue;
+
             var col = animal.GetComponent<Collider2D>();
             Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)animal.transform.position;
 

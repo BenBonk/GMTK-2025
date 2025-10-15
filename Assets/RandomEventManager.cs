@@ -6,17 +6,18 @@ public class RandomEventManager : MonoBehaviour
 {
     public GameObject mole;
     public BoxCollider2D moleBounds;
-    public GameObject[] butterflies;
+    public GameObject butterfly;
     private GameManager gameManager;
     private int lastEvent = 67;
     private void Start()
     {
         gameManager = GameController.gameManager;
+        //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
     }
 
     public void TryRandomEvent()
     {
-        if (Random.Range(0,99999) > 0) //0,5
+        if (Random.Range(0,1) > 0) //0,5
         {
             return;
         }
@@ -67,10 +68,10 @@ public class RandomEventManager : MonoBehaviour
 
         //  Set spawn position at the right edge
         float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x;
-        Instantiate(butterflies[Random.Range(0, butterflies.Length)], new Vector3(rightEdgeX, randomY,0), Quaternion.identity);
+        Instantiate(butterfly, new Vector3(rightEdgeX, randomY,0), Quaternion.identity);
         if (!gameManager.roundCompleted && gameManager.roundDuration>0)
         {
-            Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
+            Invoke("SpawnButterfly", Random.Range(3.0f, 7.0f));   
         }
     }
 }
