@@ -168,6 +168,9 @@ MonoBehaviour:
   - name: farmer_1
     clip: {fileID: 8300000, guid: ced80bb3821749a4b8ef32d21601eb33, type: 3}
     volume: 1.5
+  - name: challenge_win
+    clip: {fileID: 8300000, guid: 868f52432e729c24fba9122b8abd0d1d, type: 3}
+    volume: 0.8
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}

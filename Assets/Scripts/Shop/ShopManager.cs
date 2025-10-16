@@ -255,7 +255,7 @@ public class ShopManager : MonoBehaviour
             string desc = descriptionManager.GetAnimalDescription(reference);
             
             GameObject card = Instantiate(deckCardPrefab, deckParentt);
-            card.GetComponent<DeckCard>().Initialize("x" + count, desc, reference.deckIcon);
+            card.GetComponent<DeckCard>().Initialize("x" + count, desc, reference);
         }
     }
 

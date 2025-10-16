@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     private BoonManager boonManager;
     private LocalizationManager localization;
     public AnimalShopItem animalShopItem;
-
+    public AnimalSpawner spawner;
 
     private int lastDisplayedSecond = -1;
     [SerializeField] private Color timerNormalColor = Color.white;
@@ -204,6 +204,7 @@ public class GameManager : MonoBehaviour
         roundInProgress = true;
         roundCompleted = false;
         barnAnimator.Play("Closed", 0, 0.1f);
+        spawner.spawnRate = FBPP.GetFloat("spawnRate", 1f);
         StartCoroutine(ShowReadySetLassoSequence());
         if (roundNumber > FBPP.GetInt("highestRound"))
         {
@@ -374,10 +375,10 @@ public class GameManager : MonoBehaviour
         {
             GameController.predatorSelect.StartCoroutine("Intro");
         }
-        /*else if (roundNumber % challengeRoundFrequency == 0)
+        else if (roundNumber % challengeRoundFrequency == 0)
         {
             GameController.challengeRewardSelect.StartCoroutine("Intro");
-        }*/
+        }
         else
         {
             pauseMenu.canOpenClose = false;
@@ -678,6 +679,23 @@ public class GameManager : MonoBehaviour
         GameObject newPanel = Instantiate(unlockPanel, GameObject.Find("UI").transform);
         newPanel.GetComponent<UnlockPanel>().SetupHarvestLevelUnlock(level);
         newPanel.GetComponent<UnlockPanel>().Open();
+    }
+
+    public void HideRoundUI()
+    {
+        scoreDisplay.DOFade(0f, 0.5f).OnComplete(() => scoreDisplay.gameObject.SetActive(false));
+        timerDisplay.DOFade(0f, 0.5f).OnComplete(() => timerDisplay.gameObject.SetActive(false));
+        currencyDisplay.DOFade(0f, 0.5f).OnComplete(() => currencyDisplay.gameObject.SetActive(false));
+    }
+
+    public void ShowRoundUI()
+    {
+        scoreDisplay.gameObject.SetActive(true);
+        scoreDisplay.DOFade(1f, 0.5f);
+        timerDisplay.gameObject.SetActive(true);
+        timerDisplay.DOFade(1f, 0.5f);
+        currencyDisplay.gameObject.SetActive(true);
+        currencyDisplay.DOFade(1f, 0.5f);
     }
 
 }

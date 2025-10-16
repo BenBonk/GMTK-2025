@@ -842,7 +842,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Les cochons peuvent appara\xEEtre al\xE9atoirement avec un chapeau
-      haut de forme, si c'est le cas, ils valent +50 esp\xE8ces et +25 points"
+      haut de forme, si c'est le cas, ils valent +50 en esp\xE8ces et +25 points"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -1194,8 +1194,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313603
-    m_Localized: "+25 esp\xE8ces si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin
-      de chaque tour"
+    m_Localized: "+25 cash si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin de chaque
+      tour"
     m_Metadata:
       m_Items: []
   - m_Id: 20226222100799488
@@ -1232,6 +1232,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21217007663276037
     m_Localized: Retirez 2 animaux de votre deck d'animaux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: Choisir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: "animaux \xE0 enlever"
     m_Metadata:
       m_Items: []
   references:

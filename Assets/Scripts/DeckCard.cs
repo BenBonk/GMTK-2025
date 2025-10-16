@@ -11,6 +11,7 @@ public class DeckCard : MonoBehaviour
     public Image icon;
     public RectTransform hoverPopup;
     public GameObject subPopup;
+    public AnimalData animalData;
     private bool isPopup;
     private Tween a;
     private Tween b;
@@ -26,6 +27,23 @@ public class DeckCard : MonoBehaviour
             hoverPopup.DOLocalMoveY(hoverPopup.position.y - 100,0);
         }
         if (descStr2!="")
+        {
+            desc2.text = descStr2;
+        }
+    }
+
+    public void Initialize(string titleStr, string descStr, AnimalData animal, string descStr2 = "")
+    {
+        title.text = titleStr;
+        desc.text = descStr;
+        animalData = animal;
+        icon.sprite = animal.deckIcon;
+        if (descStr2 == "hidepopup")
+        {
+            subPopup.SetActive(false);
+            hoverPopup.DOLocalMoveY(hoverPopup.position.y - 100, 0);
+        }
+        if (descStr2 != "")
         {
             desc2.text = descStr2;
         }

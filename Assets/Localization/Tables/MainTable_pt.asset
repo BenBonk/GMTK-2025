@@ -1227,6 +1227,14 @@ MonoBehaviour:
     m_Localized: Remova 2 animais do seu baralho de animais
     m_Metadata:
       m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: Escolher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: animais para remover
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

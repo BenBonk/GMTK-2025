@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Goldesel
+    m_Localized: Cash Cow
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein
+      mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Bauerndilemma
+    m_Localized: Das Dilemma der Bauern
     m_Metadata:
       m_Items: []
   - m_Id: 56
@@ -322,8 +322,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
-      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, darunter ein Huhn, eine Kuh,
+      ein Pferd, ein Schaf und ein Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -992,8 +992,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
-      Lasso, statt 10 %"
+    m_Localized: "Erhalten Sie f\xFCr jeden Nicht-Raubtier im Lasso einen Punktebonus
+      von +20 % statt 10 %"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1174,7 +1174,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
-    m_Localized: "Gib mir f\xFCnf"
+    m_Localized: "Gib f\xFCnf"
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
@@ -1235,6 +1235,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21217007663276037
     m_Localized: Entferne 2 Tiere von deinem Tierdeck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: "W\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: Tiere zu entfernen
     m_Metadata:
       m_Items: []
   references:

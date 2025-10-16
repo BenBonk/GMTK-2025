@@ -78,11 +78,13 @@ public class SaveManager : MonoBehaviour
         FBPP.SetString("boonsInDeck", "");
         FBPP.DeleteInt("rerollPrice");
         FBPP.SetInt("rerollsThisGame", 0);
+        FBPP.SetFloat("spawnRate", 1f);
         GameController.animalLevelManager.ResetLevels();
     }
 
     public void InitializeSaveData(int harvestLevel, int farmerIndex)
     {
+        ResetVars();
         bool extraPredators = false;
         List<AnimalData> startingAnimals = new List<AnimalData>();
         foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].farmerData.startingDeck)
@@ -97,11 +99,7 @@ public class SaveManager : MonoBehaviour
             }
             startingAnimals.Add(animalData);
         }
-        FBPP.SetString("cash", "0");
-        FBPP.SetInt("round", 0);
         FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
-        FBPP.SetString("boonsInDeck", "");
-        FBPP.DeleteInt("rerollPrice");
         FBPP.SetInt("harvestLevel", harvestLevel);
         FBPP.SetInt("farmerID", farmerIndex);
         GameController.animalLevelManager.ResetLevels();

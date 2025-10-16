@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     {
         animalsInDeck.Add(animal);
     }
+    public void RemoveAnimalFromDeck(AnimalData animal)
+    {
+        animalsInDeck.Remove(animal);
+    }
     public void AddBoonToDeck(Boon boon)
     {
         GameController.boonManager.AddBoon(boon);

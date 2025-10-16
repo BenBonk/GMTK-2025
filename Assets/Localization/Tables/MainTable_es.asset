@@ -499,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
+    m_Localized: "\xA1Bienvenido al Libro de Registro!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -901,7 +901,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: Los precios de los animales ahora son aleatorios en la tienda.
+    m_Localized: "Los precios de los animales ahora est\xE1n aleatorios en la tienda."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376261
-    m_Localized: "El animal m\xE1s com\xFAn de tu mazo aparecer\xE1 en todas las
+    m_Localized: "El animal m\xE1s com\xFAn en tu mazo aparecer\xE1 en todas las
       tiendas para su compra."
     m_Metadata:
       m_Items: []
@@ -1227,6 +1227,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21217007663276037
     m_Localized: Elimina 2 animales de tu mazo de animales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: Elegir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: animales para eliminar
     m_Metadata:
       m_Items: []
   references:

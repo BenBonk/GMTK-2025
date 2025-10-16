@@ -14,7 +14,7 @@ public class ChallengeReward : MonoBehaviour
     }
     public ChallengeRewardType rewardType;
     [HideInInspector] public bool cantSelect;
-    public void SelectPredator()
+    public void SelectReward()
     {
         if (cantSelect)
         {
@@ -22,19 +22,22 @@ public class ChallengeReward : MonoBehaviour
         }
 
         cantSelect = true;
-        GameController.challengeRewardSelect.StartCoroutine("Exit");
 
         if (rewardType == ChallengeRewardType.BoonSlot)
         {
             //add boon slot
+            GameController.challengeRewardSelect.StartCoroutine("Exit");
         }
         else if (rewardType == ChallengeRewardType.SpawnRate)
         {
             //change spawn rate
+            FBPP.SetFloat("spawnRate", FBPP.GetFloat("spawnRate",1f) *0.75f);
+            GameController.challengeRewardSelect.StartCoroutine("Exit");
         }
         else if (rewardType == ChallengeRewardType.DeckRemoval)
         {
             //open deck removal UI
+            GameController.challengeRewardSelect.StartCoroutine("OpenDeckRemoval");
         }
     }
 }

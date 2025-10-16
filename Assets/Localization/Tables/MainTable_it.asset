@@ -539,7 +539,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -789,7 +789,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Sempre pi\xF9 veloce"
+    m_Localized: "Per sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -877,7 +877,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Branco di lupi
+    m_Localized: branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1155,7 +1155,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Colpisci una talpa
+    m_Localized: Colpisci la talpa
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
@@ -1224,6 +1224,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21217007663276037
     m_Localized: Rimuovi 2 animali dal tuo mazzo animali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: Scegliere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: animali da rimuovere
     m_Metadata:
       m_Items: []
   references:
