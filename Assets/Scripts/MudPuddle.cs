@@ -8,6 +8,11 @@ public class MudPuddle : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (!other.GetComponent<Animal>())
+        {
+            return;
+        }
+
         Animal animal = other.GetComponent<Animal>();
         if (animal != null && !animal.isLassoed)
         {
@@ -21,7 +26,10 @@ public class MudPuddle : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Animal animal = other.GetComponent<Animal>();
-        animal.currentSpeed = animal.speed;
+        if (other.GetComponent<Animal>())
+        {
+            Animal animal = other.GetComponent<Animal>();
+            animal.currentSpeed = animal.speed;   
+        }
     }
 }
