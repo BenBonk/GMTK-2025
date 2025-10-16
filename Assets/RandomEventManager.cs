@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,10 +10,17 @@ public class RandomEventManager : MonoBehaviour
     public GameObject butterfly;
     private GameManager gameManager;
     private int lastEvent = 67;
+    public GameObject[] mudPuddles;
+    public int numberOfMudPuddles = 100;
+    public RectTransform spawnAreaRectTransform;
+
+    private Vector2 spawnAreaMin;
+    private Vector2 spawnAreaMax;
+    private List<Vector2> placedPositions = new List<Vector2>();
     private void Start()
     {
         gameManager = GameController.gameManager;
-        //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
+        TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
     }
 
     public void TryRandomEvent()
@@ -22,7 +30,7 @@ public class RandomEventManager : MonoBehaviour
             return;
         }
 
-        int chosenEvent = Random.Range(1,2);
+        int chosenEvent = Random.Range(2,3);
         if (chosenEvent == lastEvent)
         {
             chosenEvent = Random.Range(0,999999);
@@ -35,6 +43,11 @@ public class RandomEventManager : MonoBehaviour
         else if (chosenEvent == 1)
         {
             Invoke("SpawnButterfly", 7);
+        }
+        else if (chosenEvent == 2)
+        {
+            CalculateSpawnAreaFromRectTransform();
+            //SpawnMud();
         }
         
     }
@@ -50,28 +63,54 @@ public class RandomEventManager : MonoBehaviour
             Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
         }
     }
-    void SpawnButterfly()
+    public void SpawnMud()
     {
-        float topBuffer = 0.25f;
-        float bottomBuffer = 0.25f;
-        
-        // Get vertical bounds of the camera in world space
-        float z = Mathf.Abs(Camera.main.transform.position.z - mole.transform.position.z);
-        Vector3 screenBottom = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, z));
-        Vector3 screenTop = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 1f, z));
-
-        float minY = screenBottom.y + bottomBuffer;
-        float maxY = screenTop.y - topBuffer;
-
-        //  Choose a random Y position safely within bounds
-        float randomY = Random.Range(minY, maxY);
-
-        //  Set spawn position at the right edge
-        float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x;
-        Instantiate(butterfly, new Vector3(rightEdgeX, randomY,0), Quaternion.identity);
-        if (!gameManager.roundCompleted && gameManager.roundDuration>0)
+        if (spawnAreaRectTransform == null)
         {
-            Invoke("SpawnButterfly", Random.Range(3.0f, 7.0f));   
+            return;
+        }
+
+        int attempts = 0;
+        int placed = 0;
+        int maxAttempts = numberOfMudPuddles * 10;
+        placedPositions.Clear();
+
+        while (placed < numberOfMudPuddles && attempts < maxAttempts)
+        {
+            if (TrySpawnGrass())
+                placed++;
+
+            attempts++;
         }
     }
+
+    void CalculateSpawnAreaFromRectTransform()
+    {
+        Vector3[] worldCorners = new Vector3[4];
+        spawnAreaRectTransform.GetWorldCorners(worldCorners);
+        
+        Vector3 bottomLeft = worldCorners[0];
+        Vector3 topRight = worldCorners[2];
+        
+        spawnAreaMin = new Vector2(bottomLeft.x, bottomLeft.y);
+        spawnAreaMax = new Vector2(topRight.x, topRight.y);
+    }
+
+    bool TrySpawnGrass()
+    {
+        Vector2 tryPosition = new Vector2(
+            Random.Range(spawnAreaMin.x, spawnAreaMax.x),
+            Random.Range(spawnAreaMin.y, spawnAreaMax.y)
+        );
+        foreach (var pos in placedPositions)
+        {
+            if (Vector2.Distance(pos, tryPosition) < 3)
+                return false;
+        }
+        Instantiate(mudPuddles[Random.Range(0, mudPuddles.Length)], tryPosition, Quaternion.identity);
+
+        placedPositions.Add(tryPosition);
+        return true;
+    }
+    
 }

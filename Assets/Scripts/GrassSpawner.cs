@@ -48,7 +48,6 @@ public class GrassSpawner : MonoBehaviour
 
             attempts++;
         }
-        Debug.Log(placed);
     }
 
     void CalculateSpawnAreaFromRectTransform()

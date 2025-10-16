@@ -114,8 +114,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 18
+        width: 46
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Mud_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 46
         y: 0
-        width: 32
-        height: 18
+        width: 46
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: Mud_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 92
         y: 0
-        width: 32
-        height: 18
+        width: 46
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,50 +170,6 @@ TextureImporter:
       bones: []
       spriteID: 1c118d5774aa4aeb0800000000000000
       internalID: -4709452086426201663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mud_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6ded7d29e22727840800000000000000
-      internalID: 5220360462433509078
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mud_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2aabc64270ad1c541965a35a818486f7
-      internalID: 1785116528
       vertices: []
       indices: 
       edges: []
@@ -235,8 +191,6 @@ TextureImporter:
       Mud_0: -5971745814065712087
       Mud_1: 1244438141495904938
       Mud_2: -4709452086426201663
-      Mud_3: 5220360462433509078
-      Mud_4: 1785116528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
