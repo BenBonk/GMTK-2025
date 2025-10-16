@@ -10,9 +10,10 @@ public class RandomEventManager : MonoBehaviour
     public GameObject butterfly;
     private GameManager gameManager;
     private int lastEvent = 67;
+    public GameObject rainEffect;
     public GameObject[] mudPuddles;
     public int numberOfMudPuddles = 100;
-    
+
     private List<Vector2> placedPositions = new List<Vector2>();
     private void Start()
     {
@@ -27,7 +28,7 @@ public class RandomEventManager : MonoBehaviour
             return;
         }
 
-        int chosenEvent = Random.Range(2,3);
+        int chosenEvent = Random.Range(3,4);
         if (chosenEvent == lastEvent)
         {
             chosenEvent = Random.Range(0,999999);
@@ -100,7 +101,7 @@ public class RandomEventManager : MonoBehaviour
 
     void Rain()
     {
-        
+        rainEffect.SetActive(true);
     }
     void SpawnButterfly()
     {
