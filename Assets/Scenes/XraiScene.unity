@@ -13316,12 +13316,15 @@ MonoBehaviour:
   butterfly: {fileID: 6855987514067192795, guid: 1f0ba33ef0984d5499df6725e5c2d622, type: 3}
   lightning: {fileID: 9090687205140348728, guid: f8a94d7410a610746aa82ba0ae898f71, type: 3}
   rainEffect: {fileID: 1510775470}
+  rainParticles: {fileID: 1665733616}
+  cloudParticles: {fileID: 1130569406}
   mudPuddles:
   - {fileID: 8788629738136626371, guid: a80ee4f0dad311b4189ff03307bf3606, type: 3}
   - {fileID: 8788629738136626371, guid: fd5cece761fce0e41824362daaf27df0, type: 3}
   - {fileID: 8788629738136626371, guid: 54c161802320eb140bf06a50ba5abe80, type: 3}
   - {fileID: 8788629738136626371, guid: f976567ce5db5a44a8a96c8aa86700f7, type: 3}
   numberOfMudPuddles: 4
+  isRaining: 0
 --- !u!1 &512336460
 GameObject:
   m_ObjectHideFlags: 0

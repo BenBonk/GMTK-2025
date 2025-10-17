@@ -13,27 +13,30 @@ public class RandomEventManager : MonoBehaviour
     private GameManager gameManager;
     private int lastEvent = 67;
     public GameObject rainEffect;
+    public ParticleSystem rainParticles;
+    public ParticleSystem cloudParticles;
     public GameObject[] mudPuddles;
     public int numberOfMudPuddles = 100;
+    [HideInInspector] public bool isRaining;
 
     private List<Vector2> placedPositions = new List<Vector2>();
     private void Start()
     {
         gameManager = GameController.gameManager;
-        TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
+        //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
     }
 
     public void TryRandomEvent()
     {
-        if (Random.Range(0,1) > 0) //0,5
+        if (Random.Range(0,5) > 0) //0,5
         {
             return;
         }
 
-        int chosenEvent = Random.Range(3,4);
+        int chosenEvent = Random.Range(0,4);
         if (chosenEvent == lastEvent)
         {
-            chosenEvent = Random.Range(0,999999);
+            chosenEvent = Random.Range(0,4);
         }
         
         if (chosenEvent == 0)
@@ -103,14 +106,17 @@ public class RandomEventManager : MonoBehaviour
 
     void Rain()
     {
+        isRaining = true;
         rainEffect.SetActive(true);
+        rainParticles.Play();
+        cloudParticles.Play();
         StartCoroutine(LightningStrike());
 
     }
 
     IEnumerator LightningStrike()
     {
-        yield return new WaitForSeconds(Random.Range(5.0f,7.0f)); //7,10
+        yield return new WaitForSeconds(Random.Range(4.0f,6.0f)); 
         //Choose random animal
         Animal[] allAnimals = FindObjectsOfType<Animal>();
         if (allAnimals.Length <= 0)
@@ -122,13 +128,22 @@ public class RandomEventManager : MonoBehaviour
         Animal chosenAnimal = allAnimals[Random.Range(0, allAnimals.Length)];
         Instantiate(lightning, new Vector3(chosenAnimal.transform.position.x-2, chosenAnimal.transform.position.y, 0), Quaternion.identity); //Quaternion.Euler(0, 0, Random.Range(-30, 30))
         yield return new WaitForSeconds(.7f);
-        if (chosenAnimal.gameObject!=null)
+        try
         {
             chosenAnimal.StruckByLightning();   
+        }
+        catch (Exception e)
+        {
+           //whomp whomp
         }
         if (!gameManager.roundCompleted && gameManager.roundDuration>0)
         {
             StartCoroutine(LightningStrike());
+        }
+        else
+        {
+            rainParticles.Stop();
+            cloudParticles.Stop();
         }
     }
     
