@@ -101,6 +101,11 @@ public class CaptureManager : MonoBehaviour
             int biodiversityBonus = 0;
             foreach (var animal in animalsCaptured)
             {
+                if (animal.struckByLightning)
+                {
+                    pointMult *= 2;
+                    currencyMult *= 2;
+                }
                 if (!animal.isPredator)
                 {
                     totalNonPredatorCount++;

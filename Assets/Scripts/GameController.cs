@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     [SerializeField] BoonManager localBoonManager;
     [SerializeField] WishlistGamePanel localWishlistPanel;
     [SerializeField] RandomEventManager localRandomEventManager;
+    [SerializeField] Material localLightningMat;
     void Awake()
     {
         instance = this;
@@ -122,5 +123,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localChallengeRewardSelect; }
         set { instance.localChallengeRewardSelect = value; }
+    }
+    public static Material lightningMat
+    {
+        get { return instance.localLightningMat; }
+        set { instance.localLightningMat = value; }
     }
 }

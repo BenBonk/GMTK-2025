@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -8,6 +9,7 @@ public class RandomEventManager : MonoBehaviour
     public GameObject mole;
     public BoxCollider2D moleBounds;
     public GameObject butterfly;
+    public GameObject lightning;
     private GameManager gameManager;
     private int lastEvent = 67;
     public GameObject rainEffect;
@@ -102,7 +104,34 @@ public class RandomEventManager : MonoBehaviour
     void Rain()
     {
         rainEffect.SetActive(true);
+        StartCoroutine(LightningStrike());
+
     }
+
+    IEnumerator LightningStrike()
+    {
+        yield return new WaitForSeconds(Random.Range(5.0f,7.0f)); //7,10
+        //Choose random animal
+        Animal[] allAnimals = FindObjectsOfType<Animal>();
+        if (allAnimals.Length <= 0)
+        {
+            yield return null;
+            yield break;
+        }
+        
+        Animal chosenAnimal = allAnimals[Random.Range(0, allAnimals.Length)];
+        Instantiate(lightning, new Vector3(chosenAnimal.transform.position.x-2, chosenAnimal.transform.position.y, 0), Quaternion.identity); //Quaternion.Euler(0, 0, Random.Range(-30, 30))
+        yield return new WaitForSeconds(.7f);
+        if (chosenAnimal.gameObject!=null)
+        {
+            chosenAnimal.StruckByLightning();   
+        }
+        if (!gameManager.roundCompleted && gameManager.roundDuration>0)
+        {
+            StartCoroutine(LightningStrike());
+        }
+    }
+    
     void SpawnButterfly()
     {
         float topBuffer = 0.25f;
@@ -124,7 +153,7 @@ public class RandomEventManager : MonoBehaviour
         Instantiate(butterfly, new Vector3(rightEdgeX, randomY,0), Quaternion.identity);
         if (!gameManager.roundCompleted && gameManager.roundDuration>0)
         {
-            Invoke("SpawnButterfly", Random.Range(3.0f, 7.0f));   
+            Invoke("SpawnButterfly", Random.Range(3.0f, 7.0f));    
         }
     }
 }

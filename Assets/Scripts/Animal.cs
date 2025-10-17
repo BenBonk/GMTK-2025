@@ -44,6 +44,7 @@ public class Animal : MonoBehaviour
     public bool legendary;
     public bool forceExit = false;
     [HideInInspector] public int bonusPoints;
+    [HideInInspector] public bool struckByLightning;
     protected virtual void Awake()
     {
         SetVerticalLimits(GameController.gameManager.playArea);
@@ -375,6 +376,17 @@ public class Animal : MonoBehaviour
         return true; // attraction owns movement this frame
     }
 
+    public void StruckByLightning()
+    {
+        currentSpeed *= 2;
+        speed *= 2;
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.material = GameController.lightningMat;
+        struckByLightning = true;
+        DOTween.Sequence()
+            .Append(sr.material.DOFloat(0.35f, "_FlashAmount", 0.5f))
+            .Append(sr.material.DOFloat(0, "_FlashAmount", 0.5f)).SetLoops(-1);
+    }
 
 
 
