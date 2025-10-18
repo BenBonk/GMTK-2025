@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //public int timeToSpawnAnimals;
-    
+    public int maxBoons;
     public List<AnimalData> animalsInDeck;
     public List<Boon> boonsInDeck;
 

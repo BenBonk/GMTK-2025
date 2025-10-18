@@ -23,12 +23,12 @@ public class RandomEventManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameController.gameManager;
-        //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
+        TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
     }
 
     public void TryRandomEvent()
     {
-        if (Random.Range(0,5) > 0) //0,5
+        if (Random.Range(0,1) > 0) //0,5
         {
             return;
         }
