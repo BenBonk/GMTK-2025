@@ -12,15 +12,17 @@ public class DeckCard : MonoBehaviour
     public RectTransform hoverPopup;
     public GameObject subPopup;
     public AnimalData animalData;
+    public Boon boonData;
     private bool isPopup;
     private Tween a;
     private Tween b;
     public bool bounch;
-    public void Initialize(string titleStr, string descStr, Sprite iconSprite, string descStr2="")
+    public void Initialize(string titleStr, string descStr, Boon boon, string descStr2="")
     {
         title.text = titleStr;
         desc.text = descStr;
-        icon.sprite = iconSprite;
+        icon.sprite = boon.art;
+        boonData = boon;
         if (descStr2=="hidepopup")
         {
             subPopup.SetActive(false);

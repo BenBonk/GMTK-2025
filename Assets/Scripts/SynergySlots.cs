@@ -1,14 +1,15 @@
 using DG.Tweening;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class SynergySlots : MonoBehaviour
 {
-    public bool canOverrideBoon;
     private ShopManager shopManager;
-    private DeckCard[] deckCards;
+    private List<DeckCard> deckCards = new List<DeckCard>();
     private Player player;
     private DescriptionManager descriptionManager;
     private void Start()
@@ -16,13 +17,13 @@ public class SynergySlots : MonoBehaviour
         descriptionManager = GameController.descriptionManager;
         shopManager = GameController.shopManager;
         player = GameController.player;
-        deckCards = shopManager.synergyCards;
     }
 
-    public void OverrideSynergy(int index)
+    public void OverrideSynergy(DeckCard card)
     {
-        if (canOverrideBoon)
+        if (shopManager.canOverrideBoon)
         {
+            int index = player.boonsInDeck.IndexOf(card.boonData);
             Boon newBoon = shopManager.overridingBoonItem.chosenBoon;
             GameController.player.playerCurrency -= newBoon.price;
             shopManager.UpdateCashText();
@@ -42,19 +43,27 @@ public class SynergySlots : MonoBehaviour
                 GameController.rerollManager.Reset();
             }
 
+            foreach (Transform child in shopManager.boonDeckParent)
+            {
+                deckCards.Add(child.GetComponent<DeckCard>());
+            }
 
-            canOverrideBoon = false;
+
+            shopManager.canOverrideBoon = false;
             string desc = newBoon.desc.GetLocalizedString();
             if (newBoon.name=="Thief")
             {
                 desc = newBoon.desc.GetLocalizedString() + " " + GameController.gameManager.foxThiefStolenStats.animalName.GetLocalizedString() + ".";
             }
-            deckCards[index].Initialize(newBoon.synergyName.GetLocalizedString(), desc, newBoon.art, descriptionManager.GetBoonDescription(newBoon));
-            if (newBoon is BasicBoon && !deckCards[index].subPopup.activeInHierarchy)
+            card.Initialize(newBoon.synergyName.GetLocalizedString(), desc, newBoon, descriptionManager.GetBoonDescription(newBoon));
+            if (newBoon is BasicBoon && !card.subPopup.activeInHierarchy)
             {
-                deckCards[index].subPopup.SetActive(true);   
-                deckCards[index].hoverPopup.DOLocalMoveY(deckCards[index].hoverPopup.position.y + 100,0);
+                card.subPopup.SetActive(true);   
+                card.hoverPopup.DOLocalMoveY(card.hoverPopup.position.y + 100,0);
             }
+            
+            Debug.Log(index);
+            Debug.Log(card.boonData);
             GameController.boonManager.boonDict.Remove(player.boonsInDeck[index].name);
             player.boonsInDeck[index] = newBoon;
             GameController.boonManager.boonDict.Add(newBoon.name, newBoon);
@@ -72,7 +81,7 @@ public class SynergySlots : MonoBehaviour
 
     public void CancelOverride()
     {
-        canOverrideBoon = false;
+        shopManager.canOverrideBoon = false;
         shopManager.overridingBoonItem = null;
         shopManager.cantPurchaseItem = false;
         shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);

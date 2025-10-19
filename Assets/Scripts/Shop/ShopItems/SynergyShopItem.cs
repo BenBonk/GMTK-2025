@@ -92,7 +92,7 @@ public class SynergyShopItem : ShopItem
                     GameController.rerollManager.Reset();
                 }
                 GameController.player.AddBoonToDeck(chosenBoon);
-                shopManager.UpdateSynergies(shopManager.synergyCards);
+                shopManager.UpdateSynergies(shopManager.boonDeckParent);
             }
             else
             {
@@ -107,7 +107,7 @@ public class SynergyShopItem : ShopItem
                 shopManager.cancelOverride.DOFade(1, 0.5f);
                 GameController.rerollManager.transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
                 shopManager.leaveShopButton.transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
-                synergySlots.canOverrideBoon = true;
+                shopManager.canOverrideBoon = true;
             }
 
         }

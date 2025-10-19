@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     private Tween boonDeckTween;
     public RectTransform deckPanel;
     public RectTransform synergiesPanel;
+    public Transform boonDeckParent;
     public GameObject synergiesVisual;
     public RectTransform deckParent;
     public DeckCard[] synergyCards;
@@ -57,7 +58,7 @@ public class PauseMenu : MonoBehaviour
         if (shopManager != null)
         {
             shopManager.UpdateDeck(deckParent);
-            shopManager.UpdateSynergies(synergyCards);
+            shopManager.UpdateSynergies(boonDeckParent);
         }
     }
     public void Close()
