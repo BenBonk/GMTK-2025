@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 7215211842641616410}
   - component: {fileID: 9005141124334946527}
   - component: {fileID: 2564404431513901930}
+  - component: {fileID: 2648694091281255268}
   m_Layer: 5
   m_Name: Icon
   m_TagString: Untagged
@@ -271,6 +272,19 @@ MonoBehaviour:
   highlightSFX: ui_hover
   clickSFX: ui_click
   followClickSFX: 
+--- !u!114 &2648694091281255268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713423627389253805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7a926b7b4d3524d99c3bbb0646ae9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TargetScrollRect: {fileID: 0}
 --- !u!1 &2198630142194439344
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -851,7 +865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12efdb391e9c6974ba7e1d0ce3707d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canOverrideBoon: 0
 --- !u!1 &8074237039003561941
 GameObject:
   m_ObjectHideFlags: 0
