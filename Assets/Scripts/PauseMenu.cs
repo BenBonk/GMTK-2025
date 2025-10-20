@@ -17,7 +17,6 @@ public class PauseMenu : MonoBehaviour
     public Transform boonDeckParent;
     public GameObject synergiesVisual;
     public RectTransform deckParent;
-    public DeckCard[] synergyCards;
     private bool deckOpen;
     private bool synergiesOpen;
     private ShopManager shopManager;

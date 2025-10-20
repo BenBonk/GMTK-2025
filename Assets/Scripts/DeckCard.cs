@@ -26,7 +26,7 @@ public class DeckCard : MonoBehaviour
         if (descStr2=="hidepopup")
         {
             subPopup.SetActive(false);
-            hoverPopup.DOLocalMoveY(hoverPopup.position.y - 100,0);
+            hoverPopup.DOLocalMoveY(hoverPopup.position.y+10,0);
         }
         if (descStr2!="")
         {
@@ -43,7 +43,7 @@ public class DeckCard : MonoBehaviour
         if (descStr2 == "hidepopup")
         {
             subPopup.SetActive(false);
-            hoverPopup.DOLocalMoveY(hoverPopup.position.y - 100, 0);
+            hoverPopup.DOLocalMoveY(hoverPopup.position.y+10, 0);
         }
         if (descStr2 != "")
         {

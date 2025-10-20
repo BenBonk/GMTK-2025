@@ -115,7 +115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7001648, y: 12.024822}
+  m_AnchoredPosition: {x: -1.7001648, y: 20.9}
   m_SizeDelta: {x: 194.95, y: 194.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6054443726018279168
@@ -343,7 +343,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 16
   m_TargetDisplay: 0
 --- !u!1 &2284217046175194587
 GameObject:
@@ -531,7 +531,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.4, y: 0.1}
-  m_SizeDelta: {x: 150, y: 137.5}
+  m_SizeDelta: {x: 150, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4160382046895903312
 CanvasRenderer:
@@ -781,7 +781,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 16
   m_TargetDisplay: 0
 --- !u!1 &7866310356001365729
 GameObject:
@@ -821,8 +821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.414, y: 290.7079}
-  m_SizeDelta: {x: 282.8266, y: 261.2652}
+  m_AnchoredPosition: {x: -28.414, y: 299.8479}
+  m_SizeDelta: {x: 282.8266, y: 236.3894}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3737927582340243160
 CanvasRenderer:

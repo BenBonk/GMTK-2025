@@ -213,7 +213,7 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < player.boonsInDeck.Count; i++)
         {
-            GameObject boonCard = Instantiate(boonDeckCard, Vector3.zero, Quaternion.identity, boonDeckParent);
+            GameObject boonCard = Instantiate(boonDeckCard, Vector3.zero, Quaternion.identity, parent);
             string desc = player.boonsInDeck[i].desc.GetLocalizedString();
             if (player.boonsInDeck[i].name == "Thief")
             {
