@@ -15,7 +15,7 @@ public class RandomEventManager : MonoBehaviour
     public GameObject rainEffect;
     public ParticleSystem rainParticles;
     public ParticleSystem cloudParticles;
-    public GameObject[] mudPuddles;
+    public GameObject mudPuddles;
     public int numberOfMudPuddles = 100;
     [HideInInspector] public bool isRaining;
 
@@ -73,35 +73,7 @@ public class RandomEventManager : MonoBehaviour
     }
     public void SpawnMud()
     {
-        int attempts = 0;
-        int placed = 0;
-        int maxAttempts = numberOfMudPuddles * 10;
-        placedPositions.Clear();
-
-        while (placed < numberOfMudPuddles && attempts < maxAttempts)
-        {
-            if (TrySpawnGrass())
-                placed++;
-
-            attempts++;
-        }
-    }
-
-    bool TrySpawnGrass()
-    {
-        Bounds bounds = moleBounds.bounds;
-        Vector2 candidate = new Vector2(
-            Random.Range(bounds.min.x, bounds.max.x),
-            Random.Range(bounds.min.y, bounds.max.y)
-        );
-        foreach (var pos in placedPositions)
-        {
-            if (Vector2.Distance(pos, candidate) < 4)
-                return false;
-        }
-        Instantiate(mudPuddles[Random.Range(0, mudPuddles.Length)], candidate, Quaternion.identity);
-        placedPositions.Add(candidate);
-        return true;
+        Instantiate(mudPuddles, Vector3.zero + new Vector3(Random.Range(-5.0f,5.0f), Random.Range(-4.5f,4.5f),0), Quaternion.identity);
     }
 
     void Rain()

@@ -1,10 +1,11 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class MudPuddle : MonoBehaviour
 {
     [Range(0f, 1f)]
-    public float slowMultiplier = 0.4f;
+    public float slowMultiplier = 0.5f;
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -29,7 +30,23 @@ public class MudPuddle : MonoBehaviour
         if (other.GetComponent<Animal>())
         {
             Animal animal = other.GetComponent<Animal>();
-            animal.currentSpeed = animal.speed;   
+            if (animal!=null)
+            {
+                StartCoroutine(WaitResume(animal));   
+            }
+        }
+    }
+
+    IEnumerator WaitResume(Animal a)
+    {
+        yield return new WaitForSeconds(.5f);
+        try
+        {
+            a.currentSpeed = a.speed;  
+        }
+        catch (Exception e)
+        {
+            //a
         }
     }
 }
