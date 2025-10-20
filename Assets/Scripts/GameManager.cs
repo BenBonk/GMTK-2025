@@ -671,7 +671,7 @@ public class GameManager : MonoBehaviour
         skipper.useUnscaledTime = false;     
         skipper.holdToSpeedUp = true;
         skipper.holdSpeedMultiplier = 10f;
-        skipper.clickSkipsCurrentStep = true;
+
 
         wordObj.transform.position = GetCenterScreenWorldPosition();
         wordObj.transform.localScale = Vector3.zero;

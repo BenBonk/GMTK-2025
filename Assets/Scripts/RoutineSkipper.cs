@@ -1,50 +1,59 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using DG.Tweening;
 using TMPro;
 
 [DisallowMultipleComponent]
-public class RoutineSkipper : MonoBehaviour, IPointerClickHandler, IPointerDownHandler, IPointerUpHandler
+public class RoutineSkipper : MonoBehaviour
 {
-    [Header("Control")]
-    public bool clickSkipsCurrentStep = true;   // one click = finish the current wait/tween/typewriter
+    [Header("Behavior")]
+    public bool useUnscaledTime = false;
     public bool holdToSpeedUp = true;
     [Min(1f)] public float holdSpeedMultiplier = 8f;
-    public bool useUnscaledTime = false;
 
+    [Header("Inputs")]
+    public bool mouseLeftSkips = true;
+    public bool mouseRightSkips = false;
+    public bool anyKeySkips = false;
+    public KeyCode[] extraSkipKeys = { KeyCode.Space, KeyCode.Return };
+
+    bool skipRequested;
     float speedMult = 1f;
-    bool skipRequested = false;
+    bool listening = true;
 
-    // --- Input hooks ---
-    public void OnPointerClick(PointerEventData eventData)
+    public void SetListening(bool on) { listening = on; }
+    public void RequestSkip() { skipRequested = true; }
+
+    void Update()
     {
-        if (clickSkipsCurrentStep) skipRequested = true;
-    }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if (holdToSpeedUp) speedMult = holdSpeedMultiplier;
-    }
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        if (holdToSpeedUp) speedMult = 1f;
+        if (!listening) return;
+
+        if (mouseLeftSkips && Input.GetMouseButtonDown(0)) skipRequested = true;
+        if (mouseRightSkips && Input.GetMouseButtonDown(1)) skipRequested = true;
+
+        for (int i = 0; i < Input.touchCount; i++)
+            if (Input.GetTouch(i).phase == TouchPhase.Began) { skipRequested = true; break; }
+
+        if (anyKeySkips && Input.anyKeyDown) skipRequested = true;
+        for (int i = 0; i < extraSkipKeys.Length; i++)
+            if (Input.GetKeyDown(extraSkipKeys[i])) { skipRequested = true; break; }
+
+        bool holding = Input.GetMouseButton(0) || Input.touchCount > 0;
+        speedMult = (holdToSpeedUp && holding) ? Mathf.Max(1f, holdSpeedMultiplier) : 1f;
     }
 
-    // Consume one skip request
-    public bool ConsumeSkip()
+    bool ConsumeSkip()
     {
         if (!skipRequested) return false;
         skipRequested = false;
         return true;
     }
 
-    // ----- Helper waits you can use inside your coroutine -----
+    // Wait helpers (instance-scoped)
 
-    // Wait for seconds, but allow click-to-skip and hold speed-up
     public IEnumerator Wait(float seconds)
     {
         if (seconds <= 0f) yield break;
-
         float elapsed = 0f;
         while (elapsed < seconds)
         {
@@ -55,42 +64,25 @@ public class RoutineSkipper : MonoBehaviour, IPointerClickHandler, IPointerDownH
         }
     }
 
-    // Wait for a tween to finish, but allow click-to-skip and hold speed-up
     public IEnumerator AwaitTween(Tween t)
     {
         if (t == null || !t.active) yield break;
-        float originalScale = t.timeScale;
-        t.timeScale = originalScale * Mathf.Max(1f, speedMult);
-
+        float baseScale = t.timeScale <= 0f ? 1f : t.timeScale;
         while (t.active && t.IsPlaying())
         {
-            // adjust tween speed while holding
-            t.timeScale = originalScale * Mathf.Max(1f, speedMult);
-
-            if (ConsumeSkip())
-            {
-                // jump this tween to its end and finish this step
-                t.Goto(t.Duration(true), true);
-                break;
-            }
+            t.timeScale = baseScale * Mathf.Max(1f, speedMult);
+            if (ConsumeSkip()) { t.Goto(t.Duration(true), true); break; }
             yield return null;
         }
-
-        if (t != null && t.active) t.timeScale = originalScale;
+        if (t != null && t.active) t.timeScale = baseScale;
     }
 
-    // Wait for a TMPTypewriterSwap to finish, but allow click-to-skip this whole step
     public IEnumerator AwaitTypewriter(TMPTypewriterSwap typer)
     {
         if (!typer) yield break;
-
-        // If we want a single click to finish the whole "type" step:
         while (typer.IsRunningPublic)
         {
-            if (ConsumeSkip())
-            {
-                typer.RequestComplete(); // see step 1
-            }
+            if (ConsumeSkip()) typer.RequestComplete();
             yield return null;
         }
     }
