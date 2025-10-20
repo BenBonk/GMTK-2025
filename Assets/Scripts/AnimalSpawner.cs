@@ -9,10 +9,13 @@ public class AnimalSpawner : MonoBehaviour
     private float timeSinceLastSpawn = 0f;
 
     private BoonManager boonManager;
-
+    private PostProcessingManager postProcessing;
+    public GameObject animalLight;
+    
     private void Start()
     {
         boonManager = GameController.boonManager;
+        postProcessing = GameController.postProcessingManager;
     }
 
     // Update is called once per frame
@@ -65,6 +68,11 @@ public class AnimalSpawner : MonoBehaviour
             {
                 Instantiate(selectedAnimal.animalPrefab, new Vector3(rightEdgeX+Random.Range(2f,4f), randomY+Random.Range(-1.5f, 0.5f), 0f), Quaternion.identity);
             }
+        }
+
+        if (postProcessing.isNight)
+        {
+            Instantiate(animalLight, animal.transform.position, Quaternion.identity, animal.transform);
         }
     }
 }

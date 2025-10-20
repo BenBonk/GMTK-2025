@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
     [SerializeField] WishlistGamePanel localWishlistPanel;
     [SerializeField] RandomEventManager localRandomEventManager;
     [SerializeField] Material localLightningMat;
+    [SerializeField] PostProcessingManager localPostProcessingManager;
     void Awake()
     {
         instance = this;
@@ -128,5 +129,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localLightningMat; }
         set { instance.localLightningMat = value; }
+    }
+    public static PostProcessingManager postProcessingManager
+    {
+        get { return instance.localPostProcessingManager; }
+        set { instance.localPostProcessingManager = value; }
     }
 }

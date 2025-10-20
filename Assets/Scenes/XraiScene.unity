@@ -15487,6 +15487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 1
+  animalLight: {fileID: 877793831065086868, guid: 01c3177c68112724b9ce4ca5b9931f31, type: 3}
 --- !u!4 &735711327
 Transform:
   m_ObjectHideFlags: 0
@@ -33186,7 +33187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 1
+  isTesting: 0
   player: {fileID: 1887224207}
   harvestLevel: 1
   farmerID: 0
@@ -33359,6 +33360,7 @@ MonoBehaviour:
   localWishlistPanel: {fileID: 356016160}
   localRandomEventManager: {fileID: 511870742}
   localLightningMat: {fileID: 2100000, guid: 4c68b76b861b3424190f7c610b343018, type: 2}
+  localPostProcessingManager: {fileID: 1923389498}
 --- !u!4 &1239491768
 Transform:
   m_ObjectHideFlags: 0
@@ -53458,6 +53460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1923389497}
+  - component: {fileID: 1923389498}
   - component: {fileID: 1923389496}
   m_Layer: 0
   m_Name: Volume
@@ -53498,6 +53501,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1923389498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923389495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61f6cc2d22f114b40b9e67953ec81750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 1923389496}
+  isNight: 0
 --- !u!1 &1930591826
 GameObject:
   m_ObjectHideFlags: 0
@@ -56084,22 +56101,10 @@ PrefabInstance:
       propertyPath: referenceCamera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 3244825533742251125, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3961738710166122596, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1220268107}
-    - target: {fileID: 7474376805083890707, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -809.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 7474376805083890707, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.002380371
-      objectReference: {fileID: 0}
     - target: {fileID: 7728259703445948093, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
