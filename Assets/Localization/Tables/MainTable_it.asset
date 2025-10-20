@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -715,7 +715,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza tonda:'
+    m_Localized: 'Lunghezza del giro:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -789,7 +789,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Per sempre pi\xF9 veloce"
+    m_Localized: "Sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -801,8 +801,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: I cani scacciano i predatori. I cani valgono +5x denaro se catturati
-      con un predatore.
+    m_Localized: I cani scacciano i predatori. I cani valgono +5,0x denaro quando
+      vengono catturati da un predatore.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -828,7 +828,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
+    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -877,7 +877,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1232,6 +1232,47 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21394830097080320
     m_Localized: animali da rimuovere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Livello
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: Round di sfida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: 'Cactus crudeli: i lacci non possono contenere cactus'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: 'Terribile Tumbleweed: i Tumbleweed rompono i lacci al contatto'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: 'Api assassine: le api pungono gli animali, allontanandoli dal gioco'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: "Vento in poppa problematico: tutti gli animali si muovono pi\xF9
+      velocemente"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Farfalle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Fango
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Talpe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: + Fulmine
     m_Metadata:
       m_Items: []
   references:

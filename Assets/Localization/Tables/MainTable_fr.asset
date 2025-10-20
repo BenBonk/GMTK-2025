@@ -44,7 +44,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 5
-    m_Localized: "+ Esp\xE8ces\_: {0}"
+    m_Localized: "+Esp\xE8ces\_: {0}"
     m_Metadata:
       m_Items:
       - rid: 241711563893112939
@@ -115,7 +115,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs proches vers lui. Immunis\xE9
+    m_Localized: "Pr\xE9dateur. Attire les non-pr\xE9dateurs \xE0 proximit\xE9. Immunis\xE9
       contre les effets de pouss\xE9e et d'attraction."
     m_Metadata:
       m_Items: []
@@ -842,7 +842,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801985
     m_Localized: "Les cochons peuvent appara\xEEtre al\xE9atoirement avec un chapeau
-      haut de forme, si c'est le cas, ils valent +50 en esp\xE8ces et +25 points"
+      haut de forme, si c'est le cas, ils valent +50 esp\xE8ces et +25 points"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
@@ -912,7 +912,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
+    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente ma\xEEtris\xE9e
       par lasso"
     m_Metadata:
       m_Items: []
@@ -1034,7 +1034,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui donnent
-      x1,5 points multiplicateurs lorsqu'elles sont captur\xE9es au lasso"
+      x1,5 points mult lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1194,8 +1194,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313603
-    m_Localized: "+25 cash si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin de chaque
-      tour"
+    m_Localized: "+25 esp\xE8ces si aucun animal n'est \xE0 l'\xE9cran \xE0 la fin
+      de chaque tour"
     m_Metadata:
       m_Items: []
   - m_Id: 20226222100799488
@@ -1240,6 +1240,48 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21394830097080320
     m_Localized: "animaux \xE0 enlever"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Niveau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: "Tour de d\xE9fi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: "Cactus cruels\_: les lassos ne peuvent pas contenir de cactus"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: 'Terrible Tumbleweed : Les Tumbleweeds brisent les lassos au contact'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: 'Abeilles tueuses : les abeilles piquent les animaux et les retirent
+      du jeu'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: "Un vent arri\xE8re g\xEAnant : tous les animaux se d\xE9placent
+      plus vite"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Papillons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Boue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: "+ Grains de beaut\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: + Foudre
     m_Metadata:
       m_Items: []
   references:

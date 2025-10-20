@@ -499,7 +499,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139489218560
-    m_Localized: "\xA1Bienvenido al Libro de Registro!"
+    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -1235,6 +1235,48 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21394830097080320
     m_Localized: animales para eliminar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: "Ronda de desaf\xEDo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: 'Cactus crueles: Lassos no pueden contener cactus'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: 'Terrible Tumbleweed: Las plantas rodantes rompen los lazos al contacto'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: "Abejas asesinas: Las abejas pican a los animales, elimin\xE1ndolos
+      del juego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: "Viento de cola problem\xE1tico: todos los animales se mueven m\xE1s
+      r\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Mariposas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Barro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Lunares
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: + Rayo
     m_Metadata:
       m_Items: []
   references:

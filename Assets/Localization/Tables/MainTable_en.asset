@@ -1221,6 +1221,46 @@ MonoBehaviour:
     m_Localized: animals to remove
     m_Metadata:
       m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: Challenge Round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: 'Cruel Cacti: Lassos cannot contain cacti'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: 'Terrible Tumbleweed: Tumbleweeds break lassos on contact'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: 'Killer Bees: Bees sting animals, removing them from play'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: 'Troublesome Tailwind: All animals move faster'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Butterflies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Mud
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Moles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: + Lightning
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

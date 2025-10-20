@@ -219,7 +219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Cash Cow
+    m_Localized: Goldesel
     m_Metadata:
       m_Items: []
   - m_Id: 48
@@ -232,7 +232,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50
     m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein.
+      mit dem Lasso ein
     m_Metadata:
       m_Items: []
   - m_Id: 51
@@ -252,7 +252,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Das Dilemma der Bauern
+    m_Localized: Bauerndilemma
     m_Metadata:
       m_Items: []
   - m_Id: 56
@@ -322,8 +322,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, darunter ein Huhn, eine Kuh,
-      ein Pferd, ein Schaf und ein Schwein, mit dem Lasso ein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
+      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -777,7 +777,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607682
     m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist und Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -992,8 +992,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie f\xFCr jeden Nicht-Raubtier im Lasso einen Punktebonus
-      von +20 % statt 10 %"
+    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
+      Lasso, statt 10 %"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1243,6 +1243,48 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21394830097080320
     m_Localized: Tiere zu entfernen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Ebene
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: Herausforderungsrunde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: "Grausame Kakteen: Lassos d\xFCrfen keine Kakteen enthalten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: "Schreckliches Steppenl\xE4uferkraut: Steppenl\xE4uferkraut zerbricht
+      Lassos bei Kontakt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: "Killerbienen: Bienen stechen Tiere und nehmen ihnen so die M\xF6glichkeit,
+      zu spielen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: "L\xE4stiger R\xFCckenwind: Alle Tiere bewegen sich schneller"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Schmetterlinge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Schlamm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Muttermale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: + Blitz
     m_Metadata:
       m_Items: []
   references:

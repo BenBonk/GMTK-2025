@@ -2,6 +2,8 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.Localization;
 using Random = UnityEngine.Random;
 
 public class UpgradeShopItem : ShopItem
@@ -10,7 +12,8 @@ public class UpgradeShopItem : ShopItem
     private AnimalData chosenAnimal;
     public UpgradeShopItem partnerUpgrade;
     public AnimalShopItem[] animalShopItems;
-    
+    public TMP_Text levelText;
+    public LocalizedString levelString;
     public override void Initialize()
     {
         possibleAnimals = new List<AnimalData>(GameController.player.animalsInDeck);
@@ -26,6 +29,7 @@ public class UpgradeShopItem : ShopItem
         AnimalLevelManager levelManager = GameController.animalLevelManager;
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Count)];
         int animalLevel = levelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
+        levelText.text = levelString.GetLocalizedString() + " " + (2+animalLevel);
 
         UpdateDescription();
 
@@ -45,6 +49,8 @@ public class UpgradeShopItem : ShopItem
     void UpdateDescription()
     {
         descriptionText.text = GameController.descriptionManager.GetAnimalLevelDescription(chosenAnimal);
+        int animalLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
+        levelText.text = levelString.GetLocalizedString() + " " + (2+animalLevel);
     }
     public override void PurchaseUpgrade()
     {

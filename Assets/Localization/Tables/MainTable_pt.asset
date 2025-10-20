@@ -1063,7 +1063,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
-    m_Localized: "Selecione um benef\xEDcio para substituir"
+    m_Localized: "Selecione uma ben\xE7\xE3o para substituir"
     m_Metadata:
       m_Items: []
   - m_Id: 18706117449703424
@@ -1233,6 +1233,48 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 21394830097080320
     m_Localized: animais para remover
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: "N\xEDvel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: Rodada de Desafios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: "Cactos Cruel: Lassos n\xE3o pode conter cactos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: "Terrible Tumbleweed: Tumbleweeds quebram la\xE7os ao contato"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: 'Abelhas assassinas: as abelhas picam os animais, afastando-os da
+      brincadeira'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: "Vento de cauda problem\xE1tico: todos os animais se movem mais
+      r\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Borboletas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Lama
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Toupeiras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: "+ Rel\xE2mpago"
     m_Metadata:
       m_Items: []
   references:
