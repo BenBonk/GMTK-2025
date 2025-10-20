@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
     public int predatorRoundFrequency;
     public int challengeRoundFrequency;
 
-    public GameObject wordPrefab; // Assign in inspector
+    public GameObject wordPrefab;
+    public GameObject dayBeginPrefab;
     public GameObject endRoundPrefab;
     public float wordScaleDuration = 0.3f;
     public float wordDisplayDuration = 0.7f;
@@ -201,11 +202,10 @@ public class GameManager : MonoBehaviour
         roundNumber++;
         UpdateScoreDisplay(0);
         UpdateTimerDisplay();
-        roundInProgress = true;
-        roundCompleted = false;
         barnAnimator.Play("Closed", 0, 0.1f);
         spawner.spawnRate = FBPP.GetFloat("spawnRate", 1f);
-        StartCoroutine(ShowReadySetLassoSequence());
+        //StartCoroutine(ShowReadySetLassoSequence());
+        StartCoroutine(DisplayDayRoutine("Day" + " " + roundNumber, wordScaleDuration, wordDisplayDuration));
         if (roundNumber > FBPP.GetInt("highestRound"))
         {
             FBPP.SetInt("highestRound", roundNumber);
@@ -526,6 +526,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator ShowReadySetLassoSequence()
     {
         pauseMenu.canOpenClose = true;
+        
         string[] readySetLasso = { localReady.GetLocalizedString(), localSet.GetLocalizedString(), localLasso.GetLocalizedString() };
         for (int i = 0; i < 3; i++)
         {
@@ -656,6 +657,75 @@ public class GameManager : MonoBehaviour
         }
         seq.OnComplete(() => Destroy(wordObj));
     }
+
+    private IEnumerator DisplayDayRoutine(string word, float scaleDuration, float displayDuration)
+    {
+        GameObject wordObj = Instantiate(dayBeginPrefab, transform);
+        var wordText = wordObj.GetComponent<TMP_Text>();
+        var typer = wordObj.GetComponent<TMPTypewriterSwap>();
+        var rich = wordObj.GetComponent<PaletteLetterColorizerRichText>();
+
+        // Add the skipper to the root you want clickable (this object or the word UI)
+        var skipper = wordObj.GetComponent<RoutineSkipper>();
+        if (!skipper) skipper = wordObj.AddComponent<RoutineSkipper>();
+        skipper.useUnscaledTime = false;     
+        skipper.holdToSpeedUp = true;
+        skipper.holdSpeedMultiplier = 10f;
+        skipper.clickSkipsCurrentStep = true;
+
+        wordObj.transform.position = GetCenterScreenWorldPosition();
+        wordObj.transform.localScale = Vector3.zero;
+        wordObj.transform.rotation = Quaternion.identity;
+        wordText.text = word;
+        wordObj.SetActive(true);
+        AudioManager.Instance.PlaySFX("ready");
+
+        // Scale in
+        yield return skipper.AwaitTween(wordObj.transform.DOScale(1.2f, scaleDuration).SetEase(Ease.OutBack));
+        yield return skipper.AwaitTween(wordObj.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+
+        // Pause on screen
+        yield return skipper.Wait(displayDuration + 0.5f);
+
+        if (roundNumber % challengeRoundFrequency == 0)
+        {
+            // Erase, enable colors, type title
+            typer.ChangeTextAnimated("", 0.06f);
+            yield return skipper.AwaitTypewriter(typer);
+            yield return skipper.Wait(displayDuration);
+            if (rich) rich.enabled = true;
+
+            typer.ChangeTextAnimated("Challenge Round", 0.06f, 0.06f);
+            yield return skipper.AwaitTypewriter(typer);
+            yield return skipper.Wait(displayDuration);
+        }
+
+        var descTMP = wordObj.transform.Find("ChallengeText")?.GetComponent<TMP_Text>();
+        if (descTMP)
+        {
+            typer.SetLabel(descTMP);
+            typer.SetRichColorizer(null);
+            typer.InstantSet("");
+            typer.ChangeTextAnimated("Here lies the challenge description",0.06f,0.06f);
+            yield return skipper.AwaitTypewriter(typer);
+            yield return skipper.Wait(displayDuration);
+        }
+
+        // Pause again
+        yield return skipper.Wait(displayDuration*3);
+
+        // Fade out text and sprites together (click skips to end)
+        var fadeSeq = DG.Tweening.DOTween.Sequence().Join(wordText.DOFade(0f, 0.5f));
+        foreach (var sr in wordObj.GetComponentsInChildren<TMP_Text>())
+            fadeSeq.Join(sr.DOFade(0f, 0.5f));
+        yield return skipper.AwaitTween(fadeSeq);
+
+        Destroy(wordObj);
+        roundInProgress = true;
+        roundCompleted = false;
+        StartCoroutine(ShowReadySetLassoSequence());
+    }
+
 
     private void OnApplicationQuit()
     {

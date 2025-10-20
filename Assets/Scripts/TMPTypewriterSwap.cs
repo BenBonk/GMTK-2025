@@ -7,16 +7,15 @@ public class TMPTypewriterSwap : MonoBehaviour
     [Header("Targets")]
     [SerializeField] TMP_Text label; // TextMeshProUGUI or TMP_Text
     [SerializeField] PaletteLetterColorizerRichText richColorizer; // optional
-    //[SerializeField] PaletteLetterColorizerTMP meshColorizer;       // optional
 
-    [Header("Timing")]
+    [Header("Timing (defaults)")]
     [SerializeField, Min(0f)] float eraseDelay = 0.03f;
     [SerializeField, Min(0f)] float typeDelay = 0.03f;
     [SerializeField] bool useUnscaledTime = false;
 
     [Header("Behavior")]
     [SerializeField] bool stripRichTagsFromInitial = true; // if the existing label has tags
-    [SerializeField] bool applyPaletteEveryStep = true;    // recolor on each step
+    [SerializeField] bool applyPaletteEveryStep = true;    // placeholder for parity
 
     [Header("SFX")]
     [SerializeField] string sfxName = "ui_hover";
@@ -30,11 +29,16 @@ public class TMPTypewriterSwap : MonoBehaviour
     string lastStepText = "";
     float lastSfxTime = -999f;
 
+    // New: cache the in-flight target so skipper can complete instantly
+    string targetPlain = "";
+
+    // Skipper expects this
+    public bool IsRunningPublic => running != null;
+
     void Reset()
     {
         label = GetComponent<TMP_Text>();
         if (!richColorizer) richColorizer = GetComponent<PaletteLetterColorizerRichText>();
-        //if (!meshColorizer) meshColorizer = GetComponent<PaletteLetterColorizerTMP>();
     }
 
     void Awake()
@@ -44,6 +48,7 @@ public class TMPTypewriterSwap : MonoBehaviour
         if (stripRichTagsFromInitial) currentPlain = StripTagsSimple(currentPlain);
         InstantSet(currentPlain);
         lastStepText = currentPlain;
+        targetPlain = currentPlain;
     }
 
     void OnDisable()
@@ -55,31 +60,71 @@ public class TMPTypewriterSwap : MonoBehaviour
         }
     }
 
-    // Public API: animate swap
-    public void ChangeTextAnimated(string newText)
+    // Fire-and-forget, with optional per-call delay overrides
+    public void ChangeTextAnimated(string newText, float? overrideEraseDelay = null, float? overrideTypeDelay = null)
     {
         if (!label) return;
         if (running != null) StopCoroutine(running);
-        running = StartCoroutine(CoChangeTextAnimated(newText ?? ""));
+
+        targetPlain = newText ?? "";
+
+        float localErase = Mathf.Max(0f, overrideEraseDelay ?? eraseDelay);
+        float localType = Mathf.Max(0f, overrideTypeDelay ?? typeDelay);
+
+        running = StartCoroutine(CoChangeTextAnimated(targetPlain, localErase, localType));
     }
 
-    // Optional: instantly set without animation (keeps palette applied)
+    // Start and wait; supports optional extra flat wait and per-call delay overrides
+    public IEnumerator PlayAndWait(string newText, float extraWait = 0f, float? overrideEraseDelay = null, float? overrideTypeDelay = null)
+    {
+        ChangeTextAnimated(newText, overrideEraseDelay, overrideTypeDelay);
+        while (IsRunningPublic) yield return null;
+
+        if (extraWait > 0f)
+        {
+            if (useUnscaledTime) yield return new WaitForSecondsRealtime(extraWait);
+            else yield return new WaitForSeconds(extraWait);
+        }
+    }
+
+    // Duration helper (for DOTween AppendInterval), supports overrides and extra wait
+    public float ComputeSwapDuration(string newText, float extraWait = 0f, float? overrideEraseDelay = null, float? overrideTypeDelay = null)
+    {
+        if (newText == null) newText = "";
+        float e = Mathf.Max(0f, overrideEraseDelay ?? eraseDelay);
+        float t = Mathf.Max(0f, overrideTypeDelay ?? typeDelay);
+
+        int eraseSteps = Mathf.Max(0, currentPlain.Length); // each removed char yields e
+        int typeSteps = Mathf.Max(0, newText.Length - 1);  // last added char does not yield t
+        return eraseSteps * e + typeSteps * t + Mathf.Max(0f, extraWait);
+    }
+
+    // Instant set (no animation)
     public void InstantSet(string text)
     {
         currentPlain = text ?? "";
-        if (richColorizer)
-        {
+        if (richColorizer != null && richColorizer.isActiveAndEnabled)
             richColorizer.SetTextAndApply(currentPlain);
-        }
         else
-        {
             label.text = currentPlain;
-            //if (meshColorizer) meshColorizer.Apply();
-        }
+
         lastStepText = currentPlain;
     }
 
-    IEnumerator CoChangeTextAnimated(string newPlain)
+    // Skipper calls this to instantly finish the current animation
+    public void RequestComplete()
+    {
+        if (running != null)
+        {
+            StopCoroutine(running);
+            running = null;
+        }
+        // Jump to final target of the current swap
+        InstantSet(targetPlain);
+        currentPlain = targetPlain;
+    }
+
+    IEnumerator CoChangeTextAnimated(string newPlain, float localErase, float localType)
     {
         // ERASE phase
         for (int len = Mathf.Max(0, currentPlain.Length); len >= 0; len--)
@@ -89,8 +134,8 @@ public class TMPTypewriterSwap : MonoBehaviour
             SetStep(next);
             lastStepText = next;
 
-            if (len > 0 && eraseDelay > 0f)
-                yield return (useUnscaledTime ? new WaitForSecondsRealtime(eraseDelay) : new WaitForSeconds(eraseDelay));
+            if (len > 0 && localErase > 0f)
+                yield return (useUnscaledTime ? new WaitForSecondsRealtime(localErase) : new WaitForSeconds(localErase));
         }
 
         // TYPE phase
@@ -101,8 +146,8 @@ public class TMPTypewriterSwap : MonoBehaviour
             SetStep(next);
             lastStepText = next;
 
-            if (len < newPlain.Length && typeDelay > 0f)
-                yield return (useUnscaledTime ? new WaitForSecondsRealtime(typeDelay) : new WaitForSeconds(typeDelay));
+            if (len < newPlain.Length && localType > 0f)
+                yield return (useUnscaledTime ? new WaitForSecondsRealtime(localType) : new WaitForSeconds(localType));
         }
 
         currentPlain = newPlain;
@@ -111,15 +156,17 @@ public class TMPTypewriterSwap : MonoBehaviour
 
     void SetStep(string partial)
     {
-        if (richColorizer)
-        {
+        if (richColorizer != null && richColorizer.isActiveAndEnabled)
             richColorizer.SetTextAndApply(partial);
-        }
         else
-        {
             label.text = partial;
-            //if (applyPaletteEveryStep && meshColorizer) meshColorizer.Apply();
-        }
+    }
+
+    public void SetLabel(TMP_Text newLabel) { label = newLabel; }
+
+    public void SetRichColorizer(PaletteLetterColorizerRichText newRich)
+    {
+        richColorizer = newRich;
     }
 
     void MaybePlaySfx(string prevText, string nextText, bool isErase)
@@ -128,21 +175,17 @@ public class TMPTypewriterSwap : MonoBehaviour
         if (isErase && !sfxOnErase) return;
         if (!isErase && !sfxOnType) return;
 
-        // Throttle
         float now = useUnscaledTime ? Time.unscaledTime : Time.time;
         if (sfxMinInterval > 0f && now - lastSfxTime < sfxMinInterval) return;
 
-        // Determine the changed char to optionally skip whitespace sounds
         char changedChar = '\0';
         if (isErase)
         {
-            // Removed last char from prevText
             if (!string.IsNullOrEmpty(prevText))
                 changedChar = prevText[prevText.Length - 1];
         }
         else
         {
-            // Added last char to nextText
             if (!string.IsNullOrEmpty(nextText))
                 changedChar = nextText[nextText.Length - 1];
         }
@@ -154,8 +197,7 @@ public class TMPTypewriterSwap : MonoBehaviour
         lastSfxTime = now;
     }
 
-    // Simple angle-bracket tag stripper
-    static string StripTagsSimple(string s)
+    public static string StripTagsSimple(string s)
     {
         if (string.IsNullOrEmpty(s)) return "";
         System.Text.StringBuilder sb = new System.Text.StringBuilder(s.Length);
@@ -164,15 +206,10 @@ public class TMPTypewriterSwap : MonoBehaviour
         {
             char c = s[i];
             if (c == '<') { inTag = true; continue; }
-            if (inTag)
-            {
-                if (c == '>') inTag = false;
-                continue;
-            }
+            if (inTag) { if (c == '>') inTag = false; continue; }
             sb.Append(c);
         }
         return sb.ToString();
     }
 }
-
 
