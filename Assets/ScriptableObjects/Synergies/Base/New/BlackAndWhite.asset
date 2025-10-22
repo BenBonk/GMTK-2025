@@ -30,7 +30,7 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  art: {fileID: 0}
+  art: {fileID: 1414034175, guid: c7fbdce819272c34fba73cab371828da, type: 3}
   price: 0
   isExactMatch: 0
   currencyBonus: 0
