@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46340697a590bbe4d88a2a24161bcd60, type: 3}
+  m_Name: SoftAndSwift
+  m_EditorClassIdentifier: 
+  synergyName:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 23523400424226817
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  desc:
+    m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 23523400424226818
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  art: {fileID: 0}
+  price: 0
+  isExactMatch: 0
+  currencyBonus: 0
+  currencyMult: 0
+  pointsBonus: 0
+  pointsMult: 0
+  animalsNeeded:
+  - Bunny
+  - Mouse
+  - Sheep
+  references:
+    version: 2
+    RefIds: []

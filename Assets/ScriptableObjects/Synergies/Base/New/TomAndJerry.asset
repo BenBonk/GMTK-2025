@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46340697a590bbe4d88a2a24161bcd60, type: 3}
-  m_Name: Predatory
+  m_Name: TomAndJerry
   m_EditorClassIdentifier: 
   synergyName:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 81
+      m_KeyId: 23523400428421124
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -25,22 +25,21 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 82
+      m_KeyId: 23523400428421125
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  art: {fileID: 1267484794, guid: 99bdcde2fd5a9cc4d85aea536ec5f659, type: 3}
-  price: 100
+  art: {fileID: 0}
+  price: 0
   isExactMatch: 0
-  currencyBonus: 20
-  currencyMult: 1.5
-  pointsBonus: 50
-  pointsMult: 10
+  currencyBonus: 0
+  currencyMult: 0
+  pointsBonus: 0
+  pointsMult: 0
   animalsNeeded:
-  - Wolf
-  - Fox
-  - Bear
+  - BarnCat
+  - Mouse
   references:
     version: 2
     RefIds: []

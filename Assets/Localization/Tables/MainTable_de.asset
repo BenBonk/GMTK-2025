@@ -272,7 +272,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: "Lasso eine Gruppe von Tieren, darunter ein Fuchs und drei H\xFChner"
+    m_Localized: "Lasso eine Gruppe von Tieren, darunter ein Fuchs und 3 H\xFChner"
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -322,8 +322,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
-      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, darunter ein Huhn, eine Kuh,
+      ein Pferd, ein Schaf und ein Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -359,12 +359,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: Raubtier
+    m_Localized: Apex
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: "Lasso eine Gruppe von Tieren, darunter ein B\xE4r, ein Wolf und
-      ein Fuchs"
+    m_Localized: "Fangen Sie eine Gruppe von Tieren ein, darunter einen Puma und
+      einen B\xE4ren."
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -1263,8 +1263,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
-    m_Localized: "Killerbienen: Bienen stechen Tiere und nehmen ihnen so die M\xF6glichkeit,
-      zu spielen"
+    m_Localized: 'Killerbienen: Bienen stechen Tiere und vertreiben sie so aus dem
+      Spiel'
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031426
@@ -1285,6 +1285,306 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23036628909031430
     m_Localized: + Blitz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: ABC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit einem Lasso ein, darunter
+      ein Alpaka und zwei Scheunenkatzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: Alpaka im Wolfspelz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Alpaka und ein Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Athlet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Pferd und ein Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: "Die Sch\xF6ne und das Biest"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Wildschwein und ein Schwein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: "Schwarz und Wei\xDF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: "Lasso eine Gruppe von Tieren, darunter eine Kuh, ein Wildschwein
+      und ein H\xE4schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: Kettenreaktion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: Lasso eine Gruppe von Tieren, darunter eine Scheunenkatze, ein Hund
+      und eine Maus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Klippenkletterer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Alpaka und eine Ziege
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: David gegen Goliath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: "Lasso eine Gruppe von Tieren, darunter eine Maus und ein B\xE4r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Katzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit dem Lasso ein, darunter eine
+      Scheunenkatze und ein Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Flauschig und apportiert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Alpaka und ein Hund
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: Nahrungskette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Wolf, einer Katze
+      und einer Maus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: Waldfest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Wolf, einem Hasen
+      und einer Maus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: Sanfte Riesen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: Lasso eine Gruppe von Tieren, darunter eine Kuh, ein Pferd und ein
+      Alpaka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: Ziegenbock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit 3 Ziegen mit dem Lasso ein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Frisur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Alpaka und ein Pferd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: Wildschweinjagd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus 2 Wildschweinen und
+      einem Hund
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: "H\xF6rner voraus"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: Lasso eine Gruppe von Tieren, darunter eine Ziege und ein Wildschwein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: Vertrauensvorschuss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: "Fangen Sie eine Gruppe von Tieren mit einem H\xE4schen und einem
+      Puma ein."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: Macht des Berges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: Lasso eine Gruppe von Tieren, darunter eine Ziege, ein Puma und
+      ein Alpaka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: "Neun Schw\xE4nze, neun Leben"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Fuchs und eine Katze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: "Lasso eine Gruppe von Tieren, bestehend aus einem H\xE4schen, einer
+      Maus und einem Huhn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: Haustierpaket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: "Lasso eine Gruppe von Tieren, darunter eine Scheunenkatze, ein
+      Hund und ein H\xE4schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: Der gestiefelte Kater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit einem Lasso ein, darunter
+      eine Scheunenkatze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: Es regnet Katzen und Hunde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: Fangen Sie eine Gruppe von Tieren ein, darunter 2 Scheunenkatzen
+      und 2 Hunde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: Stille Stalker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit dem Lasso ein, darunter eine
+      Scheunenkatze, ein Puma und ein Fuchs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: Sanft und schnell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: "Fangen Sie eine Gruppe von Tieren ein, darunter ein H\xE4schen,
+      eine Maus und ein Schaf."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: Quietschen oder kein Quietschen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: Fangen Sie eine Gruppe von Tieren ein, darunter ein Wildschwein,
+      ein Schwein und eine Maus.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Ansturm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Wildschwein und ein Pferd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: "Drei-G\xE4nge-Men\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: Fangen Sie eine Gruppe von Tieren ein, darunter einen Puma, eine
+      Maus, ein Huhn und eine Ziege.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom und Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit einem Lasso, darunter eine
+      Scheunenkatze und ein Hund
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Wildschwein
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: Wandernder Dorfbewohner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: Lasso eine Gruppe von Tieren, darunter 2 Alpakas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Whinnie Puuh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: "Lasso eine Gruppe von Tieren, bestehend aus einem Hasen, einem
+      Schwein und einem B\xE4ren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: Wollige Wanderer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Schaf und ein Alpaka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: Trickster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: "Lasso eine Gruppe von Tieren, darunter ein Fuchs und ein H\xE4schen"
     m_Metadata:
       m_Items: []
   references:

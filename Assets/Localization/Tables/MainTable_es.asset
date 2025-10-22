@@ -269,7 +269,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: Lazo un grupo de animales que contiene un zorro y tres pollos
+    m_Localized: Lazo un grupo de animales que contiene un zorro y 3 pollos
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -355,11 +355,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: Depredador
+    m_Localized: "\xC1pex"
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: Lazo, un grupo de animales que contiene un oso, un lobo y un zorro.
+    m_Localized: Lazo un grupo de animales que contiene un puma y un oso
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -1277,6 +1277,301 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23036628909031430
     m_Localized: + Rayo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: abecedario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: Lazo, un grupo de animales que contiene una alpaca y dos gatos de
+      granero.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: Alpaca con piel de lobo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: Lazo un grupo de animales que contiene una alpaca y un lobo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Atleta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: Lazo un grupo de animales que contiene un Caballo y un Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: La bella y la bestia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: "Lazo un grupo de animales que contiene un jabal\xED y un cerdo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: En blanco y negro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: "Lazo un grupo de animales que contiene una vaca, un jabal\xED y
+      un conejo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: "Reacci\xF3n en cadena"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: "Lazo: un grupo de animales que contiene un gato de granero, un
+      perro y un rat\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Escaladores de acantilados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: Lazo un grupo de animales que contiene una alpaca y una cabra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: David contra Goliat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: "Lazo un grupo de animales que contiene un rat\xF3n y un oso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Felinos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: Lazo, un grupo de animales que contiene un gato de granero y un
+      puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Pelusa y busca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: Lazo un grupo de animales que contiene una alpaca y un perro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: Cadena alimentaria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: "Lazo un grupo de animales que contiene un lobo, un gato y un rat\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: Fiesta del bosque
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: "Lazo un grupo de animales que contiene un lobo, un conejo y un
+      rat\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: Gigantes gentiles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: Lazo un grupo de animales que contiene una vaca, un caballo y una
+      alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: "La cabra gru\xF1ona"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: Lazo un grupo de animales que contiene 3 cabras
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Peinado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: Lazo un grupo de animales que contiene una alpaca y un caballo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: Caza de cerdos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: "Lazo un grupo de animales que contiene 2 jabal\xEDes y un perro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: Cuernos por delante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: "Lazo un grupo de animales que contiene una cabra y un jabal\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: Salto de fe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: Lazo un grupo de animales que contiene un conejo y un puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: "El poder de la monta\xF1a"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: Lazo un grupo de animales que contiene una cabra, un puma y una
+      alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: Nueve colas, nueve vidas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: Lazo un grupo de animales que contiene un zorro y un gato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: "Lazo: un grupo de animales que contiene un conejito, un rat\xF3n
+      y un pollo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: Paquete de mascotas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: 'Lazo: un grupo de animales que contiene un gato de granero, un
+      perro y un conejo.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: El gato con botas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: Lazo un grupo de animales que contiene un gato de granero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: "Lloviendo a c\xE1ntaros"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: Lazo, un grupo de animales que contiene 2 gatos de granero y 2 perros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: Acechadores silenciosos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: Lazo, un grupo de animales que contiene un gato de granero, un puma
+      y un zorro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: "Suave y r\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: "Lazo: un grupo de animales que contiene un conejito, un rat\xF3n
+      y una oveja."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: Chirrido o no chirrido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: "Lazo un grupo de animales que contiene un jabal\xED, un cerdo y
+      un rat\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Estampida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: "Lazo un grupo de animales que contiene un jabal\xED y un caballo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: Comida de tres platos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: "Lazo, un grupo de animales que contiene un puma, un rat\xF3n, un
+      pollo y una cabra."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom y Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: Lazo, un grupo de animales que contiene un gato de granero y un
+      perro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: "Lazo un grupo de animales que contiene un jabal\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: Aldeano errante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: Lazo un grupo de animales que contiene 2 Alpacas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Whinnie el Pooh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: Lazo, un grupo de animales que contiene un conejito, un cerdo y
+      un oso.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: Vagabundos lanudos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: Lazo un grupo de animales que contiene una oveja y una alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: Embaucadores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: Lazo un grupo de animales que contiene un zorro y un conejo
     m_Metadata:
       m_Items: []
   references:

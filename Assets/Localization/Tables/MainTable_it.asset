@@ -269,7 +269,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: Lazo un gruppo di animali contenente una volpe e tre polli
+    m_Localized: Lazo un gruppo di animali contenente una volpe e 3 polli
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -355,15 +355,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: Predatore
+    m_Localized: Apice
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: Lazo un gruppo di animali contenente un orso, un lupo e una volpe
+    m_Localized: Lazo un gruppo di animali contenente un puma e un orso
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -1255,7 +1255,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031426
-    m_Localized: "Vento in poppa problematico: tutti gli animali si muovono pi\xF9
+    m_Localized: "Vento in poppa fastidioso: tutti gli animali si muovono pi\xF9
       velocemente"
     m_Metadata:
       m_Items: []
@@ -1273,6 +1273,295 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23036628909031430
     m_Localized: + Fulmine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: ABC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: Lazo un gruppo di animali contenente un alpaca e 2 gatti da fienile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: Alpaca travestito da lupo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: Lazo un gruppo di animali contenente un alpaca e un lupo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Atleta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: Lazo un gruppo di animali contenente un cavallo e un puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: La bella e la bestia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: Lazo un gruppo di animali contenente un cinghiale e un maiale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: In bianco e nero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: Lazo un gruppo di animali contenente una mucca, un cinghiale e un
+      coniglio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: Reazione a catena
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile, un cane
+      e un topo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Scalatori di scogliere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: Lazo un gruppo di animali contenente un alpaca e una capra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: Davide contro Golia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: Lazo un gruppo di animali contenente un topo e un orso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Felini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: Lasso un gruppo di animali contenente un gatto da fienile e un puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Fluff e Fetch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: Lazo un gruppo di animali contenente un alpaca e un cane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: Catena alimentare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: Lazo un gruppo di animali contenente un lupo, un gatto e un topo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: Festa della foresta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: Lazo un gruppo di animali contenente un lupo, un coniglio e un topo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: Giganti gentili
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: Lazo un gruppo di animali contenente una mucca, un cavallo e un
+      alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: Capra Gruff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: Lazo un gruppo di animali contenente 3 capre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Pettinatura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: Lazo un gruppo di animali contenente un alpaca e un cavallo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: Caccia al cinghiale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: Lazo un gruppo di animali contenente 2 cinghiali e un cane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: Corna avanti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: Lazo un gruppo di animali contenente una capra e un cinghiale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: Salto della fede
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: Lazo un gruppo di animali contenente un coniglio e un puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: La potenza della montagna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: Lazo un gruppo di animali contenente una capra, un puma e un alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: Nove code, nove vite
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: Lazo un gruppo di animali contenente una volpe e un gatto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: Lazo un gruppo di animali contenente un coniglio, un topo e un pollo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: Pacchetto animali domestici
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile, un cane
+      e un coniglio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: Il gatto con gli stivali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: Piovono cani e gatti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: Lasso un gruppo di animali contenente 2 gatti da fienile e 2 cani
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: Stalker silenziosi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile, un puma
+      e una volpe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: Morbido e veloce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: Lazo un gruppo di animali contenente un coniglio, un topo e una
+      pecora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: Stridio o non stridio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: Lazo un gruppo di animali contenente un cinghiale, un maiale e un
+      topo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Fuga precipitosa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: Lazo un gruppo di animali contenente un cinghiale e un cavallo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: pasto di tre portate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: Lazo un gruppo di animali contenente un puma, un topo, un pollo
+      e una capra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom e Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile e un cane
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: Lazo un gruppo di animali contenente un cinghiale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: Viandante errante
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: Lazo un gruppo di animali contenente 2 alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Whinnie the Pooh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: Lazo un gruppo di animali contenente un coniglio, un maiale e un
+      orso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: Vagabondi lanosi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: Lazo un gruppo di animali contenente una pecora e un alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: Imbroglioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: Lazo un gruppo di animali contenente una volpe e un coniglio
     m_Metadata:
       m_Items: []
   references:

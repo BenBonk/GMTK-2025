@@ -269,7 +269,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: Lasso a group of animals containing a Fox and three Chickens
+    m_Localized: Lasso a group of animals containing a Fox and 3 Chickens
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -354,11 +354,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: Predatory
+    m_Localized: Apex
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: Lasso a group of animals containing a Bear, a Wolf, and a Fox
+    m_Localized: Lasso a group of animals containing a Puma and a Bear
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -1259,6 +1259,287 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23036628909031430
     m_Localized: + Lightning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: ABC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: Lasso a group of animals containing an Alpaca and 2 Barn Cats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: Alpaca In Wolf's Clothing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: Lasso a group of animals containing an Alpaca and a Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Athlete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: Lasso a group of animals containing a Horse and a Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: Beauty and the Beast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: Lasso a group of animals containing a Boar and a Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: Black and White
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: Lasso a group of animals containing a Cow, a Boar, and a Bunny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: Chain Reaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: Lasso a group of animals containing a Barn Cat, a Dog, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Cliff Climbers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: Lasso a group of animals containing an Alpaca and a Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: David Vs. Goliath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: Lasso a group of animals containing a Mouse and a Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Felines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: Lasso a group of animals containing a Barn Cat and a Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Fluff and Fetch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: Lasso a group of animals containing an Alpaca and a Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: Food Chain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: Lasso a group of animals containing a Wolf, a Cat, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: Forest Feast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: Lasso a group of animals containing a Wolf, a Bunny, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: Gentle Giants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: Lasso a group of animals containing a Cow, a Horse, and an Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: Goat's Gruff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: Lasso a group of animals containing 3 Goats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Hairdo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: Lasso a group of animals containing an Alpaca and a Horse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: Hog Hunt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: Lasso a group of animals containing 2 Boar and a Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: Horns Ahead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: Lasso a group of animals containing a Goat and a Boar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: Leap of Faith
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: Lasso a group of animals containing a Bunny and a  Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: Mountain's Might
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: Lasso a group of animals containing a Goat, a Puma, and an Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: Nine Tails, Nine Lives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: Lasso a group of animals containing a Fox and a Cat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: Lasso a group of animals containing a Bunny, a Mouse, and a Chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: Pet Pack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: Lasso a group of animals containing a Barn Cat, a Dog, and a Bunny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: Puss In Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: Lasso a group of animals containing a Barn Cat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: Raining Cats and Dogs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: Lasso a group of animals containing 2 Barn Cats and 2 Dogs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: Silent Stalkers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: Lasso a group of animals containing a Barn Cat, a Puma, and a Fox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: Soft and Swift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: Lasso a group of animals containing a Bunny, a Mouse, and a Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: Squeal or no Squeal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: Lasso a group of animals containing a Boar, a Pig, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Stampede
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: Lasso a group of animals containing a Boar and a Horse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: Three Course Meal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: Lasso a group of animals containing a Puma, a Mouse, a Chicken,
+      and a Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom and Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: Lasso a group of animals containing a Barn Cat and a Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: Lasso a group of animals containing a Boar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: Wandering Villager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: Lasso a group of animals containing 2 Alpacas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Whinnie the Pooh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: Lasso a group of animals containing a Bunny, a Pig, and a Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: Wooly Wanderers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: Lasso a group of animals containing a Sheep and an Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: Tricksters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: Lasso a group of animals containing a Fox and a Bunny
     m_Metadata:
       m_Items: []
   references:

@@ -270,7 +270,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e tr\xEAs galinhas"
+    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e 3 galinhas"
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -356,11 +356,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: "Predat\xF3rio"
+    m_Localized: "\xC1pice"
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: "La\xE7o: um grupo de animais contendo um urso, um lobo e uma raposa"
+    m_Localized: "La\xE7o um grupo de animais contendo um puma e um urso"
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -1275,6 +1275,293 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23036628909031430
     m_Localized: "+ Rel\xE2mpago"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: abc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e 2 gatos-de-celeiro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: Alpaca em pele de lobo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e um lobo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Atleta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: "La\xE7o um grupo de animais contendo um cavalo e uma puma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: A bela e a fera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: "La\xE7o um grupo de animais contendo um Javali e um Porco"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: Preto e branco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: "La\xE7o um grupo de animais contendo uma vaca, um javali e um coelho"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: "Rea\xE7\xE3o em cadeia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: "La\xE7o: um grupo de animais contendo um gato de celeiro, um cachorro
+      e um rato"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Escaladores de penhascos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e uma cabra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: Davi contra Golias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: "La\xE7o um grupo de animais contendo um rato e um urso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Felinos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: "La\xE7o um grupo de animais contendo um gato-das-torres e um puma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Fluff e Fetch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e um cachorro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: Cadeia alimentar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: "La\xE7o: um grupo de animais contendo um lobo, um gato e um rato"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: Festa da Floresta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: "La\xE7o um grupo de animais contendo um lobo, um coelho e um rato"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: Gigantes gentis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: "La\xE7o: um grupo de animais contendo uma vaca, um cavalo e uma
+      alpaca"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: Cabra rude
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: "La\xE7o um grupo de animais contendo 3 cabras"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Penteado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e um cavalo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: "Ca\xE7a ao Javali"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: "La\xE7o um grupo de animais contendo 2 Javalis e um Cachorro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: "Chifres \xE0 frente"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: "La\xE7o um grupo de animais contendo uma cabra e um javali"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: "Salto de F\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: "La\xE7o um grupo de animais contendo um coelho e uma puma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: Poder da Montanha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: "La\xE7o: um grupo de animais contendo uma cabra, uma puma e uma
+      alpaca"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: Nove Caudas, Nove Vidas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e um gato"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: "La\xE7o um grupo de animais contendo um coelho, um rato e uma galinha"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: "Pacote para animais de estima\xE7\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: "La\xE7o: um grupo de animais contendo um gato de celeiro, um cachorro
+      e um coelho"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: O Gato de Botas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: "La\xE7o um grupo de animais contendo um gato de celeiro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: Chovendo canivetes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: "La\xE7o um grupo de animais contendo 2 gatos de celeiro e 2 c\xE3es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: Perseguidores Silenciosos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: "La\xE7o: um grupo de animais contendo um gato-das-torres, um puma
+      e uma raposa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: "Suave e r\xE1pido"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: "La\xE7o um grupo de animais contendo um coelho, um rato e uma ovelha"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: "Gritar ou n\xE3o gritar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: "La\xE7o: um grupo de animais contendo um javali, um porco e um
+      rato"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Debandada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: "La\xE7o um grupo de animais contendo um Javali e um Cavalo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: "Refei\xE7\xE3o de tr\xEAs pratos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: "La\xE7o um grupo de animais contendo um puma, um rato, uma galinha
+      e uma cabra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom e Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: "La\xE7o um grupo de animais contendo um gato de celeiro e um cachorro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: "La\xE7o um grupo de animais contendo um Javali"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: "Alde\xE3o Errante"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: "La\xE7o um grupo de animais contendo 2 alpacas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Whinnie, o Pooh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: "La\xE7o um grupo de animais contendo um coelho, um porco e um urso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: Vagabundos Lanosos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: "La\xE7o um grupo de animais contendo uma ovelha e uma alpaca"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: Trapaceiros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e um coelho"
     m_Metadata:
       m_Items: []
   references:
