@@ -133,19 +133,14 @@ MonoBehaviour:
   hoverHeight: 1.25
   hoverSpeed: 5
   alignRotSpeed: 720
+  diveDelayRange: {x: 1, y: 1}
+  pullBackDistance: 0.5
+  pullBackTime: 0.15
   diveSpeed: 8
-  hitInset: 0.05
   localStingerDir: {x: -1, y: 0}
   destroyAfterSting: 1
   recoverUpKick: 4
-  diveDelayRange: {x: 1, y: 1}
-  useAnticipation: 1
-  anticipateDip: 0.15
-  anticipateTime: 0.12
-  pullBackDistance: 0.5
-  pullBackTime: 0.15
-  diveAccel: 35
-  targetSearchDelay: 3.5
   OnSting:
     m_PersistentCalls:
       m_Calls: []
+  spawnTimer: 2.5
