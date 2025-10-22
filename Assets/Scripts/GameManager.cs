@@ -105,6 +105,7 @@ public class GameManager : MonoBehaviour
     public float veteranRate = 1.4f;
     public float expertRate = 1.6f;
     private float pointsRequirementGrowthRate;
+    public LocalizedString challengeRound;
     public LocalizedString localReady;
     public LocalizedString localSet;
     public LocalizedString localLasso;
@@ -116,9 +117,13 @@ public class GameManager : MonoBehaviour
     public GameObject unlockPanel;
     [HideInInspector] public AnimalData foxThiefStolenStats;
     private RandomEventManager randomEventManager;
+    private ChallengeEventManager challengeEventManager;
+    private string roundDescription;
+    private int roundID = -1;
     private void Start()
     {
         randomEventManager = GameController.randomEventManager;
+        challengeEventManager = GameController.challengeEventManager;
         pauseMenu = GameController.pauseMenu;
         saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
@@ -150,7 +155,7 @@ public class GameManager : MonoBehaviour
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         scoreDisplay.text = pointsLocalString.GetLocalizedString() + " " + LassoController.FormatNumber(0) + " / " + LassoController.FormatNumber(GetPointsRequirement(roundNumber+1));
-        Invoke("StartRound", 1);
+        RoundSetup();
         UpdateTimerDisplay();   
     }
     
@@ -180,9 +185,14 @@ public class GameManager : MonoBehaviour
     
     public void StartRound()
     {
+        StartCoroutine(DisplayDayRoutine(GameController.shopManager.roundLocalString.GetLocalizedString() + " " + roundNumber, wordScaleDuration, wordDisplayDuration));
+    }
+
+    public void RoundSetup()
+    {
         if (!pauseMenu.isOpen)
         {
-            pauseMenu.canOpenClose = true;   
+            pauseMenu.canOpenClose = true;
         }
         if (boonManager.ContainsBoon("Pocketwatch"))
         {
@@ -200,16 +210,48 @@ public class GameManager : MonoBehaviour
         pointsThisRound = 0;
         saveManager.SaveGameData();
         roundNumber++;
-        UpdateScoreDisplay(0);
-        UpdateTimerDisplay();
-        barnAnimator.Play("Closed", 0, 0.1f);
-        spawner.spawnRate = FBPP.GetFloat("spawnRate", 1f);
-        //StartCoroutine(ShowReadySetLassoSequence());
-        StartCoroutine(DisplayDayRoutine("Day" + " " + roundNumber, wordScaleDuration, wordDisplayDuration));
         if (roundNumber > FBPP.GetInt("highestRound"))
         {
             FBPP.SetInt("highestRound", roundNumber);
         }
+        UpdateScoreDisplay(0);
+        UpdateTimerDisplay();
+        barnAnimator.Play("Closed", 0, 0.1f);
+        spawner.spawnRate = FBPP.GetFloat("spawnRate", 1f);
+        if (IsChallengeRound())
+        {
+            int chosenEvent = challengeEventManager.GetChallengeEvent();
+            roundDescription = challengeEventManager.challengeEventStrings[chosenEvent].GetLocalizedString();
+            if (chosenEvent < 4)
+            {
+                schemeManager.ChangeScheme(chosenEvent);
+            }
+            else
+            {
+                schemeManager.SetRandomScheme(roundNumber);
+            }
+            challengeEventManager.StartChallenge(chosenEvent);
+        }
+        else
+        {
+            int chosenEvent = randomEventManager.GetRandomEvent();
+            schemeManager.SetRandomScheme(roundNumber);
+            if (chosenEvent > -1)
+            {
+                roundDescription = randomEventManager.randomEventStrings[chosenEvent].GetLocalizedString();
+            }
+            else
+            {
+                roundDescription = null;
+            }
+            randomEventManager.StartRandomEvent(chosenEvent);
+        }
+        Invoke("StartRound", 1);
+    }
+
+    public bool IsChallengeRound()
+    {
+        return roundNumber % challengeRoundFrequency == 0;
     }
 
     public void EndRound()
@@ -375,7 +417,7 @@ public class GameManager : MonoBehaviour
         {
             GameController.predatorSelect.StartCoroutine("Intro");
         }
-        else if (roundNumber % challengeRoundFrequency == 0)
+        else if (IsChallengeRound())
         {
             GameController.challengeRewardSelect.StartCoroutine("Intro");
         }
@@ -405,6 +447,7 @@ public class GameManager : MonoBehaviour
             barnAnimator.Play("Open", 0, 0.1f);
             AudioManager.Instance.PlaySFX("barn_door");
             AudioManager.Instance.PlayMusicWithFadeOutOld("shop_theme", 1f, true);
+            GameController.postProcessingManager.NightModeOff();
         },
             onZoomEndpoint: () =>
             {
@@ -428,10 +471,9 @@ public class GameManager : MonoBehaviour
         }
 
         pauseMenu.canOpenClose = false;
-        randomEventManager.TryRandomEvent();
-        schemeManager.SetRandomScheme();
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
+        RoundSetup();
         barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
         cameraController.ResetToStartPosition(1f);
     }
@@ -695,18 +737,18 @@ public class GameManager : MonoBehaviour
             yield return skipper.Wait(displayDuration);
             if (rich) rich.enabled = true;
 
-            typer.ChangeTextAnimated("Challenge Round", 0.06f, 0.06f);
+            typer.ChangeTextAnimated(challengeRound.GetLocalizedString(), 0.06f, 0.06f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);
         }
 
         var descTMP = wordObj.transform.Find("ChallengeText")?.GetComponent<TMP_Text>();
-        if (descTMP)
+        if (descTMP && roundDescription != null)
         {
             typer.SetLabel(descTMP);
             typer.SetRichColorizer(null);
             typer.InstantSet("");
-            typer.ChangeTextAnimated("Here lies the challenge description",0.06f,0.06f);
+            typer.ChangeTextAnimated(roundDescription,0.06f,0.06f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);
         }

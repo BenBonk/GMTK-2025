@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 using Random = UnityEngine.Random;
 
 public class RandomEventManager : MonoBehaviour
@@ -19,6 +20,8 @@ public class RandomEventManager : MonoBehaviour
     public int numberOfMudPuddles = 100;
     [HideInInspector] public bool isRaining;
 
+    public LocalizedString[] randomEventStrings;
+
     private List<Vector2> placedPositions = new List<Vector2>();
     private void Start()
     {
@@ -26,39 +29,69 @@ public class RandomEventManager : MonoBehaviour
         //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
     }
 
-    public void TryRandomEvent()
+    public int GetRandomEvent()
     {
         if (Random.Range(0,5) > 0) //0,5
         {
-            return;
+            return -1;
         }
 
         int chosenEvent = Random.Range(0,4);
-        if (chosenEvent == lastEvent)
+        while (chosenEvent == lastEvent)
         {
             chosenEvent = Random.Range(0,4);
         }
-        
+        lastEvent = chosenEvent;
+
         if (chosenEvent == 0)
         {
-            Invoke("SpawnMole", 7);
+            //Invoke("SpawnMole", 7);
         }
         else if (chosenEvent == 1)
         {
-            Invoke("SpawnButterfly", 7);
+            //Invoke("SpawnButterfly", 7);
         }
         else if (chosenEvent == 2)
         {
-            Invoke("SpawnMud", .5f);
+            //Invoke("SpawnMud", .5f);
             
         }
         else
         {
-            Invoke("Rain", .5f);
+            //Invoke("Rain", .5f);
             
         }
+        return chosenEvent;
         
     }
+
+    public void StartRandomEvent(int eventID)
+    {
+        if (eventID == -1)
+        {
+            return;
+        }
+        else if (eventID == 0)
+        {
+            Invoke("SpawnMole", 7);
+        }
+        else if (eventID == 1)
+        {
+            Invoke("SpawnButterfly", 7);
+        }
+        else if (eventID == 2)
+        {
+            Invoke("SpawnMud", .5f);
+
+        }
+        else if(eventID == 3)
+        {
+            Invoke("Rain", .5f);
+
+        }
+    }
+
+
     void SpawnMole()
     {
         Bounds bounds = moleBounds.bounds;
