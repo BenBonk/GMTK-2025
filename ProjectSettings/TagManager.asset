@@ -9,6 +9,7 @@ TagManager:
   - NonAnimalLassoable
   - ChickenEgg
   - BlackSheep
+  - Cactus
   layers:
   - Default
   - TransparentFX

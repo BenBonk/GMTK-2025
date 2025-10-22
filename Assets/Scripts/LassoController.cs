@@ -257,11 +257,14 @@ public class LassoController : MonoBehaviour
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
         smoothClosed.Add(smoothClosed[0]);
 
-
-
         var visualPoints = new List<Vector3>(smoothClosed);
         lineRenderer.positionCount = visualPoints.Count;
         lineRenderer.SetPositions(visualPoints.ToArray());
+
+        if (CheckForCacti())
+        {
+            return;
+        }
 
         // Compute bottom-of-lasso and bottom-center
         float zDepth = Mathf.Abs(Camera.main.transform.position.z - lineRenderer.transform.position.z);
@@ -657,7 +660,7 @@ public class LassoController : MonoBehaviour
             }
         }
 
-        var eggs = GameObject.FindGameObjectsWithTag("NonAnimalLassoable");
+        var eggs = FindObjectsOfType<Lassoable>(false);
         foreach (var egg in eggs)
         {
             var col = egg.GetComponent<Collider2D>();
@@ -670,6 +673,25 @@ public class LassoController : MonoBehaviour
         }
 
         return list;
+    }
+
+    bool CheckForCacti()
+    {
+        if (rawPoints.Count < 3) return false;
+
+        var cacti = GameObject.FindGameObjectsWithTag("Cactus");
+
+        foreach (var cactus in cacti)
+        {
+            var col = cactus.GetComponent<Collider2D>();
+            Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)cactus.transform.position;
+
+            if (IsPointInPolygon(point, rawPoints))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void ShowCaptureFeedback((double pointBonus, double pointMult, double currencyBonus, double currencyMult, HashSet<Sprite> boonSprites) result)

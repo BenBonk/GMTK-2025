@@ -750,11 +750,15 @@ public class GameManager : MonoBehaviour
             typer.InstantSet("");
             typer.ChangeTextAnimated(roundDescription,0.06f,0.06f);
             yield return skipper.AwaitTypewriter(typer);
-            yield return skipper.Wait(displayDuration);
+            yield return skipper.Wait(displayDuration*3);
+        }
+        else
+        {
+            Debug.Log("No description TMP or no round description");
         }
 
-        // Pause again
-        yield return skipper.Wait(displayDuration*3);
+            // Pause again
+            yield return skipper.Wait(displayDuration);
 
         // Fade out text and sprites together (click skips to end)
         var fadeSeq = DG.Tweening.DOTween.Sequence().Join(wordText.DOFade(0f, 0.5f));
