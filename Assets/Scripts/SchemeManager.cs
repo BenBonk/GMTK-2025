@@ -17,8 +17,15 @@ public class SchemeManager : MonoBehaviour
         ChangeScheme(0);
     }
 
-    public void SetRandomScheme()
+    public void SetRandomScheme(int roundNumber)
     {
+        if (roundNumber == 1)
+        {
+            ChangeScheme(0);
+            return;
+        }
+
+
         int odds = Random.Range(0, 100);
         if (odds < 70)
         {

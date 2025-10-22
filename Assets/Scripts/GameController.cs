@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     [SerializeField] BoonManager localBoonManager;
     [SerializeField] WishlistGamePanel localWishlistPanel;
     [SerializeField] RandomEventManager localRandomEventManager;
+    [SerializeField] ChallengeEventManager localChallengeEventManager;
     [SerializeField] Material localLightningMat;
     [SerializeField] PostProcessingManager localPostProcessingManager;
     void Awake()
@@ -134,5 +135,11 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localPostProcessingManager; }
         set { instance.localPostProcessingManager = value; }
+    }
+
+    public static ChallengeEventManager challengeEventManager
+    {
+        get { return instance.localChallengeEventManager; }
+        set { instance.localChallengeEventManager = value; }
     }
 }
