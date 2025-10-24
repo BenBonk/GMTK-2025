@@ -41,7 +41,7 @@ MonoBehaviour:
   pointsMultToGive: 2
   currencyToGive: 5
   currencyMultToGive: 0
-  pointsLevelUpIncrease: 1
+  pointsLevelUpIncrease: 2
   pointsLevelUpMult: 0.5
   currencyLevelUpIncrease: 0
   currencyLevelUpMult: 0.2

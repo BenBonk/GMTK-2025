@@ -38,15 +38,15 @@ MonoBehaviour:
   legendaryBoon: {fileID: 11400000, guid: b6edc94cecfeee3439dcf492b056d57e, type: 2}
   isPredator: 0
   pointsToGive: 0
-  pointsMultToGive: 0
+  pointsMultToGive: 1.2
   currencyToGive: 0
-  currencyMultToGive: 0
+  currencyMultToGive: 0.2
   pointsLevelUpIncrease: 0
-  pointsLevelUpMult: 0
+  pointsLevelUpMult: 0.1
   currencyLevelUpIncrease: 0
-  currencyLevelUpMult: 0
-  price: 0
-  upgradeCost: 0
+  currencyLevelUpMult: 0.1
+  price: 110
+  upgradeCost: 150
   references:
     version: 2
     RefIds: []
