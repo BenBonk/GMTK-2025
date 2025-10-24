@@ -79,6 +79,8 @@ public class Animal : MonoBehaviour
             transform.position = startPos;
         }
         currentSpeed = speed;
+
+        SubscribeToBeeStingEvents();
     }
     
 
@@ -393,6 +395,51 @@ public class Animal : MonoBehaviour
     public virtual void ActivateLegendary()
     {
         
+    }
+
+    private void SubscribeToBeeStingEvents()
+    {
+        Bee[] allBees = FindObjectsOfType<Bee>();
+        foreach (Bee bee in allBees)
+        {
+            bee.OnSting.AddListener(OnBeeStingDetected);
+        }
+    }
+
+    private void UnsubscribeFromBeeStingEvents()
+    {
+        Bee[] allBees = FindObjectsOfType<Bee>();
+        foreach (Bee bee in allBees)
+        {
+            bee.OnSting.RemoveListener(OnBeeStingDetected);
+        }
+    }
+
+    private void OnBeeStingDetected(Animal stungAnimal)
+    {
+        if (stungAnimal == this)
+        {
+            DieFromBee();
+        }
+    }
+
+    void DieFromBee()
+    {
+        isLassoed = false;
+        currentSpeed = 0f;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        
+        DOTween.Sequence()
+            .Append(transform.DOMoveY(transform.position.y-.5f, 0.5f).SetEase(Ease.InBack))
+            .Join(transform.DOScaleY(-1, 0f))
+            .Join(sr.DOFade(0f, 0.5f))
+            .OnComplete(() => Destroy(gameObject));
+    }
+
+    private void OnDestroy()
+    {
+        UnsubscribeFromBeeStingEvents();
     }
 
 }

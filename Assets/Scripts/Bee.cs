@@ -38,7 +38,8 @@ public class Bee : Animal
     [Serializable]
     public class StingEvent : UnityEngine.Events.UnityEvent<Animal> { }
     public StingEvent OnSting;
-
+    public GameObject beePoof;
+    
     private enum BeeState { Patrol, Stalking, PreDive, PullBack, Diving, Recover }
     private BeeState state = BeeState.Patrol;
 
@@ -305,6 +306,7 @@ public class Bee : Animal
             OnSting?.Invoke(target);
             if (destroyAfterSting)
             {
+                Instantiate(beePoof, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
             else

@@ -23,6 +23,7 @@ public class ChallengeEventManager : MonoBehaviour
     {
         gameManager = GameController.gameManager;
         //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
+        StartChallenge(3);
     }
 
     public int GetChallengeEvent()

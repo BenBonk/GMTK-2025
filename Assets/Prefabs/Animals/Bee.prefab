@@ -136,11 +136,12 @@ MonoBehaviour:
   diveDelayRange: {x: 1, y: 1}
   pullBackDistance: 0.5
   pullBackTime: 0.15
-  diveSpeed: 8
+  diveSpeed: 12
   localStingerDir: {x: -1, y: 0}
   destroyAfterSting: 1
   recoverUpKick: 4
   OnSting:
     m_PersistentCalls:
       m_Calls: []
+  beePoof: {fileID: 7982410124831557159, guid: 59a51c6a13a48ea408203f9a35b48d70, type: 3}
   spawnTimer: 2.5
