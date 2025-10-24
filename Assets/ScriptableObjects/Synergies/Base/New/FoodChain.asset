@@ -31,12 +31,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: -581445162, guid: c7fbdce819272c34fba73cab371828da, type: 3}
-  price: 0
+  price: 210
   isExactMatch: 0
   currencyBonus: 0
-  currencyMult: 0
-  pointsBonus: 0
-  pointsMult: 0
+  currencyMult: 0.75
+  pointsBonus: 10
+  pointsMult: 3
   animalsNeeded:
   - Wolf
   - Cat

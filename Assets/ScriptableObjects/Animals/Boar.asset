@@ -40,11 +40,11 @@ MonoBehaviour:
   pointsToGive: 3
   pointsMultToGive: -1
   currencyToGive: 3
-  currencyMultToGive: -1
+  currencyMultToGive: -1.5
   pointsLevelUpIncrease: 3
   pointsLevelUpMult: -0.03
   currencyLevelUpIncrease: -2
-  currencyLevelUpMult: 0.05
+  currencyLevelUpMult: 0.2
   price: 40
   upgradeCost: 90
   references:

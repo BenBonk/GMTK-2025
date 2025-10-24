@@ -31,12 +31,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: 1487362366, guid: c7fbdce819272c34fba73cab371828da, type: 3}
-  price: 0
+  price: 175
   isExactMatch: 0
   currencyBonus: 0
-  currencyMult: 0
-  pointsBonus: 0
-  pointsMult: 0
+  currencyMult: 2.75
+  pointsBonus: 5
+  pointsMult: 3
   animalsNeeded:
   - Boar
   - Goat

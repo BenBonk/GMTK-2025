@@ -31,12 +31,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: 1414034175, guid: c7fbdce819272c34fba73cab371828da, type: 3}
-  price: 0
+  price: 275
   isExactMatch: 0
-  currencyBonus: 0
-  currencyMult: 0
-  pointsBonus: 0
-  pointsMult: 0
+  currencyBonus: 25
+  currencyMult: 2.5
+  pointsBonus: 25
+  pointsMult: 2.5
   animalsNeeded:
   - Cow
   - Boar

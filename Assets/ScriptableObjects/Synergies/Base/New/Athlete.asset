@@ -31,12 +31,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: -1052807292, guid: c7fbdce819272c34fba73cab371828da, type: 3}
-  price: 0
+  price: 80
   isExactMatch: 0
-  currencyBonus: 0
+  currencyBonus: 12
   currencyMult: 0
-  pointsBonus: 0
-  pointsMult: 0
+  pointsBonus: 12
+  pointsMult: 1
   animalsNeeded:
   - Horse
   - Puma

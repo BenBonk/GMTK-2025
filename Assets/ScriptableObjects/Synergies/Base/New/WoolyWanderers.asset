@@ -31,12 +31,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: -529240277, guid: c7fbdce819272c34fba73cab371828da, type: 3}
-  price: 0
+  price: 135
   isExactMatch: 0
   currencyBonus: 0
-  currencyMult: 0
-  pointsBonus: 0
-  pointsMult: 0
+  currencyMult: 0.5
+  pointsBonus: 25
+  pointsMult: 1
   animalsNeeded:
   - Sheep
   - Alpaca

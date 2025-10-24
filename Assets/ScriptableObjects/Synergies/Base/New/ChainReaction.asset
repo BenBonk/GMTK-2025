@@ -31,12 +31,12 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   art: {fileID: -1358941052, guid: c7fbdce819272c34fba73cab371828da, type: 3}
-  price: 0
+  price: 234
   isExactMatch: 0
-  currencyBonus: 0
-  currencyMult: 0
-  pointsBonus: 0
-  pointsMult: 0
+  currencyBonus: 13
+  currencyMult: 0.4
+  pointsBonus: 11
+  pointsMult: 1.2
   animalsNeeded:
   - BarnCat
   - Dog
