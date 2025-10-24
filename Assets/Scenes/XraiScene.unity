@@ -14115,7 +14115,7 @@ MonoBehaviour:
   minCacti: 2
   maxCacti: 4
   bee: {fileID: 6855987514067192795, guid: 0e9fd5666e641054180f414070b4069c, type: 3}
-  tumbleweed: {fileID: 0}
+  tumbleweed: {fileID: 3198163530796938129, guid: 404dd1fc263091d4bbd1b78f464aeeb9, type: 3}
   lastEvent: 67
   challengeEventStrings:
   - m_TableReference:
