@@ -53475,7 +53475,7 @@ Transform:
   m_GameObject: {fileID: 1907060401}
   serializedVersion: 2
   m_LocalRotation: {x: 0.50048006, y: 0.49951977, z: -0.49876735, w: -0.50122947}
-  m_LocalPosition: {x: 4.99, y: 15.79, z: 729.0133}
+  m_LocalPosition: {x: 4.15, y: 15.79, z: 729.0133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54850,7 +54850,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 20214
+        atime1: 24549
         atime2: 65535
         atime3: 0
         atime4: 0
@@ -54895,8 +54895,8 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     mode: 1
-    timeMode: 0
-    fps: 30
+    timeMode: 2
+    fps: 15
     frameOverTime:
       serializedVersion: 2
       minMaxState: 0
@@ -55008,13 +55008,22 @@ ParticleSystem:
     tilesY: 1
     animationType: 0
     rowIndex: 0
-    cycles: 0.0001
+    cycles: 1
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 8371938986527376862, guid: 5c92ddf904fcd3b45ba9c3b640ef027b, type: 3}
-    - sprite: {fileID: -172499247755040552, guid: 5c92ddf904fcd3b45ba9c3b640ef027b, type: 3}
-    - sprite: {fileID: -754709855, guid: 5c92ddf904fcd3b45ba9c3b640ef027b, type: 3}
+    - sprite: {fileID: -6055808564847020282, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -6055808564847020282, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: 5684246840168842447, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -4957926784242071312, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -9203959782595552244, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -1336555451043838861, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: 7940048463108850609, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -1515126092, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -1694112829, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: 1545717130, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -1157321237, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
+    - sprite: {fileID: -1157321237, guid: 14da405d41c33fd4c88ceec8649d6f9f, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
