@@ -727,7 +727,7 @@ public class GameManager : MonoBehaviour
         yield return skipper.AwaitTween(wordObj.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
 
         // Pause on screen
-        yield return skipper.Wait(displayDuration + 0.5f);
+        yield return skipper.Wait(displayDuration + 0.25f);
 
         if (roundNumber % challengeRoundFrequency == 0)
         {
@@ -758,7 +758,7 @@ public class GameManager : MonoBehaviour
         }
 
             // Pause again
-            yield return skipper.Wait(displayDuration);
+            yield return skipper.Wait(displayDuration/2);
 
         // Fade out text and sprites together (click skips to end)
         var fadeSeq = DG.Tweening.DOTween.Sequence().Join(wordText.DOFade(0f, 0.5f));

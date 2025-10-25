@@ -1,24 +1,29 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
-public class Bee : Animal
+[RequireComponent(typeof(SpriteRenderer))]
+public class Bee : MonoBehaviour
 {
+    // ---------- Patrol ----------
     [Header("Patrol")]
+    public float speed = 3f;
     public float waveAmplitude = 1f;
     public float waveFrequency = 2f;
+    public float tiltFrequency = 3f;
+    public float maxTiltAmplitude = 20f;
 
-    private bool initialized = false;
-    private float waveProgress = 0f;
-    private float startY;
-
+    // ---------- Targeting ----------
     [Header("Targeting")]
     public float detectRadius = 3.0f;
     public float minDetectRadius = 0.75f;
-    public LayerMask animalMask;
-    public bool includePredators = true;
+    public bool includePredators = true;      // if false, skip Animal.isPredator
     public float retargetCooldown = 0.6f;
-    [Range(0f, 180f)] public float frontConeAngle = 60f;
+    [Range(0f, 180f)] public float frontConeAngle = 60f; // vision cone in front
+    [Tooltip("Time after spawn before targeting is allowed")]
+    public float spawnTargetDelay = 0.5f;
 
+    // ---------- Hover & Attack ----------
     [Header("Hover & Attack")]
     public float hoverHeight = 1.25f;
     public float hoverSpeed = 6f;
@@ -27,88 +32,172 @@ public class Bee : Animal
     public float pullBackDistance = 0.35f;
     public float pullBackTime = 0.25f;
     public float diveSpeed = 12f;
+    public float diveAccel = 35f;
 
+    // ---------- Stinger ----------
     [Header("Stinger Orientation")]
-    public Vector2 localStingerDir = new Vector2(-1f, 0f);
+    [Tooltip("Local-space direction pointing out of the stinger tip in the sprite art")]
+    public Vector2 localStingerDir = new Vector2(-1f, 0f); // left in art
 
+    // ---------- After Sting ----------
     [Header("After Sting")]
     public bool destroyAfterSting = false;
     public float recoverUpKick = 4f;
 
-    [Serializable]
-    public class StingEvent : UnityEngine.Events.UnityEvent<Animal> { }
+    [Serializable] public class StingEvent : UnityEngine.Events.UnityEvent<Animal> { }
     public StingEvent OnSting;
     public GameObject beePoof;
-    
+
+    // ---------- State ----------
     private enum BeeState { Patrol, Stalking, PreDive, PullBack, Diving, Recover }
     private BeeState state = BeeState.Patrol;
 
+    // patrol internals
+    private float currentSpeed;
+    private float waveProgress, startY;
+    private bool initialized;
+
+    // timers
+    private float spawnTimer;
+    private float retargetTimer;
+
+    // target/points
     private Animal target;
-    private float retargetTimer = 0f;
-    private float diveVy = 0f;
-    private float diveVel = 0f;
     private Vector3 hoverPoint;
+
+    // pullback
     private Vector3 pullStart, pullEnd, pullDir;
-    private float pullTimer = 0f;
+    private float pullTimer;
 
+    // dive
+    private float diveVel;      // also reused as the pre-dive delay countdown holder
+    private float recoverVy;
+
+    // tilt calc
+    private float tiltProgress;
+    private Vector3 previousPos;
+
+    // camera clamp
+    private float topLimitY, bottomLimitY;
+
+    // facing
     private bool facingRight = true;
-    public float spawnTimer = 3f; // initial delay before acquiring targets
 
-    public override void Start()
+    public static event Action<Animal> OnAnyBeeSting;
+
+
+    // ---------- Unity ----------
+    private void Awake()
     {
-        base.Start();
-        Camera cam = Camera.main;
-        if (cam != null)
+        ComputeVerticalLimits();
+    }
+
+    private void Start()
+    {
+        // Start slightly offscreen left; move to the right
+        var cam = Camera.main;
+        if (cam)
         {
-            Vector3 rightEdge = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height / 2f, cam.nearClipPlane));
-            Vector3 leftEdge = cam.ScreenToWorldPoint(new Vector3(0, Screen.height / 2f, cam.nearClipPlane));
-            leftEdgeX = leftEdge.x - 1f;
-            startPos = new Vector3(leftEdge.x - 1f, transform.position.y, transform.position.z);
+            var leftEdge = cam.ScreenToWorldPoint(new Vector3(0, Screen.height * 0.5f, cam.nearClipPlane));
+            var startPos = new Vector3(leftEdge.x - 1f, transform.position.y, transform.position.z);
             transform.position = startPos;
         }
+
         currentSpeed = speed;
+
+        // spawn delay
+        spawnTimer = spawnTargetDelay;
+
+        // anchor patrol wave around current height
+        startY = ClampY(transform.position.y, margin: waveAmplitude);
+        previousPos = transform.position;
+
+        // face right to start
+        SetFacingRight(true);
     }
 
-    public void Update()
+    private void Update()
     {
         if (spawnTimer > 0f) spawnTimer -= Time.deltaTime;
-        base.Update();
-    }
-
-    protected override Vector3 ComputeMove()
-    {
         if (retargetTimer > 0f) retargetTimer -= Time.deltaTime;
+
+        Vector3 next = transform.position;
 
         switch (state)
         {
             case BeeState.Patrol:
                 TryAcquireTarget();
-                return PatrolMove();
+                next = PatrolMove();
+                break;
 
             case BeeState.Stalking:
-                if (!ValidateTarget()) { LoseTarget(); return PatrolMove(); }
-                return StalkMove();
+                if (TargetInvalidOrLassoed()) { LoseTarget(); next = PatrolMove(); break; }
+                next = StalkMove();
+                break;
 
             case BeeState.PreDive:
-                if (!ValidateTarget()) { LoseTarget(); return PatrolMove(); }
-                return PreDiveMove();
+                if (TargetInvalidOrLassoed()) { LoseTarget(); next = PatrolMove(); break; }
+                next = PreDiveMove();
+                break;
 
             case BeeState.PullBack:
-                if (!ValidateTarget()) { LoseTarget(); return PatrolMove(); }
-                return PullBackMove();
+                if (TargetInvalidOrLassoed()) { LoseTarget(); next = PatrolMove(); break; }
+                next = PullBackMove();
+                break;
 
             case BeeState.Diving:
-                if (!ValidateTarget()) { LoseTarget(); return PatrolMove(); }
-                return DiveMove();
+                if (TargetInvalidOrLassoed()) { LoseTarget(); next = PatrolMove(); break; }
+                next = DiveMove();
+                break;
 
             case BeeState.Recover:
-                return RecoverMove();
+                next = RecoverMove();
+                break;
         }
 
-        return transform.position;
+        // clamp Y to camera view
+        next.y = Mathf.Clamp(next.y, bottomLimitY, topLimitY);
+
+        // apply motion
+        transform.position = next;
     }
 
-    // ----------------- Patrol -----------------
+    private void LateUpdate()
+    {
+        // compute actual speed magnitude for tilt scaling
+        float actualSpeed = (transform.position - previousPos).magnitude / Mathf.Max(Time.deltaTime, 1e-6f);
+        previousPos = transform.position;
+
+        switch (state)
+        {
+            case BeeState.Patrol:
+            case BeeState.Stalking:
+                // base "run tilt": sine wobble scaled by speed ratio
+                tiltProgress += Time.deltaTime * tiltFrequency;
+                float denom = Mathf.Max(0.0001f, Mathf.Abs(speed));
+                float speedFactor = Mathf.Clamp01(actualSpeed / denom);
+                float amplitude = maxTiltAmplitude * speedFactor;
+                float angle = Mathf.Sin(tiltProgress * Mathf.PI * 2f) * amplitude;
+                transform.rotation = Quaternion.Euler(0f, 0f, angle);
+                break;
+
+            case BeeState.PreDive:
+            case BeeState.PullBack:
+            case BeeState.Diving:
+                // aim gradually at target
+                AlignStingerToTarget(Time.deltaTime);
+                break;
+
+            case BeeState.Recover:
+                // gentle wobble while recovering
+                tiltProgress += Time.deltaTime * tiltFrequency;
+                float angleR = Mathf.Sin(tiltProgress * Mathf.PI * 2f) * (maxTiltAmplitude * 0.5f);
+                transform.rotation = Quaternion.Euler(0f, 0f, angleR);
+                break;
+        }
+    }
+
+    // ---------- Movement ----------
     private Vector3 PatrolMove()
     {
         if (!initialized)
@@ -125,108 +214,18 @@ public class Bee : Animal
         return next;
     }
 
-    private void AdjustStartYToFitWave()
-    {
-        float z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
-        Vector3 bottomWorld = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, z));
-        Vector3 topWorld = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 1f, z));
-        float halfHeight = GetComponent<SpriteRenderer>().bounds.extents.y;
-        float topLimit = topWorld.y - halfHeight;
-        float bottomLimit = bottomWorld.y + halfHeight;
-        float maxY = topLimit - waveAmplitude;
-        float minY = bottomLimit + waveAmplitude;
-        startY = Mathf.Clamp(transform.position.y, minY, maxY);
-    }
-
-    // ----------------- Targeting -----------------
-    void TryAcquireTarget()
-    {
-        if (spawnTimer > 0f) return;
-        if (retargetTimer > 0f) return;
-
-        Animal best = null;
-        float bestScore = float.PositiveInfinity;  // smaller is better
-
-        Vector2 forward = GetWorldStingerDir();
-        float maxSqr = detectRadius * detectRadius;
-        float minSqr = minDetectRadius * minDetectRadius;
-
-        Animal[] all = FindObjectsOfType<Animal>();
-        foreach (var a in all)
-        {
-            if (a == this || !ValidVictim(a)) continue;
-
-            Vector2 toTarget = a.transform.position - transform.position;
-            float d2 = toTarget.sqrMagnitude;
-            if (d2 > maxSqr || d2 < minSqr) continue;
-
-            float angle = Vector2.Angle(forward, toTarget);
-            if (angle > frontConeAngle * 0.5f) continue;
-
-            // --- new part: prioritize closer Y-level alignment ---
-            float yDiff = Mathf.Abs(a.transform.position.y - transform.position.y);
-
-            // compute a score favoring same Y-level and proximity
-            // weight Y-difference slightly higher so the bee stays level
-            float score = d2 + (yDiff * yDiff * 2f); // tweak multiplier to taste
-
-            if (score < bestScore)
-            {
-                best = a;
-                bestScore = score;
-            }
-        }
-
-        if (best != null)
-        {
-            target = best;
-            state = BeeState.Stalking;
-        }
-    }
-
-
-    bool ValidVictim(Animal a)
-    {
-        if (!a || a == this) return false;
-        if (!includePredators && a.isPredator) return false;
-        if (!a.gameObject.activeInHierarchy) return false;
-        if (a.isLassoed) return false;
-        return true;
-    }
-
-    bool ValidateTarget()
-    {
-        return target && ValidVictim(target);
-    }
-
-    void LoseTarget()
-    {
-        target = null;
-        state = BeeState.Patrol;
-        retargetTimer = retargetCooldown;
-        diveVy = 0f;
-        diveVel = 0f;
-
-        // Face right again
-        SetFacingRight(true);
-
-        // Re-anchor patrol
-        startY = ClampY(transform.position.y);
-        waveProgress = 0f;
-    }
-
-    // ----------------- Movement States -----------------
-    Vector3 StalkMove()
+    private Vector3 StalkMove()
     {
         Vector3 p = transform.position;
         Vector3 tp = target.transform.position;
         float targetTopY = GetTopY(target);
         Vector3 desired = new Vector3(tp.x, targetTopY + hoverHeight, p.z);
 
+        // move toward hover point
         p = Vector3.MoveTowards(p, desired, hoverSpeed * Time.deltaTime);
 
-        // Flip if target is behind
-        float xToTarget = target.transform.position.x - transform.position.x;
+        // flip ONLY if target is behind while stalking
+        float xToTarget = tp.x - transform.position.x;
         bool targetIsRight = xToTarget > 0f;
         bool currentlyRight = transform.localScale.x > 0f;
         if (targetIsRight != currentlyRight)
@@ -238,62 +237,69 @@ public class Bee : Animal
         {
             hoverPoint = desired;
             state = BeeState.PreDive;
-            diveVy = 0f;
-            diveVel = 0f;
-            SetFacingRight(true); // flip back before hover
-            diveVy = UnityEngine.Random.Range(diveDelayRange.x, diveDelayRange.y);
+
+            // flip back right before hover to keep aiming stable
+            SetFacingRight(true);
+
+            // store hover delay in diveVel temporarily
+            diveVel = UnityEngine.Random.Range(diveDelayRange.x, diveDelayRange.y);
         }
 
         return p;
     }
 
-    Vector3 PreDiveMove()
+    private Vector3 PreDiveMove()
     {
         Vector3 p = hoverPoint;
-        AlignStingerToTarget(Time.deltaTime);
-        diveVy -= Time.deltaTime;
-        if (diveVy <= 0f)
+
+        // countdown hover delay (stored in diveVel)
+        diveVel -= Time.deltaTime;
+        if (diveVel <= 0f)
         {
             state = BeeState.PullBack;
             pullTimer = pullBackTime;
             pullDir = -(target.transform.position - transform.position).normalized;
             pullStart = transform.position;
             pullEnd = pullStart + pullDir * pullBackDistance;
-            SetFacingRight(true);
+            SetFacingRight(true); // keep attack states facing right
         }
+
         return p;
     }
 
-    Vector3 PullBackMove()
+    private Vector3 PullBackMove()
     {
         pullTimer -= Time.deltaTime;
         float t = 1f - Mathf.Clamp01(pullTimer / pullBackTime);
         Vector3 p = Vector3.Lerp(pullStart, pullEnd, t);
-        AlignStingerToTarget(Time.deltaTime);
+
         if (pullTimer <= 0f)
         {
             state = BeeState.Diving;
             diveVel = 0f;
             SetFacingRight(true);
         }
+
         return p;
     }
 
-    Vector3 DiveMove()
+    private Vector3 DiveMove()
     {
-        AlignStingerToTarget(Time.deltaTime);
         Vector3 p = transform.position;
         Vector3 tp = target.transform.position;
         Vector2 aimDir = (tp - p).normalized;
-        p += (Vector3)aimDir * (diveSpeed * Time.deltaTime);
 
-        // hit test
+        // accelerate toward target up to diveSpeed
+        diveVel = Mathf.Min(diveSpeed, diveVel + diveAccel * Time.deltaTime);
+        p += (Vector3)aimDir * (diveVel * Time.deltaTime);
+
+        // hit test: bee pivot inside collider/bounds
         bool hit = false;
         var col = target.GetComponent<Collider2D>();
         if (col)
         {
             Vector2 closest = col.ClosestPoint(p);
-            hit = ((Vector2)p - closest).sqrMagnitude <= 1e-6f;
+            hit = ((Vector2)p - closest).sqrMagnitude <= 1e-8f;
         }
         else
         {
@@ -303,7 +309,7 @@ public class Bee : Animal
 
         if (hit)
         {
-            OnSting?.Invoke(target);
+            OnAnyBeeSting?.Invoke(target);
             if (destroyAfterSting)
             {
                 Instantiate(beePoof, transform.position, Quaternion.identity);
@@ -312,29 +318,180 @@ public class Bee : Animal
             else
             {
                 state = BeeState.Recover;
-                diveVy = recoverUpKick;
+                recoverVy = recoverUpKick;
             }
         }
+
         return p;
     }
 
-    Vector3 RecoverMove()
+    private Vector3 RecoverMove()
     {
         Vector3 p = transform.position;
-        p.y += diveVy * Time.deltaTime;
-        diveVy += -12f * Time.deltaTime;
-        if (diveVy <= 0f)
+        p.y += recoverVy * Time.deltaTime;
+        recoverVy += -12f * Time.deltaTime;
+
+        if (recoverVy <= 0f)
         {
             state = BeeState.Patrol;
             retargetTimer = retargetCooldown;
-            startY = ClampY(p.y);
-            waveProgress = 0f;
+
+            // face right for patrol, re-anchor wave and fade amplitude in
             SetFacingRight(true);
+            startY = ClampY(p.y, margin: waveAmplitude);
+            waveProgress = 0f;
+            StartCoroutine(RestoreWaveAmplitude());
         }
+
         return p;
     }
 
-    // ----------------- Helpers -----------------
+    // ---------- Targeting ----------
+    private void TryAcquireTarget()
+    {
+        if (spawnTimer > 0f) return;        // <-- spawn delay enforced
+        if (retargetTimer > 0f) return;
+
+        Animal best = null;
+        float bestScore = float.PositiveInfinity;
+
+        Vector2 forward = VisionForward();  // <-- cone faces horizontal based on sprite flip
+        float maxSqr = detectRadius * detectRadius;
+        float minSqr = minDetectRadius * minDetectRadius;
+
+        var all = FindObjectsOfType<Animal>();
+        foreach (var a in all)
+        {
+            if (!IsCandidate(a)) continue;
+
+            Vector2 to = a.transform.position - transform.position;
+            float d2 = to.sqrMagnitude;
+            if (d2 > maxSqr || d2 < minSqr) continue;
+
+            float angle = Vector2.Angle(forward, to);
+            if (angle > frontConeAngle * 0.5f) continue;
+
+            // prioritize same Y-level, then proximity
+            float yDiff = Mathf.Abs(a.transform.position.y - transform.position.y);
+            float score = d2 + (yDiff * yDiff * 2f);
+
+            if (score < bestScore)
+            {
+                bestScore = score;
+                best = a;
+            }
+        }
+
+        if (best != null)
+        {
+            target = best;
+            state = BeeState.Stalking;
+        }
+    }
+
+    private bool IsCandidate(Animal a)
+    {
+        if (a == null || a.gameObject == null) return false;
+        if (!a.gameObject.activeInHierarchy) return false;
+        if (a.isLassoed) return false;
+        if (!includePredators && a.isPredator) return false;
+        return true;
+    }
+
+    private bool TargetInvalidOrLassoed()
+    {
+        return target == null || !target.gameObject.activeInHierarchy || target.isLassoed || (!includePredators && target.isPredator);
+    }
+
+    private void LoseTarget()
+    {
+        target = null;
+        state = BeeState.Patrol;
+        retargetTimer = retargetCooldown;
+        diveVel = 0f;
+        recoverVy = 0f;
+
+        // face right and re-anchor patrol wave
+        SetFacingRight(true);
+        startY = ClampY(transform.position.y, margin: waveAmplitude);
+        waveProgress = 0f;
+        StartCoroutine(RestoreWaveAmplitude());
+    }
+
+    // ---------- Rotation / Aiming ----------
+    private void AlignStingerToTarget(float dt)
+    {
+        if (!target) return;
+
+        Vector2 aimDir = ((Vector2)(target.transform.position - transform.position)).normalized;
+        if (aimDir.sqrMagnitude < 1e-6f) return;
+
+        Vector2 stingerWorld = GetWorldStingerDir();
+        Quaternion want = Quaternion.FromToRotation(stingerWorld, aimDir) * transform.rotation;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, want, alignRotSpeed * dt);
+    }
+
+    private Vector2 GetWorldStingerDir()
+    {
+        // local stinger dir aware of X flip (so aiming matches visual)
+        Vector2 dir = localStingerDir.normalized;
+        if (transform.localScale.x < 0f) dir.x = -dir.x;
+        return ((Vector2)(transform.rotation * (Vector3)dir)).normalized;
+    }
+
+    // Cone should face horizontally, independent of tilt.
+    private Vector2 VisionForward()
+    {
+        return (transform.localScale.x >= 0f) ? Vector2.right : Vector2.left;
+    }
+
+    private void SetFacingRight(bool right)
+    {
+        var sc = transform.localScale;
+        sc.x = Mathf.Abs(sc.x) * (right ? 1f : -1f);
+        transform.localScale = sc;
+        facingRight = right;
+    }
+
+    // ---------- Visual polish ----------
+    private IEnumerator RestoreWaveAmplitude()
+    {
+        float t = 0f;
+        float originalAmp = waveAmplitude;
+        waveAmplitude = 0f;
+        while (t < 0.5f)
+        {
+            t += Time.deltaTime;
+            waveAmplitude = Mathf.Lerp(0f, originalAmp, t / 0.5f);
+            yield return null;
+        }
+        waveAmplitude = originalAmp;
+    }
+
+
+    // ---------- Helpers ----------
+    private void ComputeVerticalLimits()
+    {
+        var cam = Camera.main;
+        if (!cam) { topLimitY = float.PositiveInfinity; bottomLimitY = float.NegativeInfinity; return; }
+
+        // distance along camera forward
+        float zDist = Mathf.Abs(Vector3.Dot(transform.position - cam.transform.position, cam.transform.forward));
+
+        var sr = GetComponent<SpriteRenderer>();
+        float halfH = sr ? sr.bounds.extents.y : 0f;
+
+        Vector3 topWorld = cam.ViewportToWorldPoint(new Vector3(0.5f, 1f, zDist));
+        Vector3 botWorld = cam.ViewportToWorldPoint(new Vector3(0.5f, 0f, zDist));
+        topLimitY = topWorld.y - halfH;
+        bottomLimitY = botWorld.y + halfH;
+    }
+
+    private float ClampY(float y, float margin = 0f)
+    {
+        return Mathf.Clamp(y, bottomLimitY + margin, topLimitY - margin);
+    }
+
     private float GetTopY(Animal a)
     {
         var sr = a.GetComponent<SpriteRenderer>();
@@ -342,49 +499,32 @@ public class Bee : Animal
         return a.transform.position.y;
     }
 
-    void SetFacingRight(bool right)
+    private void AdjustStartYToFitWave()
     {
-        Vector3 sc = transform.localScale;
-        sc.x = Mathf.Abs(sc.x) * (right ? 1f : -1f);
-        transform.localScale = sc;
-        facingRight = right;
+        startY = ClampY(transform.position.y, margin: waveAmplitude);
     }
 
-    Vector2 GetWorldStingerDir()
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
     {
-        Vector2 dir = localStingerDir.normalized;
-        if (transform.localScale.x < 0f) dir.x = -dir.x;
-        return ((Vector2)(transform.rotation * (Vector3)dir)).normalized;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectRadius);
+
+        // min radius
+        Gizmos.color = new Color(1f, 0.5f, 0f, 0.35f);
+        Gizmos.DrawWireSphere(transform.position, minDetectRadius);
+
+        // vision cone (horizontal, independent of tilt)
+        Vector3 fwd = VisionForward();
+        float half = frontConeAngle * 0.5f;
+        Quaternion leftRot = Quaternion.AngleAxis(+half, Vector3.forward);
+        Quaternion rightRot = Quaternion.AngleAxis(-half, Vector3.forward);
+        Vector3 L = leftRot * fwd * detectRadius;
+        Vector3 R = rightRot * fwd * detectRadius;
+
+        Gizmos.color = new Color(1f, 0.8f, 0f, 0.35f);
+        Gizmos.DrawLine(transform.position, transform.position + L);
+        Gizmos.DrawLine(transform.position, transform.position + R);
     }
-
-    void AlignStingerToTarget(float dt)
-    {
-        if (!target) return;
-        Vector2 aimDir = ((Vector2)(target.transform.position - transform.position)).normalized;
-        if (aimDir.sqrMagnitude < 1e-6f) return;
-        Vector2 stingerWorld = GetWorldStingerDir();
-        Quaternion want = Quaternion.FromToRotation(stingerWorld, aimDir) * transform.rotation;
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, want, alignRotSpeed * dt);
-    }
-
-    protected override void ApplyRunTilt()
-    {
-        switch (state)
-        {
-            case BeeState.Patrol:
-            case BeeState.Stalking:
-                base.ApplyRunTilt();
-                break;
-
-            case BeeState.PreDive:
-            case BeeState.PullBack:
-            case BeeState.Diving:
-                AlignStingerToTarget(Time.deltaTime);
-                break;
-
-            case BeeState.Recover:
-                base.ApplyRunTilt();
-                break;
-        }
-    }
+#endif
 }

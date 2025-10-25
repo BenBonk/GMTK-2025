@@ -399,20 +399,12 @@ public class Animal : MonoBehaviour
 
     private void SubscribeToBeeStingEvents()
     {
-        Bee[] allBees = FindObjectsOfType<Bee>();
-        foreach (Bee bee in allBees)
-        {
-            bee.OnSting.AddListener(OnBeeStingDetected);
-        }
+        Bee.OnAnyBeeSting += OnBeeStingDetected;
     }
 
     private void UnsubscribeFromBeeStingEvents()
     {
-        Bee[] allBees = FindObjectsOfType<Bee>();
-        foreach (Bee bee in allBees)
-        {
-            bee.OnSting.RemoveListener(OnBeeStingDetected);
-        }
+        Bee.OnAnyBeeSting -= OnBeeStingDetected;
     }
 
     private void OnBeeStingDetected(Animal stungAnimal)
@@ -425,7 +417,7 @@ public class Animal : MonoBehaviour
 
     void DieFromBee()
     {
-        isLassoed = false;
+        isLassoed = true;
         currentSpeed = 0f;
 
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
