@@ -27,6 +27,7 @@ public class RandomEventManager : MonoBehaviour
     {
         gameManager = GameController.gameManager;
         //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
+        Invoke("SpawnMole", 7);
     }
 
     public int GetRandomEvent()

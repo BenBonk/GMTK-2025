@@ -13136,6 +13136,75 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8132715894162525726, guid: 3021cd6a08b52534b87b22ca777a4dce, type: 3}
   m_PrefabInstance: {fileID: 7123886096078994728}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &498793683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 444151170295139913, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_Name
+      value: MoleDig
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195777113403293702, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195777113403293702, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195777113403293702, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.186
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4261146
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.196616
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193029406406940582, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
 --- !u!1 &510624084
 GameObject:
   m_ObjectHideFlags: 0
@@ -13267,7 +13336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbb09ddd1797c14bb29666bdbb0ab2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mole: {fileID: 5465896840286953389, guid: 4ef3aa53ebbac2347bbcda39deabf051, type: 3}
+  mole: {fileID: 444151170295139913, guid: 37143f156277a9b4e841459fb872a29d, type: 3}
   moleBounds: {fileID: 275072178}
   butterfly: {fileID: 6855987514067192795, guid: 1f0ba33ef0984d5499df6725e5c2d622, type: 3}
   lightning: {fileID: 9090687205140348728, guid: f8a94d7410a610746aa82ba0ae898f71, type: 3}
@@ -33400,7 +33469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 1
+  isTesting: 0
   player: {fileID: 1887224207}
   harvestLevel: 1
   farmerID: 0
@@ -61297,3 +61366,4 @@ SceneRoots:
   - {fileID: 1510775471}
   - {fileID: 648275336}
   - {fileID: 734021981}
+  - {fileID: 498793683}
