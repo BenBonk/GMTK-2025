@@ -102,13 +102,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aab8db5ab25e5544b4530a5bc1b0563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  rotationSpeed: 180
-  spawnXOffset: 2
-  despawnXOffset: 2
-  speedVariation: 0.5
-  bobAmount: 1.04
-  bobSpeed: 2
+  baseSpeed: 2.75
+  windGustStrength: 1.75
+  windGustFrequency: 0.65
+  gravity: 8
+  bounceElasticity: 0.4
+  bounceUpImpulseRange: {x: 1, y: 3}
+  bounceSideImpulseRange: {x: 0, y: 1}
+  groundClearance: 0.05
+  radiusUnits: 0.45
+  offscreenMargin: 1.5
 --- !u!58 &878869840340554779
 CircleCollider2D:
   m_ObjectHideFlags: 0

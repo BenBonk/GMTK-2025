@@ -653,7 +653,7 @@ public class LassoController : MonoBehaviour
             var col = animal.GetComponent<Collider2D>();
             Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)animal.transform.position;
 
-            if (IsPointInPolygon(point, rawPoints))
+            if (IsPointInPolygon(point, rawPoints) && !animal.isLassoed)
             {
                 animal.isLassoed = true;
                 list.Add(animal.gameObject);

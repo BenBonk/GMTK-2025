@@ -100,43 +100,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60755093aa4a07c4591175594610d465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalData: {fileID: 11400000, guid: e430e885f96bdcb47908efea2b7378de, type: 2}
-  isPredator: 0
   speed: 1.75
-  currentSpeed: 0
-  isLassoed: 0
-  leftEdgeX: 0
-  startPos: {x: 0, y: 0, z: 0}
-  topLimitY: 0
-  bottomLimitY: 0
-  tiltFrequency: 7
-  maxTiltAmplitude: 8
-  legendary: 0
-  forceExit: 0
-  bonusPoints: 0
-  struckByLightning: 0
-  leftIsPositiveScaleX: 0
-  attractBrakeRadius: 2
-  attractArriveRadius: 0.25
-  attractSmoothTime: 0.25
-  attractStopThreshold: 0.02
   waveAmplitude: 0.75
   waveFrequency: 0.75
+  tiltFrequency: 7
+  maxTiltAmplitude: 8
   detectRadius: 3
-  minDetectRadius: 1
-  animalMask:
-    serializedVersion: 2
-    m_Bits: 0
+  minDetectRadius: 1.5
   includePredators: 1
   retargetCooldown: 2
   frontConeAngle: 120
-  hoverHeight: 1.25
-  hoverSpeed: 5
+  spawnTargetDelay: 4.5
+  hoverHeight: 1
+  hoverSpeed: 8
   alignRotSpeed: 720
-  diveDelayRange: {x: 1, y: 1}
+  diveDelayRange: {x: 0.4, y: 0.4}
   pullBackDistance: 0.5
-  pullBackTime: 0.15
-  diveSpeed: 12
+  pullBackTime: 0.1
+  diveSpeed: 16
+  diveAccel: 40
   localStingerDir: {x: -1, y: 0}
   destroyAfterSting: 1
   recoverUpKick: 4
@@ -144,4 +126,3 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   beePoof: {fileID: 7982410124831557159, guid: 59a51c6a13a48ea408203f9a35b48d70, type: 3}
-  spawnTimer: 2.5
