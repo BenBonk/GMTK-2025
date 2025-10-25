@@ -7,7 +7,7 @@ public class RerollManager : MonoBehaviour
 {
     public int startingRerollPrice;
     private int rerollPrice;
-    private int rerollsThisShop;
+    [HideInInspector]public int rerollsThisShop;
     private int rerollPriceThisShop;
     public float rerollMultIncrease;
     
@@ -79,7 +79,7 @@ public class RerollManager : MonoBehaviour
         {
             FBPP.SetInt("mostRerollsInGame", rerollsThisGame);
         }
-        if (rerollsPerShop<=0)
+        if (rerollsPerShop>=rerollsThisShop)
         {
             transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
             canReroll = false;

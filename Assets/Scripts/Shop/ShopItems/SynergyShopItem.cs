@@ -103,6 +103,7 @@ public class SynergyShopItem : ShopItem
                 shopManager.instructionsText.DOFade(1, 0.5f);
                 shopManager.cantPurchaseItem = true;
                 shopManager.overridingBoonItem = this;
+                shopManager.cancelOverride.gameObject.SetActive(true);
                 shopManager.cancelOverride.enabled = true;
                 shopManager.cancelOverride.DOFade(1, 0.5f);
                 GameController.rerollManager.transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);

@@ -16,6 +16,7 @@ public class SynergySlots : MonoBehaviour
     private DescriptionManager descriptionManager;
     private void Start()
     {
+        Debug.Log(gameObject);
         descriptionManager = GameController.descriptionManager;
         shopManager = GameController.shopManager;
         player = GameController.player;
@@ -73,8 +74,11 @@ public class SynergySlots : MonoBehaviour
             shopManager.cantPurchaseItem = false;
             shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);
             shopManager.instructionsText.DOFade(0f, 0.5f);
-            shopManager.cancelOverride.DOFade(0, 0.5f).OnComplete(() => shopManager.cancelOverride.enabled = false);
-            GameController.rerollManager.transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0.25f).SetEase(Ease.OutBack);
+            shopManager.cancelOverride.DOFade(0, 0.5f).OnComplete(() => CancelOverride2());
+            if (GameController.rerollManager.rerollsPerShop>GameController.rerollManager.rerollsThisShop)
+            {
+                GameController.rerollManager.transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0.25f).SetEase(Ease.OutBack);       
+            }
             shopManager.leaveShopButton.transform.DOScale(new Vector3(1.394933f, 1.394933f, 1), 0.25f).SetEase(Ease.OutBack);
             StartCoroutine(Wait());
             GameController.saveManager.SaveGameData();
@@ -88,10 +92,19 @@ public class SynergySlots : MonoBehaviour
         shopManager.cantPurchaseItem = false;
         shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);
         shopManager.instructionsText.DOFade(0f, 0.5f);
-        shopManager.cancelOverride.DOFade(0, 0.5f).OnComplete(() => shopManager.cancelOverride.enabled = false);
-        GameController.rerollManager.transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0.25f).SetEase(Ease.OutBack);
+        shopManager.cancelOverride.DOFade(0, 0.5f).OnComplete(() => CancelOverride2());
+        if (GameController.rerollManager.rerollsPerShop>GameController.rerollManager.rerollsThisShop)
+        {
+            GameController.rerollManager.transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0.25f).SetEase(Ease.OutBack);       
+        }
         shopManager.leaveShopButton.transform.DOScale(new Vector3(1.394933f, 1.394933f, 1), 0.25f).SetEase(Ease.OutBack);
         StartCoroutine(Wait());
+    }
+
+    void CancelOverride2()
+    {
+        shopManager.cancelOverride.enabled = false;
+        shopManager.cancelOverride.gameObject.SetActive(true);
     }
 
     IEnumerator Wait()
