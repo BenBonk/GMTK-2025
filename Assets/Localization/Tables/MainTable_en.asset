@@ -1046,10 +1046,6 @@ MonoBehaviour:
     m_Localized: Loads more boons!
     m_Metadata:
       m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: Now that you know the basics, let's get started!
-    m_Metadata:
-      m_Items: []
   - m_Id: 14715454701920256
     m_Localized: Select a boon to replace
     m_Metadata:
@@ -1540,6 +1536,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23526779938537473
     m_Localized: Lasso a group of animals containing a Fox and a Bunny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: Now that you know the basics, let's get started!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112636493824
+    m_Localized: The more of a specific animal you have, the higher the chance that
+      animal will spawn!
     m_Metadata:
       m_Items: []
   references:

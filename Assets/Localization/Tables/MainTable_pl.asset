@@ -473,7 +473,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 103
     m_Localized: "Na koniec, mo\u017Cesz odnowi\u0107 sklep raz dziennie, a koszt
-      ten wzro\u015Bnie na sta\u0142e!"
+      wzro\u015Bnie na sta\u0142e!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -1084,10 +1084,6 @@ MonoBehaviour:
     m_Localized: "Mn\xF3stwo dodatkowych korzy\u015Bci!"
     m_Metadata:
       m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "Wybierz dobro, kt\xF3re chcesz zast\u0105pi\u0107"
     m_Metadata:
@@ -1278,7 +1274,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031424
-    m_Localized: "Straszliwy wiatropyle: wiatropyle zrywaj\u0105 lassa w kontakcie"
+    m_Localized: "Straszliwy wiatro\u0142om: wiatro\u0142omy zrywaj\u0105 lassa w
+      kontakcie"
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
@@ -1425,7 +1422,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032537
-    m_Localized: Kozi Gbur
+    m_Localized: Kozi Gruff
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
@@ -1463,8 +1460,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032546
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika
-      i pum\u0119"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t, w kt\xF3rej jest kr\xF3liczek
+      i puma"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032547
@@ -1614,6 +1611,10 @@ MonoBehaviour:
   - m_Id: 23526779938537473
     m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 lisa i
       kr\xF3lika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
     m_Metadata:
       m_Items: []
   references:

@@ -322,8 +322,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, darunter ein Huhn, eine Kuh,
-      ein Pferd, ein Schaf und ein Schwein, mit dem Lasso ein.
+    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
+      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -1067,10 +1067,6 @@ MonoBehaviour:
     m_Localized: Jede Menge weitere Vorteile!
     m_Metadata:
       m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: "Nachdem Sie nun die Grundlagen kennen, k\xF6nnen wir loslegen!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "W\xE4hle einen Segen zum Ersetzen aus"
     m_Metadata:
@@ -1585,6 +1581,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23526779938537473
     m_Localized: "Lasso eine Gruppe von Tieren, darunter ein Fuchs und ein H\xE4schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: "Nachdem Sie nun die Grundlagen kennen, k\xF6nnen wir loslegen!"
     m_Metadata:
       m_Items: []
   references:

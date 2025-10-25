@@ -1058,10 +1058,6 @@ MonoBehaviour:
     m_Localized: Muito mais vantagens!
     m_Metadata:
       m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: "Agora que voc\xEA sabe o b\xE1sico, vamos come\xE7ar!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "Selecione uma ben\xE7\xE3o para substituir"
     m_Metadata:
@@ -1453,7 +1449,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032554
-    m_Localized: "La\xE7o: um grupo de animais contendo um gato de celeiro, um cachorro
+    m_Localized: "La\xE7o um grupo de animais contendo um gato de celeiro, um cachorro
       e um coelho"
     m_Metadata:
       m_Items: []
@@ -1562,6 +1558,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23526779938537473
     m_Localized: "La\xE7o um grupo de animais contendo uma raposa e um coelho"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: "Agora que voc\xEA sabe o b\xE1sico, vamos come\xE7ar!"
     m_Metadata:
       m_Items: []
   references:

@@ -912,7 +912,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente ma\xEEtris\xE9e
+    m_Localized: "Gagnez +10 points pour chaque esp\xE8ce diff\xE9rente captur\xE9e
       par lasso"
     m_Metadata:
       m_Items: []
@@ -1034,7 +1034,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8933137060069377
     m_Localized: "Les poules peuvent d\xE9sormais pondre des \u0153ufs qui donnent
-      x1,5 points mult lorsqu'elles sont captur\xE9es au lasso"
+      x1,5 points multiplicateurs lorsqu'elles sont captur\xE9es au lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1063,10 +1063,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: Encore plus d'avantages !
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: "Maintenant que vous connaissez les bases, commen\xE7ons !"
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
@@ -1569,6 +1565,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23526779938537473
     m_Localized: Lasso un groupe d'animaux contenant un renard et un lapin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: "Maintenant que vous connaissez les bases, commen\xE7ons !"
     m_Metadata:
       m_Items: []
   references:

@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -539,7 +539,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boon pi\xF9 acquistati:"
+    m_Localized: "I 3 Boons pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -877,7 +877,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Branco di lupi
+    m_Localized: branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1055,10 +1055,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: Tanti altri vantaggi!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: Ora che conosci le basi, cominciamo!
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
@@ -1255,7 +1251,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031426
-    m_Localized: "Vento in poppa fastidioso: tutti gli animali si muovono pi\xF9
+    m_Localized: "Vento in poppa problematico: tutti gli animali si muovono pi\xF9
       velocemente"
     m_Metadata:
       m_Items: []
@@ -1346,7 +1342,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032528
-    m_Localized: Lasso un gruppo di animali contenente un gatto da fienile e un puma
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile e un puma
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032529
@@ -1562,6 +1558,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23526779938537473
     m_Localized: Lazo un gruppo di animali contenente una volpe e un coniglio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: Ora che conosci le basi, cominciamo!
     m_Metadata:
       m_Items: []
   references:

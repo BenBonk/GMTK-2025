@@ -269,7 +269,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: Lazo un grupo de animales que contiene un zorro y 3 pollos
+    m_Localized: Lazo de un grupo de animales que contiene un zorro y 3 pollos.
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -1060,10 +1060,6 @@ MonoBehaviour:
     m_Localized: "\xA1Muchas m\xE1s ventajas!"
     m_Metadata:
       m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: "Ahora que ya sabes lo b\xE1sico, \xA1comencemos!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 14715454701920256
     m_Localized: "Seleccione una bendici\xF3n para reemplazar"
     m_Metadata:
@@ -1250,7 +1246,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031424
-    m_Localized: 'Terrible Tumbleweed: Las plantas rodantes rompen los lazos al contacto'
+    m_Localized: 'Terrible Tumbleweed: Las Tumbleweeds rompen los lazos al contacto'
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
@@ -1451,8 +1447,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032552
-    m_Localized: "Lazo: un grupo de animales que contiene un conejito, un rat\xF3n
-      y un pollo."
+    m_Localized: "Lazo un grupo de animales que contiene un conejito, un rat\xF3n
+      y un pollo"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032553
@@ -1572,6 +1568,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 23526779938537473
     m_Localized: Lazo un grupo de animales que contiene un zorro y un conejo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: "Ahora que ya sabes lo b\xE1sico, \xA1comencemos!"
     m_Metadata:
       m_Items: []
   references:
