@@ -28,6 +28,7 @@ public class CaptureManager : MonoBehaviour
     private int currentTrigger = 0;
     private int totalPredatorCount = 0;
     HashSet<Sprite> boonSprites = new HashSet<Sprite>();
+    public Sprite lightningBoltIcon;
     public (double, double, double, double, HashSet<Sprite>) MakeCapture(GameObject[] objectsCaptured)
     {
         pointBonus = 0;
@@ -105,6 +106,7 @@ public class CaptureManager : MonoBehaviour
                 {
                     pointMult *= 2;
                     currencyMult *= 2;
+                    boonSprites.Add(lightningBoltIcon);
                 }
                 if (!animal.isPredator)
                 {
