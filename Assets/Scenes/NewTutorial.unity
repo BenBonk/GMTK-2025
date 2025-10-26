@@ -23344,6 +23344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstCapture: 0
   mootiplier: 1
+  lightningBoltIcon: {fileID: 0}
 --- !u!1 &1182770571
 GameObject:
   m_ObjectHideFlags: 0
@@ -40104,6 +40105,8 @@ MonoBehaviour:
   boonDeckCard: {fileID: 7866310356001365729, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
   boonDeckParent: {fileID: 607633427}
   canOverrideBoon: 0
+  boonDeckButton: {fileID: 1254849001}
+  animalDeckButton: {fileID: 286678218}
   references:
     version: 2
     RefIds: []

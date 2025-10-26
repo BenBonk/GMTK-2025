@@ -3,6 +3,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using Random = UnityEngine.Random;
 
 public class SynergyShopItem : ShopItem
@@ -81,7 +82,7 @@ public class SynergyShopItem : ShopItem
                 FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased") + 1);
                 upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
                 Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
-
+                StartCoroutine(DeckPulse());
                 if (chosenBoon.name == "Thief")
                 {
                     GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
@@ -116,5 +117,26 @@ public class SynergyShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
         }
+    }
+    IEnumerator DeckPulse()
+    {
+        var leaveParent = shopManager.leaveShopButton.transform.parent;
+        var leavePos = shopManager.leaveShopButton.transform.position;
+        shopManager.leaveShopButton.transform.SetParent(shopManager.transform);
+        yield return new WaitForSeconds(.25f);
+        Sequence pulse = DOTween.Sequence();
+        pulse.Append(shopManager.boonDeckButton.transform.DOScale(1.10f, 0.1f).SetEase(Ease.OutBack));
+        pulse.Append(shopManager.boonDeckButton.transform.DOShakeRotation(
+            duration: 0.15f,
+            strength: new Vector3(0f, 0f, 6f), 
+            vibrato: 5,
+            randomness: 90,
+            fadeOut: true
+        ));
+        pulse.Append(shopManager.boonDeckButton.transform.DOScale(1f, 0.15f).SetEase(Ease.OutExpo));
+        pulse.Join(shopManager.boonDeckButton.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
+        yield return new WaitForSeconds(.5f);
+        shopManager.leaveShopButton.transform.SetParent(leaveParent);
+        shopManager.leaveShopButton.transform.position = leavePos;
     }
 }

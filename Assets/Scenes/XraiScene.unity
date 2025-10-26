@@ -14111,7 +14111,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cactusBounds: {fileID: 275072178}
-  cacti: []
+  cacti:
+  - {fileID: 5465896840286953389, guid: c1de371da06b0f24fa7d1bcc5f637f98, type: 3}
+  - {fileID: 5465896840286953389, guid: 4353836029bae6649a7c514594f368d8, type: 3}
+  - {fileID: 5465896840286953389, guid: 3c962ef830e0c0043a8e11441e9a8295, type: 3}
+  - {fileID: 5465896840286953389, guid: 4863d4a8874f4d64bbd84f51827e1835, type: 3}
   minCacti: 2
   maxCacti: 4
   bee: {fileID: 6855987514067192795, guid: 0e9fd5666e641054180f414070b4069c, type: 3}
@@ -33968,6 +33972,8 @@ MonoBehaviour:
   boonDeckCard: {fileID: 7866310356001365729, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
   boonDeckParent: {fileID: 9150534869573543089}
   canOverrideBoon: 0
+  boonDeckButton: {fileID: 1071487689}
+  animalDeckButton: {fileID: 150976153}
   references:
     version: 2
     RefIds: []

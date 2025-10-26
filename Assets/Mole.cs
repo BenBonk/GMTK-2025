@@ -19,7 +19,7 @@ public class Mole : MonoBehaviour
             collider2D.enabled = false;  
             transform.DOScaleY(0, .25f).SetEase(Ease.InBack);
             yield return new WaitForSeconds(.25f);
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }

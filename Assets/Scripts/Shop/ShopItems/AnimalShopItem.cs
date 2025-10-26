@@ -79,7 +79,8 @@ public class AnimalShopItem : ShopItem
             AudioManager.Instance.PlaySFX("coins");
             AudioManager.Instance.PlaySFX(chosenAnimal.name);
             GameController.player.playerCurrency -= price;
-            shopManager. UpdateCashText();
+            shopManager.UpdateCashText();
+            StartCoroutine(DeckPulse());
             canPurchase = false;
             FBPP.SetInt(chosenAnimal.animalName.GetLocalizedString(), FBPP.GetInt(chosenAnimal.animalName.GetLocalizedString())+1);
             FBPP.SetInt("totalAnimalsPurchased", FBPP.GetInt("totalAnimalsPurchased")+1);
@@ -92,6 +93,22 @@ public class AnimalShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
         }
+    }
+
+    IEnumerator DeckPulse()
+    {
+        yield return new WaitForSeconds(.25f);
+        Sequence pulse = DOTween.Sequence();
+        pulse.Append(shopManager.animalDeckButton.transform.DOScale(1.10f, 0.1f).SetEase(Ease.OutBack));
+        pulse.Append(shopManager.animalDeckButton.transform.DOShakeRotation(
+            duration: 0.15f,
+            strength: new Vector3(0f, 0f, 6f), 
+            vibrato: 5,
+            randomness: 90,
+            fadeOut: true
+        ));
+        pulse.Append(shopManager.animalDeckButton.transform.DOScale(1f, 0.15f).SetEase(Ease.OutExpo));
+        pulse.Join(shopManager.animalDeckButton.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
     }
 
     IEnumerator Animate()

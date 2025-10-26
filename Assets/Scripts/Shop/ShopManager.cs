@@ -42,6 +42,8 @@ public class ShopManager : MonoBehaviour
     public GameObject boonDeckCard;
     public Transform boonDeckParent;
     [HideInInspector] public bool canOverrideBoon;
+    public RectTransform boonDeckButton;
+    public RectTransform animalDeckButton;
 
     private Queue<Boon> recentBoons;
     int recentBoonCapacity = 3;
