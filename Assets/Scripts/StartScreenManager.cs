@@ -46,6 +46,11 @@ public class StartScreenManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void Discord()
+    {
+        Application.OpenURL("https://discord.gg/w82SntXRVb");
+    }
+
     void SpawnAnimal()
     {
         Instantiate(animalsToSpawn[Random.Range(0, animalsToSpawn.Length)], spawnPositions[Random.Range(0, spawnPositions.Length)].position, Quaternion.identity);
