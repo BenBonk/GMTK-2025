@@ -119,14 +119,19 @@ public class Animal : MonoBehaviour
         currentSpeed = speed * scale;
     }
 
+    private void HandleGlobalSpeedScaleChanged(float _)
+    {
+        RecomputeAndApplyEffectiveSpeed();
+    }
+
     protected virtual void OnEnable()
     {
-        OnGlobalSpeedScaleChanged += _ => RecomputeAndApplyEffectiveSpeed();
+        OnGlobalSpeedScaleChanged += HandleGlobalSpeedScaleChanged;
         RecomputeAndApplyEffectiveSpeed();
     }
     protected virtual void OnDisable()
     {
-        OnGlobalSpeedScaleChanged -= _ => RecomputeAndApplyEffectiveSpeed();
+        OnGlobalSpeedScaleChanged -= HandleGlobalSpeedScaleChanged;
     }
 
     protected virtual void Awake()
