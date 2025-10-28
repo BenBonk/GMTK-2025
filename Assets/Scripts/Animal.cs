@@ -45,6 +45,90 @@ public class Animal : MonoBehaviour
     public bool forceExit = false;
     [HideInInspector] public int bonusPoints;
     [HideInInspector] public bool struckByLightning;
+
+    // ---------- global speed scale ----------
+    private static float _globalSpeedScale = 1f;
+    public static float GlobalSpeedScale => _globalSpeedScale;
+    public static event Action<float> OnGlobalSpeedScaleChanged;
+    public static void SetGlobalSpeedScale(float scale)
+    {
+        scale = Mathf.Max(0.0001f, scale);
+        if (Mathf.Approximately(scale, _globalSpeedScale)) return;
+        _globalSpeedScale = scale;
+        OnGlobalSpeedScaleChanged?.Invoke(_globalSpeedScale);
+    }
+
+    //Speed Modifiers
+    private static readonly Dictionary<string, float> _globalModDefs = new Dictionary<string, float>
+    {
+        { "mud",   0.40f },
+        { "goat",  0.50f },
+        { "lightning", 2f },
+        { "tailwind",  1.5f },
+    };
+
+    public static void RegisterGlobalSpeedModifier(string key, float multiplier)
+    {
+        _globalModDefs[key] = Mathf.Max(0.0001f, multiplier);
+    }
+    public static bool TryGetGlobalSpeedModifier(string key, out float mult)
+        => _globalModDefs.TryGetValue(key, out mult);
+
+    private readonly HashSet<string> _enabledMods = new HashSet<string>();
+    public void EnableSpeedModifier(string key, float fallbackIfUndefined = 1f)
+    {
+        if (!_globalModDefs.ContainsKey(key))
+        {
+            if (fallbackIfUndefined > 0f)
+                _globalModDefs[key] = Mathf.Max(0.0001f, fallbackIfUndefined);
+            else
+                return;
+        }
+        if (_enabledMods.Add(key)) RecomputeAndApplyEffectiveSpeed();
+    }
+
+    public void DisableSpeedModifier(string key)
+    {
+        if (_enabledMods.Remove(key)) RecomputeAndApplyEffectiveSpeed();
+    }
+
+    public void DisableAllSpeedModifiers()
+    {
+        if (_enabledMods.Count == 0) return;
+        _enabledMods.Clear();
+        RecomputeAndApplyEffectiveSpeed();
+    }
+
+    protected float _effectiveSpeedScale = 1f;
+
+    protected float ComputeEffectiveSpeedScale()
+    {
+        float s = GlobalSpeedScale;
+        foreach (var key in _enabledMods) s *= _globalModDefs[key];
+        return Mathf.Max(0.0001f, s);
+    }
+
+    protected void RecomputeAndApplyEffectiveSpeed()
+    {
+        _effectiveSpeedScale = ComputeEffectiveSpeedScale();
+        ApplyEffectiveSpeedScale(_effectiveSpeedScale);
+    }
+
+    protected virtual void ApplyEffectiveSpeedScale(float scale)
+    {
+        currentSpeed = speed * scale;
+    }
+
+    protected virtual void OnEnable()
+    {
+        OnGlobalSpeedScaleChanged += _ => RecomputeAndApplyEffectiveSpeed();
+        RecomputeAndApplyEffectiveSpeed();
+    }
+    protected virtual void OnDisable()
+    {
+        OnGlobalSpeedScaleChanged -= _ => RecomputeAndApplyEffectiveSpeed();
+    }
+
     protected virtual void Awake()
     {
         SetVerticalLimits(GameController.gameManager.playArea);
@@ -78,8 +162,6 @@ public class Animal : MonoBehaviour
             startPos = new Vector3(rightEdge.x + 1f, transform.position.y, transform.position.z);
             transform.position = startPos;
         }
-        currentSpeed = speed;
-
         SubscribeToBeeStingEvents();
     }
     
@@ -292,8 +374,8 @@ public class Animal : MonoBehaviour
 
 
     protected bool overriddenByAttraction = false;
-    protected Animal attractTarget = null;
-    public Animal AttractTarget => attractTarget;
+    protected GameObject attractTarget = null;
+    public GameObject AttractTarget => attractTarget;
     [SerializeField] protected bool leftIsPositiveScaleX = true;
 
     public float attractBrakeRadius = 2.0f;  // start slowing down inside this radius
@@ -302,9 +384,9 @@ public class Animal : MonoBehaviour
     public float attractStopThreshold = 0.02f; // consider stopped below this speed
     private float _attractSpeedVel = 0f;
 
-    public bool SetAttractTarget(Animal a, bool force = false)
+    public bool SetAttractTarget(GameObject a, bool force = false)
     {
-        if (!force && attractTarget != null && attractTarget.gameObject.activeInHierarchy)
+        if (!force && attractTarget != null && attractTarget.activeInHierarchy)
             return false;
 
         attractTarget = a;

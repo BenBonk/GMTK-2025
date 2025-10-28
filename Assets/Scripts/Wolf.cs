@@ -3,7 +3,7 @@ using UnityEngine;
 public class Wolf : Animal
 {
     private bool hasTarget = false;
-    private GameObject targetAnimal;
+    private Animal targetAnimal;
     private float targetDetectionRange = 5f;
     private float stoppingDistance = 1f;
 
@@ -20,23 +20,21 @@ public class Wolf : Animal
 
     protected override Vector3 ComputeMove()
     {
+        speedTarget = speed;
+
         currentSpeed = Mathf.SmoothDamp(currentSpeed, speedTarget, ref speedVelocity, acceleration);
 
-        if (hasTarget && targetAnimal != null && !targetAnimal.GetComponent<Animal>().isLassoed)
+        if (hasTarget && targetAnimal != null && !targetAnimal.isLassoed)
         {
             Vector3 dir = (targetAnimal.transform.position - transform.position).normalized;
             Vector3 nextPos = transform.position + dir * currentSpeed * Time.deltaTime;
 
-            // Face direction of movement (only x-axis matters)
-            if (dir.x > 0.01f)
-                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            else if (dir.x < -0.01f)
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            if (Mathf.Abs(dir.x) > 0.01f) FaceByX(dir.x);  
 
             if (Vector3.Distance(transform.position, targetAnimal.transform.position) <= stoppingDistance)
                 speedTarget = 0f;
             else
-                speedTarget = speed;
+                speedTarget = speed; 
 
             return nextPos;
         }
@@ -70,7 +68,7 @@ public class Wolf : Animal
 
         if (closest != null)
         {
-            targetAnimal = closest;
+            targetAnimal = closest.GetComponent<Animal>();
             hasTarget = true;
         }
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Butterfly : Animal
+public class Butterfly : MonoBehaviour
 {
     public float attractionRadius;
     private const float WAVE_FREQUENCY = 1.5f;
@@ -18,21 +18,68 @@ public class Butterfly : Animal
     private float currentExitSpeed = 0f;
     private float exitSpeedVelocity = 0f;
 
-    public override bool CanBeLassoed => false;
-    protected override bool ShouldClampY => !isExiting;
     public Sprite[] sprites;
 
-    public override void Start()
+    // pulled from Animal usage
+    public float tiltFrequency = 3f;
+    public float maxTiltAmplitude = 20f;
+    public float speed = 2f;
+    public float currentSpeed = 2f;
+    public float topLimitY;
+    public float bottomLimitY;
+    private float tiltProgress = 0f;
+    private Vector3 previousPosition;
+    public float actualSpeed { get; private set; }
+    public bool isExitingRound = false; // if you need forceExit, wire it up
+
+    public bool CanBeLassoed => false; // kept for parity with the old override
+    private float leftEdgeX;
+
+    public void Start()
     {
-        base.Start();
+        // init like your Animal.Start() did for spawn and limits
+        SetVerticalLimits(GameController.gameManager ? GameController.gameManager.playArea : null);
+
+        Camera cam = Camera.main;
+        if (cam != null)
+        {
+            Vector3 rightEdge = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height / 2f, cam.nearClipPlane));
+            Vector3 leftEdge = cam.ScreenToWorldPoint(new Vector3(0, Screen.height / 2f, cam.nearClipPlane));
+            leftEdgeX = leftEdge.x - 1f;
+
+            Vector3 startPos = new Vector3(rightEdge.x + 1f, transform.position.y, transform.position.z);
+            transform.position = startPos;
+        }
+
+        currentSpeed = speed;
+
         waveProgress = Random.Range(0f, Mathf.PI * 2f);
         exitTime = Random.Range(MIN_FLY_TIME, MAX_FLY_TIME);
         GetComponent<SpriteRenderer>().sprite = sprites[Random.Range(0, sprites.Length)];
     }
 
-    protected override Vector3 ComputeMove()
+    private void Update()
+    {
+        Vector3 nextPos = ComputeMove();
+        nextPos.y = !isExiting ? Mathf.Clamp(nextPos.y, bottomLimitY, topLimitY) : nextPos.y;
+
+        transform.position = nextPos;
+
+        if (nextPos.x < leftEdgeX - 5f)
+            Destroy(gameObject);
+    }
+
+    private void LateUpdate()
+    {
+        actualSpeed = (transform.position - previousPosition).magnitude / Mathf.Max(Time.deltaTime, 0.000001f);
+        previousPosition = transform.position;
+        ApplyRunTilt();
+    }
+
+    private Vector3 ComputeMove()
     {
         BroadcastPredatorAttraction();
+
         if (!isExiting)
         {
             flyTimer += Time.deltaTime;
@@ -58,10 +105,9 @@ public class Butterfly : Animal
             if (cam != null)
             {
                 Vector3 viewportPos = cam.WorldToViewportPoint(nextPos);
-                
                 if (viewportPos.y > 1.3f || viewportPos.y < -0.3f)
                 {
-                    Destroy(gameObject,1);
+                    Destroy(gameObject, 1f);
                 }
             }
 
@@ -77,10 +123,9 @@ public class Butterfly : Animal
 
             return nextPos;
         }
-        
     }
 
-    protected override void ApplyRunTilt()
+    private void ApplyRunTilt()
     {
         tiltProgress += Time.deltaTime * tiltFrequency * 2f;
 
@@ -94,8 +139,11 @@ public class Butterfly : Animal
 
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
+
     private void BroadcastPredatorAttraction()
     {
+        // Predators still do FindObjectsOfType<Animal>() and TryPredatorAttractionOverride.
+        // Now they can target any GameObject (this.gameObject).
         Animal[] all = FindObjectsOfType<Animal>();
         Vector3 myPos = transform.position;
         float r2 = attractionRadius * attractionRadius;
@@ -103,31 +151,96 @@ public class Butterfly : Animal
         for (int i = 0; i < all.Length; i++)
         {
             var a = all[i];
-            if (a == null || a == this) continue;
-            if (!a.isPredator) continue;   // only predators get attracted
+            if (a == null || !a.isPredator) continue;
             if (a.isLassoed) continue;
 
-            // inside radius? tag with an attraction target for a short time
             if ((a.transform.position - myPos).sqrMagnitude <= r2)
             {
-                a.SetAttractTarget(this);
+                a.SetAttractTarget(gameObject);
             }
         }
     }
 
     private void OnDestroy()
     {
+        // keep your prior cleanup: any predator targeting THIS butterfly should be destroyed
         Animal[] all = FindObjectsOfType<Animal>();
         for (int i = 0; i < all.Length; i++)
         {
             var a = all[i];
-            if (a == null || a == this) continue;
-            if (!a.isPredator) continue;
+            if (!a || !a.isPredator) continue;
 
-            if (a.AttractTarget == this)
+            if (a.AttractTarget == gameObject)
             {
                 Destroy(a.gameObject);
             }
         }
     }
+
+    // condensed vertical limits copied from your Animal.SetVerticalLimits
+    public void SetVerticalLimits(RectTransform rect, Camera worldCam = null)
+    {
+        if (!worldCam)
+        {
+            if (rect)
+            {
+                var root = rect.GetComponentInParent<Canvas>()?.rootCanvas;
+                if (root && root.renderMode != RenderMode.ScreenSpaceOverlay && root.worldCamera)
+                    worldCam = root.worldCamera;
+            }
+            if (!worldCam) worldCam = Camera.main;
+        }
+        if (!worldCam) return;
+
+        float zDist = Mathf.Abs(Vector3.Dot(transform.position - worldCam.transform.position, worldCam.transform.forward));
+
+        float halfHeight = 0f;
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr) halfHeight = sr.bounds.extents.y;
+
+        if (rect)
+        {
+            Vector3[] wc = new Vector3[4];
+            rect.GetWorldCorners(wc);
+
+            var root = rect.GetComponentInParent<Canvas>()?.rootCanvas;
+            bool overlay = root && root.renderMode == RenderMode.ScreenSpaceOverlay;
+
+            float minY = float.PositiveInfinity, maxY = float.NegativeInfinity;
+            for (int i = 0; i < 4; i++)
+            {
+                Vector2 sp = RectTransformUtility.WorldToScreenPoint(overlay ? null : worldCam, wc[i]);
+                if (sp.y < minY) minY = sp.y;
+                if (sp.y > maxY) maxY = sp.y;
+            }
+
+            Rect pr = worldCam.pixelRect;
+            minY = Mathf.Max(minY, pr.yMin);
+            maxY = Mathf.Min(maxY, pr.yMax);
+
+            if (minY > maxY)
+            {
+                Vector3 topV = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 1f, zDist));
+                Vector3 botV = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 0f, zDist));
+                topLimitY = topV.y - halfHeight;
+                bottomLimitY = botV.y + halfHeight;
+                return;
+            }
+
+            float centerXPix = Mathf.Clamp(0.5f * (pr.xMin + pr.xMax), pr.xMin, pr.xMax);
+            Vector3 topWorld = worldCam.ScreenToWorldPoint(new Vector3(centerXPix, maxY, zDist));
+            Vector3 botWorld = worldCam.ScreenToWorldPoint(new Vector3(centerXPix, minY, zDist));
+
+            topLimitY = topWorld.y - halfHeight;
+            bottomLimitY = botWorld.y + halfHeight;
+        }
+        else
+        {
+            Vector3 topWorld = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 1f, zDist));
+            Vector3 botWorld = worldCam.ViewportToWorldPoint(new Vector3(0.5f, 0f, zDist));
+            topLimitY = topWorld.y - halfHeight;
+            bottomLimitY = botWorld.y + halfHeight;
+        }
+    }
 }
+

@@ -2,12 +2,36 @@ using UnityEngine;
 
 public class Pig : Animal
 {
-    public float waveAmplitude = 1f; // Height of sine wave
-    public float waveFrequency = 2f; // Wave cycles during movement
+    [Header("Wave Motion")]
+    public float waveAmplitude = 1f;   // Height of sine wave
+    public float waveFrequency = 2f;   // Wave cycles per second
+
+    private float baseAmplitude;
+    private float baseFrequency;
+    private float baseSpeed;
 
     private bool initialized = false;
     private float waveProgress = 0f;
+    private float startY;
+    private float _lastScale = 1f;
+
+    [Header("Legendary")]
     public Sprite pigWithHat;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseAmplitude = waveAmplitude;
+        baseFrequency = waveFrequency;
+        baseSpeed = speed;
+    }
+
+    public override void Start()
+    {
+        base.Start();
+        currentSpeed = speed;
+    }
+
     public override void ActivateLegendary()
     {
         if (Random.Range(0, 5) == 0)
@@ -16,7 +40,22 @@ public class Pig : Animal
             gameObject.tag = "PigWithHat";
         }
     }
-        
+
+    // Scale wave motion when global speed changes
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        speed = baseSpeed * scale;
+        waveFrequency = baseFrequency * scale;
+        waveAmplitude = baseAmplitude / Mathf.Pow(scale, 0.25f);
+        if (_lastScale > 0f && !Mathf.Approximately(scale, _lastScale))
+        {
+            float k = scale / _lastScale;
+            waveProgress /= k;
+        }
+
+        _lastScale = scale;
+    }
+
     protected override Vector3 ComputeMove()
     {
         if (!initialized)
@@ -42,7 +81,6 @@ public class Pig : Animal
         return baseMove;
     }
 
-    private float startY;
     private void AdjustStartYToFitWave()
     {
         float z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
@@ -59,3 +97,4 @@ public class Pig : Animal
         startY = Mathf.Clamp(transform.position.y, minY, maxY);
     }
 }
+

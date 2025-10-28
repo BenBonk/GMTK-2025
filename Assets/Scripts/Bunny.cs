@@ -32,6 +32,42 @@ public class Bunny : Animal
 
     private bool leavingScreen = false;
 
+    private float baseHopSpeed, baseHopDuration;
+    private float basePauseBeforeTiltUp, baseTiltUpDuration, basePauseAfterTiltUp, basePauseAfterJump, baseTiltNeutralDuration;
+
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        baseHopSpeed = hopSpeed;
+        baseHopDuration = hopDuration;
+
+        basePauseBeforeTiltUp = pauseBeforeTiltUp;
+        baseTiltUpDuration = tiltUpDuration;
+        basePauseAfterTiltUp = pauseAfterTiltUp;
+        basePauseAfterJump = pauseAfterJump;
+        baseTiltNeutralDuration = tiltNeutralDuration;
+    }
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        const float EXP_SPEED = 0.5f; // hop distance per hop grows
+        const float EXP_TIME = 0.5f; // timings shrink
+
+        float speedMul = Mathf.Pow(scale, EXP_SPEED);
+        float timeDiv = Mathf.Pow(scale, EXP_TIME);
+
+        hopSpeed = baseHopSpeed * speedMul;
+
+        hopDuration = Mathf.Max(0.03f, baseHopDuration / timeDiv);
+        pauseBeforeTiltUp = Mathf.Max(0.01f, basePauseBeforeTiltUp / timeDiv);
+        tiltUpDuration = Mathf.Max(0.01f, baseTiltUpDuration / timeDiv);
+        pauseAfterTiltUp = Mathf.Max(0.01f, basePauseAfterTiltUp / timeDiv);
+        pauseAfterJump = Mathf.Max(0.01f, basePauseAfterJump / timeDiv);
+        tiltNeutralDuration = Mathf.Max(0.01f, baseTiltNeutralDuration / timeDiv);
+    }
+
     public override void Start()
     {
         base.Start();
