@@ -73,6 +73,7 @@ public class LassoController : MonoBehaviour
     public Color negativeMultColor;
     public bool canLasso;
     private PauseMenu pauseMenu;
+    private SteamIntegration steamIntegration;
 
     LocalizationManager localization;
 
@@ -83,6 +84,7 @@ public class LassoController : MonoBehaviour
 
     private void Start()
     {
+        steamIntegration = GameController.steamIntegration;
         pauseMenu = GameController.pauseMenu;
         localization = GameController.localizationManager;
         boonManager = GameController.boonManager;
@@ -499,6 +501,19 @@ public class LassoController : MonoBehaviour
             {
                 FBPP.SetFloat("highestPointsPerLasso", (float)total);
             }
+            if (total >= 10000000 && !steamIntegration.IsThisAchievementUnlocked("Point Insanity"))
+            {
+                steamIntegration.UnlockAchievement("Point Insanity");
+            }
+            else if (total >= 1000000 && !steamIntegration.IsThisAchievementUnlocked("Point Madness"))
+            {
+                steamIntegration.UnlockAchievement("Point Madness");
+            }
+            else if (total >= 100000 && !steamIntegration.IsThisAchievementUnlocked("Point Fever"))
+            {
+                steamIntegration.UnlockAchievement("Point Fever");
+            }
+
             //a
             group.transform.localScale = Vector3.zero;
 

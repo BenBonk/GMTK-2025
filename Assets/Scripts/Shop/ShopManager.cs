@@ -46,10 +46,12 @@ public class ShopManager : MonoBehaviour
     public RectTransform animalDeckButton;
 
     private Queue<Boon> recentBoons;
+    private SteamIntegration steamIntegration;
     int recentBoonCapacity = 3;
 
     private IEnumerator Start()
     {
+        steamIntegration = GameController.steamIntegration;
         descriptionManager = GameController.descriptionManager;
         player = GameController.player;
         recentBoons = new Queue<Boon>(recentBoonCapacity);
@@ -248,6 +250,16 @@ public class ShopManager : MonoBehaviour
             {
                 uniqueObjects[name] = (1, obj);
             }
+        }
+        
+        if (uniqueObjects.Any(animal => animal.Value.count >= 10) && !steamIntegration.IsThisAchievementUnlocked("Monoculture"))
+        {
+            steamIntegration.UnlockAchievement("Monoculture");
+        }
+
+        if (player.animalsInDeck.Count==50 && !GameController.steamIntegration.IsThisAchievementUnlocked("The Whole Farm"))
+        { 
+            steamIntegration.UnlockAchievement("The Whole Farm");
         }
         
 

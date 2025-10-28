@@ -443,6 +443,10 @@ public class TutorialManager : MonoBehaviour
         buttonBlocker7.SetActive(true);
         arrowSet5.SetActive(true);
         yield return ShowMessage2(tutorialStrings[15].GetLocalizedString(), 7.5f);
+        if (!GameController.steamIntegration.IsThisAchievementUnlocked("Following Directions"))
+        {
+            GameController.steamIntegration.UnlockAchievement("Following Directions");
+        }
         yield return ShowMessage2(tutorialStrings[16].GetLocalizedString(),0.5f);
         levelLoader.LoadCertainScene("TitleScreen");
     }

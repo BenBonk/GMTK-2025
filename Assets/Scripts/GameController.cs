@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
     [SerializeField] ChallengeEventManager localChallengeEventManager;
     [SerializeField] Material localLightningMat;
     [SerializeField] PostProcessingManager localPostProcessingManager;
+    [SerializeField] SteamIntegration localSteamIntegration;
     void Awake()
     {
         instance = this;
@@ -141,5 +142,10 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localChallengeEventManager; }
         set { instance.localChallengeEventManager = value; }
+    }
+    public static SteamIntegration steamIntegration
+    {
+        get { return instance.localSteamIntegration; }
+        set { instance.localSteamIntegration = value; }
     }
 }

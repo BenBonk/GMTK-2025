@@ -118,6 +118,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public AnimalData foxThiefStolenStats;
     private RandomEventManager randomEventManager;
     private ChallengeEventManager challengeEventManager;
+    private SteamIntegration steamIntegration;
     private string roundDescription;
     private int roundID = -1;
     private void Start()
@@ -129,6 +130,7 @@ public class GameManager : MonoBehaviour
         localization = GameController.localizationManager;
         boonManager = GameController.boonManager;
         captureManager = GameController.captureManager;
+        steamIntegration = GameController.steamIntegration;
         if (isTutorial)
         {
             return;
@@ -262,6 +264,10 @@ public class GameManager : MonoBehaviour
         playerReady = false;
 
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1.25f);
+        if (player.playerCurrency >= 100000 && !steamIntegration.IsThisAchievementUnlocked("Hoarder"))
+        {
+            steamIntegration.UnlockAchievement("Hoarder");
+        }
         if (pointsThisRound < GetPointsRequirement() )
         {
             //GameOver
@@ -312,7 +318,12 @@ public class GameManager : MonoBehaviour
             }
             //think we need some sfx here
             AudioManager.Instance.PlaySFX("close_call");
-            FBPP.SetInt("closeCalls", FBPP.GetInt("closeCalls")+1);
+            int closeCalls = FBPP.GetInt("closeCalls") + 1;
+            FBPP.SetInt("closeCalls", closeCalls);
+            if (closeCalls == 10 && !steamIntegration.IsThisAchievementUnlocked("Close One!"))
+            {
+                steamIntegration.UnlockAchievement("Close One!");
+            }
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(EndRoundRoutine());
             deathPanel.gameObject.SetActive(false);
@@ -342,6 +353,10 @@ public class GameManager : MonoBehaviour
             foreach (var ps in winPanel.GetComponentsInChildren<ParticleSystem>(true))
             {
                 ps.Play();
+            }
+            if (!steamIntegration.IsThisAchievementUnlocked("Victory"))
+            {
+                steamIntegration.UnlockAchievement("Victory");
             }
             RectTransform children = winPanel.Find("Children") as RectTransform;
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);

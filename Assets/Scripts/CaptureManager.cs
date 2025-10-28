@@ -22,12 +22,14 @@ public class CaptureManager : MonoBehaviour
         boonManager = GameController.boonManager;
         gameManager = GameController.gameManager;
         player = GameController.player;
+        steamIntegration = GameController.steamIntegration;
     }
 
     private int triggers = 1;
     private int currentTrigger = 0;
     private int totalPredatorCount = 0;
     HashSet<Sprite> boonSprites = new HashSet<Sprite>();
+    private SteamIntegration steamIntegration;
     public Sprite lightningBoltIcon;
     public (double, double, double, double, HashSet<Sprite>) MakeCapture(GameObject[] objectsCaptured)
     {
@@ -337,6 +339,18 @@ public class CaptureManager : MonoBehaviour
         pointBonus += capturedAnimal.bonusPoints;
         int numberAnimalsWrangled = FBPP.GetInt("numberAnimalsWrangled");
         FBPP.SetInt("numberAnimalsWrangled", numberAnimalsWrangled+1);
+        if (numberAnimalsWrangled == 100 && !steamIntegration.IsThisAchievementUnlocked("Wrangle Novice"))
+        {
+            steamIntegration.UnlockAchievement("Wrangle Novice");
+        }
+        else if (numberAnimalsWrangled == 1000 && !steamIntegration.IsThisAchievementUnlocked("Wrangle Pro"))
+        {
+            steamIntegration.UnlockAchievement("Wrangle Pro");
+        }
+        else if (numberAnimalsWrangled == 10000 && !steamIntegration.IsThisAchievementUnlocked("Wrangle Expert"))
+        {
+            steamIntegration.UnlockAchievement("Wrangle Expert");
+        }
     }
 
     private Dictionary<string, int> GetNameCounts(IEnumerable<string> animals)
