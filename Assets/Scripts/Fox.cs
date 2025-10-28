@@ -17,12 +17,41 @@ public class Fox : Animal
     private float speedVelocity = 0f; // for SmoothDamp
     private float startY;
 
+    // speed system baselines
+    private float baseSpeed;
+    private float baseFreq;
+    private float baseVariationSpeed;
+    private float baseSpeedRecoveryRate;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseSpeed = speed;
+        baseFreq = baseFrequency;
+        baseVariationSpeed = variationSpeed;
+        baseSpeedRecoveryRate = speedRecoveryRate;
+    }
+
     public override void Start()
     {
         base.Start();
         AdjustStartYToFitWave();
         currentSpeed = speed;
         initialized = true;
+    }
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        // linear move speed
+        speed = baseSpeed * scale;
+
+        // keep the wave "density" similar as speed changes:
+        // slightly increase frequency and variation speed with scale
+        float freqMul = Mathf.Pow(scale, 0.4f);
+        baseFrequency = baseFrequency * freqMul;    
+        variationSpeed = baseVariationSpeed * freqMul;
+
+        speedRecoveryRate = baseSpeedRecoveryRate / Mathf.Pow(scale, 0.5f);
     }
 
     public override void ActivateLegendary()

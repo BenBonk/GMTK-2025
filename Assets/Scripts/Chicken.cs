@@ -22,6 +22,46 @@ public class Chicken : Animal
     private bool exiting = false;
     public GameObject chickenEgg;
 
+    private float baseSpeed;
+    private float basePauseFadeDuration;
+    private float baseMinPause;
+    private float baseMaxPause;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseSpeed = speed;
+        basePauseFadeDuration = pauseFadeDuration;
+        baseMinPause = minPauseDuration;
+        baseMaxPause = maxPauseDuration;
+    }
+
+    // keep previous scale for adaptive timing
+    private float _lastScale = 1f;
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        const float EXP_ACCEL = 0.5f; 
+        const float EXP_PAUSE = 0.6f;
+
+        speed = baseSpeed * scale;
+        pauseFadeDuration = basePauseFadeDuration / Mathf.Pow(scale, EXP_ACCEL);
+        minPauseDuration = baseMinPause / Mathf.Pow(scale, EXP_PAUSE);
+        maxPauseDuration = baseMaxPause / Mathf.Pow(scale, EXP_PAUSE);
+
+        if (_lastScale > 0f && scale != _lastScale)
+        {
+            float k = scale / _lastScale;
+
+            if (isPaused)
+                pauseTimer /= k;
+            else
+                moveTimer /= k;
+        }
+
+        _lastScale = scale;
+    }
+
     public override void Start()
     {
         base.Start();
@@ -98,17 +138,17 @@ public class Chicken : Animal
 
         // Face right if moving right (sprite faces left by default)
         if (target.x > transform.position.x)
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // flip to right
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         else
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z); // face left (default)
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
 
         moveDirection = (target - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, target);
-        moveTimer = distance / speed;
+        moveTimer = distance / speed; // uses scaled speed
 
-        if (legendary && Random.Range(0,4)==0)
+        if (legendary && Random.Range(0, 4) == 0)
         {
-            Instantiate(chickenEgg,transform.position, Quaternion.identity);
+            Instantiate(chickenEgg, transform.position, Quaternion.identity);
         }
     }
 

@@ -20,8 +20,6 @@ public class Horse : Animal
     private float leftScreenX;
     private float pauseTimer;
 
-    // small position tolerance for “arrived” at stop line
-    private const float arriveEpsilon = 0.02f;
 
     public override void Start()
     {
