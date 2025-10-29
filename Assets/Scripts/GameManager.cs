@@ -159,7 +159,6 @@ public class GameManager : MonoBehaviour
         scoreDisplay.text = pointsLocalString.GetLocalizedString() + " " + LassoController.FormatNumber(0) + " / " + LassoController.FormatNumber(GetPointsRequirement(roundNumber+1));
         RoundSetup();
         UpdateTimerDisplay();
-        Animal.SetGlobalSpeedScale(0.5f);
     }
     
     private void ApplyHarvestLevel()

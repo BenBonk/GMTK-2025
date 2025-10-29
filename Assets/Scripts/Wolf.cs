@@ -12,31 +12,40 @@ public class Wolf : Animal
     private float speedTarget;
     private float speedVelocity = 0f;
 
+    private float baseSpeed;
+
     public override void Start()
     {
         base.Start();
-        speedTarget = speed;
+        currentSpeed = speed * _effectiveSpeedScale;
     }
 
     protected override Vector3 ComputeMove()
     {
-        speedTarget = speed;
+        // always target the effective scaled speed by default
+        float desired = speed * _effectiveSpeedScale;
 
-        currentSpeed = Mathf.SmoothDamp(currentSpeed, speedTarget, ref speedVelocity, acceleration);
+        // if we are at stopping distance, desired becomes 0 (only while close)
+        bool chasing = hasTarget && targetAnimal != null && !targetAnimal.isLassoed;
+        if (chasing)
+        {
+            float dist = Vector3.Distance(transform.position, targetAnimal.transform.position);
+            if (dist <= stoppingDistance) desired = 0f;
+        }
 
-        if (hasTarget && targetAnimal != null && !targetAnimal.isLassoed)
+        // Smoothly move currentSpeed toward the desired (scaled) speed
+        currentSpeed = Mathf.SmoothDamp(currentSpeed, desired, ref speedVelocity, acceleration);
+
+        if (chasing)
         {
             Vector3 dir = (targetAnimal.transform.position - transform.position).normalized;
-            Vector3 nextPos = transform.position + dir * currentSpeed * Time.deltaTime;
+            if (Mathf.Abs(dir.x) > 0.01f) FaceByX(dir.x);
 
-            if (Mathf.Abs(dir.x) > 0.01f) FaceByX(dir.x);  
+            float step = currentSpeed * Time.deltaTime;
+            float dist = Vector3.Distance(transform.position, targetAnimal.transform.position);
+            if (dist <= stoppingDistance) step = 0f; // stop at the target
 
-            if (Vector3.Distance(transform.position, targetAnimal.transform.position) <= stoppingDistance)
-                speedTarget = 0f;
-            else
-                speedTarget = speed; 
-
-            return nextPos;
+            return transform.position + dir * step;
         }
         else
         {
