@@ -70,7 +70,7 @@ public class UpgradeShopItem : ShopItem
                 FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()));
             }
 
-            if (newLevel == 10 && GameController.steamIntegration.IsThisAchievementUnlocked("Beefy"))
+            if (newLevel == 9 && !GameController.steamIntegration.IsThisAchievementUnlocked("Beefy"))
             {
                 GameController.steamIntegration.UnlockAchievement("Beefy");
             }

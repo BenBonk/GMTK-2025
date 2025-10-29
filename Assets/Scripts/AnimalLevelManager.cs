@@ -25,7 +25,7 @@ public class AnimalLevelManager : MonoBehaviour
         var keys = new List<string>(animalLevels.Keys);
         foreach (var animalName in keys)
         {
-            animalLevels[animalName] = 0;
+            animalLevels[animalName] =0;
             FBPP.SetInt(animalName, 0);
         }
         FBPP.Save();

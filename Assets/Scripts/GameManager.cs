@@ -188,6 +188,14 @@ public class GameManager : MonoBehaviour
     public void StartRound()
     {
         StartCoroutine(DisplayDayRoutine(GameController.shopManager.roundLocalString.GetLocalizedString() + " " + roundNumber, wordScaleDuration, wordDisplayDuration));
+        if (roundNumber==50&& !steamIntegration.IsThisAchievementUnlocked("Keep Going"))
+        {
+            steamIntegration.UnlockAchievement("Keep Going");
+        }
+        else if (roundNumber == 100 && !steamIntegration.IsThisAchievementUnlocked("Keep Going++"))
+        {
+            steamIntegration.UnlockAchievement("Keep Going++");
+        }
     }
 
     public void RoundSetup()
@@ -399,15 +407,6 @@ public class GameManager : MonoBehaviour
                 ps.Stop();
             }
             yield return new WaitForSeconds(.5f);
-        }
-
-        if (roundNumber==50&& !steamIntegration.IsThisAchievementUnlocked("Keep Going"))
-        {
-            steamIntegration.UnlockAchievement("Keep Going");
-        }
-        else if (roundNumber == 100 && !steamIntegration.IsThisAchievementUnlocked("Keep Going++"))
-        {
-            steamIntegration.UnlockAchievement("Keep Going++");
         }
 
         cashInterest = 0;
