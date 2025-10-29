@@ -19,6 +19,7 @@ public class RerollManager : MonoBehaviour
     public bool canReroll;
     private ShopManager shopManager;
     private BoonManager boonManager;
+    private SteamIntegration steamIntegration;
     //private HashSet<Sprite> rrBoonSprites;
 
     public int rerollsPerShop = 1;
@@ -34,6 +35,7 @@ public class RerollManager : MonoBehaviour
         rerollPrice = FBPP.GetInt("rerollPrice", startingRerollPrice);
         priceText.text = rerollPrice.ToString();
         shopManager = GameController.shopManager;
+        steamIntegration = GameController.steamIntegration;
     }
 
     public void HoverOver()
@@ -72,8 +74,9 @@ public class RerollManager : MonoBehaviour
         rerollsThisShop++;
         shopManager.InitializeAllUpgrades();
         shopManager.UpdateCashText();
+        int totalRerolls = FBPP.GetInt("totalRerolls") + 1;
         FBPP.SetInt("rerollPrice", rerollPrice);
-        FBPP.SetInt("totalRerolls", FBPP.GetInt("totalRerolls")+1);
+        FBPP.SetInt("totalRerolls", totalRerolls);
         rerollsThisGame++;
         if (rerollsThisGame > FBPP.GetInt("mostRerollsInGame"))
         {
@@ -88,6 +91,11 @@ public class RerollManager : MonoBehaviour
         {
             //LassoController.CreateBoonIcons(transform, rrBoonSprites);
             priceText.text = rerollPrice.ToString();
+        }
+
+        if (totalRerolls == 100 && steamIntegration.IsThisAchievementUnlocked("Shopaholic"))
+        {
+            steamIntegration.UnlockAchievement("Shopaholic");
         }
         
     }

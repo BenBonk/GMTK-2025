@@ -79,6 +79,7 @@ public class SaveManager : MonoBehaviour
         FBPP.DeleteInt("rerollPrice");
         FBPP.SetInt("rerollsThisGame", 0);
         FBPP.SetFloat("spawnRate", 1f);
+        FBPP.SetInt("AnimalPurchasedThisGame", 0);
         GameController.animalLevelManager.ResetLevels();
     }
 

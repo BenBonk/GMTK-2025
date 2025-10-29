@@ -70,6 +70,10 @@ public class CaptureManager : MonoBehaviour
                 }
             }
 
+            if (animalsCaptured.Count>=25 && steamIntegration.IsThisAchievementUnlocked("Crowd Control"))
+            {
+                steamIntegration.UnlockAchievement("Crowd Control");
+            }
             var capturedCounts = GetNameCounts(animalsCaptured);
             foreach (var key in capturedCounts.Keys)
             {

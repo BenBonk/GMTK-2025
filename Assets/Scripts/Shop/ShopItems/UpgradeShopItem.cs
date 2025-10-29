@@ -62,11 +62,17 @@ public class UpgradeShopItem : ShopItem
             shopManager. UpdateCashText();
             canPurchase = false;
             FBPP.SetInt("totalUpgradesPurchased", FBPP.GetInt("totalUpgradesPurchased")+1);
-            GameController.animalLevelManager.SetLevel(chosenAnimal.animalName.GetLocalizedString(), GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString())+1);
+            int newLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) + 1;
+            GameController.animalLevelManager.SetLevel(chosenAnimal.animalName.GetLocalizedString(), newLevel);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             if (GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) > FBPP.GetInt("highestAnimalLevel"))
             {
                 FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()));
+            }
+
+            if (newLevel == 10 && GameController.steamIntegration.IsThisAchievementUnlocked("Beefy"))
+            {
+                GameController.steamIntegration.UnlockAchievement("Beefy");
             }
 
             if (!shopManager.cantPurchaseItem)

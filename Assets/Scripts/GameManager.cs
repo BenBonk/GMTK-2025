@@ -359,6 +359,18 @@ public class GameManager : MonoBehaviour
             {
                 steamIntegration.UnlockAchievement("Victory");
             }
+            if (player.boonsInDeck.Count == 0 && !steamIntegration.IsThisAchievementUnlocked("Boonless"))
+            {
+                steamIntegration.UnlockAchievement("Boonless");
+            }
+            if (GameController.animalLevelManager.AllAnimalsAtDefaultLevel() && !steamIntegration.IsThisAchievementUnlocked("Upgradeless"))
+            {
+                steamIntegration.UnlockAchievement("Upgradeless");
+            }
+            if (FBPP.GetInt("AnimalPurchasedThisGame") == 0 && !steamIntegration.IsThisAchievementUnlocked("Animalless"))
+            {
+                steamIntegration.UnlockAchievement("Animalless");
+            }
             RectTransform children = winPanel.Find("Children") as RectTransform;
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.enabled = true;
@@ -388,6 +400,15 @@ public class GameManager : MonoBehaviour
                 ps.Stop();
             }
             yield return new WaitForSeconds(.5f);
+        }
+
+        if (roundNumber==50&& !steamIntegration.IsThisAchievementUnlocked("Keep Going"))
+        {
+            steamIntegration.UnlockAchievement("Keep Going");
+        }
+        else if (roundNumber == 100 && !steamIntegration.IsThisAchievementUnlocked("Keep Going++"))
+        {
+            steamIntegration.UnlockAchievement("Keep Going++");
         }
 
         cashInterest = 0;

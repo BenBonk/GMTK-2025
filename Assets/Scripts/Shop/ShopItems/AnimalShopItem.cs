@@ -88,6 +88,7 @@ public class AnimalShopItem : ShopItem
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             shopManager.UpdateDeck(shopManager.deckParent);
+            FBPP.SetInt("AnimalPurchasedThisGame", 1);
         }
         else
         {

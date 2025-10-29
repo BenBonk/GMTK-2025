@@ -48,4 +48,14 @@ public class AnimalLevelManager : MonoBehaviour
         FBPP.SetInt(animalName, level);
         FBPP.Save();
     }
+    public bool AllAnimalsAtDefaultLevel()
+    {
+        foreach (var kvp in animalLevels)
+        {
+            if (kvp.Value != 0)
+                return false;
+        }
+        return true;
+    }
+
 }
