@@ -45,10 +45,9 @@ public class Fox : Animal
         // linear move speed
         speed = baseSpeed * scale;
 
-        // keep the wave "density" similar as speed changes:
-        // slightly increase frequency and variation speed with scale
+        // keep wave density similar as speed changes
         float freqMul = Mathf.Pow(scale, 0.4f);
-        baseFrequency = baseFrequency * freqMul;    
+        baseFrequency = baseFreq * freqMul;
         variationSpeed = baseVariationSpeed * freqMul;
 
         speedRecoveryRate = baseSpeedRecoveryRate / Mathf.Pow(scale, 0.5f);

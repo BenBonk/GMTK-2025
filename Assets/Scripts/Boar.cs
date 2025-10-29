@@ -52,11 +52,14 @@ public class Boar : Animal
         minPauseDuration = baseMinPause / Mathf.Pow(scale, 0.6f);
         maxPauseDuration = baseMaxPause / Mathf.Pow(scale, 0.6f);
 
-        if (_lastScale > 0f && scale != _lastScale)
+        if (_lastScale > 0f && !Mathf.Approximately(scale, _lastScale))
         {
             float k = scale / _lastScale;
             moveTimer /= k;
             pauseTimer /= k;
+
+            if (!isPaused && !exiting)
+                speedTarget = speed;
         }
 
         _lastScale = scale;

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Goat : Animal
@@ -13,8 +14,11 @@ public class Goat : Animal
     public float maxAngleFromLeft = 45f; // Limit direction spread
 
     public float predatorSlowRadius = 2.5f;
-    public float predatorSpeedMultiplier = 0.5f; // 0.5 = 50% speed
-    public float minAllowedSpeedMultiplier = 0.3f; // cap slowdown 
+    public float predatorSpeedMultiplier = 0.5f;
+    public float slowCheckInterval = 0.2f;
+    private readonly HashSet<Animal> _slowedNow = new HashSet<Animal>();
+    private float _slowCheckTimer = 0f;
+
 
     private Vector3 moveDirection;
     private float stateTimer = 0f;
@@ -157,24 +161,39 @@ public class Goat : Animal
 
     private void SlowNearbyPredators()
     {
-        Animal[] allAnimals = FindObjectsOfType<Animal>();
-        foreach (Animal other in allAnimals)
+        _slowCheckTimer -= Time.deltaTime;
+        if (_slowCheckTimer > 0f) return;
+        _slowCheckTimer = slowCheckInterval;
+
+        float r2 = predatorSlowRadius * predatorSlowRadius;
+
+        // Build the current-in-range set
+        var inRange = new HashSet<Animal>();
+        var all = FindObjectsOfType<Animal>();
+        foreach (var other in all)
         {
-            if (other == this || !other.isPredator || other.isLassoed)
-                continue;
+            if (other == null || other == this || other.isLassoed || !other.isPredator) continue;
 
-            float dist = Vector3.Distance(transform.position, other.transform.position);
-            if (dist <= predatorSlowRadius)
+            if ((other.transform.position - transform.position).sqrMagnitude <= r2)
+                inRange.Add(other);
+        }
+
+        foreach (var a in inRange)
+        {
+            if (_slowedNow.Add(a))
+                a.ModifySpeed("goat", predatorSpeedMultiplier); // enable once on enter
+        }
+
+        var toRemove = new List<Animal>();
+        foreach (var a in _slowedNow)
+        {
+            if (a == null || a.isLassoed || !inRange.Contains(a))
             {
-                float proposedSpeed = other.speed * predatorSpeedMultiplier;
-                float minSpeed = other.speed * minAllowedSpeedMultiplier;
-
-                // Apply the higher of the proposed speed and min allowed speed
-                float finalSpeed = Mathf.Max(proposedSpeed, minSpeed);
-
-                other.currentSpeed = Mathf.Min(other.currentSpeed, finalSpeed);
+                a?.RevertSpeed("goat"); // revert once on exit
+                toRemove.Add(a);
             }
         }
+        foreach (var a in toRemove) _slowedNow.Remove(a);
     }
 
     private void BroadcastPredatorAttraction()
@@ -212,5 +231,12 @@ public class Goat : Animal
             PickNewDirection(); // your edge-aware version
             edgeRedirectTimer = edgeRedirectCooldown;
         }
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        foreach (var a in _slowedNow) a?.RevertSpeed("goat");
+        _slowedNow.Clear();
     }
 }

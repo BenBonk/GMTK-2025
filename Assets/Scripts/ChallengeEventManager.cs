@@ -13,6 +13,7 @@ public class ChallengeEventManager : MonoBehaviour
     public int maxCacti = 4;
     public GameObject bee;
     public GameObject tumbleweed;
+    public GameObject wind;
 
     public int lastEvent = 67;
     public LocalizedString[] challengeEventStrings;
@@ -28,10 +29,10 @@ public class ChallengeEventManager : MonoBehaviour
 
     public int GetChallengeEvent()
     {
-        int chosenEvent = Random.Range(0, 4);
+        int chosenEvent = Random.Range(0, 5);
         while (chosenEvent == lastEvent)
         {
-            chosenEvent = Random.Range(0, 4);
+            chosenEvent = Random.Range(0, 5);
         }
         lastEvent = chosenEvent;
 
@@ -72,6 +73,8 @@ public class ChallengeEventManager : MonoBehaviour
         if (eventID == 0)
         {
             //tailwind
+            wind.SetActive(true);
+            Animal.EnableSpeedModifier("tailwind", 1.5f);
         }
         else if (eventID == 1)
         {
@@ -176,6 +179,16 @@ public class ChallengeEventManager : MonoBehaviour
         if (!gameManager.roundCompleted && gameManager.roundDuration > 0)
         {
             Invoke("SpawnTumbleweed", Random.Range(3.0f, 7.0f));
+        }
+    }
+
+    public void EndChallenge()
+    {
+        GameController.challengeEventManager.wind.SetActive(false);
+        Animal.DisableSpeedModifier("tailwind");
+        foreach (var cact in GameObject.FindGameObjectsWithTag("Cactus"))
+        {
+            Destroy(cact);
         }
     }
 }

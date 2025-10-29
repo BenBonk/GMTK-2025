@@ -30,8 +30,8 @@ public class Mouse : Animal
     {
         base.Start();
 
-        speedTarget = speed;
-        currentSpeed = speed;
+        speedTarget = EffectiveSpeed;
+        currentSpeed = EffectiveSpeed;
 
         var cam = Camera.main;
         if (cam != null)
@@ -52,6 +52,8 @@ public class Mouse : Animal
 
     protected override Vector3 ComputeMove()
     {
+        speedTarget = EffectiveSpeed;
+
         currentSpeed = Mathf.SmoothDamp(currentSpeed, speedTarget, ref speedVelocity, acceleration);
 
         Vector3 pos = transform.position;
@@ -77,10 +79,7 @@ public class Mouse : Animal
 
             case State.ExitLeft:
                 {
-                    // March left; never change direction once exiting
                     pos += Vector3.left * currentSpeed * Time.deltaTime;
-
-                    // Optional: self-despawn if (pos.x <= offLeftX)
                     break;
                 }
         }

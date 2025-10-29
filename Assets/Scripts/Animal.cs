@@ -49,7 +49,10 @@ public class Animal : MonoBehaviour
     // ---------- global speed scale ----------
     private static float _globalSpeedScale = 1f;
     public static float GlobalSpeedScale => _globalSpeedScale;
+    protected float EffectiveSpeed => speed * _effectiveSpeedScale;
+
     public static event Action<float> OnGlobalSpeedScaleChanged;
+    private static event Action OnAnyGlobalSpeedFactorChanged;
     public static void SetGlobalSpeedScale(float scale)
     {
         scale = Mathf.Max(0.0001f, scale);
@@ -59,35 +62,57 @@ public class Animal : MonoBehaviour
     }
 
     //Speed Modifiers
+    public static float MINIMUM_SPEED_MULTIPLIER = 0.25f;
     private static readonly Dictionary<string, float> _globalModDefs = new Dictionary<string, float>
     {
         { "mud",   0.40f },
         { "goat",  0.50f },
         { "lightning", 2f },
         { "tailwind",  1.5f },
+        { "holdhorse", 0.35f },
     };
+    private static readonly HashSet<string> _enabledGlobalMods = new HashSet<string>();
+    private readonly HashSet<string> _enabledMods = new HashSet<string>();
+
 
     public static void RegisterGlobalSpeedModifier(string key, float multiplier)
     {
-        _globalModDefs[key] = Mathf.Max(0.0001f, multiplier);
+        _globalModDefs[key] = Mathf.Max(MINIMUM_SPEED_MULTIPLIER, multiplier);
     }
     public static bool TryGetGlobalSpeedModifier(string key, out float mult)
         => _globalModDefs.TryGetValue(key, out mult);
 
-    private readonly HashSet<string> _enabledMods = new HashSet<string>();
-    public void EnableSpeedModifier(string key, float fallbackIfUndefined = 1f)
+    public void ModifySpeed(string key, float fallbackIfUndefined = 1f)
     {
         if (!_globalModDefs.ContainsKey(key))
         {
             if (fallbackIfUndefined > 0f)
-                _globalModDefs[key] = Mathf.Max(0.0001f, fallbackIfUndefined);
+                _globalModDefs[key] = Mathf.Max(MINIMUM_SPEED_MULTIPLIER, fallbackIfUndefined);
             else
                 return;
         }
         if (_enabledMods.Add(key)) RecomputeAndApplyEffectiveSpeed();
     }
+    public static void EnableSpeedModifier(string key, float fallbackIfUndefined = 1f)
+    {
+        if (!_globalModDefs.ContainsKey(key))
+        {
+            if (fallbackIfUndefined > 0f)
+                _globalModDefs[key] = Mathf.Max(MINIMUM_SPEED_MULTIPLIER, fallbackIfUndefined);
+            else
+                return;
+        }
+        if (_enabledGlobalMods.Add(key))
+            OnAnyGlobalSpeedFactorChanged?.Invoke();
+    }
 
-    public void DisableSpeedModifier(string key)
+    public static void DisableSpeedModifier(string key)
+    {
+        if (_enabledGlobalMods.Remove(key))
+            OnAnyGlobalSpeedFactorChanged?.Invoke();
+    }
+
+    public void RevertSpeed(string key)
     {
         if (_enabledMods.Remove(key)) RecomputeAndApplyEffectiveSpeed();
     }
@@ -104,8 +129,14 @@ public class Animal : MonoBehaviour
     protected float ComputeEffectiveSpeedScale()
     {
         float s = GlobalSpeedScale;
-        foreach (var key in _enabledMods) s *= _globalModDefs[key];
-        return Mathf.Max(0.0001f, s);
+
+        foreach (var key in _enabledGlobalMods)
+            s *= _globalModDefs[key];
+
+        foreach (var key in _enabledMods)
+            s *= _globalModDefs[key];
+
+        return Mathf.Max(MINIMUM_SPEED_MULTIPLIER, s);
     }
 
     protected void RecomputeAndApplyEffectiveSpeed()
@@ -119,19 +150,19 @@ public class Animal : MonoBehaviour
         currentSpeed = speed * scale;
     }
 
-    private void HandleGlobalSpeedScaleChanged(float _)
-    {
-        RecomputeAndApplyEffectiveSpeed();
-    }
+    private void HandleGlobalSpeedScaleChanged(float _) => RecomputeAndApplyEffectiveSpeed();
+    private void HandleAnyGlobalSpeedFactorChanged() => RecomputeAndApplyEffectiveSpeed();
 
     protected virtual void OnEnable()
     {
         OnGlobalSpeedScaleChanged += HandleGlobalSpeedScaleChanged;
+        OnAnyGlobalSpeedFactorChanged += HandleAnyGlobalSpeedFactorChanged;
         RecomputeAndApplyEffectiveSpeed();
     }
     protected virtual void OnDisable()
     {
         OnGlobalSpeedScaleChanged -= HandleGlobalSpeedScaleChanged;
+        OnAnyGlobalSpeedFactorChanged -= HandleAnyGlobalSpeedFactorChanged;
     }
 
     protected virtual void Awake()
@@ -467,8 +498,7 @@ public class Animal : MonoBehaviour
 
     public void StruckByLightning()
     {
-        currentSpeed *= 2;
-        speed *= 2;
+        ModifySpeed("lightning");
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         sr.material = GameController.lightningMat;
         struckByLightning = true;

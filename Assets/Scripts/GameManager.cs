@@ -241,12 +241,12 @@ public class GameManager : MonoBehaviour
             if (chosenEvent > -1)
             {
                 roundDescription = randomEventManager.randomEventStrings[chosenEvent].GetLocalizedString();
+                randomEventManager.StartRandomEvent(chosenEvent);
             }
             else
             {
                 roundDescription = null;
             }
-            randomEventManager.StartRandomEvent(chosenEvent);
         }
         Invoke("StartRound", 1);
     }
@@ -494,6 +494,7 @@ public class GameManager : MonoBehaviour
                     GameController.shopManager.cantPurchaseItem = false;
                     shopButtonBlocker.SetActive(false);
                     pauseMenu.canOpenClose = true;
+                    challengeEventManager.EndChallenge();
                 });
             }
         );
@@ -509,8 +510,7 @@ public class GameManager : MonoBehaviour
         pauseMenu.canOpenClose = false;
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
-        RoundSetup();
-        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
+        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("RoundSetup", 2.25f));
         cameraController.ResetToStartPosition(1f);
     }
 
