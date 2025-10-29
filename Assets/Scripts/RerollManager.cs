@@ -92,8 +92,7 @@ public class RerollManager : MonoBehaviour
             //LassoController.CreateBoonIcons(transform, rrBoonSprites);
             priceText.text = rerollPrice.ToString();
         }
-
-        if (totalRerolls == 100 && steamIntegration.IsThisAchievementUnlocked("Shopaholic"))
+        if (totalRerolls == 100 && !steamIntegration.IsThisAchievementUnlocked("Shopaholic"))
         {
             steamIntegration.UnlockAchievement("Shopaholic");
         }

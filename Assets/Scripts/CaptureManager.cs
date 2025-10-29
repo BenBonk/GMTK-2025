@@ -70,7 +70,7 @@ public class CaptureManager : MonoBehaviour
                 }
             }
 
-            if (animalsCaptured.Count>=25 && steamIntegration.IsThisAchievementUnlocked("Crowd Control"))
+            if (animalsCaptured.Count>=25 && !steamIntegration.IsThisAchievementUnlocked("Crowd Control"))
             {
                 steamIntegration.UnlockAchievement("Crowd Control");
             }
