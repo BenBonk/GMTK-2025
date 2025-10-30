@@ -19,17 +19,11 @@ public class Fox : Animal
 
     // speed system baselines
     private float baseSpeed;
-    private float baseFreq;
-    private float baseVariationSpeed;
-    private float baseSpeedRecoveryRate;
 
     protected override void Awake()
     {
         base.Awake();
         baseSpeed = speed;
-        baseFreq = baseFrequency;
-        baseVariationSpeed = variationSpeed;
-        baseSpeedRecoveryRate = speedRecoveryRate;
     }
 
     public override void Start()
@@ -38,19 +32,6 @@ public class Fox : Animal
         AdjustStartYToFitWave();
         currentSpeed = speed;
         initialized = true;
-    }
-
-    protected override void ApplyEffectiveSpeedScale(float scale)
-    {
-        // linear move speed
-        speed = baseSpeed * scale;
-
-        // keep wave density similar as speed changes
-        float freqMul = Mathf.Pow(scale, 0.4f);
-        baseFrequency = baseFreq * freqMul;
-        variationSpeed = baseVariationSpeed * freqMul;
-
-        speedRecoveryRate = baseSpeedRecoveryRate / Mathf.Pow(scale, 0.5f);
     }
 
     public override void ActivateLegendary()

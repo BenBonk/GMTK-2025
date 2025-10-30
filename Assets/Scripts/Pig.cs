@@ -6,8 +6,6 @@ public class Pig : Animal
     public float waveAmplitude = 1f;   // Height of sine wave
     public float waveFrequency = 2f;   // Wave cycles per second
 
-    private float baseAmplitude;
-    private float baseFrequency;
     private float baseSpeed;
 
     private bool initialized = false;
@@ -21,8 +19,6 @@ public class Pig : Animal
     protected override void Awake()
     {
         base.Awake();
-        baseAmplitude = waveAmplitude;
-        baseFrequency = waveFrequency;
         baseSpeed = speed;
     }
 
@@ -39,21 +35,6 @@ public class Pig : Animal
             GetComponent<SpriteRenderer>().sprite = pigWithHat;
             gameObject.tag = "PigWithHat";
         }
-    }
-
-    // Scale wave motion when global speed changes
-    protected override void ApplyEffectiveSpeedScale(float scale)
-    {
-        speed = baseSpeed * scale;
-        waveFrequency = baseFrequency * scale;
-        waveAmplitude = baseAmplitude / Mathf.Pow(scale, 0.25f);
-        if (_lastScale > 0f && !Mathf.Approximately(scale, _lastScale))
-        {
-            float k = scale / _lastScale;
-            waveProgress /= k;
-        }
-
-        _lastScale = scale;
     }
 
     protected override Vector3 ComputeMove()

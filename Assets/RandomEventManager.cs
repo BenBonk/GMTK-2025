@@ -26,6 +26,7 @@ public class RandomEventManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameController.gameManager;
+        Invoke("SpawnMud", .5f);
         //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
         //Invoke("SpawnMole", 7);
         //Invoke("Rain", .5f);

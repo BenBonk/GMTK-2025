@@ -25,6 +25,7 @@ public class ChallengeEventManager : MonoBehaviour
         gameManager = GameController.gameManager;
         //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
         //StartChallenge(1);
+        Invoke("SpawnTumbleweed", 7f);
     }
 
     public int GetChallengeEvent()

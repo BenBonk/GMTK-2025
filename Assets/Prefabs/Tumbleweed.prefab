@@ -112,6 +112,9 @@ MonoBehaviour:
   groundClearance: 0.05
   radiusUnits: 0.45
   offscreenMargin: 1.5
+  hitPauseDuration: 0.35
+  hitRampDuration: 0.6
+  poof: {fileID: 7982410124831557159, guid: 59a51c6a13a48ea408203f9a35b48d70, type: 3}
 --- !u!58 &878869840340554779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,7 +150,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.030398846, y: -0.00039348006}
-  m_Radius: 0.37506285
+  m_Radius: 0.32
 --- !u!50 &8901954670155263623
 Rigidbody2D:
   serializedVersion: 5

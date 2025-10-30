@@ -60,6 +60,8 @@ public class LassoController : MonoBehaviour
     Vector2 debugTipTangent;
     bool debugTipCenterValid = false;
 
+    public static readonly HashSet<LineRenderer> ActiveLines = new HashSet<LineRenderer>();
+
     // runtime
     Transform tipXform;
 
@@ -108,15 +110,21 @@ public class LassoController : MonoBehaviour
         }
     }
 
+    public static void Unregister(LineRenderer lr)
+    {
+        if (lr) ActiveLines.Remove(lr);
+    }
+
+
     void StartLasso()
     {
         isDrawing = true;
         GameObject newLasso = Instantiate(lassoPrefab, Vector3.zero, Quaternion.identity);
         lineRenderer = newLasso.GetComponent<LineRenderer>();
+        ActiveLines.Add(lineRenderer);
         rawPoints.Clear();
         lineRenderer.positionCount = 0;
 
-        // lightweight tip anchor
         var tipGO = new GameObject("LassoTip");
         tipXform = tipGO.transform;
 
@@ -987,12 +995,13 @@ public class LassoController : MonoBehaviour
         }
 
         // Reset state
+        Unregister(lineRenderer);
         rawPoints.Clear();
         isDrawing = false;
         debugTipCenterValid = false;
     }
 
-    // ===== Geometry/utility from your version =====
+    // ===== Geometry/utility =====
 
     List<Vector3> GenerateSmoothLasso(List<Vector3> controlPoints, int subdivisions)
     {

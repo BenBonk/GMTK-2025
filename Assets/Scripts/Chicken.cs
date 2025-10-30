@@ -41,7 +41,7 @@ public class Chicken : Animal
 
     protected override void ApplyEffectiveSpeedScale(float scale)
     {
-        const float EXP_ACCEL = 0.5f; 
+        const float EXP_ACCEL = 0.5f;
         const float EXP_PAUSE = 0.6f;
 
         speed = baseSpeed * scale;
@@ -49,18 +49,21 @@ public class Chicken : Animal
         minPauseDuration = baseMinPause / Mathf.Pow(scale, EXP_PAUSE);
         maxPauseDuration = baseMaxPause / Mathf.Pow(scale, EXP_PAUSE);
 
-        if (_lastScale > 0f && scale != _lastScale)
+        if (_lastScale > 0f && !Mathf.Approximately(scale, _lastScale))
         {
             float k = scale / _lastScale;
 
-            if (isPaused)
-                pauseTimer /= k;
-            else
-                moveTimer /= k;
+            if (isPaused) pauseTimer /= k;
+            else moveTimer /= k;
+
+            speedTarget = isPaused ? 0f : speed;
+
+            if (currentSpeed > speed) currentSpeed = speed;
         }
 
         _lastScale = scale;
     }
+
 
     public override void Start()
     {

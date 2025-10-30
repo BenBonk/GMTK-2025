@@ -43,9 +43,9 @@ public class Dog : Animal
     protected override void ApplyEffectiveSpeedScale(float scale)
     {
         speed = baseSpeed * scale;
+
         float timeDiv = Mathf.Pow(scale, 0.5f);
         zigZagDuration = Mathf.Max(0.05f, baseZigZagDuration / timeDiv);
-
         pushRadius = basePushRadius * Mathf.Pow(scale, 0.25f);
         pushStrength = basePushStrength * Mathf.Pow(scale, 0.35f);
 
@@ -54,9 +54,11 @@ public class Dog : Animal
             float k = scale / _lastScale;
             zigTimer /= Mathf.Pow(k, 0.5f);
         }
-
         _lastScale = scale;
+
+        currentSpeed = speed;
     }
+
 
     public override void Start()
     {
