@@ -109,27 +109,282 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: muddyBackground_0
+      name: muddyBackground_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 534
-        height: 333
+        x: 244
+        y: 252
+        width: 260
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 189961afe744491b0800000000000000
-      internalID: -5650816320290776703
+      spriteID: 5460b7c96e5c09a43b6de2a04815b65d
+      internalID: -30558356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_6
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 247
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993dc199d5ba84a49a317deffbd8e47b
+      internalID: -341667230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 231
+        width: 67
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083b0865b9bcb514681c0c3f62f9abea
+      internalID: 1776043811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_16
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 205
+        width: 74
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a4fad0ab97a6945945746e3c0aab80
+      internalID: 776661173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_22
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 93
+        width: 177
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9657d16fb2ee78742abd1beb0ec5e268
+      internalID: -187264364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_24
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 124
+        width: 105
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7b6c2cee3316b43945ef48bf819f4a
+      internalID: 1675829575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_33
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 143
+        width: 66
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601447576b22d154688b3ee1e09ae806
+      internalID: -1367379064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_37
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 128
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2355ca764b04b9747a753576a9abbd21
+      internalID: -193871977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_39
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 107
+        width: 58
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f6599b7f4bcb5469a4518b108ed516
+      internalID: -1896605492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_48
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 22
+        width: 105
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d325a0e834d30274383f736a6a6cf242
+      internalID: 1309333115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_50
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 27
+        width: 127
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bea448bad8103346bd2462cbe4c15c3
+      internalID: -1203567996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muddyBackground_53
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 24
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60715aa7b0eaab43b9369abf7c3e699
+      internalID: 1980855557
       vertices: []
       indices: 
       edges: []
@@ -149,6 +404,68 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       muddyBackground_0: -5650816320290776703
+      muddyBackground_1: 227715183
+      muddyBackground_10: -2120345941
+      muddyBackground_11: 1974565179
+      muddyBackground_12: 2135896146
+      muddyBackground_13: -1623287784
+      muddyBackground_14: -1093772508
+      muddyBackground_15: 446806454
+      muddyBackground_16: 776661173
+      muddyBackground_17: -836928603
+      muddyBackground_18: -1720989814
+      muddyBackground_19: -1428977266
+      muddyBackground_2: -250153504
+      muddyBackground_20: -532408144
+      muddyBackground_21: -520971746
+      muddyBackground_22: -187264364
+      muddyBackground_23: 1094154113
+      muddyBackground_24: 1675829575
+      muddyBackground_25: 1713888694
+      muddyBackground_26: 3329362
+      muddyBackground_27: -1662601522
+      muddyBackground_28: -431717716
+      muddyBackground_29: 417264330
+      muddyBackground_3: -30558356
+      muddyBackground_30: -793394481
+      muddyBackground_31: 1017419093
+      muddyBackground_32: 2100007071
+      muddyBackground_33: -1367379064
+      muddyBackground_34: 1093688274
+      muddyBackground_35: 1370213045
+      muddyBackground_36: 1148602851
+      muddyBackground_37: -193871977
+      muddyBackground_38: 1693788765
+      muddyBackground_39: -1896605492
+      muddyBackground_4: 2112164665
+      muddyBackground_40: -619597489
+      muddyBackground_41: -1324004378
+      muddyBackground_42: -1559018826
+      muddyBackground_43: -1210818113
+      muddyBackground_44: 1484909521
+      muddyBackground_45: -486702475
+      muddyBackground_46: 296287046
+      muddyBackground_47: 715007878
+      muddyBackground_48: 1309333115
+      muddyBackground_49: -1387548932
+      muddyBackground_5: -728357368
+      muddyBackground_50: -1203567996
+      muddyBackground_51: -429309868
+      muddyBackground_52: 1408057389
+      muddyBackground_53: 1980855557
+      muddyBackground_54: 2053392803
+      muddyBackground_55: -1177127970
+      muddyBackground_56: 944081327
+      muddyBackground_57: 66380818
+      muddyBackground_58: -1455442921
+      muddyBackground_59: 1595907276
+      muddyBackground_6: -341667230
+      muddyBackground_60: -1550156021
+      muddyBackground_61: -1143859983
+      muddyBackground_62: -1221281310
+      muddyBackground_7: 703826359
+      muddyBackground_8: 62871158
+      muddyBackground_9: 1776043811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
