@@ -65,17 +65,6 @@ namespace Level {
             yield return new WaitForSeconds(transitionTime);
             SceneManager.LoadScene(certainScened);
         }
-        private void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                Restart();
-            }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                LoadNextLevel();
-            }
-        }
         public void QuitGame()
         {
             Application.Quit();
