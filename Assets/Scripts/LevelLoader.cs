@@ -10,21 +10,6 @@ namespace Level {
         private string certainScened;
         public StartScreenManager ss;
 
-        /*
-    private void Awake()
-    {
-        if (levelLoader == null)
-        {
-            levelLoader = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        { 
-            Destroy(gameObject);
-        }
-    }
-    */
-
         public void LoadNextLevel()
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));

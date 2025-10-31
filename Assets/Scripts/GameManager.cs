@@ -279,6 +279,7 @@ public class GameManager : MonoBehaviour
         if (pointsThisRound < GetPointsRequirement() )
         {
             //GameOver
+            pauseMenu.canOpenClose = false;
             roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
