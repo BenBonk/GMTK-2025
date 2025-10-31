@@ -158,6 +158,7 @@ public class GameManager : MonoBehaviour
         OnPointsChanged += UpdateScoreDisplay;
         scoreDisplay.text = pointsLocalString.GetLocalizedString() + " " + LassoController.FormatNumber(0) + " / " + LassoController.FormatNumber(GetPointsRequirement(roundNumber+1));
         RoundSetup();
+        Invoke("StartRound", 1);
         UpdateTimerDisplay();
     }
     
@@ -256,7 +257,6 @@ public class GameManager : MonoBehaviour
                 roundDescription = null;
             }
         }
-        Invoke("StartRound", 1);
     }
 
     public bool IsChallengeRound()
@@ -510,7 +510,8 @@ public class GameManager : MonoBehaviour
         pauseMenu.canOpenClose = false;
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
-        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("RoundSetup", 2.25f));
+        RoundSetup();
+        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
         cameraController.ResetToStartPosition(1f);
     }
 

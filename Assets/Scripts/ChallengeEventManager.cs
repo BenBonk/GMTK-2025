@@ -23,8 +23,6 @@ public class ChallengeEventManager : MonoBehaviour
     private void Start()
     {
         gameManager = GameController.gameManager;
-        //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
-        //StartChallenge(1);
     }
 
     public int GetChallengeEvent()
@@ -60,6 +58,7 @@ public class ChallengeEventManager : MonoBehaviour
             //night
 
         }
+        return 1;
         return chosenEvent;
 
     }

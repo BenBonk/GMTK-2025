@@ -271,8 +271,10 @@ public class LassoController : MonoBehaviour
         lineRenderer.positionCount = visualPoints.Count;
         lineRenderer.SetPositions(visualPoints.ToArray());
 
-        if (CheckForCacti())
+        if (TryGetCactiInside(out var cactiInside))
         {
+            FadeOutActiveLasso();
+            StartCoroutine(AnimateCactusHit(cactiInside));
             return;
         }
 
@@ -698,24 +700,116 @@ public class LassoController : MonoBehaviour
         return list;
     }
 
-    bool CheckForCacti()
+    bool TryGetCactiInside(out List<GameObject> cactiInside)
     {
-        if (rawPoints.Count < 3) return false;
+        cactiInside = null;
+        if (rawPoints == null || rawPoints.Count < 3) return false;
 
-        var cacti = GameObject.FindGameObjectsWithTag("Cactus");
+        var all = GameObject.FindGameObjectsWithTag("Cactus");
+        if (all == null || all.Length == 0) return false;
 
-        foreach (var cactus in cacti)
+        var list = new List<GameObject>();
+        foreach (var c in all)
         {
-            var col = cactus.GetComponent<Collider2D>();
-            Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)cactus.transform.position;
+            var col = c.GetComponent<Collider2D>();
+            Vector2 p = col ? (Vector2)col.bounds.center : (Vector2)c.transform.position;
 
-            if (IsPointInPolygon(point, rawPoints))
-            {
-                return true;
-            }
+            if (IsPointInPolygon(p, rawPoints))
+                list.Add(c);
         }
-        return false;
+
+        if (list.Count == 0) return false;
+        cactiInside = list;
+        return true;
     }
+
+    IEnumerator AnimateCactusHit(List<GameObject> cacti)
+    {
+        if (cacti == null || cacti.Count == 0) yield break;
+
+        // timings
+        float toRed = 0.15f;
+        float shakeDur = 0.25f;
+        float backDur = 0.25f;
+
+        // small 2D shake strength
+        Vector3 shakeStrength = new Vector3(0.15f, 0.15f, 0f);
+
+        // run all animations in parallel
+        var seqs = new List<Sequence>();
+        foreach (var go in cacti)
+        {
+            if (!go) continue;
+
+            // collect all sprite renderers under this cactus
+            var srs = go.GetComponentsInChildren<SpriteRenderer>(true);
+            if (srs == null || srs.Length == 0) continue;
+
+            // optional: temporarily bump sort order so they pop in front
+            var originalOrders = new int[srs.Length];
+            for (int i = 0; i < srs.Length; i++)
+            {
+                originalOrders[i] = srs[i].sortingOrder;
+                srs[i].sortingOrder = originalOrders[i] + 5;
+            }
+
+            // build one seq per cactus that:
+            // 1) flashes its sprites toward red,
+            // 2) shakes the transform,
+            // 3) returns sprites to original color,
+            // 4) restores sorting order.
+            var seq = DOTween.Sequence();
+
+            // cache original colors
+            var origColors = new Color[srs.Length];
+            for (int i = 0; i < srs.Length; i++) origColors[i] = srs[i].color;
+
+            // target "reddish" keeping alpha
+            void TintTowardRed(SpriteRenderer sr)
+            {
+                Color oc = sr.color;
+                // push hue toward red without nuking alpha
+                Color tgt = new Color(1f, oc.g * 0.35f, oc.b * 0.35f, oc.a);
+                seq.Join(sr.DOColor(tgt, toRed));
+            }
+
+            foreach (var sr in srs) TintTowardRed(sr);
+
+            // shake the cactus transform while it is red
+            seq.Join(go.transform.DOShakePosition(
+                shakeDur,
+                strength: shakeStrength,
+                vibrato: 20,
+                randomness: 90f,
+                snapping: false,
+                fadeOut: true
+            ));
+
+            // return to original colors
+            for (int i = 0; i < srs.Length; i++)
+            {
+                var sr = srs[i];
+                var oc = origColors[i];
+                seq.Append(sr.DOColor(oc, backDur));
+            }
+
+            // finally restore sorting order
+            seq.OnComplete(() =>
+            {
+                for (int i = 0; i < srs.Length; i++)
+                {
+                    if (srs[i]) srs[i].sortingOrder = originalOrders[i];
+                }
+            });
+
+            seqs.Add(seq);
+        }
+
+        // wait for the longest sequence to complete
+        float total = toRed + shakeDur + backDur;
+        yield return new WaitForSeconds(total);
+    }
+
 
     public void ShowCaptureFeedback((double pointBonus, double pointMult, double currencyBonus, double currencyMult, HashSet<Sprite> boonSprites) result)
     {
@@ -1000,9 +1094,9 @@ public class LassoController : MonoBehaviour
     }
 
 
-    public void FadeOutActiveLasso(float downDistance = 2f, float duration = 0.6f)
+    public void FadeOutActiveLasso(float downDistance = 0.1f, float duration = 0.4f)
     {
-        if (!isDrawing || lineRenderer == null) return;
+        if (lineRenderer == null) return;
 
         // stop draw particles, kill tip
         if (drawParticles) drawParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);

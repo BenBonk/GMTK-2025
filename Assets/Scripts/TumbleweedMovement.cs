@@ -1,3 +1,4 @@
+using Steamworks.Data;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,6 +47,8 @@ public class TumbleweedMover2D : MonoBehaviour
 
     public GameObject poof;
 
+    public Sprite[] tumbleSprites;
+
     // runtime
     float slowMoTimer = 0f;
 
@@ -70,6 +73,8 @@ public class TumbleweedMover2D : MonoBehaviour
         tr = transform;
         sr = GetComponent<SpriteRenderer>();
         circle = GetComponent<CircleCollider2D>();
+
+        sr.sprite = tumbleSprites[Random.Range(0, tumbleSprites.Length)];
 
         cam = Camera.main;
         if (!cam) return;
@@ -287,22 +292,6 @@ public class TumbleweedMover2D : MonoBehaviour
 
         tr.position = p;
     }
-
-
-#if UNITY_EDITOR
-    void OnDrawGizmosSelected()
-    {
-        // Visualize chosen ground line when running
-        Gizmos.color = Color.yellow;
-        float gy = Application.isPlaying ? groundY : 0f;
-        Vector3 a = new Vector3(-1000f, gy + groundClearance, 0f);
-        Vector3 b = new Vector3(1000f, gy + groundClearance, 0f);
-        Gizmos.DrawLine(a, b);
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(transform.position, Mathf.Abs(radiusUnits));
-    }
-#endif
 }
 
 

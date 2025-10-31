@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5859646217419707111, guid: 146979d4f050d81499741959351050c6, type: 3}
+  m_Sprite: {fileID: -1594754858, guid: 146979d4f050d81499741959351050c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.0625, y: 0.875}
+  m_Size: {x: 0.9375, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -115,6 +115,10 @@ MonoBehaviour:
   hitPauseDuration: 0.35
   hitRampDuration: 0.6
   poof: {fileID: 7982410124831557159, guid: 59a51c6a13a48ea408203f9a35b48d70, type: 3}
+  tumbleSprites:
+  - {fileID: -1594754858, guid: 146979d4f050d81499741959351050c6, type: 3}
+  - {fileID: -869121578, guid: 146979d4f050d81499741959351050c6, type: 3}
+  - {fileID: -356184896, guid: 146979d4f050d81499741959351050c6, type: 3}
 --- !u!58 &878869840340554779
 CircleCollider2D:
   m_ObjectHideFlags: 0

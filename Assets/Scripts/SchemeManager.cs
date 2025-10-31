@@ -14,7 +14,7 @@ public class SchemeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ChangeScheme(0);
+        //ChangeScheme(0);
     }
 
     public void SetRandomScheme(int roundNumber)

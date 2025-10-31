@@ -23,14 +23,11 @@ public class GrassSpawner : MonoBehaviour
     {
        //SpawnGrass();
        CalculateSpawnAreaFromRectTransform();
-       if (spawnOnStart)
-       {
-           SpawnGrass();
-       }
     }
 
     public void SpawnGrass()
     {
+        CalculateSpawnAreaFromRectTransform();
         if (spawnAreaRectTransform == null)
         {
             return;
@@ -81,7 +78,6 @@ public class GrassSpawner : MonoBehaviour
             if (Vector2.Distance(pos, tryPosition) < minDistanceBetweenGrass)
                 return false;
         }
-
         GameObject grassGO = new GameObject("Grass");
         SpriteRenderer sr = grassGO.AddComponent<SpriteRenderer>();
         sr.sprite = grassSprites[Random.Range(0, grassSprites.Length)];

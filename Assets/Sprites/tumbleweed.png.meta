@@ -113,23 +113,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TumbleWeed_0
+      name: tumbleweed_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 17
-        height: 14
+        x: 1
+        y: 3
+        width: 15
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 91dac3d9fca5eaea0800000000000000
-      internalID: -5859646217419707111
+      spriteID: 0645f3675a3deb4488cf63103aa5f9b2
+      internalID: -1594754858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumbleweed_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9ae45bd75d7d04c84da582260fe600
+      internalID: -869121578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tumbleweed_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 3
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94cf738eac26dae40b05644c7a86fe36
+      internalID: -356184896
       vertices: []
       indices: 
       edges: []
@@ -138,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 190f877b6b295ae44a4671ba942b1bb8
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TumbleWeed_0: -5859646217419707111
+      tumbleweed_0: -1594754858
+      tumbleweed_1: -869121578
+      tumbleweed_2: -356184896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
