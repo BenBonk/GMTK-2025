@@ -16,7 +16,8 @@ public class RandomEventManager : MonoBehaviour
     public GameObject rainEffect;
     public ParticleSystem rainParticles;
     public ParticleSystem cloudParticles;
-    public GameObject mudPuddles;
+    public GameObject[] bigMudPuddles;
+    public GameObject[] smallMudPuddles;
     public int numberOfMudPuddles = 100;
     [HideInInspector] public bool isRaining;
 
@@ -109,7 +110,12 @@ public class RandomEventManager : MonoBehaviour
     }
     public void SpawnMud()
     {
-        Instantiate(mudPuddles, Vector3.zero + new Vector3(Random.Range(-5.0f,5.0f), Random.Range(-4.5f,4.5f),0), Quaternion.identity);
+        List<Vector2> spawnPoints = GenerateNonOverlappingPositions(numberOfMudPuddles, 5);
+        for (int i = 0; i < numberOfMudPuddles-1; i++)
+        {
+            Instantiate(smallMudPuddles[Random.Range(0,smallMudPuddles.Length)], spawnPoints[i], Quaternion.identity);   
+        }
+        Instantiate(bigMudPuddles[Random.Range(0,bigMudPuddles.Length)], spawnPoints[numberOfMudPuddles-1], Quaternion.identity);   
     }
 
     void Rain()
@@ -178,5 +184,35 @@ public class RandomEventManager : MonoBehaviour
         {
             Invoke("SpawnButterfly", Random.Range(3.0f, 7.0f));    
         }
+    }
+    public List<Vector2> GenerateNonOverlappingPositions(int count, float minDistance)
+    {
+        List<Vector2> positions = new List<Vector2>();
+        Bounds bounds = moleBounds.bounds;
+
+        int attempts = 0;
+        while (positions.Count < count && attempts < 5000)
+        {
+            attempts++;
+            Vector2 candidate = new Vector2(
+                Random.Range(bounds.min.x, bounds.max.x),
+                Random.Range(bounds.min.y, bounds.max.y)
+            );
+
+            bool tooClose = false;
+            foreach (var pos in positions)
+            {
+                if (Vector2.Distance(candidate, pos) < minDistance)
+                {
+                    tooClose = true;
+                    break;
+                }
+            }
+
+            if (!tooClose)
+                positions.Add(candidate);
+        }
+
+        return positions;
     }
 }
