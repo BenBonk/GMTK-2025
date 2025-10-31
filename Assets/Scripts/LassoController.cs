@@ -974,32 +974,114 @@ public class LassoController : MonoBehaviour
 
     public void DestroyLassoExit(bool discardLineObject)
     {
-        // Kill the floating tip if it exists
         if (tipXform != null)
         {
             Destroy(tipXform.gameObject);
             tipXform = null;
         }
 
-        // Optionally destroy the line object
+        // FIX: unregister while we still have a valid reference
+        if (lineRenderer != null) Unregister(lineRenderer);
+
         if (discardLineObject && lineRenderer != null)
         {
             var go = lineRenderer.gameObject;
-            lineRenderer = null; // clear reference before destroy
+            lineRenderer = null;
             Destroy(go);
         }
         else
         {
-            // On success, keep the line 
-            lineRenderer = null; // but still clear reference
+            lineRenderer = null;
         }
 
-        // Reset state
-        Unregister(lineRenderer);
         rawPoints.Clear();
         isDrawing = false;
         debugTipCenterValid = false;
     }
+
+
+    public void FadeOutActiveLasso(float downDistance = 2f, float duration = 0.6f)
+    {
+        if (!isDrawing || lineRenderer == null) return;
+
+        // stop draw particles, kill tip
+        if (drawParticles) drawParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        if (tipXform != null) { Destroy(tipXform.gameObject); tipXform = null; }
+
+        // snapshot current world positions
+        int n = lineRenderer.positionCount;
+        if (n <= 0) { DestroyLassoExit(true); return; }
+
+        var worldPts = new Vector3[n];
+        lineRenderer.GetPositions(worldPts);  // these are in world space because useWorldSpace is true
+
+        // capture original gradient (we will preserve ALL keys and just scale alpha)
+        Gradient original = lineRenderer.colorGradient;
+        var origColorKeys = original.colorKeys; // preserve as-is
+        var origAlphaKeys = original.alphaKeys; // we will scale these
+
+        // unregister this active line so nothing else hits it during fade
+        Unregister(lineRenderer);
+
+        // immediately clear controller state so gameplay continues
+        var lr = lineRenderer;
+        lineRenderer = null;
+        isDrawing = false;
+        rawPoints.Clear();
+        debugTipCenterValid = false;
+
+        // tween 0 -> 1; on update: move points down and fade alpha
+        float t = 0f;
+        var seq = DG.Tweening.DOTween.Sequence();
+
+        // we keep useWorldSpace = true; no parenting, no transform changes (no teleport)
+        // movement ease
+        Ease moveEase = Ease.InOutCubic;
+
+        // update function: apply offset and fade
+        void ApplyFrame(float v)
+        {
+            // move
+            float eased = DG.Tweening.Core.Easing.EaseManager.Evaluate(moveEase, null, v, 1f, 0f, 0f); // ease(0..1)
+            float dy = -Mathf.Abs(downDistance) * eased;
+
+            for (int i = 0; i < n; i++)
+            {
+                var p = worldPts[i];
+                worldPts[i] = new Vector3(p.x, p.y + dy, p.z);
+            }
+            if (lr != null) lr.SetPositions(worldPts);
+
+            // fade: scale alpha keys by (1 - v), preserve times
+            float aScale = 1f - v;
+            var fadedAlpha = new GradientAlphaKey[origAlphaKeys.Length];
+            for (int i = 0; i < origAlphaKeys.Length; i++)
+            {
+                fadedAlpha[i] = new GradientAlphaKey(origAlphaKeys[i].alpha * aScale, origAlphaKeys[i].time);
+            }
+            var g = new Gradient();
+            g.SetKeys(origColorKeys, fadedAlpha);
+            if (lr != null) lr.colorGradient = g;
+        }
+
+        seq.Join(DOTween.To(() => t, v => { t = v; ApplyFrame(t); }, 1f, duration));
+
+        // ensure it stays on top visually if needed (optional small nudge up in sorting)
+        var lrRenderer = lr != null ? lr.GetComponent<Renderer>() : null;
+        if (lr != null)
+        {
+            lr.sortingOrder += 1; // optional: keep above ground
+        }
+
+        // cleanup
+        seq.OnComplete(() =>
+        {
+            if (lr) Destroy(lr.gameObject);
+        });
+    }
+
+
+
 
     // ===== Geometry/utility =====
 

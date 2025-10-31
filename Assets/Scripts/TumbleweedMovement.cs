@@ -203,7 +203,7 @@ public class TumbleweedMover2D : MonoBehaviour
                 }
 
                 // break the in-progress lasso as failed
-                lc.DestroyLassoExit(true);
+                lc.FadeOutActiveLasso(downDistance: .1f, duration: 0.4f);
 
                 // stop, then ramp back up
                 pauseTimer = hitPauseDuration;
