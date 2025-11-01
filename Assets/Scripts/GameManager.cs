@@ -758,6 +758,7 @@ public class GameManager : MonoBehaviour
         wordText.text = word;
         wordObj.SetActive(true);
         AudioManager.Instance.PlaySFX("ready");
+        spawner.currentShoe.Clear();
 
         // Scale in
         yield return skipper.AwaitTween(wordObj.transform.DOScale(1.2f, scaleDuration).SetEase(Ease.OutBack));

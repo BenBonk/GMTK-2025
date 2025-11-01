@@ -33412,7 +33412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 1
+  isTesting: 0
   player: {fileID: 1887224207}
   harvestLevel: 1
   farmerID: 0
@@ -33983,6 +33983,7 @@ MonoBehaviour:
   canOverrideBoon: 0
   boonDeckButton: {fileID: 1071487689}
   animalDeckButton: {fileID: 150976153}
+  cantToggleSynergiesDeck: 0
   references:
     version: 2
     RefIds: []

@@ -12,8 +12,14 @@ public class AnimalSpawner : MonoBehaviour
     private PostProcessingManager postProcessing;
     public GameObject animalLight;
     
+    //Shoe stuff
+    public List<AnimalData> currentShoe;
+    private Player player;
+    private int shoesize;
+    
     private void Start()
     {
+        player = GameController.player;
         boonManager = GameController.boonManager;
         postProcessing = GameController.postProcessingManager;
     }
@@ -29,14 +35,32 @@ public class AnimalSpawner : MonoBehaviour
         }
     }
 
+    public void GenerateShoe()
+    {
+        shoesize = 3;
+        if(player.animalsInDeck.Count > 15)
+            shoesize = 2;
+        if(player.animalsInDeck.Count > 40)
+            shoesize = 1;
+        
+        for (int i = 0; i < shoesize; i++)
+        {
+            currentShoe.AddRange(player.animalsInDeck);
+        }
+    }
+
     private void SpawnRandomAnimal()
     {
-        var selectedAnimal =
-            GameController.player.animalsInDeck[Random.Range(0, GameController.player.animalsInDeck.Count)];
+        if (currentShoe.Count== 0)
+        {
+            GenerateShoe();
+        }
+        
+        var selectedAnimal = currentShoe[Random.Range(0, currentShoe.Count)];
+        currentShoe.Remove(selectedAnimal);
         if (selectedAnimal.isPredator && Random.Range(0,4)==0 &&boonManager.ContainsBoon("Scarecrow"))
         {
-            selectedAnimal =
-                GameController.player.animalsInDeck[Random.Range(0, GameController.player.animalsInDeck.Count)];
+            selectedAnimal = currentShoe[Random.Range(0, currentShoe.Count)];
         }
         GameObject animal = Instantiate(selectedAnimal.animalPrefab);
         float topBuffer = 0.25f;
