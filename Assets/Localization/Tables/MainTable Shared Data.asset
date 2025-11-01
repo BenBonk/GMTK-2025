@@ -511,8 +511,8 @@ MonoBehaviour:
     m_Key: startScreen.continue
     m_Metadata:
       m_Items: []
-  - m_Id: 3154139489218560
-    m_Key: logbook.welcome
+  - m_Id: 27389551270281216
+    m_Key: book
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -1501,6 +1501,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24856112636493824
     m_Key: tutorial.popup12_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Key: challenge.night
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -497,10 +497,6 @@ MonoBehaviour:
     m_Localized: Continuare
     m_Metadata:
       m_Items: []
-  - m_Id: 3154139489218560
-    m_Localized: Benvenuti al diario di bordo!
-    m_Metadata:
-      m_Items: []
   - m_Id: 3154139535355904
     m_Localized: Fai clic su una scheda qui sopra per visualizzare le tue statistiche
       e i tuoi record!
@@ -539,7 +535,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -1251,7 +1247,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031426
-    m_Localized: "Vento in poppa problematico: tutti gli animali si muovono pi\xF9
+    m_Localized: "Vento in poppa fastidioso: tutti gli animali si muovono pi\xF9
       velocemente"
     m_Metadata:
       m_Items: []
@@ -1342,7 +1338,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032528
-    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile e un puma
+    m_Localized: Lasso un gruppo di animali contenente un gatto da fienile e un puma
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032529
@@ -1495,7 +1491,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421120
-    m_Localized: Fuga precipitosa
+    m_Localized: fuga precipitosa
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421121
@@ -1562,6 +1558,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24856112623910912
     m_Localized: Ora che conosci le basi, cominciamo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551270281216
+    m_Localized: Benvenuti al diario di bordo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112636493824
+    m_Localized: "Pi\xF9 esemplari di uno specifico animale hai, pi\xF9 alta \xE8
+      la probabilit\xE0 che quell'animale si riproduca!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Localized: sfida.notte
     m_Metadata:
       m_Items: []
   references:

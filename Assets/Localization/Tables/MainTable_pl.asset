@@ -473,7 +473,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 103
     m_Localized: "Na koniec, mo\u017Cesz odnowi\u0107 sklep raz dziennie, a koszt
-      wzro\u015Bnie na sta\u0142e!"
+      ten wzro\u015Bnie na sta\u0142e!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -515,10 +515,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: "Kontynuowa\u0107"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3154139489218560
-    m_Localized: Witamy w Dzienniku!
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -1274,8 +1270,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031424
-    m_Localized: "Straszliwy wiatro\u0142om: wiatro\u0142omy zrywaj\u0105 lassa w
-      kontakcie"
+    m_Localized: "Straszliwy wiatropyle: wiatropyle zrywaj\u0105 lassa w kontakcie"
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
@@ -1422,7 +1417,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032537
-    m_Localized: Kozi Gruff
+    m_Localized: Kozi Gbur
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
@@ -1615,6 +1610,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24856112623910912
     m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551270281216
+    m_Localized: Witamy w Dzienniku!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112636493824
+    m_Localized: "Im wi\u0119cej osobnik\xF3w danego zwierz\u0119cia posiadasz, tym
+      wi\u0119ksza szansa, \u017Ce \u200B\u200Bsi\u0119 pojawi!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Localized: wyzwanie.noc
     m_Metadata:
       m_Items: []
   references:

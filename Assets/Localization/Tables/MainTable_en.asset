@@ -494,10 +494,6 @@ MonoBehaviour:
     m_Localized: Continue
     m_Metadata:
       m_Items: []
-  - m_Id: 3154139489218560
-    m_Localized: Welcome to the Logbook!
-    m_Metadata:
-      m_Items: []
   - m_Id: 3154139535355904
     m_Localized: Click a tab above to view your stats and records!
     m_Metadata:
@@ -1545,6 +1541,14 @@ MonoBehaviour:
   - m_Id: 24856112636493824
     m_Localized: The more of a specific animal you have, the higher the chance that
       animal will spawn!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551270281216
+    m_Localized: Welcome to the Logbook!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Localized: challenge.night
     m_Metadata:
       m_Items: []
   references:
