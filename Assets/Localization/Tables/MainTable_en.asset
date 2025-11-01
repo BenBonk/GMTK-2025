@@ -1548,7 +1548,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: challenge.night
+    m_Localized: 'Nightime: Higher predator spawnrate'
     m_Metadata:
       m_Items: []
   references:

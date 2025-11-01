@@ -1610,7 +1610,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: Herausforderungsnacht
+    m_Localized: "Nachts: H\xF6here Raubtierlaichrate"
     m_Metadata:
       m_Items: []
   references:

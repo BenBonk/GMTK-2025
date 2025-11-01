@@ -47,6 +47,27 @@ public class AnimalSpawner : MonoBehaviour
         {
             currentShoe.AddRange(player.animalsInDeck);
         }
+
+        if (GameController.postProcessingManager.isNight)
+        {
+            //could either remove nonpredators or add predators, ill opt to just add predators
+            //get a list of the predators
+            List<AnimalData> predatorsInDeck = new List<AnimalData>();
+            foreach (var animal in player.animalsInDeck)
+            {
+                if (animal.isPredator)
+                {
+                    predatorsInDeck.Add(animal);
+                }
+            }
+            //proportionally add random predator to shoe depending on shoe size 
+            int predatorsToAdd = currentShoe.Count / 4; //add 25% predators for example
+            for (int i = 0; i < predatorsToAdd; i++)
+            {
+                currentShoe.Add(predatorsInDeck[Random.Range(0, predatorsInDeck.Count)]);
+            }
+            Debug.Log("called");
+        }
     }
 
     private void SpawnRandomAnimal()

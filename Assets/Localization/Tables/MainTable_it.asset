@@ -1570,7 +1570,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: sfida.notte
+    m_Localized: "Notte: tasso di riproduzione dei predatori pi\xF9 elevato"
     m_Metadata:
       m_Items: []
   references:

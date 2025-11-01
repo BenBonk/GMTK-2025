@@ -1622,7 +1622,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: wyzwanie.noc
+    m_Localized: "Noc: Wi\u0119ksza cz\u0119stotliwo\u015B\u0107 pojawiania si\u0119
+      drapie\u017Cnik\xF3w"
     m_Metadata:
       m_Items: []
   references:
