@@ -11560,7 +11560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
       propertyPath: soundEffects.Array.size
-      value: 47
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
       propertyPath: soundEffects.Array.data[33].clip
@@ -11627,6 +11627,14 @@ PrefabInstance:
       value: lightning_strike
       objectReference: {fileID: 0}
     - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
+      propertyPath: soundEffects.Array.data[47].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e2ca071a3461e6748a9975325c09ea5a, type: 3}
+    - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
+      propertyPath: soundEffects.Array.data[47].name
+      value: reroll
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
       propertyPath: soundEffects.Array.data[40].volume
       value: 0.45
       objectReference: {fileID: 0}
@@ -11653,6 +11661,10 @@ PrefabInstance:
     - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
       propertyPath: soundEffects.Array.data[46].volume
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771783149535115848, guid: 6d7a4d8f335e6fc4abecf8b17b518862, type: 3}
+      propertyPath: soundEffects.Array.data[47].volume
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33509,7 +33521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 0
+  isTesting: 1
   player: {fileID: 1887224207}
   harvestLevel: 1
   farmerID: 0
