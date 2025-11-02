@@ -235,6 +235,7 @@ public class Bee : MonoBehaviour
         bool nearY = Mathf.Abs(p.y - desired.y) <= 0.05f;
         if (nearX && nearY)
         {
+            AudioManager.Instance.PlaySFX("bee_notice");
             hoverPoint = desired;
             state = BeeState.PreDive;
 
@@ -312,6 +313,7 @@ public class Bee : MonoBehaviour
             OnAnyBeeSting?.Invoke(target);
             if (destroyAfterSting)
             {
+                AudioManager.Instance.PlaySFX("bee_hit");
                 Instantiate(beePoof, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }

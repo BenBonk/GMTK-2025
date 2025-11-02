@@ -58,7 +58,7 @@ public class ChallengeEventManager : MonoBehaviour
             //night
 
         }
-        return 4;
+        return -1;
         return chosenEvent;
 
     }

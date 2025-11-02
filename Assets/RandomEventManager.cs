@@ -30,7 +30,7 @@ public class RandomEventManager : MonoBehaviour
         //Invoke("SpawnMud", .5f);
         //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
         //Invoke("SpawnMole", 7);
-        //Invoke("Rain", .5f);
+        Invoke("Rain", .5f);
     }
 
     public int GetRandomEvent()
@@ -141,6 +141,7 @@ public class RandomEventManager : MonoBehaviour
         
         Animal chosenAnimal = allAnimals[Random.Range(0, allAnimals.Length)];
         Instantiate(lightning, new Vector3(chosenAnimal.transform.position.x-2, chosenAnimal.transform.position.y, 0), Quaternion.identity); //Quaternion.Euler(0, 0, Random.Range(-30, 30))
+        AudioManager.Instance.PlaySFX("lightning_strike");
         yield return new WaitForSeconds(.7f);
         try
         {
