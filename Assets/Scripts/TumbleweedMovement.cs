@@ -138,6 +138,8 @@ public class TumbleweedMover2D : MonoBehaviour
 
             if (vy < 0f)
             {
+                AudioManager.Instance.PlaySFX("tumbleweed_bounce");
+
                 float upKick = Random.Range(bounceUpImpulseRange.x, bounceUpImpulseRange.y);
                 vy = Mathf.Abs(vy) * bounceElasticity + upKick;
 
@@ -209,6 +211,7 @@ public class TumbleweedMover2D : MonoBehaviour
 
                 // break the in-progress lasso as failed
                 lc.FadeOutActiveLasso(downDistance: .1f, duration: 0.4f);
+                AudioManager.Instance.PlaySFX("tumbleweed_break");
 
                 // stop, then ramp back up
                 pauseTimer = hitPauseDuration;

@@ -275,9 +275,9 @@ public class LassoController : MonoBehaviour
         {
             FadeOutActiveLasso();
             StartCoroutine(AnimateCactusHit(cactiInside));
+            AudioManager.Instance.PlaySFX("cactus_break");
             return;
         }
-
         // Compute bottom-of-lasso and bottom-center
         float zDepth = Mathf.Abs(Camera.main.transform.position.z - lineRenderer.transform.position.z);
         Vector3 screenBottomCenter = new Vector3(Screen.width / 2f, 0, zDepth);

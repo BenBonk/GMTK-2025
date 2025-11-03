@@ -13,7 +13,7 @@ public class PostProcessingManager : MonoBehaviour
 
     public bool isNight;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         volume.profile.TryGet(out vignette);
         volume.profile.TryGet(out colorAdjustments);

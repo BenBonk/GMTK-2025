@@ -20,9 +20,10 @@ public abstract class ShopItem : MonoBehaviour
     private Tween b;
     protected ShopManager shopManager;
     public RectTransform rt;
-    private void Start()
+    public virtual void Start()
     {
         shopManager = GameController.shopManager;
+        
     }
 
     public virtual void Initialize()

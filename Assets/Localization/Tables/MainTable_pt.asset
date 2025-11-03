@@ -57,11 +57,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8
-    m_Localized: POR UM PRAZER!
+    m_Localized: "POR UM TR\xCAS MOMENTO!"
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: Selecione um predador para adicionar ao seu celeiro
+    m_Localized: Selecione um predador para adicionar ao seu celeiro.
     m_Metadata:
       m_Items: []
   - m_Id: 10
@@ -87,11 +87,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: "Pontos m\xFAltiplos:"
+    m_Localized: 'Multiplicador de pontos:'
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: "Caixa m\xFAltiplo:"
+    m_Localized: 'Multiplicador em dinheiro:'
     m_Metadata:
       m_Items: []
   - m_Id: 17
@@ -115,8 +115,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: "Predador. Puxa predadores pr\xF3ximos em sua dire\xE7\xE3o. Imune
-      a efeitos de empurrar e puxar."
+    m_Localized: "Predador. Atrai criaturas n\xE3o predadoras pr\xF3ximas. Imune
+      a efeitos de empurr\xE3o e atra\xE7\xE3o."
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -149,7 +149,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: Predador. Move-se para cima e para baixo no campo esporadicamente.
+    m_Localized: "Predador. Move-se pelo campo de forma espor\xE1dica."
     m_Metadata:
       m_Items: []
   - m_Id: 31
@@ -157,7 +157,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: "Retarda predadores pr\xF3ximos."
+    m_Localized: "Diminui a velocidade dos predadores pr\xF3ximos."
     m_Metadata:
       m_Items: []
   - m_Id: 33
@@ -173,7 +173,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36
-    m_Localized: Serpenteia previsivelmente.
+    m_Localized: "Serpenteia de forma previs\xEDvel."
     m_Metadata:
       m_Items: []
   - m_Id: 37
@@ -189,23 +189,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Predador. Persegue n\xE3o predadores."
+    m_Localized: "Predador. Persegue indiv\xEDduos que n\xE3o s\xE3o predadores."
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: Baaaaa!
+    m_Localized: "B\xE9\xE9\xE9\xE9!"
     m_Metadata:
       m_Items: []
   - m_Id: 42
-    m_Localized: "La\xE7o um grupo de animais contendo uma ovelha e uma cabra"
+    m_Localized: "La\xE7o: um grupo de animais que inclui uma ovelha e uma cabra."
     m_Metadata:
       m_Items: []
   - m_Id: 43
-    m_Localized: Bacon e Ovos
+    m_Localized: Bacon e ovos
     m_Metadata:
       m_Items: []
   - m_Id: 44
-    m_Localized: "La\xE7o um grupo de animais contendo um porco e uma galinha"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um porco e uma galinha."
     m_Metadata:
       m_Items: []
   - m_Id: 45
@@ -213,8 +213,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: "La\xE7o um grupo de animais contendo um c\xE3o, uma raposa e um
-      lobo"
+    m_Localized: "La\xE7o: um grupo de animais que inclui um cachorro, uma raposa
+      e um lobo."
     m_Metadata:
       m_Items: []
   - m_Id: 47
@@ -222,23 +222,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48
-    m_Localized: "La\xE7o exatamente uma vaca"
+    m_Localized: "La\xE7ar exatamente uma vaca"
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: "Frango J\xF3quei"
+    m_Localized: Cavaleiro de Galinha
     m_Metadata:
       m_Items: []
   - m_Id: 50
-    m_Localized: "La\xE7o um grupo de animais contendo 1 galinha e 1 cavalo"
+    m_Localized: "La\xE7ar um grupo de animais contendo 1 galinha e 1 cavalo"
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: Contando Ovelhas
+    m_Localized: Contando Carneirinhos
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: "La\xE7o um grupo de animais contendo 3 ovelhas"
+    m_Localized: "La\xE7o em um grupo de animais contendo 3 ovelhas."
     m_Metadata:
       m_Items: []
   - m_Id: 53
@@ -246,15 +246,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: "La\xE7o um grupo de animais contendo um c\xE3o e um lobo"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um c\xE3o e um lobo."
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Dilema dos Agricultores
+    m_Localized: Dilema do Fazendeiro
     m_Metadata:
       m_Items: []
   - m_Id: 56
-    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e uma galinha"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma raposa e uma galinha."
     m_Metadata:
       m_Items: []
   - m_Id: 57
@@ -262,7 +262,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 58
-    m_Localized: "La\xE7o um grupo de animais contendo uma vaca e uma galinha"
+    m_Localized: "La\xE7o, um grupo de animais contendo uma vaca e uma galinha."
     m_Metadata:
       m_Items: []
   - m_Id: 59
@@ -270,7 +270,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e 3 galinhas"
+    m_Localized: "La\xE7ar um grupo de animais contendo uma raposa e 3 galinhas."
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -278,7 +278,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 62
-    m_Localized: "La\xE7o um grupo de animais contendo 3 ursos"
+    m_Localized: "La\xE7ar um grupo de animais contendo 3 ursos"
     m_Metadata:
       m_Items: []
   - m_Id: 63
@@ -286,16 +286,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 64
-    m_Localized: "La\xE7o um grupo de animais contendo uma vaca e uma cabra"
+    m_Localized: "La\xE7o: um grupo de animais que inclui uma vaca e uma cabra."
     m_Metadata:
       m_Items: []
   - m_Id: 65
-    m_Localized: "Feno l\xE1"
+    m_Localized: Ei!
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: "La\xE7o: um grupo de animais contendo uma vaca, uma cabra, um cavalo
-      e uma ovelha"
+    m_Localized: "La\xE7ar um grupo de animais que inclui uma vaca, uma cabra, um
+      cavalo e uma ovelha."
     m_Metadata:
       m_Items: []
   - m_Id: 67
@@ -303,7 +303,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 68
-    m_Localized: "La\xE7o um grupo de animais contendo um porco e um urso"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um porco e um urso."
     m_Metadata:
       m_Items: []
   - m_Id: 69
@@ -311,7 +311,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 70
-    m_Localized: "La\xE7o exatamente 1 Lobo"
+    m_Localized: "La\xE7ar exatamente 1 lobo"
     m_Metadata:
       m_Items: []
   - m_Id: 71
@@ -319,32 +319,32 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: "La\xE7o: um grupo de animais contendo uma galinha, uma vaca, um
-      cavalo, uma ovelha e um porco"
+    m_Localized: "La\xE7ar um grupo de animais contendo uma galinha, uma vaca, um
+      cavalo, uma ovelha e um porco."
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: "Acabamento fotogr\xE1fico"
+    m_Localized: Foto final
     m_Metadata:
       m_Items: []
   - m_Id: 74
-    m_Localized: "La\xE7o um grupo de animais contendo 2 cavalos"
+    m_Localized: "La\xE7o: um grupo de animais contendo 2 cavalos."
     m_Metadata:
       m_Items: []
   - m_Id: 75
-    m_Localized: Cofrinho
+    m_Localized: Cofrinho em forma de porquinho
     m_Metadata:
       m_Items: []
   - m_Id: 76
-    m_Localized: "La\xE7o um grupo de animais contendo um porco"
+    m_Localized: "La\xE7o: um grupo de animais que inclui um porco."
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: Porco em um cobertor
+    m_Localized: Porquinho enrolado em massa folhada
     m_Metadata:
       m_Items: []
   - m_Id: 78
-    m_Localized: "La\xE7o um grupo de animais contendo um porco e uma ovelha"
+    m_Localized: "La\xE7o: um grupo de animais que inclui um porco e uma ovelha."
     m_Metadata:
       m_Items: []
   - m_Id: 79
@@ -352,7 +352,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 80
-    m_Localized: "La\xE7o um grupo de animais contendo uma vaca e um urso"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma vaca e um urso."
     m_Metadata:
       m_Items: []
   - m_Id: 81
@@ -360,7 +360,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: "La\xE7o um grupo de animais contendo um puma e um urso"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma puma e um urso."
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -368,7 +368,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: "La\xE7o um grupo de animais contendo um cavalo e um cachorro"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um cavalo e um cachorro."
     m_Metadata:
       m_Items: []
   - m_Id: 85
@@ -376,7 +376,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 86
-    m_Localized: "La\xE7o um grupo de animais contendo 3 porcos e 1 lobo"
+    m_Localized: "La\xE7o: um grupo de animais contendo 3 porcos e 1 lobo."
     m_Metadata:
       m_Items: []
   - m_Id: 87
@@ -384,15 +384,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 88
-    m_Localized: "La\xE7o um grupo de animais contendo um lobo e uma ovelha"
+    m_Localized: "La\xE7o: um grupo de animais que inclui um lobo e uma ovelha."
     m_Metadata:
       m_Items: []
   - m_Id: 89
-    m_Localized: Bem-vindo ao Wrangle Ranch!
+    m_Localized: Bem-vindos ao Rancho Wrangle!
     m_Metadata:
       m_Items: []
   - m_Id: 90
-    m_Localized: Uh OH! Parece que a vaca se soltou de novo
+    m_Localized: "Ih, n\xE3o! Parece que a vaca escapou de novo."
     m_Metadata:
       m_Items: []
   - m_Id: 91
@@ -401,32 +401,32 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Bom trabalho! Controlar os animais da fazenda lhe dar\xE1 pontos
+    m_Localized: "Bom trabalho! Cuidar dos seus animais da fazenda lhe dar\xE1 pontos
       e dinheiro, mas voc\xEA n\xE3o pode ficar fora a noite toda!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
-    m_Localized: "Voc\xEA precisar\xE1 controlar animais suficientes para atingir
-      a meta de pontos antes que o tempo acabe."
+    m_Localized: "Voc\xEA precisar\xE1 reunir animais suficientes para atingir a
+      pontua\xE7\xE3o necess\xE1ria antes que o tempo acabe."
     m_Metadata:
       m_Items: []
   - m_Id: 94
-    m_Localized: "Voc\xEA pode la\xE7ar v\xE1rios animais de uma vez para ganhar
+    m_Localized: "Voc\xEA pode la\xE7ar v\xE1rios animais ao mesmo tempo para ganhar
       pontos e dinheiro extras!"
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "Agora tente la\xE7ar essas duas criaturas juntas!"
+    m_Localized: "Agora tente la\xE7ar esses dois bichos juntos!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
-    m_Localized: "UH OH, cuidado com os predadores! Voc\xEA perder\xE1 pontos se
-      la\xE7\xE1-los com seus animais."
+    m_Localized: "Ih, cuidado com os predadores! Voc\xEA perder\xE1 pontos se la\xE7ar
+      algum deles com seus animais."
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: Quando o dia termina, podemos voltar ao celeiro para gastar nosso
-      dinheiro suado!
+    m_Localized: "Ao final do dia, podemos voltar ao celeiro para gastar o dinheiro
+      que ganhamos com tanto esfor\xE7o!"
     m_Metadata:
       m_Items: []
   - m_Id: 98
@@ -435,26 +435,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 99
     m_Localized: "A partir daqui voc\xEA pode adicionar novos animais para serem
-      controlados durante o dia!"
+      cuidados durante o dia!"
     m_Metadata:
       m_Items: []
   - m_Id: 100
     m_Localized: "Voc\xEA pode ver todos os animais que podem aparecer durante o
-      dia clicando no bot\xE3o no canto superior esquerdo"
+      dia clicando no bot\xE3o no canto superior esquerdo."
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: "Voc\xEA tamb\xE9m pode adicionar benef\xEDcios poderosos que lhe
-      dar\xE3o pontos extras ao la\xE7ar certas combina\xE7\xF5es de animais"
+    m_Localized: "Voc\xEA tamb\xE9m pode adicionar vantagens poderosas que lhe dar\xE3o
+      pontos extras ao la\xE7ar certas combina\xE7\xF5es de animais."
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: "Aqui, voc\xEA pode melhorar seus animais para que eles lhe d\xEAem
+    m_Localized: "Aqui, voc\xEA pode melhorar seus animais para que eles lhe deem
       mais pontos e dinheiro!"
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: "Por fim, voc\xEA pode redefinir a loja uma vez por dia, a um custo
+    m_Localized: "Por fim, voc\xEA pode reiniciar a loja uma vez por dia, a um custo
       que aumenta permanentemente!"
     m_Metadata:
       m_Items: []
@@ -499,12 +499,9 @@ MonoBehaviour:
     m_Localized: Continuar
     m_Metadata:
       m_Items: []
-  - m_Id: 3154139489218560
-    m_Localized: "Bem-vindo ao Di\xE1rio de Bordo!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 3154139535355904
-    m_Localized: "Clique em uma aba acima para ver suas estat\xEDsticas e registros!"
+    m_Localized: "Clique em uma das abas acima para visualizar suas estat\xEDsticas
+      e registros!"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355905
@@ -516,7 +513,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355907
-    m_Localized: 'Total de animais controlados:'
+    m_Localized: 'Total de animais capturados:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355908
@@ -528,31 +525,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355910
-    m_Localized: "Maior La\xE7o:"
+    m_Localized: "O maior la\xE7o:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355911
-    m_Localized: "Pontos mais altos em um \xFAnico la\xE7o:"
+    m_Localized: "Maior pontua\xE7\xE3o em um \xFAnico la\xE7o:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355912
-    m_Localized: "B\xEAn\xE7\xE3os"
+    m_Localized: "Benef\xEDcios"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: 'Os 3 presentes mais comprados:'
+    m_Localized: "Os 3 benef\xEDcios mais comprados:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
-    m_Localized: "N\xFAmero de B\xEAn\xE7\xE3os Compradas:"
+    m_Localized: "N\xFAmero de benef\xEDcios adquiridos:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355915
-    m_Localized: "N\xFAmero de atualiza\xE7\xF5es de animais adquiridas:"
+    m_Localized: "N\xFAmero de melhorias para animais adquiridas:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355916
-    m_Localized: "N\xEDvel animal mais alto alcan\xE7ado:"
+    m_Localized: "N\xEDvel Animal Mais Alto Alcan\xE7ado:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355917
@@ -560,19 +557,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355918
-    m_Localized: "Maior quantidade de dinheiro em um \xFAnico la\xE7o:"
+    m_Localized: "Maior quantia em dinheiro obtida com um \xFAnico la\xE7o:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355919
-    m_Localized: 'Maior quantidade de dinheiro retido simultaneamente:'
+    m_Localized: 'Maior quantia em dinheiro mantida simultaneamente:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355920
-    m_Localized: "Mais repeti\xE7\xF5es em um \xFAnico jogo:"
+    m_Localized: "Maior n\xFAmero de relan\xE7amentos em uma \xFAnica partida:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
-    m_Localized: "Total de Repeti\xE7\xF5es:"
+    m_Localized: 'Total de rerolls:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550209
@@ -580,15 +577,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550210
-    m_Localized: "Maior n\xFAmero redondo:"
+    m_Localized: "N\xFAmero inteiro mais alto:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "Maior n\xFAmero redondo na dificuldade m\xE1xima:"
+    m_Localized: "N\xFAmero inteiro mais alto na dificuldade m\xE1xima:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
-    m_Localized: "N\xFAmero de quase acidentes:"
+    m_Localized: "N\xFAmero de situa\xE7\xF5es de quase-acidente:"
     m_Metadata:
       m_Items: []
   - m_Id: 3161374273548288
@@ -600,7 +597,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3161374273548290
-    m_Localized: "B\xEAn\xE7\xE3os"
+    m_Localized: "Benef\xEDcios"
     m_Metadata:
       m_Items: []
   - m_Id: 3161374273548291
@@ -648,7 +645,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206020
-    m_Localized: Efeitos sonoros
+    m_Localized: SFX
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206021
@@ -664,7 +661,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206024
-    m_Localized: Janelado
+    m_Localized: Com janelas
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206025
@@ -704,7 +701,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809024
-    m_Localized: Escolha seu fazendeiro
+    m_Localized: Escolha o seu agricultor
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809027
@@ -720,7 +717,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
-    m_Localized: "Dinheiro di\xE1rio:"
+    m_Localized: "Dinheiro Di\xE1rio:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809031
@@ -728,15 +725,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809032
-    m_Localized: 'Predadores iniciais:'
+    m_Localized: 'Predadores Iniciais:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809033
-    m_Localized: "Pre\xE7os da loja:"
+    m_Localized: "Pre\xE7os na loja:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809034
-    m_Localized: 'Cotas de pontos:'
+    m_Localized: 'Cotas de Pontos:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809035
@@ -768,8 +765,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Chance de uma ovelha ser uma ovelha negra, reativando seu la\xE7o
-      uma vez quando la\xE7ada"
+    m_Localized: "Chance de uma ovelha ser a ovelha negra, reativando seu la\xE7o
+      uma vez quando la\xE7ada."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -785,8 +782,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: "Os gatos se tornam o animal mais valioso em seu la\xE7o quando
-      capturados"
+    m_Localized: "Os gatos se tornam os animais mais valiosos em seu la\xE7o quando
+      capturados."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -794,7 +791,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: "B\xF4nus quando capturado no meio do ataque"
+    m_Localized: "B\xF4nus ao ser capturado em pleno salto"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
@@ -802,8 +799,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "C\xE3es afugentam predadores. C\xE3es valem +5,0x em dinheiro quando
-      la\xE7ados com qualquer predador."
+    m_Localized: "C\xE3es espantam predadores. C\xE3es la\xE7ados junto com qualquer
+      predador valem +5,0x dinheiro."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -811,43 +808,43 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607692
-    m_Localized: "Os ursos t\xEAm a chance de hibernar e ganhar pontos enquanto dormem"
+    m_Localized: "Os ursos t\xEAm a chance de hibernar e ganhar pontos enquanto dormem."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607693
-    m_Localized: Segure seus cavalos
+    m_Localized: "Calma a\xED!"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: "Os cavalos s\xE3o mais lentos e param brevemente na borda esquerda
-      da tela. Qualquer la\xE7o contendo um cavalo vale +10 pontos."
+      da tela. Qualquer la\xE7o que contenha um cavalo vale +10 pontos."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
-    m_Localized: Moo-tiplier
+    m_Localized: Mu-tiplier
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Cada vaca capturada acumula 0,25x pontos globais, reiniciando a
-      cada rodada ou quando um predador \xE9 capturado"
+    m_Localized: "Cada vaca capturada acumula 0,25x no multiplicador de pontos globais,
+      sendo este multiplicador zerado a cada rodada ou quando um predador \xE9 capturado."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984
-    m_Localized: "Porcos com chap\xE9us"
+    m_Localized: "Porcos com Chap\xE9us"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801985
-    m_Localized: Os porcos podem aparecer aleatoriamente com uma cartola, se assim
-      for, eles valem +50 em dinheiro e +25 pontos
+    m_Localized: Porcos podem surgir aleatoriamente com uma cartola; nesse caso,
+      valem +50 em dinheiro e +25 pontos.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
-    m_Localized: "P\xE9 de coelho"
+    m_Localized: "P\xE9 de Coelho"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801987
     m_Localized: "Os coelhos t\xEAm 25% de chance de dobrar os pontos acumulados
-      quando la\xE7ados"
+      quando la\xE7ados."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801988
@@ -855,7 +852,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: As cabras agora atraem todos os predadores na tela. As cabras valem
+    m_Localized: As cabras agora atraem todos os predadores na tela. Cada cabra vale
       +12 pontos e +12 em dinheiro para cada predador capturado com uma cabra.
     m_Metadata:
       m_Items: []
@@ -868,29 +865,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
-    m_Localized: "Tr\xEAs ratos cegos"
+    m_Localized: "Tr\xEAs Ratos Cegos"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801993
-    m_Localized: "Cada rato que voc\xEA captura conta como tr\xEAs ratos, os ratos
-      agora se movem aleatoriamente"
+    m_Localized: "Cada rato capturado conta como tr\xEAs ratos, e agora os ratos
+      se movem aleatoriamente."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: Alcateia
+    m_Localized: "Alcat\xE9ia"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "Os lobos agora aparecem em grupos de 2 ou 3, capturar pelo menos
-      5 lobos em um \xFAnico la\xE7o d\xE1 x20 pontos mult"
+    m_Localized: "Agora, os lobos aparecem em matilhas de 2 ou 3 indiv\xEDduos. Capturar
+      pelo menos 5 lobos com um \xFAnico la\xE7o concede um multiplicador de pontos
+      de x20."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
-    m_Localized: Valor Absoluto
+    m_Localized: Valor absoluto
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: "Se o resultado final de um la\xE7o for negativo, ele ser\xE1 positivo"
+    m_Localized: "Se o resultado final de um la\xE7o for negativo, ele ser\xE1 positivo
+      em vez de negativo."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -898,7 +897,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Os pre\xE7os dos animais agora s\xE3o aleat\xF3rios na loja"
+    m_Localized: "Os pre\xE7os dos animais agora s\xE3o aleat\xF3rios na loja."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -906,8 +905,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Ganhe +10 pontos para cada esp\xE9cie diferente controlada por
-      la\xE7o"
+    m_Localized: "Ganhe +10 pontos para cada esp\xE9cie diferente capturada por la\xE7o."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
@@ -915,7 +913,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 em dinheiro adicional no final da rodada
+    m_Localized: +20 em dinheiro adicional ao final da rodada
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -924,23 +922,23 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773802005
     m_Localized: "Cada la\xE7o bem-sucedido adiciona 0,5 segundos ao cron\xF4metro
-      da rodada"
+      da rodada."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802006
-    m_Localized: Captura de dinheiro
+    m_Localized: "Dinheiro f\xE1cil"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: "+2 dinheiro por animal la\xE7ado"
+    m_Localized: "+2 em dinheiro por animal la\xE7ado"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
-    m_Localized: Bolsa para moedas
+    m_Localized: Porta-moedas
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: Ganhe 10% de juros em dinheiro no final de cada rodada
+    m_Localized: Ganhe 10% de juros em dinheiro ao final de cada rodada.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802010
@@ -948,16 +946,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: "O primeiro la\xE7o de cada rodada vale o dobro de pontos e dinheiro"
+    m_Localized: "O primeiro la\xE7o de cada rodada vale o dobro de pontos e dinheiro."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
-    m_Localized: Garrafa de fada
+    m_Localized: Garrafa de Fada
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802013
-    m_Localized: "Se voc\xEA tiver essa vantagem, evite a pr\xF3xima vez que perder
-      para o requisito de pontos e descarte"
+    m_Localized: "Se possuir essa vantagem, evite a pr\xF3xima vez que voc\xEA perder
+      por causa da pontua\xE7\xE3o necess\xE1ria e descarte-a."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802014
@@ -965,8 +963,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "A loja agora pode ser reiniciada tr\xEAs vezes por loja, em vez
-      de uma vez"
+    m_Localized: "Agora \xE9 poss\xEDvel redefinir os atributos de cada loja tr\xEAs
+      vezes, em vez de apenas uma."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
@@ -975,7 +973,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773802017
     m_Localized: "Todos os pontos s\xE3o dobrados nos \xFAltimos 10 segundos de cada
-      rodada"
+      rodada."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -983,8 +981,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Ganhe +20% de b\xF4nus em pontos para cada n\xE3o predador em um
-      la\xE7o, em vez de 10%"
+    m_Localized: "Ganhe um b\xF4nus de +20% de pontos para cada animal n\xE3o predador
+      no la\xE7o, em vez de 10%."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -992,11 +990,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "A dura\xE7\xE3o da rodada aumentou em 10 segundos"
+    m_Localized: "A dura\xE7\xE3o da rodada aumentou em 10 segundos."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
-    m_Localized: Point Pals
+    m_Localized: Amigos de Ponto
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802023
@@ -1008,8 +1006,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802025
-    m_Localized: "A tela de sele\xE7\xE3o de predadores agora s\xF3 aparece a cada
-      5 rodadas em vez de a cada 3 rodadas"
+    m_Localized: "A tela de sele\xE7\xE3o de Predador agora aparece apenas a cada
+      5 rodadas, em vez de a cada 3 rodadas."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
@@ -1017,8 +1015,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "At\xE9 que esta d\xE1diva seja substitu\xEDda, todos os animais
-      ter\xE3o seu n\xEDvel aumentado em 2"
+    m_Localized: "Enquanto essa d\xE1diva n\xE3o for substitu\xEDda, o n\xEDvel de
+      todos os animais aumenta em 2."
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
@@ -1026,8 +1024,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "As galinhas agora podem botar ovos que d\xE3o x1,5 pontos de multiplica\xE7\xE3o
-      quando la\xE7ados"
+    m_Localized: "As galinhas agora podem botar ovos que d\xE3o um multiplicador
+      de pontos de x1,5 quando la\xE7ados."
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1035,11 +1033,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423383060480
-    m_Localized: Lista de desejos agora!
+    m_Localized: "Adicione agora \xE0 sua lista de desejos!"
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169344
-    m_Localized: 'Chegando no jogo completo:'
+    m_Localized: "Chegando em vers\xE3o completa:"
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169345
@@ -1047,19 +1045,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169346
-    m_Localized: 6 novos animais!
+    m_Localized: 6 Novos Animais!
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169347
-    m_Localized: 7 novos fazendeiros!
+    m_Localized: 7 Novos Agricultores!
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169348
-    m_Localized: Muito mais vantagens!
+    m_Localized: Muitas outras vantagens!
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
-    m_Localized: "Selecione uma ben\xE7\xE3o para substituir"
+    m_Localized: Selecione uma vantagem para substituir.
     m_Metadata:
       m_Items: []
   - m_Id: 18706117449703424
@@ -1067,7 +1065,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755328
-    m_Localized: "Recebe o dobro de dinheiro di\xE1rio ap\xF3s cada rodada."
+    m_Localized: "Recebe o dobro do pagamento di\xE1rio ap\xF3s cada rodada."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1075,16 +1073,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949632
-    m_Localized: "Tem 3 op\xE7\xF5es de melhorias para animais na loja. Melhorias
+    m_Localized: "A loja oferece 3 op\xE7\xF5es de melhorias para animais. As melhorias
       para animais s\xE3o mais baratas."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
-    m_Localized: "Ven\xE7a o jogo uma vez para desbloquear este fazendeiro."
+    m_Localized: Conclua o jogo uma vez para desbloquear este fazendeiro.
     m_Metadata:
       m_Items: []
   - m_Id: 19461608561684480
-    m_Localized: Yeehaw!
+    m_Localized: Eba!
     m_Metadata:
       m_Items: []
   - m_Id: 19461608628793344
@@ -1096,16 +1094,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376257
-    m_Localized: "Concede 1 nova rodada gr\xE1tis por loja"
+    m_Localized: Concede 1 reroll gratuito por loja
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376258
-    m_Localized: "B\xF4nus de B\xF4nus"
+    m_Localized: "B\xF4nus de Benef\xEDcios"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "+2 pontos e +1 dinheiro por d\xE1diva no seu baralho para cada
-      la\xE7o bem-sucedido"
+    m_Localized: "+2 pontos e +1 em dinheiro por d\xE1diva em seu baralho para cada
+      la\xE7o bem-sucedido."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1113,8 +1111,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376261
-    m_Localized: "O animal mais comum em seu baralho aparecer\xE1 em todas as lojas
-      para compra"
+    m_Localized: "O animal mais comum no seu baralho aparecer\xE1 em todas as lojas
+      para compra."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376264
@@ -1131,7 +1129,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376267
     m_Localized: "Para cada 3 animais n\xE3o predadores em um la\xE7o, ganhe +5 em
-      dinheiro em vez do +1 em dinheiro usual"
+      dinheiro em vez do usual +1."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268
@@ -1139,7 +1137,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Agora voc\xEA pode contrair at\xE9 US$ 200 em d\xEDvidas na loja"
+    m_Localized: "Agora voc\xEA pode contrair d\xEDvidas de at\xE9 US$ 200 na loja."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1148,24 +1146,24 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Sempre que voc\xEA la\xE7ar exatamente 2 animais id\xEAnticos,
-      h\xE1 uma chance em 25 de melhorar esse animal"
+      h\xE1 1 chance em 25 de melhorar o animal."
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Bata numa toupeira
+    m_Localized: Acerte a Toupeira
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
-    m_Localized: "As toupeiras aparecer\xE3o ocasionalmente durante o dia, oferecendo
-      +7 em dinheiro e +7 pontos quando la\xE7adas"
+    m_Localized: "Toupeiras aparecer\xE3o ocasionalmente durante o dia, oferecendo
+      +7 em dinheiro e +7 pontos quando la\xE7adas."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
-    m_Localized: Toca aqui
+    m_Localized: Toca aqui!
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: "+5 em dinheiro e pontos para la\xE7os com exatamente 5 animais."
+    m_Localized: "+5 pontos e dinheiro para la\xE7os com exatamente 5 animais."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600
@@ -1173,17 +1171,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313601
-    m_Localized: "x2 pontos mult ao capturar 5 animais da mesma esp\xE9cie em um
-      \xFAnico la\xE7o"
+    m_Localized: "Multiplicador de pontos x2 ao capturar 5 animais da mesma esp\xE9cie
+      com um \xFAnico la\xE7o."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313602
-    m_Localized: Prato Limpo
+    m_Localized: Prato limpo
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313603
-    m_Localized: "+25 em dinheiro se n\xE3o houver animais na tela quando cada rodada
-      terminar"
+    m_Localized: "+25 em dinheiro se n\xE3o houver animais na tela ao final de cada
+      rodada."
     m_Metadata:
       m_Items: []
   - m_Id: 20226222100799488
@@ -1191,8 +1189,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20226222205657088
-    m_Localized: "-10 segundos por rodada, +0,33x multiplicador de dinheiro para
-      cada la\xE7o bem-sucedido"
+    m_Localized: "-10 segundos por rodada, +0,33x o multiplicador de dinheiro para
+      cada la\xE7o bem-sucedido."
     m_Metadata:
       m_Items: []
   - m_Id: 21217007566807040
@@ -1200,27 +1198,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276032
-    m_Localized: Taxa de Spawn
+    m_Localized: "Taxa de gera\xE7\xE3o"
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276033
-    m_Localized: Aumentar a quantidade de animais que aparecem durante uma rodada
+    m_Localized: Aumente a quantidade de animais que aparecem durante uma rodada.
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276034
-    m_Localized: Slot de Boon
+    m_Localized: "Slot de B\xEAn\xE7\xE3o"
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276035
-    m_Localized: "Voc\xEA pode ter 1 benef\xEDcio adicional"
+    m_Localized: "Voc\xEA pode armazenar 1 d\xE1diva adicional."
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276036
-    m_Localized: "Remo\xE7\xE3o de deck"
+    m_Localized: "Remo\xE7\xE3o do deck"
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276037
-    m_Localized: Remova 2 animais do seu baralho de animais
+    m_Localized: Remova 2 animais do seu baralho de animais.
     m_Metadata:
       m_Items: []
   - m_Id: 21394830084497408
@@ -1236,7 +1234,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628888059904
-    m_Localized: Rodada de Desafios
+    m_Localized: Rodada de Desafio
     m_Metadata:
       m_Items: []
   - m_Id: 23036628888059905
@@ -1244,16 +1242,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031424
-    m_Localized: "Terrible Tumbleweed: Tumbleweeds quebram la\xE7os ao contato"
+    m_Localized: "Erva-roli\xE7a terr\xEDvel: As ervas-roli\xE7as rompem la\xE7os
+      ao contato."
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
-    m_Localized: 'Abelhas assassinas: as abelhas picam os animais, afastando-os da
-      brincadeira'
+    m_Localized: 'Abelhas Assassinas: Abelhas picam animais, tirando-os da brincadeira.'
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031426
-    m_Localized: "Vento de cauda problem\xE1tico: todos os animais se movem mais
+    m_Localized: "Vento de Cauda Problem\xE1tico: Todos os animais se movem mais
       r\xE1pido"
     m_Metadata:
       m_Items: []
@@ -1278,7 +1276,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032512
-    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e 2 gatos-de-celeiro"
+    m_Localized: "La\xE7ar um grupo de animais contendo uma alpaca e dois gatos de
+      celeiro."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032513
@@ -1286,7 +1285,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032514
-    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e um lobo"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma alpaca e um lobo."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032515
@@ -1294,7 +1293,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032516
-    m_Localized: "La\xE7o um grupo de animais contendo um cavalo e uma puma"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um cavalo e uma puma."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032517
@@ -1302,7 +1301,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: "La\xE7o um grupo de animais contendo um Javali e um Porco"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um javali e um porco."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032519
@@ -1310,7 +1309,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032520
-    m_Localized: "La\xE7o um grupo de animais contendo uma vaca, um javali e um coelho"
+    m_Localized: "La\xE7ar um grupo de animais contendo uma vaca, um javali e um
+      coelho."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032521
@@ -1318,8 +1318,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032522
-    m_Localized: "La\xE7o: um grupo de animais contendo um gato de celeiro, um cachorro
-      e um rato"
+    m_Localized: "La\xE7ar um grupo de animais contendo um gato de celeiro, um cachorro
+      e um rato."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032523
@@ -1327,7 +1327,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032524
-    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e uma cabra"
+    m_Localized: "La\xE7o: um grupo de animais que inclui uma alpaca e uma cabra."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032525
@@ -1335,7 +1335,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032526
-    m_Localized: "La\xE7o um grupo de animais contendo um rato e um urso"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um rato e um urso."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032527
@@ -1343,15 +1343,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032528
-    m_Localized: "La\xE7o um grupo de animais contendo um gato-das-torres e um puma"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um gato-do-campo e uma
+      puma."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032529
-    m_Localized: Fluff e Fetch
+    m_Localized: Fofo e Buscar
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032530
-    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e um cachorro"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma alpaca e um cachorro."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032531
@@ -1359,32 +1360,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032532
-    m_Localized: "La\xE7o: um grupo de animais contendo um lobo, um gato e um rato"
+    m_Localized: "La\xE7o: um grupo de animais que inclui um lobo, um gato e um rato."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032533
-    m_Localized: Festa da Floresta
+    m_Localized: Festa na Floresta
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032534
-    m_Localized: "La\xE7o um grupo de animais contendo um lobo, um coelho e um rato"
+    m_Localized: "La\xE7o: um grupo de animais que inclui um lobo, um coelho e um
+      rato."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032535
-    m_Localized: Gigantes gentis
+    m_Localized: Gigantes Gentis
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032536
-    m_Localized: "La\xE7o: um grupo de animais contendo uma vaca, um cavalo e uma
-      alpaca"
+    m_Localized: "La\xE7ar um grupo de animais contendo uma vaca, um cavalo e uma
+      alpaca."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032537
-    m_Localized: Cabra rude
+    m_Localized: Cabra Gruff
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
-    m_Localized: "La\xE7o um grupo de animais contendo 3 cabras"
+    m_Localized: "La\xE7o: um grupo de animais contendo 3 cabras."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032539
@@ -1392,15 +1394,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032540
-    m_Localized: "La\xE7o um grupo de animais contendo uma alpaca e um cavalo"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma alpaca e um cavalo."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032541
-    m_Localized: "Ca\xE7a ao Javali"
+    m_Localized: "Ca\xE7a ao javali"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032542
-    m_Localized: "La\xE7o um grupo de animais contendo 2 Javalis e um Cachorro"
+    m_Localized: "La\xE7o: um grupo de animais contendo 2 javalis e um cachorro."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032543
@@ -1408,15 +1410,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032544
-    m_Localized: "La\xE7o um grupo de animais contendo uma cabra e um javali"
+    m_Localized: "La\xE7ar um grupo de animais contendo uma cabra e um javali."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032545
-    m_Localized: "Salto de F\xE9"
+    m_Localized: "Salto de f\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032546
-    m_Localized: "La\xE7o um grupo de animais contendo um coelho e uma puma"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um coelho e uma puma."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032547
@@ -1424,8 +1426,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032548
-    m_Localized: "La\xE7o: um grupo de animais contendo uma cabra, uma puma e uma
-      alpaca"
+    m_Localized: "La\xE7o: um grupo de animais que inclui uma cabra, uma puma e uma
+      alpaca."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032549
@@ -1433,7 +1435,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032550
-    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e um gato"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma raposa e um gato."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032551
@@ -1441,7 +1443,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032552
-    m_Localized: "La\xE7o um grupo de animais contendo um coelho, um rato e uma galinha"
+    m_Localized: "La\xE7ar um grupo de animais contendo um coelho, um rato e uma
+      galinha."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032553
@@ -1449,16 +1452,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032554
-    m_Localized: "La\xE7o um grupo de animais contendo um gato de celeiro, um cachorro
-      e um coelho"
+    m_Localized: "La\xE7ar um grupo de animais que inclui um gato de celeiro, um
+      cachorro e um coelho."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032555
-    m_Localized: O Gato de Botas
+    m_Localized: Gato de Botas
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032556
-    m_Localized: "La\xE7o um grupo de animais contendo um gato de celeiro"
+    m_Localized: "La\xE7o em um grupo de animais que inclui um gato de celeiro."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032557
@@ -1466,7 +1469,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032558
-    m_Localized: "La\xE7o um grupo de animais contendo 2 gatos de celeiro e 2 c\xE3es"
+    m_Localized: "La\xE7o: um grupo de animais contendo 2 gatos de celeiro e 2 c\xE3es."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032559
@@ -1474,25 +1477,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400424226816
-    m_Localized: "La\xE7o: um grupo de animais contendo um gato-das-torres, um puma
-      e uma raposa"
+    m_Localized: "La\xE7ar um grupo de animais que inclui um gato-do-campo, uma puma
+      e uma raposa."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400424226817
-    m_Localized: "Suave e r\xE1pido"
+    m_Localized: Suave e veloz
     m_Metadata:
       m_Items: []
   - m_Id: 23523400424226818
-    m_Localized: "La\xE7o um grupo de animais contendo um coelho, um rato e uma ovelha"
+    m_Localized: "La\xE7o: um grupo de animais contendo um coelho, um rato e uma
+      ovelha."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400424226819
-    m_Localized: "Gritar ou n\xE3o gritar"
+    m_Localized: Com ou sem guincho
     m_Metadata:
       m_Items: []
   - m_Id: 23523400424226820
     m_Localized: "La\xE7o: um grupo de animais contendo um javali, um porco e um
-      rato"
+      rato."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421120
@@ -1500,7 +1504,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421121
-    m_Localized: "La\xE7o um grupo de animais contendo um Javali e um Cavalo"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um javali e um cavalo."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421122
@@ -1508,8 +1512,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421123
-    m_Localized: "La\xE7o um grupo de animais contendo um puma, um rato, uma galinha
-      e uma cabra"
+    m_Localized: "La\xE7o: um grupo de animais contendo uma puma, um rato, uma galinha
+      e uma cabra."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421124
@@ -1517,7 +1521,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421125
-    m_Localized: "La\xE7o um grupo de animais contendo um gato de celeiro e um cachorro"
+    m_Localized: "La\xE7o, um grupo de animais que inclui um gato de celeiro e um
+      cachorro."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421126
@@ -1525,7 +1530,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421127
-    m_Localized: "La\xE7o um grupo de animais contendo um Javali"
+    m_Localized: "La\xE7o em um grupo de animais que inclui um javali."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421128
@@ -1533,23 +1538,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421129
-    m_Localized: "La\xE7o um grupo de animais contendo 2 alpacas"
+    m_Localized: "La\xE7o em um grupo de animais contendo 2 alpacas"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421130
-    m_Localized: Whinnie, o Pooh
+    m_Localized: Ursinho Pooh
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421131
-    m_Localized: "La\xE7o um grupo de animais contendo um coelho, um porco e um urso"
+    m_Localized: "La\xE7o: um grupo de animais que inclui um coelho, um porco e um
+      urso."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421132
-    m_Localized: Vagabundos Lanosos
+    m_Localized: Andarilhos Lanudos
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421133
-    m_Localized: "La\xE7o um grupo de animais contendo uma ovelha e uma alpaca"
+    m_Localized: "La\xE7o, um grupo de animais contendo uma ovelha e uma alpaca."
     m_Metadata:
       m_Items: []
   - m_Id: 23526779938537472
@@ -1557,11 +1563,24 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23526779938537473
-    m_Localized: "La\xE7o um grupo de animais contendo uma raposa e um coelho"
+    m_Localized: "La\xE7o, um grupo de animais que inclui uma raposa e um coelho."
     m_Metadata:
       m_Items: []
   - m_Id: 24856112623910912
-    m_Localized: "Agora que voc\xEA sabe o b\xE1sico, vamos come\xE7ar!"
+    m_Localized: "Agora que voc\xEA j\xE1 conhece o b\xE1sico, vamos come\xE7ar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551270281216
+    m_Localized: "Bem-vindo ao Di\xE1rio de Bordo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112636493824
+    m_Localized: "Quanto mais exemplares de um determinado animal voc\xEA tiver,
+      maior a chance desse animal aparecer!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Localized: "Per\xEDodo noturno: Maior taxa de desova de predadores"
     m_Metadata:
       m_Items: []
   references:

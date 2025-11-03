@@ -758,6 +758,7 @@ public class GameManager : MonoBehaviour
         wordText.text = word;
         wordObj.SetActive(true);
         AudioManager.Instance.PlaySFX("ready");
+        spawner.currentShoe.Clear();
 
         // Scale in
         yield return skipper.AwaitTween(wordObj.transform.DOScale(1.2f, scaleDuration).SetEase(Ease.OutBack));
@@ -773,7 +774,7 @@ public class GameManager : MonoBehaviour
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);
             if (rich) rich.enabled = true;
-
+            AudioManager.Instance.PlaySFX("challenge_display");
             typer.ChangeTextAnimated(challengeRound.GetLocalizedString(), 0.06f, 0.06f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);

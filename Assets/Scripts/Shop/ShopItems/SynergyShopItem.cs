@@ -17,10 +17,19 @@ public class SynergyShopItem : ShopItem
     private Image popupBg;
     public Sprite[] boonBgs;
     public GameObject subPopup;
+    private Transform leaveParent;
+    Vector3 leavePos;
     private void Awake()
     {
         bgSR = GetComponent<Image>();
         popupBg = hoverPopup.gameObject.GetComponent<Image>();
+    }
+
+    public override void Start()
+    {
+        shopManager = GameController.shopManager;
+        leaveParent = shopManager.leaveShopButton.transform.parent;
+        //leavePos = shopManager.leaveShopButton.transform.position;
     }
 
     public void SetBoon(Boon boon)
@@ -82,6 +91,11 @@ public class SynergyShopItem : ShopItem
                 FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased") + 1);
                 upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
                 Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
+                foreach (var s in shopManager.shopItems)
+                {
+                    s.StopAllCoroutines();
+                    DOTween.KillAll(s);
+                }
                 StartCoroutine(DeckPulse());
                 if (chosenBoon.name == "Thief")
                 {
@@ -120,8 +134,7 @@ public class SynergyShopItem : ShopItem
     }
     IEnumerator DeckPulse()
     {
-        var leaveParent = shopManager.leaveShopButton.transform.parent;
-        var leavePos = shopManager.leaveShopButton.transform.position;
+        shopManager.cantToggleSynergiesDeck = true;
         shopManager.leaveShopButton.transform.SetParent(shopManager.transform);
         yield return new WaitForSeconds(.25f);
         Sequence pulse = DOTween.Sequence();
@@ -137,6 +150,7 @@ public class SynergyShopItem : ShopItem
         pulse.Join(shopManager.boonDeckButton.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
         yield return new WaitForSeconds(.5f);
         shopManager.leaveShopButton.transform.SetParent(leaveParent);
-        shopManager.leaveShopButton.transform.position = leavePos;
+        //shopManager.leaveShopButton.transform.position = leavePos;
+        shopManager.cantToggleSynergiesDeck = false;
     }
 }

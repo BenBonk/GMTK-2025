@@ -44,6 +44,7 @@ public class ShopManager : MonoBehaviour
     [HideInInspector] public bool canOverrideBoon;
     public RectTransform boonDeckButton;
     public RectTransform animalDeckButton;
+    [HideInInspector] public bool cantToggleSynergiesDeck;
 
     private Queue<Boon> recentBoons;
     private SteamIntegration steamIntegration;
@@ -309,6 +310,10 @@ public class ShopManager : MonoBehaviour
 
     public void ToggleSynergies()
     {
+        if (cantToggleSynergiesDeck)
+        {
+            return;
+        }
         if (boonDeckTween!=null)
         {
             boonDeckTween.Kill();
