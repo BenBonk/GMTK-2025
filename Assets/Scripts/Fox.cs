@@ -39,6 +39,11 @@ public class Fox : Animal
         animalData = GameController.gameManager.foxThiefStolenStats;
     }
 
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        speed = baseSpeed * scale;
+    }
+
     protected override Vector3 ComputeMove()
     {
         // Smoothly return to base speed

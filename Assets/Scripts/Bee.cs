@@ -235,7 +235,6 @@ public class Bee : MonoBehaviour
         bool nearY = Mathf.Abs(p.y - desired.y) <= 0.05f;
         if (nearX && nearY)
         {
-            AudioManager.Instance.PlaySFX("bee_notice");
             hoverPoint = desired;
             state = BeeState.PreDive;
 
@@ -279,6 +278,7 @@ public class Bee : MonoBehaviour
             state = BeeState.Diving;
             diveVel = 0f;
             SetFacingRight(true);
+            AudioManager.Instance.PlaySFX("bee_notice");
         }
 
         return p;

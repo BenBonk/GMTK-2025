@@ -231,26 +231,26 @@ public class GameManager : MonoBehaviour
         spawner.spawnRate = FBPP.GetFloat("spawnRate", 1f);
         if (IsChallengeRound())
         {
-            int chosenEvent = challengeEventManager.GetChallengeEvent();
-            roundDescription = challengeEventManager.challengeEventStrings[chosenEvent].GetLocalizedString();
-            if (chosenEvent < 4)
+           roundID = challengeEventManager.GetChallengeEvent();
+            roundDescription = challengeEventManager.challengeEventStrings[roundID].GetLocalizedString();
+            if (roundID < 4)
             {
-                schemeManager.ChangeScheme(chosenEvent);
+                schemeManager.ChangeScheme(roundID);
             }
             else
             {
                 schemeManager.SetRandomScheme(roundNumber);
             }
-            challengeEventManager.StartChallenge(chosenEvent);
+            challengeEventManager.StartChallenge(roundID);
         }
         else
         {
-            int chosenEvent = randomEventManager.GetRandomEvent();
+            roundID = randomEventManager.GetRandomEvent();
             schemeManager.SetRandomScheme(roundNumber);
-            if (chosenEvent > -1)
+            if (roundID > -1)
             {
-                roundDescription = randomEventManager.randomEventStrings[chosenEvent].GetLocalizedString();
-                randomEventManager.StartRandomEvent(chosenEvent);
+                roundDescription = randomEventManager.randomEventStrings[roundID].GetLocalizedString();
+                randomEventManager.StartRandomEvent(roundID);
             }
             else
             {
@@ -271,7 +271,12 @@ public class GameManager : MonoBehaviour
         elapsedTime = 0;
         playerReady = false;
 
-        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1.25f);
+        AudioManager.Instance.FadeMusic(1.25f);
+        if(!AudioManager.Instance.IsAmbientPlaying())
+        {
+            AudioManager.Instance.PlayAmbientWithFadeOutOld("ambient");
+        }
+
         if (player.playerCurrency >= 100000 && !steamIntegration.IsThisAchievementUnlocked("Hoarder"))
         {
             steamIntegration.UnlockAchievement("Hoarder");
@@ -401,7 +406,7 @@ public class GameManager : MonoBehaviour
             {
                 yield return null;
             }
-            children.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
+            children.DOAnchorPosY(950, 0.5f).SetEase(Ease.InBack);
             GameController.predatorSelect.darkCover.DOFade(0f, 0.5f).OnComplete(() => GameController.predatorSelect.darkCover.enabled = false);
             foreach (var ps in winPanel.GetComponentsInChildren<ParticleSystem>(true))
             {
@@ -483,7 +488,10 @@ public class GameManager : MonoBehaviour
             barnAnimator.Play("Open", 0, 0.1f);
             AudioManager.Instance.PlaySFX("barn_door");
             AudioManager.Instance.PlayMusicWithFadeOutOld("shop_theme", 1f, true);
+            AudioManager.Instance.FadeAmbient(1f);
             GameController.postProcessingManager.NightModeOff();
+            randomEventManager.rainParticles.Stop();
+            randomEventManager.cloudParticles.Stop();
         },
             onZoomEndpoint: () =>
             {
@@ -614,7 +622,33 @@ public class GameManager : MonoBehaviour
                 // Use lasso material for the last word
                 DisplayPopupWord(readySetLasso[i], wordScaleDuration, wordDisplayDuration, true,
                     lassoMaterialPreset);
-                AudioManager.Instance.PlayNextPlaylistTrack();
+                if (IsChallengeRound())
+                {
+                    switch (roundID)
+                    {
+                        case 0:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_wind", 1f, true);
+                            break;
+                        case 1:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_desert", 1f, true);
+                            break;
+                        case 2:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_desert", 1f, true);
+                            break;
+                        case 3:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_wind", 1f, true);
+                            break;
+                        case 4:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_night", 1f, true);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    AudioManager.Instance.PlayNextPlaylistTrack();
+                }
                 AudioManager.Instance.PlaySFX("rooster");
                 lassoController.canLasso = true;
                 playerReady = true;

@@ -68,7 +68,7 @@ public class Animal : MonoBehaviour
         { "mud",   0.40f },
         { "goat",  0.50f },
         { "lightning", 2f },
-        { "tailwind",  1.5f },
+        { "tailwind",  1.75f },
         { "holdhorse", 0.35f },
     };
     private static readonly HashSet<string> _enabledGlobalMods = new HashSet<string>();

@@ -104,6 +104,9 @@ public class AudioManager : MonoBehaviour
         currentMusicSource = musicSourceA;
         nextMusicSource = musicSourceB;
 
+        currentAmbientSource = ambientSourceA;
+        nextAmbientSource = ambientSourceB;
+
         // Load saved user volumes (defaults 0.5)
         masterMusic01 = FBPP.GetFloat(KeyMusic, 0.4f);
         masterSfx01 = FBPP.GetFloat(KeySfx, 0.6f);
@@ -233,6 +236,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void FadeMusic(float fadeDuration)
+    {
+        StartCoroutine(FadeOutOldTrack(currentMusicSource, fadeDuration));
+    }
+
     private IEnumerator FadeOutOldTrack(AudioSource sourceToFade, float duration)
     {
         float startVolume = sourceToFade.volume;
@@ -288,6 +296,21 @@ public class AudioManager : MonoBehaviour
         var temp = currentAmbientSource;
         currentAmbientSource = nextAmbientSource;
         nextAmbientSource = temp;
+    }
+
+    public bool IsAmbientPlaying()
+    {
+        return IsSrcPlaying(currentAmbientSource) || IsSrcPlaying(nextAmbientSource);
+    }
+
+    private static bool IsSrcPlaying(AudioSource src)
+    {
+        return src != null && src.clip != null && src.isPlaying && src.volume > 0.0001f;
+    }
+
+    public void FadeAmbient(float fadeDuration)
+    {
+        StartCoroutine(FadeOutOldAmbient(currentAmbientSource, fadeDuration));
     }
 
     private IEnumerator FadeOutOldAmbient(AudioSource sourceToFade, float duration)

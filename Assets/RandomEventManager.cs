@@ -30,7 +30,6 @@ public class RandomEventManager : MonoBehaviour
         //Invoke("SpawnMud", .5f);
         //TryRandomEvent(); //COMMENT FOR PROD, JUST FOR TESTING
         //Invoke("SpawnMole", 7);
-        Invoke("Rain", .5f);
     }
 
     public int GetRandomEvent()
@@ -91,6 +90,7 @@ public class RandomEventManager : MonoBehaviour
         else if(eventID == 3)
         {
             Invoke("Rain", .5f);
+            AudioManager.Instance.PlayAmbientWithFadeOutOld("rain_ambient");
 
         }
     }

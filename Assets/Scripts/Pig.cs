@@ -28,6 +28,7 @@ public class Pig : Animal
         currentSpeed = speed;
     }
 
+
     public override void ActivateLegendary()
     {
         if (Random.Range(0, 5) == 0)
@@ -35,6 +36,11 @@ public class Pig : Animal
             GetComponent<SpriteRenderer>().sprite = pigWithHat;
             gameObject.tag = "PigWithHat";
         }
+    }
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        speed = baseSpeed * scale;
     }
 
     protected override Vector3 ComputeMove()

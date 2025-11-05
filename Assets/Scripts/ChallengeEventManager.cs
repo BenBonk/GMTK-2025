@@ -27,6 +27,7 @@ public class ChallengeEventManager : MonoBehaviour
 
     public int GetChallengeEvent()
     {
+        return 0;
         int chosenEvent = Random.Range(0, 5);
         while (chosenEvent == lastEvent)
         {
@@ -58,7 +59,6 @@ public class ChallengeEventManager : MonoBehaviour
             //night
 
         }
-        return -1;
         return chosenEvent;
 
     }
@@ -74,6 +74,7 @@ public class ChallengeEventManager : MonoBehaviour
             //tailwind
             wind.SetActive(true);
             Animal.EnableSpeedModifier("tailwind", 1.5f);
+            AudioManager.Instance.PlayAmbientWithFadeOutOld("wind_ambient");
         }
         else if (eventID == 1)
         {
@@ -94,6 +95,7 @@ public class ChallengeEventManager : MonoBehaviour
         {
             //night
             GameController.postProcessingManager.NightModeOn();
+            AudioManager.Instance.PlayAmbientWithFadeOutOld("night_ambient");
         }
     }
 
