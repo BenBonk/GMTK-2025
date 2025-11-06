@@ -232,7 +232,7 @@ public class AudioManager : MonoBehaviour
         }
         else if (ambientTrackName == null)
         {
-            FadeOutOldAmbient(currentAmbientSource, fadeOutDuration);
+            StartCoroutine(FadeOutOldAmbient(currentAmbientSource, fadeOutDuration));
         }
     }
 
