@@ -34,6 +34,7 @@ public class RandomEventManager : MonoBehaviour
 
     public int GetRandomEvent()
     {
+        return 3;
         if (Random.Range(0,5) > 0) //0,5
         {
             return -1;
@@ -141,6 +142,7 @@ public class RandomEventManager : MonoBehaviour
         
         Animal chosenAnimal = allAnimals[Random.Range(0, allAnimals.Length)];
         Instantiate(lightning, new Vector3(chosenAnimal.transform.position.x-2, chosenAnimal.transform.position.y, 0), Quaternion.identity); //Quaternion.Euler(0, 0, Random.Range(-30, 30))
+        AudioManager.Instance.PlaySFX("lightning_crack");
         AudioManager.Instance.PlaySFX("lightning_strike");
         yield return new WaitForSeconds(.7f);
         try

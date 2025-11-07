@@ -230,10 +230,10 @@ public class AudioManager : MonoBehaviour
         {
             PlayAmbientWithFadeOutOld(ambientTrackName, fadeOutDuration, loop: true);
         }
-        else if (ambientTrackName == null)
+        /*else if (ambientTrackName == null)
         {
             StartCoroutine(FadeOutOldAmbient(currentAmbientSource, fadeOutDuration));
-        }
+        }*/
     }
 
     public void FadeMusic(float fadeDuration)

@@ -27,7 +27,7 @@ public class ChallengeEventManager : MonoBehaviour
 
     public int GetChallengeEvent()
     {
-        return 0;
+        return 3;
         int chosenEvent = Random.Range(0, 5);
         while (chosenEvent == lastEvent)
         {

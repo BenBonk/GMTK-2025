@@ -177,16 +177,16 @@ MonoBehaviour:
     volume: 0.8
   - name: bee_hit
     clip: {fileID: 8300000, guid: f2aeeb998aff6b94eb11bcf857cae594, type: 3}
-    volume: 0.6
-  - name: bee_notice
+    volume: 0.7
+  - name: bee_attack
     clip: {fileID: 8300000, guid: 3b88c8d2f441a6f49afe9c3cab725b7d, type: 3}
-    volume: 0.5
+    volume: 0.65
   - name: cactus_break
     clip: {fileID: 8300000, guid: 6e196a13aeaaed844a2c73118c67b3e7, type: 3}
     volume: 0.8
   - name: tumbleweed_bounce
     clip: {fileID: 8300000, guid: 09d08eb6bd7320a4fac7387f5219a470, type: 3}
-    volume: 0.13
+    volume: 0.1
   - name: tumbleweed_break
     clip: {fileID: 8300000, guid: 400c5cbf48ff4b0459edd6f83a68bd07, type: 3}
     volume: 0.7
@@ -199,6 +199,12 @@ MonoBehaviour:
   - name: reroll
     clip: {fileID: 8300000, guid: e2ca071a3461e6748a9975325c09ea5a, type: 3}
     volume: 0.7
+  - name: lightning_crack
+    clip: {fileID: 8300000, guid: 3e4fa1d197e65bf458631c368fabc4f2, type: 3}
+    volume: 0.15
+  - name: bee_notice
+    clip: {fileID: 8300000, guid: b64750ac9792fef48a1af49fc858826c, type: 3}
+    volume: 0.65
   musicTracks:
   - name: main_theme
     clip: {fileID: 8300000, guid: c792247640c550647bcac6cb3da69154, type: 3}
@@ -236,7 +242,7 @@ MonoBehaviour:
     volume: 1
   - name: rain_ambient
     clip: {fileID: 8300000, guid: c8285fce6f3a5ee4386a34144a560aaa, type: 3}
-    volume: 0.15
+    volume: 0.25
   - name: night_ambient
     clip: {fileID: 8300000, guid: 8bac8cd800537384ca4de0a3e91a9488, type: 3}
     volume: 0.15

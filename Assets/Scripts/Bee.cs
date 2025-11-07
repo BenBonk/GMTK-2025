@@ -278,7 +278,7 @@ public class Bee : MonoBehaviour
             state = BeeState.Diving;
             diveVel = 0f;
             SetFacingRight(true);
-            AudioManager.Instance.PlaySFX("bee_notice");
+            AudioManager.Instance.PlaySFX("bee_attack");
         }
 
         return p;
@@ -388,6 +388,7 @@ public class Bee : MonoBehaviour
         {
             target = best;
             state = BeeState.Stalking;
+            AudioManager.Instance.PlaySFX("bee_notice");
         }
     }
 
