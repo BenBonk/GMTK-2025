@@ -136,6 +136,7 @@ public class RandomEventManager : MonoBehaviour
         Animal[] allAnimals = FindObjectsOfType<Animal>();
         if (allAnimals.Length <= 0)
         {
+            EndLightning();
             yield return null;
             yield break;
         }
@@ -153,6 +154,10 @@ public class RandomEventManager : MonoBehaviour
         {
            //whomp whomp
         }
+        EndLightning();
+    }
+    void EndLightning()
+    {
         if (!gameManager.roundCompleted && gameManager.roundDuration>0)
         {
             StartCoroutine(LightningStrike());
@@ -163,7 +168,6 @@ public class RandomEventManager : MonoBehaviour
             cloudParticles.Stop();
         }
     }
-    
     void SpawnButterfly()
     {
         float topBuffer = 0.25f;
