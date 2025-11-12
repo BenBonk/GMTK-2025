@@ -63,16 +63,16 @@ public class PredatorSelect : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         panel2.DOAnchorPosY(-1000, .5f).SetEase(Ease.InBack).OnComplete(() => panel2.gameObject.SetActive(false));
 
-        /*if (GameController.gameManager.roundNumber % GameController.gameManager.challengeRoundFrequency == 0)
+        if (GameController.gameManager.roundNumber % GameController.gameManager.challengeRoundFrequency == 0)
         {
             GameController.challengeRewardSelect.StartCoroutine("Intro");
         }
         else
-        {*/
+        {
             GameController.pauseMenu.canOpenClose = false;
             GameController.shopManager.InitializeAllUpgrades();
             GameController.gameManager.GoToShop();
-        //}
+        }
     }
 
 }

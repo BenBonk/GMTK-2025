@@ -237,7 +237,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: Lazo un grupo de animales que incluye 3 ovejas
+    m_Localized: Lazar un grupo de animales que incluye 3 ovejas
     m_Metadata:
       m_Items: []
   - m_Id: 53
@@ -339,7 +339,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: Salchicha envuelta en manta
+    m_Localized: Cerdo envuelto en manta
     m_Metadata:
       m_Items: []
   - m_Id: 78
@@ -652,7 +652,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206022
-    m_Localized: pantalla completa
+    m_Localized: Pantalla completa
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206023
@@ -879,8 +879,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: Ahora los lobos aparecen en manadas de 2 o 3; capturar al menos
-      5 lobos con un solo lazo otorga un multiplicador de puntos x20.
+    m_Localized: Los lobos ahora aparecen en manadas de 2 o 3; capturar al menos
+      5 lobos con un solo lazo otorga un multiplicador de puntos de x25.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -914,7 +914,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 en efectivo adicionales al final de la ronda
+    m_Localized: +25 en efectivo adicionales al final de la ronda
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1138,7 +1138,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: Ahora puedes acumular deudas de hasta $200 en la tienda.
+    m_Localized: Ahora puedes endeudarte hasta con -150 en efectivo en la tienda.
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1469,7 +1469,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032558
-    m_Localized: Lazo un grupo de animales que incluye 2 gatos de granja y 2 perros
+    m_Localized: Lazar un grupo de animales que incluye 2 gatos de granja y 2 perros.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032559

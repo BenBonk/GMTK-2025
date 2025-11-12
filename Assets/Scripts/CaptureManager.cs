@@ -167,7 +167,7 @@ public class CaptureManager : MonoBehaviour
             {
                 if (capturedCounts["wolf"] >=5)
                 {
-                    pointMult *= 20;
+                    pointMult *= 25;
                     boonSprites.Add(boonManager.boonDict["Wolfpack"].art);
                 }
             }

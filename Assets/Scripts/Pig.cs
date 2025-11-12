@@ -40,7 +40,8 @@ public class Pig : Animal
 
     protected override void ApplyEffectiveSpeedScale(float scale)
     {
-        speed = baseSpeed * scale;
+        speed = baseSpeed;
+        base.ApplyEffectiveSpeedScale(scale);
     }
 
     protected override Vector3 ComputeMove()

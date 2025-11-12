@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Points mult :'
+    m_Localized: 'Points multiplicateurs :'
     m_Metadata:
       m_Items: []
   - m_Id: 16
@@ -274,7 +274,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: Lasso un groupe d'animaux comprenant un renard et 3 poules.
+    m_Localized: Capturez au lasso un groupe d'animaux comprenant un renard et 3
+      poules.
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -324,8 +325,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Attraper au lasso un groupe d'animaux comprenant une poule, une
-      vache, un cheval, un mouton et un cochon
+    m_Localized: Attrapez au lasso un groupe d'animaux comprenant une poule, une
+      vache, un cheval, un mouton et un cochon.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -345,7 +346,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: "Cochon enrob\xE9 de p\xE2te"
+    m_Localized: "Petit cochon enrob\xE9 de p\xE2te"
     m_Metadata:
       m_Items: []
   - m_Id: 78
@@ -893,7 +894,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801995
     m_Localized: "Les loups apparaissent d\xE9sormais par meutes de 2 ou 3. Capturer
-      au moins 5 loups avec un seul lasso rapporte 20 points."
+      au moins 5 loups avec un seul lasso rapporte 25 points."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -910,7 +911,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Les prix des animaux sont d\xE9sormais al\xE9atoires en magasin."
+    m_Localized: "Les prix des animaux sont d\xE9sormais al\xE9atoires en magasin"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -927,7 +928,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+20 $ en esp\xE8ces suppl\xE9mentaires \xE0 la fin du tour"
+    m_Localized: "+25 $ en esp\xE8ces suppl\xE9mentaires \xE0 la fin du tour"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1153,8 +1154,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Vous pouvez d\xE9sormais contracter une dette allant jusqu'\xE0
-      200 $ dans le magasin"
+    m_Localized: "Vous pouvez d\xE9sormais contracter un pr\xEAt jusqu'\xE0 -150
+      en esp\xE8ces dans le magasin."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1162,7 +1163,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376271
-    m_Localized: "Lorsque vous capturez exactement deux animaux identiques au lasso,
+    m_Localized: "Lorsque vous capturez au lasso exactement deux animaux identiques,
       vous avez une chance sur 25 d'am\xE9liorer cet animal."
     m_Metadata:
       m_Items: []
@@ -1319,8 +1320,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: Capturez au lasso un groupe d'animaux comprenant un sanglier et
-      un cochon.
+    m_Localized: Lasso un groupe d'animaux comprenant un sanglier et un cochon
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032519
@@ -1569,8 +1569,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421131
-    m_Localized: Attrapez au lasso un groupe d'animaux comprenant un lapin, un cochon
-      et un ours.
+    m_Localized: Attraper au lasso un groupe d'animaux comprenant un lapin, un cochon
+      et un ours
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421132

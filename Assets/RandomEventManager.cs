@@ -34,7 +34,6 @@ public class RandomEventManager : MonoBehaviour
 
     public int GetRandomEvent()
     {
-        return 3;
         if (Random.Range(0,5) > 0) //0,5
         {
             return -1;
@@ -164,6 +163,7 @@ public class RandomEventManager : MonoBehaviour
         }
         else
         {
+            Debug.Log(gameManager.roundCompleted +" round complete, " + gameManager.roundDuration +" duration");
             rainParticles.Stop();
             cloudParticles.Stop();
         }

@@ -870,7 +870,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801995
     m_Localized: Wolves now spawn in packs of 2 or 3, capturing at least 5 wolves
-      in a single lasso gives x20 points mult
+      in a single lasso gives x25 points mult
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -903,7 +903,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 additional cash at end of round
+    m_Localized: +25 additional cash at end of round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1123,7 +1123,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: You can now go into up to $200 of debt in the shop
+    m_Localized: You can now go into debt up to -150 cash in the shop
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270

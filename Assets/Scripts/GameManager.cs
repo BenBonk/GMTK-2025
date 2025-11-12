@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
     public bool roundCompleted;
     public float roundDuration = 20f;
     public int roundsToWin = 20;
-    public int maxSynergies;
     [HideInInspector] public float elapsedTime;
     public int predatorRoundFrequency;
     public int challengeRoundFrequency;
@@ -217,6 +216,8 @@ public class GameManager : MonoBehaviour
         if (isTesting)
         {
             roundDuration = 3;
+            startingPointRequirement = 0;
+            pointsRequirementGrowthRate = 0;
         }
         pointsThisRound = 0;
         saveManager.SaveGameData();
@@ -424,7 +425,7 @@ public class GameManager : MonoBehaviour
         }
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
-            cashInterest += 20;
+            cashInterest += 25;
             endDayBoonSprites.Add(boonManager.boonDict["BountifulHarvest"].art);
         }
 
@@ -477,6 +478,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
+        ShowRoundUI();
         LassoCleaner.CleanupAll();
         GameController.rerollManager.Reset();
         saveManager.SaveGameData();
@@ -773,6 +775,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator DisplayDayRoutine(string word, float scaleDuration, float displayDuration)
     {
+        roundCompleted = false;
+
         GameObject wordObj = Instantiate(dayBeginPrefab, transform);
         var wordText = wordObj.GetComponent<TMP_Text>();
         var typer = wordObj.GetComponent<TMPTypewriterSwap>();
@@ -840,7 +844,6 @@ public class GameManager : MonoBehaviour
 
         Destroy(wordObj);
         roundInProgress = true;
-        roundCompleted = false;
         StartCoroutine(ShowReadySetLassoSequence());
     }
 

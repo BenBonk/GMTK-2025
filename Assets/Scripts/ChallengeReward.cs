@@ -26,6 +26,7 @@ public class ChallengeReward : MonoBehaviour
         if (rewardType == ChallengeRewardType.BoonSlot)
         {
             //add boon slot
+            FBPP.SetInt("boonDeckSize", FBPP.GetInt("boonDeckSize", 5)+1);
             GameController.challengeRewardSelect.StartCoroutine("Exit");
         }
         else if (rewardType == ChallengeRewardType.SpawnRate)

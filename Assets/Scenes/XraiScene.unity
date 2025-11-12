@@ -13609,7 +13609,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -26309,7 +26309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1118, y: -741}
+  m_AnchoredPosition: {x: -1118, y: -590.8}
   m_SizeDelta: {x: 106.25, y: 106.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &988524038
@@ -26956,7 +26956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1118, y: -741}
+  m_AnchoredPosition: {x: -1118.1915, y: -590.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1070060279
@@ -33424,7 +33424,6 @@ MonoBehaviour:
   roundCompleted: 0
   roundDuration: 45
   roundsToWin: 20
-  maxSynergies: 5
   elapsedTime: 0
   predatorRoundFrequency: 3
   challengeRoundFrequency: 5
@@ -35843,6 +35842,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: partnerUpgrades.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: 'animalShopItems.Array.data[0]'
       value: 
       objectReference: {fileID: 175759936}
@@ -35854,6 +35857,14 @@ PrefabInstance:
       propertyPath: 'animalShopItems.Array.data[2]'
       value: 
       objectReference: {fileID: 1808476959}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'partnerUpgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1747353840}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'partnerUpgrades.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2021712049}
     - target: {fileID: 7310025862920069743, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
@@ -47435,6 +47446,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: partnerUpgrades.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: 'animalShopItems.Array.data[0]'
       value: 
       objectReference: {fileID: 175759936}
@@ -47446,6 +47461,14 @@ PrefabInstance:
       propertyPath: 'animalShopItems.Array.data[2]'
       value: 
       objectReference: {fileID: 1808476959}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'partnerUpgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1510462767}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'partnerUpgrades.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2021712049}
     - target: {fileID: 7473698674869216222, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: m_Name
       value: AnimalUpgradeShopItem (1)
@@ -59571,6 +59594,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: partnerUpgrades.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: 'animalShopItems.Array.data[0]'
       value: 
       objectReference: {fileID: 175759936}
@@ -59582,6 +59609,14 @@ PrefabInstance:
       propertyPath: 'animalShopItems.Array.data[2]'
       value: 
       objectReference: {fileID: 1808476959}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'partnerUpgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1510462767}
+    - target: {fileID: 6772677190055033454, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
+      propertyPath: 'partnerUpgrades.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1747353840}
     - target: {fileID: 7473698674869216222, guid: af690a4f508fb7248a03ddc500488d58, type: 3}
       propertyPath: m_Name
       value: AnimalUpgradeShopItem (2)
@@ -61065,7 +61100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 656672193975587671, guid: 3021cd6a08b52534b87b22ca777a4dce, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 767.5
+      value: 634.5
       objectReference: {fileID: 0}
     - target: {fileID: 656672193975587671, guid: 3021cd6a08b52534b87b22ca777a4dce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -61268,11 +61303,11 @@ PrefabInstance:
       objectReference: {fileID: 1220268107}
     - target: {fileID: 4826851793513136903, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -307.6
+      value: -318.96
       objectReference: {fileID: 0}
     - target: {fileID: 4826851793513136903, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -239.89
+      value: -33.2
       objectReference: {fileID: 0}
     - target: {fileID: 7728259703445948093, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
       propertyPath: m_Pivot.x
@@ -61340,7 +61375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7728259703445948093, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 767.5
+      value: 634.5
       objectReference: {fileID: 0}
     - target: {fileID: 7728259703445948093, guid: 50849cb1cafc22842bcf28dfa863ff21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

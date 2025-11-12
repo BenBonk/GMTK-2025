@@ -77,12 +77,12 @@ public class SynergyShopItem : ShopItem
     }
     public override void PurchaseUpgrade()
     {
-        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-200)))
+        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-150)))
         {
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
 
-            if (GameController.player.boonsInDeck.Count<GameController.gameManager.maxSynergies)
+            if (GameController.player.boonsInDeck.Count<FBPP.GetInt("boonDeckSize",5))
             {
                 GameController.player.playerCurrency -= price;
                 shopManager.UpdateCashText();

@@ -18,6 +18,7 @@ public class GrassSpawner : MonoBehaviour
     private Vector2 spawnAreaMax;
     private List<Vector2> placedPositions = new List<Vector2>();
     public bool spawnOnStart;
+    private bool hasCorners = false;
 
     void Start()
     {
@@ -27,7 +28,10 @@ public class GrassSpawner : MonoBehaviour
 
     public void SpawnGrass()
     {
-        CalculateSpawnAreaFromRectTransform();
+        if (!hasCorners)
+        {
+            CalculateSpawnAreaFromRectTransform();
+        }
         if (spawnAreaRectTransform == null)
         {
             return;
@@ -58,6 +62,7 @@ public class GrassSpawner : MonoBehaviour
 
         spawnAreaMin = new Vector2(bottomLeft.x, bottomLeft.y);
         spawnAreaMax = new Vector2(topRight.x, topRight.y);
+        hasCorners = true;
     }
 
     bool TrySpawnGrass()

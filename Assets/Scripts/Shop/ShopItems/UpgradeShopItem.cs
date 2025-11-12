@@ -10,7 +10,7 @@ public class UpgradeShopItem : ShopItem
 {
     private List<AnimalData> possibleAnimals;
     private AnimalData chosenAnimal;
-    public UpgradeShopItem partnerUpgrade;
+    public UpgradeShopItem[] partnerUpgrades;
     public AnimalShopItem[] animalShopItems;
     public TMP_Text levelText;
     public LocalizedString levelString;
@@ -54,7 +54,7 @@ public class UpgradeShopItem : ShopItem
     }
     public override void PurchaseUpgrade()
     {
-        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-200)))
+        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-150)))
         {
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
@@ -77,7 +77,8 @@ public class UpgradeShopItem : ShopItem
 
             if (!shopManager.cantPurchaseItem)
             {
-                partnerUpgrade.UpdateDescription();
+                foreach (var partnerUpgrade in partnerUpgrades)
+                    partnerUpgrade.UpdateDescription();
             }
 
             foreach (var a in animalShopItems)

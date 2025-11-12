@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -711,7 +711,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -785,7 +785,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Sempre pi\xF9 veloce"
+    m_Localized: "Per sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -797,8 +797,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: I cani scacciano i predatori. I cani valgono +5,0x denaro quando
-      vengono catturati da un predatore.
+    m_Localized: I cani scacciano i predatori. I cani valgono +5x denaro se catturati
+      con un predatore.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -824,7 +824,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
+    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -878,7 +878,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801995
     m_Localized: "I lupi ora si generano in branchi di 2 o 3, catturare almeno 5
-      lupi con un singolo lazo d\xE0 x20 punti moltiplicatori"
+      lupi con un singolo lazo d\xE0 x25 punti moltiplicatori"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -911,7 +911,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 contanti aggiuntivi alla fine del round
+    m_Localized: +25 contanti aggiuntivi alla fine del round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1134,7 +1134,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: Ora puoi indebitarti fino a 200$ nel negozio
+    m_Localized: Ora puoi indebitarti fino a -150 contanti nel negozio
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1338,7 +1338,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032528
-    m_Localized: Lasso un gruppo di animali contenente un gatto da fienile e un puma
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile e un puma
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032529

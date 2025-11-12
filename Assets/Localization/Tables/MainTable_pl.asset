@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Utrata punkt\xF3w:"
+    m_Localized: "Strata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -902,7 +902,7 @@ MonoBehaviour:
   - m_Id: 8932396773801995
     m_Localized: "Wilki pojawiaj\u0105 si\u0119 teraz w grupach po 2 lub 3 osobniki.
       Z\u0142apanie co najmniej 5 wilk\xF3w na jedn\u0105 lass\u0119 daje mno\u017Cnik
-      x20 punkt\xF3w."
+      x25 punkt\xF3w."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -936,7 +936,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+20 dodatkowej got\xF3wki na koniec rundy"
+    m_Localized: "+25 dodatkowej got\xF3wki na koniec rundy"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1005,8 +1005,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
-      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
+      w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1035,7 +1035,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-robotnik
+    m_Localized: Weteran-Pracownik Rolny
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
@@ -1098,8 +1098,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949632
-    m_Localized: "W sklepie dost\u0119pne s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t.
-      Ulepszenia zwierz\u0105t s\u0105 ta\u0144sze."
+    m_Localized: "W sklepie s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t. Ulepszenia
+      zwierz\u0105t s\u0105 ta\u0144sze."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
@@ -1162,8 +1162,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Teraz mo\u017Cesz zaci\u0105gn\u0105\u0107 w sklepie d\u0142ug
-      w wysoko\u015Bci do 200 dolar\xF3w"
+    m_Localized: "Teraz mo\u017Cesz zad\u0142u\u017Cy\u0107 si\u0119 w sklepie do
+      -150 got\xF3wki"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1270,7 +1270,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031424
-    m_Localized: "Straszliwy wiatropyle: wiatropyle zrywaj\u0105 lassa w kontakcie"
+    m_Localized: "Straszliwy wiatro\u0142om: wiatro\u0142omy zrywaj\u0105 lassa w
+      kontakcie"
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
@@ -1421,7 +1422,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 3 kozy"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z 3 k\xF3z"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032539
@@ -1455,8 +1457,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032546
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t, w kt\xF3rej jest kr\xF3liczek
-      i puma"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika
+      i pum\u0119"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032547

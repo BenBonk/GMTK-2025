@@ -189,7 +189,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Predador. Persegue indiv\xEDduos que n\xE3o s\xE3o predadores."
+    m_Localized: "Predador. Persegue animais que n\xE3o s\xE3o predadores."
     m_Metadata:
       m_Items: []
   - m_Id: 41
@@ -238,7 +238,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: "La\xE7o em um grupo de animais contendo 3 ovelhas."
+    m_Localized: "La\xE7o: um grupo de animais contendo 3 ovelhas."
     m_Metadata:
       m_Items: []
   - m_Id: 53
@@ -569,7 +569,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
-    m_Localized: 'Total de rerolls:'
+    m_Localized: 'Total de novas tentativas:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550209
@@ -765,8 +765,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Chance de uma ovelha ser a ovelha negra, reativando seu la\xE7o
-      uma vez quando la\xE7ada."
+    m_Localized: "Existe a possibilidade de uma ovelha ser a ovelha negra, reativando
+      seu la\xE7o uma vez ao ser la\xE7ada."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -799,8 +799,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "C\xE3es espantam predadores. C\xE3es la\xE7ados junto com qualquer
-      predador valem +5,0x dinheiro."
+    m_Localized: "C\xE3es afugentam predadores. C\xE3es la\xE7ados com qualquer predador
+      valem +5,0x dinheiro."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -880,7 +880,7 @@ MonoBehaviour:
   - m_Id: 8932396773801995
     m_Localized: "Agora, os lobos aparecem em matilhas de 2 ou 3 indiv\xEDduos. Capturar
       pelo menos 5 lobos com um \xFAnico la\xE7o concede um multiplicador de pontos
-      de x20."
+      de x25."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -913,7 +913,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 em dinheiro adicional ao final da rodada
+    m_Localized: +25 em dinheiro adicional no final da rodada
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -926,7 +926,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802006
-    m_Localized: "Dinheiro f\xE1cil"
+    m_Localized: Dinheiro Vivo
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
@@ -1037,7 +1037,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169344
-    m_Localized: "Chegando em vers\xE3o completa:"
+    m_Localized: 'Chegando o jogo completo:'
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169345
@@ -1094,7 +1094,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376257
-    m_Localized: Concede 1 reroll gratuito por loja
+    m_Localized: Concede 1 nova rolagem gratuita por loja.
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376258
@@ -1137,7 +1137,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Agora voc\xEA pode contrair d\xEDvidas de at\xE9 US$ 200 na loja."
+    m_Localized: "Agora voc\xEA pode ficar com uma d\xEDvida de at\xE9 -150 em dinheiro
+      na loja."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1218,7 +1219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276037
-    m_Localized: Remova 2 animais do seu baralho de animais.
+    m_Localized: Remova 2 animais do seu Baralho de Animais.
     m_Metadata:
       m_Items: []
   - m_Id: 21394830084497408
@@ -1281,7 +1282,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032513
-    m_Localized: Alpaca em pele de lobo
+    m_Localized: Alpaca em Pele de Lobo
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032514
@@ -1469,7 +1470,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032558
-    m_Localized: "La\xE7o: um grupo de animais contendo 2 gatos de celeiro e 2 c\xE3es."
+    m_Localized: "La\xE7ar um grupo de animais contendo 2 gatos de celeiro e 2 c\xE3es."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032559
