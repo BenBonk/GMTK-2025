@@ -130,6 +130,14 @@ public class Dog : Animal
 
         Vector3 pos = transform.position;
 
+        if (legendary)
+        {
+            if (chaseTarget != null && !chaseTarget.isLassoed && !chaseTarget.forceExit)
+                ModifySpeed("chase", 1.5f);   // apply chase boost
+            else
+                RevertSpeed("chase");                       // remove boost when not chasing
+        }
+
         if (chaseTarget != null && !chaseTarget.isLassoed && !chaseTarget.forceExit)
         {
             // (C) CHASE mode: go straight toward the active target (no zig-zag)
@@ -207,6 +215,7 @@ public class Dog : Animal
             if (a == null || a == this) continue;
             if (!a.isPredator) continue;
             if (a.isLassoed) continue;
+            if(a.forceExit) continue;
 
             if (requireLeft && a.transform.position.x >= myPos.x)
                 continue;

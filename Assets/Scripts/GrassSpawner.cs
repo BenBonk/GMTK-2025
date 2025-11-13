@@ -22,6 +22,10 @@ public class GrassSpawner : MonoBehaviour
 
     void Start()
     {
+        if (spawnOnStart)
+        {
+            SpawnGrass();
+        }
        //SpawnGrass();
        CalculateSpawnAreaFromRectTransform();
     }
