@@ -78,7 +78,12 @@ public class UpgradeShopItem : ShopItem
             if (!shopManager.cantPurchaseItem)
             {
                 foreach (var partnerUpgrade in partnerUpgrades)
-                    partnerUpgrade.UpdateDescription();
+                {
+                    if (partnerUpgrade.gameObject.activeInHierarchy)
+                    {
+                        partnerUpgrade.UpdateDescription();
+                    }
+                }
             }
 
             foreach (var a in animalShopItems)

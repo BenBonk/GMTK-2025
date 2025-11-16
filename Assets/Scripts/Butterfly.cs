@@ -5,8 +5,8 @@ public class Butterfly : MonoBehaviour
     public float attractionRadius;
     private const float WAVE_FREQUENCY = 1.5f;
     private const float WAVE_AMPLITUDE = 0.8f;
-    private const float MIN_FLY_TIME = 5f;
-    private const float MAX_FLY_TIME = 8f;
+    private const float MIN_FLY_TIME = 2f;
+    private const float MAX_FLY_TIME = 5f;
     private const float EXIT_SPEED = 2.5f;
     private const float EXIT_TRANSITION_TIME = 0.5f;
 
@@ -157,6 +157,7 @@ public class Butterfly : MonoBehaviour
             if ((a.transform.position - myPos).sqrMagnitude <= r2)
             {
                 a.SetAttractTarget(gameObject);
+                a.ModifySpeed("chase", 1.5f);
             }
         }
     }

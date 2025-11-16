@@ -13,7 +13,7 @@ public class Mole : MonoBehaviour
         gameObject.tag = "NonAnimalLassoable";
         collider2D.enabled = true;
         yield return new WaitForSeconds(2);
-        if (transform.parent.parent==null)
+        if (transform.parent.name == "MoleDig(Clone)")
         {
             gameObject.tag = "Untagged";
             collider2D.enabled = false;  

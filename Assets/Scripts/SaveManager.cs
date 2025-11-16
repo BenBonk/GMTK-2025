@@ -73,7 +73,7 @@ public class SaveManager : MonoBehaviour
     void ResetVars()
     {
         FBPP.SetString("cash", "0");
-        FBPP.SetInt("round", 0);
+        FBPP.SetInt("round", 1);
         FBPP.SetString("animalsInDeck", "");
         FBPP.SetString("boonsInDeck", "");
         FBPP.DeleteInt("rerollPrice");

@@ -95,6 +95,11 @@ public class LassoController : MonoBehaviour
     void Update()
     {
         if (!canLasso || pauseMenu.isOpen) return;
+        if (isDrawing && (Input.GetMouseButtonDown(1)))
+        {
+            DestroyLassoExit(true);
+            return;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -234,7 +239,7 @@ public class LassoController : MonoBehaviour
         Vector2 end = rawPoints[rawPoints.Count - 1];
 
         bool explicitlyClosed = (rawPoints[0] - rawPoints[rawPoints.Count - 1]).sqrMagnitude <= 1e-6f;
-        bool alreadyClosed = explicitlyClosed || Vector2.Distance(start, end) <= closeThreshold;
+        bool alreadyClosed = explicitlyClosed || Vector2.Distance(start, end) <= GetReleaseSnapWorld(releaseSnapPercent);
 
         if (!alreadyClosed)
         {
@@ -691,9 +696,10 @@ public class LassoController : MonoBehaviour
             var col = egg.GetComponent<Collider2D>();
             Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)egg.transform.position;
 
-            if (IsPointInPolygon(point, rawPoints))
+            if (egg.CompareTag("NonAnimalLassoable") && IsPointInPolygon(point, rawPoints))
             {
                 list.Add(egg.gameObject);
+                Debug.Log($"Lassoed: {egg.gameObject.name}");
             }
         }
 
@@ -1305,8 +1311,21 @@ public class LassoController : MonoBehaviour
         Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
         Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
         float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
-        return screenWorldArea * 0.004f;
+        return screenWorldArea * 0.002f;
     }
+
+    [SerializeField]
+    private float releaseSnapPercent = 0.02f;
+    private float GetReleaseSnapWorld(float percent)
+    {
+        float z = Mathf.Abs(Camera.main.transform.position.z - lineRenderer.transform.position.z);
+
+        Vector3 leftW = Camera.main.ScreenToWorldPoint(new Vector3(0f, 0f, z));
+        Vector3 rightW = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0f, z));
+        float worldWidth = Mathf.Abs(rightW.x - leftW.x);
+        return worldWidth * Mathf.Clamp01(percent);
+    }
+
 
     bool TryComputeCandidateLoopArea(int hitIndex, out float area)
     {

@@ -159,6 +159,7 @@ public class GameManager : MonoBehaviour
         RoundSetup();
         Invoke("StartRound", 1);
         UpdateTimerDisplay();
+        UpdatecurrencyDisplay(player.playerCurrency);
     }
     
     private void ApplyHarvestLevel()
@@ -221,7 +222,6 @@ public class GameManager : MonoBehaviour
         }
         pointsThisRound = 0;
         saveManager.SaveGameData();
-        roundNumber++;
         if (roundNumber > FBPP.GetInt("highestRound"))
         {
             FBPP.SetInt("highestRound", roundNumber);
@@ -505,6 +505,8 @@ public class GameManager : MonoBehaviour
                     shopButtonBlocker.SetActive(false);
                     pauseMenu.canOpenClose = true;
                     challengeEventManager.EndChallenge();
+                    roundNumber++;
+                    saveManager.SaveGameData();
                 });
             }
         );

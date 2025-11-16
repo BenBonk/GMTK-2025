@@ -163,10 +163,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3399065950325804166, guid: 4ef3aa53ebbac2347bbcda39deabf051, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5465896840286953389, guid: 4ef3aa53ebbac2347bbcda39deabf051, type: 3}
       propertyPath: m_Name
       value: WhackAMole

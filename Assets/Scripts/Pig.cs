@@ -11,7 +11,6 @@ public class Pig : Animal
     private bool initialized = false;
     private float waveProgress = 0f;
     private float startY;
-    private float _lastScale = 1f;
 
     [Header("Legendary")]
     public Sprite pigWithHat;
@@ -19,15 +18,16 @@ public class Pig : Animal
     protected override void Awake()
     {
         base.Awake();
-        baseSpeed = speed;
+        baseSpeed = speed;   // cache inspector speed as baseline
     }
 
     public override void Start()
     {
         base.Start();
-        currentSpeed = speed;
+        // IMPORTANT: do NOT reset currentSpeed here.
+        // OnEnable has already called RecomputeAndApplyEffectiveSpeed(),
+        // which sets currentSpeed based on all global/local modifiers.
     }
-
 
     public override void ActivateLegendary()
     {
@@ -38,10 +38,12 @@ public class Pig : Animal
         }
     }
 
+    // Called whenever global or local speed modifiers change
     protected override void ApplyEffectiveSpeedScale(float scale)
     {
-        speed = baseSpeed;
-        base.ApplyEffectiveSpeedScale(scale);
+        // speed stays as the baseline (baseSpeed) so we always scale from
+        // the original design value.
+        currentSpeed = baseSpeed * scale;
     }
 
     protected override Vector3 ComputeMove()
@@ -56,14 +58,14 @@ public class Pig : Animal
 
         float yOffset = Mathf.Sin(waveProgress * Mathf.PI * 2f * waveFrequency) * waveAmplitude;
 
-        // Horizontal base movement
+        // Horizontal base movement, using currentSpeed (already scaled)
         Vector3 baseMove = transform.position + Vector3.left * currentSpeed * Time.deltaTime;
 
         // Respect vertical offset by adding it to the wave
         float verticalOffset = externalOffset.y;
         baseMove.y = startY + yOffset + verticalOffset;
 
-        // Zero out the vertical offset so it isn’t double-counted later
+        // Zero out the vertical offset so it isn't double-counted later
         externalOffset.y = 0f;
 
         return baseMove;
@@ -85,4 +87,5 @@ public class Pig : Animal
         startY = Mathf.Clamp(transform.position.y, minY, maxY);
     }
 }
+
 

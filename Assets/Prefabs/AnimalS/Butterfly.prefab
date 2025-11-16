@@ -100,26 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856a0c23d4203a14aa9beb77be9398b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalData: {fileID: 11400000, guid: e430e885f96bdcb47908efea2b7378de, type: 2}
-  isPredator: 0
-  speed: 2
-  currentSpeed: 0
-  isLassoed: 0
-  leftEdgeX: 0
-  startPos: {x: 0, y: 0, z: 0}
-  topLimitY: 0
-  bottomLimitY: 0
-  tiltFrequency: 3
-  maxTiltAmplitude: 20
-  legendary: 0
-  forceExit: 0
-  bonusPoints: 0
-  leftIsPositiveScaleX: 1
-  attractBrakeRadius: 2
-  attractArriveRadius: 0.25
-  attractSmoothTime: 0.25
-  attractStopThreshold: 0.02
-  attractionRadius: 2
+  attractionRadius: 3
   sprites:
   - {fileID: -6522484170420502303, guid: 1237676e25c34294ebfee55fb7dac045, type: 3}
   - {fileID: 1148166039475955093, guid: 1237676e25c34294ebfee55fb7dac045, type: 3}
@@ -128,3 +109,10 @@ MonoBehaviour:
   - {fileID: -2261488825325905035, guid: 1237676e25c34294ebfee55fb7dac045, type: 3}
   - {fileID: -7069275506716678167, guid: 1237676e25c34294ebfee55fb7dac045, type: 3}
   - {fileID: 2059863041, guid: 1237676e25c34294ebfee55fb7dac045, type: 3}
+  tiltFrequency: 3
+  maxTiltAmplitude: 20
+  speed: 2
+  currentSpeed: 0
+  topLimitY: 0
+  bottomLimitY: 0
+  isExitingRound: 0

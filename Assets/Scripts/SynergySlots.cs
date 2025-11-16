@@ -16,7 +16,6 @@ public class SynergySlots : MonoBehaviour
     private DescriptionManager descriptionManager;
     private void Start()
     {
-        Debug.Log(gameObject);
         descriptionManager = GameController.descriptionManager;
         shopManager = GameController.shopManager;
         player = GameController.player;

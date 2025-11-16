@@ -75,10 +75,10 @@ public class CaptureManager : MonoBehaviour
                 steamIntegration.UnlockAchievement("Crowd Control");
             }
             var capturedCounts = GetNameCounts(animalsCaptured);
-            /*foreach (var key in capturedCounts.Keys)
+            foreach (var key in capturedCounts.Keys)
             {
                 Debug.Log(key + ": " + capturedCounts[key]);
-            }*/
+            }
 
             for (int i = 0; i < player.boonsInDeck.Count; i++)
             {
@@ -110,8 +110,8 @@ public class CaptureManager : MonoBehaviour
             {
                 if (animal.struckByLightning)
                 {
-                    pointMult *= 2;
-                    currencyMult *= 2;
+                    pointMult *= 1.5;
+                    currencyMult *= 1.25;
                     boonSprites.Add(lightningBoltIcon);
                 }
                 if (!animal.isPredator)
