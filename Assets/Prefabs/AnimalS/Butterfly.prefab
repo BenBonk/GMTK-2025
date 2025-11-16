@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856a0c23d4203a14aa9beb77be9398b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractionRadius: 3
+  attractionRadius: 4
   sprites:
   - {fileID: -6522484170420502303, guid: 1237676e25c34294ebfee55fb7dac045, type: 3}
   - {fileID: 1148166039475955093, guid: 1237676e25c34294ebfee55fb7dac045, type: 3}
