@@ -165,7 +165,7 @@ public class CaptureManager : MonoBehaviour
             
            if (boonManager.ContainsBoon("Wolfpack"))
             {
-                if (capturedCounts["wolf"] >=5)
+                if (capturedCounts.ContainsKey("wolf") && capturedCounts["wolf"] >=5)
                 {
                     pointMult *= 25;
                     boonSprites.Add(boonManager.boonDict["Wolfpack"].art);
@@ -242,7 +242,7 @@ public class CaptureManager : MonoBehaviour
                 pointMult *= mootiplier;
             }
 
-            if (boonManager.ContainsBoon("HoldYourHorses") && capturedCounts["horse"] > 0)
+            if (boonManager.ContainsBoon("HoldYourHorses") && capturedCounts.ContainsKey("horse") && capturedCounts["horse"] > 0)
             {
                 pointBonus += 10;
             }
