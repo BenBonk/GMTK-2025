@@ -55,7 +55,7 @@ public class RerollManager : MonoBehaviour
     }
     public void Reroll()
     {
-        if (!canReroll || rerollsThisShop >= rerollsPerShop || GameController.player.playerCurrency < rerollPrice)
+        if (!canReroll || rerollsThisShop >= rerollsPerShop || (GameController.player.playerCurrency < rerollPrice && !GameController.boonManager.ContainsBoon("BNPL")) || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - rerollPrice <-150))
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
             return;

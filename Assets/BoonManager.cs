@@ -6,7 +6,7 @@ using UnityEngine;
 public class BoonManager : MonoBehaviour
 {
     private Player player;
-
+    public Boon[] boonsToAddForTesting;
 
     // Dictionary for fast lookup: key = boon name, value = Boon object
     public Dictionary<string, Boon> boonDict = new Dictionary<string, Boon>();
@@ -14,6 +14,10 @@ public class BoonManager : MonoBehaviour
     private void Start()
     {
         player = GameController.player;
+        foreach (var b in boonsToAddForTesting)
+        {
+            player.boonsInDeck.Add(b);
+        }
         InitializeDictionary();
     }
     private void InitializeDictionary()
