@@ -33427,7 +33427,7 @@ MonoBehaviour:
   roundsToWin: 20
   elapsedTime: 0
   predatorRoundFrequency: 3
-  challengeRoundFrequency: 1
+  challengeRoundFrequency: 5
   wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
   dayBeginPrefab: {fileID: 3484454060116296803, guid: 6e37cc45f113d504b91a2ea649e67767, type: 3}
   endRoundPrefab: {fileID: 3484454060116296803, guid: c01d5805210ba0c459e6a670098a123a, type: 3}
