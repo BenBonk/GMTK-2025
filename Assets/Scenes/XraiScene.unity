@@ -26956,7 +26956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1118.1915, y: -590.8}
+  m_AnchoredPosition: {x: -1118, y: -590.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1070060279
@@ -33426,7 +33426,7 @@ MonoBehaviour:
   roundsToWin: 20
   elapsedTime: 0
   predatorRoundFrequency: 3
-  challengeRoundFrequency: 1
+  challengeRoundFrequency: 5
   wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
   dayBeginPrefab: {fileID: 3484454060116296803, guid: 6e37cc45f113d504b91a2ea649e67767, type: 3}
   endRoundPrefab: {fileID: 3484454060116296803, guid: c01d5805210ba0c459e6a670098a123a, type: 3}
