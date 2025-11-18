@@ -69,7 +69,7 @@ public class SchemeManager : MonoBehaviour
 
         GameController.gameManager.scoreDisplay.color = chosenScheme.pointsTextColor;
         GameController.gameManager.lassoController.pointBonusColor = chosenScheme.pointsTextColor;
-
+        GameController.gameManager.lassoController.positiveMultColor = chosenScheme.positiveMultColor;
         if (chosenScheme.shouldSpawnGrass)
         {
             grassSpawner.colorPalette = chosenScheme.grassColors;
@@ -120,5 +120,6 @@ public class Scheme
     public bool shouldSpawnGrass;
     public List<Color> grassColors;
     public Color pointsTextColor;
+    public Color positiveMultColor;
 
 }
