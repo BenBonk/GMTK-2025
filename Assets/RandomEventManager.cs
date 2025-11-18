@@ -36,7 +36,7 @@ public class RandomEventManager : MonoBehaviour
     {
         if (Random.Range(0,5) > 0) //0,5
         {
-            return 2; //-1
+            return -1;
         }
 
         int chosenEvent = Random.Range(0,4);
