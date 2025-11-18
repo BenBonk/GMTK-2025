@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ChallengeReward : MonoBehaviour
 {
+    public static bool cantSelect = false;
     public enum ChallengeRewardType
     {
         SpawnRate,
@@ -13,7 +14,6 @@ public class ChallengeReward : MonoBehaviour
         DeckRemoval
     }
     public ChallengeRewardType rewardType;
-    [HideInInspector] public bool cantSelect;
     public void SelectReward()
     {
         if (cantSelect)

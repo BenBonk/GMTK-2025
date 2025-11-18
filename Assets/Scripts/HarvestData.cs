@@ -2,6 +2,7 @@ using UnityEngine;
 
 public enum ShopPriceSetting
 {
+    None,
     Novice,
     Veteran,
     Expert
@@ -9,6 +10,7 @@ public enum ShopPriceSetting
 
 public enum PointQuotaSetting
 {
+    None,
     Novice,
     Veteran,
     Expert
