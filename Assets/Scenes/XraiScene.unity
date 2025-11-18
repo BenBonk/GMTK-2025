@@ -14130,7 +14130,7 @@ MonoBehaviour:
   - {fileID: 5465896840286953389, guid: 4353836029bae6649a7c514594f368d8, type: 3}
   - {fileID: 5465896840286953389, guid: 3c962ef830e0c0043a8e11441e9a8295, type: 3}
   - {fileID: 5465896840286953389, guid: 4863d4a8874f4d64bbd84f51827e1835, type: 3}
-  minCacti: 2
+  minCacti: 3
   maxCacti: 4
   bee: {fileID: 6855987514067192795, guid: 0e9fd5666e641054180f414070b4069c, type: 3}
   tumbleweed: {fileID: 3198163530796938129, guid: 404dd1fc263091d4bbd1b78f464aeeb9, type: 3}
@@ -33426,7 +33426,7 @@ MonoBehaviour:
   roundsToWin: 20
   elapsedTime: 0
   predatorRoundFrequency: 3
-  challengeRoundFrequency: 5
+  challengeRoundFrequency: 1
   wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
   dayBeginPrefab: {fileID: 3484454060116296803, guid: 6e37cc45f113d504b91a2ea649e67767, type: 3}
   endRoundPrefab: {fileID: 3484454060116296803, guid: c01d5805210ba0c459e6a670098a123a, type: 3}
@@ -60022,7 +60022,7 @@ MonoBehaviour:
     - {r: 0.9960785, g: 0.9568628, b: 0.4039216, a: 1}
     - {r: 0.27450982, g: 0.5254902, b: 0.3019608, a: 1}
     pointsTextColor: {r: 1, g: 0.6, b: 0.7137255, a: 1}
-    positiveMultColor: {r: 0.3882353, g: 0.78039217, b: 0.3019608, a: 1}
+    positiveMultColor: {r: 1, g: 0.95105684, b: 0.3490566, a: 1}
 --- !u!4 &2082549784
 Transform:
   m_ObjectHideFlags: 0

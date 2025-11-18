@@ -124,7 +124,7 @@ public class ChallengeEventManager : MonoBehaviour
         );
         foreach (var pos in placedPositions)
         {
-            if (Vector2.Distance(pos, candidate) < 4)
+            if (Vector2.Distance(pos, candidate) < 6)
                 return false;
         }
         Instantiate(cacti[Random.Range(0, cacti.Length)], candidate, Quaternion.identity);
