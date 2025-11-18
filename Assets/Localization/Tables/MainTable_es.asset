@@ -339,7 +339,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: Cerdo envuelto en manta
+    m_Localized: Salchicha envuelta en manta
     m_Metadata:
       m_Items: []
   - m_Id: 78
@@ -453,8 +453,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: "Finalmente, puedes volver a lanzar la tienda una vez al d\xEDa,
-      \xA1a un coste que aumenta permanentemente!"
+    m_Localized: "Finalmente, puedes volver a tirar los dados en la tienda una vez
+      al d\xEDa, \xA1a un coste que aumenta permanentemente!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -817,7 +817,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: "Los caballos son m\xE1s lentos y se detienen brevemente en el borde
-      izquierdo de la pantalla. Cualquier lazo que contenga un caballo vale +10 puntos."
+      izquierdo de la pantalla. Los caballos valen +10 puntos."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695

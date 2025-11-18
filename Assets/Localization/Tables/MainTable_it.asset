@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -535,7 +535,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boon pi\xF9 acquistati:"
+    m_Localized: "I 3 Boons pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -711,7 +711,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza tonda:'
+    m_Localized: 'Lunghezza del giro:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -785,7 +785,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Per sempre pi\xF9 veloce"
+    m_Localized: "Sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -797,8 +797,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: I cani scacciano i predatori. I cani valgono +5x denaro se catturati
-      con un predatore.
+    m_Localized: I cani scacciano i predatori. I cani valgono +5,0x denaro quando
+      vengono catturati da un predatore.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -816,7 +816,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: "I cavalli sono pi\xF9 lenti e si fermano brevemente sul bordo sinistro
-      dello schermo. Ogni lazo contenente un cavallo vale +10 punti."
+      dello schermo. I cavalli valgono +10 punti."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -824,7 +824,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
+    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -873,7 +873,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -927,7 +927,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +2 contanti per animale preso al lazo
+    m_Localized: +2 contanti per animale catturato
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -1338,7 +1338,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032528
-    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile e un puma
+    m_Localized: Lasso un gruppo di animali contenente un gatto da fienile e un puma
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032529

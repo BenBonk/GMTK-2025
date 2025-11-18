@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Points multiplicateurs :'
+    m_Localized: 'Points mult :'
     m_Metadata:
       m_Items: []
   - m_Id: 16
@@ -215,8 +215,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: Capturer au lasso un groupe d'animaux comprenant un chien, un renard
-      et un loup
+    m_Localized: Capturez au lasso un groupe d'animaux comprenant un chien, un renard
+      et un loup.
     m_Metadata:
       m_Items: []
   - m_Id: 47
@@ -325,8 +325,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Attrapez au lasso un groupe d'animaux comprenant une poule, une
-      vache, un cheval, un mouton et un cochon.
+    m_Localized: Attraper au lasso un groupe d'animaux comprenant une poule, une
+      vache, un cheval, un mouton et un cochon
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -346,7 +346,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: "Petit cochon enrob\xE9 de p\xE2te"
+    m_Localized: "Cochon enrob\xE9 de p\xE2te"
     m_Metadata:
       m_Items: []
   - m_Id: 78
@@ -577,7 +577,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355920
-    m_Localized: "Nombre maximal de relances dans une seule partie\_:"
+    m_Localized: "Nombre maximal de relances en une seule partie\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
@@ -830,7 +830,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: "Les chevaux sont plus lents et s'arr\xEAtent bri\xE8vement sur
-      le bord gauche de l'\xE9cran. Tout lasso contenant un cheval vaut +10 points."
+      le bord gauche de l'\xE9cran. Les chevaux valent +10 points."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -1320,7 +1320,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: Lasso un groupe d'animaux comprenant un sanglier et un cochon
+    m_Localized: Capturez au lasso un groupe d'animaux comprenant un sanglier et
+      un cochon.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032519
@@ -1569,8 +1570,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421131
-    m_Localized: Attraper au lasso un groupe d'animaux comprenant un lapin, un cochon
-      et un ours
+    m_Localized: Attrapez au lasso un groupe d'animaux comprenant un lapin, un cochon
+      et un ours.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421132

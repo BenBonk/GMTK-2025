@@ -810,7 +810,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: Horses are slower and stop briefly at the left edge of the screen.
-      Any lasso containing a horse is worth +10 points
+      Horses are worth +10 points
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
