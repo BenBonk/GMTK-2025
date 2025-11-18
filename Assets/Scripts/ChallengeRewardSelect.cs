@@ -30,6 +30,7 @@ public class ChallengeRewardSelect : MonoBehaviour
         yield return new WaitForSeconds(0.15f);
         darkCover.enabled = true;
         darkCover.DOFade(0.5f, 0.5f);
+        ChallengeReward.cantSelect = false;
         panel1.gameObject.SetActive(true);
         panel2.gameObject.SetActive(true);
         panel3.gameObject.SetActive(true);
@@ -49,7 +50,12 @@ public class ChallengeRewardSelect : MonoBehaviour
     {
         darkCover.DOFade(0, .5f).OnComplete(() => darkCover.enabled = false);
         yield return new WaitForSeconds(.1f);
-        titleText.DOAnchorPosY(530, .5f).SetEase(Ease.InBack).OnComplete(() => titleText.gameObject.SetActive(false));
+        titleText.DOAnchorPosY(530, .5f).SetEase(Ease.InBack)
+            .OnComplete(() =>
+            {
+                titleText.GetComponent<TMPTypewriterSwap>().InstantSet("");
+                titleText.gameObject.SetActive(false);
+            });
         yield return new WaitForSeconds(.15f);
         panel1.DOAnchorPosY(-1000, .5f).SetEase(Ease.InBack).OnComplete(() => panel1.gameObject.SetActive(false));
         yield return new WaitForSeconds(.15f);

@@ -15563,7 +15563,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewardType: 0
-  cantSelect: 0
 --- !u!1 &720688921
 GameObject:
   m_ObjectHideFlags: 0
@@ -26957,7 +26956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1118, y: -590.8}
+  m_AnchoredPosition: {x: -1118.1915, y: -590.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1070060279
@@ -33418,7 +33417,7 @@ MonoBehaviour:
   player: {fileID: 1887224207}
   harvestLevel: 1
   farmerID: 0
-  startingPointRequirement: 70
+  quotaSetting: 0
   roundNumber: 0
   roundInProgress: 0
   playerReady: 0
@@ -33474,9 +33473,6 @@ MonoBehaviour:
   roundNumberDeath: {fileID: 1844727764}
   winRoundsText: {fileID: 584729533}
   lassoController: {fileID: 1615761884}
-  noviceRate: 1.25
-  veteranRate: 1.35
-  expertRate: 1.5
   challengeRound:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
@@ -34330,7 +34326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewardType: 2
-  cantSelect: 0
 --- !u!1 &1313342942
 GameObject:
   m_ObjectHideFlags: 0
@@ -46875,7 +46870,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewardType: 1
-  cantSelect: 0
 --- !u!114 &1720502510 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}

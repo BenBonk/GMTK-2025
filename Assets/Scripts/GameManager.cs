@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     public Player player;
     public int harvestLevel = 1;
     public int farmerID = 0;
-    public double startingPointRequirement = 65;
+    //public double startingPointRequirement = 65;
+    public PointQuotaSetting quotaSetting;
     public int roundNumber;
     public bool roundInProgress;
     public bool playerReady;
@@ -100,10 +101,10 @@ public class GameManager : MonoBehaviour
     public TMP_Text roundNumberDeath;
     public TMP_Text winRoundsText;
     public LassoController lassoController;
-    public float noviceRate = 1.25f;
+    /*public float noviceRate = 1.25f;
     public float veteranRate = 1.4f;
     public float expertRate = 1.6f;
-    private float pointsRequirementGrowthRate;
+    private float pointsRequirementGrowthRate;*/
     public LocalizedString challengeRound;
     public LocalizedString localReady;
     public LocalizedString localSet;
@@ -146,8 +147,7 @@ public class GameManager : MonoBehaviour
         ApplyHarvestLevel();
         if (isTesting)
         {
-            pointsRequirementGrowthRate = 0;
-            startingPointRequirement = 0;
+            quotaSetting = PointQuotaSetting.None;
             roundDuration = 3;
             player.playerCurrency = 10000;
         }
@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
         roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
         endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
-        pointsRequirementGrowthRate = GetGrowthRate(saveManager.harvestDatas[harvestLevel - 1].pointQuotas);
+        quotaSetting = saveManager.harvestDatas[harvestLevel - 1].pointQuotas;
     }
 
     private void Update()
@@ -217,8 +217,7 @@ public class GameManager : MonoBehaviour
         if (isTesting)
         {
             roundDuration = 3;
-            startingPointRequirement = 0;
-            pointsRequirementGrowthRate = 0;
+            quotaSetting = PointQuotaSetting.None;
         }
         pointsThisRound = 0;
         saveManager.SaveGameData();
@@ -299,14 +298,52 @@ public class GameManager : MonoBehaviour
 
     public double GetPointsRequirement()
     {
-        double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, roundNumber);
-        return Math.Round(value / 5.0) * 5.0;
+        double value = 0;
+        float R = roundNumber;
+        switch (quotaSetting)
+        {
+            case PointQuotaSetting.None:
+                return 0;
+            case PointQuotaSetting.Novice:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f*R + 5)*(Math.Pow(1.28f,R+4));
+                break;
+            case PointQuotaSetting.Veteran:
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            case PointQuotaSetting.Expert:
+                //placeholder
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            default:
+                value = 0;
+                break;
+        }
+        return value;
     }
 
     public double GetPointsRequirement(int round)
     {
-        double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, round);
-        return Math.Round(value / 5.0) * 5.0;
+        double value = 0;
+        float R = round;
+        switch (quotaSetting)
+        {
+            case PointQuotaSetting.None:
+                return 0;
+            case PointQuotaSetting.Novice:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f * R + 5) * (Math.Pow(1.28f, R + 4));
+                break;
+            case PointQuotaSetting.Veteran:
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            case PointQuotaSetting.Expert:
+                //placeholder
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            default:
+                value = 0;
+                break;
+        }
+        return value;
     }
 
 
@@ -601,17 +638,6 @@ public class GameManager : MonoBehaviour
 
             pulse.Join(timerDisplay.DOColor(timerNormalColor, 0.4f));
         }
-    }
-
-    public float GetGrowthRate(PointQuotaSetting setting)
-    {
-        return setting switch
-        {
-            PointQuotaSetting.Novice => noviceRate,
-            PointQuotaSetting.Veteran => veteranRate,
-            PointQuotaSetting.Expert => expertRate,
-            _ => 1.25f,
-        };
     }
 
     public IEnumerator ShowReadySetLassoSequence()
