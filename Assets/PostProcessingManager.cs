@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -25,14 +26,36 @@ public class PostProcessingManager : MonoBehaviour
     public void NightModeOn()
     {
         isNight = true;
-        colorAdjustments.postExposure.value = -1.07f;
-        vignette.smoothness.value = 1;
+        DOTween.To(
+            () => colorAdjustments.postExposure.value,
+            x => colorAdjustments.postExposure.value = x,
+            -1.07f,
+            1f
+        );
+        DOTween.To(
+            () => vignette.smoothness.value,
+            x => vignette.smoothness.value = x,
+            1,
+            1f
+        );
     }
 
     public void NightModeOff()
     {
         isNight = false;
-        colorAdjustments.postExposure.value = basePostExposure;
-        vignette.smoothness.value = baseVignetteSmoothness;
+        DOTween.To(
+            () => colorAdjustments.postExposure.value,
+            x => colorAdjustments.postExposure.value = x,
+            basePostExposure,
+            1f
+        );
+        DOTween.To(
+            () => vignette.smoothness.value,
+            x => vignette.smoothness.value = x,
+            baseVignetteSmoothness,
+            1f
+        );
+        //colorAdjustments.postExposure.value = basePostExposure;
+        //vignette.smoothness.value = baseVignetteSmoothness;
     }
 }
