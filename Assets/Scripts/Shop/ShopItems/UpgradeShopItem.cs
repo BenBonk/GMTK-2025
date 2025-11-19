@@ -58,7 +58,6 @@ public class UpgradeShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
-            GameController.player.playerCurrency -= price;
             shopManager. UpdateCashText();
             canPurchase = false;
             FBPP.SetInt("totalUpgradesPurchased", FBPP.GetInt("totalUpgradesPurchased")+1);
@@ -103,7 +102,9 @@ public class UpgradeShopItem : ShopItem
             }
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
-            
+
+            //triggers save, so goes last
+            GameController.player.playerCurrency -= price;
         }
         else
         {

@@ -2578,6 +2578,14 @@ MonoBehaviour:
   - m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
+      m_KeyId: 8554514727809036
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
       m_KeyId: 8554514727809037
       m_Key: 
     m_FallbackState: 0
@@ -3165,7 +3173,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.7505302
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4064,6 +4072,10 @@ PrefabInstance:
     - target: {fileID: 3213956085807596113, guid: 941e090a8941b5c468db7c270fb8fe48, type: 3}
       propertyPath: m_Name
       value: WishlistGamePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206315053121944373, guid: 941e090a8941b5c468db7c270fb8fe48, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6562595727758061077, guid: 941e090a8941b5c468db7c270fb8fe48, type: 3}
       propertyPath: darkCover
@@ -7520,14 +7532,13 @@ MonoBehaviour:
   player: {fileID: 0}
   harvestLevel: 1
   farmerID: 0
-  startingPointRequirement: 65
+  quotaSetting: 0
   roundNumber: 0
   roundInProgress: 0
   playerReady: 0
   roundCompleted: 0
   roundDuration: 20
   roundsToWin: 20
-  maxSynergies: 0
   elapsedTime: 0
   predatorRoundFrequency: 0
   challengeRoundFrequency: 0
@@ -7577,9 +7588,6 @@ MonoBehaviour:
   roundNumberDeath: {fileID: 0}
   winRoundsText: {fileID: 0}
   lassoController: {fileID: 0}
-  noviceRate: 1.25
-  veteranRate: 1.4
-  expertRate: 1.6
   challengeRound:
     m_TableReference:
       m_TableCollectionName: 
@@ -7923,7 +7931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 12.0998535, y: 8.842346}
+  m_AnchoredPosition: {x: 12.0998535, y: 8.842407}
   m_SizeDelta: {x: 106.25, y: 112.5}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1708938782

@@ -318,7 +318,7 @@ public class GameManager : MonoBehaviour
                 value = 0;
                 break;
         }
-        return value;
+        return Math.Round(value / 5.0) * 5.0; ;
     }
 
     public double GetPointsRequirement(int round)
@@ -343,7 +343,7 @@ public class GameManager : MonoBehaviour
                 value = 0;
                 break;
         }
-        return value;
+        return Math.Round(value / 5.0) * 5.0; ;
     }
 
 
