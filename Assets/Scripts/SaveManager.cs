@@ -118,13 +118,6 @@ public class SaveManager : MonoBehaviour
         FBPP.SetInt("harvestLevel", GameController.gameManager.harvestLevel);
         FBPP.SetBool("playerHasSave", true);
         FBPP.Save();
-        Debug.Log(GameController.animalLevelManager.GetLevel("Pig") + " pig");
-        Debug.Log(GameController.animalLevelManager.GetLevel("Sheep") + " sheep");
-        Debug.Log(GameController.animalLevelManager.GetLevel("Dog") + " dog");
-        Debug.Log(GameController.animalLevelManager.GetLevel("Cow") + " cow");
-        Debug.Log(GameController.animalLevelManager.GetLevel("Horse") + " horse");
-        Debug.Log(GameController.animalLevelManager.GetLevel("Goat") + " goat");
-        Debug.Log(GameController.animalLevelManager.GetLevel("Chicken") + " chicken");
     }
 
     public void LoadGameData()

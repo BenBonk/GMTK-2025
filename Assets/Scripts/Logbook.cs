@@ -94,7 +94,7 @@ public class Logbook : MonoBehaviour
     public void UpdateLogbook()
     {
         List<string> top3Animals = saveManager.animalDatas
-            .OrderByDescending(a => FBPP.GetInt(a.animalName.GetLocalizedString(),0))  // sort by value
+            .OrderByDescending(a => FBPP.GetInt(a.name+"_count",0))  // sort by value
             .Take(3)                                       // take top 3
             .Select(a => a.name)                           // select the names
             .ToList();
