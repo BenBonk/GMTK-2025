@@ -23,7 +23,7 @@ public class ChallengeRewardSelect : MonoBehaviour
 
     public IEnumerator Intro()
     {
-        titleText.GetComponent<TextMeshProUGUI>().text = "";
+        titleText.GetComponent<TextMeshProUGUI>().text = ""; //this doesn't work for some reason
         yield return new WaitForSeconds(0.35f);
         AudioManager.Instance.PlaySFX("challenge_win");
         GameController.gameManager.HideRoundUI();
