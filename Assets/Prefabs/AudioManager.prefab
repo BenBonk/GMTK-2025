@@ -206,8 +206,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b64750ac9792fef48a1af49fc858826c, type: 3}
     volume: 0.65
   - name: last_seconds
-    clip: {fileID: 8300000, guid: b08ebc5541456834fb52975885a4bd42, type: 3}
-    volume: 0.65
+    clip: {fileID: 8300000, guid: f654a7a9c90935f45ab3d64221b62d3f, type: 3}
+    volume: 0.06
   - name: last_sec
     clip: {fileID: 8300000, guid: 1fbeb8ccc0a35144e931351cb9394726, type: 3}
     volume: 0.65
@@ -241,7 +241,7 @@ MonoBehaviour:
     volume: 0.2
   - name: tutorial
     clip: {fileID: 8300000, guid: 6094b87354c45a842a85e480377bf2fd, type: 3}
-    volume: 0.15
+    volume: 0.18
   ambientTracks:
   - name: ambient
     clip: {fileID: 8300000, guid: 3166efeb4b2db294a84a3857dbb68fa5, type: 3}

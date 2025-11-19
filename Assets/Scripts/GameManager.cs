@@ -634,7 +634,6 @@ public class GameManager : MonoBehaviour
             {
                 if (remaining <=0)
                 {
-                    AudioManager.Instance.PlaySimultaneousSFX("tick", "last_sec");
                 }
                 else
                 {
