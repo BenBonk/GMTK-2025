@@ -625,13 +625,27 @@ public class GameManager : MonoBehaviour
 
         if (remaining <= 10f && currentSecond != lastDisplayedSecond)
         {
-            lastDisplayedSecond = currentSecond;
+
 
             timerDisplay.color = timerWarningColor;
             timerDisplay.transform.localScale = Vector3.one * 1.3f;
-            AudioManager.Instance.PlaySFX("tick");
 
-
+            if (remaining <= 3 && currentSecond != lastDisplayedSecond)
+            {
+                if (remaining <=0)
+                {
+                    AudioManager.Instance.PlaySimultaneousSFX("tick", "last_sec");
+                }
+                else
+                {
+                    AudioManager.Instance.PlaySimultaneousSFX("tick", "last_seconds");
+                }
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("tick");
+            }
+            lastDisplayedSecond = currentSecond;
             Sequence pulse = DOTween.Sequence();
             pulse.Append(timerDisplay.transform.DOScale(1.5f, 0.15f).SetEase(Ease.OutBack));
             pulse.Append(timerDisplay.transform.DOScale(1f, 0.2f).SetEase(Ease.OutExpo));

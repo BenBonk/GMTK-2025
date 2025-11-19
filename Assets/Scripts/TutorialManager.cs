@@ -114,6 +114,7 @@ public class TutorialManager : MonoBehaviour
         //lassosUsed = 0;
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
+        AudioManager.Instance.PlayMusicWithFadeOutOld("tutorial", 0f, true, "ambient");
         Invoke("StartRound", 1);
     }
 

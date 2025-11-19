@@ -91,7 +91,11 @@ public class ChallengeRewardSelect : MonoBehaviour
         titleText.gameObject.GetComponent<TMPTypewriterSwap>().ChangeTextAnimated("");
         darkCover.DOFade(0, .5f).OnComplete(() => darkCover.enabled = false);
         yield return new WaitForSeconds(.1f);
-        titleText.DOAnchorPosY(530, .5f).SetEase(Ease.InBack).OnComplete(() => titleText.gameObject.SetActive(false));
+        titleText.DOAnchorPosY(530, .5f).SetEase(Ease.InBack).OnComplete(() =>
+        {
+            titleText.GetComponent<TMPTypewriterSwap>().InstantSet("");
+            titleText.gameObject.SetActive(false);
+        });
         yield return new WaitForSeconds(.15f);
         deckRemoval.DOAnchorPosY(-1000, .5f).SetEase(Ease.InBack).OnComplete(() => deckRemoval.gameObject.SetActive(false));
         GameController.pauseMenu.canOpenClose = false;

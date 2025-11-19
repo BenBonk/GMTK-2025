@@ -286,17 +286,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2008887705696537010, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
   m_PrefabInstance: {fileID: 74648201}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &74648203 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2789256019795255106, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
-  m_PrefabInstance: {fileID: 74648201}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b93c90b8b26c3543bce62739b37d450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &90234167
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_crunch
+  followClickSFX: 
 --- !u!1 &159433007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,7 +1945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12efdb391e9c6974ba7e1d0ce3707d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canOverrideSynergy: 0
 --- !u!114 &441562322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2281,17 +2270,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2008887705696537010, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
   m_PrefabInstance: {fileID: 474756876}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &474756878 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2789256019795255106, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
-  m_PrefabInstance: {fileID: 474756876}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b93c90b8b26c3543bce62739b37d450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &481879789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3006,7 +2984,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDuration: 2
   zoomDuration: 2
-  targetOrthographicSize: 1.79
+  postMoveDelay: 0
+  paddingWorldUnits: 0
+  temporarilyDisableAspectClamp: 1
+  handOffWidthToClamp: 1
 --- !u!1 &549832295
 GameObject:
   m_ObjectHideFlags: 0
@@ -4679,17 +4660,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2008887705696537010, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
   m_PrefabInstance: {fileID: 1007404753}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1007404755 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2789256019795255106, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
-  m_PrefabInstance: {fileID: 1007404753}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b93c90b8b26c3543bce62739b37d450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1026259425
 GameObject:
   m_ObjectHideFlags: 0
@@ -5219,6 +5189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightSFX: ui_hover
   clickSFX: ui_crunch
+  followClickSFX: 
 --- !u!1 &1072933077
 GameObject:
   m_ObjectHideFlags: 0
@@ -5856,6 +5827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1209848614}
   transitionTime: 1
+  ss: {fileID: 0}
 --- !u!1 &1220268106
 GameObject:
   m_ObjectHideFlags: 0
@@ -5934,6 +5906,7 @@ MonoBehaviour:
   arrowSet2: {fileID: 1608848250}
   arrowSet3: {fileID: 1354877303}
   arrowSet4: {fileID: 750426540}
+  arrowSet5: {fileID: 0}
   tutorialStrings:
   - m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
@@ -6097,10 +6070,23 @@ MonoBehaviour:
   localCaptureManager: {fileID: 1781559413}
   localAnimalLevelManager: {fileID: 928125095}
   localPredatorSelect: {fileID: 1313342945}
+  localChallengeRewardSelect: {fileID: 0}
   localDescriptionManager: {fileID: 0}
   localLocalizationManager: {fileID: 0}
   localDefaultFont: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   localLocalizedFont: {fileID: 11400000, guid: d54505607bd63d348a9eaf192a9b3d54, type: 2}
+  localSaveManager: {fileID: 0}
+  localPauseMenu: {fileID: 0}
+  localLogbook: {fileID: 0}
+  localRerollManager: {fileID: 0}
+  localFarmerSelectManager: {fileID: 0}
+  localBoonManager: {fileID: 0}
+  localWishlistPanel: {fileID: 0}
+  localRandomEventManager: {fileID: 0}
+  localChallengeEventManager: {fileID: 0}
+  localLightningMat: {fileID: 0}
+  localPostProcessingManager: {fileID: 0}
+  localSteamIntegration: {fileID: 0}
 --- !u!4 &1239491768
 Transform:
   m_ObjectHideFlags: 0
@@ -6279,10 +6265,6 @@ MonoBehaviour:
   - {fileID: 175759936}
   - {fileID: 373462333}
   - {fileID: 1808476959}
-  synergyCards:
-  - {fileID: 1007404755}
-  - {fileID: 74648203}
-  - {fileID: 474756878}
   deckCardPrefab: {fileID: 7866310356001365729, guid: 29a0efee13d584b4f803c0745e899355, type: 3}
   deckParent: {fileID: 496853991}
   deckPanel: {fileID: 614542172}
@@ -6290,7 +6272,9 @@ MonoBehaviour:
   synergiesVisual: {fileID: 441562319}
   instructionsText: {fileID: 628416527}
   synergiesOpen: 0
-  overridingSynergy: {fileID: 0}
+  overridingBoonItem: {fileID: 0}
+  cancelOverride: {fileID: 0}
+  leaveShopButton: {fileID: 0}
   darkCover: {fileID: 263320576}
   cantPurchaseItem: 1
   isTut: 1
@@ -6304,6 +6288,26 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
+  roundText: {fileID: 0}
+  roundLocalString:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  purchaseParticles: {fileID: 0}
+  boonShopPanels: []
+  boonGroups: []
+  upgradeShopItem: {fileID: 0}
+  boonDeckCard: {fileID: 0}
+  boonDeckParent: {fileID: 0}
+  canOverrideBoon: 0
+  boonDeckButton: {fileID: 0}
+  animalDeckButton: {fileID: 0}
+  cantToggleSynergiesDeck: 0
   references:
     version: 2
     RefIds: []
@@ -8628,7 +8632,7 @@ MonoBehaviour:
   tipUseForwardOffset: 1
   tipForwardLookback: 3
   debugDrawTip: 1
-  feedbackDelay: 0.5
+  feedbackDelay: 0.7
   pointBonusColor: {r: 0.96470594, g: 0.45882356, b: 0.4784314, a: 1}
   negativePointBonusColor: {r: 0.40784317, g: 0.21568629, b: 0.42352945, a: 1}
   cashBonusColor: {r: 0.9960785, g: 0.9058824, b: 0.3803922, a: 1}
@@ -8636,6 +8640,7 @@ MonoBehaviour:
   positiveMultColor: {r: 0.38823533, g: 0.7803922, b: 0.3019608, a: 1}
   negativeMultColor: {r: 0.63529414, g: 0.14509805, b: 0.19607845, a: 1}
   canLasso: 1
+  releaseSnapPercent: 0.02
 --- !u!4 &1615761885
 Transform:
   m_ObjectHideFlags: 0
@@ -9315,6 +9320,7 @@ MonoBehaviour:
   minDistanceBetweenGrass: 0.5
   spawnAreaRectTransform: {fileID: 573234385}
   sortingOrder: -1
+  spawnOnStart: 0
 --- !u!1 &1742554516
 GameObject:
   m_ObjectHideFlags: 0
@@ -9722,6 +9728,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad85463a7b7150419a2c6f803718846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstCapture: 0
+  mootiplier: 1
+  lightningBoltIcon: {fileID: 0}
 --- !u!4 &1781559414
 Transform:
   m_ObjectHideFlags: 0
@@ -10364,8 +10373,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e86345ddfef98434d840959add9498e1, type: 2}
   - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  lassosPerRound: 5
-  synergiesInDeck: []
+  boonsInDeck: []
 --- !u!4 &1887224208
 Transform:
   m_ObjectHideFlags: 0
@@ -11049,6 +11057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1209848614}
   transitionTime: 1
+  ss: {fileID: 0}
 --- !u!1 &2099811616
 GameObject:
   m_ObjectHideFlags: 0
