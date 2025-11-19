@@ -15,19 +15,22 @@ public class CaptureManager : MonoBehaviour
     private double currencyBonus = 0;
     private double currencyMult = 1;
     [HideInInspector] public bool firstCapture;
-    [HideInInspector] public float mootiplierMult=0;
+    [HideInInspector] public float mootiplier=1;
 
     private void Start()
     {
         boonManager = GameController.boonManager;
         gameManager = GameController.gameManager;
         player = GameController.player;
+        steamIntegration = GameController.steamIntegration;
     }
 
     private int triggers = 1;
     private int currentTrigger = 0;
     private int totalPredatorCount = 0;
     HashSet<Sprite> boonSprites = new HashSet<Sprite>();
+    private SteamIntegration steamIntegration;
+    public Sprite lightningBoltIcon;
     public (double, double, double, double, HashSet<Sprite>) MakeCapture(GameObject[] objectsCaptured)
     {
         pointBonus = 0;
@@ -67,7 +70,15 @@ public class CaptureManager : MonoBehaviour
                 }
             }
 
+            if (animalsCaptured.Count>=25 && !steamIntegration.IsThisAchievementUnlocked("Crowd Control"))
+            {
+                steamIntegration.UnlockAchievement("Crowd Control");
+            }
             var capturedCounts = GetNameCounts(animalsCaptured);
+            foreach (var key in capturedCounts.Keys)
+            {
+                Debug.Log(key + ": " + capturedCounts[key]);
+            }
 
             for (int i = 0; i < player.boonsInDeck.Count; i++)
             {
@@ -76,12 +87,12 @@ public class CaptureManager : MonoBehaviour
                     continue;
                 }
                 var neededCounts = GetNameCounts(boon.animalsNeeded);
-                Debug.Log($"Checking boon {boon.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
+                //Debug.Log($"Checking boon {boon.name}: Needed = [{string.Join(",", neededCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}], Captured = [{string.Join(",", capturedCounts.Select(kv => $"{kv.Key}:{kv.Value}"))}]");
 
                 if (!boon.isExactMatch)
                 {
                     bool subset = IsSubset(neededCounts, capturedCounts);
-                    Debug.Log($"Non-exact match check for {boon.name}: Result = {subset}");
+                    //Debug.Log($"Non-exact match check for {boon.name}: Result = {subset}");
                     if (subset) ActivateBoon(boon);
                 }
 
@@ -97,6 +108,12 @@ public class CaptureManager : MonoBehaviour
             int biodiversityBonus = 0;
             foreach (var animal in animalsCaptured)
             {
+                if (animal.struckByLightning)
+                {
+                    pointMult *= 1.5;
+                    currencyMult *= 1.25;
+                    boonSprites.Add(lightningBoltIcon);
+                }
                 if (!animal.isPredator)
                 {
                     totalNonPredatorCount++;
@@ -145,17 +162,16 @@ public class CaptureManager : MonoBehaviour
                     boonSprites.Add(boonManager.boonDict["Yahtzee"].art);
                 }
             }
-            /*
-            if (boonManager.ContainsBoon("Wolfpack"))
+            
+           if (boonManager.ContainsBoon("Wolfpack"))
             {
-                Debug.Log(capturedCounts["Wolf"]);
-                if (capturedCounts["Wolf"] >=5)
+                if (capturedCounts.ContainsKey("wolf") && capturedCounts["wolf"] >=5)
                 {
-                    Debug.Log("wolfpack");
-                    pointMult *= 5;
+                    pointMult *= 25;
+                    boonSprites.Add(boonManager.boonDict["Wolfpack"].art);
                 }
             }
-            */
+            
             if (boonManager.ContainsBoon("NoahsArk") && animalsCaptured.Count == 2 && capturedCounts.Keys.Count == 1)
             {
                 if (UnityEngine.Random.value < .04f)
@@ -196,7 +212,7 @@ public class CaptureManager : MonoBehaviour
                 if (boonManager.ContainsBoon("DustyDividend"))
                 { 
                     boonSprites.Add(boonManager.boonDict["DustyDividend"].art);
-                    currencyBonus += groupsOf3*3;
+                    currencyBonus += groupsOf3*5;
                 }
                 else
                 {
@@ -216,15 +232,20 @@ public class CaptureManager : MonoBehaviour
                 }
                 if (cowCount == 0 || totalPredatorCount > 0)
                 {
-                    mootiplierMult = 0;
+                    mootiplier = 1;
                 }
                 else
                 {
                     boonSprites.Add(boonManager.boonDict["Mootiplier"].art);
-                    mootiplierMult += (.25f * cowCount);
+                    mootiplier += (.25f * cowCount);
                 }
+                pointMult *= mootiplier;
             }
-            pointMult += mootiplierMult;
+
+            if (boonManager.ContainsBoon("HoldYourHorses") && capturedCounts.ContainsKey("horse") && capturedCounts["horse"] > 0)
+            {
+                pointBonus += 10;
+            }
 
             if (!firstCapture && boonManager.ContainsBoon("EarlyBird"))
             {
@@ -284,7 +305,7 @@ public class CaptureManager : MonoBehaviour
         {
             currencyBonus += 50;
             pointBonus += 25;
-            boonSprites.Add(boonManager.boonDict["PigWithHat"].art);
+            boonSprites.Add(boonManager.boonDict["PigsWithHats"].art);
         }
 
         if (capturedAnimal.gameObject.CompareTag("BlackSheep") && currentTrigger == 0)
@@ -322,6 +343,18 @@ public class CaptureManager : MonoBehaviour
         pointBonus += capturedAnimal.bonusPoints;
         int numberAnimalsWrangled = FBPP.GetInt("numberAnimalsWrangled");
         FBPP.SetInt("numberAnimalsWrangled", numberAnimalsWrangled+1);
+        if (numberAnimalsWrangled == 100 && !steamIntegration.IsThisAchievementUnlocked("Wrangle Novice"))
+        {
+            steamIntegration.UnlockAchievement("Wrangle Novice");
+        }
+        else if (numberAnimalsWrangled == 1000 && !steamIntegration.IsThisAchievementUnlocked("Wrangle Pro"))
+        {
+            steamIntegration.UnlockAchievement("Wrangle Pro");
+        }
+        else if (numberAnimalsWrangled == 10000 && !steamIntegration.IsThisAchievementUnlocked("Wrangle Expert"))
+        {
+            steamIntegration.UnlockAchievement("Wrangle Expert");
+        }
     }
 
     private Dictionary<string, int> GetNameCounts(IEnumerable<string> animals)

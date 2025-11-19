@@ -18,18 +18,20 @@ public class GameManager : MonoBehaviour
     public Player player;
     public int harvestLevel = 1;
     public int farmerID = 0;
-    public double startingPointRequirement = 65;
+    //public double startingPointRequirement = 65;
+    public PointQuotaSetting quotaSetting;
     public int roundNumber;
     public bool roundInProgress;
     public bool playerReady;
     public bool roundCompleted;
     public float roundDuration = 20f;
     public int roundsToWin = 20;
-    public int maxSynergies;
     [HideInInspector] public float elapsedTime;
     public int predatorRoundFrequency;
+    public int challengeRoundFrequency;
 
-    public GameObject wordPrefab; // Assign in inspector
+    public GameObject wordPrefab;
+    public GameObject dayBeginPrefab;
     public GameObject endRoundPrefab;
     public float wordScaleDuration = 0.3f;
     public float wordDisplayDuration = 0.7f;
@@ -43,9 +45,7 @@ public class GameManager : MonoBehaviour
     private BoonManager boonManager;
     private LocalizationManager localization;
     public AnimalShopItem animalShopItem;
-    public BoxCollider2D moleBounds;
-    public GameObject mole;
-
+    public AnimalSpawner spawner;
 
     private int lastDisplayedSecond = -1;
     [SerializeField] private Color timerNormalColor = Color.white;
@@ -101,10 +101,11 @@ public class GameManager : MonoBehaviour
     public TMP_Text roundNumberDeath;
     public TMP_Text winRoundsText;
     public LassoController lassoController;
-    public float noviceRate = 1.25f;
+    /*public float noviceRate = 1.25f;
     public float veteranRate = 1.4f;
     public float expertRate = 1.6f;
-    private float pointsRequirementGrowthRate;
+    private float pointsRequirementGrowthRate;*/
+    public LocalizedString challengeRound;
     public LocalizedString localReady;
     public LocalizedString localSet;
     public LocalizedString localLasso;
@@ -115,13 +116,21 @@ public class GameManager : MonoBehaviour
     public GameObject extraUpgradeSlot;
     public GameObject unlockPanel;
     [HideInInspector] public AnimalData foxThiefStolenStats;
+    private RandomEventManager randomEventManager;
+    private ChallengeEventManager challengeEventManager;
+    private SteamIntegration steamIntegration;
+    private string roundDescription;
+    private int roundID = -1;
     private void Start()
     {
+        randomEventManager = GameController.randomEventManager;
+        challengeEventManager = GameController.challengeEventManager;
         pauseMenu = GameController.pauseMenu;
         saveManager = GameController.saveManager;
         localization = GameController.localizationManager;
         boonManager = GameController.boonManager;
         captureManager = GameController.captureManager;
+        steamIntegration = GameController.steamIntegration;
         if (isTutorial)
         {
             return;
@@ -138,8 +147,7 @@ public class GameManager : MonoBehaviour
         ApplyHarvestLevel();
         if (isTesting)
         {
-            pointsRequirementGrowthRate = 0;
-            startingPointRequirement = 0;
+            quotaSetting = PointQuotaSetting.None;
             roundDuration = 3;
             player.playerCurrency = 10000;
         }
@@ -148,8 +156,10 @@ public class GameManager : MonoBehaviour
         player.OnCurrencyChanged += UpdatecurrencyDisplay;
         OnPointsChanged += UpdateScoreDisplay;
         scoreDisplay.text = pointsLocalString.GetLocalizedString() + " " + LassoController.FormatNumber(0) + " / " + LassoController.FormatNumber(GetPointsRequirement(roundNumber+1));
+        RoundSetup();
         Invoke("StartRound", 1);
-        UpdateTimerDisplay();   
+        UpdateTimerDisplay();
+        UpdatecurrencyDisplay(player.playerCurrency);
     }
     
     private void ApplyHarvestLevel()
@@ -157,7 +167,7 @@ public class GameManager : MonoBehaviour
         roundDuration = saveManager.harvestDatas[harvestLevel - 1].roundLength;
         endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
-        pointsRequirementGrowthRate = GetGrowthRate(saveManager.harvestDatas[harvestLevel - 1].pointQuotas);
+        quotaSetting = saveManager.harvestDatas[harvestLevel - 1].pointQuotas;
     }
 
     private void Update()
@@ -178,9 +188,22 @@ public class GameManager : MonoBehaviour
     
     public void StartRound()
     {
+        StartCoroutine(DisplayDayRoutine(GameController.shopManager.roundLocalString.GetLocalizedString() + " " + roundNumber, wordScaleDuration, wordDisplayDuration));
+        if (roundNumber==50&& !steamIntegration.IsThisAchievementUnlocked("Keep Going"))
+        {
+            steamIntegration.UnlockAchievement("Keep Going");
+        }
+        else if (roundNumber == 100 && !steamIntegration.IsThisAchievementUnlocked("Keep Going++"))
+        {
+            steamIntegration.UnlockAchievement("Keep Going++");
+        }
+    }
+
+    public void RoundSetup()
+    {
         if (!pauseMenu.isOpen)
         {
-            pauseMenu.canOpenClose = true;   
+            pauseMenu.canOpenClose = true;
         }
         if (boonManager.ContainsBoon("Pocketwatch"))
         {
@@ -194,25 +217,51 @@ public class GameManager : MonoBehaviour
         if (isTesting)
         {
             roundDuration = 3;
-        }
-
-        if (boonManager.ContainsBoon("WhackAMole"))
-        {
-            Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
+            quotaSetting = PointQuotaSetting.None;
         }
         pointsThisRound = 0;
         saveManager.SaveGameData();
-        roundNumber++;
-        UpdateScoreDisplay(0);
-        UpdateTimerDisplay();
-        roundInProgress = true;
-        roundCompleted = false;
-        barnAnimator.Play("Closed", 0, 0.1f);
-        StartCoroutine(ShowReadySetLassoSequence());
         if (roundNumber > FBPP.GetInt("highestRound"))
         {
             FBPP.SetInt("highestRound", roundNumber);
         }
+        UpdateScoreDisplay(0);
+        UpdateTimerDisplay();
+        barnAnimator.Play("Closed", 0, 0.1f);
+        spawner.spawnRate = FBPP.GetFloat("spawnRate", 1f);
+        if (IsChallengeRound())
+        {
+           roundID = challengeEventManager.GetChallengeEvent();
+            roundDescription = challengeEventManager.challengeEventStrings[roundID].GetLocalizedString();
+            if (roundID < 4)
+            {
+                schemeManager.ChangeScheme(roundID);
+            }
+            else
+            {
+                schemeManager.SetRandomScheme(roundNumber);
+            }
+            challengeEventManager.StartChallenge(roundID);
+        }
+        else
+        {
+            roundID = randomEventManager.GetRandomEvent();
+            schemeManager.SetRandomScheme(roundNumber);
+            if (roundID > -1)
+            {
+                roundDescription = randomEventManager.randomEventStrings[roundID].GetLocalizedString();
+                randomEventManager.StartRandomEvent(roundID);
+            }
+            else
+            {
+                roundDescription = null;
+            }
+        }
+    }
+
+    public bool IsChallengeRound()
+    {
+        return roundNumber % challengeRoundFrequency == 0;
     }
 
     public void EndRound()
@@ -222,10 +271,20 @@ public class GameManager : MonoBehaviour
         elapsedTime = 0;
         playerReady = false;
 
-        AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1.25f);
+        AudioManager.Instance.FadeMusic(1.25f);
+        if(!AudioManager.Instance.IsAmbientPlaying())
+        {
+            AudioManager.Instance.PlayAmbientWithFadeOutOld("ambient");
+        }
+
+        if (player.playerCurrency >= 100000 && !steamIntegration.IsThisAchievementUnlocked("Hoarder"))
+        {
+            steamIntegration.UnlockAchievement("Hoarder");
+        }
         if (pointsThisRound < GetPointsRequirement() )
         {
             //GameOver
+            pauseMenu.canOpenClose = false;
             roundNumberDeath.text = localization.localDeathRound.GetLocalizedString() + " " + roundNumber;
             deathPanel.gameObject.SetActive(true);
             deathPanel.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
@@ -239,14 +298,52 @@ public class GameManager : MonoBehaviour
 
     public double GetPointsRequirement()
     {
-        double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, roundNumber);
-        return Math.Round(value / 5.0) * 5.0;
+        double value = 0;
+        float R = roundNumber;
+        switch (quotaSetting)
+        {
+            case PointQuotaSetting.None:
+                return 0;
+            case PointQuotaSetting.Novice:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f*R + 5)*(Math.Pow(1.28f,R+4));
+                break;
+            case PointQuotaSetting.Veteran:
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            case PointQuotaSetting.Expert:
+                //placeholder
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            default:
+                value = 0;
+                break;
+        }
+        return value;
     }
 
     public double GetPointsRequirement(int round)
     {
-        double value = startingPointRequirement * Math.Pow(pointsRequirementGrowthRate, round);
-        return Math.Round(value / 5.0) * 5.0;
+        double value = 0;
+        float R = round;
+        switch (quotaSetting)
+        {
+            case PointQuotaSetting.None:
+                return 0;
+            case PointQuotaSetting.Novice:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f * R + 5) * (Math.Pow(1.28f, R + 4));
+                break;
+            case PointQuotaSetting.Veteran:
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            case PointQuotaSetting.Expert:
+                //placeholder
+                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                break;
+            default:
+                value = 0;
+                break;
+        }
+        return value;
     }
 
 
@@ -273,7 +370,12 @@ public class GameManager : MonoBehaviour
             }
             //think we need some sfx here
             AudioManager.Instance.PlaySFX("close_call");
-            FBPP.SetInt("closeCalls", FBPP.GetInt("closeCalls")+1);
+            int closeCalls = FBPP.GetInt("closeCalls") + 1;
+            FBPP.SetInt("closeCalls", closeCalls);
+            if (closeCalls == 10 && !steamIntegration.IsThisAchievementUnlocked("Close One!"))
+            {
+                steamIntegration.UnlockAchievement("Close One!");
+            }
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(EndRoundRoutine());
             deathPanel.gameObject.SetActive(false);
@@ -304,6 +406,22 @@ public class GameManager : MonoBehaviour
             {
                 ps.Play();
             }
+            if (!steamIntegration.IsThisAchievementUnlocked("Victory"))
+            {
+                steamIntegration.UnlockAchievement("Victory");
+            }
+            if (player.boonsInDeck.Count == 0 && !steamIntegration.IsThisAchievementUnlocked("Boonless"))
+            {
+                steamIntegration.UnlockAchievement("Boonless");
+            }
+            if (GameController.animalLevelManager.AllAnimalsAtDefaultLevel() && !steamIntegration.IsThisAchievementUnlocked("Upgradeless"))
+            {
+                steamIntegration.UnlockAchievement("Upgradeless");
+            }
+            if (FBPP.GetInt("AnimalPurchasedThisGame") == 0 && !steamIntegration.IsThisAchievementUnlocked("Animalless"))
+            {
+                steamIntegration.UnlockAchievement("Animalless");
+            }
             RectTransform children = winPanel.Find("Children") as RectTransform;
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.enabled = true;
@@ -326,7 +444,7 @@ public class GameManager : MonoBehaviour
             {
                 yield return null;
             }
-            children.DOAnchorPosY(909, 0.5f).SetEase(Ease.InBack);
+            children.DOAnchorPosY(950, 0.5f).SetEase(Ease.InBack);
             GameController.predatorSelect.darkCover.DOFade(0f, 0.5f).OnComplete(() => GameController.predatorSelect.darkCover.enabled = false);
             foreach (var ps in winPanel.GetComponentsInChildren<ParticleSystem>(true))
             {
@@ -344,7 +462,7 @@ public class GameManager : MonoBehaviour
         }
         if (boonManager.ContainsBoon("BountifulHarvest"))
         {
-            cashInterest += 20;
+            cashInterest += 25;
             endDayBoonSprites.Add(boonManager.boonDict["BountifulHarvest"].art);
         }
 
@@ -366,7 +484,7 @@ public class GameManager : MonoBehaviour
         winPanel.gameObject.SetActive(false);
 
         captureManager.firstCapture = false;
-        captureManager.mootiplierMult = 0;
+        captureManager.mootiplier = 1;
 
         predatorRoundFrequency = 3;
         if (boonManager.ContainsBoon("PredatorPurge"))
@@ -377,6 +495,10 @@ public class GameManager : MonoBehaviour
         if (roundNumber % predatorRoundFrequency == 0)
         {
             GameController.predatorSelect.StartCoroutine("Intro");
+        }
+        else if (IsChallengeRound())
+        {
+            GameController.challengeRewardSelect.StartCoroutine("Intro");
         }
         else
         {
@@ -393,6 +515,7 @@ public class GameManager : MonoBehaviour
 
     public void GoToShop()
     {
+        ShowRoundUI();
         LassoCleaner.CleanupAll();
         GameController.rerollManager.Reset();
         saveManager.SaveGameData();
@@ -404,6 +527,10 @@ public class GameManager : MonoBehaviour
             barnAnimator.Play("Open", 0, 0.1f);
             AudioManager.Instance.PlaySFX("barn_door");
             AudioManager.Instance.PlayMusicWithFadeOutOld("shop_theme", 1f, true);
+            AudioManager.Instance.FadeAmbient(1f);
+            GameController.postProcessingManager.NightModeOff();
+            randomEventManager.rainParticles.Stop();
+            randomEventManager.cloudParticles.Stop();
         },
             onZoomEndpoint: () =>
             {
@@ -414,6 +541,9 @@ public class GameManager : MonoBehaviour
                     GameController.shopManager.cantPurchaseItem = false;
                     shopButtonBlocker.SetActive(false);
                     pauseMenu.canOpenClose = true;
+                    challengeEventManager.EndChallenge();
+                    roundNumber++;
+                    saveManager.SaveGameData();
                 });
             }
         );
@@ -427,9 +557,9 @@ public class GameManager : MonoBehaviour
         }
 
         pauseMenu.canOpenClose = false;
-        schemeManager.SetRandomScheme();
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
+        RoundSetup();
         barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
         cameraController.ResetToStartPosition(1f);
     }
@@ -510,20 +640,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public float GetGrowthRate(PointQuotaSetting setting)
-    {
-        return setting switch
-        {
-            PointQuotaSetting.Novice => noviceRate,
-            PointQuotaSetting.Veteran => veteranRate,
-            PointQuotaSetting.Expert => expertRate,
-            _ => 1.25f,
-        };
-    }
-
     public IEnumerator ShowReadySetLassoSequence()
     {
         pauseMenu.canOpenClose = true;
+        
         string[] readySetLasso = { localReady.GetLocalizedString(), localSet.GetLocalizedString(), localLasso.GetLocalizedString() };
         for (int i = 0; i < 3; i++)
         {
@@ -532,7 +652,33 @@ public class GameManager : MonoBehaviour
                 // Use lasso material for the last word
                 DisplayPopupWord(readySetLasso[i], wordScaleDuration, wordDisplayDuration, true,
                     lassoMaterialPreset);
-                AudioManager.Instance.PlayNextPlaylistTrack();
+                if (IsChallengeRound())
+                {
+                    switch (roundID)
+                    {
+                        case 0:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_wind", 1f, true);
+                            break;
+                        case 1:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_desert", 1f, true);
+                            break;
+                        case 2:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_desert", 1f, true);
+                            break;
+                        case 3:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_wind", 1f, true);
+                            break;
+                        case 4:
+                            AudioManager.Instance.PlayMusicWithFadeOutOld("challenge_night", 1f, true);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    AudioManager.Instance.PlayNextPlaylistTrack();
+                }
                 AudioManager.Instance.PlaySFX("rooster");
                 lassoController.canLasso = true;
                 playerReady = true;
@@ -655,6 +801,81 @@ public class GameManager : MonoBehaviour
         seq.OnComplete(() => Destroy(wordObj));
     }
 
+    private IEnumerator DisplayDayRoutine(string word, float scaleDuration, float displayDuration)
+    {
+        roundCompleted = false;
+
+        GameObject wordObj = Instantiate(dayBeginPrefab, transform);
+        var wordText = wordObj.GetComponent<TMP_Text>();
+        var typer = wordObj.GetComponent<TMPTypewriterSwap>();
+        var rich = wordObj.GetComponent<PaletteLetterColorizerRichText>();
+
+        // Add the skipper to the root you want clickable (this object or the word UI)
+        var skipper = wordObj.GetComponent<RoutineSkipper>();
+        if (!skipper) skipper = wordObj.AddComponent<RoutineSkipper>();
+        skipper.useUnscaledTime = false;     
+        skipper.holdToSpeedUp = true;
+        skipper.holdSpeedMultiplier = 10f;
+
+
+        wordObj.transform.position = GetCenterScreenWorldPosition();
+        wordObj.transform.localScale = Vector3.zero;
+        wordObj.transform.rotation = Quaternion.identity;
+        wordText.text = word;
+        wordObj.SetActive(true);
+        AudioManager.Instance.PlaySFX("ready");
+        spawner.currentShoe.Clear();
+
+        // Scale in
+        yield return skipper.AwaitTween(wordObj.transform.DOScale(1.2f, scaleDuration).SetEase(Ease.OutBack));
+        yield return skipper.AwaitTween(wordObj.transform.DOScale(1f, 0.15f).SetEase(Ease.OutCubic));
+
+        // Pause on screen
+        yield return skipper.Wait(displayDuration + 0.25f);
+
+        if (roundNumber % challengeRoundFrequency == 0)
+        {
+            // Erase, enable colors, type title
+            typer.ChangeTextAnimated("", 0.06f);
+            yield return skipper.AwaitTypewriter(typer);
+            yield return skipper.Wait(displayDuration);
+            if (rich) rich.enabled = true;
+            AudioManager.Instance.PlaySFX("challenge_display");
+            typer.ChangeTextAnimated(challengeRound.GetLocalizedString(), 0.06f, 0.06f);
+            yield return skipper.AwaitTypewriter(typer);
+            yield return skipper.Wait(displayDuration);
+        }
+
+        var descTMP = wordObj.transform.Find("ChallengeText")?.GetComponent<TMP_Text>();
+        if (descTMP && roundDescription != null)
+        {
+            typer.SetLabel(descTMP);
+            typer.SetRichColorizer(null);
+            typer.InstantSet("");
+            typer.ChangeTextAnimated(roundDescription,0.06f,0.06f);
+            yield return skipper.AwaitTypewriter(typer);
+            yield return skipper.Wait(displayDuration*3);
+        }
+        else
+        {
+            Debug.Log("No description TMP or no round description");
+        }
+
+            // Pause again
+            yield return skipper.Wait(displayDuration/2);
+
+        // Fade out text and sprites together (click skips to end)
+        var fadeSeq = DG.Tweening.DOTween.Sequence().Join(wordText.DOFade(0f, 0.5f));
+        foreach (var sr in wordObj.GetComponentsInChildren<TMP_Text>())
+            fadeSeq.Join(sr.DOFade(0f, 0.5f));
+        yield return skipper.AwaitTween(fadeSeq);
+
+        Destroy(wordObj);
+        roundInProgress = true;
+        StartCoroutine(ShowReadySetLassoSequence());
+    }
+
+
     private void OnApplicationQuit()
     {
         if (pointsThisRound < GetPointsRequirement() && deathPanel.gameObject.activeInHierarchy)
@@ -674,22 +895,26 @@ public class GameManager : MonoBehaviour
     private void UnlockHarvestLevel(int level)
     {
         Debug.Log("Unlocking harvest level " + level);
-        GameObject newPanel = Instantiate(unlockPanel,GameObject.Find("UI").transform);
+        GameObject newPanel = Instantiate(unlockPanel, GameObject.Find("UI").transform);
         newPanel.GetComponent<UnlockPanel>().SetupHarvestLevelUnlock(level);
         newPanel.GetComponent<UnlockPanel>().Open();
     }
 
-    void SpawnMole()
+    public void HideRoundUI()
     {
-        Bounds bounds = moleBounds.bounds;
-        Vector2 pos = new Vector2(
-            Random.Range(bounds.min.x, bounds.max.x),
-            Random.Range(bounds.min.y, bounds.max.y));
-        Instantiate(mole, pos, Quaternion.identity);
-        if (!roundCompleted && roundDuration>0)
-        {
-            Invoke("SpawnMole", Random.Range(3.0f, 7.0f));   
-        }
+        scoreDisplay.DOFade(0f, 0.5f).OnComplete(() => scoreDisplay.gameObject.SetActive(false));
+        timerDisplay.DOFade(0f, 0.5f).OnComplete(() => timerDisplay.gameObject.SetActive(false));
+        currencyDisplay.DOFade(0f, 0.5f).OnComplete(() => currencyDisplay.gameObject.SetActive(false));
     }
-    
+
+    public void ShowRoundUI()
+    {
+        scoreDisplay.gameObject.SetActive(true);
+        scoreDisplay.DOFade(1f, 0.5f);
+        timerDisplay.gameObject.SetActive(true);
+        timerDisplay.DOFade(1f, 0.5f);
+        currencyDisplay.gameObject.SetActive(true);
+        currencyDisplay.DOFade(1f, 0.5f);
+    }
+
 }

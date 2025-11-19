@@ -9,10 +9,19 @@ public class AnimalSpawner : MonoBehaviour
     private float timeSinceLastSpawn = 0f;
 
     private BoonManager boonManager;
-
+    private PostProcessingManager postProcessing;
+    public GameObject animalLight;
+    
+    //Shoe stuff
+    public List<AnimalData> currentShoe;
+    private Player player;
+    private int shoesize;
+    
     private void Start()
     {
+        player = GameController.player;
         boonManager = GameController.boonManager;
+        postProcessing = GameController.postProcessingManager;
     }
 
     // Update is called once per frame
@@ -26,14 +35,53 @@ public class AnimalSpawner : MonoBehaviour
         }
     }
 
+    public void GenerateShoe()
+    {
+        shoesize = 3;
+        if(player.animalsInDeck.Count > 15)
+            shoesize = 2;
+        if(player.animalsInDeck.Count > 40)
+            shoesize = 1;
+        
+        for (int i = 0; i < shoesize; i++)
+        {
+            currentShoe.AddRange(player.animalsInDeck);
+        }
+
+        if (GameController.postProcessingManager.isNight)
+        {
+            //could either remove nonpredators or add predators, ill opt to just add predators
+            //get a list of the predators
+            List<AnimalData> predatorsInDeck = new List<AnimalData>();
+            foreach (var animal in player.animalsInDeck)
+            {
+                if (animal.isPredator)
+                {
+                    predatorsInDeck.Add(animal);
+                }
+            }
+            //proportionally add random predator to shoe depending on shoe size 
+            int predatorsToAdd = currentShoe.Count / 4; //add 25% predators for example
+            for (int i = 0; i < predatorsToAdd; i++)
+            {
+                currentShoe.Add(predatorsInDeck[Random.Range(0, predatorsInDeck.Count)]);
+            }
+            Debug.Log("called");
+        }
+    }
+
     private void SpawnRandomAnimal()
     {
-        var selectedAnimal =
-            GameController.player.animalsInDeck[Random.Range(0, GameController.player.animalsInDeck.Count)];
+        if (currentShoe.Count== 0)
+        {
+            GenerateShoe();
+        }
+        
+        var selectedAnimal = currentShoe[Random.Range(0, currentShoe.Count)];
+        currentShoe.Remove(selectedAnimal);
         if (selectedAnimal.isPredator && Random.Range(0,4)==0 &&boonManager.ContainsBoon("Scarecrow"))
         {
-            selectedAnimal =
-                GameController.player.animalsInDeck[Random.Range(0, GameController.player.animalsInDeck.Count)];
+            selectedAnimal = currentShoe[Random.Range(0, currentShoe.Count)];
         }
         GameObject animal = Instantiate(selectedAnimal.animalPrefab);
         float topBuffer = 0.25f;
@@ -65,6 +113,11 @@ public class AnimalSpawner : MonoBehaviour
             {
                 Instantiate(selectedAnimal.animalPrefab, new Vector3(rightEdgeX+Random.Range(2f,4f), randomY+Random.Range(-1.5f, 0.5f), 0f), Quaternion.identity);
             }
+        }
+
+        if (postProcessing.isNight)
+        {
+            Instantiate(animalLight, animal.transform.position, Quaternion.identity, animal.transform);
         }
     }
 }

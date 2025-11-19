@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Utrata punkt\xF3w:"
+    m_Localized: "Strata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -278,7 +278,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 60
     m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 lisa i
-      trzy kurczaki"
+      3 kurczaki"
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -368,12 +368,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: "Drapie\u017Cny"
+    m_Localized: "Wierzcho\u0142ek"
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 nied\u017Awiedzia,
-      wilka i lisa"
+    m_Localized: "Z\u0142apa\u0107 grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105
+      pum\u0119 i nied\u017Awiedzia"
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -515,10 +515,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: "Kontynuowa\u0107"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3154139489218560
-    m_Localized: Witamy w Dzienniku!
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -841,7 +837,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607694
     m_Localized: "Konie s\u0105 wolniejsze i zatrzymuj\u0105 si\u0119 na chwil\u0119
-      przy lewej kraw\u0119dzi ekranu"
+      przy lewej kraw\u0119dzi ekranu. Konie s\u0105 warte +10 punkt\xF3w."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -887,7 +883,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "Lisy wymieniaj\u0105 si\u0119 statystykami z"
+    m_Localized: "Lisy maj\u0105 takie same statystyki jak"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -904,7 +900,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "Wilki pojawiaj\u0105 si\u0119 teraz w grupach po dwa lub trzy osobniki"
+    m_Localized: "Wilki pojawiaj\u0105 si\u0119 teraz w grupach po 2 lub 3 osobniki.
+      Z\u0142apanie co najmniej 5 wilk\xF3w na jedn\u0105 lass\u0119 daje mno\u017Cnik
+      x25 punkt\xF3w."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -938,7 +936,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+20 dodatkowej got\xF3wki na koniec rundy"
+    m_Localized: "+25 dodatkowej got\xF3wki na koniec rundy"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1037,12 +1035,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-robotnik
+    m_Localized: Weteran-Pracownik Rolny
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "Gdy znajdujesz si\u0119 w talii dobrodziejstw, wszystkie zwierz\u0119ta
-      maj\u0105 zwi\u0119kszony poziom o 2"
+    m_Localized: "Dop\xF3ki ta korzy\u015B\u0107 nie zostanie zast\u0105piona, poziom
+      wszystkich zwierz\u0105t wzro\u015Bnie o 2"
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
@@ -1080,10 +1078,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: "Mn\xF3stwo dodatkowych korzy\u015Bci!"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
@@ -1160,7 +1154,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376267
     m_Localized: "Za ka\u017Cde 3 zwierz\u0119ta nieb\u0119d\u0105ce drapie\u017Cnikami
-      w lassie otrzymujesz +3 got\xF3wki zamiast zwyk\u0142ej +1 got\xF3wki"
+      w lassie otrzymujesz +5 got\xF3wki zamiast zwyk\u0142ej +1 got\xF3wki"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268
@@ -1168,8 +1162,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Gracz mo\u017Ce teraz zaci\u0105gn\u0105\u0107 w sklepie d\u0142ug
-      w wysoko\u015Bci do 100 dolar\xF3w"
+    m_Localized: "Teraz mo\u017Cesz zad\u0142u\u017Cy\u0107 si\u0119 w sklepie do
+      -150 got\xF3wki"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1187,7 +1181,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19552395433586688
     m_Localized: "Krety b\u0119d\u0105 si\u0119 od czasu do czasu pojawia\u0107 w
-      ci\u0105gu dnia, oferuj\u0105c +5 got\xF3wki i +5 punkt\xF3w po z\u0142apaniu
+      ci\u0105gu dnia, oferuj\u0105c +7 got\xF3wki i +7 punkt\xF3w po z\u0142apaniu
       na lasso"
     m_Metadata:
       m_Items: []
@@ -1196,7 +1190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: "+5 got\xF3wki i punkt\xF3w za lassa z dok\u0142adnie 5 zwierz\u0119tami"
+    m_Localized: "+5 got\xF3wki i punkt\xF3w za lasso z dok\u0142adnie 5 zwierz\u0119tami."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600
@@ -1224,6 +1218,413 @@ MonoBehaviour:
   - m_Id: 20226222205657088
     m_Localized: "-10 sekund na rund\u0119, +0,33x mno\u017Cnik got\xF3wki za ka\u017Cde
       udane lasso"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007566807040
+    m_Localized: "Wybierz nagrod\u0119 za wyzwanie!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276032
+    m_Localized: "Cz\u0119stotliwo\u015B\u0107 odradzania si\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276033
+    m_Localized: "Zwi\u0119ksz liczb\u0119 zwierz\u0105t pojawiaj\u0105cych si\u0119
+      podczas rundy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276034
+    m_Localized: Boon Slot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276035
+    m_Localized: "Mo\u017Cesz posiada\u0107 1 dodatkowy dar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276036
+    m_Localized: "Usuwanie pok\u0142adu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276037
+    m_Localized: "Usu\u0144 2 zwierz\u0119ta ze swojego zestawu zwierz\u0105t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: "Wybiera\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: "zwierz\u0119ta do usuni\u0119cia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Poziom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: "Runda wyzwa\u0144"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: "Okrutne kaktusy: Lassos nie mo\u017Ce zawiera\u0107 kaktus\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: "Straszliwy wiatropyle: wiatropyle zrywaj\u0105 lassa w kontakcie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: "Zab\xF3jcze pszczo\u0142y: Pszczo\u0142y \u017C\u0105dl\u0105 zwierz\u0119ta,
+      uniemo\u017Cliwiaj\u0105c im zabaw\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: "K\u0142opotliwy wiatr w plecy: Wszystkie zwierz\u0119ta poruszaj\u0105
+      si\u0119 szybciej"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Motyle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: "+ B\u0142oto"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Krety
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: "+ B\u0142yskawica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: ABC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 alpak\u0119
+      i dwa koty stodo\u0142owe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: "Alpaka w wilczej sk\xF3rze"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 alpak\u0119
+      i wilka"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Sportowiec
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 konia
+      i pum\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: "Pi\u0119kna i Bestia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 dzika
+      i \u015Bwini\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: "Czarno-bia\u0142y"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 krow\u0119,
+      dzika i kr\xF3lika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: "Reakcja \u0142a\u0144cuchowa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kota stodo\u0142owego,
+      psa i mysz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Wspinacze po klifach
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: "Lasso \u2013 grupa zwierz\u0105t zawieraj\u0105ca alpak\u0119 i
+      koz\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: Dawid kontra Goliat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 mysz i
+      nied\u017Awiedzia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Koty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t, w kt\xF3rej jest kot stodo\u0142owy
+      i puma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Puch i aport
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 alpak\u0119
+      i psa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: "\u0141a\u0144cuch pokarmowy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 wilka,
+      kota i mysz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: "Le\u015Bna uczta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 wilka,
+      kr\xF3lika i mysz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: "\u0141agodne olbrzymy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z krowy, konia i alpaki"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: Kozi Gruff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z 3 k\xF3z"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Fryzura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 alpak\u0119
+      i konia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: "Polowanie na \u015Bwinie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z 2 dzik\xF3w i psa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: Rogi przed nami
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: "Lasso grupa zwierz\u0105t zawieraj\u0105ca koz\u0119 i dzika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: Skok wiary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika
+      i pum\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: "Pot\u0119ga G\xF3ry"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z kozy, pumy i alpaki"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: "Dziewi\u0119\u0107 ogon\xF3w, dziewi\u0119\u0107 \u017Cy\u0107"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 lisa i
+      kota"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika,
+      mysz i kurczaka"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: "Pakiet dla zwierz\u0105t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kota stodo\u0142owego,
+      psa i kr\xF3lika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: Kot w butach
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kota stodo\u0142owego"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: "Pada deszcz kot\xF3w i ps\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z 2 kot\xF3w stodo\u0142owych i 2 ps\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: "Cisi prze\u015Bladowcy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kota stodo\u0142owego,
+      pum\u0119 i lisa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: "Mi\u0119kko i szybko"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika,
+      mysz i owc\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: Pisk czy nie pisk
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 dzika,
+      \u015Bwini\u0119 i mysz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Panika
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: "Z\u0142apa\u0107 grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105
+      dzika i konia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: "Trzydaniowy posi\u0142ek"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 pum\u0119,
+      mysz, kurczaka i koz\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom i Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kota stodo\u0142owego
+      i psa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: "Lasso grupa zwierz\u0105t zawieraj\u0105ca dzika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: "W\u0119druj\u0105cy wie\u015Bniak"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 2 alpaki"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Whinnie the Pooh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika,
+      \u015Bwink\u0119 i nied\u017Awiedzia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: "We\u0142niani W\u0119drowcy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: "Lasso \u2013 grupa zwierz\u0105t zawieraj\u0105ca owc\u0119 i alpak\u0119"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: "Oszu\u015Bci"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 lisa i
+      kr\xF3lika"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551270281216
+    m_Localized: Witamy w Dzienniku!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112636493824
+    m_Localized: "Im wi\u0119cej osobnik\xF3w danego zwierz\u0119cia posiadasz, tym
+      wi\u0119ksza szansa, \u017Ce \u200B\u200Bsi\u0119 pojawi!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Localized: "Noc: Wi\u0119ksza cz\u0119stotliwo\u015B\u0107 pojawiania si\u0119
+      drapie\u017Cnik\xF3w"
     m_Metadata:
       m_Items: []
   references:

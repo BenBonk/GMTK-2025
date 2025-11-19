@@ -30,18 +30,142 @@ public class Animal : MonoBehaviour
     public float MinimumSpacing => minimumSpacing;
     private float repelForce = 4; 
     public virtual bool IsRepelImmune => false;
+    public virtual bool CanBeLassoed => true;
+    protected virtual bool ShouldClampY => attractTarget == null;
 
     // run animation parameters
     private float tiltAngle = 0f;
     public float tiltFrequency = 3f; // how fast the tilt cycles 
     public float maxTiltAmplitude = 20f; // degrees at full speed
 
-    private float tiltProgress = 0f;
+    protected float tiltProgress = 0f;
     private Vector3 previousPosition;
     public float actualSpeed { get; private set; } // total movement speed
     public bool legendary;
     public bool forceExit = false;
     [HideInInspector] public int bonusPoints;
+    [HideInInspector] public bool struckByLightning;
+
+    // ---------- global speed scale ----------
+    private static float _globalSpeedScale = 1f;
+    public static float GlobalSpeedScale => _globalSpeedScale;
+    protected float EffectiveSpeed => speed * _effectiveSpeedScale;
+
+    public static event Action<float> OnGlobalSpeedScaleChanged;
+    private static event Action OnAnyGlobalSpeedFactorChanged;
+    public static void SetGlobalSpeedScale(float scale)
+    {
+        scale = Mathf.Max(0.0001f, scale);
+        if (Mathf.Approximately(scale, _globalSpeedScale)) return;
+        _globalSpeedScale = scale;
+        OnGlobalSpeedScaleChanged?.Invoke(_globalSpeedScale);
+    }
+
+    //Speed Modifiers
+    public static float MINIMUM_SPEED_MULTIPLIER = 0.25f;
+    private static readonly Dictionary<string, float> _globalModDefs = new Dictionary<string, float>
+    {
+        { "mud",   0.40f },
+        { "goat",  0.50f },
+        { "lightning", 2f },
+        { "tailwind",  1.75f },
+        { "holdhorse", 0.35f },
+        { "chase" , 1.5f }
+    };
+    private static readonly HashSet<string> _enabledGlobalMods = new HashSet<string>();
+    private readonly HashSet<string> _enabledMods = new HashSet<string>();
+
+
+    public static void RegisterGlobalSpeedModifier(string key, float multiplier)
+    {
+        _globalModDefs[key] = Mathf.Max(MINIMUM_SPEED_MULTIPLIER, multiplier);
+    }
+    public static bool TryGetGlobalSpeedModifier(string key, out float mult)
+        => _globalModDefs.TryGetValue(key, out mult);
+
+    public void ModifySpeed(string key, float fallbackIfUndefined = 1f)
+    {
+        if (!_globalModDefs.ContainsKey(key))
+        {
+            if (fallbackIfUndefined > 0f)
+                _globalModDefs[key] = Mathf.Max(MINIMUM_SPEED_MULTIPLIER, fallbackIfUndefined);
+            else
+                return;
+        }
+        if (_enabledMods.Add(key)) RecomputeAndApplyEffectiveSpeed();
+    }
+    public static void EnableSpeedModifier(string key, float fallbackIfUndefined = 1f)
+    {
+        if (!_globalModDefs.ContainsKey(key))
+        {
+            if (fallbackIfUndefined > 0f)
+                _globalModDefs[key] = Mathf.Max(MINIMUM_SPEED_MULTIPLIER, fallbackIfUndefined);
+            else
+                return;
+        }
+        if (_enabledGlobalMods.Add(key))
+            OnAnyGlobalSpeedFactorChanged?.Invoke();
+    }
+
+    public static void DisableSpeedModifier(string key)
+    {
+        if (_enabledGlobalMods.Remove(key))
+            OnAnyGlobalSpeedFactorChanged?.Invoke();
+    }
+
+    public void RevertSpeed(string key)
+    {
+        if (_enabledMods.Remove(key)) RecomputeAndApplyEffectiveSpeed();
+    }
+
+    public void DisableAllSpeedModifiers()
+    {
+        if (_enabledMods.Count == 0) return;
+        _enabledMods.Clear();
+        RecomputeAndApplyEffectiveSpeed();
+    }
+
+    protected float _effectiveSpeedScale = 1f;
+
+    protected float ComputeEffectiveSpeedScale()
+    {
+        float s = GlobalSpeedScale;
+
+        foreach (var key in _enabledGlobalMods)
+            s *= _globalModDefs[key];
+
+        foreach (var key in _enabledMods)
+            s *= _globalModDefs[key];
+
+        return Mathf.Max(MINIMUM_SPEED_MULTIPLIER, s);
+    }
+
+    protected void RecomputeAndApplyEffectiveSpeed()
+    {
+        _effectiveSpeedScale = ComputeEffectiveSpeedScale();
+        ApplyEffectiveSpeedScale(_effectiveSpeedScale);
+    }
+
+    protected virtual void ApplyEffectiveSpeedScale(float scale)
+    {
+        currentSpeed = speed * scale;
+    }
+
+    private void HandleGlobalSpeedScaleChanged(float _) => RecomputeAndApplyEffectiveSpeed();
+    private void HandleAnyGlobalSpeedFactorChanged() => RecomputeAndApplyEffectiveSpeed();
+
+    protected virtual void OnEnable()
+    {
+        OnGlobalSpeedScaleChanged += HandleGlobalSpeedScaleChanged;
+        OnAnyGlobalSpeedFactorChanged += HandleAnyGlobalSpeedFactorChanged;
+        RecomputeAndApplyEffectiveSpeed();
+    }
+    protected virtual void OnDisable()
+    {
+        OnGlobalSpeedScaleChanged -= HandleGlobalSpeedScaleChanged;
+        OnAnyGlobalSpeedFactorChanged -= HandleAnyGlobalSpeedFactorChanged;
+    }
+
     protected virtual void Awake()
     {
         SetVerticalLimits(GameController.gameManager.playArea);
@@ -75,7 +199,7 @@ public class Animal : MonoBehaviour
             startPos = new Vector3(rightEdge.x + 1f, transform.position.y, transform.position.z);
             transform.position = startPos;
         }
-        currentSpeed = speed;
+        SubscribeToBeeStingEvents();
     }
     
 
@@ -101,7 +225,10 @@ public class Animal : MonoBehaviour
 
         nextPos += externalOffset;
 
-        nextPos.y = ClampY(nextPos.y);
+        if (ShouldClampY)
+        {
+            nextPos.y = ClampY(nextPos.y);
+        }
 
         transform.position = nextPos;
         externalOffset = Vector3.zero;
@@ -284,7 +411,8 @@ public class Animal : MonoBehaviour
 
 
     protected bool overriddenByAttraction = false;
-    protected Animal attractTarget = null;
+    protected GameObject attractTarget = null;
+    public GameObject AttractTarget => attractTarget;
     [SerializeField] protected bool leftIsPositiveScaleX = true;
 
     public float attractBrakeRadius = 2.0f;  // start slowing down inside this radius
@@ -293,9 +421,9 @@ public class Animal : MonoBehaviour
     public float attractStopThreshold = 0.02f; // consider stopped below this speed
     private float _attractSpeedVel = 0f;
 
-    public bool SetAttractTarget(Animal a, bool force = false)
+    public bool SetAttractTarget(GameObject a, bool force = false)
     {
-        if (!force && attractTarget != null && attractTarget.gameObject.activeInHierarchy)
+        if (!force && attractTarget != null && attractTarget.activeInHierarchy)
             return false;
 
         attractTarget = a;
@@ -369,12 +497,59 @@ public class Animal : MonoBehaviour
         return true; // attraction owns movement this frame
     }
 
+    public void StruckByLightning()
+    {
+        ModifySpeed("lightning");
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        sr.material = GameController.lightningMat;
+        struckByLightning = true;
+        DOTween.Sequence()
+            .Append(sr.material.DOFloat(0.35f, "_FlashAmount", 0.5f))
+            .Append(sr.material.DOFloat(0, "_FlashAmount", 0.5f)).SetLoops(-1);
+    }
 
 
 
     public virtual void ActivateLegendary()
     {
         
+    }
+
+    private void SubscribeToBeeStingEvents()
+    {
+        Bee.OnAnyBeeSting += OnBeeStingDetected;
+    }
+
+    private void UnsubscribeFromBeeStingEvents()
+    {
+        Bee.OnAnyBeeSting -= OnBeeStingDetected;
+    }
+
+    private void OnBeeStingDetected(Animal stungAnimal)
+    {
+        if (stungAnimal == this)
+        {
+            DieFromBee();
+        }
+    }
+
+    void DieFromBee()
+    {
+        isLassoed = true;
+        currentSpeed = 0f;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        
+        DOTween.Sequence()
+            .Append(transform.DOMoveY(transform.position.y-.5f, 0.5f).SetEase(Ease.InBack))
+            .Join(transform.DOScaleY(-1, 0f))
+            .Join(sr.DOFade(0f, 0.5f))
+            .OnComplete(() => Destroy(gameObject));
+    }
+
+    private void OnDestroy()
+    {
+        UnsubscribeFromBeeStingEvents();
     }
 
 }

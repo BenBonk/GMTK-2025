@@ -5,21 +5,34 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //public int timeToSpawnAnimals;
-    
     public List<AnimalData> animalsInDeck;
     public List<Boon> boonsInDeck;
+    private SteamIntegration steamIntegration;
 
     private void Start()
     {
+        steamIntegration = GameController.steamIntegration;
     }
 
     public void AddAnimalToDeck(AnimalData animal)
     {
         animalsInDeck.Add(animal);
     }
+    public void RemoveAnimalFromDeck(AnimalData animal)
+    {
+        animalsInDeck.Remove(animal);
+        if (animalsInDeck.Count==1 && !steamIntegration.IsThisAchievementUnlocked("Desolation"))
+        {
+            steamIntegration.UnlockAchievement("Desolation");
+        }
+    }
     public void AddBoonToDeck(Boon boon)
     {
         GameController.boonManager.AddBoon(boon);
+        if (boonsInDeck.Count==10 && !steamIntegration.IsThisAchievementUnlocked("Boons For Days"))
+        {
+            steamIntegration.UnlockAchievement("Boons For Days");
+        }
     }
 
     private double _playerCurrency;

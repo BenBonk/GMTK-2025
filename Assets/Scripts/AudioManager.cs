@@ -11,22 +11,32 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSourceA;
     public AudioSource musicSourceB;
 
+    [Header("AMBIENT Sources")]
+    public AudioSource ambientSourceA;
+    public AudioSource ambientSourceB;
+
     [Header("SFX Source")]
     public AudioSource sfxSource;
 
     private AudioSource currentMusicSource;
     private AudioSource nextMusicSource;
+    private AudioSource currentAmbientSource;
+    private AudioSource nextAmbientSource;
     private Coroutine fadeOutRoutine;
 
     [Header("Audio Clips")]
     public List<NamedAudioClip> soundEffects = new();
     public List<NamedAudioClip> musicTracks = new();
+    public List<NamedAudioClip> ambientTracks = new();
 
     private readonly Dictionary<string, AudioClip> sfxDict = new();
     private readonly Dictionary<string, float> sfxVolumeDict = new();
 
     private readonly Dictionary<string, AudioClip> musicDict = new();
     private readonly Dictionary<string, float> musicVolumeDict = new();
+
+    private readonly Dictionary<string, AudioClip> ambientDict = new();
+    private readonly Dictionary<string, float> ambientVolumeDict = new();
 
     [Header("Playlist Settings")]
     public List<string> playlistTrackNames = new();
@@ -35,6 +45,7 @@ public class AudioManager : MonoBehaviour
     [Header("Fallback Settings")]
     public string fallbackTrackName = "idle_loop";
     public bool fallbackPending = false;
+
 
     private int currentPlaylistIndex = -1;
     private string lastPlayedTrack = "";
@@ -47,6 +58,7 @@ public class AudioManager : MonoBehaviour
 
     // Base volume of current music track (from musicVolumeDict)
     private float currentMusicBaseVol = 1f;
+    private float currentAmbientBaseVol = 1f;
 
     // FBPP keys used by SettingsMenu
     private const string KeyMusic = "musicValue";
@@ -80,9 +92,20 @@ public class AudioManager : MonoBehaviour
                 musicVolumeDict[clip.name] = clip.volume;
             }
         }
+        foreach (var clip in ambientTracks)
+        {
+            if (!string.IsNullOrEmpty(clip.name) && clip.clip)
+            {
+                ambientDict[clip.name] = clip.clip;
+                ambientVolumeDict[clip.name] = clip.volume;
+            }
+        }
 
         currentMusicSource = musicSourceA;
         nextMusicSource = musicSourceB;
+
+        currentAmbientSource = ambientSourceA;
+        nextAmbientSource = ambientSourceB;
 
         // Load saved user volumes (defaults 0.5)
         masterMusic01 = FBPP.GetFloat(KeyMusic, 0.4f);
@@ -125,6 +148,8 @@ public class AudioManager : MonoBehaviour
         float mg = MusicMasterGain();
         musicSourceA.volume = currentMusicBaseVol * mg;
         musicSourceB.volume = currentMusicBaseVol * mg;
+        ambientSourceA.volume = currentAmbientBaseVol * mg;
+        ambientSourceB.volume = currentAmbientBaseVol * mg;
         sfxSource.volume = SfxMasterGain();
     }
 
@@ -178,7 +203,7 @@ public class AudioManager : MonoBehaviour
 
     // --------------- Music ----------------
 
-    public void PlayMusicWithFadeOutOld(string newTrackName, float fadeOutDuration = 2f, bool loop = false)
+    public void PlayMusicWithFadeOutOld(string newTrackName, float fadeOutDuration = 2f, bool loop = false, string ambientTrackName = null)
     {
         if (!musicDict.TryGetValue(newTrackName, out var newClip))
         {
@@ -201,6 +226,19 @@ public class AudioManager : MonoBehaviour
         var temp = currentMusicSource;
         currentMusicSource = nextMusicSource;
         nextMusicSource = temp;
+        if (!string.IsNullOrEmpty(ambientTrackName))
+        {
+            PlayAmbientWithFadeOutOld(ambientTrackName, fadeOutDuration, loop: true);
+        }
+        /*else if (ambientTrackName == null)
+        {
+            StartCoroutine(FadeOutOldAmbient(currentAmbientSource, fadeOutDuration));
+        }*/
+    }
+
+    public void FadeMusic(float fadeDuration)
+    {
+        StartCoroutine(FadeOutOldTrack(currentMusicSource, fadeDuration));
     }
 
     private IEnumerator FadeOutOldTrack(AudioSource sourceToFade, float duration)
@@ -236,6 +274,65 @@ public class AudioManager : MonoBehaviour
     {
         masterMusic01 = Mathf.Clamp01(slider01);
         ApplyMasterVolumes();
+    }
+
+    public void PlayAmbientWithFadeOutOld(string newAmbientName, float fadeOutDuration = 2f, bool loop = true)
+    {
+        if (!ambientDict.TryGetValue(newAmbientName, out var newClip))
+        {
+            Debug.LogWarning($"Ambient track '{newAmbientName}' not found!");
+            return;
+        }
+
+        StartCoroutine(FadeOutOldAmbient(currentAmbientSource, fadeOutDuration));
+
+        currentAmbientBaseVol = ambientVolumeDict.TryGetValue(newAmbientName, out float baseVol) ? baseVol : 1f;
+
+        nextAmbientSource.clip = newClip;
+        nextAmbientSource.loop = loop;
+        nextAmbientSource.volume = currentAmbientBaseVol * MusicMasterGain();
+        nextAmbientSource.Play();
+
+        var temp = currentAmbientSource;
+        currentAmbientSource = nextAmbientSource;
+        nextAmbientSource = temp;
+    }
+
+    public bool IsAmbientPlaying()
+    {
+        return IsSrcPlaying(currentAmbientSource) || IsSrcPlaying(nextAmbientSource);
+    }
+
+    private static bool IsSrcPlaying(AudioSource src)
+    {
+        return src != null && src.clip != null && src.isPlaying && src.volume > 0.0001f;
+    }
+
+    public void FadeAmbient(float fadeDuration)
+    {
+        StartCoroutine(FadeOutOldAmbient(currentAmbientSource, fadeDuration));
+    }
+
+    private IEnumerator FadeOutOldAmbient(AudioSource sourceToFade, float duration)
+    {
+        float startVolume = sourceToFade.volume;
+
+        Tween tween = DOTween.To(
+            () => sourceToFade.volume,
+            x => sourceToFade.volume = x,
+            0f,
+            duration
+        );
+
+        yield return tween.WaitForCompletion();
+        sourceToFade.Stop();
+        sourceToFade.volume = startVolume;
+    }
+
+    public void StopAmbientImmediately()
+    {
+        currentAmbientSource.Stop();
+        nextAmbientSource.Stop();
     }
 
     // --------------- Playlist helpers ----------------

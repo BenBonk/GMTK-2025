@@ -269,7 +269,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: Lasso a group of animals containing a Fox and three Chickens
+    m_Localized: Lasso a group of animals containing a Fox and 3 Chickens
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -354,11 +354,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: Predatory
+    m_Localized: Apex
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: Lasso a group of animals containing a Bear, a Wolf, and a Fox
+    m_Localized: Lasso a group of animals containing a Puma and a Bear
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -492,10 +492,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2524680130113536
     m_Localized: Continue
-    m_Metadata:
-      m_Items: []
-  - m_Id: 3154139489218560
-    m_Localized: Welcome to the Logbook!
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904
@@ -813,7 +809,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607694
-    m_Localized: Horses are slower and stop briefly at the left edge of the screen
+    m_Localized: Horses are slower and stop briefly at the left edge of the screen.
+      Horses are worth +10 points
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
@@ -856,7 +853,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: Foxes trade stats with
+    m_Localized: Foxes have the same stats as
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -872,7 +869,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: Wolves now spawn in packs of two or three
+    m_Localized: Wolves now spawn in packs of 2 or 3, capturing at least 5 wolves
+      in a single lasso gives x25 points mult
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
@@ -905,7 +903,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: +20 additional cash at end of round
+    m_Localized: +25 additional cash at end of round
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
@@ -1004,7 +1002,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: While in your boon deck, all animals have their level increased
+    m_Localized: Until this boon is replaced, all animals have their level increased
       by 2
     m_Metadata:
       m_Items: []
@@ -1042,10 +1040,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10403423450169348
     m_Localized: Loads more boons!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: Now that you know the basics, let's get started!
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
@@ -1120,7 +1114,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: For every 3 non-predator animals in a lasso, gain +3 cash instead
+    m_Localized: For every 3 non-predator animals in a lasso, gain +5 cash instead
       of the usual +1 cash
     m_Metadata:
       m_Items: []
@@ -1129,7 +1123,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: Player can now go into up to $100 of debt in the shop
+    m_Localized: You can now go into debt up to -150 cash in the shop
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1146,8 +1140,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
-    m_Localized: Moles will ocassionally popup during the day, offering +5 cash and
-      +5 points when lassoed
+    m_Localized: Moles will ocassionally popup during the day, offering +7 cash and
+      +7 points when lassoed
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
@@ -1155,7 +1149,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: +5 cash and points for lassos with exactly 5 animals
+    m_Localized: +5 cash and points for lassos with exactly 5 animals.
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600
@@ -1181,6 +1175,380 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 20226222205657088
     m_Localized: -10 seconds per round, +0.33x cash mult for each successful lasso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007566807040
+    m_Localized: Select a Challenge Reward!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276032
+    m_Localized: Spawn Rate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276033
+    m_Localized: Increase the amount of animals that appear during a round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276034
+    m_Localized: Boon Slot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276035
+    m_Localized: You can hold 1 additional boon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276036
+    m_Localized: Deck Removal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276037
+    m_Localized: Remove 2 animals from your Animal Deck
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: Choose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: animals to remove
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: Challenge Round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: 'Cruel Cacti: Lassos cannot contain cacti'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: 'Terrible Tumbleweed: Tumbleweeds break lassos on contact'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: 'Killer Bees: Bees sting animals, removing them from play'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: 'Troublesome Tailwind: All animals move faster'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Butterflies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Mud
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Moles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: + Lightning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: ABC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: Lasso a group of animals containing an Alpaca and 2 Barn Cats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: Alpaca In Wolf's Clothing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: Lasso a group of animals containing an Alpaca and a Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Athlete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: Lasso a group of animals containing a Horse and a Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: Beauty and the Beast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: Lasso a group of animals containing a Boar and a Pig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: Black and White
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: Lasso a group of animals containing a Cow, a Boar, and a Bunny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: Chain Reaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: Lasso a group of animals containing a Barn Cat, a Dog, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Cliff Climbers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: Lasso a group of animals containing an Alpaca and a Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: David Vs. Goliath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: Lasso a group of animals containing a Mouse and a Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Felines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: Lasso a group of animals containing a Barn Cat and a Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Fluff and Fetch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: Lasso a group of animals containing an Alpaca and a Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: Food Chain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: Lasso a group of animals containing a Wolf, a Cat, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: Forest Feast
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: Lasso a group of animals containing a Wolf, a Bunny, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: Gentle Giants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: Lasso a group of animals containing a Cow, a Horse, and an Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: Goat's Gruff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: Lasso a group of animals containing 3 Goats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Hairdo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: Lasso a group of animals containing an Alpaca and a Horse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: Hog Hunt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: Lasso a group of animals containing 2 Boar and a Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: Horns Ahead
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: Lasso a group of animals containing a Goat and a Boar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: Leap of Faith
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: Lasso a group of animals containing a Bunny and a  Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: Mountain's Might
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: Lasso a group of animals containing a Goat, a Puma, and an Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: Nine Tails, Nine Lives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: Lasso a group of animals containing a Fox and a Cat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: Lasso a group of animals containing a Bunny, a Mouse, and a Chicken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: Pet Pack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: Lasso a group of animals containing a Barn Cat, a Dog, and a Bunny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: Puss In Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: Lasso a group of animals containing a Barn Cat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: Raining Cats and Dogs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: Lasso a group of animals containing 2 Barn Cats and 2 Dogs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: Silent Stalkers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: Lasso a group of animals containing a Barn Cat, a Puma, and a Fox
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: Soft and Swift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: Lasso a group of animals containing a Bunny, a Mouse, and a Sheep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: Squeal or no Squeal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: Lasso a group of animals containing a Boar, a Pig, and a Mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Stampede
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: Lasso a group of animals containing a Boar and a Horse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: Three Course Meal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: Lasso a group of animals containing a Puma, a Mouse, a Chicken,
+      and a Goat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom and Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: Lasso a group of animals containing a Barn Cat and a Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: Lasso a group of animals containing a Boar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: Wandering Villager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: Lasso a group of animals containing 2 Alpacas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Whinnie the Pooh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: Lasso a group of animals containing a Bunny, a Pig, and a Bear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: Wooly Wanderers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: Lasso a group of animals containing a Sheep and an Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: Tricksters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: Lasso a group of animals containing a Fox and a Bunny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: Now that you know the basics, let's get started!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112636493824
+    m_Localized: The more of a specific animal you have, the higher the chance that
+      animal will spawn!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551270281216
+    m_Localized: Welcome to the Logbook!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Localized: 'Nightime: Higher predator spawnrate'
     m_Metadata:
       m_Items: []
   references:

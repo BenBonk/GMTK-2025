@@ -2,15 +2,18 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.Localization;
 using Random = UnityEngine.Random;
 
 public class UpgradeShopItem : ShopItem
 {
     private List<AnimalData> possibleAnimals;
     private AnimalData chosenAnimal;
-    public UpgradeShopItem partnerUpgrade;
+    public UpgradeShopItem[] partnerUpgrades;
     public AnimalShopItem[] animalShopItems;
-    
+    public TMP_Text levelText;
+    public LocalizedString levelString;
     public override void Initialize()
     {
         possibleAnimals = new List<AnimalData>(GameController.player.animalsInDeck);
@@ -18,9 +21,15 @@ public class UpgradeShopItem : ShopItem
         {
             possibleAnimals.Add(item.chosenAnimal);
         }
+
+        if (GameController.boonManager.ContainsBoon("Thief"))
+        {
+            possibleAnimals.RemoveAll(a => a.name == "Fox");
+        }
         AnimalLevelManager levelManager = GameController.animalLevelManager;
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Count)];
         int animalLevel = levelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
+        levelText.text = levelString.GetLocalizedString() + " " + (2+animalLevel);
 
         UpdateDescription();
 
@@ -40,10 +49,12 @@ public class UpgradeShopItem : ShopItem
     void UpdateDescription()
     {
         descriptionText.text = GameController.descriptionManager.GetAnimalLevelDescription(chosenAnimal);
+        int animalLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
+        levelText.text = levelString.GetLocalizedString() + " " + (2+animalLevel);
     }
     public override void PurchaseUpgrade()
     {
-        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-100)))
+        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-150)))
         {
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
@@ -51,16 +62,28 @@ public class UpgradeShopItem : ShopItem
             shopManager. UpdateCashText();
             canPurchase = false;
             FBPP.SetInt("totalUpgradesPurchased", FBPP.GetInt("totalUpgradesPurchased")+1);
-            GameController.animalLevelManager.SetLevel(chosenAnimal.animalName.GetLocalizedString(), GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString())+1);
+            int newLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) + 1;
+            GameController.animalLevelManager.SetLevel(chosenAnimal.animalName.GetLocalizedString(), newLevel);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             if (GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) > FBPP.GetInt("highestAnimalLevel"))
             {
                 FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()));
             }
 
+            if (newLevel == 9 && !GameController.steamIntegration.IsThisAchievementUnlocked("Beefy"))
+            {
+                GameController.steamIntegration.UnlockAchievement("Beefy");
+            }
+
             if (!shopManager.cantPurchaseItem)
             {
-                partnerUpgrade.UpdateDescription();
+                foreach (var partnerUpgrade in partnerUpgrades)
+                {
+                    if (partnerUpgrade.gameObject.activeInHierarchy)
+                    {
+                        partnerUpgrade.UpdateDescription();
+                    }
+                }
             }
 
             foreach (var a in animalShopItems)

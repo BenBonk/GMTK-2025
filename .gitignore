@@ -103,8 +103,6 @@ Assets/Google Sheets Service.asset
 Assets/Google Sheets Service.asset.meta
 Assets/Other/Google Sheets Service.asset
 Assets/Other/Google Sheets Service.asset.meta
-.bezisidekick/.settings.json
-Assets/Plugins/Facepunch.Steamworks/redistributable_bin/win64/steam_api64.dll
 Packages/com.bezi.sidekick/Editor.meta
 Packages/com.bezi.sidekick/package.json
 Packages/com.bezi.sidekick/package.json.meta
@@ -157,3 +155,4 @@ Packages/com.bezi.sidekick/Editor/Resources/Icons/Light/bezi-icon.png
 Packages/com.bezi.sidekick/Editor/Resources/Icons/Light/bezi-icon.png.meta
 Packages/com.bezi.sidekick/Editor/Resources/Icons/Light/bezi-paused.png
 Packages/com.bezi.sidekick/Editor/Resources/Icons/Light/bezi-paused.png.meta
+.bezisidekick/.settings.json

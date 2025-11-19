@@ -68,6 +68,8 @@ MonoBehaviour:
   icon: {fileID: 2683003770188258717}
   hoverPopup: {fileID: 8909807817854563293}
   subPopup: {fileID: 0}
+  animalData: {fileID: 0}
+  boonData: {fileID: 0}
   bounch: 0
 --- !u!114 &5753062741602714539
 MonoBehaviour:
@@ -500,8 +502,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -920,6 +922,8 @@ MonoBehaviour:
   icon: {fileID: 5817301982779929964}
   hoverPopup: {fileID: 1865804421105927161}
   subPopup: {fileID: 0}
+  animalData: {fileID: 0}
+  boonData: {fileID: 0}
   bounch: 0
 --- !u!114 &2868968059082255063
 MonoBehaviour:
@@ -1268,6 +1272,8 @@ MonoBehaviour:
   icon: {fileID: 1887822848983770548}
   hoverPopup: {fileID: 4268373579701910385}
   subPopup: {fileID: 0}
+  animalData: {fileID: 0}
+  boonData: {fileID: 0}
   bounch: 0
 --- !u!114 &6066155223554454342
 MonoBehaviour:
@@ -2176,6 +2182,8 @@ MonoBehaviour:
   icon: {fileID: 3609927530372923424}
   hoverPopup: {fileID: 6560053045217996605}
   subPopup: {fileID: 0}
+  animalData: {fileID: 0}
+  boonData: {fileID: 0}
   bounch: 0
 --- !u!114 &3184828018057855072
 MonoBehaviour:

@@ -3,23 +3,33 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using Random = UnityEngine.Random;
 
 public class SynergyShopItem : ShopItem
 {
-    private Boon chosenBoon;
+    [HideInInspector] public Boon chosenBoon;
     public SynergySlots synergySlots;
     public TMP_Text desc2;
-    private Animal chosenToSteal;
-    private int chosenToStealIndex;
+    [HideInInspector] public Animal chosenToSteal;
+    [HideInInspector] public int chosenToStealIndex;
     private Image bgSR;
     private Image popupBg;
     public Sprite[] boonBgs;
     public GameObject subPopup;
+    private Transform leaveParent;
+    Vector3 leavePos;
     private void Awake()
     {
         bgSR = GetComponent<Image>();
         popupBg = hoverPopup.gameObject.GetComponent<Image>();
+    }
+
+    public override void Start()
+    {
+        shopManager = GameController.shopManager;
+        leaveParent = shopManager.leaveShopButton.transform.parent;
+        //leavePos = shopManager.leaveShopButton.transform.position;
     }
 
     public void SetBoon(Boon boon)
@@ -67,31 +77,37 @@ public class SynergyShopItem : ShopItem
     }
     public override void PurchaseUpgrade()
     {
-        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-100)))
+        if (!shopManager.cantPurchaseItem && canPurchase && (GameController.player.playerCurrency >= price || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - price >=-150)))
         {
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
-            GameController.player.playerCurrency -= price;
-            shopManager. UpdateCashText();
-            canPurchase = false;
-            FBPP.SetInt(chosenBoon.name, FBPP.GetInt(chosenBoon.name)+1);
-            FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased")+1);
-            upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
-            Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
-            
-            if (chosenBoon.name=="Thief")
+
+            if (GameController.player.boonsInDeck.Count<FBPP.GetInt("boonDeckSize",5))
             {
-                GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
-                FBPP.SetInt("chosenToStealIndex", chosenToStealIndex);
-            }
-            if (chosenBoon.name=="FreshStock" || chosenBoon.name == "Freeroll")
-            {
-               GameController.rerollManager.Reset();
-            }
-            if (GameController.player.boonsInDeck.Count<GameController.gameManager.maxSynergies)
-            {
+                GameController.player.playerCurrency -= price;
+                shopManager.UpdateCashText();
+                canPurchase = false;
+                FBPP.SetInt(chosenBoon.name, FBPP.GetInt(chosenBoon.name) + 1);
+                FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased") + 1);
+                upgradeArt.transform.parent.DOScale(Vector3.zero, .25f).SetEase(Ease.InOutQuad);
+                Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
+                foreach (var s in shopManager.shopItems)
+                {
+                    s.StopAllCoroutines();
+                    DOTween.KillAll(s);
+                }
+                StartCoroutine(DeckPulse());
+                if (chosenBoon.name == "Thief")
+                {
+                    GameController.gameManager.foxThiefStolenStats = chosenToSteal.animalData;
+                    FBPP.SetInt("chosenToStealIndex", chosenToStealIndex);
+                }
+                if (chosenBoon.name == "FreshStock" || chosenBoon.name == "Freeroll")
+                {
+                    GameController.rerollManager.Reset();
+                }
                 GameController.player.AddBoonToDeck(chosenBoon);
-                shopManager.UpdateSynergies(shopManager.synergyCards);
+                shopManager.UpdateSynergies(shopManager.boonDeckParent);
             }
             else
             {
@@ -101,8 +117,13 @@ public class SynergyShopItem : ShopItem
                 shopManager.darkCover.DOFade(.75f, 0.5f);
                 shopManager.instructionsText.DOFade(1, 0.5f);
                 shopManager.cantPurchaseItem = true;
-                shopManager.overridingBoon = chosenBoon;
-                synergySlots.canOverrideBoon = true;
+                shopManager.overridingBoonItem = this;
+                shopManager.cancelOverride.gameObject.SetActive(true);
+                shopManager.cancelOverride.enabled = true;
+                shopManager.cancelOverride.DOFade(1, 0.5f);
+                GameController.rerollManager.transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
+                shopManager.leaveShopButton.transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
+                shopManager.canOverrideBoon = true;
             }
 
         }
@@ -110,5 +131,26 @@ public class SynergyShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
         }
+    }
+    IEnumerator DeckPulse()
+    {
+        shopManager.cantToggleSynergiesDeck = true;
+        shopManager.leaveShopButton.transform.SetParent(shopManager.transform);
+        yield return new WaitForSeconds(.25f);
+        Sequence pulse = DOTween.Sequence();
+        pulse.Append(shopManager.boonDeckButton.transform.DOScale(1.10f, 0.1f).SetEase(Ease.OutBack));
+        pulse.Append(shopManager.boonDeckButton.transform.DOShakeRotation(
+            duration: 0.15f,
+            strength: new Vector3(0f, 0f, 6f), 
+            vibrato: 5,
+            randomness: 90,
+            fadeOut: true
+        ));
+        pulse.Append(shopManager.boonDeckButton.transform.DOScale(1f, 0.15f).SetEase(Ease.OutExpo));
+        pulse.Join(shopManager.boonDeckButton.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
+        yield return new WaitForSeconds(.5f);
+        shopManager.leaveShopButton.transform.SetParent(leaveParent);
+        //shopManager.leaveShopButton.transform.position = leavePos;
+        shopManager.cantToggleSynergiesDeck = false;
     }
 }

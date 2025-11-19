@@ -2,21 +2,50 @@ using UnityEngine;
 
 public class Pig : Animal
 {
-    public float waveAmplitude = 1f; // Height of sine wave
-    public float waveFrequency = 2f; // Wave cycles during movement
+    [Header("Wave Motion")]
+    public float waveAmplitude = 1f;   // Height of sine wave
+    public float waveFrequency = 2f;   // Wave cycles per second
+
+    private float baseSpeed;
 
     private bool initialized = false;
     private float waveProgress = 0f;
+    private float startY;
+
+    [Header("Legendary")]
     public Sprite pigWithHat;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseSpeed = speed;   // cache inspector speed as baseline
+    }
+
+    public override void Start()
+    {
+        base.Start();
+        // IMPORTANT: do NOT reset currentSpeed here.
+        // OnEnable has already called RecomputeAndApplyEffectiveSpeed(),
+        // which sets currentSpeed based on all global/local modifiers.
+    }
+
     public override void ActivateLegendary()
     {
-        if (Random.Range(0, 3) == 0)
+        if (Random.Range(0, 5) == 0)
         {
             GetComponent<SpriteRenderer>().sprite = pigWithHat;
             gameObject.tag = "PigWithHat";
         }
     }
-        
+
+    // Called whenever global or local speed modifiers change
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        // speed stays as the baseline (baseSpeed) so we always scale from
+        // the original design value.
+        currentSpeed = baseSpeed * scale;
+    }
+
     protected override Vector3 ComputeMove()
     {
         if (!initialized)
@@ -29,20 +58,19 @@ public class Pig : Animal
 
         float yOffset = Mathf.Sin(waveProgress * Mathf.PI * 2f * waveFrequency) * waveAmplitude;
 
-        // Horizontal base movement
+        // Horizontal base movement, using currentSpeed (already scaled)
         Vector3 baseMove = transform.position + Vector3.left * currentSpeed * Time.deltaTime;
 
         // Respect vertical offset by adding it to the wave
         float verticalOffset = externalOffset.y;
         baseMove.y = startY + yOffset + verticalOffset;
 
-        // Zero out the vertical offset so it isn’t double-counted later
+        // Zero out the vertical offset so it isn't double-counted later
         externalOffset.y = 0f;
 
         return baseMove;
     }
 
-    private float startY;
     private void AdjustStartYToFitWave()
     {
         float z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
@@ -59,3 +87,5 @@ public class Pig : Animal
         startY = Mathf.Clamp(transform.position.y, minY, maxY);
     }
 }
+
+

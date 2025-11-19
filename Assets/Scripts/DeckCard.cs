@@ -11,21 +11,41 @@ public class DeckCard : MonoBehaviour
     public Image icon;
     public RectTransform hoverPopup;
     public GameObject subPopup;
+    public AnimalData animalData;
+    public Boon boonData;
     private bool isPopup;
     private Tween a;
     private Tween b;
     public bool bounch;
-    public void Initialize(string titleStr, string descStr, Sprite iconSprite, string descStr2="")
+    public void Initialize(string titleStr, string descStr, Boon boon, string descStr2="")
     {
         title.text = titleStr;
         desc.text = descStr;
-        icon.sprite = iconSprite;
+        icon.sprite = boon.art;
+        boonData = boon;
         if (descStr2=="hidepopup")
         {
             subPopup.SetActive(false);
-            hoverPopup.DOLocalMoveY(hoverPopup.position.y - 100,0);
+            hoverPopup.DOLocalMoveY(hoverPopup.position.y+10,0);
         }
         if (descStr2!="")
+        {
+            desc2.text = descStr2;
+        }
+    }
+
+    public void Initialize(string titleStr, string descStr, AnimalData animal, string descStr2 = "")
+    {
+        title.text = titleStr;
+        desc.text = descStr;
+        animalData = animal;
+        icon.sprite = animal.deckIcon;
+        if (descStr2 == "hidepopup")
+        {
+            subPopup.SetActive(false);
+            hoverPopup.DOLocalMoveY(hoverPopup.position.y+10, 0);
+        }
+        if (descStr2 != "")
         {
             desc2.text = descStr2;
         }

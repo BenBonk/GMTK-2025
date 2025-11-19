@@ -61,8 +61,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9
-    m_Localized: "W\xE4hlen Sie ein Raubtier aus, das Sie zu Ihrem Stall hinzuf\xFCgen
-      m\xF6chten"
+    m_Localized: "W\xE4hle ein Raubtier aus, das du in deinen Stall stellen m\xF6chtest."
     m_Metadata:
       m_Items: []
   - m_Id: 10
@@ -71,7 +70,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112940
   - m_Id: 11
-    m_Localized: 'Punkteverlust:'
+    m_Localized: 'Punktverlust:'
     m_Metadata:
       m_Items:
       - rid: 241711563893112940
@@ -80,7 +79,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 13
-    m_Localized: 'Bargeldverlust:'
+    m_Localized: 'Geldverlust:'
     m_Metadata:
       m_Items: []
   - m_Id: 14
@@ -116,8 +115,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22
-    m_Localized: Raubtier. Zieht nahe Nicht-Raubtiere zu sich heran. Immun gegen
-      Push- und Pull-Effekte.
+    m_Localized: Raubtier. Zieht nahegelegene Nicht-Raubtiere zu sich heran. Immun
+      gegen Schub- und Zugeffekte.
     m_Metadata:
       m_Items: []
   - m_Id: 23
@@ -125,7 +124,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24
-    m_Localized: "Bewegt sich vor dem Verlassen an zuf\xE4llige Stellen auf dem Feld."
+    m_Localized: "Bewegt sich vor dem Verlassen des Spielfelds zu zuf\xE4lligen Positionen."
     m_Metadata:
       m_Items: []
   - m_Id: 25
@@ -141,8 +140,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28
-    m_Localized: "L\xE4uft am Rand des Feldes entlang und dr\xE4ngt andere Tiere
-      in die Mitte."
+    m_Localized: "Rennt am Rand des Feldes entlang und dr\xE4ngt andere Tiere in
+      die Mitte."
     m_Metadata:
       m_Items: []
   - m_Id: 29
@@ -150,7 +149,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 30
-    m_Localized: Raubtier. Bewegt sich sporadisch auf dem Feld auf und ab.
+    m_Localized: "Raubtier. Bewegt sich sporadisch auf und ab \xFCber das Spielfeld."
     m_Metadata:
       m_Items: []
   - m_Id: 31
@@ -158,7 +157,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: "Verlangsamt Raubtiere in der N\xE4he."
+    m_Localized: Verlangsamt nahegelegene Raubtiere.
     m_Metadata:
       m_Items: []
   - m_Id: 33
@@ -166,7 +165,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 34
-    m_Localized: "L\xE4uft schnell \xFCber das Feld."
+    m_Localized: "Rennt flink \xFCber das Feld."
     m_Metadata:
       m_Items: []
   - m_Id: 35
@@ -174,7 +173,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36
-    m_Localized: "M\xE4andert vorhersehbar."
+    m_Localized: Verlauft sich vorhersehbar.
     m_Metadata:
       m_Items: []
   - m_Id: 37
@@ -194,11 +193,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 41
-    m_Localized: "M\xE4\xE4\xE4\xE4\xE4\xE4\xE4!"
+    m_Localized: "M\xE4h!"
     m_Metadata:
       m_Items: []
   - m_Id: 42
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Schaf und eine Ziege
+    m_Localized: Fange eine Gruppe von Tieren mit einem Schaf und einer Ziege mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 43
@@ -206,24 +206,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 44
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Schwein und ein Huhn
+    m_Localized: Fange eine Gruppe von Tieren mit einem Schwein und einem Huhn mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 45
-    m_Localized: "Eckz\xE4hne"
+    m_Localized: Hunde
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund, einem Fuchs
-      und einem Wolf
+    m_Localized: Fange eine Gruppe von Tieren mit einem Hund, einem Fuchs und einem
+      Wolf mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 47
-    m_Localized: Goldesel
+    m_Localized: Cash Cow
     m_Metadata:
       m_Items: []
   - m_Id: 48
-    m_Localized: Lasso genau eine Kuh
+    m_Localized: Fange genau eine Kuh mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 49
@@ -231,16 +232,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50
-    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus 1 Huhn und 1 Pferd,
-      mit dem Lasso ein
+    m_Localized: "Fange eine Gruppe von Tieren mit einem Lasso ein, die 1 Huhn und
+      1 Pferd enth\xE4lt."
     m_Metadata:
       m_Items: []
   - m_Id: 51
-    m_Localized: "Schafe z\xE4hlen"
+    m_Localized: "Sch\xE4fchen z\xE4hlen"
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: Fangen Sie eine Gruppe von Tieren mit 3 Schafen ein
+    m_Localized: Fange eine Gruppe von Tieren mit 3 Schafen mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 53
@@ -248,16 +249,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 54
-    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Hund und einem
-      Wolf
+    m_Localized: Fange eine Gruppe von Tieren mit einem Hund und einem Wolf mit dem
+      Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 55
-    m_Localized: Bauerndilemma
+    m_Localized: Das Dilemma der Landwirte
     m_Metadata:
       m_Items: []
   - m_Id: 56
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Fuchs und ein Huhn
+    m_Localized: Fange eine Gruppe von Tieren mit einem Fuchs und einem Huhn mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 57
@@ -265,7 +267,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 58
-    m_Localized: Lasso eine Gruppe von Tieren, darunter eine Kuh und ein Huhn
+    m_Localized: Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Kuh und ein Huhn.
     m_Metadata:
       m_Items: []
   - m_Id: 59
@@ -273,7 +276,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 60
-    m_Localized: "Lasso eine Gruppe von Tieren, darunter ein Fuchs und drei H\xFChner"
+    m_Localized: "Fange eine Gruppe von Tieren mit einem Fuchs und 3 H\xFChnern mit
+      dem Lasso ein."
     m_Metadata:
       m_Items: []
   - m_Id: 61
@@ -281,8 +285,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 62
-    m_Localized: "Fangen Sie eine Gruppe von Tieren, darunter 3 B\xE4ren, mit dem
-      Lasso ein"
+    m_Localized: "Fange eine Gruppe von Tieren mit 3 B\xE4ren mit dem Lasso ein."
     m_Metadata:
       m_Items: []
   - m_Id: 63
@@ -290,24 +293,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 64
-    m_Localized: Lasso eine Gruppe von Tieren, darunter eine Kuh und eine Ziege
+    m_Localized: Fange eine Gruppe von Tieren mit einer Kuh und einer Ziege mit dem
+      Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 65
-    m_Localized: Heu da
+    m_Localized: Heu
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: Fangen Sie eine Gruppe von Tieren mit dem Lasso ein, darunter eine
-      Kuh, eine Ziege, ein Pferd und ein Schaf
+    m_Localized: "Fange eine Gruppe von Tieren mit einem Lasso ein, die eine Kuh,
+      eine Ziege, ein Pferd und ein Schaf enth\xE4lt."
     m_Metadata:
       m_Items: []
   - m_Id: 67
-    m_Localized: Honig-Schinken
+    m_Localized: Honigschinken
     m_Metadata:
       m_Items: []
   - m_Id: 68
-    m_Localized: "Lasso eine Gruppe von Tieren, darunter ein Schwein und ein B\xE4r"
+    m_Localized: "Fange eine Gruppe von Tieren mit einem Schwein und einem B\xE4ren
+      mit dem Lasso ein."
     m_Metadata:
       m_Items: []
   - m_Id: 69
@@ -315,16 +320,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 70
-    m_Localized: Lasso genau 1 Wolf
+    m_Localized: Fange genau 1 Wolf mit dem Lasso
     m_Metadata:
       m_Items: []
   - m_Id: 71
-    m_Localized: Alter MacDonald
+    m_Localized: Old MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 72
-    m_Localized: Fangen Sie eine Gruppe von Tieren, bestehend aus einem Huhn, einer
-      Kuh, einem Pferd, einem Schaf und einem Schwein, mit dem Lasso ein.
+    m_Localized: Fange eine Gruppe von Tieren mit einem Huhn, einer Kuh, einem Pferd,
+      einem Schaf und einem Schwein mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 73
@@ -332,7 +337,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 74
-    m_Localized: Lasso eine Gruppe von Tieren, darunter 2 Pferde
+    m_Localized: "Fange eine Gruppe von Tieren mit dem Lasso ein, die 2 Pferde enth\xE4lt."
     m_Metadata:
       m_Items: []
   - m_Id: 75
@@ -340,15 +345,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 76
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Schwein
+    m_Localized: Fange eine Gruppe von Tieren mit einem Schwein ein.
     m_Metadata:
       m_Items: []
   - m_Id: 77
-    m_Localized: Schwein im Schlafrock
+    m_Localized: "W\xFCrstchen im Schlafrock"
     m_Metadata:
       m_Items: []
   - m_Id: 78
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Schwein und ein Schaf
+    m_Localized: Fange eine Gruppe von Tieren mit einem Schwein und einem Schaf mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 79
@@ -356,16 +362,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 80
-    m_Localized: "Lasso eine Gruppe von Tieren, darunter eine Kuh und ein B\xE4r"
+    m_Localized: "Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Kuh und einen B\xE4ren."
     m_Metadata:
       m_Items: []
   - m_Id: 81
-    m_Localized: Raubtier
+    m_Localized: Apex
     m_Metadata:
       m_Items: []
   - m_Id: 82
-    m_Localized: "Lasso eine Gruppe von Tieren, darunter ein B\xE4r, ein Wolf und
-      ein Fuchs"
+    m_Localized: "Fange eine Gruppe von Tieren mit einem Puma und einem B\xE4ren
+      mit dem Lasso ein."
     m_Metadata:
       m_Items: []
   - m_Id: 83
@@ -373,8 +380,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: Lasso eine Gruppe von Tieren, bestehend aus einem Pferd und einem
-      Hund
+    m_Localized: Fange eine Gruppe von Tieren mit einem Pferd und einem Hund mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 85
@@ -382,8 +389,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 86
-    m_Localized: Fangen Sie eine Gruppe von Tieren mit dem Lasso ein, bestehend aus
-      3 Schweinen und 1 Wolf
+    m_Localized: "Fange eine Gruppe von Tieren mit dem Lasso ein, die 3 Schweine
+      und 1 Wolf enth\xE4lt."
     m_Metadata:
       m_Items: []
   - m_Id: 87
@@ -391,7 +398,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 88
-    m_Localized: Lasso eine Gruppe von Tieren, darunter ein Wolf und ein Schaf
+    m_Localized: Fange eine Gruppe von Tieren mit einem Wolf und einem Schaf mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 89
@@ -399,7 +407,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 90
-    m_Localized: "Oh OH! Sieht aus, als w\xE4re die Kuh wieder losgeworden"
+    m_Localized: "Oh je! Es sieht so aus, als w\xE4re die Kuh wieder ausgebrochen."
     m_Metadata:
       m_Items: []
   - m_Id: 91
@@ -408,33 +416,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Gute Arbeit! Wenn du deine Nutztiere b\xE4ndigst, bekommst du Punkte
+    m_Localized: "Gut gemacht! Das Zusammentreiben deiner Nutztiere bringt dir Punkte
       und Geld, aber du kannst nicht die ganze Nacht drau\xDFen bleiben!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
-    m_Localized: "Sie m\xFCssen gen\xFCgend Tiere zusammentreiben, um das Punkteziel
+    m_Localized: "Sie m\xFCssen gen\xFCgend Tiere zusammentreiben, um das Punktziel
       zu erreichen, bevor die Zeit abl\xE4uft."
     m_Metadata:
       m_Items: []
   - m_Id: 94
-    m_Localized: "Sie k\xF6nnen mehrere Tiere gleichzeitig mit dem Lasso einfangen
-      und so zus\xE4tzliche Punkte und Geld gewinnen!"
+    m_Localized: "Du kannst mehrere Tiere gleichzeitig mit dem Lasso fangen, um zus\xE4tzliche
+      Punkte und Geld zu erhalten!"
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: Versuchen Sie jetzt, diese beiden Viecher gemeinsam mit dem Lasso
+    m_Localized: Versuchen Sie nun, diese beiden Tierchen zusammen mit dem Lasso
       einzufangen!
     m_Metadata:
       m_Items: []
   - m_Id: 96
-    m_Localized: "Oh, oh, Vorsicht vor Raubtieren! Du verlierst Punkte, wenn du sie
+    m_Localized: "Oh je, Vorsicht vor Raubtieren! Du verlierst Punkte, wenn du sie
       mit deinen Tieren einf\xE4ngst."
     m_Metadata:
       m_Items: []
   - m_Id: 97
-    m_Localized: "Wenn der Tag vorbei ist, k\xF6nnen wir zur\xFCck in die Scheune
-      gehen, um unser hart verdientes Geld auszugeben!"
+    m_Localized: "Wenn der Tag zu Ende geht, k\xF6nnen wir zur\xFCck zur Scheune
+      fahren und unser hart verdientes Geld ausgeben!"
     m_Metadata:
       m_Items: []
   - m_Id: 98
@@ -442,32 +450,32 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 99
-    m_Localized: "Von hier aus k\xF6nnen Sie im Laufe des Tages neue Tiere hinzuf\xFCgen,
-      die Sie h\xFCten k\xF6nnen!"
+    m_Localized: "Von hier aus k\xF6nnen Sie neue Tiere hinzuf\xFCgen, die im Laufe
+      des Tages eingefangen werden sollen!"
     m_Metadata:
       m_Items: []
   - m_Id: 100
-    m_Localized: "Sie k\xF6nnen alle Tiere anzeigen, die im Laufe des Tages erscheinen
-      k\xF6nnten, indem Sie auf die Schaltfl\xE4che oben links klicken"
+    m_Localized: "Sie k\xF6nnen alle Tiere, die im Laufe des Tages erscheinen k\xF6nnten,
+      anzeigen lassen, indem Sie auf die Schaltfl\xE4che oben links klicken."
     m_Metadata:
       m_Items: []
   - m_Id: 101
-    m_Localized: "Sie k\xF6nnen auch m\xE4chtige Segnungen hinzuf\xFCgen, die Ihnen
-      zus\xE4tzliche Punkte geben, wenn Sie bestimmte Kombinationen von Tieren einfangen"
+    m_Localized: "Du kannst au\xDFerdem m\xE4chtige Boni hinzuf\xFCgen, die dir beim
+      Einfangen bestimmter Tierkombinationen zus\xE4tzliche Punkte einbringen."
     m_Metadata:
       m_Items: []
   - m_Id: 102
-    m_Localized: "Hier k\xF6nnen Sie Ihre Tiere aufr\xFCsten, damit sie Ihnen mehr
-      Punkte und Geld einbringen!"
+    m_Localized: Hier kannst du deine Tiere verbessern, damit sie dir mehr Punkte
+      und Geld einbringen!
     m_Metadata:
       m_Items: []
   - m_Id: 103
-    m_Localized: "Schlie\xDFlich k\xF6nnen Sie den Shop einmal pro Tag neu w\xFCrfeln,
-      zu einem Preis, der dauerhaft steigt!"
+    m_Localized: "Schlie\xDFlich k\xF6nnen Sie den Shop einmal t\xE4glich neu ausw\xFCrfeln,
+      allerdings zu einem Preis, der sich dauerhaft erh\xF6ht!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
-    m_Localized: Du bist ins Bett gegangen ...
+    m_Localized: Du bist ins Bett gegangen...
     m_Metadata:
       m_Items: []
   - m_Id: 105
@@ -492,7 +500,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 110
-    m_Localized: Lernprogramm
+    m_Localized: Tutorial
     m_Metadata:
       m_Items: []
   - m_Id: 1416843862691840
@@ -507,13 +515,9 @@ MonoBehaviour:
     m_Localized: Weitermachen
     m_Metadata:
       m_Items: []
-  - m_Id: 3154139489218560
-    m_Localized: Willkommen im Logbuch!
-    m_Metadata:
-      m_Items: []
   - m_Id: 3154139535355904
-    m_Localized: Klicken Sie oben auf eine Registerkarte, um Ihre Statistiken und
-      Aufzeichnungen anzuzeigen!
+    m_Localized: Klicken Sie oben auf einen Tab, um Ihre Statistiken und Rekorde
+      anzuzeigen!
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355905
@@ -525,11 +529,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355907
-    m_Localized: 'Gesamtzahl der gefesselten Tiere:'
+    m_Localized: 'Insgesamt eingefangene Tiere:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355908
-    m_Localized: "Top 3 der am h\xE4ufigsten gekauften Tiere:"
+    m_Localized: 'Die 3 meistgekauften Tiere:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355909
@@ -541,19 +545,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355911
-    m_Localized: "H\xF6chste Punkte in einem einzelnen Lasso:"
+    m_Localized: "H\xF6chste Punktzahl in einem einzigen Lasso:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355912
-    m_Localized: Segen
+    m_Localized: Vorteile
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "Die 3 am h\xE4ufigsten gekauften Segen:"
+    m_Localized: "Die 3 am h\xE4ufigsten gekauften Vorteile:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
-    m_Localized: 'Anzahl der gekauften Segnungen:'
+    m_Localized: 'Anzahl der gekauften Vorteile:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355915
@@ -561,7 +565,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355916
-    m_Localized: "H\xF6chstes erreichtes Tierlevel:"
+    m_Localized: "H\xF6chste erreichte Tierstufe:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355917
@@ -569,19 +573,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355918
-    m_Localized: "H\xF6chster Bargeldbetrag mit einem einzigen Lasso:"
+    m_Localized: "H\xF6chster Geldbetrag in einem einzigen Lasso:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355919
-    m_Localized: "H\xF6chster gleichzeitig gehaltener Bargeldbestand:"
+    m_Localized: "H\xF6chste jemals gehaltene Bargeldsumme:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355920
-    m_Localized: 'Die meisten Wiederholungen in einem einzigen Spiel:'
+    m_Localized: "Die meisten Neuw\xFCrfe in einem einzigen Spiel:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
-    m_Localized: 'Gesamtzahl der Wiederholungen:'
+    m_Localized: "Gesamtzahl der Neuw\xFCrfe:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550209
@@ -589,11 +593,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550210
-    m_Localized: "H\xF6chste Rundenzahl:"
+    m_Localized: "H\xF6chste gerundete Zahl:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "H\xF6chste Rundenzahl bei maximalem Schwierigkeitsgrad:"
+    m_Localized: "H\xF6chste gerundete Zahl bei maximalem Schwierigkeitsgrad:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
@@ -609,7 +613,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3161374273548290
-    m_Localized: Segen
+    m_Localized: Vorteile
     m_Metadata:
       m_Items: []
   - m_Id: 3161374273548291
@@ -645,7 +649,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206017
-    m_Localized: Framerate-Obergrenze
+    m_Localized: Framerate-Begrenzung
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206018
@@ -657,7 +661,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206020
-    m_Localized: Spezialeffekte
+    m_Localized: SFX
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206021
@@ -669,7 +673,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206023
-    m_Localized: Maximiertes Fenster
+    m_Localized: Fenster maximiert
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206024
@@ -685,11 +689,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5772790197366784
-    m_Localized: Reroll-Shop?
+    m_Localized: Reroll Shop?
     m_Metadata:
       m_Items: []
   - m_Id: 6436971002093568
-    m_Localized: Sie gewinnen!
+    m_Localized: Du hast gewonnen!
     m_Metadata:
       m_Items: []
   - m_Id: 6436971056619520
@@ -725,7 +729,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: "Rundenl\xE4nge:"
+    m_Localized: "Runde L\xE4nge:"
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -737,11 +741,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809032
-    m_Localized: 'Raubtiere starten:'
+    m_Localized: 'Startende Raubtiere:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809033
-    m_Localized: 'Shop-Preise:'
+    m_Localized: 'Ladenpreise:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809034
@@ -765,11 +769,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396685721600
-    m_Localized: Wird noch bekannt gegeben
+    m_Localized: TBD
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607680
-    m_Localized: Wird noch bekannt gegeben
+    m_Localized: TBD
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607681
@@ -777,16 +781,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Es besteht die M\xF6glichkeit, dass ein Schaf ein schwarzes Schaf
-      ist, wodurch Ihr Lasso beim Lassofangen einmal erneut ausgel\xF6st wird."
+    m_Localized: "Die Chance besteht, dass ein Schaf ein schwarzes Schaf ist, wodurch
+      dein Lasso einmalig erneut ausgel\xF6st wird, wenn du es eingefangen hast."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
-    m_Localized: Wird noch bekannt gegeben
+    m_Localized: TBD
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607684
-    m_Localized: Wird noch bekannt gegeben
+    m_Localized: TBD
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607685
@@ -794,8 +798,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: Katzen werden zum wertvollsten Tier in Ihrem Lasso, wenn sie gefangen
-      werden
+    m_Localized: Katzen werden zum wertvollsten Tier in deinem Lasso, wenn sie gefangen
+      werden.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -803,7 +807,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus bei Gefangennahme mitten im Sprung
+    m_Localized: Bonus bei Fang mitten im Sprungangriff
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
@@ -811,8 +815,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: Hunde verjagen Raubtiere. Hunde sind +5,0x Bargeld wert, wenn sie
-      mit einem Raubtier eingefangen werden
+    m_Localized: Hunde vertreiben Raubtiere. Hunde sind +5,0x Geld wert, wenn sie
+      zusammen mit einem Raubtier eingefangen werden.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -820,26 +824,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607692
-    m_Localized: "B\xE4ren haben die M\xF6glichkeit, Winterschlaf zu halten und im
-      Schlaf Punkte zu sammeln."
+    m_Localized: "B\xE4ren haben die M\xF6glichkeit, in den Winterschlaf zu verfallen
+      und dabei an Punktwert zu gewinnen."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607693
-    m_Localized: Halten Sie Ihre Pferde
+    m_Localized: Immer mit der Ruhe!
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607694
-    m_Localized: Pferde sind langsamer und bleiben kurz am linken Bildschirmrand
-      stehen
+    m_Localized: Pferde sind langsamer und halten kurz am linken Bildschirmrand an.
+      Pferde bringen +10 Punkte.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607695
-    m_Localized: Muh-Trinkgeldgeber
+    m_Localized: Moo-tiplier
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: "Jede gefangene Kuh z\xE4hlt das 0,25-fache des globalen Punktemultiplikators
-      und wird in jeder Runde oder beim Fang eines Raubtiers zur\xFCckgesetzt."
+    m_Localized: "Jede gefangene Kuh erh\xF6ht den globalen Punktemultiplikator um
+      0,25x, wobei der Z\xE4hler zu Beginn jeder Runde oder beim Fang eines Raubtiers
+      zur\xFCckgesetzt wird."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801984
@@ -847,17 +852,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801985
-    m_Localized: "Schweine k\xF6nnen zuf\xE4llig mit einem Zylinder erscheinen, in
-      diesem Fall sind sie +50 Bargeld und +25 Punkte wert"
+    m_Localized: "Schweine k\xF6nnen zuf\xE4llig mit einem Zylinderhut erscheinen;
+      in diesem Fall sind sie +50 Geld und +25 Punkte wert."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801986
-    m_Localized: Hasenpfote
+    m_Localized: "Hasenfu\xDF"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801987
-    m_Localized: Hasen haben eine 25%ige Chance, doppelte Punkte zu sammeln, wenn
-      sie mit dem Lasso eingefangen werden.
+    m_Localized: Hasen haben eine 25%ige Chance, die gesammelten Punkte zu verdoppeln,
+      wenn sie mit dem Lasso gefangen werden.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801988
@@ -865,9 +870,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: "Ziegen ziehen jetzt alle Raubtiere auf dem Bildschirm an. Ziegen
-      sind +12 Punkte und +12 Bargeld f\xFCr jedes mit einer Ziege gefangene Raubtier
-      wert"
+    m_Localized: "Ziegen ziehen nun alle Raubtiere auf dem Bildschirm an. F\xFCr
+      jedes mit einer Ziege gefangene Raubtier gibt es +12 Punkte und +12 Geld."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990
@@ -875,7 +879,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801991
-    m_Localized: "F\xFCchse tauschen Statistiken mit"
+    m_Localized: "F\xFCchse haben die gleichen Statistiken wie"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801992
@@ -883,8 +887,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801993
-    m_Localized: "Jede Maus, die Sie fangen, z\xE4hlt als drei M\xE4use, M\xE4use
-      bewegen sich jetzt zuf\xE4llig"
+    m_Localized: "Jede gefangene Maus z\xE4hlt als drei M\xE4use, die M\xE4use bewegen
+      sich nun zuf\xE4llig."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
@@ -892,16 +896,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
-    m_Localized: "W\xF6lfe vermehren sich jetzt in Rudeln von zwei oder drei"
+    m_Localized: "W\xF6lfe erscheinen nun in Rudeln von 2 oder 3 Tieren. Das Fangen
+      von mindestens 5 W\xF6lfen mit einem einzigen Lasso bringt x25 Punkte."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801996
-    m_Localized: Absoluter Wert
+    m_Localized: Absolutwert
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801997
-    m_Localized: Wenn das Endergebnis eines Lassos negativ ist, wird es stattdessen
-      positiv sein
+    m_Localized: Wenn das Endergebnis eines Lasso negativ ist, wird es stattdessen
+      positiv sein.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801998
@@ -909,7 +914,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Die Tierpreise im Shop werden jetzt zuf\xE4llig festgelegt."
+    m_Localized: "Die Tierpreise im Shop werden jetzt zuf\xE4llig generiert."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -917,28 +922,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802001
-    m_Localized: "Verdienen Sie +10 Punkte f\xFCr jede unterschiedliche Art, die
-      Sie mit dem Lasso fangen."
+    m_Localized: "Erhalte +10 Punkte f\xFCr jede verschiedene Tierart, die du mit
+      dem Lasso einf\xE4ngst."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802002
-    m_Localized: Reiche Ernte
+    m_Localized: Reichhaltige Ernte
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802003
-    m_Localized: "+20 zus\xE4tzliches Bargeld am Ende der Runde"
+    m_Localized: "+25 zus\xE4tzliches Bargeld am Ende der Runde"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802004
-    m_Localized: Capture Clock
+    m_Localized: Takt erfassen
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802005
-    m_Localized: "Jedes erfolgreiche Lasso verl\xE4ngert den Rundentimer um 0,5 Sekunden"
+    m_Localized: "Jeder erfolgreiche Lasso verl\xE4ngert die Rundenzeit um 0,5 Sekunden."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802006
-    m_Localized: Bargeldfang
+    m_Localized: Geldfang
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
@@ -950,15 +955,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
-    m_Localized: Erhalten Sie am Ende jeder Runde 10 % Zinsen
+    m_Localized: Sie erhalten am Ende jeder Runde 10 % Zinsen in bar.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802010
-    m_Localized: "Fr\xFChbucher"
+    m_Localized: "Fr\xFChbucherpreis"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802011
-    m_Localized: Das erste Lasso jeder Runde bringt die doppelte Punktzahl und Bargeld
+    m_Localized: Der erste Lassowurf in jeder Runde bringt doppelte Punkte und doppeltes
+      Bargeld.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802012
@@ -966,25 +972,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802013
-    m_Localized: "Wenn Sie diesen Segen halten, verhindern Sie das n\xE4chste Mal,
-      dass Sie die Punkteanforderung verlieren und werfen Sie"
+    m_Localized: "Wenn du diesen Vorteil besitzt, verhindere, dass du das n\xE4chste
+      Mal aufgrund der Punktvoraussetzung verlierst, und lege ihn ab."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802014
-    m_Localized: "Frische Br\xFChe"
+    m_Localized: Frischware
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Der Shop kann jetzt dreimal pro Shop neu gew\xFCrfelt werden, statt
-      einmal"
+    m_Localized: "Der Shop kann nun dreimal pro Shop neu ausgew\xFCrfelt werden,
+      anstatt nur einmal."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802016
-    m_Localized: Ave Maria
+    m_Localized: "Gegr\xFC\xDFet seist du, Maria"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802017
-    m_Localized: Alle Punkte werden in den letzten 10 Sekunden jeder Runde verdoppelt
+    m_Localized: In den letzten 10 Sekunden jeder Runde werden alle Punkte verdoppelt.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802018
@@ -992,8 +998,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Erhalten Sie +20 % Punktebonus f\xFCr jeden Nicht-Raubtier in einem
-      Lasso, statt 10 %"
+    m_Localized: "Erhalte einen Punktebonus von +20 % f\xFCr jedes Nicht-Raubtier
+      im Lasso, anstatt 10 %."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1001,11 +1007,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802021
-    m_Localized: "Rundenl\xE4nge um 10 Sekunden erh\xF6ht"
+    m_Localized: "Die Rundenl\xE4nge wurde um 10 Sekunden erh\xF6ht."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802022
-    m_Localized: Punktfreunde
+    m_Localized: Point Pals
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802023
@@ -1017,26 +1023,26 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802025
-    m_Localized: Der Predator-Auswahlbildschirm erscheint jetzt nur noch alle 5 Runden
-      statt alle 3 Runden
+    m_Localized: Der Raubtier-Auswahlbildschirm erscheint nun nur noch alle 5 Runden
+      anstatt alle 3 Runden.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Landarbeiter-Veteran
+    m_Localized: Erfahrener Landarbeiter
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
-    m_Localized: "W\xE4hrend sie sich in deinem Segensdeck befinden, wird das Level
-      aller Tiere um 2 erh\xF6ht"
+    m_Localized: "Bis dieser Vorteil ersetzt wird, wird das Level aller Tiere um
+      2 erh\xF6ht."
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069376
-    m_Localized: Eggstravagant
+    m_Localized: Extravagant
     m_Metadata:
       m_Items: []
   - m_Id: 8933137060069377
-    m_Localized: "H\xFChner k\xF6nnen jetzt Eier legen, die beim Einfangen mit dem
-      Lasso 1,5 Punkte bringen."
+    m_Localized: "H\xFChner k\xF6nnen nun Eier legen, die beim Einfangen mit dem
+      Lasso einen 1,5-fachen Punktemultiplikator geben."
     m_Metadata:
       m_Items: []
   - m_Id: 9587820992790528
@@ -1048,11 +1054,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169344
-    m_Localized: "Im vollst\xE4ndigen Spiel enthalten:"
+    m_Localized: 'Im vollen Spielverlauf:'
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169345
-    m_Localized: 20 neue Schwierigkeitsmodi!
+    m_Localized: 20 neue Schwierigkeitsgrade!
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169346
@@ -1064,23 +1070,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169348
-    m_Localized: Jede Menge weitere Vorteile!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 13201600347766784
-    m_Localized: "Nachdem Sie nun die Grundlagen kennen, k\xF6nnen wir loslegen!"
+    m_Localized: Viele weitere Vorteile!
     m_Metadata:
       m_Items: []
   - m_Id: 14715454701920256
-    m_Localized: "W\xE4hle einen Segen zum Ersetzen aus"
+    m_Localized: "W\xE4hlen Sie einen Vorteil aus, der ersetzt werden soll."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117449703424
-    m_Localized: Alter MacDonald
+    m_Localized: Old MacDonald
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755328
-    m_Localized: "Erh\xE4lt nach jeder Runde das doppelte Tagesgeld."
+    m_Localized: "Erh\xE4lt nach jeder Runde den doppelten Tageseinsatz."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1088,20 +1090,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949632
-    m_Localized: "Bietet im Shop 3 M\xF6glichkeiten f\xFCr Tier-Upgrades. Tier-Upgrades
-      sind g\xFCnstiger."
+    m_Localized: "Im Shop stehen 3 Optionen f\xFCr Tier-Upgrades zur Verf\xFCgung.
+      Tier-Upgrades sind g\xFCnstiger."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
-    m_Localized: Spielen Sie das Spiel einmal durch, um diesen Farmer freizuschalten.
+    m_Localized: "Schlie\xDFe das Spiel einmal ab, um diesen Bauern freizuschalten."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608561684480
-    m_Localized: Juhuu!
+    m_Localized: Juhu!
     m_Metadata:
       m_Items: []
   - m_Id: 19461608628793344
-    m_Localized: 'Du hast freigeschaltet:'
+    m_Localized: 'Du hast Folgendes freigeschaltet:'
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376256
@@ -1109,16 +1111,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376257
-    m_Localized: "Gew\xE4hrt 1 kostenlosen Reroll pro Shop"
+    m_Localized: "Gew\xE4hrt 1 kostenlosen Neuwurf pro Shop"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376258
-    m_Localized: Segensbonus
+    m_Localized: Vorteile Bonus
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376259
-    m_Localized: "+2 Punkte und +1 Bargeld pro Segen in deinem Deck f\xFCr jedes
-      erfolgreiche Lasso"
+    m_Localized: "+2 Punkte und +1 Geld pro Vorteil in deinem Deck f\xFCr jeden erfolgreichen
+      Lasso"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376260
@@ -1126,7 +1128,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376261
-    m_Localized: "Das in Ihrem Deck am h\xE4ufigsten vorkommende Tier wird in jedem
+    m_Localized: "Das am h\xE4ufigsten vorkommende Tier auf Ihrem Deck wird in jedem
       Gesch\xE4ft zum Kauf angeboten."
     m_Metadata:
       m_Items: []
@@ -1135,7 +1137,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376265
-    m_Localized: Verringerte Raubtier-Spawnrate
+    m_Localized: Verringerte Laichrate der Raubtiere
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376266
@@ -1143,8 +1145,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376267
-    m_Localized: "F\xFCr jeweils 3 Nicht-Raubtiere in einem Lasso erhalten Sie +3
-      Bargeld anstelle des \xFCblichen +1 Bargelds"
+    m_Localized: "F\xFCr je 3 nicht-r\xE4uberische Tiere im Lasso erh\xE4ltst du
+      +5 Geld anstatt der \xFCblichen +1 Geld."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376268
@@ -1152,7 +1154,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Spieler k\xF6nnen jetzt im Shop Schulden von bis zu 100 $ machen"
+    m_Localized: "Sie k\xF6nnen jetzt bis zu -150 Bargeld im Gesch\xE4ft verschulden."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1160,25 +1162,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376271
-    m_Localized: Wenn Sie genau zwei identische Tiere einfangen, besteht eine Chance
-      von 1 zu 25, dieses Tier zu verbessern.
+    m_Localized: "Wenn du genau zwei identische Tiere mit dem Lasso f\xE4ngst, besteht
+      eine Chance von 1 zu 25, dass du dieses Tier aufwertest."
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Schlag einen Maulwurf
+    m_Localized: Hau den Maulwurf
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
-    m_Localized: "Maulw\xFCrfe tauchen gelegentlich im Laufe des Tages auf und bieten
-      +5 Bargeld und +5 Punkte, wenn sie mit dem Lasso gefangen werden"
+    m_Localized: "Maulw\xFCrfe tauchen gelegentlich tags\xFCber auf und bieten beim
+      Einfangen +7 Bargeld und +7 Punkte."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713324621824
-    m_Localized: "Gib mir f\xFCnf"
+    m_Localized: High Five
     m_Metadata:
       m_Items: []
   - m_Id: 19740713400119296
-    m_Localized: "+5 Cash und Punkte f\xFCr Lassos mit genau 5 Tieren"
+    m_Localized: "+5 Bargeld und Punkte f\xFCr Lassos mit genau 5 Tieren."
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313600
@@ -1186,17 +1188,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313601
-    m_Localized: x2 Punkte Multiplikator beim Fangen von 5 Tieren der gleichen Art
-      mit einem einzigen Lasso
+    m_Localized: Doppelte Punkte beim Fangen von 5 Tieren derselben Art mit einem
+      einzigen Lasso
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313602
-    m_Localized: Saubere Platte
+    m_Localized: Sauberer Teller
     m_Metadata:
       m_Items: []
   - m_Id: 19740713404313603
     m_Localized: +25 Bargeld, wenn am Ende jeder Runde keine Tiere auf dem Bildschirm
-      sind
+      zu sehen sind.
     m_Metadata:
       m_Items: []
   - m_Id: 20226222100799488
@@ -1204,8 +1206,411 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 20226222205657088
-    m_Localized: "-10 Sekunden pro Runde, +0,33x Cash-Multiplikator f\xFCr jedes
-      erfolgreiche Lasso"
+    m_Localized: "-10 Sekunden pro Runde, +0,33-facher Geldmultiplikator f\xFCr jeden
+      erfolgreichen Lasso-Einsatz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007566807040
+    m_Localized: "W\xE4hle eine Herausforderungsbelohnung!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276032
+    m_Localized: Spawnrate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276033
+    m_Localized: "Erh\xF6he die Anzahl der Tiere, die w\xE4hrend einer Runde erscheinen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276034
+    m_Localized: Bonus-Slot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276035
+    m_Localized: "Du kannst 1 zus\xE4tzlichen Vorteil behalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276036
+    m_Localized: Terrassenabbau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21217007663276037
+    m_Localized: Entferne 2 Tiere von deinem Tierdeck.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830084497408
+    m_Localized: "W\xE4hlen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21394830097080320
+    m_Localized: Tiere zu entfernen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628820951040
+    m_Localized: Ebene
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059904
+    m_Localized: Herausforderungsrunde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628888059905
+    m_Localized: "Grausame Kakteen: Lassos d\xFCrfen keine Kakteen enthalten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031424
+    m_Localized: "Schreckliches Steppenl\xE4uferkraut: Steppenl\xE4ufer zerrei\xDFen
+      Lassos bei Ber\xFChrung."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031425
+    m_Localized: "Killerbienen: Bienen stechen Tiere und verhindern so, dass diese
+      spielen k\xF6nnen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031426
+    m_Localized: "Problematischer R\xFCckenwind: Alle Tiere bewegen sich schneller"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031427
+    m_Localized: + Schmetterlinge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031428
+    m_Localized: + Schlamm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031429
+    m_Localized: + Mole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23036628909031430
+    m_Localized: + Blitz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400352923648
+    m_Localized: ABC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032512
+    m_Localized: Fange eine Gruppe von Tieren mit einem Alpaka und 2 Stallkatzen
+      ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032513
+    m_Localized: Alpaka im Wolfspelz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032514
+    m_Localized: Fange eine Gruppe von Tieren ein, darunter ein Alpaka und einen
+      Wolf.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032515
+    m_Localized: Athlet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032516
+    m_Localized: Fange eine Gruppe von Tieren ein, darunter ein Pferd und ein Puma.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032517
+    m_Localized: "Die Sch\xF6ne und das Biest"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032518
+    m_Localized: Fange eine Gruppe von Tieren mit einem Wildschwein und einem Schwein
+      mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032519
+    m_Localized: "Schwarzwei\xDF"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032520
+    m_Localized: Fange eine Gruppe Tiere mit dem Lasso ein, darunter eine Kuh, ein
+      Wildschwein und ein Kaninchen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032521
+    m_Localized: Kettenreaktion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032522
+    m_Localized: Fange eine Gruppe von Tieren mit dem Lasso ein, darunter eine Stallkatze,
+      ein Hund und eine Maus.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032523
+    m_Localized: Klippenkletterer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032524
+    m_Localized: Fangt eine Gruppe von Tieren ein, darunter ein Alpaka und eine Ziege.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032525
+    m_Localized: David gegen Goliath
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032526
+    m_Localized: "Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Maus und ein B\xE4r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032527
+    m_Localized: Katzen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032528
+    m_Localized: Fange eine Gruppe von Tieren ein, darunter eine Stallkatze und einen
+      Puma.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032529
+    m_Localized: Fluff und Apportieren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032530
+    m_Localized: Fange eine Gruppe von Tieren mit einem Alpaka und einem Hund mit
+      dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032531
+    m_Localized: Nahrungskette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032532
+    m_Localized: Fange eine Gruppe von Tieren mit einem Wolf, einer Katze und einer
+      Maus mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032533
+    m_Localized: Waldfest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032534
+    m_Localized: Fange eine Gruppe von Tieren mit einem Wolf, einem Hasen und einer
+      Maus mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032535
+    m_Localized: Sanfte Riesen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032536
+    m_Localized: Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Kuh, ein Pferd und ein Alpaka.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032537
+    m_Localized: Ziegenbock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032538
+    m_Localized: Fange eine Gruppe von Tieren mit 3 Ziegen ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032539
+    m_Localized: Frisur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032540
+    m_Localized: Fange eine Gruppe von Tieren mit einem Alpaka und einem Pferd mit
+      dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032541
+    m_Localized: Wildschweinjagd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032542
+    m_Localized: Fange eine Gruppe von Tieren mit dem Lasso ein, darunter 2 Wildschweine
+      und einen Hund.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032543
+    m_Localized: "H\xF6rner voraus!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032544
+    m_Localized: Fange eine Gruppe von Tieren mit einer Ziege und einem Wildschwein
+      mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032545
+    m_Localized: Sprung ins Ungewisse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032546
+    m_Localized: Fange eine Gruppe von Tieren mit einem Kaninchen und einem Puma
+      ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032547
+    m_Localized: "Bergst\xE4rke"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032548
+    m_Localized: Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Ziege, ein Puma und ein Alpaka.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032549
+    m_Localized: "Neun Schw\xE4nze, neun Leben"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032550
+    m_Localized: Fange eine Gruppe von Tieren mit einem Fuchs und einer Katze mit
+      dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032551
+    m_Localized: Peewee
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032552
+    m_Localized: Fange eine Gruppe von Tieren mit einem Hasen, einer Maus und einem
+      Huhn mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032553
+    m_Localized: Haustierpaket
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032554
+    m_Localized: Fange eine Gruppe von Tieren mit dem Lasso ein, darunter eine Stallkatze,
+      ein Hund und ein Kaninchen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032555
+    m_Localized: Der gestiefelte Kater
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032556
+    m_Localized: Fange eine Gruppe von Tieren mit einer Stallkatze ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032557
+    m_Localized: Es regnet Katzen und Hunde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032558
+    m_Localized: "Fange eine Gruppe von Tieren mit dem Lasso ein, die 2 Stallkatzen
+      und 2 Hunde enth\xE4lt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400420032559
+    m_Localized: Stille Verfolger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226816
+    m_Localized: Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Stallkatze, ein Puma und ein Fuchs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226817
+    m_Localized: Sanft und schnell
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226818
+    m_Localized: Fange eine Gruppe von Tieren mit einem Hasen, einer Maus und einem
+      Schaf mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226819
+    m_Localized: Quietschen oder kein Quietschen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400424226820
+    m_Localized: Fange eine Gruppe von Tieren mit einem Wildschwein, einem Schwein
+      und einer Maus mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421120
+    m_Localized: Ansturm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421121
+    m_Localized: Fange eine Gruppe Tiere mit einem Wildschwein und einem Pferd mit
+      dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421122
+    m_Localized: "Drei-G\xE4nge-Men\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421123
+    m_Localized: Fange eine Gruppe von Tieren mit einem Puma, einer Maus, einem Huhn
+      und einer Ziege mit dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421124
+    m_Localized: Tom und Jerry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421125
+    m_Localized: Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Stallkatze und ein Hund.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421126
+    m_Localized: Tusky
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421127
+    m_Localized: Fange eine Gruppe von Tieren mit einem Wildschwein ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421128
+    m_Localized: Wandernder Dorfbewohner
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421129
+    m_Localized: Fange eine Gruppe von Tieren mit 2 Alpakas ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421130
+    m_Localized: Winnie Puuh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421131
+    m_Localized: "Fange eine Gruppe von Tieren mit dem Lasso ein, darunter ein Kaninchen,
+      ein Schwein und ein B\xE4r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421132
+    m_Localized: Wollige Wanderer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23523400428421133
+    m_Localized: Fange eine Gruppe von Tieren mit einem Schaf und einem Alpaka ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537472
+    m_Localized: Trickser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23526779938537473
+    m_Localized: Fange eine Gruppe Tiere mit einem Fuchs und einem Kaninchen mit
+      dem Lasso ein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112623910912
+    m_Localized: Jetzt, wo Sie die Grundlagen kennen, legen wir los!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551270281216
+    m_Localized: Willkommen im Logbuch!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24856112636493824
+    m_Localized: "Je mehr Exemplare einer bestimmten Tierart man besitzt, desto h\xF6her
+      ist die Wahrscheinlichkeit, dass diese Tierart erscheint!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27389551341584384
+    m_Localized: "Nachts: H\xF6here Raubtierlaichrate"
     m_Metadata:
       m_Items: []
   references:

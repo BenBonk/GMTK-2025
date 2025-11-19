@@ -20,20 +20,53 @@ public class Dog : Animal
     [Range(0f, 1f)]
     public float approachSteer = 0.65f;     // 0 = pure zig-zag, 1 = pure pursuit while “approaching”
 
+    // speed system baselines
+    private float baseSpeed;
+    private float baseZigZagDuration;
+    private float basePushRadius;
+    private float basePushStrength;
+    private float _lastScale = 1f;
+
+
     // Legendary state
     private Animal chaseTarget = null;        // current active target for straight pursuit
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseSpeed = speed;
+        baseZigZagDuration = zigZagDuration;
+        basePushRadius = pushRadius;
+        basePushStrength = pushStrength;
+    }
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        speed = baseSpeed * scale;
+
+        float timeDiv = Mathf.Pow(scale, 0.5f);
+        zigZagDuration = Mathf.Max(0.05f, baseZigZagDuration / timeDiv);
+        pushRadius = basePushRadius * Mathf.Pow(scale, 0.25f);
+        pushStrength = basePushStrength * Mathf.Pow(scale, 0.35f);
+
+        if (_lastScale > 0f && !Mathf.Approximately(scale, _lastScale))
+        {
+            float k = scale / _lastScale;
+            zigTimer /= Mathf.Pow(k, 0.5f);
+        }
+        _lastScale = scale;
+
+        currentSpeed = speed;
+    }
+
 
     public override void Start()
     {
         base.Start();
-        // Spawner controls initial position; no custom spawn Y here.
-        // Initialize zig timer & initial vertical dir
         verticalDirection = (Random.value > 0.5f) ? +1 : -1;
         zigTimer = Mathf.Max(0.01f, zigZagDuration);
-        if (!legendary)
-        {
-            SetStartingEdge();
-        }
+        if (!legendary) SetStartingEdge();
+        currentSpeed = speed;
     }
 
     private void SetStartingEdge()
@@ -60,8 +93,6 @@ public class Dog : Animal
     protected override Vector3 ComputeMove()
     {
         // --- Always push nearby animals regardless of legendary state ---
-        // (We’ll call this at the end after we compose the new position.)
-        // We'll compute newPos first.
 
         if (!legendary)
         {
@@ -98,6 +129,14 @@ public class Dog : Animal
         }
 
         Vector3 pos = transform.position;
+
+        if (legendary)
+        {
+            if (chaseTarget != null && !chaseTarget.isLassoed && !chaseTarget.forceExit)
+                ModifySpeed("chase", 1.5f);   // apply chase boost
+            else
+                RevertSpeed("chase");                       // remove boost when not chasing
+        }
 
         if (chaseTarget != null && !chaseTarget.isLassoed && !chaseTarget.forceExit)
         {
@@ -176,6 +215,7 @@ public class Dog : Animal
             if (a == null || a == this) continue;
             if (!a.isPredator) continue;
             if (a.isLassoed) continue;
+            if(a.forceExit) continue;
 
             if (requireLeft && a.transform.position.x >= myPos.x)
                 continue;

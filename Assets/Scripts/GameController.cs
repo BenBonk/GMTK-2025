@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     [SerializeField] CaptureManager localCaptureManager;
     [SerializeField] AnimalLevelManager localAnimalLevelManager;
     [SerializeField] PredatorSelect localPredatorSelect;
+    [SerializeField] ChallengeRewardSelect localChallengeRewardSelect;
     [SerializeField] DescriptionManager localDescriptionManager;
     [SerializeField] LocalizationManager localLocalizationManager;
     [SerializeField] TMP_FontAsset localDefaultFont;
@@ -21,6 +22,11 @@ public class GameController : MonoBehaviour
     [SerializeField] FarmerSelectManager localFarmerSelectManager;
     [SerializeField] BoonManager localBoonManager;
     [SerializeField] WishlistGamePanel localWishlistPanel;
+    [SerializeField] RandomEventManager localRandomEventManager;
+    [SerializeField] ChallengeEventManager localChallengeEventManager;
+    [SerializeField] Material localLightningMat;
+    [SerializeField] PostProcessingManager localPostProcessingManager;
+    [SerializeField] SteamIntegration localSteamIntegration;
     void Awake()
     {
         instance = this;
@@ -110,5 +116,36 @@ public class GameController : MonoBehaviour
     {
         get { return instance.localWishlistPanel; }
         set { instance.localWishlistPanel = value; }
+    }
+    public static RandomEventManager randomEventManager
+    {
+        get { return instance.localRandomEventManager; }
+        set { instance.localRandomEventManager = value; }
+    }
+    public static ChallengeRewardSelect challengeRewardSelect
+    {
+        get { return instance.localChallengeRewardSelect; }
+        set { instance.localChallengeRewardSelect = value; }
+    }
+    public static Material lightningMat
+    {
+        get { return instance.localLightningMat; }
+        set { instance.localLightningMat = value; }
+    }
+    public static PostProcessingManager postProcessingManager
+    {
+        get { return instance.localPostProcessingManager; }
+        set { instance.localPostProcessingManager = value; }
+    }
+
+    public static ChallengeEventManager challengeEventManager
+    {
+        get { return instance.localChallengeEventManager; }
+        set { instance.localChallengeEventManager = value; }
+    }
+    public static SteamIntegration steamIntegration
+    {
+        get { return instance.localSteamIntegration; }
+        set { instance.localSteamIntegration = value; }
     }
 }

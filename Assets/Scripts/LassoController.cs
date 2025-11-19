@@ -60,6 +60,8 @@ public class LassoController : MonoBehaviour
     Vector2 debugTipTangent;
     bool debugTipCenterValid = false;
 
+    public static readonly HashSet<LineRenderer> ActiveLines = new HashSet<LineRenderer>();
+
     // runtime
     Transform tipXform;
 
@@ -73,6 +75,7 @@ public class LassoController : MonoBehaviour
     public Color negativeMultColor;
     public bool canLasso;
     private PauseMenu pauseMenu;
+    private SteamIntegration steamIntegration;
 
     LocalizationManager localization;
 
@@ -83,6 +86,7 @@ public class LassoController : MonoBehaviour
 
     private void Start()
     {
+        steamIntegration = GameController.steamIntegration;
         pauseMenu = GameController.pauseMenu;
         localization = GameController.localizationManager;
         boonManager = GameController.boonManager;
@@ -91,6 +95,11 @@ public class LassoController : MonoBehaviour
     void Update()
     {
         if (!canLasso || pauseMenu.isOpen) return;
+        if (isDrawing && (Input.GetMouseButtonDown(1)))
+        {
+            DestroyLassoExit(true);
+            return;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -106,15 +115,21 @@ public class LassoController : MonoBehaviour
         }
     }
 
+    public static void Unregister(LineRenderer lr)
+    {
+        if (lr) ActiveLines.Remove(lr);
+    }
+
+
     void StartLasso()
     {
         isDrawing = true;
         GameObject newLasso = Instantiate(lassoPrefab, Vector3.zero, Quaternion.identity);
         lineRenderer = newLasso.GetComponent<LineRenderer>();
+        ActiveLines.Add(lineRenderer);
         rawPoints.Clear();
         lineRenderer.positionCount = 0;
 
-        // lightweight tip anchor
         var tipGO = new GameObject("LassoTip");
         tipXform = tipGO.transform;
 
@@ -224,7 +239,7 @@ public class LassoController : MonoBehaviour
         Vector2 end = rawPoints[rawPoints.Count - 1];
 
         bool explicitlyClosed = (rawPoints[0] - rawPoints[rawPoints.Count - 1]).sqrMagnitude <= 1e-6f;
-        bool alreadyClosed = explicitlyClosed || Vector2.Distance(start, end) <= closeThreshold;
+        bool alreadyClosed = explicitlyClosed || Vector2.Distance(start, end) <= GetReleaseSnapWorld(releaseSnapPercent);
 
         if (!alreadyClosed)
         {
@@ -257,12 +272,17 @@ public class LassoController : MonoBehaviour
         List<Vector3> smoothClosed = GenerateSmoothLasso(rawPoints.ConvertAll(p => (Vector3)p), smoothingSubdivisions);
         smoothClosed.Add(smoothClosed[0]);
 
-
-
         var visualPoints = new List<Vector3>(smoothClosed);
         lineRenderer.positionCount = visualPoints.Count;
         lineRenderer.SetPositions(visualPoints.ToArray());
 
+        if (TryGetCactiInside(out var cactiInside))
+        {
+            FadeOutActiveLasso();
+            StartCoroutine(AnimateCactusHit(cactiInside));
+            AudioManager.Instance.PlaySFX("cactus_break");
+            return;
+        }
         // Compute bottom-of-lasso and bottom-center
         float zDepth = Mathf.Abs(Camera.main.transform.position.z - lineRenderer.transform.position.z);
         Vector3 screenBottomCenter = new Vector3(Screen.width / 2f, 0, zDepth);
@@ -496,6 +516,19 @@ public class LassoController : MonoBehaviour
             {
                 FBPP.SetFloat("highestPointsPerLasso", (float)total);
             }
+            if (total >= 10000000 && !steamIntegration.IsThisAchievementUnlocked("Point Insanity"))
+            {
+                steamIntegration.UnlockAchievement("Point Insanity");
+            }
+            else if (total >= 1000000 && !steamIntegration.IsThisAchievementUnlocked("Point Madness"))
+            {
+                steamIntegration.UnlockAchievement("Point Madness");
+            }
+            else if (total >= 100000 && !steamIntegration.IsThisAchievementUnlocked("Point Fever"))
+            {
+                steamIntegration.UnlockAchievement("Point Fever");
+            }
+
             //a
             group.transform.localScale = Vector3.zero;
 
@@ -645,31 +678,144 @@ public class LassoController : MonoBehaviour
 
         foreach (var animal in animals)
         {
-            // Use collider center if present; fall back to transform.position
+            if (!animal.CanBeLassoed) continue;
+
             var col = animal.GetComponent<Collider2D>();
             Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)animal.transform.position;
 
-            if (IsPointInPolygon(point, rawPoints))
+            if (IsPointInPolygon(point, rawPoints) && !animal.isLassoed)
             {
                 animal.isLassoed = true;
                 list.Add(animal.gameObject);
             }
         }
 
-        var eggs = GameObject.FindGameObjectsWithTag("NonAnimalLassoable");
+        var eggs = FindObjectsOfType<Lassoable>(false);
         foreach (var egg in eggs)
         {
             var col = egg.GetComponent<Collider2D>();
             Vector2 point = col ? (Vector2)col.bounds.center : (Vector2)egg.transform.position;
 
-            if (IsPointInPolygon(point, rawPoints))
+            if (egg.CompareTag("NonAnimalLassoable") && IsPointInPolygon(point, rawPoints))
             {
                 list.Add(egg.gameObject);
+                Debug.Log($"Lassoed: {egg.gameObject.name}");
             }
         }
 
         return list;
     }
+
+    bool TryGetCactiInside(out List<GameObject> cactiInside)
+    {
+        cactiInside = null;
+        if (rawPoints == null || rawPoints.Count < 3) return false;
+
+        var all = GameObject.FindGameObjectsWithTag("Cactus");
+        if (all == null || all.Length == 0) return false;
+
+        var list = new List<GameObject>();
+        foreach (var c in all)
+        {
+            var col = c.GetComponent<Collider2D>();
+            Vector2 p = col ? (Vector2)col.bounds.center : (Vector2)c.transform.position;
+
+            if (IsPointInPolygon(p, rawPoints))
+                list.Add(c);
+        }
+
+        if (list.Count == 0) return false;
+        cactiInside = list;
+        return true;
+    }
+
+    IEnumerator AnimateCactusHit(List<GameObject> cacti)
+    {
+        if (cacti == null || cacti.Count == 0) yield break;
+
+        // timings
+        float toRed = 0.15f;
+        float shakeDur = 0.25f;
+        float backDur = 0.25f;
+
+        // small 2D shake strength
+        Vector3 shakeStrength = new Vector3(0.15f, 0.15f, 0f);
+
+        // run all animations in parallel
+        var seqs = new List<Sequence>();
+        foreach (var go in cacti)
+        {
+            if (!go) continue;
+
+            // collect all sprite renderers under this cactus
+            var srs = go.GetComponentsInChildren<SpriteRenderer>(true);
+            if (srs == null || srs.Length == 0) continue;
+
+            // optional: temporarily bump sort order so they pop in front
+            var originalOrders = new int[srs.Length];
+            for (int i = 0; i < srs.Length; i++)
+            {
+                originalOrders[i] = srs[i].sortingOrder;
+                srs[i].sortingOrder = originalOrders[i] + 5;
+            }
+
+            // build one seq per cactus that:
+            // 1) flashes its sprites toward red,
+            // 2) shakes the transform,
+            // 3) returns sprites to original color,
+            // 4) restores sorting order.
+            var seq = DOTween.Sequence();
+
+            // cache original colors
+            var origColors = new Color[srs.Length];
+            for (int i = 0; i < srs.Length; i++) origColors[i] = srs[i].color;
+
+            // target "reddish" keeping alpha
+            void TintTowardRed(SpriteRenderer sr)
+            {
+                Color oc = sr.color;
+                // push hue toward red without nuking alpha
+                Color tgt = new Color(1f, oc.g * 0.35f, oc.b * 0.35f, oc.a);
+                seq.Join(sr.DOColor(tgt, toRed));
+            }
+
+            foreach (var sr in srs) TintTowardRed(sr);
+
+            // shake the cactus transform while it is red
+            seq.Join(go.transform.DOShakePosition(
+                shakeDur,
+                strength: shakeStrength,
+                vibrato: 20,
+                randomness: 90f,
+                snapping: false,
+                fadeOut: true
+            ));
+
+            // return to original colors
+            for (int i = 0; i < srs.Length; i++)
+            {
+                var sr = srs[i];
+                var oc = origColors[i];
+                seq.Append(sr.DOColor(oc, backDur));
+            }
+
+            // finally restore sorting order
+            seq.OnComplete(() =>
+            {
+                for (int i = 0; i < srs.Length; i++)
+                {
+                    if (srs[i]) srs[i].sortingOrder = originalOrders[i];
+                }
+            });
+
+            seqs.Add(seq);
+        }
+
+        // wait for the longest sequence to complete
+        float total = toRed + shakeDur + backDur;
+        yield return new WaitForSeconds(total);
+    }
+
 
     public void ShowCaptureFeedback((double pointBonus, double pointMult, double currencyBonus, double currencyMult, HashSet<Sprite> boonSprites) result)
     {
@@ -928,33 +1074,116 @@ public class LassoController : MonoBehaviour
 
     public void DestroyLassoExit(bool discardLineObject)
     {
-        // Kill the floating tip if it exists
         if (tipXform != null)
         {
             Destroy(tipXform.gameObject);
             tipXform = null;
         }
 
-        // Optionally destroy the line object
+        // FIX: unregister while we still have a valid reference
+        if (lineRenderer != null) Unregister(lineRenderer);
+
         if (discardLineObject && lineRenderer != null)
         {
             var go = lineRenderer.gameObject;
-            lineRenderer = null; // clear reference before destroy
+            lineRenderer = null;
             Destroy(go);
         }
         else
         {
-            // On success, keep the line 
-            lineRenderer = null; // but still clear reference
+            lineRenderer = null;
         }
 
-        // Reset state
         rawPoints.Clear();
         isDrawing = false;
         debugTipCenterValid = false;
     }
 
-    // ===== Geometry/utility from your version =====
+
+    public void FadeOutActiveLasso(float downDistance = 0.1f, float duration = 0.4f)
+    {
+        if (lineRenderer == null) return;
+
+        // stop draw particles, kill tip
+        if (drawParticles) drawParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        if (tipXform != null) { Destroy(tipXform.gameObject); tipXform = null; }
+
+        // snapshot current world positions
+        int n = lineRenderer.positionCount;
+        if (n <= 0) { DestroyLassoExit(true); return; }
+
+        var worldPts = new Vector3[n];
+        lineRenderer.GetPositions(worldPts);  // these are in world space because useWorldSpace is true
+
+        // capture original gradient (we will preserve ALL keys and just scale alpha)
+        Gradient original = lineRenderer.colorGradient;
+        var origColorKeys = original.colorKeys; // preserve as-is
+        var origAlphaKeys = original.alphaKeys; // we will scale these
+
+        // unregister this active line so nothing else hits it during fade
+        Unregister(lineRenderer);
+
+        // immediately clear controller state so gameplay continues
+        var lr = lineRenderer;
+        lineRenderer = null;
+        isDrawing = false;
+        rawPoints.Clear();
+        debugTipCenterValid = false;
+
+        // tween 0 -> 1; on update: move points down and fade alpha
+        float t = 0f;
+        var seq = DG.Tweening.DOTween.Sequence();
+
+        // we keep useWorldSpace = true; no parenting, no transform changes (no teleport)
+        // movement ease
+        Ease moveEase = Ease.InOutCubic;
+
+        // update function: apply offset and fade
+        void ApplyFrame(float v)
+        {
+            // move
+            float eased = DG.Tweening.Core.Easing.EaseManager.Evaluate(moveEase, null, v, 1f, 0f, 0f); // ease(0..1)
+            float dy = -Mathf.Abs(downDistance) * eased;
+
+            for (int i = 0; i < n; i++)
+            {
+                var p = worldPts[i];
+                worldPts[i] = new Vector3(p.x, p.y + dy, p.z);
+            }
+            if (lr != null) lr.SetPositions(worldPts);
+
+            // fade: scale alpha keys by (1 - v), preserve times
+            float aScale = 1f - v;
+            var fadedAlpha = new GradientAlphaKey[origAlphaKeys.Length];
+            for (int i = 0; i < origAlphaKeys.Length; i++)
+            {
+                fadedAlpha[i] = new GradientAlphaKey(origAlphaKeys[i].alpha * aScale, origAlphaKeys[i].time);
+            }
+            var g = new Gradient();
+            g.SetKeys(origColorKeys, fadedAlpha);
+            if (lr != null) lr.colorGradient = g;
+        }
+
+        seq.Join(DOTween.To(() => t, v => { t = v; ApplyFrame(t); }, 1f, duration));
+
+        // ensure it stays on top visually if needed (optional small nudge up in sorting)
+        var lrRenderer = lr != null ? lr.GetComponent<Renderer>() : null;
+        if (lr != null)
+        {
+            lr.sortingOrder += 1; // optional: keep above ground
+        }
+
+        // cleanup
+        seq.OnComplete(() =>
+        {
+            if (lr) Destroy(lr.gameObject);
+        });
+    }
+
+
+
+
+    // ===== Geometry/utility =====
 
     List<Vector3> GenerateSmoothLasso(List<Vector3> controlPoints, int subdivisions)
     {
@@ -1082,8 +1311,21 @@ public class LassoController : MonoBehaviour
         Vector3 bl = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, z));
         Vector3 tr = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, z));
         float screenWorldArea = Mathf.Abs(tr.x - bl.x) * Mathf.Abs(tr.y - bl.y);
-        return screenWorldArea * 0.004f;
+        return screenWorldArea * 0.002f;
     }
+
+    [SerializeField]
+    private float releaseSnapPercent = 0.02f;
+    private float GetReleaseSnapWorld(float percent)
+    {
+        float z = Mathf.Abs(Camera.main.transform.position.z - lineRenderer.transform.position.z);
+
+        Vector3 leftW = Camera.main.ScreenToWorldPoint(new Vector3(0f, 0f, z));
+        Vector3 rightW = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0f, z));
+        float worldWidth = Mathf.Abs(rightW.x - leftW.x);
+        return worldWidth * Mathf.Clamp01(percent);
+    }
+
 
     bool TryComputeCandidateLoopArea(int hitIndex, out float area)
     {
