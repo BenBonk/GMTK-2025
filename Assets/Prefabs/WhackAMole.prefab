@@ -164,4 +164,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19961849de462004498c51054f4b7eba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider2D: {fileID: 3426447474629447145}
+  col: {fileID: 3426447474629447145}
