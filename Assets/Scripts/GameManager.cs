@@ -850,12 +850,12 @@ public class GameManager : MonoBehaviour
         if (roundNumber % challengeRoundFrequency == 0)
         {
             // Erase, enable colors, type title
-            typer.ChangeTextAnimated("", 0.06f);
+            typer.ChangeTextAnimated("", 0.04f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);
             if (rich) rich.enabled = true;
             AudioManager.Instance.PlaySFX("challenge_display");
-            typer.ChangeTextAnimated(challengeRound.GetLocalizedString(), 0.06f, 0.06f);
+            typer.ChangeTextAnimated(challengeRound.GetLocalizedString(), 0.04f, 0.04f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);
         }
@@ -866,7 +866,7 @@ public class GameManager : MonoBehaviour
             typer.SetLabel(descTMP);
             typer.SetRichColorizer(null);
             typer.InstantSet("");
-            typer.ChangeTextAnimated(roundDescription,0.06f,0.06f);
+            typer.ChangeTextAnimated(roundDescription,0.04f,0.04f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration*3);
         }
