@@ -178,10 +178,10 @@ public class CaptureManager : MonoBehaviour
                 {
                     boonSprites.Add(boonManager.boonDict["NoahsArk"].art);
                     Animal chosenAnimal = animalsCaptured[0];
-                    GameController.animalLevelManager.SetLevel(chosenAnimal.animalData.animalName.GetLocalizedString(), GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.animalName.GetLocalizedString()) + 1);
-                    if (GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.animalName.GetLocalizedString()) > FBPP.GetInt("highestAnimalLevel"))
+                    GameController.animalLevelManager.SetLevel(chosenAnimal.animalData.name, GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.name) + 1);
+                    if (GameController.animalLevelManager.GetLevel(chosenAnimal.name) > FBPP.GetInt("highestAnimalLevel"))
                     {
-                        FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.animalName.GetLocalizedString()));
+                        FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalData.name));
                     }
                 }
             }

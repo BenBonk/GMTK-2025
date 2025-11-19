@@ -28,7 +28,7 @@ public class UpgradeShopItem : ShopItem
         }
         AnimalLevelManager levelManager = GameController.animalLevelManager;
         chosenAnimal = possibleAnimals[Random.Range(0, possibleAnimals.Count)];
-        int animalLevel = levelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
+        int animalLevel = levelManager.GetLevel(chosenAnimal.name);
         levelText.text = levelString.GetLocalizedString() + " " + (2+animalLevel);
 
         UpdateDescription();
@@ -49,7 +49,7 @@ public class UpgradeShopItem : ShopItem
     void UpdateDescription()
     {
         descriptionText.text = GameController.descriptionManager.GetAnimalLevelDescription(chosenAnimal);
-        int animalLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString());
+        int animalLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.name);
         levelText.text = levelString.GetLocalizedString() + " " + (2+animalLevel);
     }
     public override void PurchaseUpgrade()
@@ -61,12 +61,12 @@ public class UpgradeShopItem : ShopItem
             shopManager. UpdateCashText();
             canPurchase = false;
             FBPP.SetInt("totalUpgradesPurchased", FBPP.GetInt("totalUpgradesPurchased")+1);
-            int newLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) + 1;
-            GameController.animalLevelManager.SetLevel(chosenAnimal.animalName.GetLocalizedString(), newLevel);
+            int newLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.name) + 1;
+            GameController.animalLevelManager.SetLevel(chosenAnimal.name, newLevel);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
-            if (GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()) > FBPP.GetInt("highestAnimalLevel"))
+            if (GameController.animalLevelManager.GetLevel(chosenAnimal.name) > FBPP.GetInt("highestAnimalLevel"))
             {
-                FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.animalName.GetLocalizedString()));
+                FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel(chosenAnimal.name));
             }
 
             if (newLevel == 9 && !GameController.steamIntegration.IsThisAchievementUnlocked("Beefy"))
