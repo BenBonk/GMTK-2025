@@ -8,6 +8,11 @@ jobs:
       if: github.ref == 'refs/heads/demo'
       steps:
 
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false
+
       - name: Clear caches
         uses: easimon/wipe-cache@main
         with:
