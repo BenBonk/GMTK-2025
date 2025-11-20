@@ -844,8 +844,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: Goats now attrract all predators on the screen, Goats are worth
-      +12 points and +12 cash for each predator captured with a goat
+    m_Localized: Goats now attract all predators on the screen, Goats are worth +12
+      points and +12 cash for each predator captured with a goat
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990

@@ -66,7 +66,7 @@ public class LassoController : MonoBehaviour
     Transform tipXform;
 
     // feedback colors/audio
-    public float feedbackDelay = 0.5f;    // delay between each text popup
+    public float feedbackDelay = 0.7f;    // delay between each text popup
     public Color pointBonusColor;
     public Color negativePointBonusColor;
     public Color cashBonusColor;

@@ -871,7 +871,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396773801989
     m_Localized: "Ziegen ziehen nun alle Raubtiere auf dem Bildschirm an. F\xFCr
-      jedes mit einer Ziege gefangene Raubtier gibt es +12 Punkte und +12 Geld."
+      jedes mit einer Ziege gefangene Raubtier gibt es +12 Punkte und +12 Bargeld."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990

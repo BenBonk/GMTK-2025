@@ -852,8 +852,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
-    m_Localized: As cabras agora atraem todos os predadores na tela. Cada cabra vale
-      +12 pontos e +12 em dinheiro para cada predador capturado com uma cabra.
+    m_Localized: Agora, as cabras atraem todos os predadores na tela. Cada cabra
+      vale +12 pontos e +12 em dinheiro para cada predador capturado com uma cabra.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801990

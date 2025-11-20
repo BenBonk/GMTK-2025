@@ -181,6 +181,20 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(PlaySequentialRoutine(firstClipName, secondClipName, volumeMultiplier, delayBetween));
     }
 
+    public void PlaySimultaneousSFX(string a, string b, float volAx = 1f, float volBx = 1f)
+    {
+        if (sfxDict.TryGetValue(a, out var ca))
+        {
+            float va = sfxVolumeDict.TryGetValue(a, out var v) ? v : 1f;
+            sfxSource.PlayOneShot(ca, va * volAx * SfxMasterGain());
+        }
+        if (sfxDict.TryGetValue(b, out var cb))
+        {
+            float vb = sfxVolumeDict.TryGetValue(b, out var v2) ? v2 : 1f;
+            sfxSource.PlayOneShot(cb, vb * volBx * SfxMasterGain());
+        }
+    }
+
     private IEnumerator PlaySequentialRoutine(string firstClipName, string secondClipName, float volumeMultiplier, float delayBetween)
     {
         if (!sfxDict.TryGetValue(firstClipName, out var firstClip))

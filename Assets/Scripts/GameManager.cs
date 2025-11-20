@@ -318,7 +318,7 @@ public class GameManager : MonoBehaviour
                 value = 0;
                 break;
         }
-        return value;
+        return Math.Round(value / 5.0) * 5.0; ;
     }
 
     public double GetPointsRequirement(int round)
@@ -343,7 +343,7 @@ public class GameManager : MonoBehaviour
                 value = 0;
                 break;
         }
-        return value;
+        return Math.Round(value / 5.0) * 5.0; ;
     }
 
 
@@ -625,13 +625,26 @@ public class GameManager : MonoBehaviour
 
         if (remaining <= 10f && currentSecond != lastDisplayedSecond)
         {
-            lastDisplayedSecond = currentSecond;
+
 
             timerDisplay.color = timerWarningColor;
             timerDisplay.transform.localScale = Vector3.one * 1.3f;
-            AudioManager.Instance.PlaySFX("tick");
 
-
+            if (remaining <= 3 && currentSecond != lastDisplayedSecond)
+            {
+                if (remaining <=0)
+                {
+                }
+                else
+                {
+                    AudioManager.Instance.PlaySimultaneousSFX("tick", "last_seconds");
+                }
+            }
+            else
+            {
+                AudioManager.Instance.PlaySFX("tick");
+            }
+            lastDisplayedSecond = currentSecond;
             Sequence pulse = DOTween.Sequence();
             pulse.Append(timerDisplay.transform.DOScale(1.5f, 0.15f).SetEase(Ease.OutBack));
             pulse.Append(timerDisplay.transform.DOScale(1f, 0.2f).SetEase(Ease.OutExpo));
@@ -836,12 +849,12 @@ public class GameManager : MonoBehaviour
         if (roundNumber % challengeRoundFrequency == 0)
         {
             // Erase, enable colors, type title
-            typer.ChangeTextAnimated("", 0.06f);
+            typer.ChangeTextAnimated("", 0.04f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);
             if (rich) rich.enabled = true;
             AudioManager.Instance.PlaySFX("challenge_display");
-            typer.ChangeTextAnimated(challengeRound.GetLocalizedString(), 0.06f, 0.06f);
+            typer.ChangeTextAnimated(challengeRound.GetLocalizedString(), 0.04f, 0.04f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration);
         }
@@ -852,7 +865,7 @@ public class GameManager : MonoBehaviour
             typer.SetLabel(descTMP);
             typer.SetRichColorizer(null);
             typer.InstantSet("");
-            typer.ChangeTextAnimated(roundDescription,0.06f,0.06f);
+            typer.ChangeTextAnimated(roundDescription,0.04f,0.04f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration*3);
         }

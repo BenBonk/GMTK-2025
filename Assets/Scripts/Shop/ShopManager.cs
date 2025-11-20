@@ -187,6 +187,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateCashText()
     {
+        Debug.Log("update cash text");
         cashText.text = cashLocalString.GetLocalizedString() +" "+ LassoController.FormatNumber(player.playerCurrency);
         if (!GameController.gameManager)
         {

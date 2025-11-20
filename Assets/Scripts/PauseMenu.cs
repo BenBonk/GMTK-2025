@@ -56,7 +56,10 @@ public class PauseMenu : MonoBehaviour
         boonDeckTween = synergiesPanel.DOAnchorPosX(415, 0f).SetEase(Ease.InOutQuad).OnComplete(() => synergiesVisual.SetActive(false)).SetUpdate(true);
         deckOpen = false;
         synergiesOpen = false;
-        lassoController.DestroyLassoExit(true);
+        if (lassoController != null)
+        {
+            lassoController.DestroyLassoExit(true);
+        }
         if (shopManager != null)
         {
             shopManager.UpdateDeck(deckParent);
