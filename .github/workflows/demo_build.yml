@@ -1,4 +1,4 @@
-name: Beta Testing Release
+name: Demo Release
 
 on: [push, pull_request]
 jobs:
@@ -58,6 +58,11 @@ jobs:
       - name: Extract Version
         id: extract_version
         run: echo "version=${{ steps.github_release.outputs.version }}" >> $GITHUB_ENV
+
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false
 
       # Git LFS
       - name: Create LFS file list
