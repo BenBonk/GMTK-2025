@@ -231,16 +231,16 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3166efeb4b2db294a84a3857dbb68fa5, type: 3}
     volume: 1.7
   - name: challenge_wind
-    clip: {fileID: 8300000, guid: 1de15016136037b478ae94bd9035e232, type: 3}
+    clip: {fileID: 8300000, guid: 73de5942c72a40047a9306e1fec045f5, type: 3}
     volume: 0.2
   - name: challenge_desert
-    clip: {fileID: 8300000, guid: eb47ba7f84bd31447b765248f12acfdf, type: 3}
+    clip: {fileID: 8300000, guid: e098d7168de5b384fa790a0c2ff65bf1, type: 3}
     volume: 0.3
   - name: challenge_night
-    clip: {fileID: 8300000, guid: b5758764ad2f40749ac25acc60fe52fe, type: 3}
+    clip: {fileID: 8300000, guid: c2f4982b804fad24988c992b5e2f5cf0, type: 3}
     volume: 0.2
   - name: tutorial
-    clip: {fileID: 8300000, guid: 6094b87354c45a842a85e480377bf2fd, type: 3}
+    clip: {fileID: 8300000, guid: 251daced47978154fb76ce7e7f611698, type: 3}
     volume: 0.18
   ambientTracks:
   - name: ambient
