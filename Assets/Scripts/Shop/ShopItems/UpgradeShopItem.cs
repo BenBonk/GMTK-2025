@@ -58,7 +58,6 @@ public class UpgradeShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("ui_click");
             AudioManager.Instance.PlaySFX("coins");
-            shopManager. UpdateCashText();
             canPurchase = false;
             FBPP.SetInt("totalUpgradesPurchased", FBPP.GetInt("totalUpgradesPurchased")+1);
             int newLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.name) + 1;
@@ -105,6 +104,7 @@ public class UpgradeShopItem : ShopItem
 
             //triggers save, so goes last
             GameController.player.playerCurrency -= price;
+            shopManager. UpdateCashText();
         }
         else
         {

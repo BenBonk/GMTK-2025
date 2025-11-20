@@ -78,7 +78,6 @@ public class AnimalShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("coins");
             AudioManager.Instance.PlaySFX(chosenAnimal.name);
-            shopManager.UpdateCashText();
             StartCoroutine(DeckPulse());
             canPurchase = false;
             FBPP.SetInt(chosenAnimal.name+"_count", FBPP.GetInt(chosenAnimal.name+"_count")+1);
@@ -90,6 +89,7 @@ public class AnimalShopItem : ShopItem
             FBPP.SetInt("AnimalPurchasedThisGame", 1);
             //triggers save, goes last
             GameController.player.playerCurrency -= price;
+            shopManager.UpdateCashText();
         }
         else
         {

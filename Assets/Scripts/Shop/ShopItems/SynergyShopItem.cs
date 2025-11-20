@@ -84,7 +84,6 @@ public class SynergyShopItem : ShopItem
 
             if (GameController.player.boonsInDeck.Count<FBPP.GetInt("boonDeckSize",5))
             {
-                shopManager.UpdateCashText();
                 canPurchase = false;
                 FBPP.SetInt(chosenBoon.name, FBPP.GetInt(chosenBoon.name) + 1);
                 FBPP.SetInt("totalBoonsPurchased", FBPP.GetInt("totalBoonsPurchased") + 1);
@@ -110,6 +109,7 @@ public class SynergyShopItem : ShopItem
 
                 //triggers save, so goes last
                 GameController.player.playerCurrency -= price;
+                shopManager.UpdateCashText();
             }
             else
             {
