@@ -72,7 +72,7 @@ public class ShopManager : MonoBehaviour
             shopItem.canPurchase = true;
             shopItem.Initialize();
             shopItem.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
-        }
+        }//a
         UpdateCashText();
         List<Boon> chosenBoons = new List<Boon>();
         while (chosenBoons.Count < 3)
