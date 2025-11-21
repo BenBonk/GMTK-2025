@@ -14132,7 +14132,7 @@ MonoBehaviour:
   - {fileID: 5465896840286953389, guid: 4863d4a8874f4d64bbd84f51827e1835, type: 3}
   minCacti: 3
   maxCacti: 4
-  bee: {fileID: 6855987514067192795, guid: 0e9fd5666e641054180f414070b4069c, type: 3}
+  bee: {fileID: 6855987514067192795, guid: 7e9f379fffb650f4c9c5549d6933babd, type: 3}
   tumbleweed: {fileID: 3198163530796938129, guid: 404dd1fc263091d4bbd1b78f464aeeb9, type: 3}
   wind: {fileID: 648275335}
   lastEvent: 67
