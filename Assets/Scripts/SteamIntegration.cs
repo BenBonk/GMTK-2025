@@ -24,8 +24,8 @@ public class SteamIntegration : MonoBehaviour
     
     public void UnlockAchievement(string id)
     {
-        var ach = new Steamworks.Data.Achievement(id);
-        ach.Trigger();
+        //var ach = new Steamworks.Data.Achievement(id);
+        //ach.Trigger();
     }
     
     public void ClearAchievementStatus(string id)
