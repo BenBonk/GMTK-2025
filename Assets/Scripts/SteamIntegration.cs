@@ -19,7 +19,8 @@ public class SteamIntegration : MonoBehaviour
     
     public bool IsThisAchievementUnlocked(string id)
     {
-        return new Steamworks.Data.Achievement(id).State;
+        //return new Steamworks.Data.Achievement(id).State;
+        return true;
     }
     
     public void UnlockAchievement(string id)
