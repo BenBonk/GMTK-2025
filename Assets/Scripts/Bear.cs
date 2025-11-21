@@ -26,6 +26,38 @@ public class Bear : Animal
     public override bool IsRepelImmune => true;
     public Animator anim;
 
+    private float baseSpeed;
+    private float baseAcceleration;
+    private float baseAttractionStrength;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseSpeed = speed;
+        baseAcceleration = acceleration;
+        baseAttractionStrength = attractionStrength;
+    }
+
+    private float _lastScale = 1f;
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        speed = baseSpeed * scale;
+        acceleration = baseAcceleration / Mathf.Pow(scale, 0.5f);
+        attractionStrength = baseAttractionStrength * Mathf.Pow(scale, 0.8f);
+
+        if (state == BearState.MovingToCenter && _lastScale > 0f)
+        {
+            float k = scale / _lastScale; 
+                                           
+            moveDuration /= k;
+            moveTimer /= k;
+            speedTarget = speed;
+        }
+
+        _lastScale = scale;
+    }
+
+
     public override void Start()
     {
         base.Start();

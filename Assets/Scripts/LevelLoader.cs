@@ -10,21 +10,6 @@ namespace Level {
         private string certainScened;
         public StartScreenManager ss;
 
-        /*
-    private void Awake()
-    {
-        if (levelLoader == null)
-        {
-            levelLoader = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        { 
-            Destroy(gameObject);
-        }
-    }
-    */
-
         public void LoadNextLevel()
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
@@ -64,17 +49,6 @@ namespace Level {
             transition.SetTrigger("Start");
             yield return new WaitForSeconds(transitionTime);
             SceneManager.LoadScene(certainScened);
-        }
-        private void Update()
-        {
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                Restart();
-            }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                LoadNextLevel();
-            }
         }
         public void QuitGame()
         {

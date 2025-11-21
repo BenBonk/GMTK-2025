@@ -2,29 +2,33 @@ using UnityEngine;
 
 public class BarnCat : Animal
 {
-    [Header("Jump Motion")]
-    public float hopSpeed = 3.0f;      // movement speed while jumping
-    public float hopHeight = 1.0f;     // hop arc height
-    public float hopDuration = 0.55f;  // takeoff -> landing
+    public float hopSpeed = 3.0f;
+    public float hopHeight = 1.0f;
+    public float hopDuration = 0.55f;
 
-    [Header("Phase Durations")]
-    public float pauseBeforeTiltUp = 0.15f;   // pause (no tilt)
-    public float tiltUpDuration = 0.10f;      // tilt up while paused
-    public float pauseAfterTiltUp = 0.10f;    // pause, holding tilt up
-    public float tiltNeutralDuration = 0.18f; // tilt back to neutral 
+    public float pauseBeforeTiltUp = 0.15f;
+    public float tiltUpDuration = 0.10f;
+    public float pauseAfterTiltUp = 0.10f;
+    public float tiltNeutralDuration = 0.18f;
 
-    [Header("Long Rest")]
-    public int hopsPerLongRest = 3;         
+    public int hopsPerLongRest = 3;
     public float longRestDuration = 2.5f;
 
-    [Header("Tilt Angles")]
-    public float tiltBackAngle = 16f;         
-    public float tiltForwardAngle = 16f;     
+    public float tiltBackAngle = 16f;
+    public float tiltForwardAngle = 16f;
 
-    [Header("Vertical Drift (normal, during Jump)")]
-    public float verticalDriftSpeed = 0.25f;  // units/sec; positive = up
-    public float driftEdgeMargin = 0.05f;   // buffer from screen edge for bouncing
-    public float edgeBiasMargin = 0.5f;    // if starting a hop near an edge, drift away
+    public float verticalDriftSpeed = 0.25f;
+    public float driftEdgeMargin = 0.05f;
+    public float edgeBiasMargin = 0.5f;
+
+    // baselines
+    float baseHopSpeed, baseHopDuration;
+    float basePauseBeforeTiltUp, baseTiltUpDuration, basePauseAfterTiltUp, baseTiltNeutralDuration;
+    float baseLongRestDuration;
+
+    const float EXP_SPEED = 0.5f; // hop distance grows
+    const float EXP_TIME = 0.5f; // phase times shrink
+    const float EXP_REST = 0.7f; // rests shrink a bit more
 
     private enum Phase { Pause1, TiltUp, Pause2, Jump, TiltNeutral, LongRest }
     private Phase phase = Phase.Pause1;
@@ -54,13 +58,38 @@ public class BarnCat : Animal
     protected override void Awake()
     {
         base.Awake();
+        baseHopSpeed = hopSpeed;
+        baseHopDuration = hopDuration;
+        basePauseBeforeTiltUp = pauseBeforeTiltUp;
+        baseTiltUpDuration = tiltUpDuration;
+        basePauseAfterTiltUp = pauseAfterTiltUp;
+        baseTiltNeutralDuration = tiltNeutralDuration;
+        baseLongRestDuration = longRestDuration;
         FaceDirection(-1); // ensure we start facing left before first frame
     }
 
     public override void Start()
     {
         base.Start();
+        ApplyEffectiveSpeedScale(_effectiveSpeedScale);
         EnterPhase(Phase.Pause1, pauseBeforeTiltUp); // start paused & neutral
+    }
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        float speedMul = Mathf.Pow(scale, EXP_SPEED);
+        float timeDiv = Mathf.Pow(scale, EXP_TIME);
+        float restDiv = Mathf.Pow(scale, EXP_REST);
+
+        hopSpeed = baseHopSpeed * speedMul;
+
+        hopDuration = Mathf.Max(0.03f, baseHopDuration / timeDiv);
+        pauseBeforeTiltUp = Mathf.Max(0.01f, basePauseBeforeTiltUp / timeDiv);
+        tiltUpDuration = Mathf.Max(0.01f, baseTiltUpDuration / timeDiv);
+        pauseAfterTiltUp = Mathf.Max(0.01f, basePauseAfterTiltUp / timeDiv);
+        tiltNeutralDuration = Mathf.Max(0.01f, baseTiltNeutralDuration / timeDiv);
+
+        longRestDuration = Mathf.Max(0.05f, baseLongRestDuration / restDiv);
     }
 
     protected override Vector3 ComputeMove()

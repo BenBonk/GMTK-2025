@@ -161,6 +161,7 @@ MonoBehaviour:
   legendary: 0
   forceExit: 0
   bonusPoints: 0
+  struckByLightning: 0
   leftIsPositiveScaleX: 1
   attractBrakeRadius: 2
   attractArriveRadius: 0.25
@@ -172,6 +173,6 @@ MonoBehaviour:
   pushStrength: 5
   xPushFactor: 0.1
   yPushFactor: 1
-  detectionRadius: 8
+  detectionRadius: 6.5
   chaseRadius: 3
   approachSteer: 0.75

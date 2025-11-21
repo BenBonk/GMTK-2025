@@ -14,18 +14,20 @@ public class PauseMenu : MonoBehaviour
     private Tween boonDeckTween;
     public RectTransform deckPanel;
     public RectTransform synergiesPanel;
+    public Transform boonDeckParent;
     public GameObject synergiesVisual;
     public RectTransform deckParent;
-    public DeckCard[] synergyCards;
     private bool deckOpen;
     private bool synergiesOpen;
     private ShopManager shopManager;
     private Logbook logbook;
     public SettingsMenu settings;
+    private LassoController lassoController;
 
     private void Start()
     {
         logbook = GameController.logbook;
+        lassoController = GameController.gameManager.lassoController;
         shopManager = GameController.shopManager;
     }
 
@@ -54,8 +56,15 @@ public class PauseMenu : MonoBehaviour
         boonDeckTween = synergiesPanel.DOAnchorPosX(415, 0f).SetEase(Ease.InOutQuad).OnComplete(() => synergiesVisual.SetActive(false)).SetUpdate(true);
         deckOpen = false;
         synergiesOpen = false;
-        shopManager.UpdateDeck(deckParent);
-        shopManager.UpdateSynergies(synergyCards);
+        if (lassoController != null)
+        {
+            lassoController.DestroyLassoExit(true);
+        }
+        if (shopManager != null)
+        {
+            shopManager.UpdateDeck(deckParent);
+            shopManager.UpdateSynergies(boonDeckParent);
+        }
     }
     public void Close()
     {

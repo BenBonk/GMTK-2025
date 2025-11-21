@@ -14,11 +14,18 @@ public class SchemeManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ChangeScheme(0);
+        //ChangeScheme(0);
     }
 
-    public void SetRandomScheme()
+    public void SetRandomScheme(int roundNumber)
     {
+        if (roundNumber == 1)
+        {
+            ChangeScheme(0);
+            return;
+        }
+
+
         int odds = Random.Range(0, 100);
         if (odds < 70)
         {
@@ -62,7 +69,7 @@ public class SchemeManager : MonoBehaviour
 
         GameController.gameManager.scoreDisplay.color = chosenScheme.pointsTextColor;
         GameController.gameManager.lassoController.pointBonusColor = chosenScheme.pointsTextColor;
-
+        GameController.gameManager.lassoController.positiveMultColor = chosenScheme.positiveMultColor;
         if (chosenScheme.shouldSpawnGrass)
         {
             grassSpawner.colorPalette = chosenScheme.grassColors;
@@ -113,5 +120,6 @@ public class Scheme
     public bool shouldSpawnGrass;
     public List<Color> grassColors;
     public Color pointsTextColor;
+    public Color positiveMultColor;
 
 }

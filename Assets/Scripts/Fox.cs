@@ -17,6 +17,15 @@ public class Fox : Animal
     private float speedVelocity = 0f; // for SmoothDamp
     private float startY;
 
+    // speed system baselines
+    private float baseSpeed;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseSpeed = speed;
+    }
+
     public override void Start()
     {
         base.Start();
@@ -28,6 +37,11 @@ public class Fox : Animal
     public override void ActivateLegendary()
     {
         animalData = GameController.gameManager.foxThiefStolenStats;
+    }
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        speed = baseSpeed * scale;
     }
 
     protected override Vector3 ComputeMove()

@@ -61,16 +61,57 @@ public class Puma : Animal
     // facing (assume sprite faces LEFT by default)
     private int facingSign = -1;
 
+    // global-speed baselines (hop & timings only; leap left untouched)
+    private float baseHopSpeed;
+    private float baseHopDuration;
+    private float basePauseBeforeTiltUp, baseTiltUpDuration, basePauseAfterTiltUp, baseTiltNeutralDuration, baseScanDuration;
+
+    private float _lastScale = 1f; // for mid-phase timer rescale
+
     protected override void Awake()
     {
         base.Awake();
         FaceDirection(-1);
+
+        baseHopSpeed = hopSpeed;
+        baseHopDuration = hopDuration;
+
+        basePauseBeforeTiltUp = pauseBeforeTiltUp;
+        baseTiltUpDuration = tiltUpDuration;
+        basePauseAfterTiltUp = pauseAfterTiltUp;
+        baseTiltNeutralDuration = tiltNeutralDuration;
+        baseScanDuration = scanDuration;
     }
 
     public override void Start()
     {
         base.Start();
         EnterPhase(Phase.Pause1, pauseBeforeTiltUp);
+    }
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        // Normal hop moves faster with global speed
+        hopSpeed = baseHopSpeed * scale;
+
+        // Shorten timing windows moderately as speed increases
+        const float EXP_TIME = 0.6f;
+        hopDuration = Mathf.Max(0.05f, baseHopDuration / Mathf.Pow(scale, EXP_TIME));
+        pauseBeforeTiltUp = Mathf.Max(0.02f, basePauseBeforeTiltUp / Mathf.Pow(scale, EXP_TIME));
+        tiltUpDuration = Mathf.Max(0.02f, baseTiltUpDuration / Mathf.Pow(scale, EXP_TIME));
+        pauseAfterTiltUp = Mathf.Max(0.02f, basePauseAfterTiltUp / Mathf.Pow(scale, EXP_TIME));
+        tiltNeutralDuration = Mathf.Max(0.02f, baseTiltNeutralDuration / Mathf.Pow(scale, EXP_TIME));
+        scanDuration = Mathf.Max(0.05f, baseScanDuration / Mathf.Pow(scale, EXP_TIME));
+
+        // Mid-phase rescale: if scale changed mid-phase, compress/expand the remaining time
+        if (_lastScale > 0f && !Mathf.Approximately(scale, _lastScale))
+        {
+            float k = Mathf.Pow(scale / _lastScale, EXP_TIME);
+            phaseTimer /= k; // preserves perceived progress when speed changes
+        }
+
+        _lastScale = scale;
+
     }
 
     protected override Vector3 ComputeMove()

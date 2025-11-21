@@ -2,7 +2,6 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using UnityEngine;
-using DG.Tweening;
 using Random = UnityEngine.Random;
 using TMPro;
 
@@ -44,6 +43,11 @@ public class StartScreenManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void Discord()
+    {
+        Application.OpenURL("https://discord.gg/w82SntXRVb");
     }
 
     void SpawnAnimal()

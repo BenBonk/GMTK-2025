@@ -21,6 +21,20 @@ public class Boar : Animal
     private int movesCompleted = 0;
     private bool exiting = false;
 
+    private float baseSpeed;
+    private float basePauseFadeDuration;
+    private float baseMinPause;
+    private float baseMaxPause;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        baseSpeed = speed;
+        basePauseFadeDuration = pauseFadeDuration;
+        baseMinPause = minPauseDuration;
+        baseMaxPause = maxPauseDuration;
+    }
+
     public override void Start()
     {
         base.Start();
@@ -28,6 +42,29 @@ public class Boar : Animal
         currentSpeed = speed;
         PickNewMoveTarget();
     }
+
+    private float _lastScale = 1f;
+
+    protected override void ApplyEffectiveSpeedScale(float scale)
+    {
+        speed = baseSpeed * scale;
+        pauseFadeDuration = basePauseFadeDuration / Mathf.Pow(scale, 0.5f);
+        minPauseDuration = baseMinPause / Mathf.Pow(scale, 0.6f);
+        maxPauseDuration = baseMaxPause / Mathf.Pow(scale, 0.6f);
+
+        if (_lastScale > 0f && !Mathf.Approximately(scale, _lastScale))
+        {
+            float k = scale / _lastScale;
+            moveTimer /= k;
+            pauseTimer /= k;
+
+            if (!isPaused && !exiting)
+                speedTarget = speed;
+        }
+
+        _lastScale = scale;
+    }
+
 
     protected override Vector3 ComputeMove()
     {

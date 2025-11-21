@@ -20,8 +20,6 @@ public class Horse : Animal
     private float leftScreenX;
     private float pauseTimer;
 
-    // small position tolerance for “arrived” at stop line
-    private const float arriveEpsilon = 0.02f;
 
     public override void Start()
     {
@@ -32,8 +30,7 @@ public class Horse : Animal
 
     public override void ActivateLegendary()
     {
-        speed *= 0.35f;
-        currentSpeed = speed;
+        ModifySpeed("holdhorse");
     }
 
     protected override Vector3 ComputeMove()
@@ -51,7 +48,7 @@ public class Horse : Animal
                     float distToStop = pos.x - stopX;
                     bool withinBrake = distToStop <= decelDistance;
 
-                    speedTarget = withinBrake ? 0f : speed;
+                    speedTarget = withinBrake ? 0f : EffectiveSpeed;
                     currentSpeed = Mathf.SmoothDamp(currentSpeed, speedTarget, ref speedVelocity, smoothTime);
 
                     float predictedX = (pos + Vector3.left * currentSpeed * Time.deltaTime + externalOffset).x;
@@ -67,7 +64,6 @@ public class Horse : Animal
                         pauseTimer = pauseAtEdge;
                         state = State.StopPause;
                     }
-
                     return next;
                 }
 
@@ -76,11 +72,12 @@ public class Horse : Animal
                     pauseTimer -= Time.deltaTime;
                     if (pauseTimer <= 0f)
                     {
-                        speedTarget = speed * Mathf.Max(0f, exitSpeedMultiplier);
+                        // was: speed
+                        speedTarget = EffectiveSpeed * Mathf.Max(0f, exitSpeedMultiplier);
                         speedVelocity = 0f;
                         state = State.AccelerateExit;
                     }
-                    return pos; // allow pushes while paused
+                    return pos;
                 }
 
             case State.AccelerateExit:

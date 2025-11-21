@@ -168,7 +168,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 19090415612813312
+      m_KeyId: 19461608561684480
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -333,9 +333,6 @@ MonoBehaviour:
   closeDur: 0.5
   unlockText: {fileID: 8717681797325354038}
   unlockImage: {fileID: 900607920425419772}
-  farmerDatas:
-  - {fileID: 11400000, guid: 4606dd3161c1d3b4aa50abe96be4c49a, type: 2}
-  - {fileID: 11400000, guid: a14aa737d286e994bb5cf459cd05b9ae, type: 2}
   harvestLevelText:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
@@ -704,7 +701,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 19090415726059520
+      m_KeyId: 19461608628793344
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

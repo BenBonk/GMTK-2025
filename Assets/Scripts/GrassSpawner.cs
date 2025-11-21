@@ -18,19 +18,24 @@ public class GrassSpawner : MonoBehaviour
     private Vector2 spawnAreaMax;
     private List<Vector2> placedPositions = new List<Vector2>();
     public bool spawnOnStart;
+    private bool hasCorners = false;
 
     void Start()
     {
+        if (spawnOnStart)
+        {
+            SpawnGrass();
+        }
        //SpawnGrass();
        CalculateSpawnAreaFromRectTransform();
-       if (spawnOnStart)
-       {
-           SpawnGrass();
-       }
     }
 
     public void SpawnGrass()
     {
+        if (!hasCorners)
+        {
+            CalculateSpawnAreaFromRectTransform();
+        }
         if (spawnAreaRectTransform == null)
         {
             return;
@@ -39,6 +44,7 @@ public class GrassSpawner : MonoBehaviour
         int attempts = 0;
         int placed = 0;
         int maxAttempts = numberOfGrassObjects * 10;
+        placedPositions.Clear();
 
         while (placed < numberOfGrassObjects && attempts < maxAttempts)
         {
@@ -60,6 +66,7 @@ public class GrassSpawner : MonoBehaviour
 
         spawnAreaMin = new Vector2(bottomLeft.x, bottomLeft.y);
         spawnAreaMax = new Vector2(topRight.x, topRight.y);
+        hasCorners = true;
     }
 
     bool TrySpawnGrass()
@@ -80,7 +87,6 @@ public class GrassSpawner : MonoBehaviour
             if (Vector2.Distance(pos, tryPosition) < minDistanceBetweenGrass)
                 return false;
         }
-
         GameObject grassGO = new GameObject("Grass");
         SpriteRenderer sr = grassGO.AddComponent<SpriteRenderer>();
         sr.sprite = grassSprites[Random.Range(0, grassSprites.Length)];

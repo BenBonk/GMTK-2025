@@ -111,7 +111,7 @@ public class DescriptionManager : MonoBehaviour
     public string GetAnimalLevelDescription(AnimalData animalData)
     {
         levelManager = GameController.animalLevelManager;
-        int animalLevel = levelManager.GetLevel(animalData.animalName.GetLocalizedString());
+        int animalLevel = levelManager.GetLevel(animalData.name);
         string description = "";
         if (animalData.pointsLevelUpIncrease != 0)
         {

@@ -15,7 +15,7 @@ MonoBehaviour:
   harvestLevel: 1
   roundLength: 45
   dailyCash: 50
-  numberOfDays: 20
+  numberOfDays: 15
   startingPredators: 0
-  shopPrices: 0
-  pointQuotas: 0
+  shopPrices: 1
+  pointQuotas: 1

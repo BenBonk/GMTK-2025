@@ -35,7 +35,7 @@ MonoBehaviour:
   isExactMatch: 0
   currencyBonus: 30
   currencyMult: 1
-  pointsBonus: -30
+  pointsBonus: -10
   pointsMult: 1
   animalsNeeded:
   - Cow

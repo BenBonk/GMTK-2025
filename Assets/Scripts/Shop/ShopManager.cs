@@ -14,7 +14,6 @@ public class ShopManager : MonoBehaviour
     private Player player;
     private DescriptionManager descriptionManager;
     public ShopItem[] shopItems;
-    public DeckCard[] synergyCards;
     public GameObject deckCardPrefab;
     public RectTransform deckParent;
 
@@ -24,8 +23,9 @@ public class ShopManager : MonoBehaviour
     public TMP_Text instructionsText;
     private bool deckOpen;
     [HideInInspector]public bool synergiesOpen;
-
-    [HideInInspector]public Boon overridingBoon;
+    [HideInInspector]public SynergyShopItem overridingBoonItem;
+    public Image cancelOverride;
+    public GameObject leaveShopButton;
     public Image darkCover;
     public bool cantPurchaseItem;
     public bool isTut;
@@ -39,12 +39,20 @@ public class ShopManager : MonoBehaviour
     private Tween animalDeckTween;
     private Tween boonDeckTween;
     public UpgradeShopItem upgradeShopItem;
+    public GameObject boonDeckCard;
+    public Transform boonDeckParent;
+    [HideInInspector] public bool canOverrideBoon;
+    public RectTransform boonDeckButton;
+    public RectTransform animalDeckButton;
+    [HideInInspector] public bool cantToggleSynergiesDeck;
 
     private Queue<Boon> recentBoons;
+    private SteamIntegration steamIntegration;
     int recentBoonCapacity = 3;
 
     private IEnumerator Start()
     {
+        steamIntegration = GameController.steamIntegration;
         descriptionManager = GameController.descriptionManager;
         player = GameController.player;
         recentBoons = new Queue<Boon>(recentBoonCapacity);
@@ -64,7 +72,7 @@ public class ShopManager : MonoBehaviour
             shopItem.canPurchase = true;
             shopItem.Initialize();
             shopItem.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
-        }
+        }//ajoijioijoasdasdasd
         UpdateCashText();
         List<Boon> chosenBoons = new List<Boon>();
         while (chosenBoons.Count < 3)
@@ -95,7 +103,7 @@ public class ShopManager : MonoBehaviour
             shopItem.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
         }
         UpdateDeck(deckParent);
-        UpdateSynergies(synergyCards);
+        UpdateSynergies(boonDeckParent);
     }
     private Boon GetRandomSynergy()
     {
@@ -179,6 +187,7 @@ public class ShopManager : MonoBehaviour
 
     public void UpdateCashText()
     {
+        Debug.Log("update cash text");
         cashText.text = cashLocalString.GetLocalizedString() +" "+ LassoController.FormatNumber(player.playerCurrency);
         if (!GameController.gameManager)
         {
@@ -201,17 +210,23 @@ public class ShopManager : MonoBehaviour
         pulse.Join(cashText.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
     }
 
-    public void UpdateSynergies(DeckCard[] synergyCardss)
+    public void UpdateSynergies(Transform parent)
     {
-        foreach (DeckCard synergyCard in synergyCardss)
+        foreach (Transform child in parent.transform)
         {
-            synergyCard.gameObject.SetActive(false);
+            Destroy(child.gameObject);
         }
 
         for (int i = 0; i < player.boonsInDeck.Count; i++)
         {
-            synergyCardss[i].gameObject.SetActive(true);
-            synergyCardss[i].Initialize( player.boonsInDeck[i].synergyName.GetLocalizedString(), player.boonsInDeck[i].desc.GetLocalizedString(), player.boonsInDeck[i].art, descriptionManager.GetBoonDescription(player.boonsInDeck[i]));
+            GameObject boonCard = Instantiate(boonDeckCard, Vector3.zero, Quaternion.identity, parent);
+            string desc = player.boonsInDeck[i].desc.GetLocalizedString();
+            if (player.boonsInDeck[i].name == "Thief")
+            {
+                desc = player.boonsInDeck[i].desc.GetLocalizedString() + " " + GameController.gameManager.foxThiefStolenStats.animalName.GetLocalizedString() + ".";
+            }
+            boonCard.GetComponent<DeckCard>().Initialize( player.boonsInDeck[i].synergyName.GetLocalizedString(), desc, player.boonsInDeck[i], descriptionManager.GetBoonDescription(player.boonsInDeck[i]));
+
         }
     }
 
@@ -239,6 +254,16 @@ public class ShopManager : MonoBehaviour
             }
         }
         
+        if (uniqueObjects.Any(animal => animal.Value.count >= 10) && !steamIntegration.IsThisAchievementUnlocked("Monoculture"))
+        {
+            steamIntegration.UnlockAchievement("Monoculture");
+        }
+
+        if (player.animalsInDeck.Count==50 && !GameController.steamIntegration.IsThisAchievementUnlocked("The Whole Farm"))
+        { 
+            steamIntegration.UnlockAchievement("The Whole Farm");
+        }
+        
 
         // Step 2: Create a card for each unique GameObject
         foreach (var entry in uniqueObjects)
@@ -248,7 +273,7 @@ public class ShopManager : MonoBehaviour
             string desc = descriptionManager.GetAnimalDescription(reference);
             
             GameObject card = Instantiate(deckCardPrefab, deckParentt);
-            card.GetComponent<DeckCard>().Initialize("x" + count, desc, reference.deckIcon);
+            card.GetComponent<DeckCard>().Initialize("x" + count, desc, reference);
         }
     }
 
@@ -286,6 +311,10 @@ public class ShopManager : MonoBehaviour
 
     public void ToggleSynergies()
     {
+        if (cantToggleSynergiesDeck)
+        {
+            return;
+        }
         if (boonDeckTween!=null)
         {
             boonDeckTween.Kill();
