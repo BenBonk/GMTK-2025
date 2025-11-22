@@ -8,6 +8,11 @@ jobs:
       if: github.ref == 'refs/heads/production'
       steps:
 
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false
+
       - name: Clear caches
         uses: easimon/wipe-cache@main
         with:
@@ -53,6 +58,11 @@ jobs:
       - name: Extract Version
         id: extract_version
         run: echo "version=${{ steps.github_release.outputs.version }}" >> $GITHUB_ENV
+
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          tool-cache: false
 
       # Git LFS
       - name: Create LFS file list
