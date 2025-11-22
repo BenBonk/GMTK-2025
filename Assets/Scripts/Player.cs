@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public List<Boon> boonsInDeck;
     private SteamIntegration steamIntegration;
 
-    private void Start()
+    void Awake()
     {
         steamIntegration = GameController.steamIntegration;
     }
