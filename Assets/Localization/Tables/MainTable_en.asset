@@ -30,7 +30,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112937
   - m_Id: 2
-    m_Localized: 'CASH: {0}'
+    m_Localized: CASH
     m_Metadata:
       m_Items: []
   - m_Id: 3
@@ -1548,7 +1548,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: 'Nightime: Higher predator spawnrate'
+    m_Localized: 'Nightfall: Higher predator spawnrate'
     m_Metadata:
       m_Items: []
   references:

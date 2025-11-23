@@ -58,6 +58,7 @@ public class TutorialManager : MonoBehaviour
 
     public static TutorialManager _instance;
     public LocalizedString[] tutorialStrings;
+    public LocalizedString pointsLocalString;
 
     private void Awake()
     {
@@ -138,9 +139,11 @@ public class TutorialManager : MonoBehaviour
     public void StartRound()
     {
         pointsThisRound = 0;
-        scoreDisplay.text = "POINTS: " + pointsThisRound + " / 100";
-        timerDisplay.text = "TIME: " + roundDuration.ToString("F1") + "s";
-        currencyDisplay.text = "CASH: " + player.playerCurrency;
+        scoreDisplay.text = pointsLocalString.GetLocalizedString() + " " + 0 + " / " + 100;
+        timerDisplay.text = $"{GameController.localizationManager.localTimeString.GetLocalizedString()}: {20:F1}s";
+        GameController.localizationManager.localTimeString.Arguments[0] = 20;
+        GameController.localizationManager.localTimeString.RefreshString();
+        currencyDisplay.text = GameController.localizationManager.localCashString.GetLocalizedString()+ ": " + player.playerCurrency;
         //lassosDisplay.text = "Lassos: " + player.lassosPerRound;
         roundNumber++;
         roundInProgress = true;
@@ -204,11 +207,11 @@ public class TutorialManager : MonoBehaviour
             return;
         }
 
-        scoreDisplay.text = $"POINTS: {newPoints} / {roundsPointsRequirement[roundNumber]}";
+        scoreDisplay.text = $"{pointsLocalString.GetLocalizedString()} {newPoints} / {roundsPointsRequirement[roundNumber]}";
     }
     private void UpdatecurrencyDisplay(double newcurrency)
     {
-        currencyDisplay.text = $"CASH: {newcurrency}";
+        currencyDisplay.text = $"{GameController.localizationManager.localCashString.GetLocalizedString()}: {newcurrency}";
     }
 
     private void UpdateTimerDisplay()
@@ -216,7 +219,9 @@ public class TutorialManager : MonoBehaviour
         float remaining = roundDuration - elapsedTime;
         int currentSecond = Mathf.FloorToInt(remaining);
 
-        timerDisplay.text = $"TIME: {remaining:F1}s";
+        timerDisplay.text = $"{GameController.localizationManager.localTimeString.GetLocalizedString()}: {20:F1}s";
+        GameController.localizationManager.localTimeString.Arguments[0] = 20;
+        GameController.localizationManager.localTimeString.RefreshString();
 
         if (remaining <= 10f && currentSecond != lastDisplayedSecond)
         {

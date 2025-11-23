@@ -30,7 +30,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112940
   - m_Id: 2
-    m_Localized: 'BARGELD: {0}'
+    m_Localized: KASSE
     m_Metadata:
       m_Items: []
   - m_Id: 3
@@ -565,7 +565,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355916
-    m_Localized: "H\xF6chste erreichte Tierstufe:"
+    m_Localized: "H\xF6chstes erreichtes Tierlevel:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355917
@@ -1319,7 +1319,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: Fange eine Gruppe von Tieren mit einem Wildschwein und einem Schwein
+    m_Localized: Fange eine Gruppe Tiere mit einem Wildschwein und einem Schwein
       mit dem Lasso ein.
     m_Metadata:
       m_Items: []
@@ -1610,7 +1610,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: "Nachts: H\xF6here Raubtierlaichrate"
+    m_Localized: "Nachteinbruch: H\xF6here Raubtier-Laichrate"
     m_Metadata:
       m_Items: []
   references:

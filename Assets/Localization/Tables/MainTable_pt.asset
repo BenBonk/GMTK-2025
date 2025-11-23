@@ -30,7 +30,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112946
   - m_Id: 2
-    m_Localized: 'DINHEIRO: {0}'
+    m_Localized: DINHEIRO
     m_Metadata:
       m_Items: []
   - m_Id: 3
@@ -416,7 +416,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "Agora tente la\xE7ar essas duas criaturas juntas!"
+    m_Localized: "Agora tente la\xE7ar esses dois bichos juntos!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
@@ -1094,7 +1094,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376257
-    m_Localized: Concede 1 reroll gratuito por loja
+    m_Localized: Concede 1 nova rolagem gratuita por loja.
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376258
@@ -1219,7 +1219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276037
-    m_Localized: Remova 2 animais do seu Baralho de Animais.
+    m_Localized: Remova 2 animais do seu baralho de animais.
     m_Metadata:
       m_Items: []
   - m_Id: 21394830084497408
@@ -1444,7 +1444,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032552
-    m_Localized: "La\xE7o: um grupo de animais contendo um coelho, um rato e uma
+    m_Localized: "La\xE7ar um grupo de animais contendo um coelho, um rato e uma
       galinha."
     m_Metadata:
       m_Items: []
@@ -1581,7 +1581,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: "Per\xEDodo noturno: Maior taxa de desova de predadores"
+    m_Localized: 'Anoitecer: Maior taxa de desova de predadores'
     m_Metadata:
       m_Items: []
   references:

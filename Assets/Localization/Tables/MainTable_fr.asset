@@ -30,7 +30,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112939
   - m_Id: 2
-    m_Localized: "ESP\xC8CES : {0}"
+    m_Localized: "ESP\xC8CES"
     m_Metadata:
       m_Items: []
   - m_Id: 3
@@ -215,8 +215,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 46
-    m_Localized: Capturez au lasso un groupe d'animaux comprenant un chien, un renard
-      et un loup.
+    m_Localized: Capturer au lasso un groupe d'animaux comprenant un chien, un renard
+      et un loup
     m_Metadata:
       m_Items: []
   - m_Id: 47
@@ -1605,7 +1605,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: "Nuit : Taux d'apparition des pr\xE9dateurs plus \xE9lev\xE9"
+    m_Localized: "Cr\xE9puscule : Taux d'apparition des pr\xE9dateurs plus \xE9lev\xE9"
     m_Metadata:
       m_Items: []
   references:

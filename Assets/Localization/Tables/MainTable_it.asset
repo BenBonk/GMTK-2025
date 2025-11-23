@@ -30,7 +30,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112941
   - m_Id: 2
-    m_Localized: 'CONTANTI: {0}'
+    m_Localized: CONTANTI
     m_Metadata:
       m_Items: []
   - m_Id: 3
@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di corsa
+    m_Localized: Partner di gara
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -927,7 +927,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +2 contanti per animale catturato
+    m_Localized: +2 contanti per animale preso al lazo
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
@@ -1491,7 +1491,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421120
-    m_Localized: fuga precipitosa
+    m_Localized: Fuga precipitosa
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421121
@@ -1570,7 +1570,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: "Notte: tasso di riproduzione dei predatori pi\xF9 elevato"
+    m_Localized: "Tramonto: tasso di riproduzione dei predatori pi\xF9 elevato"
     m_Metadata:
       m_Items: []
   references:

@@ -591,7 +591,7 @@ public class GameManager : MonoBehaviour
         {
             saveManager.SaveGameData();
         }
-        currencyDisplay.text = $"CASH: {LassoController.FormatNumber(newcurrency)}";
+        currencyDisplay.text = $"{localization.localCashString.GetLocalizedString()}: {LassoController.FormatNumber(newcurrency)}";
         currencyDisplay.transform.localScale = Vector3.one * 1.1f;
         currencyDisplay.transform.localRotation = Quaternion.identity; // reset
         if (newcurrency > FBPP.GetFloat("highestCash"))
@@ -619,7 +619,7 @@ public class GameManager : MonoBehaviour
         float remaining = roundDuration - elapsedTime;
         int currentSecond = Mathf.FloorToInt(remaining);
 
-        timerDisplay.text = $"TIME: {remaining:F1}s";
+        timerDisplay.text = $"{localization.localTimeString.GetLocalizedString()}: {remaining:F1}s";
         localization.localTimeString.Arguments[0] = remaining.ToString("F1");
         localization.localTimeString.RefreshString();
 

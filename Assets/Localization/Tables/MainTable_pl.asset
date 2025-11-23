@@ -30,7 +30,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 2
-    m_Localized: "GOT\xD3WKA: {0}"
+    m_Localized: "GOT\xD3WKA"
     m_Metadata:
       m_Items: []
   - m_Id: 3
@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Strata punkt\xF3w:"
+    m_Localized: "Utrata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -473,7 +473,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 103
     m_Localized: "Na koniec, mo\u017Cesz odnowi\u0107 sklep raz dziennie, a koszt
-      ten wzro\u015Bnie na sta\u0142e!"
+      wzro\u015Bnie na sta\u0142e!"
     m_Metadata:
       m_Items: []
   - m_Id: 104
@@ -1005,8 +1005,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
-      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
+      w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1035,7 +1035,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-Pracownik Rolny
+    m_Localized: Weteran-robotnik
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
@@ -1098,8 +1098,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949632
-    m_Localized: "W sklepie dost\u0119pne s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t.
-      Ulepszenia zwierz\u0105t s\u0105 ta\u0144sze."
+    m_Localized: "W sklepie s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t. Ulepszenia
+      zwierz\u0105t s\u0105 ta\u0144sze."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
@@ -1417,12 +1417,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032537
-    m_Localized: Kozi Gruff
+    m_Localized: Kozi Gbur
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
-      z 3 k\xF3z"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 3 kozy"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032539
@@ -1456,8 +1455,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032546
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika
-      i pum\u0119"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t, w kt\xF3rej jest kr\xF3liczek
+      i puma"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032547
@@ -1623,7 +1622,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 27389551341584384
-    m_Localized: "Noc: Wi\u0119ksza cz\u0119stotliwo\u015B\u0107 pojawiania si\u0119
+    m_Localized: "Zmrok: Wi\u0119ksza cz\u0119stotliwo\u015B\u0107 pojawiania si\u0119
       drapie\u017Cnik\xF3w"
     m_Metadata:
       m_Items: []
