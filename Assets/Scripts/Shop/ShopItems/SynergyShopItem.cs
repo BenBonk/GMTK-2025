@@ -92,6 +92,14 @@ public class SynergyShopItem : ShopItem
                 foreach (var s in shopManager.shopItems)
                 {
                     s.StopAllCoroutines();
+                    try
+                    {
+                        s.GetComponent<AnimalShopItem>().StartCoroutine("Animate");
+                    }
+                    catch (Exception e)
+                    {
+                      //a
+                    }
                     DOTween.KillAll(s);
                 }
                 StartCoroutine(DeckPulse());
