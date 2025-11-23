@@ -430,6 +430,7 @@ public class GameManager : MonoBehaviour
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.enabled = true;
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
+            saveManager.SaveGameData();
             yield return new WaitForSeconds(1.5f);
             if (FBPP.GetInt("harvestLevelsUnlocked",1) <= harvestLevel && harvestLevel < saveManager.harvestDatas.Length)
             {
