@@ -19,7 +19,7 @@ public class AnimalLevelManager : MonoBehaviour
         InitAnimal("Goat");
         InitAnimal("Dog");
     }
-
+//a
     public void ResetLevels()
     {
         var keys = new List<string>(animalLevels.Keys);
