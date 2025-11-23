@@ -229,6 +229,10 @@ public class GameManager : MonoBehaviour
         UpdateTimerDisplay();
         barnAnimator.Play("Closed", 0, 0.1f);
         spawner.spawnRate = FBPP.GetFloat("spawnRate", 1f);
+        foreach (var egg in GameObject.FindGameObjectsWithTag("NonAnimalLassoable"))
+        {
+            Destroy(egg.gameObject);
+        }
         if (IsChallengeRound())
         {
            roundID = challengeEventManager.GetChallengeEvent();
