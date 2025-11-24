@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public int roundsToWin = 20;
     [HideInInspector] public float elapsedTime;
     public int predatorRoundFrequency;
+    public int predatorOptions;
     public int challengeRoundFrequency;
 
     public GameObject wordPrefab;
@@ -169,6 +170,8 @@ public class GameManager : MonoBehaviour
         endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
         quotaSetting = saveManager.harvestDatas[harvestLevel - 1].pointQuotas;
+        predatorRoundFrequency = saveManager.harvestDatas[harvestLevel - 1].predatorFrequency;
+        predatorOptions = saveManager.harvestDatas[harvestLevel - 1].predatorOptions;
     }
 
     private void Update()

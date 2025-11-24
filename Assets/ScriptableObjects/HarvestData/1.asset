@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   harvestLevel: 1
   roundLength: 45
-  dailyCash: 50
   numberOfDays: 15
-  startingPredators: 0
-  shopPrices: 1
+  dailyCash: 50
+  predatorFrequency: 3
+  predatorOptions: 3
   pointQuotas: 1
+  challengeRoundIntensity: 1
