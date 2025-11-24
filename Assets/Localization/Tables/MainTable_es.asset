@@ -1591,6 +1591,54 @@ MonoBehaviour:
     m_Localized: "Intensidad del desaf\xEDo:"
     m_Metadata:
       m_Items: []
+  - m_Id: 35758618488033280
+    m_Localized: Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199104
+    m_Localized: "Deambula en c\xEDrculos por el campo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199105
+    m_Localized: Gato de granero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199106
+    m_Localized: Salta por el campo, le gustan los ratones.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199107
+    m_Localized: Verraco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199108
+    m_Localized: Depredador. Carga contra los no depredadores.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199109
+    m_Localized: Conejito
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199110
+    m_Localized: "Salta a trav\xE9s del campo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199111
+    m_Localized: "Rat\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199112
+    m_Localized: Se sacude escaramuzamente de un lado a otro del campo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199113
+    m_Localized: Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199114
+    m_Localized: Depredador. Se abalanza sobre animales que no son depredadores.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 35758618488033280
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 35758618513199104
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

@@ -931,8 +931,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802005
-    m_Localized: "Jeder erfolgreiche Lassowurf verl\xE4ngert die Rundenzeit um 0,5
-      Sekunden."
+    m_Localized: "Jeder erfolgreiche Lasso verl\xE4ngert die Rundenzeit um 0,5 Sekunden."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802006
@@ -1620,6 +1619,54 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 35716960811700226
     m_Localized: "Herausforderungsintensit\xE4t:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618488033280
+    m_Localized: Alpaka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199104
+    m_Localized: "Er wandert in Schleifen \xFCber das Feld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199105
+    m_Localized: Scheunenkatze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199106
+    m_Localized: "H\xFCpft \xFCber das Feld, mag M\xE4use."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199107
+    m_Localized: Eber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199108
+    m_Localized: Raubtier. Angriffe auf Nicht-Raubtiere.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199109
+    m_Localized: Hase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199110
+    m_Localized: "H\xFCpft \xFCber das Feld."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199111
+    m_Localized: Maus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199112
+    m_Localized: "Schlurft und ruckt \xFCber das Spielfeld hin und her."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199113
+    m_Localized: Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199114
+    m_Localized: "Raubtier. St\xFCrzt sich auf Nicht-Raubtiere."
     m_Metadata:
       m_Items: []
   references:

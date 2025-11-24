@@ -1592,6 +1592,54 @@ MonoBehaviour:
     m_Localized: 'Intensidade do desafio:'
     m_Metadata:
       m_Items: []
+  - m_Id: 35758618488033280
+    m_Localized: Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199104
+    m_Localized: "Percorre o campo em c\xEDrculos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199105
+    m_Localized: Gato do celeiro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199106
+    m_Localized: Salta pelo campo, gosta de ratos.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199107
+    m_Localized: Javali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199108
+    m_Localized: "Predador. Ataca animais que n\xE3o s\xE3o predadores."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199109
+    m_Localized: Coelhinho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199110
+    m_Localized: Salta pelo campo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199111
+    m_Localized: Rato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199112
+    m_Localized: Desliza bruscamente de um lado para o outro do campo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199113
+    m_Localized: Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199114
+    m_Localized: "Predador. Ataca animais que n\xE3o s\xE3o predadores."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

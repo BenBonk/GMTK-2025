@@ -1616,6 +1616,55 @@ MonoBehaviour:
     m_Localized: "Intensit\xE9 du d\xE9fi\_:"
     m_Metadata:
       m_Items: []
+  - m_Id: 35758618488033280
+    m_Localized: Alpaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199104
+    m_Localized: "Il erre en faisant des boucles \xE0 travers le champ."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199105
+    m_Localized: Chat de ferme
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199106
+    m_Localized: "Saute \xE0 travers le champ, aime les souris."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199107
+    m_Localized: Verrat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199108
+    m_Localized: "Pr\xE9dateur. Charge contre les non-pr\xE9dateurs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199109
+    m_Localized: Lapin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199110
+    m_Localized: "Saute \xE0 travers le champ."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199111
+    m_Localized: Souris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199112
+    m_Localized: "Il se d\xE9place de mani\xE8re saccad\xE9e d'un bout \xE0 l'autre
+      du terrain."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199113
+    m_Localized: Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199114
+    m_Localized: "Pr\xE9dateur. S'attaque aux non-pr\xE9dateurs."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

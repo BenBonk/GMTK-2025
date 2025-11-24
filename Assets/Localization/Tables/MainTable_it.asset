@@ -1581,6 +1581,54 @@ MonoBehaviour:
     m_Localized: "Intensit\xE0 della sfida:"
     m_Metadata:
       m_Items: []
+  - m_Id: 35758618488033280
+    m_Localized: Alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199104
+    m_Localized: Vaga in tondo attraverso il campo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199105
+    m_Localized: Gatto da fienile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199106
+    m_Localized: Saltella attraverso i campi, gli piacciono i topi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199107
+    m_Localized: Cinghiale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199108
+    m_Localized: Predatore. Carica i non predatori.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199109
+    m_Localized: Coniglio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199110
+    m_Localized: Saltella attraverso il campo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199111
+    m_Localized: Topo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199112
+    m_Localized: Si muove avanti e indietro in modo scaramantico attraverso il campo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199113
+    m_Localized: Puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199114
+    m_Localized: Predatore. Si avventa sui non predatori.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

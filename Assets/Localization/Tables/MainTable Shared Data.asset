@@ -195,6 +195,54 @@ MonoBehaviour:
     m_Key: animal.wolfDesc
     m_Metadata:
       m_Items: []
+  - m_Id: 35758618488033280
+    m_Key: animal.alpaca
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199104
+    m_Key: animal.alpacaDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199105
+    m_Key: animal.barnCat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199106
+    m_Key: animal.barnCatDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199107
+    m_Key: animal.boar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199108
+    m_Key: animal.boarDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199109
+    m_Key: animal.bunny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199110
+    m_Key: animal.bunnyDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199111
+    m_Key: animal.mouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199112
+    m_Key: animal.mouseDesc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199113
+    m_Key: animal.puma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35758618513199114
+    m_Key: animal.pumaDesc
+    m_Metadata:
+      m_Items: []
   - m_Id: 41
     m_Key: synergy.baaaaa
     m_Metadata:
