@@ -10560,6 +10560,34 @@ PrefabInstance:
       propertyPath: leftAnimal
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: possibleAnimals.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[10]'
+      value: 
+      objectReference: {fileID: 6228145669773507894, guid: 333bd040fd797554ba3785905c63c2e9, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[11]'
+      value: 
+      objectReference: {fileID: 6238819819887402712, guid: f6367f5a26d3def4fbcac31faa1baf46, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[12]'
+      value: 
+      objectReference: {fileID: 6180040466348798062, guid: 451baa97135b25c40842889e6bc2470c, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[13]'
+      value: 
+      objectReference: {fileID: 7327338974377108280, guid: 68b38b5fac72f33498164838d4fdbf8f, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[14]'
+      value: 
+      objectReference: {fileID: 5409556926586269081, guid: 4b83940e91801614788454d802687ed9, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[15]'
+      value: 
+      objectReference: {fileID: 3145862531765866858, guid: a95de14d216da674cad83ecc3b276d02, type: 3}
     - target: {fileID: 6072429973145566574, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_Name
       value: AnimalShopItem
@@ -11660,6 +11688,34 @@ PrefabInstance:
       propertyPath: rt
       value: 
       objectReference: {fileID: 2048850563}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: possibleAnimals.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[10]'
+      value: 
+      objectReference: {fileID: 6228145669773507894, guid: 333bd040fd797554ba3785905c63c2e9, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[11]'
+      value: 
+      objectReference: {fileID: 6238819819887402712, guid: f6367f5a26d3def4fbcac31faa1baf46, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[12]'
+      value: 
+      objectReference: {fileID: 6180040466348798062, guid: 451baa97135b25c40842889e6bc2470c, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[13]'
+      value: 
+      objectReference: {fileID: 7327338974377108280, guid: 68b38b5fac72f33498164838d4fdbf8f, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[14]'
+      value: 
+      objectReference: {fileID: 5409556926586269081, guid: 4b83940e91801614788454d802687ed9, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[15]'
+      value: 
+      objectReference: {fileID: 3145862531765866858, guid: a95de14d216da674cad83ecc3b276d02, type: 3}
     - target: {fileID: 6072429973145566574, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_Name
       value: AnimalShopItem (1)
@@ -33927,6 +33983,41 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6417d69e25b360a41bdd25298dcc0b3c, type: 2}
     - {fileID: 11400000, guid: f958019ea33af704f917b75028f49f9f, type: 2}
     - {fileID: 11400000, guid: 6f4291e2e3eedad4c91d53189bbe3afa, type: 2}
+    - {fileID: 11400000, guid: 0a2e4f608687018419a00cacc8f6d7df, type: 2}
+    - {fileID: 11400000, guid: b1609a63f1c085b45b1603004af0744f, type: 2}
+    - {fileID: 11400000, guid: fa0f46036a4b3934aae99331144b22b1, type: 2}
+    - {fileID: 11400000, guid: 3cfe8dc9a3967b44080d429961a73fa7, type: 2}
+    - {fileID: 11400000, guid: bf71b364cb8029f45b4494a4164e9ab7, type: 2}
+    - {fileID: 11400000, guid: 94abee328f51ec64c954949789d5164f, type: 2}
+    - {fileID: 11400000, guid: 9732df34f1a15d84ab3518698298bcc3, type: 2}
+    - {fileID: 11400000, guid: 87d37dbdad9f1e84581c09097773e3f6, type: 2}
+    - {fileID: 11400000, guid: 376440c4f80f8744699334ffde2c5ec2, type: 2}
+    - {fileID: 11400000, guid: 14603acc286cfba4d896c370017f2514, type: 2}
+    - {fileID: 11400000, guid: 1e04a2a09ea65b84a828ab028ea48f53, type: 2}
+    - {fileID: 11400000, guid: b6c156fc7d4176d4daec402e4c07ab00, type: 2}
+    - {fileID: 11400000, guid: 4361678ef14ab4343988a5bed5ab216d, type: 2}
+    - {fileID: 11400000, guid: 9f4a5a956779ebf4ea51a4000f37ffb6, type: 2}
+    - {fileID: 11400000, guid: 8f749e6915eac284c9ee0df4064b7e33, type: 2}
+    - {fileID: 11400000, guid: 239289302e56ff84a8da81d230694c02, type: 2}
+    - {fileID: 11400000, guid: a1f43e16061a92640b8f38bd1e382b24, type: 2}
+    - {fileID: 11400000, guid: ee4b84357a7103b4e8e8a3014b959a3d, type: 2}
+    - {fileID: 11400000, guid: bc7f26c77d18bbd4986b58d0adf188d8, type: 2}
+    - {fileID: 11400000, guid: aa2b912a82192204a8693d56f1cb53f9, type: 2}
+    - {fileID: 11400000, guid: f81540afe2c31de4ebc5395454c1e283, type: 2}
+    - {fileID: 11400000, guid: a5377f93e60f37a4a8f3324038cad51b, type: 2}
+    - {fileID: 11400000, guid: 35d27923cf8bacf42ad13c5c33a929d9, type: 2}
+    - {fileID: 11400000, guid: ec083745a2335534698a23995a1d47bd, type: 2}
+    - {fileID: 11400000, guid: 8a35c06152b795243884ab76f3e858de, type: 2}
+    - {fileID: 11400000, guid: a7d43a831dd7dbf458f6fcba7dce7dc3, type: 2}
+    - {fileID: 11400000, guid: c584cce1784240e40b07de1d750dace2, type: 2}
+    - {fileID: 11400000, guid: 6d8a437d3a7ddec49b46b480c40a9bdf, type: 2}
+    - {fileID: 11400000, guid: 7e510f973b653344783d61c77978f6c7, type: 2}
+    - {fileID: 11400000, guid: 6891c2ba1da40494699b520cdc51e5b3, type: 2}
+    - {fileID: 11400000, guid: 3653761cfbcf339428946688309c5b09, type: 2}
+    - {fileID: 11400000, guid: 2af2bd0d868a26c45a5aba59e96eacce, type: 2}
+    - {fileID: 11400000, guid: 3210f61da994ef449ac336113f0cfd87, type: 2}
+    - {fileID: 11400000, guid: a038a311d267f96479fb302684ee6d21, type: 2}
+    - {fileID: 11400000, guid: a48e643b27b5748448da305b77d45be8, type: 2}
   - groupName: Specialty
     weights:
     - 30
@@ -34387,6 +34478,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b3c838acec49e004ebf752f3be94e0a6, type: 2}
   - {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}
   - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
+  - {fileID: 11400000, guid: aa98ffdaa4156f747a50e3ddccdccd60, type: 2}
+  - {fileID: 11400000, guid: 09611faefa6542142ac04ae98f9df67c, type: 2}
 --- !u!1 &1317398617
 GameObject:
   m_ObjectHideFlags: 0
@@ -48110,6 +48203,34 @@ PrefabInstance:
       propertyPath: descriptionText
       value: 
       objectReference: {fileID: 1808476963}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: possibleAnimals.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[10]'
+      value: 
+      objectReference: {fileID: 6228145669773507894, guid: 333bd040fd797554ba3785905c63c2e9, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[11]'
+      value: 
+      objectReference: {fileID: 6238819819887402712, guid: f6367f5a26d3def4fbcac31faa1baf46, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[12]'
+      value: 
+      objectReference: {fileID: 6180040466348798062, guid: 451baa97135b25c40842889e6bc2470c, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[13]'
+      value: 
+      objectReference: {fileID: 7327338974377108280, guid: 68b38b5fac72f33498164838d4fdbf8f, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[14]'
+      value: 
+      objectReference: {fileID: 5409556926586269081, guid: 4b83940e91801614788454d802687ed9, type: 3}
+    - target: {fileID: 5772100109226317215, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
+      propertyPath: 'possibleAnimals.Array.data[15]'
+      value: 
+      objectReference: {fileID: 3145862531765866858, guid: a95de14d216da674cad83ecc3b276d02, type: 3}
     - target: {fileID: 5969877957938756722, guid: 459ba30ad8ad5854886dd7ab19c81272, type: 3}
       propertyPath: m_fontSize
       value: 23.74
