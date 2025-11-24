@@ -590,9 +590,26 @@ MonoBehaviour:
   canPurchase: 1
   hoverPopup: {fileID: 455196304743373294}
   rt: {fileID: 0}
-  possibleAnimals: []
+  possibleAnimals:
+  - {fileID: 5991392108353192311, guid: 8c3128233cd69cb44a14147edba5745b, type: 3}
+  - {fileID: 261220975242523408, guid: 62b44a17f60e2564abf5ae809f670dfe, type: 3}
+  - {fileID: 5590992428263547732, guid: 5c35bec9414ba1047bc6dd3f61e56cae, type: 3}
+  - {fileID: 5618917105362823549, guid: c7f16862f707fd34384f68dd262add9f, type: 3}
+  - {fileID: 7196087342607165897, guid: e8408e782e31c4c41afffa0569cd68b9, type: 3}
+  - {fileID: 3412350783031639149, guid: 29965806bc728ce47b0064248782b6f2, type: 3}
+  - {fileID: 7595668239529578189, guid: 52f1490e078799d4095629e4e5d27c94, type: 3}
+  - {fileID: 8753846741520140088, guid: 04c439d9d48218d4fae99e7062270073, type: 3}
+  - {fileID: 6660122831339244413, guid: a50a71460273671499dfbb3900b93489, type: 3}
+  - {fileID: 3360856958544956942, guid: cda56dd838c62fb4b8e0ed1f81e971cb, type: 3}
+  - {fileID: 6228145669773507894, guid: 333bd040fd797554ba3785905c63c2e9, type: 3}
+  - {fileID: 6238819819887402712, guid: f6367f5a26d3def4fbcac31faa1baf46, type: 3}
+  - {fileID: 6180040466348798062, guid: 451baa97135b25c40842889e6bc2470c, type: 3}
+  - {fileID: 7327338974377108280, guid: 68b38b5fac72f33498164838d4fdbf8f, type: 3}
+  - {fileID: 5409556926586269081, guid: 4b83940e91801614788454d802687ed9, type: 3}
+  - {fileID: 3145862531765866858, guid: a95de14d216da674cad83ecc3b276d02, type: 3}
   chosenAnimal: {fileID: 0}
   descriptionText2: {fileID: 0}
+  leftAnimal: 0
 --- !u!114 &1929844963313294119
 MonoBehaviour:
   m_ObjectHideFlags: 0

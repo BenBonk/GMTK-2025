@@ -128,7 +128,7 @@ public class SaveManager : MonoBehaviour
             if (match != null)
             {
                 player.animalsInDeck.Add(match);
-                //Debug.Log("Loaded: " + animal);
+                Debug.Log("Loaded: " + animal);
             }
         }
         foreach (var booon in FBPP.GetString("boonsInDeck").Split(","))

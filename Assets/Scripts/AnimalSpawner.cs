@@ -66,7 +66,6 @@ public class AnimalSpawner : MonoBehaviour
             {
                 currentShoe.Add(predatorsInDeck[Random.Range(0, predatorsInDeck.Count)]);
             }
-            Debug.Log("called");
         }
     }
 

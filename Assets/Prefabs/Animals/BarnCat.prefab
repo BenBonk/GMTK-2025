@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855b60fe64fb80e469d886409d673523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalData: {fileID: 0}
+  animalData: {fileID: 11400000, guid: 8113f31026e2db94cb305a2fdd033dc8, type: 2}
   isPredator: 0
   speed: 0
   currentSpeed: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   legendary: 0
   forceExit: 0
   bonusPoints: 0
+  struckByLightning: 0
   leftIsPositiveScaleX: 1
   attractBrakeRadius: 2
   attractArriveRadius: 0.25
