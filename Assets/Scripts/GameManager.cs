@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public DifficultySetting quotaSetting;
     public int roundNumber;
     public bool roundInProgress;
+    public bool inShop;
     public bool playerReady;
     public bool roundCompleted;
     public float roundDuration = 20f;
@@ -430,7 +431,7 @@ public class GameManager : MonoBehaviour
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.enabled = true;
             GameController.predatorSelect.darkCover.DOFade(0.5f, 1f);
-            saveManager.SaveGameData();
+            //saveManager.SaveGameData();
             yield return new WaitForSeconds(1.5f);
             if (FBPP.GetInt("harvestLevelsUnlocked",1) <= harvestLevel && harvestLevel < saveManager.harvestDatas.Length)
             {
@@ -523,7 +524,7 @@ public class GameManager : MonoBehaviour
         ShowRoundUI();
         LassoCleaner.CleanupAll();
         GameController.rerollManager.Reset();
-        saveManager.SaveGameData();
+        //saveManager.SaveGameData();
         cameraController.AnimateToRect(
             barnCameraTarget,
             delay: .5f,
@@ -547,6 +548,7 @@ public class GameManager : MonoBehaviour
                     shopButtonBlocker.SetActive(false);
                     pauseMenu.canOpenClose = true;
                     challengeEventManager.EndChallenge();
+                    inShop = true;
                     roundNumber++;
                     saveManager.SaveGameData();
                 });
@@ -565,7 +567,11 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.PlayMusicWithFadeOutOld("ambient", 1f);
         shopButtonBlocker.SetActive(true);
         RoundSetup();
-        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>Invoke("StartRound", 2.25f));
+        barn.DOFade(1f, 1f).SetEase(Ease.OutSine).OnComplete(()=>
+        {
+            Invoke("StartRound", 2.25f);
+            inShop = false;
+        });
         cameraController.ResetToStartPosition(1f);
     }
 
@@ -592,7 +598,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdatecurrencyDisplay(double newcurrency)
     {
-        if (!roundInProgress)
+        if (inShop)
         {
             saveManager.SaveGameData();
         }
