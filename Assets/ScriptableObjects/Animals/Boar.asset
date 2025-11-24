@@ -32,7 +32,7 @@ MonoBehaviour:
     m_LocalVariables: []
   sprite: {fileID: 3232954995629961432, guid: 4b440d8de5173634d91ad717a3996a90, type: 3}
   sprite2: {fileID: -9159539668643489269, guid: 4b440d8de5173634d91ad717a3996a90, type: 3}
-  deckIcon: {fileID: 0}
+  deckIcon: {fileID: 1164832411075223175, guid: 8949cd1576bced247ba7de1961b12a9e, type: 3}
   animSpeed: 0
   animalPrefab: {fileID: 9135820605904500957, guid: 451baa97135b25c40842889e6bc2470c, type: 3}
   legendaryBoon: {fileID: 11400000, guid: 793061f93357bfe4493791d0322b967d, type: 2}
