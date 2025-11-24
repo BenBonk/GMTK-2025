@@ -60,6 +60,11 @@ public class SynergyShopItem : ShopItem
             if (chosenBoon.name=="Thief")
             {
                 chosenToStealIndex = Random.Range(0, GameController.gameManager.animalShopItem.possibleAnimals.Length);
+                if (chosenToStealIndex==5)
+                {
+                    //no fox steal from fox, in the rare case goes to horse, because horse op which will be fun lol
+                    chosenToStealIndex = 6;
+                }
                 chosenToSteal = GameController.gameManager.animalShopItem.possibleAnimals[chosenToStealIndex];
                 descriptionText.text = chosenBoon.desc.GetLocalizedString() + " " + chosenToSteal.name + ".";
             }
