@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public int harvestLevel = 1;
     public int farmerID = 0;
     //public double startingPointRequirement = 65;
-    public PointQuotaSetting quotaSetting;
+    public DifficultySetting quotaSetting;
     public int roundNumber;
     public bool roundInProgress;
     public bool playerReady;
@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
         ApplyHarvestLevel();
         if (isTesting)
         {
-            quotaSetting = PointQuotaSetting.None;
+            quotaSetting = DifficultySetting.None;
             roundDuration = 3;
             player.playerCurrency = 10000;
         }
@@ -217,7 +217,7 @@ public class GameManager : MonoBehaviour
         if (isTesting)
         {
             roundDuration = 3;
-            quotaSetting = PointQuotaSetting.None;
+            quotaSetting = DifficultySetting.None;
         }
         pointsThisRound = 0;
         saveManager.SaveGameData();
@@ -306,15 +306,15 @@ public class GameManager : MonoBehaviour
         float R = roundNumber;
         switch (quotaSetting)
         {
-            case PointQuotaSetting.None:
+            case DifficultySetting.None:
                 return 0;
-            case PointQuotaSetting.Novice:
+            case DifficultySetting.Novice:
                 value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f*R + 5)*(Math.Pow(1.28f,R+4));
                 break;
-            case PointQuotaSetting.Veteran:
+            case DifficultySetting.Veteran:
                 value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
                 break;
-            case PointQuotaSetting.Expert:
+            case DifficultySetting.Expert:
                 //placeholder
                 value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
                 break;
@@ -331,15 +331,15 @@ public class GameManager : MonoBehaviour
         float R = round;
         switch (quotaSetting)
         {
-            case PointQuotaSetting.None:
+            case DifficultySetting.None:
                 return 0;
-            case PointQuotaSetting.Novice:
+            case DifficultySetting.Novice:
                 value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f * R + 5) * (Math.Pow(1.28f, R + 4));
                 break;
-            case PointQuotaSetting.Veteran:
+            case DifficultySetting.Veteran:
                 value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
                 break;
-            case PointQuotaSetting.Expert:
+            case DifficultySetting.Expert:
                 //placeholder
                 value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
                 break;

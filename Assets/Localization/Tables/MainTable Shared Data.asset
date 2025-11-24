@@ -739,16 +739,24 @@ MonoBehaviour:
     m_Key: farmerSelect.numDays
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809032
-    m_Key: farmerSelect.startingPredators
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809033
-    m_Key: farmerSelect.shopPrices
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809034
     m_Key: farmerSelect.pointQuotas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960782340096
+    m_Key: farmerSelect.predatorFrequency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700224
+    m_Key: farmerSelect.predatorFrequency2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700225
+    m_Key: farmerSelect.predatorOptions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700226
+    m_Key: farmerSelect.challengeIntensity
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809035

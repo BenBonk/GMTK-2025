@@ -718,14 +718,6 @@ MonoBehaviour:
     m_Localized: 'Number of Days:'
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809032
-    m_Localized: 'Starting Predators:'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809033
-    m_Localized: 'Shop Prices:'
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809034
     m_Localized: 'Point Quotas:'
     m_Metadata:
@@ -1549,6 +1541,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 27389551341584384
     m_Localized: 'Nightfall: Higher predator spawnrate'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960782340096
+    m_Localized: 'Predator: Every'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700224
+    m_Localized: Days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700225
+    m_Localized: 'Predator Options:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700226
+    m_Localized: 'Challenge Intensity:'
     m_Metadata:
       m_Items: []
   references:

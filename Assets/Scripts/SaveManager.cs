@@ -87,20 +87,7 @@ public class SaveManager : MonoBehaviour
     public void InitializeSaveData(int harvestLevel, int farmerIndex)
     {
         ResetVars();
-        bool extraPredators = false;
         List<AnimalData> startingAnimals = new List<AnimalData>();
-        foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].farmerData.startingDeck)
-        {
-            if (animalData.isPredator && !extraPredators)
-            {
-                extraPredators = true;
-                for (int i = 0; i < GameController.saveManager.harvestDatas[harvestLevel-1].startingPredators; i++)
-                {
-                    startingAnimals.Add(animalData);
-                }
-            }
-            startingAnimals.Add(animalData);
-        }
         FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
         FBPP.SetInt("harvestLevel", harvestLevel);
         FBPP.SetInt("farmerID", farmerIndex);
@@ -130,19 +117,6 @@ public class SaveManager : MonoBehaviour
         if (FBPP.GetString("animalsInDeck")=="")
         {
             List<AnimalData> startingAnimals = new List<AnimalData>();
-            bool extraPredators = false;
-            foreach (var animalData in farmerDatas[FBPP.GetInt("farmerID", 0)].startingDeck)
-            {
-                if (animalData.isPredator && !extraPredators)
-                {
-                    extraPredators = true;
-                    for (int i = 0; i < harvestDatas[FBPP.GetInt("harvestLevel", 1)-1].startingPredators; i++)
-                    {
-                        startingAnimals.Add(animalData);
-                    }
-                }
-                startingAnimals.Add(animalData);
-            }
             FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
         }
         //Debug.Log(FBPP.GetString("animalsInDeck"));

@@ -743,14 +743,6 @@ MonoBehaviour:
     m_Localized: 'Liczba dni:'
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809032
-    m_Localized: "Pocz\u0105tkuj\u0105cy Predatorzy:"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809033
-    m_Localized: 'Ceny w sklepie:'
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809034
     m_Localized: 'Limity punktowe:'
     m_Metadata:
@@ -1624,6 +1616,22 @@ MonoBehaviour:
   - m_Id: 27389551341584384
     m_Localized: "Zmrok: Wi\u0119ksza cz\u0119stotliwo\u015B\u0107 pojawiania si\u0119
       drapie\u017Cnik\xF3w"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960782340096
+    m_Localized: "Predator: Ka\u017Cdy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700224
+    m_Localized: Dni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700225
+    m_Localized: 'Opcje Predatora:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700226
+    m_Localized: "Intensywno\u015B\u0107 wyzwania:"
     m_Metadata:
       m_Items: []
   references:

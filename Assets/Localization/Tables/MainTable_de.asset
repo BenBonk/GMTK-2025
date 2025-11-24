@@ -740,14 +740,6 @@ MonoBehaviour:
     m_Localized: 'Anzahl der Tage:'
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809032
-    m_Localized: 'Startende Raubtiere:'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809033
-    m_Localized: 'Ladenpreise:'
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809034
     m_Localized: 'Punktequoten:'
     m_Metadata:
@@ -939,7 +931,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802005
-    m_Localized: "Jeder erfolgreiche Lasso verl\xE4ngert die Rundenzeit um 0,5 Sekunden."
+    m_Localized: "Jeder erfolgreiche Lassowurf verl\xE4ngert die Rundenzeit um 0,5
+      Sekunden."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802006
@@ -1611,6 +1604,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 27389551341584384
     m_Localized: "Nachteinbruch: H\xF6here Raubtier-Laichrate"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960782340096
+    m_Localized: 'Predator: Jeder'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700224
+    m_Localized: Tage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700225
+    m_Localized: 'Raubtieroptionen:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700226
+    m_Localized: "Herausforderungsintensit\xE4t:"
     m_Metadata:
       m_Items: []
   references:

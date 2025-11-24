@@ -1,14 +1,6 @@
 using UnityEngine;
 
-public enum ShopPriceSetting
-{
-    None,
-    Novice,
-    Veteran,
-    Expert
-}
-
-public enum PointQuotaSetting
+public enum DifficultySetting
 {
     None,
     Novice,
@@ -23,11 +15,10 @@ public class HarvestData : ScriptableObject
 
     [Header("Game Settings")]
     public int roundLength;
-    public int dailyCash;
     public int numberOfDays;
-    public int startingPredators;
-
-    [Header("Shop Settings")]
-    public ShopPriceSetting shopPrices;
-    public PointQuotaSetting pointQuotas;
+    public int dailyCash;
+    public int predatorFrequency;
+    public int predatorOptions;
+    public DifficultySetting pointQuotas;
+    public DifficultySetting challengeRoundIntensity;
 }

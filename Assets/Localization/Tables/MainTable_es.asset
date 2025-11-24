@@ -225,7 +225,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 49
-    m_Localized: Jinete de pollo
+    m_Localized: Pollo Jockey
     m_Metadata:
       m_Items: []
   - m_Id: 50
@@ -532,7 +532,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355912
-    m_Localized: Beneficios
+    m_Localized: Bendiciones
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
@@ -596,7 +596,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3161374273548290
-    m_Localized: Beneficios
+    m_Localized: Bendiciones
     m_Metadata:
       m_Items: []
   - m_Id: 3161374273548291
@@ -632,7 +632,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206017
-    m_Localized: "L\xEDmite de velocidad de fotogramas"
+    m_Localized: "L\xEDmite de velocidad de cuadros"
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206018
@@ -644,7 +644,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206020
-    m_Localized: SFX
+    m_Localized: Efectos de sonido
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206021
@@ -688,7 +688,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6436971056619522
-    m_Localized: Modo infinito
+    m_Localized: Modo sin fin
     m_Metadata:
       m_Items: []
   - m_Id: 6436971056619523
@@ -721,14 +721,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8554514727809031
     m_Localized: "N\xFAmero de d\xEDas:"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809032
-    m_Localized: 'Depredadores iniciales:'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809033
-    m_Localized: 'Precios de la tienda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809034
@@ -812,7 +804,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607693
-    m_Localized: "\xA1Un momento!"
+    m_Localized: Mantenga sus caballos
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607694
@@ -933,7 +925,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008
-    m_Localized: Monedero
+    m_Localized: Bolsa para monedas
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802009
@@ -1141,7 +1133,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
-    m_Localized: "El Arca de No\xE9"
+    m_Localized: "El arca de No\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376271
@@ -1150,7 +1142,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Golpea al topo
+    m_Localized: Golpea a un topo
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
@@ -1581,6 +1573,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 27389551341584384
     m_Localized: 'Night: More predators spawn during the night'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960782340096
+    m_Localized: 'Depredador: Cada'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700224
+    m_Localized: "D\xEDas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700225
+    m_Localized: 'Opciones de depredador:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700226
+    m_Localized: "Intensidad del desaf\xEDo:"
     m_Metadata:
       m_Items: []
   references:

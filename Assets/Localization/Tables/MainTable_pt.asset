@@ -724,14 +724,6 @@ MonoBehaviour:
     m_Localized: "N\xFAmero de dias:"
     m_Metadata:
       m_Items: []
-  - m_Id: 8554514727809032
-    m_Localized: 'Predadores Iniciais:'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 8554514727809033
-    m_Localized: "Pre\xE7os na loja:"
-    m_Metadata:
-      m_Items: []
   - m_Id: 8554514727809034
     m_Localized: 'Cotas de Pontos:'
     m_Metadata:
@@ -1582,6 +1574,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 27389551341584384
     m_Localized: 'Anoitecer: Maior taxa de desova de predadores'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960782340096
+    m_Localized: 'Predador: Todos'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700224
+    m_Localized: Dias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700225
+    m_Localized: "Op\xE7\xF5es de predadores:"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35716960811700226
+    m_Localized: 'Intensidade do desafio:'
     m_Metadata:
       m_Items: []
   references:

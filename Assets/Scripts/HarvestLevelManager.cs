@@ -8,17 +8,21 @@ public class HarvestLevelManager : MonoBehaviour
     public TMP_Text roundLengthText;
     public TMP_Text dailyCashText;
     public TMP_Text numberOfDaysText;
-    public TMP_Text startingPredatorsText;
-    public TMP_Text shopPricesText;
+    public TMP_Text predatorFrequencyText;
+    public TMP_Text predatorOptionsText;
     public TMP_Text pointQuotasText;
+    public TMP_Text challengeIntensityText;
     public TMP_Text harvestLevelText;
     
     public LocalizedString roundLengthLocalized;
     public LocalizedString dailyCashLocalized;
     public LocalizedString numberOfDaysLocalized;
-    public LocalizedString startingPredatorsLocalized;
-    public LocalizedString shopPricesLocalized;
+    public LocalizedString predatorFrequencyLocalized;
+    public LocalizedString predatorFrequencyLocalized2;
+    public LocalizedString predatorOptionsLocalized;
     public LocalizedString pointQuotasLocalized;
+    public LocalizedString challengeIntensityLocalized;
+
     public LocalizedString[] difficultyLevels;
 
     public GameObject decreaseButton;
@@ -62,9 +66,10 @@ public class HarvestLevelManager : MonoBehaviour
         roundLengthText.text = $"{roundLengthLocalized.GetLocalizedString()} {data.roundLength}";
         dailyCashText.text = $"{dailyCashLocalized.GetLocalizedString()} {data.dailyCash}";
         numberOfDaysText.text = $"{numberOfDaysLocalized.GetLocalizedString()} {data.numberOfDays}";
-        startingPredatorsText.text = $"{startingPredatorsLocalized.GetLocalizedString()} +{data.startingPredators}";
-        shopPricesText.text = $"{shopPricesLocalized.GetLocalizedString()} {difficultyLevels[(int)data.shopPrices].GetLocalizedString()}";
+        predatorFrequencyText.text = $"{predatorFrequencyLocalized.GetLocalizedString()} {data.predatorFrequency} {predatorFrequencyLocalized2.GetLocalizedString()}";
+        predatorOptionsText.text = $"{predatorOptionsLocalized.GetLocalizedString()} {data.predatorOptions}";
         pointQuotasText.text = $"{pointQuotasLocalized.GetLocalizedString()} {difficultyLevels[(int)data.pointQuotas].GetLocalizedString()}";
+        challengeIntensityText.text = $"{challengeIntensityLocalized.GetLocalizedString()} {difficultyLevels[(int)data.challengeRoundIntensity].GetLocalizedString()}";
         harvestLevelText.text = $"{data.harvestLevel}";
     }
 
