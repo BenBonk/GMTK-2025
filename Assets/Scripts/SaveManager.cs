@@ -88,6 +88,10 @@ public class SaveManager : MonoBehaviour
     {
         ResetVars();
         List<AnimalData> startingAnimals = new List<AnimalData>();
+        foreach (var animalData in GameController.farmerSelectManager.farmers[GameController.farmerSelectManager.selectedFarmerIndex].farmerData.startingDeck)
+        {
+            startingAnimals.Add(animalData);
+        }
         FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
         FBPP.SetInt("harvestLevel", harvestLevel);
         FBPP.SetInt("farmerID", farmerIndex);
@@ -117,6 +121,10 @@ public class SaveManager : MonoBehaviour
         if (FBPP.GetString("animalsInDeck")=="")
         {
             List<AnimalData> startingAnimals = new List<AnimalData>();
+            foreach (var animalData in farmerDatas[FBPP.GetInt("farmerID", 0)].startingDeck)
+            {
+                startingAnimals.Add(animalData);
+            }
             FBPP.SetString("animalsInDeck", GetSOList(startingAnimals));
         }
         //Debug.Log(FBPP.GetString("animalsInDeck"));
@@ -128,7 +136,7 @@ public class SaveManager : MonoBehaviour
             if (match != null)
             {
                 player.animalsInDeck.Add(match);
-                Debug.Log("Loaded: " + animal);
+                //Debug.Log("Loaded: " + animal);
             }
         }
         foreach (var booon in FBPP.GetString("boonsInDeck").Split(","))
