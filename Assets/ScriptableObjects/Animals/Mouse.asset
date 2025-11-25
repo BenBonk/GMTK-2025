@@ -33,7 +33,7 @@ MonoBehaviour:
   sprite: {fileID: -357421434760999972, guid: 396ac5e846a84e742af47415caab14eb, type: 3}
   sprite2: {fileID: 1506059532727745469, guid: 396ac5e846a84e742af47415caab14eb, type: 3}
   deckIcon: {fileID: -8626134802979661148, guid: 8949cd1576bced247ba7de1961b12a9e, type: 3}
-  animSpeed: 0
+  animSpeed: 0.25
   animalPrefab: {fileID: 1617273539469480319, guid: 4b83940e91801614788454d802687ed9, type: 3}
   legendaryBoon: {fileID: 11400000, guid: b6edc94cecfeee3439dcf492b056d57e, type: 2}
   isPredator: 0
