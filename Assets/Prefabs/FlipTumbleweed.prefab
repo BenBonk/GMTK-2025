@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aab8db5ab25e5544b4530a5bc1b0563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flip: 1
   baseSpeed: 2.75
   windGustStrength: 1.75
   windGustFrequency: 0.65

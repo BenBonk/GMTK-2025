@@ -69,8 +69,8 @@ public class Animal : MonoBehaviour
         { "goat",  0.50f },
         { "lightning", 2f },
         { "tailwind",  1.75f },
-        { "tailwind2",  2f },
-        { "tailwind3",  2.25f },
+        { "tailwind2",  2.25f },
+        { "tailwind3",  2.75f },
         { "holdhorse", 0.35f },
         { "chase" , 1.5f }
     };

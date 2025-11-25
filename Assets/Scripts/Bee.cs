@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Bee : MonoBehaviour
 {
+    public bool flip = false;
     // ---------- Patrol ----------
     [Header("Patrol")]
     public float speed = 3f;
@@ -94,27 +95,32 @@ public class Bee : MonoBehaviour
 
     private void Start()
     {
-        // Start slightly offscreen left; move to the right
         var cam = Camera.main;
         if (cam)
         {
-            var leftEdge = cam.ScreenToWorldPoint(new Vector3(0, Screen.height * 0.5f, cam.nearClipPlane));
-            var startPos = new Vector3(leftEdge.x - 1f, transform.position.y, transform.position.z);
+            var midY = Screen.height * 0.5f;
+            var leftEdge  = cam.ScreenToWorldPoint(new Vector3(0, midY, cam.nearClipPlane));
+            var rightEdge = cam.ScreenToWorldPoint(new Vector3(Screen.width, midY, cam.nearClipPlane));
+
+            Vector3 startPos;
+
+            if (!flip)
+                startPos = new Vector3(leftEdge.x - 1f, transform.position.y, transform.position.z);   // L → R
+            else
+                startPos = new Vector3(rightEdge.x + 1f, transform.position.y, transform.position.z);  // R → L
+
             transform.position = startPos;
         }
 
         currentSpeed = speed;
-
-        // spawn delay
         spawnTimer = spawnTargetDelay;
 
-        // anchor patrol wave around current height
         startY = ClampY(transform.position.y, margin: waveAmplitude);
         previousPos = transform.position;
 
-        // face right to start
-        SetFacingRight(true);
+        SetFacingRight(!flip);   // new: if flipped, start facing left
     }
+
 
     private void Update()
     {
@@ -209,10 +215,14 @@ public class Bee : MonoBehaviour
         waveProgress += Time.deltaTime;
         float yOffset = Mathf.Sin(waveProgress * Mathf.PI * 2f * waveFrequency) * waveAmplitude;
 
-        Vector3 next = transform.position + Vector3.right * currentSpeed * Time.deltaTime;
+        Vector3 dir = flip ? Vector3.left : Vector3.right;
+
+        Vector3 next = transform.position + dir * currentSpeed * Time.deltaTime;
         next.y = startY + yOffset;
+
         return next;
     }
+
 
     private Vector3 StalkMove()
     {
@@ -445,8 +455,10 @@ public class Bee : MonoBehaviour
     // Cone should face horizontally, independent of tilt.
     private Vector2 VisionForward()
     {
-        return (transform.localScale.x >= 0f) ? Vector2.right : Vector2.left;
+        // If flip = true, forward is left even at rest
+        return flip ? Vector2.left : Vector2.right;
     }
+
 
     private void SetFacingRight(bool right)
     {

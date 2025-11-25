@@ -10,6 +10,7 @@ public class AnimalSpawner : MonoBehaviour
 
     private BoonManager boonManager;
     private PostProcessingManager postProcessing;
+    private ChallengeEventManager challengeEventManager;
     public GameObject animalLight;
     
     //Shoe stuff
@@ -17,8 +18,10 @@ public class AnimalSpawner : MonoBehaviour
     private Player player;
     private int shoesize;
     
+
     private void Start()
     {
+        challengeEventManager = GameController.challengeEventManager;
         player = GameController.player;
         boonManager = GameController.boonManager;
         postProcessing = GameController.postProcessingManager;
@@ -61,7 +64,7 @@ public class AnimalSpawner : MonoBehaviour
                 }
             }
             //proportionally add random predator to shoe depending on shoe size 
-            int predatorsToAdd = currentShoe.Count / 4; //add 25% predators for example
+            int predatorsToAdd = currentShoe.Count / challengeEventManager.nightPredatorIncrease; //add 25% predators for example
             for (int i = 0; i < predatorsToAdd; i++)
             {
                 currentShoe.Add(predatorsInDeck[Random.Range(0, predatorsInDeck.Count)]);

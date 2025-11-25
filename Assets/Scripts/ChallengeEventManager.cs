@@ -9,11 +9,11 @@ public class ChallengeEventManager : MonoBehaviour
 {
     public BoxCollider2D cactusBounds;
     public GameObject[] cacti;
-    private int numCacti=2;
-    private float minBeeSpawnTime=3.0f;
-    private float maxBeeSpawnTime=7.0f;
-    private float minTumbleweedSpawnTime=3.0f;
-    private float maxTumbleweedSpawnTime=7.0f;
+    private int numCacti;
+    private float minBeeSpawnTime;
+    private float maxBeeSpawnTime;
+    private float minTumbleweedSpawnTime;
+    private float maxTumbleweedSpawnTime;
     public GameObject bee;
     public GameObject tumbleweed;
     public GameObject beeRight;
@@ -28,6 +28,7 @@ public class ChallengeEventManager : MonoBehaviour
     private DifficultySetting intensityLevel;
     private bool spawnFromRight;
     private string tailwindModifer="tailwind";
+    [HideInInspector]public int nightPredatorIncrease;
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(.25f);
@@ -35,61 +36,55 @@ public class ChallengeEventManager : MonoBehaviour
         intensityLevel = gameManager.challengeIntensitySetting;
         switch (intensityLevel)
         {
-            case DifficultySetting.None:
-                SetDifficulty(
-                    cacti: 2,
-                    minBee: 3f, maxBee: 7f,
-                    minTumble: 3f, maxTumble: 7f,
-                    tailwind: "tailwind",
-                    particleSpeedMin: 5, particleSpeedMax: 11,
-                    particleRate: 15
-                );
-                break;
-
             case DifficultySetting.Novice:
                 SetDifficulty(
-                    cacti: 2,
+                    cactii: 2,
                     minBee: 3f, maxBee: 7f,
-                    minTumble: 3f, maxTumble: 7f,
+                    minTumble: 2.5f, maxTumble: 4.5f,
                     tailwind: "tailwind",
                     particleSpeedMin: 5, particleSpeedMax: 11,
-                    particleRate: 15
+                    particleRate: 15,
+                    nightPredatorInc: 4
                 );
                 break;
 
             case DifficultySetting.Veteran:
                 SetDifficulty(
-                    cacti: 3,
+                    cactii: 3,
                     minBee: 2f, maxBee: 5.5f,
-                    minTumble: 2f, maxTumble: 5.5f,
+                    minTumble: 2f, maxTumble: 3.5f,
                     tailwind: "tailwind2",
                     particleSpeedMin: 7, particleSpeedMax: 14,
-                    particleRate: 19
+                    particleRate: 19,
+                    nightPredatorInc: 3
                 );
                 break;
 
             case DifficultySetting.Expert:
                 SetDifficulty(
-                    cacti: 4,
-                    minBee: 2f, maxBee: 5.5f,
-                    minTumble: 2f, maxTumble: 5.5f,
+                    cactii: 4,
+                    minBee: 1.75f, maxBee: 4f,
+                    minTumble: 1.5f, maxTumble: 2.5f,
                     tailwind: "tailwind3",
                     particleSpeedMin: 9, particleSpeedMax: 16,
-                    particleRate: 23
+                    particleRate: 23,
+                    nightPredatorInc: 2
                 );
                 spawnFromRight = true;
                 break;
         }
     }
 
-    void SetDifficulty(int cacti, float minBee, float maxBee, float minTumble, float maxTumble, string tailwind, float particleSpeedMin, float particleSpeedMax, float particleRate)
+    void SetDifficulty(int cactii, float minBee, float maxBee, float minTumble, float maxTumble, string tailwind, float particleSpeedMin, float particleSpeedMax, float particleRate, int nightPredatorInc)
     {
-        numCacti = cacti;
+        numCacti = cactii;
         minBeeSpawnTime = minBee;
         maxBeeSpawnTime = maxBee;
         minTumbleweedSpawnTime = minTumble;
         maxTumbleweedSpawnTime = maxTumble;
         tailwindModifer = tailwind;
+        nightPredatorIncrease = nightPredatorInc;
+        
         var ps = wind.transform.GetChild(0).GetComponent<ParticleSystem>();
 
         var main = ps.main;
