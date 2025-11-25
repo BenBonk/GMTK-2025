@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public int farmerID = 0;
     //public double startingPointRequirement = 65;
     public DifficultySetting quotaSetting;
+    public DifficultySetting challengeIntensitySetting;
     public int roundNumber;
     public bool roundInProgress;
     public bool inShop;
@@ -170,6 +171,7 @@ public class GameManager : MonoBehaviour
         endDayCash = saveManager.harvestDatas[harvestLevel - 1].dailyCash;
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
         quotaSetting = saveManager.harvestDatas[harvestLevel - 1].pointQuotas;
+        challengeIntensitySetting = saveManager.harvestDatas[harvestLevel - 1].challengeRoundIntensity;
         predatorRoundFrequency = saveManager.harvestDatas[harvestLevel - 1].predatorFrequency;
         predatorOptions = saveManager.harvestDatas[harvestLevel - 1].predatorOptions;
     }

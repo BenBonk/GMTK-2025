@@ -14420,10 +14420,10 @@ MonoBehaviour:
   - {fileID: 5465896840286953389, guid: 4353836029bae6649a7c514594f368d8, type: 3}
   - {fileID: 5465896840286953389, guid: 3c962ef830e0c0043a8e11441e9a8295, type: 3}
   - {fileID: 5465896840286953389, guid: 4863d4a8874f4d64bbd84f51827e1835, type: 3}
-  minCacti: 2
-  maxCacti: 2
   bee: {fileID: 6855987514067192795, guid: 7e9f379fffb650f4c9c5549d6933babd, type: 3}
   tumbleweed: {fileID: 3198163530796938129, guid: 404dd1fc263091d4bbd1b78f464aeeb9, type: 3}
+  beeRight: {fileID: 6855987514067192795, guid: 4067928476fadd642a723138334a4228, type: 3}
+  tumbleweedRight: {fileID: 3198163530796938129, guid: 097aa26a8ea4f32499f954c201b2dd9b, type: 3}
   wind: {fileID: 648275335}
   lastEvent: 67
   challengeEventStrings:
@@ -34150,11 +34150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974e7489f33c1f54e8a14a9a3b88a3c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTesting: 1
+  isTesting: 0
   player: {fileID: 1887224207}
   harvestLevel: 1
   farmerID: 0
   quotaSetting: 0
+  challengeIntensitySetting: 0
   roundNumber: 0
   roundInProgress: 0
   inShop: 0
@@ -34165,7 +34166,7 @@ MonoBehaviour:
   elapsedTime: 0
   predatorRoundFrequency: 3
   predatorOptions: 2
-  challengeRoundFrequency: 5
+  challengeRoundFrequency: 1
   wordPrefab: {fileID: 3484454060116296803, guid: 1a9268468c9d6044d8257a15fba7375c, type: 3}
   dayBeginPrefab: {fileID: 3484454060116296803, guid: 6e37cc45f113d504b91a2ea649e67767, type: 3}
   endRoundPrefab: {fileID: 3484454060116296803, guid: c01d5805210ba0c459e6a670098a123a, type: 3}

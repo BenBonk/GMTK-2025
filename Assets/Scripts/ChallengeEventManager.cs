@@ -9,10 +9,15 @@ public class ChallengeEventManager : MonoBehaviour
 {
     public BoxCollider2D cactusBounds;
     public GameObject[] cacti;
-    public int minCacti = 2;
-    public int maxCacti = 4;
+    private int numCacti=2;
+    private float minBeeSpawnTime=3.0f;
+    private float maxBeeSpawnTime=7.0f;
+    private float minTumbleweedSpawnTime=3.0f;
+    private float maxTumbleweedSpawnTime=7.0f;
     public GameObject bee;
     public GameObject tumbleweed;
+    public GameObject beeRight;
+    public GameObject tumbleweedRight;
     public GameObject wind;
 
     public int lastEvent = 67;
@@ -20,9 +25,83 @@ public class ChallengeEventManager : MonoBehaviour
     GameManager gameManager;
 
     private List<Vector2> placedPositions = new List<Vector2>();
-    private void Start()
+    private DifficultySetting intensityLevel;
+    private bool spawnFromRight;
+    private string tailwindModifer="tailwind";
+    private IEnumerator Start()
     {
+        yield return new WaitForSeconds(.25f);
         gameManager = GameController.gameManager;
+        intensityLevel = gameManager.challengeIntensitySetting;
+        switch (intensityLevel)
+        {
+            case DifficultySetting.None:
+                SetDifficulty(
+                    cacti: 2,
+                    minBee: 3f, maxBee: 7f,
+                    minTumble: 3f, maxTumble: 7f,
+                    tailwind: "tailwind",
+                    particleSpeedMin: 5, particleSpeedMax: 11,
+                    particleRate: 15
+                );
+                break;
+
+            case DifficultySetting.Novice:
+                SetDifficulty(
+                    cacti: 2,
+                    minBee: 3f, maxBee: 7f,
+                    minTumble: 3f, maxTumble: 7f,
+                    tailwind: "tailwind",
+                    particleSpeedMin: 5, particleSpeedMax: 11,
+                    particleRate: 15
+                );
+                break;
+
+            case DifficultySetting.Veteran:
+                SetDifficulty(
+                    cacti: 3,
+                    minBee: 2f, maxBee: 5.5f,
+                    minTumble: 2f, maxTumble: 5.5f,
+                    tailwind: "tailwind2",
+                    particleSpeedMin: 7, particleSpeedMax: 14,
+                    particleRate: 19
+                );
+                break;
+
+            case DifficultySetting.Expert:
+                SetDifficulty(
+                    cacti: 4,
+                    minBee: 2f, maxBee: 5.5f,
+                    minTumble: 2f, maxTumble: 5.5f,
+                    tailwind: "tailwind3",
+                    particleSpeedMin: 9, particleSpeedMax: 16,
+                    particleRate: 23
+                );
+                spawnFromRight = true;
+                break;
+        }
+    }
+
+    void SetDifficulty(int cacti, float minBee, float maxBee, float minTumble, float maxTumble, string tailwind, float particleSpeedMin, float particleSpeedMax, float particleRate)
+    {
+        numCacti = cacti;
+        minBeeSpawnTime = minBee;
+        maxBeeSpawnTime = maxBee;
+        minTumbleweedSpawnTime = minTumble;
+        maxTumbleweedSpawnTime = maxTumble;
+        tailwindModifer = tailwind;
+        var ps = wind.transform.GetChild(0).GetComponent<ParticleSystem>();
+
+        var main = ps.main;
+        var speed = main.startSpeed;
+        speed.mode = ParticleSystemCurveMode.TwoConstants;
+        speed.constantMin = particleSpeedMin;
+        speed.constantMax = particleSpeedMax;
+        main.startSpeed = speed;
+
+        var emission = ps.emission;
+        emission.rateOverTime = particleRate;
+
     }
 
     public int GetChallengeEvent()
@@ -102,8 +181,8 @@ public class ChallengeEventManager : MonoBehaviour
     {
         int attempts = 0;
         int placed = 0;
-        int maxAttempts = maxCacti * 10;
-        int numberOfCacti = Random.Range(minCacti, maxCacti + 1);
+        int maxAttempts = numCacti * 10;
+        int numberOfCacti = numCacti;
         placedPositions.Clear();
 
         while (placed < numberOfCacti && attempts < maxAttempts)
@@ -149,11 +228,20 @@ public class ChallengeEventManager : MonoBehaviour
         float randomY = Random.Range(minY, maxY);
 
         //  Set spawn position at the right edge
-        float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x;
-        Instantiate(bee, new Vector3(rightEdgeX, randomY, 0), Quaternion.identity);
+        if (spawnFromRight && Random.Range(0, 2) == 0)
+        {
+            float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0.5f, z)).x;
+            Instantiate(beeRight, new Vector3(rightEdgeX, randomY, 0), Quaternion.identity);
+        }
+        else
+        {
+            float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x;
+            Instantiate(bee, new Vector3(rightEdgeX, randomY, 0), Quaternion.identity);    
+        }
+        
         if (!gameManager.roundCompleted && gameManager.roundDuration > 0)
         {
-            Invoke("SpawnBee", Random.Range(3.0f, 7.0f));
+            Invoke("SpawnBee", Random.Range(minBeeSpawnTime, maxBeeSpawnTime));
         }
     }
 
@@ -174,18 +262,27 @@ public class ChallengeEventManager : MonoBehaviour
         float randomY = Random.Range(minY, maxY);
 
         //  Set spawn position at the right edge
-        float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x;
-        Instantiate(tumbleweed, new Vector3(rightEdgeX, randomY, 0), Quaternion.identity);
+        if (spawnFromRight && Random.Range(0,2)==0)
+        {
+            float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0.5f, z)).x;
+            Instantiate(tumbleweedRight, new Vector3(rightEdgeX, randomY, 0), Quaternion.identity);
+        }
+        else
+        {
+            float rightEdgeX = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0.5f, z)).x;
+            Instantiate(tumbleweed, new Vector3(rightEdgeX, randomY, 0), Quaternion.identity);    
+        }
+        
         if (!gameManager.roundCompleted && gameManager.roundDuration > 0)
         {
-            Invoke("SpawnTumbleweed", Random.Range(3.0f, 7.0f));
+            Invoke("SpawnTumbleweed", Random.Range(minTumbleweedSpawnTime, maxTumbleweedSpawnTime));
         }
     }
 
     public void EndChallenge()
     {
         GameController.challengeEventManager.wind.SetActive(false);
-        Animal.DisableSpeedModifier("tailwind");
+        Animal.DisableSpeedModifier(tailwindModifer);
         foreach (var cact in GameObject.FindGameObjectsWithTag("Cactus"))
         {
             Destroy(cact);
