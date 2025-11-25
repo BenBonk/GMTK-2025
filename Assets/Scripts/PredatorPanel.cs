@@ -23,6 +23,7 @@ public class PredatorPanel : MonoBehaviour
         title.text = titleText;
         desc.text = descText;
         icon.sprite = iconSprite;
+        icon.SetNativeSize();
         predator = predatorData;
         cantSelect = false;
         buttonFX.clickSFX = predator.animalName.GetLocalizedString();

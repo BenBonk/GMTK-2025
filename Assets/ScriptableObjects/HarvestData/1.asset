@@ -17,6 +17,6 @@ MonoBehaviour:
   numberOfDays: 15
   dailyCash: 50
   predatorFrequency: 3
-  predatorOptions: 3
+  predatorOptions: 2
   pointQuotas: 1
   challengeRoundIntensity: 1

@@ -19,11 +19,13 @@ public class PredatorSelect : MonoBehaviour
 
     private DescriptionManager descriptionManager;
     private GameManager gameManager;
+    private RectTransform[] options;
 
     private void Start()
     {
         gameManager = GameController.gameManager;
         descriptionManager = GameController.descriptionManager;
+        options = gameManager.predatorOptions == 2 ? twoOptions : threeOptions;
     }
 
     public IEnumerator Intro()
@@ -36,7 +38,7 @@ public class PredatorSelect : MonoBehaviour
         {
             int index = selectedIndexes[i];
             string desc = descriptionManager.GetAnimalDescription(predatorOptions[index]);
-            predatorPanel1.Initialize(predatorOptions[index].animalName.GetLocalizedString(), desc, predatorOptions[index].sprite, predatorOptions[index]);
+            options[i].GetComponent<PredatorPanel>().Initialize(predatorOptions[index].animalName.GetLocalizedString(), desc, predatorOptions[index].sprite, predatorOptions[index]);
         }
         
         
@@ -45,8 +47,7 @@ public class PredatorSelect : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
         darkCover.enabled = true;
         darkCover.DOFade(0.5f, 0.5f);
-        RectTransform[] options = gameManager.predatorOptions == 2 ? twoOptions : threeOptions;
-        
+
         titleText.gameObject.SetActive(true);
         titleText.DOAnchorPosY(220, .5f).SetEase(Ease.OutBack);
         for (int i = 0; i < options.Length; i++)
@@ -63,11 +64,10 @@ public class PredatorSelect : MonoBehaviour
         darkCover.DOFade(0, .5f).OnComplete(() => darkCover.enabled = false);
         yield return new WaitForSeconds(.1f);
         titleText.DOAnchorPosY(530, .5f).SetEase(Ease.InBack).OnComplete(() => titleText.gameObject.SetActive(false));
-        RectTransform[] options = gameManager.predatorOptions == 2 ? twoOptions : threeOptions;
         for (int i = 0; i < options.Length; i++)
         {
             yield return new WaitForSeconds(.25f);
-            options[i].DOAnchorPosY(-1000, .5f).SetEase(Ease.InBack).OnComplete(() => options[i].gameObject.SetActive(false));
+            options[i].DOAnchorPosY(-1000, .5f).SetEase(Ease.InBack);
         }
 
         if (GameController.gameManager.roundNumber % GameController.gameManager.challengeRoundFrequency == 0)
@@ -79,6 +79,12 @@ public class PredatorSelect : MonoBehaviour
             GameController.pauseMenu.canOpenClose = false;
             GameController.shopManager.InitializeAllUpgrades();
             GameController.gameManager.GoToShop();
+        }
+
+        yield return new WaitForSeconds(.5f);
+        for (int i = 0; i < options.Length; i++)
+        {
+           options[i].gameObject.SetActive(false);
         }
     }
 
