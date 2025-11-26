@@ -68,6 +68,7 @@ public class CaptureManager : MonoBehaviour
                         animalsCaptured.Add(animal);
                         if (animal.animalData.name == "Mouse" && boonManager.ContainsBoon("ThreeBlindMice"))
                         {
+                            boonSprites.Add(boonManager.boonDict["ThreeBlindMice"].art);
                             animalsCaptured.Add(animal);
                             animalsCaptured.Add(animal);
                         }
@@ -118,6 +119,16 @@ public class CaptureManager : MonoBehaviour
                     pointMult *= 1.5;
                     currencyMult *= 1.25;
                     boonSprites.Add(lightningBoltIcon);
+                }
+
+                if (animal.animalData.name=="BarnCat" && boonManager.ContainsBoon("Copycat"))
+                {
+                    animal.animalData = animalsCaptured
+                        .OrderByDescending(a => a.animalData.pointsMultToGive)
+                        .ThenByDescending(a => a.animalData.pointsToGive)
+                        .Select(a => a.animalData)
+                        .FirstOrDefault();
+                    boonSprites.Add(boonManager.boonDict["Copycat"].art);
                 }
                 if (!animal.isPredator)
                 {
