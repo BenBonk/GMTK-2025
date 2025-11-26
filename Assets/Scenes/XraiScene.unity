@@ -16591,7 +16591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boonsToAddForTesting:
-  - {fileID: 11400000, guid: e7bc9af2f82e32c4bba8c2a54f518f32, type: 2}
+  - {fileID: 11400000, guid: 8ddaef5691259284b9cbed83155c28cc, type: 2}
 --- !u!1 &818930259
 GameObject:
   m_ObjectHideFlags: 0
@@ -34743,14 +34743,20 @@ MonoBehaviour:
     - 7
     boons:
     - {fileID: 11400000, guid: dc5e629fae05a044980da2c109ad8852, type: 2}
+    - {fileID: 11400000, guid: e14922af93248674d8a179725e3d9d8c, type: 2}
     - {fileID: 11400000, guid: 897213f1e1e3cbc4cb797742f3269936, type: 2}
+    - {fileID: 11400000, guid: e7bc9af2f82e32c4bba8c2a54f518f32, type: 2}
+    - {fileID: 11400000, guid: 8ddaef5691259284b9cbed83155c28cc, type: 2}
     - {fileID: 11400000, guid: c216efaab03e16a4a82c9a041a5f2e58, type: 2}
     - {fileID: 11400000, guid: 0b4aed0f19d85f44f9e050621c1d4ecd, type: 2}
     - {fileID: 11400000, guid: c9888b5115fcb9f4e910de79b54d00a1, type: 2}
     - {fileID: 11400000, guid: 0574fa9d62ff30642881045a6de3b0ae, type: 2}
+    - {fileID: 11400000, guid: 793061f93357bfe4493791d0322b967d, type: 2}
     - {fileID: 11400000, guid: 124721a69160a9c4fa3232bbd08df274, type: 2}
+    - {fileID: 11400000, guid: 8a7f2b85f6a83f645be6681b039276ea, type: 2}
     - {fileID: 11400000, guid: 79fdfc6af72fcb04a81be3a9b6104ac6, type: 2}
     - {fileID: 11400000, guid: 334e12ec41fdcd5439c029c789078886, type: 2}
+    - {fileID: 11400000, guid: b6edc94cecfeee3439dcf492b056d57e, type: 2}
     - {fileID: 11400000, guid: acbe53ecfb7b89d48b751e020585f72a, type: 2}
   upgradeShopItem: {fileID: 1747353840}
   boonDeckCard: {fileID: 7866310356001365729, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
@@ -34759,6 +34765,7 @@ MonoBehaviour:
   boonDeckButton: {fileID: 1071487689}
   animalDeckButton: {fileID: 150976153}
   cantToggleSynergiesDeck: 0
+  alpaca: {fileID: 11400000, guid: 66741c13e747366438b0d281fc00107a, type: 2}
   references:
     version: 2
     RefIds: []

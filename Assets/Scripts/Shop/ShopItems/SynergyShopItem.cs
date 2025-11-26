@@ -122,6 +122,11 @@ public class SynergyShopItem : ShopItem
                 {
                     GameController.rerollManager.Reset();
                 }
+
+                if (chosenBoon.name=="FreshCut")
+                {
+                   FreshCut();
+                }
                 GameController.player.AddBoonToDeck(chosenBoon);
                 shopManager.UpdateSynergies(shopManager.boonDeckParent);
 
@@ -172,5 +177,48 @@ public class SynergyShopItem : ShopItem
         shopManager.leaveShopButton.transform.SetParent(leaveParent);
         //shopManager.leaveShopButton.transform.position = leavePos;
         shopManager.cantToggleSynergiesDeck = false;
+    }
+
+    void FreshCut()
+    {
+        GameController.animalLevelManager.SetLevel("Alpaca", GameController.animalLevelManager.GetLevel("Alpaca")+4);
+        if (GameController.animalLevelManager.GetLevel("Alpaca") > FBPP.GetInt("highestAnimalLevel"))
+        {
+            FBPP.SetInt("highestAnimalLevel", GameController.animalLevelManager.GetLevel("Alpaca"));
+        }
+        if (GameController.animalLevelManager.GetLevel("Alpaca") >= 9 && !GameController.steamIntegration.IsThisAchievementUnlocked("Beefy"))
+        {
+            GameController.steamIntegration.UnlockAchievement("Beefy");
+        }
+        foreach (var item in shopManager.shopItems)
+        {
+            if (item.gameObject.activeInHierarchy)
+            {
+                try
+                {
+                    item.GetComponent<UpgradeShopItem>().UpdateDescription();
+                }
+                catch (Exception e)
+                {
+                    //a
+                }
+            }
+        }
+
+        foreach (var a in shopManager.upgradeShopItem.animalShopItems)
+        {
+            if (a.chosenAnimal.name=="Alpaca")
+            {
+                a.descriptionText.text = GameController.descriptionManager.GetAnimalDescription(a.chosenAnimal);
+            }
+        }
+
+        foreach (var card in FindObjectsOfType<DeckCard>(true))
+        {
+            if (!card.bounch && card.icon.sprite == shopManager.alpaca.deckIcon)
+            {
+                card.desc.text = GameController.descriptionManager.GetAnimalDescription(shopManager.alpaca);
+            }
+        }
     }
 }

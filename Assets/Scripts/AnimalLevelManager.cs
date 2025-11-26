@@ -18,6 +18,12 @@ public class AnimalLevelManager : MonoBehaviour
         InitAnimal("Horse");
         InitAnimal("Goat");
         InitAnimal("Dog");
+        InitAnimal("Alpaca");
+        InitAnimal("Puma");
+        InitAnimal("Boar");
+        InitAnimal("Mouse");
+        InitAnimal("BarnCat");
+        InitAnimal("Bunny");
     }
 //a
     public void ResetLevels()
