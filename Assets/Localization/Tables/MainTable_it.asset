@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -535,7 +535,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -772,8 +772,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: "I gatti diventano l'animale pi\xF9 prezioso nel tuo lazo quando
-      vengono catturati"
+    m_Localized: "Il gatto della stalla diventa l'animale con il punteggio pi\xF9
+      alto nel tuo lazo quando viene catturato"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -865,7 +865,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -919,7 +919,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
-    m_Localized: +2 contanti per animale preso al lazo
+    m_Localized: +2 contanti per animale catturato
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802008

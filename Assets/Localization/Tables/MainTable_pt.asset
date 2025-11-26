@@ -189,7 +189,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Predador. Persegue indiv\xEDduos que n\xE3o s\xE3o predadores."
+    m_Localized: "Predador. Persegue animais que n\xE3o s\xE3o predadores."
     m_Metadata:
       m_Items: []
   - m_Id: 41
@@ -774,8 +774,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: "Os gatos se tornam os animais mais valiosos em seu la\xE7o quando
-      capturados."
+    m_Localized: "O gato do celeiro se torna o animal com a maior pontua\xE7\xE3o
+      no seu la\xE7o quando capturado."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -1086,7 +1086,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376257
-    m_Localized: Concede 1 nova rolagem gratuita por loja.
+    m_Localized: Concede 1 reroll gratuito por loja
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376258
@@ -1211,7 +1211,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276037
-    m_Localized: Remova 2 animais do seu baralho de animais.
+    m_Localized: Remova 2 animais do seu Baralho de Animais.
     m_Metadata:
       m_Items: []
   - m_Id: 21394830084497408

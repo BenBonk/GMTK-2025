@@ -790,8 +790,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: Katzen werden zum wertvollsten Tier in deinem Lasso, wenn sie gefangen
-      werden.
+    m_Localized: "Die Scheunenkatze wird beim Fangen zum Tier mit dem h\xF6chsten
+      Lasso-Punktemultiplikator."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -1219,7 +1219,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276035
-    m_Localized: "Du kannst 1 zus\xE4tzlichen Vorteil behalten."
+    m_Localized: "Du kannst 1 zus\xE4tzlichen Segen behalten."
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276036
@@ -1285,7 +1285,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032512
-    m_Localized: Fange eine Gruppe von Tieren mit einem Alpaka und 2 Stallkatzen
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit einem Alpaka und 2 Stallkatzen
       ein.
     m_Metadata:
       m_Items: []
@@ -1396,7 +1396,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032537
-    m_Localized: Ziegenbock
+    m_Localized: Ziegengruff
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
@@ -1559,7 +1559,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421129
-    m_Localized: Fange eine Gruppe von Tieren mit 2 Alpakas ein.
+    m_Localized: Fange eine Gruppe von Tieren mit 2 Alpakas mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421130

@@ -577,7 +577,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355920
-    m_Localized: "Nombre maximal de relances en une seule partie\_:"
+    m_Localized: "Nombre maximal de relances dans une seule partie\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
@@ -786,8 +786,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: "Les chats deviennent l'animal le plus pr\xE9cieux de votre lasso
-      lorsqu'ils sont captur\xE9s."
+    m_Localized: "Le chat de ferme devient l'animal avec le plus grand nombre de
+      points dans votre lasso lorsqu'il est captur\xE9."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -903,7 +903,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Les prix des animaux sont d\xE9sormais al\xE9atoires en magasin"
+    m_Localized: "Les prix des animaux sont d\xE9sormais al\xE9atoires en magasin."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -1046,7 +1046,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169344
-    m_Localized: "Disponible en version compl\xE8te :"
+    m_Localized: "Le jeu complet arrive bient\xF4t\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169345
@@ -1155,7 +1155,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376271
-    m_Localized: "Lorsque vous capturez au lasso exactement deux animaux identiques,
+    m_Localized: "Lorsque vous capturez exactement deux animaux identiques au lasso,
       vous avez une chance sur 25 d'am\xE9liorer cet animal."
     m_Metadata:
       m_Items: []
@@ -1312,8 +1312,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: Capturez au lasso un groupe d'animaux comprenant un sanglier et
-      un cochon.
+    m_Localized: Attraper au lasso un groupe d'animaux comprenant un sanglier et
+      un cochon
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032519

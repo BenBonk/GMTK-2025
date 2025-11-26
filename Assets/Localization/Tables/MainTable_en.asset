@@ -768,7 +768,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: Cats become the most valuable animal in your lasso when captured
+    m_Localized: Barn cat becomes the the animal with the highest points mult in
+      your lasso when captured
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
