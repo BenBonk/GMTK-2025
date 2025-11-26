@@ -799,7 +799,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus bei Fang mitten im Sprungangriff
+    m_Localized: Pumas bringen doppelte Punkte und einen doppelten Geldbetrag, wenn
+      sie mitten im Sprung gefangen werden.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689

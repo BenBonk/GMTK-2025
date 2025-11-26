@@ -802,7 +802,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus po schwytaniu w trakcie skoku
+    m_Localized: "Pumy daj\u0105 x2 punkty i mno\u017Cnik got\xF3wki, gdy zostan\u0105
+      schwytane w trakcie skoku"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689

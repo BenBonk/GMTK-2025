@@ -782,7 +782,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: "Bonificaci\xF3n cuando se captura en medio del ataque"
+    m_Localized: Los Pumas otorgan x2 puntos y multiplicador de efectivo cuando son
+      capturados en pleno ataque
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689

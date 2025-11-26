@@ -781,7 +781,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: "Bonus quando catturato a met\xE0 balzo"
+    m_Localized: "I puma danno x2 punti e moltiplicano denaro quando vengono catturati
+      a met\xE0 balzo"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689

@@ -17,7 +17,7 @@ public class Puma : Animal
     [Header("Tilt Angles")]
     public float tiltBackAngle = 18f;
     public float tiltForwardAngle = 18f;
-
+    
     [Header("Scan & Leap")]
     public int hopsPerScan = 2;      // scan after this many completed hops
     public float detectionRange = 6f;     // only non-predators within this radius (to the left)

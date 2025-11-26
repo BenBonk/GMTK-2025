@@ -777,7 +777,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Bonus when captured mid pounce
+    m_Localized: Pumas give x2 points and cash mult when captured mid pounce
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689

@@ -783,7 +783,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: "B\xF4nus ao ser capturado em pleno salto"
+    m_Localized: Pumas concedem o dobro de pontos e multiplicador de dinheiro quando
+      capturados em pleno ataque.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
