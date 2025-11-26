@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: b67ac77db4872b744af34614b9f67a3c
+guid: e5a9a588a0a53294db4ed43d1bc91dc8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5726340978611458138
-    second: FarmerSilhouettes_0
+      213: -3173562007628435259
+    second: FarmerLayout_0
   - first:
-      213: -6841065387944932691
-    second: FarmerSilhouettes_1
+      213: 2484620633241126911
+    second: FarmerLayout_1
   - first:
-      213: -2947051491844252012
-    second: FarmerSilhouettes_2
+      213: 4721386039088065541
+    second: FarmerLayout_2
   - first:
-      213: 6981574871354860118
-    second: FarmerSilhouettes_3
+      213: 7165011142971765558
+    second: FarmerLayout_3
   - first:
-      213: 4839259140074295261
-    second: FarmerSilhouettes_4
+      213: 6539199221212056867
+    second: FarmerLayout_4
   - first:
-      213: -5039965649731125391
-    second: FarmerSilhouettes_5
+      213: -508409833125588936
+    second: FarmerLayout_5
+  - first:
+      213: -8887847189983744844
+    second: FarmerLayout_6
+  - first:
+      213: -5887284253483819891
+    second: FarmerLayout_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,7 +118,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -125,24 +131,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,7 +147,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FarmerSilhouettes_0
+      name: FarmerLayout_0
       rect:
         serializedVersion: 2
         x: 7
@@ -169,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5016e4d7cc087f40800000000000000
-      internalID: 5726340978611458138
+      spriteID: 5c0b1a61b2e35f3d0800000000000000
+      internalID: -3173562007628435259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerSilhouettes_1
+      name: FarmerLayout_1
       rect:
         serializedVersion: 2
         x: 29
@@ -191,17 +184,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: daa82527647af01a0800000000000000
-      internalID: -6841065387944932691
+      spriteID: ff781f54d452b7220800000000000000
+      internalID: 2484620633241126911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerSilhouettes_2
+      name: FarmerLayout_2
       rect:
         serializedVersion: 2
-        x: 52
+        x: 49
         y: 37
         width: 16
         height: 26
@@ -213,17 +206,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49e96d54848f917d0800000000000000
-      internalID: -2947051491844252012
+      spriteID: 50c255b669bb58140800000000000000
+      internalID: 4721386039088065541
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerSilhouettes_3
+      name: FarmerLayout_3
       rect:
         serializedVersion: 2
-        x: 73
+        x: 70
         y: 37
         width: 15
         height: 25
@@ -235,17 +228,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65266e30b5983e060800000000000000
-      internalID: 6981574871354860118
+      spriteID: 6333c843cab3f6360800000000000000
+      internalID: 7165011142971765558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerSilhouettes_4
+      name: FarmerLayout_4
       rect:
         serializedVersion: 2
-        x: 6
+        x: 4
         y: 6
         width: 17
         height: 23
@@ -257,17 +250,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ddfc0346c80882340800000000000000
-      internalID: 4839259140074295261
+      spriteID: 32d0bd7ab07efba50800000000000000
+      internalID: 6539199221212056867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerSilhouettes_5
+      name: FarmerLayout_5
       rect:
         serializedVersion: 2
-        x: 27
+        x: 26
         y: 6
         width: 18
         height: 26
@@ -279,14 +272,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17ffa97c1f17e0ab0800000000000000
-      internalID: -5039965649731125391
+      spriteID: 830db3053f3c1f8f0800000000000000
+      internalID: -508409833125588936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerSilhouettes_6
+      name: FarmerLayout_6
       rect:
         serializedVersion: 2
         x: 48
@@ -299,19 +292,19 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 91945f88523f65c42b3ffc65b250a1ec
-      internalID: 793907329
+      spriteID: 4bca01f021608a480800000000000000
+      internalID: -8887847189983744844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerSilhouettes_7
+      name: FarmerLayout_7
       rect:
         serializedVersion: 2
-        x: 73
+        x: 71
         y: 6
         width: 14
         height: 28
@@ -321,10 +314,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c9549000e4df77341b2283d00e148509
-      internalID: 36897391
+      spriteID: d8c9853e92a2c4ea0800000000000000
+      internalID: -5887284253483819891
       vertices: []
       indices: 
       edges: []
@@ -333,7 +326,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 65fd22c3cab608d4fb7ec012887ace2c
+    spriteID: f2dda0420b04f2c44ae2f37b1bea0e2c
     internalID: 0
     vertices: []
     indices: 
@@ -343,14 +336,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FarmerSilhouettes_0: 5726340978611458138
-      FarmerSilhouettes_1: -6841065387944932691
-      FarmerSilhouettes_2: -2947051491844252012
-      FarmerSilhouettes_3: 6981574871354860118
-      FarmerSilhouettes_4: 4839259140074295261
-      FarmerSilhouettes_5: -5039965649731125391
-      FarmerSilhouettes_6: 793907329
-      FarmerSilhouettes_7: 36897391
+      FarmerLayout_0: -3173562007628435259
+      FarmerLayout_1: 2484620633241126911
+      FarmerLayout_2: 4721386039088065541
+      FarmerLayout_3: 7165011142971765558
+      FarmerLayout_4: 6539199221212056867
+      FarmerLayout_5: -508409833125588936
+      FarmerLayout_6: -8887847189983744844
+      FarmerLayout_7: -5887284253483819891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

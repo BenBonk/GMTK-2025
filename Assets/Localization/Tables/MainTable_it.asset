@@ -711,7 +711,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza del giro:'
+    m_Localized: 'Lunghezza tonda:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -777,7 +777,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Sempre pi\xF9 veloce"
+    m_Localized: "Per sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -817,7 +817,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
+    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -1068,7 +1068,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
-    m_Localized: Completa il gioco una volta per sbloccare questo contadino.
+    m_Localized: 'Sblocca: completa il gioco una volta.'
     m_Metadata:
       m_Items: []
   - m_Id: 19461608561684480
@@ -1140,7 +1140,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Colpisci la talpa
+    m_Localized: Colpisci una talpa
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
@@ -1331,7 +1331,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032528
-    m_Localized: Lasso un gruppo di animali contenente un gatto da fienile e un puma
+    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile e un puma
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032529
@@ -1484,7 +1484,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421120
-    m_Localized: fuga precipitosa
+    m_Localized: Fuga precipitosa
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421121
@@ -1628,6 +1628,88 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 35758618513199114
     m_Localized: Predatore. Si avventa sui non predatori.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483649417216
+    m_Localized: Rick il furbo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857728
+    m_Localized: "Offre 3 possibilit\xE0 di rilancio per negozio e il primo rilancio
+      \xE8 sempre gratuito. Aumenta le probabilit\xE0 di trovare doni leggendari
+      scontati."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857729
+    m_Localized: 'Sblocca: acquista un vantaggio leggendario entro il giorno 15.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857730
+    m_Localized: John Deer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857731
+    m_Localized: Ogni volta che si acquista un animale nel negozio, 2 copie vengono
+      aggiunte al mazzo degli animali.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857732
+    m_Localized: 'Sblocca: Avere 30 animali nel tuo mazzo animali entro il giorno
+      20.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857733
+    m_Localized: Farm-Bot-3000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857734
+    m_Localized: "I punti positivi e il denaro vengono sempre arrotondati rispettivamente
+      alla decina e al 5 pi\xF9 vicini."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857735
+    m_Localized: 'Sblocca: completa un round sfida ottenendo esattamente il numero
+      di punti richiesto dalla quota di punti.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857736
+    m_Localized: Toni Pepperoni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857737
+    m_Localized: "Se il risultato finale di un lazo \xE8 negativo, verr\xE0 invece
+      valutato come positivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857738
+    m_Localized: "Sblocca: vinci una partita con pi\xF9 predatori nel tuo mazzo animali
+      rispetto ai non predatori."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857739
+    m_Localized: Nacho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857740
+    m_Localized: I polli partono dal livello 2.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857741
+    m_Localized: 'Sblocca: completa il gioco al livello 10 del raccolto.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857742
+    m_Localized: Felce Aurora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483771052032
+    m_Localized: Aggiunge casualmente 1 non predatore al tuo mazzo ogni round. Inizia
+      con un tasso di generazione di animali aumentato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483771052033
+    m_Localized: 'Sblocca: ottieni un lazo che contenga almeno 1 esemplare di ogni
+      animale presente nel gioco.'
     m_Metadata:
       m_Items: []
   references:

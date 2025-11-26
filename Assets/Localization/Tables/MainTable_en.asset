@@ -1057,7 +1057,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
-    m_Localized: Beat the game once to unlock this farmer.
+    m_Localized: 'Unlock: Beat the game once.'
     m_Metadata:
       m_Items: []
   - m_Id: 19461608561684480
@@ -1606,6 +1606,86 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 35758618513199114
     m_Localized: Predator. Pounces onto non-predators.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483649417216
+    m_Localized: Slick Rick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857728
+    m_Localized: Has 3 reroll opportunities per shop and the first reroll is always
+      free. Increased odds of finding discounted legendary boons.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857729
+    m_Localized: 'Unlock: Purchase a legendary boon by Day 15.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857730
+    m_Localized: John Deer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857731
+    m_Localized: Whenever an animal is purchased in the shop, 2 copies get added
+      to the animal deck.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857732
+    m_Localized: 'Unlock: Have 30 animals in your animal deck by Day 20.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857733
+    m_Localized: 'Farm-Bot-3000 '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857734
+    m_Localized: Positive Points and Cash are always rounded up to the nearest 10
+      and 5 respectively.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857735
+    m_Localized: 'Unlock: Complete a Challenge Round by scoring the exact amount
+      of points required by the point quota.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857736
+    m_Localized: Toni Pepperoni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857737
+    m_Localized: If the final result of any lasso is negative, it will be scored
+      as positive instead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857738
+    m_Localized: 'Unlock: Win a game with more predators in your animal deck than
+      non-predators.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857739
+    m_Localized: Nacho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857740
+    m_Localized: Chickens Start at lvl 2.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857741
+    m_Localized: 'Unlock: Beat the game on Harvest Level 10.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857742
+    m_Localized: Aurora Fern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483771052032
+    m_Localized: Randomly adds 1 non-predator to your deck every round. Starts with
+      increased animal spawn rate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483771052033
+    m_Localized: 'Unlock: Score a Lasso that contains at least 1 of every animal
+      in the game.'
     m_Metadata:
       m_Items: []
   references:

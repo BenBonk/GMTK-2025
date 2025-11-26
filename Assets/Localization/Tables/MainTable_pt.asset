@@ -238,7 +238,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: "La\xE7o em um grupo de animais contendo 3 ovelhas."
+    m_Localized: "La\xE7o: um grupo de animais contendo 3 ovelhas."
     m_Metadata:
       m_Items: []
   - m_Id: 53
@@ -294,8 +294,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: "La\xE7ar um grupo de animais que inclui uma vaca, uma cabra, um
-      cavalo e uma ovelha."
+    m_Localized: "La\xE7ar um grupo de animais contendo uma vaca, uma cabra, um cavalo
+      e uma ovelha."
     m_Metadata:
       m_Items: []
   - m_Id: 67
@@ -416,7 +416,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 95
-    m_Localized: "Agora tente la\xE7ar esses dois bichos juntos!"
+    m_Localized: "Agora tente la\xE7ar essas duas criaturas juntas!"
     m_Metadata:
       m_Items: []
   - m_Id: 96
@@ -569,7 +569,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
-    m_Localized: 'Total de novas tentativas:'
+    m_Localized: 'Total de rerolls:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550209
@@ -757,8 +757,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Chance de uma ovelha ser a ovelha negra, reativando seu la\xE7o
-      uma vez quando la\xE7ada."
+    m_Localized: "Existe a possibilidade de uma ovelha ser a ovelha negra, reativando
+      seu la\xE7o uma vez ao ser la\xE7ada."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -792,8 +792,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "C\xE3es espantam predadores. C\xE3es la\xE7ados junto com qualquer
-      predador valem +5,0x dinheiro."
+    m_Localized: "C\xE3es afugentam predadores. C\xE3es la\xE7ados com qualquer predador
+      valem +5,0x dinheiro."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -1071,7 +1071,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
-    m_Localized: Conclua o jogo uma vez para desbloquear este fazendeiro.
+    m_Localized: 'Desbloqueio: Conclua o jogo uma vez.'
     m_Metadata:
       m_Items: []
   - m_Id: 19461608561684480
@@ -1287,7 +1287,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032516
-    m_Localized: "La\xE7o, um grupo de animais que inclui um cavalo e uma puma."
+    m_Localized: "La\xE7o, um grupo de animais contendo um cavalo e uma puma."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032517
@@ -1639,6 +1639,88 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 35758618513199114
     m_Localized: "Predador. Ataca animais que n\xE3o s\xE3o predadores."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483649417216
+    m_Localized: Slick Rick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857728
+    m_Localized: "Oferece 3 oportunidades de rerrolagem por loja, sendo a primeira
+      sempre gratuita. Aumenta as chances de encontrar d\xE1divas lend\xE1rias com
+      desconto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857729
+    m_Localized: "Desbloqueio: Compre uma d\xE1diva lend\xE1ria at\xE9 o 15\xBA dia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857730
+    m_Localized: John Deer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857731
+    m_Localized: "Sempre que um animal \xE9 comprado na loja, 2 c\xF3pias s\xE3o
+      adicionadas ao baralho de animais."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857732
+    m_Localized: "Desbloqueio: Tenha 30 animais no seu baralho de animais at\xE9
+      o 20\xBA dia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857733
+    m_Localized: Farm-Bot-3000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857734
+    m_Localized: "Os Pontos Positivos e o Dinheiro s\xE3o sempre arredondados para
+      a dezena e para a quinta mais pr\xF3ximas, respectivamente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857735
+    m_Localized: 'Desbloqueio: Complete uma Rodada de Desafio marcando a quantidade
+      exata de pontos exigida pela cota de pontos.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857736
+    m_Localized: Toni Pepperoni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857737
+    m_Localized: "Se o resultado final de qualquer la\xE7o for negativo, ele ser\xE1
+      pontuado como positivo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857738
+    m_Localized: "Desbloqueio: Ganhe uma partida com mais predadores do que n\xE3o
+      predadores no seu baralho de animais."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857739
+    m_Localized: Nacho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857740
+    m_Localized: "As galinhas come\xE7am no n\xEDvel 2."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857741
+    m_Localized: "Desbloqueio: Conclua o jogo no n\xEDvel de colheita 10."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857742
+    m_Localized: Aurora Fern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483771052032
+    m_Localized: "Adiciona aleatoriamente 1 criatura n\xE3o predadora ao seu baralho
+      a cada rodada. Come\xE7a com uma taxa de surgimento de animais aumentada."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483771052033
+    m_Localized: "Desbloqueio: Consiga um La\xE7o que contenha pelo menos 1 de cada
+      animal do jogo."
     m_Metadata:
       m_Items: []
   references:

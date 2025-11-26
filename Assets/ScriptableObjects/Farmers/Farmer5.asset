@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb427b38f572df84caf45a7532d20453, type: 3}
-  m_Name: Farmer0
+  m_Name: Farmer5
   m_EditorClassIdentifier: 
   farmerName:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 18706117449703424
+      m_KeyId: 36287483766857736
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -25,30 +25,30 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 18706117558755328
+      m_KeyId: 36287483766857737
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   unlockDescription:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 36287483766857738
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  sprite: {fileID: 288025901, guid: b82c31750219d6245996303aebceb571, type: 3}
-  lockedSprite: {fileID: 5726340978611458138, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
+  sprite: {fileID: -508409833125588936, guid: e5a9a588a0a53294db4ed43d1bc91dc8, type: 3}
+  lockedSprite: {fileID: -5039965649731125391, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
   startingDeck:
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
-  - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  - {fileID: 11400000, guid: 0e381e63846e68c45b5fe96ef671558b, type: 2}
-  audioClipName: farmer_0
-  farmerIndex: 0
+  - {fileID: 11400000, guid: aa98ffdaa4156f747a50e3ddccdccd60, type: 2}
+  - {fileID: 11400000, guid: aa98ffdaa4156f747a50e3ddccdccd60, type: 2}
+  - {fileID: 11400000, guid: aa98ffdaa4156f747a50e3ddccdccd60, type: 2}
+  - {fileID: 11400000, guid: 09611faefa6542142ac04ae98f9df67c, type: 2}
+  - {fileID: 11400000, guid: 09611faefa6542142ac04ae98f9df67c, type: 2}
+  audioClipName: farmer_5
+  farmerIndex: 5
   references:
     version: 2
     RefIds: []
