@@ -1621,7 +1621,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Recieves double daily cash after each round.
+  m_text: 'Unlock: Complete a Challenge Round by scoring the exact amount of points
+    required by the point quota.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
   m_sharedMaterial: {fileID: -2546489003944781649, guid: 92783b6b34a198a4e947013915235bb6, type: 2}
@@ -1648,7 +1649,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 5.35
   m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 1

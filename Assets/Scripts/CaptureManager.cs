@@ -153,17 +153,26 @@ public class CaptureManager : MonoBehaviour
                 }
             }
 
-            if (boonManager.ContainsBoon("Biodiversity") && animalsCaptured.Count > 0)
+            if((boonManager.ContainsBoon("Biodiversity") || !FBPP.GetBool("farmer7", false)) && animalsCaptured.Count > 0)
             {
-                boonSprites.Add(boonManager.boonDict["Biodiversity"].art);
                 HashSet<string> uniqueAnimalNames = new HashSet<string>();
                 foreach (var a in animalsCaptured)
                 {
                     uniqueAnimalNames.Add(a.name);
                 }
-                pointBonus += (10 * uniqueAnimalNames.Count);
+                if (boonManager.ContainsBoon("Biodiversity"))
+                {
+                    boonSprites.Add(boonManager.boonDict["Biodiversity"].art);
+                    pointBonus += (10 * uniqueAnimalNames.Count);
+                }
+                if (!FBPP.GetBool("farmer7", false) && uniqueAnimalNames.Count >= 16)
+                {
+                    FBPP.SetBool("farmer7", true);
+                    gameManager.auroraUnlock = true;
+                }
             }
-            if (boonManager.ContainsBoon("BoonsBonus")   )
+
+            if (boonManager.ContainsBoon("BoonsBonus"))
             {
                 boonSprites.Add(boonManager.boonDict["BoonsBonus"].art);
                 pointBonus += (2 * player.boonsInDeck.Count);

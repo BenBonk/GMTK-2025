@@ -1641,62 +1641,111 @@ MonoBehaviour:
     m_Localized: Depredador. Se abalanza sobre animales que no son depredadores.
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839947493376
     m_Localized: Rick el astuto
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047808
+=======
+  - m_Id: 36287483649417216
+    m_Localized: Rick el astuto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857728
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: Tiene 3 oportunidades de renovar por tienda, y la primera siempre
       es gratuita. Mayor probabilidad de encontrar beneficios legendarios con descuento.
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047809
+=======
+  - m_Id: 36287483766857729
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: "Desbloquear: Compra una bendici\xF3n legendaria antes del d\xEDa
       15."
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047810
     m_Localized: Juan ciervo
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047811
+=======
+  - m_Id: 36287483766857730
+    m_Localized: Juan ciervo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857731
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: Cada vez que se compra un animal en la tienda, se agregan 2 copias
       al mazo de animales.
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047812
+=======
+  - m_Id: 36287483766857732
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: "Desbloquear: Ten 30 animales en tu mazo de animales antes del d\xEDa
       20."
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047813
     m_Localized: "Robot agr\xEDcola 3000"
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047814
+=======
+  - m_Id: 36287483766857733
+    m_Localized: "Robot agr\xEDcola 3000"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857734
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: "Los puntos positivos y el efectivo siempre se redondean al 10 y
       al 5 m\xE1s cercano respectivamente."
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047815
+=======
+  - m_Id: 36287483766857735
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: "Desbloquear: Completa una ronda de desaf\xEDo obteniendo la cantidad
       exacta de puntos requerida por la cuota de puntos."
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047816
     m_Localized: Toni Pepperoni
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047817
+=======
+  - m_Id: 36287483766857736
+    m_Localized: Toni Pepperoni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857737
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: "Si el resultado final de cualquier lazo es negativo, se calificar\xE1
       como positivo."
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047818
+=======
+  - m_Id: 36287483766857738
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: "Desbloquear: Gana un juego con m\xE1s depredadores en tu mazo de
       animales que no depredadores."
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047819
     m_Localized: Nacho
     m_Metadata:
@@ -1714,11 +1763,34 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047823
+=======
+  - m_Id: 36287483766857739
+    m_Localized: Nacho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857740
+    m_Localized: Los pollos comienzan en el nivel 2.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857741
+    m_Localized: 'Desbloquear: Completa el juego en el nivel de cosecha 10.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483766857742
+    m_Localized: Helecho Aurora
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36287483771052032
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: "A\xF1ade aleatoriamente un animal no depredador a tu mazo cada
       ronda. Comienza con una mayor probabilidad de aparici\xF3n de animales."
     m_Metadata:
       m_Items: []
+<<<<<<< HEAD
   - m_Id: 36459839981047824
+=======
+  - m_Id: 36287483771052033
+>>>>>>> 390ae6fc91413670a54a669b40014add9766edc9
     m_Localized: 'Desbloquear: Consigue un lazo que contenga al menos 1 de cada animal
       del juego.'
     m_Metadata:
