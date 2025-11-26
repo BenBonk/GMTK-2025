@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -345,6 +346,11 @@ public class CaptureManager : MonoBehaviour
             currencyMult += 5f;
             boonSprites.Add(boonManager.boonDict["GoodBoy"].art);
         }
+        if (UnityEngine.Random.Range(0,4) == 0 && boonManager.ContainsBoon("RabbitsFoot") && capturedAnimal.animalData.name == "Bunny")
+        {
+            StartCoroutine(RabbitsFoot());
+            boonSprites.Add(boonManager.boonDict["RabbitsFoot"].art);
+        }
         if (boonManager.ContainsBoon("ScapeGoat") && capturedAnimal.animalData.name == "Goat")
         {
             currencyBonus += (12 * totalPredatorCount);
@@ -371,6 +377,12 @@ public class CaptureManager : MonoBehaviour
         {
             steamIntegration.UnlockAchievement("Wrangle Expert");
         }
+    }
+
+    IEnumerator RabbitsFoot()
+    {
+        yield return new WaitForSeconds(.5f);
+        GameController.gameManager.pointsThisRound *= 2;
     }
 
     private Dictionary<string, int> GetNameCounts(IEnumerable<string> animals)
