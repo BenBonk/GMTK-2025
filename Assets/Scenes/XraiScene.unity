@@ -34255,6 +34255,7 @@ MonoBehaviour:
   fairyBottleInstance: {fileID: 11400000, guid: 2e3525a5b1c76ca468ae4964bfb81180, type: 2}
   extraUpgradeSlot: {fileID: 628632798}
   unlockPanel: {fileID: 1415946152082653351, guid: ec4fedb3bb944b04d98ebcb37a9590bd, type: 3}
+  auroraUnlock: 0
   foxThiefStolenStats: {fileID: 0}
   references:
     version: 2
@@ -34750,6 +34751,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 79fdfc6af72fcb04a81be3a9b6104ac6, type: 2}
     - {fileID: 11400000, guid: 334e12ec41fdcd5439c029c789078886, type: 2}
     - {fileID: 11400000, guid: acbe53ecfb7b89d48b751e020585f72a, type: 2}
+    - {fileID: 11400000, guid: e14922af93248674d8a179725e3d9d8c, type: 2}
+    - {fileID: 11400000, guid: e7bc9af2f82e32c4bba8c2a54f518f32, type: 2}
+    - {fileID: 11400000, guid: 8ddaef5691259284b9cbed83155c28cc, type: 2}
+    - {fileID: 11400000, guid: 793061f93357bfe4493791d0322b967d, type: 2}
+    - {fileID: 11400000, guid: 8a7f2b85f6a83f645be6681b039276ea, type: 2}
+    - {fileID: 11400000, guid: b6edc94cecfeee3439dcf492b056d57e, type: 2}
   upgradeShopItem: {fileID: 1747353840}
   boonDeckCard: {fileID: 7866310356001365729, guid: aee0a4ea8cf2612419a440d5f4ba9c28, type: 3}
   boonDeckParent: {fileID: 9150534869573543089}
