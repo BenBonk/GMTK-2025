@@ -739,11 +739,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396685721600
-    m_Localized: TBD
+    m_Localized: Fresh Cut
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607680
-    m_Localized: TBD
+    m_Localized: "Purchasing this boon increases your Alpaca\u2019s level by 5"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607681
@@ -756,11 +756,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
-    m_Localized: TBD
+    m_Localized: No Pain, No Gain
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607684
-    m_Localized: TBD
+    m_Localized: The final point multiplier for every lasso containing a boar will
+      be negative. Boar are worth -10 points, -3 cash for every additional boar in
+      a lasso.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607685
@@ -777,7 +779,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: Pumas give x2 points and cash mult when captured mid pounce
+    m_Localized: Pumas retrigger your lasso when captured mid pounce
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607689
@@ -1057,7 +1059,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
-    m_Localized: Beat the game once to unlock this farmer.
+    m_Localized: 'Unlock: Beat the game once.'
     m_Metadata:
       m_Items: []
   - m_Id: 19461608561684480
@@ -1606,6 +1608,86 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 35758618513199114
     m_Localized: Predator. Pounces onto non-predators.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839947493376
+    m_Localized: Slick Rick
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047808
+    m_Localized: Has 3 reroll opportunities per shop and the first reroll is always
+      free. Increased odds of finding discounted legendary boons.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047809
+    m_Localized: 'Unlock: Purchase a legendary boon by Day 15.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047810
+    m_Localized: John Deer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047811
+    m_Localized: Whenever an animal is purchased in the shop, 2 copies get added
+      to the animal deck.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047812
+    m_Localized: 'Unlock: Have 30 animals in your animal deck by Day 20.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047813
+    m_Localized: 'Farm-Bot-3000 '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047814
+    m_Localized: Positive Points and Cash are always rounded up to the nearest 10
+      and 5 respectively.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047815
+    m_Localized: 'Unlock: Complete a Challenge Round by scoring the exact amount
+      of points required by the point quota.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047816
+    m_Localized: Toni Pepperoni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047817
+    m_Localized: If the final result of any lasso is negative, it will be scored
+      as positive instead.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047818
+    m_Localized: 'Unlock: Win a game with more predators in your animal deck than
+      non-predators.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047819
+    m_Localized: Nacho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047820
+    m_Localized: Chickens Start at lvl 2.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047821
+    m_Localized: 'Unlock: Beat the game on Harvest Level 10.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047822
+    m_Localized: Aurora Fern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047823
+    m_Localized: Randomly adds 1 non-predator to your deck every round. Starts with
+      increased animal spawn rate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047824
+    m_Localized: 'Unlock: Score a Lasso that contains at least 1 of every animal
+      in the game.'
     m_Metadata:
       m_Items: []
   references:

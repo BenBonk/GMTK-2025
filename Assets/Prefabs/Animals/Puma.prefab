@@ -177,12 +177,13 @@ MonoBehaviour:
   scanDuration: 2
   tiltBackAngle: -9
   tiltForwardAngle: -9
-  hopsPerScan: 6
-  detectionRange: 6
+  hopsPerScan: 5
+  detectionRange: 10
   leapSpeedMultiplier: 2
   leapHeightMultiplier: 2.5
-  maxLeapDistance: 7
+  maxLeapDistance: 10
   arrivalRadius: 0.2
   prePounceAngle: -12
   scanWobbleAmplitude: 2.5
   scanWobbleFrequency: 2
+  isLeapingAtTarget: 0

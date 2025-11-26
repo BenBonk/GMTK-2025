@@ -16590,7 +16590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3c0810df91ed764bb2733bc4f3db2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boonsToAddForTesting: []
+  boonsToAddForTesting:
+  - {fileID: 11400000, guid: e7bc9af2f82e32c4bba8c2a54f518f32, type: 2}
 --- !u!1 &818930259
 GameObject:
   m_ObjectHideFlags: 0

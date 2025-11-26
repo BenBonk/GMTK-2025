@@ -767,6 +767,78 @@ MonoBehaviour:
     m_Key: farmerSelect.farmer1Unlock
     m_Metadata:
       m_Items: []
+  - m_Id: 36459839947493376
+    m_Key: farmerSelect.farmer2Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047808
+    m_Key: farmerSelect.farmer2Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047809
+    m_Key: farmerSelect.farmer2Unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047810
+    m_Key: farmerSelect.farmer3Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047811
+    m_Key: farmerSelect.farmer3Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047812
+    m_Key: farmerSelect.farmer3Unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047813
+    m_Key: farmerSelect.farmer4Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047814
+    m_Key: farmerSelect.farmer4Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047815
+    m_Key: farmerSelect.farmer4Unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047816
+    m_Key: farmerSelect.farmer5Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047817
+    m_Key: farmerSelect.farmer5Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047818
+    m_Key: farmerSelect.farmer5Unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047819
+    m_Key: farmerSelect.farmer6Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047820
+    m_Key: farmerSelect.farmer6Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047821
+    m_Key: farmerSelect.farmer6Unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047822
+    m_Key: farmerSelect.farmer7Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047823
+    m_Key: farmerSelect.farmer7Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36459839981047824
+    m_Key: farmerSelect.farmer7Unlock
+    m_Metadata:
+      m_Items: []
   - m_Id: 8554514727809027
     m_Key: farmerSelect.gameSettings
     m_Metadata:

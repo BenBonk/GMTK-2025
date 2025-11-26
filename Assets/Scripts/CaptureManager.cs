@@ -351,6 +351,11 @@ public class CaptureManager : MonoBehaviour
             StartCoroutine(RabbitsFoot());
             boonSprites.Add(boonManager.boonDict["RabbitsFoot"].art);
         }
+        if (boonManager.ContainsBoon("ForeverFaster") && capturedAnimal.animalData.name == "Puma" && currentTrigger == 0 && capturedAnimal.GetComponent<Puma>().isLeapingAtTarget)
+        {
+            triggers += 1;
+            boonSprites.Add(boonManager.boonDict["ForeverFaster"].art);
+        }
         if (boonManager.ContainsBoon("ScapeGoat") && capturedAnimal.animalData.name == "Goat")
         {
             currencyBonus += (12 * totalPredatorCount);

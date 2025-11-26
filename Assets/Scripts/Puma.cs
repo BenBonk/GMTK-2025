@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Puma : Animal
@@ -67,7 +68,7 @@ public class Puma : Animal
     private float basePauseBeforeTiltUp, baseTiltUpDuration, basePauseAfterTiltUp, baseTiltNeutralDuration, baseScanDuration;
 
     private float _lastScale = 1f; // for mid-phase timer rescale
-
+    public bool isLeapingAtTarget = false;
     protected override void Awake()
     {
         base.Awake();
@@ -179,6 +180,7 @@ public class Puma : Animal
                     if (arrived || leapBudget <= 0f)
                     {
                         // Finish leap, return to neutral tilt next
+                        StartCoroutine(StopLeap());
                         leapTarget = null;
                         leapBudget = 0f;
                         EnterPhase(Phase.TiltNeutral, tiltNeutralDuration);
@@ -195,6 +197,12 @@ public class Puma : Animal
         return pos; // base Move() adds externalOffset, clamps Y, clears offset
     }
 
+    IEnumerator StopLeap()
+    {
+        //slight delay to make it easier
+        yield return new WaitForSeconds(.25f);
+        isLeapingAtTarget = false;
+    }
     protected override void ApplyRunTilt()
     {
         if (forceExit || (GameController.gameManager != null && GameController.gameManager.roundCompleted) || overriddenByAttraction)
@@ -274,6 +282,7 @@ public class Puma : Animal
 
             case Phase.Leap:
                 // Start from current tilt, rotate toward opposite of pre-pounce
+                isLeapingAtTarget = true;
                 prevHopYOffset = 0f;
                 tiltStartAngle = currentTilt;
                 tiltEndAngle = -prePounceAngle;
