@@ -46,7 +46,7 @@ public class UpgradeShopItem : ShopItem
         upgradeArt.transform.parent.GetChild(1).DOScale(Vector3.one, .25f);
     }
 
-    void UpdateDescription()
+    public void UpdateDescription()
     {
         descriptionText.text = GameController.descriptionManager.GetAnimalLevelDescription(chosenAnimal);
         int animalLevel = GameController.animalLevelManager.GetLevel(chosenAnimal.name);
