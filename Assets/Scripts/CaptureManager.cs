@@ -32,6 +32,7 @@ public class CaptureManager : MonoBehaviour
     HashSet<Sprite> boonSprites = new HashSet<Sprite>();
     private SteamIntegration steamIntegration;
     public Sprite lightningBoltIcon;
+    public Sprite toniIcon;
     public (double, double, double, double, HashSet<Sprite>) MakeCapture(GameObject[] objectsCaptured)
     {
         pointBonus = 0;
@@ -112,7 +113,6 @@ public class CaptureManager : MonoBehaviour
 
             int totalNonPredatorCount = 0;
 
-            int biodiversityBonus = 0;
             foreach (var animal in animalsCaptured)
             {
                 if (animal.struckByLightning)
@@ -302,10 +302,21 @@ public class CaptureManager : MonoBehaviour
                 {
                     boonSprites.Add(boonManager.boonDict["AbsoluteValue"].art);
                 }
-                pointBonus = Mathf.Abs((float)pointBonus);
-                pointMult = Mathf.Abs((float)pointMult);
-                currencyBonus = Mathf.Abs((float)currencyBonus);
-                currencyMult = Mathf.Abs((float)currencyMult);
+                pointBonus = Math.Abs(pointBonus);
+                pointMult = Math.Abs(pointMult);
+                currencyBonus = Math.Abs(currencyBonus);
+                currencyMult = Math.Abs(currencyMult);
+            }
+            if (gameManager.farmerID == 5)
+            {
+                if (pointBonus * pointMult < 0 || currencyBonus * currencyMult < 0)
+                {
+                    boonSprites.Add(toniIcon);
+                }
+                pointBonus = Math.Abs(pointBonus);
+                pointMult = Math.Abs(pointMult);
+                currencyBonus = Math.Abs(currencyBonus);
+                currencyMult = Math.Abs(currencyMult);
             }
         }
         return (pointBonus, pointMult, currencyBonus, currencyMult, boonSprites);

@@ -74,7 +74,7 @@ public class SynergySlots : MonoBehaviour
             shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);
             shopManager.instructionsText.DOFade(0f, 0.5f);
             shopManager.cancelOverride.DOFade(0, 0.5f).OnComplete(() => CancelOverride2());
-            if (GameController.rerollManager.rerollsPerShop>GameController.rerollManager.rerollsThisShop)
+            if (GameController.rerollManager.paidRerollsPerShop+GameController.rerollManager.freeRerollsPerShop>GameController.rerollManager.rerollsThisShop)
             {
                 GameController.rerollManager.transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0.25f).SetEase(Ease.OutBack);       
             }
@@ -92,7 +92,7 @@ public class SynergySlots : MonoBehaviour
         shopManager.darkCover.DOFade(0f, 0.5f).OnComplete(() => shopManager.darkCover.enabled = false);
         shopManager.instructionsText.DOFade(0f, 0.5f);
         shopManager.cancelOverride.DOFade(0, 0.5f).OnComplete(() => CancelOverride2());
-        if (GameController.rerollManager.rerollsPerShop>GameController.rerollManager.rerollsThisShop)
+        if (GameController.rerollManager.paidRerollsPerShop + GameController.rerollManager.freeRerollsPerShop > GameController.rerollManager.rerollsThisShop)
         {
             GameController.rerollManager.transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0.25f).SetEase(Ease.OutBack);       
         }

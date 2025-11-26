@@ -57,6 +57,11 @@ public class SynergyShopItem : ShopItem
         else if (chosenBoon is LegendaryBoon legendaryBoon)
         {
             subPopup.SetActive(false);
+            if (GameController.gameManager.farmerID == 2)
+            {
+                price = 750;
+                priceText.text = price.ToString();
+            }
             if (chosenBoon.name=="Thief")
             {
                 chosenToStealIndex = Random.Range(0, GameController.gameManager.animalShopItem.possibleAnimals.Length);

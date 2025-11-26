@@ -148,6 +148,11 @@ public class GameManager : MonoBehaviour
         {
             extraUpgradeSlot.SetActive(false);
         }
+        if (farmerID == 2)
+        {
+            GameController.shopManager.boonGroups[2].weights[1] += 4;
+            GameController.shopManager.boonGroups[2].weights[2] += 6;
+        }
         ApplyHarvestLevel();
         if (isTesting)
         {

@@ -14743,7 +14743,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -500}
+  m_AnchoredPosition: {x: 0, y: -500.00003}
   m_SizeDelta: {x: 0, y: 1000.0001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573234386
@@ -26979,7 +26979,8 @@ MonoBehaviour:
   hoverPopup: {fileID: 951094376}
   priceText: {fileID: 426302352}
   canReroll: 1
-  rerollsPerShop: 1
+  paidRerollsPerShop: 0
+  freeRerollsPerShop: 0
 --- !u!114 &988524045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27620,7 +27621,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1118, y: -590.8}
+  m_AnchoredPosition: {x: -1280.8, y: -590.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1070060279
@@ -34255,6 +34256,7 @@ MonoBehaviour:
   fairyBottleInstance: {fileID: 11400000, guid: 2e3525a5b1c76ca468ae4964bfb81180, type: 2}
   extraUpgradeSlot: {fileID: 628632798}
   unlockPanel: {fileID: 1415946152082653351, guid: ec4fedb3bb944b04d98ebcb37a9590bd, type: 3}
+  auroraUnlock: 0
   foxThiefStolenStats: {fileID: 0}
   references:
     version: 2
@@ -37498,6 +37500,7 @@ MonoBehaviour:
   closeThreshold: 4.75
   isDrawing: 0
   feedbackTextGroupPrefab: {fileID: 3317699075510183685, guid: dfbb644ecc4ba154299e9d8a2d59b7aa, type: 3}
+  farmbotIcon: {fileID: -3931279096306427261, guid: 608badd26ba19a745a842cd551676d9a, type: 3}
   drawFrontFactor: 0.35
   releaseAggression: 0.8
   releaseFrontFactor: 0.5
@@ -48901,6 +48904,7 @@ MonoBehaviour:
   firstCapture: 0
   mootiplier: 1
   lightningBoltIcon: {fileID: 21300000, guid: 65268560f715a234f8ea65700696bb81, type: 3}
+  toniIcon: {fileID: 1515257333644836582, guid: c3d656c77a327cf4a8e25fc0fa77bcbe, type: 3}
 --- !u!4 &1781559414
 Transform:
   m_ObjectHideFlags: 0

@@ -83,6 +83,12 @@ public class AnimalShopItem : ShopItem
             FBPP.SetInt(chosenAnimal.name+"_count", FBPP.GetInt(chosenAnimal.name+"_count")+1);
             FBPP.SetInt("totalAnimalsPurchased", FBPP.GetInt("totalAnimalsPurchased")+1);
             GameController.player.AddAnimalToDeck(chosenAnimal);
+            if (GameController.gameManager.farmerID == 3)
+            {
+                FBPP.SetInt(chosenAnimal.name + "_count", FBPP.GetInt(chosenAnimal.name + "_count") + 1);
+                FBPP.SetInt("totalAnimalsPurchased", FBPP.GetInt("totalAnimalsPurchased") + 1);
+                GameController.player.AddAnimalToDeck(chosenAnimal);
+            }
             upgradeArt.transform.DOScale(Vector3.zero, .25f).SetEase(Ease.OutBack);
             Instantiate(shopManager.purchaseParticles, rt.position, Quaternion.identity);
             shopManager.UpdateDeck(shopManager.deckParent);

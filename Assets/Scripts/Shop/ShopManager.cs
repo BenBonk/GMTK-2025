@@ -48,7 +48,7 @@ public class ShopManager : MonoBehaviour
 
     private Queue<Boon> recentBoons;
     private SteamIntegration steamIntegration;
-    int recentBoonCapacity = 3;
+    int recentBoonCapacity = 6;
 
     private IEnumerator Start()
     {
@@ -72,7 +72,7 @@ public class ShopManager : MonoBehaviour
             shopItem.canPurchase = true;
             shopItem.Initialize();
             shopItem.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
-        }//ajoijioijoasdasdasd
+        }
         UpdateCashText();
         List<Boon> chosenBoons = new List<Boon>();
         while (chosenBoons.Count < 3)
@@ -114,9 +114,13 @@ public class ShopManager : MonoBehaviour
         int weightIndex = 0;
         if (GameController.gameManager.roundNumber>7)
         {
+            weightIndex = 2;
+        }
+        else if (GameController.gameManager.roundNumber > 5)
+        {
             weightIndex = 1;
         }
-        float totalWeight = 0f;
+            float totalWeight = 0f;
         foreach (var group in boonGroups)
             totalWeight += group.weights[weightIndex];
         
@@ -125,7 +129,7 @@ public class ShopManager : MonoBehaviour
         {
             if (roll < group.weights[weightIndex])
             {
-                List<Boon> validBoons = group.boons;
+                List<Boon> validBoons = new List<Boon>(group.boons);
                 if (GameController.gameManager.roundNumber <= 2)
                 {
                     validBoons = group.boons
@@ -133,7 +137,11 @@ public class ShopManager : MonoBehaviour
                         .ToList();
                     if (validBoons.Count == 0)
                         validBoons = group.boons;
-                } ;
+                };
+                if (GameController.gameManager.farmerID == 5 && group.groupName == "Specialty")
+                {
+                    validBoons.RemoveAt(0);
+                }
                 if (group.groupName == "Legendary")
                 {
                     List<string> allowedLegendaryBoons = new List<string>();

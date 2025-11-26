@@ -22,7 +22,9 @@ public class RerollManager : MonoBehaviour
     private SteamIntegration steamIntegration;
     //private HashSet<Sprite> rrBoonSprites;
 
-    public int rerollsPerShop = 1;
+    //public int rerollsPerShop = 1;
+    [HideInInspector] public int paidRerollsPerShop;
+    [HideInInspector] public int freeRerollsPerShop;
 
     private int rerollsThisGame;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,7 +57,7 @@ public class RerollManager : MonoBehaviour
     }
     public void Reroll()
     {
-        if (!canReroll || rerollsThisShop >= rerollsPerShop || (GameController.player.playerCurrency < rerollPrice && !GameController.boonManager.ContainsBoon("BNPL")) || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - rerollPrice <-150))
+        if (!canReroll || rerollsThisShop >= paidRerollsPerShop+freeRerollsPerShop || (GameController.player.playerCurrency < rerollPrice && !GameController.boonManager.ContainsBoon("BNPL")) || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - rerollPrice <-150))
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
             return;
@@ -63,11 +65,12 @@ public class RerollManager : MonoBehaviour
         AudioManager.Instance.PlaySFX("reroll");
         AudioManager.Instance.PlaySFX("coins");
         //first paid reroll
-        if (boonManager.ContainsBoon("Freeroll") && rerollsThisShop == 1 || !boonManager.ContainsBoon("Freeroll") && rerollsThisShop == 0)
+        if (rerollsThisShop == freeRerollsPerShop)
         {
             rerollPrice = Mathf.RoundToInt(rerollPrice * rerollMultIncrease);
         }
-        if (rerollsThisShop > 0 || !boonManager.ContainsBoon("Freeroll"))
+
+        if (rerollsThisShop >= freeRerollsPerShop)
         {
             GameController.player.playerCurrency -= rerollPriceThisShop;
         }
@@ -82,14 +85,17 @@ public class RerollManager : MonoBehaviour
         {
             FBPP.SetInt("mostRerollsInGame", rerollsThisGame);
         }
-        if (rerollsPerShop>=rerollsThisShop)
+        if (freeRerollsPerShop+freeRerollsPerShop<=rerollsThisShop)
         {
             transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
             canReroll = false;
         }
+        else if (rerollsThisShop < freeRerollsPerShop)
+        {
+            priceText.text = 0.ToString();
+        }
         else
         {
-            //LassoController.CreateBoonIcons(transform, rrBoonSprites);
             priceText.text = rerollPrice.ToString();
         }
         if (totalRerolls == 100 && !steamIntegration.IsThisAchievementUnlocked("Shopaholic"))
@@ -101,24 +107,35 @@ public class RerollManager : MonoBehaviour
 
     public void Reset()
     {
-        rerollsPerShop = 1;
+        paidRerollsPerShop = 1;
+        freeRerollsPerShop = 0;
         rerollsThisShop = 0;
         rerollPriceThisShop = rerollPrice;
         //rrBoonSprites.Clear();
         if (boonManager.ContainsBoon("FreshStock"))
         {
-            rerollsPerShop = 3;
+            paidRerollsPerShop += 2;
             //rrBoonSprites.Add(boonManager.boonDict["FreshStock"].art);
+        }
+        if (GameController.gameManager.farmerID == 2)
+        {
+            freeRerollsPerShop += 1;
+            paidRerollsPerShop += 1;
         }
         if (boonManager.ContainsBoon("Freeroll"))
         {
-            rerollsPerShop += 1;
+            freeRerollsPerShop += 1;
+        }
+
+        if (freeRerollsPerShop > 0)
+        {
             priceText.text = 0.ToString();
         }
         else
         {
             priceText.text = rerollPrice.ToString();
         }
+
         transform.DOScale(new Vector3(2.2f, 2.2f, 1), 0);
         canReroll = true;
     }

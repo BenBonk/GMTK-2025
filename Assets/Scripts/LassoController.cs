@@ -36,6 +36,7 @@ public class LassoController : MonoBehaviour
     private List<Vector2> rawPoints = new List<Vector2>();
     [HideInInspector] public bool isDrawing = false;
     public GameObject feedbackTextGroupPrefab;
+    public Sprite farmbotIcon;
 
     // ===== High-impact knobs =====
     [Header("Tip while drawing")]
@@ -376,6 +377,56 @@ public class LassoController : MonoBehaviour
         DestroyLassoExit(false);
     }
 
+    private static bool NearlyOne(double x) => Math.Abs(x - 1.0) <= 0.01;
+
+    private static double CeilToStepIfAtLeastOne(double value, double step)
+    {
+        if (value < 1.0) return value;              // only round when >= 1
+        return Math.Ceiling(value / step) * step;   // always round UP
+    }
+
+    private static double FinalPointsTotal(double baseValue, double mult, bool abilityRound10s)
+    {
+        double total = baseValue * mult;
+        return abilityRound10s ? CeilToStepIfAtLeastOne(total, 10.0) : total;
+    }
+
+    private static double FinalCashTotal(double baseValue, double mult, bool abilityRound5s)
+    {
+        double total = baseValue * mult;
+        return abilityRound5s ? CeilToStepIfAtLeastOne(total, 5.0) : total;
+    }
+
+    // If NO multiplier, apply rounding to the base immediately (only if >= 1).
+    // If there IS a multiplier, show/award the raw base now; rounding happens on reveal.
+    private static double ShownPointsBase(double baseValue, double mult, bool abilityRound10s)
+    {
+        return NearlyOne(mult) && abilityRound10s
+            ? CeilToStepIfAtLeastOne(baseValue, 10.0)
+            : baseValue;
+    }
+
+    private static double ShownCashBase(double baseValue, double mult, bool abilityRound5s)
+    {
+        return NearlyOne(mult) && abilityRound5s
+            ? CeilToStepIfAtLeastOne(baseValue, 5.0)
+            : baseValue;
+    }
+
+    private bool IsRoundToNearestActive() => GameController.gameManager.farmerID == 4; // or read from your boon/ability system
+
+    private void AwardPoints(double amount)
+    {
+        if (TutorialManager._instance != null) TutorialManager._instance.pointsThisRound += amount;
+        else GameController.gameManager.pointsThisRound += amount;
+    }
+
+    private void AwardCash(double amount)
+    {
+        GameController.player.playerCurrency += amount;
+    }
+
+
 
 
     public static List<SpriteRenderer> CreateBoonIcons(Transform anchor, IEnumerable<Sprite> sprites , float boonIconScale = 1f, float boonIconSpacing = 0.9f, float offsetX = 0, float offsetY = 0.9f)
@@ -463,9 +514,16 @@ public class LassoController : MonoBehaviour
             var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
             var multText = bonusText.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
 
+            bool round10 = IsRoundToNearestActive();
+            if (round10)
+            {
+                result.boonSprites.Add(farmbotIcon);
+            }
+            double shownBasePts = ShownPointsBase(result.pointBonus, result.pointMult, round10); // may round if mult ~ 1
+
             if (bonusText != null)
             {
-                localization.localPointsPopup.Arguments[0] = FormatNumber(result.pointBonus);
+                localization.localPointsPopup.Arguments[0] = FormatNumber(shownBasePts);
                 localization.localPointsPopup.RefreshString();
                 bonusText.text = localization.pointsPopup;
                 bonusText.color = result.pointBonus >= 0 ? pointBonusColor : negativePointBonusColor;
@@ -473,6 +531,14 @@ public class LassoController : MonoBehaviour
                 bonusMat.SetColor("_GlowColor", bonusText.color);
                 bonusMat.SetFloat("_GlowPower", result.pointBonus >= 0 ? .02f : 0f);
             }
+
+            if (TutorialManager._instance != null)
+                TutorialManager._instance.pointsThisRound += shownBasePts;
+            else
+                GameController.gameManager.pointsThisRound += shownBasePts;
+
+            double finalPtsTotal = FinalPointsTotal(result.pointBonus, result.pointMult, round10);
+
 
             if (multText != null)
             {
@@ -502,29 +568,20 @@ public class LassoController : MonoBehaviour
             else
                 AudioManager.Instance.PlaySFX("no_points");
 
-            if (TutorialManager._instance != null)
-            {
-                TutorialManager._instance.pointsThisRound += result.pointBonus;
-            }
-            else
-            {
-                GameController.gameManager.pointsThisRound += result.pointBonus;
-            }
 
-            double total = result.pointBonus * result.pointMult;
-            if (total > FBPP.GetFloat("highestPointsPerLasso"))
+            if (finalPtsTotal > FBPP.GetFloat("highestPointsPerLasso"))
             {
-                FBPP.SetFloat("highestPointsPerLasso", (float)total);
+                FBPP.SetFloat("highestPointsPerLasso", (float)finalPtsTotal);
             }
-            if (total >= 10000000 && !steamIntegration.IsThisAchievementUnlocked("Point Insanity"))
+            if (finalPtsTotal >= 10000000 && !steamIntegration.IsThisAchievementUnlocked("Point Insanity"))
             {
                 steamIntegration.UnlockAchievement("Point Insanity");
             }
-            else if (total >= 1000000 && !steamIntegration.IsThisAchievementUnlocked("Point Madness"))
+            else if (finalPtsTotal >= 1000000 && !steamIntegration.IsThisAchievementUnlocked("Point Madness"))
             {
                 steamIntegration.UnlockAchievement("Point Madness");
             }
-            else if (total >= 100000 && !steamIntegration.IsThisAchievementUnlocked("Point Fever"))
+            else if (finalPtsTotal >= 100000 && !steamIntegration.IsThisAchievementUnlocked("Point Fever"))
             {
                 steamIntegration.UnlockAchievement("Point Fever");
             }
@@ -547,7 +604,7 @@ public class LassoController : MonoBehaviour
                 if (!multPointsShown && multText != null)
                 {
                     multPointsShown = true;
-                    ShowMultiplierPopIn(multText, bonusText, result.pointBonus, result.pointMult, true);
+                    ShowMultiplierPopIn(multText, bonusText, shownBasePts, result.pointMult, true);
                 }
             });
 
@@ -575,9 +632,12 @@ public class LassoController : MonoBehaviour
             var bonusText = group.transform.Find("BonusText")?.GetComponent<TMP_Text>();
             var multText = bonusText.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
 
+            bool round5 = IsRoundToNearestActive();
+            double shownBaseCash = ShownCashBase(result.currencyBonus, result.currencyMult, round5); // may round if mult ~ 1
+
             if (bonusText != null)
             {
-                localization.localCashPopup.Arguments[0] = FormatNumber(result.currencyBonus);
+                localization.localCashPopup.Arguments[0] = FormatNumber(shownBaseCash);
                 localization.localCashPopup.RefreshString();
                 bonusText.text = localization.cashPopup;
                 bonusText.color = result.currencyBonus >= 0 ? cashBonusColor : negativeCashBonusColor;
@@ -585,6 +645,14 @@ public class LassoController : MonoBehaviour
                 bonusMat.SetColor("_GlowColor", bonusText.color);
                 bonusMat.SetFloat("_GlowPower", result.pointBonus >= 0 ? .02f : 0f);
             }
+
+            if (result.currencyBonus > 0)
+                AudioManager.Instance.PlaySFX("cash");
+            else
+                AudioManager.Instance.PlaySFX("no_cash");
+
+            GameController.player.playerCurrency += shownBaseCash;
+            double finalCashTotal = FinalCashTotal(result.currencyBonus, result.currencyMult, round5);
 
             if (multText != null)
             {
@@ -610,18 +678,11 @@ public class LassoController : MonoBehaviour
                 }
             }
 
-            if (result.currencyBonus > 0)
-                AudioManager.Instance.PlaySFX("cash");
-            else
-                AudioManager.Instance.PlaySFX("no_cash");
-
-            double total = result.currencyBonus * result.currencyMult;
-            if (total > FBPP.GetFloat("highestCashPerLasso"))
+            if (finalCashTotal > FBPP.GetFloat("highestCashPerLasso"))
             {
-                FBPP.SetFloat("highestCashPerLasso", (float)total);
+                FBPP.SetFloat("highestCashPerLasso", (float)finalCashTotal);
             }
       
-            GameController.player.playerCurrency += result.currencyBonus;
 
             if (result.boonSprites.Count > 0)
             {
@@ -640,7 +701,7 @@ public class LassoController : MonoBehaviour
                 {
                     // multiplier pop-in exists, so update after
                     multCashShown = true;
-                    ShowMultiplierPopIn(multText, bonusText, result.currencyBonus, result.currencyMult, false);
+                    ShowMultiplierPopIn(multText, bonusText, shownBaseCash, result.currencyMult, false);
                 }
             });
 
@@ -826,25 +887,29 @@ public class LassoController : MonoBehaviour
     {
         if (multText == null || bonusText == null) return;
 
+        bool farmbot = IsRoundToNearestActive();
+
         // Update bonus text immediately when multiplier is revealed
-        double newTotal = Math.Round(baseValue * multiplier);
+        double finalTotal = isPoints
+                ? FinalPointsTotal(baseValue, multiplier, farmbot)  
+                : FinalCashTotal(baseValue, multiplier, farmbot);
+
+        double delta = finalTotal - baseValue;
+        if (isPoints) AwardPoints(delta);
+        else AwardCash(delta);
 
         if (isPoints)
         {
-            localization.localPointsPopup.Arguments[0] = FormatNumber(newTotal);
+            localization.localPointsPopup.Arguments[0] = FormatNumber(finalTotal);
             localization.localPointsPopup.RefreshString();
             bonusText.text = localization.pointsPopup;
-            //subtract base since we already added on initial popup
-            GameController.gameManager.pointsThisRound += newTotal - baseValue;
 
         }
         else
         {
-            localization.localCashPopup.Arguments[0] = FormatNumber(newTotal);
+            localization.localCashPopup.Arguments[0] = FormatNumber(finalTotal);
             localization.localCashPopup.RefreshString();
             bonusText.text = localization.cashPopup;
-            //subtract base since we already added on initial popup
-            GameController.player.playerCurrency += newTotal - baseValue;
         }
 
         if (multiplier > 1f)
