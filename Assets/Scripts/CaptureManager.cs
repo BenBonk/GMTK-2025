@@ -66,6 +66,11 @@ public class CaptureManager : MonoBehaviour
                     if (animal != null)
                     {
                         animalsCaptured.Add(animal);
+                        if (animal.animalData.name == "Mouse" && boonManager.ContainsBoon("ThreeBlindMice"))
+                        {
+                            animalsCaptured.Add(animal);
+                            animalsCaptured.Add(animal);
+                        }
                     }
                 }
             }
