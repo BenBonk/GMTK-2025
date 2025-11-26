@@ -118,6 +118,7 @@ public class GameManager : MonoBehaviour
     public Boon fairyBottleInstance;
     public GameObject extraUpgradeSlot;
     public GameObject unlockPanel;
+    [HideInInspector] public bool auroraUnlock;
     [HideInInspector] public AnimalData foxThiefStolenStats;
     private RandomEventManager randomEventManager;
     private ChallengeEventManager challengeEventManager;
@@ -450,6 +451,34 @@ public class GameManager : MonoBehaviour
                 FBPP.Save();
                 UnlockFarmer(1);
             }
+            if (!FBPP.GetBool("farmer5", false))
+            {
+                int predCount = 0;
+                int nonPredCount = 0;
+                foreach (var animal in player.animalsInDeck)
+                {
+                    if (animal.isPredator)
+                    {
+                        predCount++;
+                    }
+                    else
+                    {
+                        nonPredCount++;
+                    }
+                }
+                if (predCount > nonPredCount)
+                {
+                    FBPP.SetBool("farmer5", true);
+                    FBPP.Save();
+                    UnlockFarmer(5);
+                }
+            }
+            if (!FBPP.GetBool("farmer6", false) && harvestLevel >= 10)
+            {
+                FBPP.SetBool("farmer6", true);
+                FBPP.Save();
+                UnlockFarmer(6);
+            }
 
             while (!endlessSelected || GameController.wishlistPanel.isOpen)
             {
@@ -475,6 +504,58 @@ public class GameManager : MonoBehaviour
         {
             cashInterest += 25;
             endDayBoonSprites.Add(boonManager.boonDict["BountifulHarvest"].art);
+        }
+
+        if (!FBPP.GetBool("farmer2", false) && roundNumber <= 15)
+        {
+            bool hasLegendaryBoon = false;
+            foreach (var item in player.boonsInDeck)
+            {
+                if (item is LegendaryBoon)
+                {
+                    hasLegendaryBoon = true;
+                }
+            }
+            if (hasLegendaryBoon)
+            {
+                FBPP.SetBool("farmer2", true);
+                FBPP.Save();
+                GameObject panel = UnlockFarmer(2);
+                while (panel != null)
+                {
+                    yield return null;
+                }
+            }
+        }
+        if (!FBPP.GetBool("farmer3", false) && roundNumber <= 20 && player.animalsInDeck.Count >= 30)
+        {
+            FBPP.SetBool("farmer3", true);
+            FBPP.Save();
+            GameObject panel = UnlockFarmer(3);
+            while (panel != null)
+            {
+                yield return null;
+            }
+        }
+        if (!FBPP.GetBool("farmer4", false) && IsChallengeRound() && pointsThisRound == GetPointsRequirement())
+        {
+            FBPP.SetBool("farmer4", true);
+            FBPP.Save();
+            GameObject panel = UnlockFarmer(4);
+            while (panel != null)
+            {
+                yield return null;
+            }
+        }
+        if (auroraUnlock)
+        {
+            FBPP.SetBool("farmer7", true);
+            FBPP.Save();
+            GameObject panel = UnlockFarmer(7);
+            while (panel != null)
+            {
+                yield return null;
+            }
         }
 
         // Second message
@@ -913,12 +994,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void UnlockFarmer(int farmerID)
+    private GameObject UnlockFarmer(int farmerID)
     {
         Debug.Log("Unlocking farmer " + farmerID);
         GameObject newPanel = Instantiate(unlockPanel,GameObject.Find("UI").transform);
         newPanel.GetComponent<UnlockPanel>().SetupFarmerUnlock(farmerID);
         newPanel.GetComponent<UnlockPanel>().Open();
+        return newPanel;
     }
 
     private void UnlockHarvestLevel(int level)
