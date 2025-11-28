@@ -380,7 +380,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: Fange eine Gruppe von Tieren mit einem Pferd und einem Hund mit
+    m_Localized: Fangt eine Gruppe von Tieren mit einem Pferd und einem Hund mit
       dem Lasso ein.
     m_Metadata:
       m_Items: []
@@ -565,7 +565,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355916
-    m_Localized: "H\xF6chstes erreichtes Tierlevel:"
+    m_Localized: "H\xF6chste erreichte Tierstufe:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355917
@@ -766,7 +766,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607680
     m_Localized: "Der Kauf dieses Vorteils erh\xF6ht das Level deines Alpakas um
-      5."
+      4."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607681
@@ -1078,7 +1078,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755328
-    m_Localized: "Erh\xE4lt nach jeder Runde den doppelten Tageseinsatz."
+    m_Localized: "Erh\xE4lt nach jeder Runde +100 Bargeld. Alle anderen Boni auf
+      das t\xE4gliche Bargeld werden verdoppelt."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1159,7 +1160,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Wenn du genau zwei identische Tiere mit dem Lasso f\xE4ngst, besteht
-      eine Chance von 1 zu 25, dass du dieses Tier aufwertest."
+      eine Chance von 1 zu 15, dass du dieses Tier aufwertest."
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1289,7 +1290,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032512
-    m_Localized: Fange eine Gruppe von Tieren mit einem Alpaka und 2 Stallkatzen
+    m_Localized: Fangen Sie eine Gruppe von Tieren mit einem Alpaka und 2 Stallkatzen
       ein.
     m_Metadata:
       m_Items: []
@@ -1315,7 +1316,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: Fange eine Gruppe von Tieren mit einem Wildschwein und einem Schwein
+    m_Localized: Fange eine Gruppe Tiere mit einem Wildschwein und einem Schwein
       mit dem Lasso ein.
     m_Metadata:
       m_Items: []
@@ -1333,8 +1334,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032522
-    m_Localized: Fange eine Gruppe von Tieren mit dem Lasso ein, darunter eine Stallkatze,
-      ein Hund und eine Maus.
+    m_Localized: Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
+      Stallkatze, ein Hund und eine Maus.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032523
@@ -1399,7 +1400,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032537
-    m_Localized: Ziegenbock
+    m_Localized: Ziegengruff
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
@@ -1661,7 +1662,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 35758618513199112
-    m_Localized: "Schlurft und ruckt er \xFCber das Spielfeld hin und her."
+    m_Localized: "Schlurft und ruckt \xFCber das Spielfeld hin und her."
     m_Metadata:
       m_Items: []
   - m_Id: 35758618513199113

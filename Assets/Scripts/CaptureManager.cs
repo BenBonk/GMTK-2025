@@ -200,7 +200,7 @@ public class CaptureManager : MonoBehaviour
             
             if (boonManager.ContainsBoon("NoahsArk") && animalsCaptured.Count == 2 && capturedCounts.Keys.Count == 1)
             {
-                if (UnityEngine.Random.value < .04f)
+                if (UnityEngine.Random.value < .07f)
                 {
                     boonSprites.Add(boonManager.boonDict["NoahsArk"].art);
                     Animal chosenAnimal = animalsCaptured[0];

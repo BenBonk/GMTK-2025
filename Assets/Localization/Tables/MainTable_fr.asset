@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Points mult :'
+    m_Localized: 'Points multiplicateurs :'
     m_Metadata:
       m_Items: []
   - m_Id: 16
@@ -141,8 +141,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28
-    m_Localized: Il court le long de la bordure du champ, repoussant les autres animaux
-      vers le centre.
+    m_Localized: Il court en bordure du champ, repoussant les autres animaux vers
+      le centre.
     m_Metadata:
       m_Items: []
   - m_Id: 29
@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 44
     m_Localized: Attrapez au lasso un groupe d'animaux comprenant un cochon et une
-      poule.
+      poule
     m_Metadata:
       m_Items: []
   - m_Id: 45
@@ -330,7 +330,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: Photo-finish
+    m_Localized: Photo-finition
     m_Metadata:
       m_Items: []
   - m_Id: 74
@@ -529,7 +529,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355908
-    m_Localized: "Les 3 animaux les plus achet\xE9s :"
+    m_Localized: "Les 3 animaux les plus achet\xE9s\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355909
@@ -761,7 +761,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607680
-    m_Localized: L'achat de ce bonus augmente le niveau de votre alpaga de 5.
+    m_Localized: L'achat de ce bonus augmente le niveau de votre alpaga de 4.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607681
@@ -1077,7 +1077,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755328
-    m_Localized: "Re\xE7oit le double de son cachet quotidien apr\xE8s chaque tour."
+    m_Localized: "Vous recevez 100 pi\xE8ces apr\xE8s chaque manche. Tous les autres
+      bonus quotidiens sont doubl\xE9s."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1158,8 +1159,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376271
-    m_Localized: "Lorsque vous capturez au lasso exactement deux animaux identiques,
-      vous avez une chance sur 25 d'am\xE9liorer cet animal."
+    m_Localized: "Lorsque vous capturez exactement deux animaux identiques au lasso,
+      vous avez une chance sur 15 d'am\xE9liorer cet animal."
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1315,8 +1316,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: Capturez au lasso un groupe d'animaux comprenant un sanglier et
-      un cochon.
+    m_Localized: Lasso un groupe d'animaux comprenant un sanglier et un cochon
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032519
@@ -1505,7 +1505,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400424226818
-    m_Localized: Capturez au lasso un groupe d'animaux comprenant un lapin, une souris
+    m_Localized: Attrapez au lasso un groupe d'animaux comprenant un lapin, une souris
       et un mouton.
     m_Metadata:
       m_Items: []
@@ -1565,8 +1565,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421131
-    m_Localized: Attrapez au lasso un groupe d'animaux comprenant un lapin, un cochon
-      et un ours.
+    m_Localized: Attraper au lasso un groupe d'animaux comprenant un lapin, un cochon
+      et un ours
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421132

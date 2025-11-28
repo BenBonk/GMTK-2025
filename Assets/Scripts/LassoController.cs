@@ -518,9 +518,9 @@ public class LassoController : MonoBehaviour
                 AudioManager.Instance.PlaySFX("no_points");
 
 
-            if (finalPtsTotal > FBPP.GetFloat("highestPointsPerLasso"))
+            if (finalPtsTotal > double.Parse(FBPP.GetString("highestPointsPerLasso"), System.Globalization.CultureInfo.InvariantCulture))
             {
-                FBPP.SetFloat("highestPointsPerLasso", (float)finalPtsTotal);
+                FBPP.SetString("highestPointsPerLasso", finalPtsTotal.ToString(System.Globalization.CultureInfo.InvariantCulture));
             }
             if (finalPtsTotal >= 10000000 && !steamIntegration.IsThisAchievementUnlocked("Point Insanity"))
             {

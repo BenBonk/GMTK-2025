@@ -572,6 +572,7 @@ public class GameManager : MonoBehaviour
         if (farmerID == 0)
         {
             cashGained *= 2;
+            cashGained += 100;
         }
         //localization.localPointsString.Arguments[0] = pointsThisRound;
         //localization.localPointsString.RefreshString();

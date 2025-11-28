@@ -157,7 +157,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: "Diminui a velocidade dos predadores pr\xF3ximos."
+    m_Localized: "Diminui a velocidade de predadores pr\xF3ximos."
     m_Metadata:
       m_Items: []
   - m_Id: 33
@@ -238,7 +238,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 52
-    m_Localized: "La\xE7o: um grupo de animais contendo 3 ovelhas."
+    m_Localized: "La\xE7o em um grupo de animais contendo 3 ovelhas."
     m_Metadata:
       m_Items: []
   - m_Id: 53
@@ -569,7 +569,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
-    m_Localized: 'Total de rerolls:'
+    m_Localized: 'Total de novas tentativas:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550209
@@ -750,7 +750,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607680
     m_Localized: "Ao adquirir este benef\xEDcio, o n\xEDvel da sua Alpaca aumenta
-      em 5."
+      em 4."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607681
@@ -795,8 +795,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607690
-    m_Localized: "C\xE3es afugentam predadores. C\xE3es la\xE7ados com qualquer predador
-      valem +5,0x dinheiro."
+    m_Localized: "C\xE3es espantam predadores. C\xE3es la\xE7ados junto com qualquer
+      predador valem +5,0x dinheiro."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607691
@@ -922,7 +922,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802006
-    m_Localized: Dinheiro Vivo
+    m_Localized: "Dinheiro f\xE1cil"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802007
@@ -959,7 +959,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Agora \xE9 poss\xEDvel redefinir os atributos de cada loja tr\xEAs
+    m_Localized: "Agora \xE9 poss\xEDvel redefinir o conte\xFAdo de cada loja tr\xEAs
       vezes, em vez de apenas uma."
     m_Metadata:
       m_Items: []
@@ -1061,7 +1061,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755328
-    m_Localized: "Recebe o dobro do pagamento di\xE1rio ap\xF3s cada rodada."
+    m_Localized: "Recebe +100 em dinheiro ap\xF3s cada rodada. Todos os outros b\xF4nus
+      em dinheiro di\xE1rio s\xE3o dobrados."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1090,7 +1091,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376257
-    m_Localized: Concede 1 nova rolagem gratuita por loja.
+    m_Localized: Concede 1 reroll gratuito por loja
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376258
@@ -1143,7 +1144,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Sempre que voc\xEA la\xE7ar exatamente 2 animais id\xEAnticos,
-      h\xE1 1 chance em 25 de melhorar o animal."
+      h\xE1 1 chance em 15 de melhorar o animal."
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1215,7 +1216,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276037
-    m_Localized: Remova 2 animais do seu baralho de animais.
+    m_Localized: Remova 2 animais do seu Baralho de Animais.
     m_Metadata:
       m_Items: []
   - m_Id: 21394830084497408

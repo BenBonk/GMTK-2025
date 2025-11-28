@@ -103,7 +103,7 @@ public class Logbook : MonoBehaviour
         animalStatTexts[1].text = $"{animalStat2.GetLocalizedString()} {top3Animals[0]}, {top3Animals[1]}, {top3Animals[2]}";
         animalStatTexts[2].text = $"{animalStat3.GetLocalizedString()} {FBPP.GetInt("totalAnimalsPurchased")}";
         animalStatTexts[3].text = $"{animalStat4.GetLocalizedString()} {FBPP.GetInt("largestCapture")}";
-        animalStatTexts[4].text = $"{animalStat5.GetLocalizedString()} {FBPP.GetFloat("highestPointsPerLasso")}";
+        animalStatTexts[4].text = $"{animalStat5.GetLocalizedString()} {LassoController.FormatNumber(double.Parse(FBPP.GetString("highestPointsPerLasso"), System.Globalization.CultureInfo.InvariantCulture))}";
         
         List<string> top3Boons = saveManager.boonDatas
             .OrderByDescending(a => FBPP.GetInt(a.name))  // sort by value

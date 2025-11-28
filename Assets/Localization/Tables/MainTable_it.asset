@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 83
-    m_Localized: Partner di gara
+    m_Localized: Partner di corsa
     m_Metadata:
       m_Items: []
   - m_Id: 84
@@ -535,7 +535,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355913
-    m_Localized: "I 3 Boons pi\xF9 acquistati:"
+    m_Localized: "I 3 Boon pi\xF9 acquistati:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355914
@@ -711,7 +711,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809029
-    m_Localized: 'Lunghezza tonda:'
+    m_Localized: 'Lunghezza del giro:'
     m_Metadata:
       m_Items: []
   - m_Id: 8554514727809030
@@ -748,7 +748,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607680
     m_Localized: L'acquisto di questo vantaggio aumenta il livello del tuo Alpaca
-      di 5
+      di 4
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607681
@@ -780,7 +780,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
-    m_Localized: "Per sempre pi\xF9 veloce"
+    m_Localized: "Sempre pi\xF9 veloce"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
@@ -820,7 +820,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607696
-    m_Localized: Ogni mucca catturata accumula 0,25x punti globali moltiplicatori,
+    m_Localized: Ogni mucca catturata accumula 0,25x moltiplicatori di punti globali,
       azzerandosi a ogni round o quando viene catturato un predatore
     m_Metadata:
       m_Items: []
@@ -869,7 +869,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801994
-    m_Localized: branco di lupi
+    m_Localized: Branco di lupi
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801995
@@ -1058,7 +1058,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755328
-    m_Localized: Riceve il doppio del denaro giornaliero dopo ogni round.
+    m_Localized: Riceve +100 punti in denaro dopo ogni round. Tutti gli altri bonus
+      in denaro giornaliero sono raddoppiati.
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1139,11 +1140,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Ogni volta che prendi al lazo esattamente 2 animali identici, c'\xE8
-      una probabilit\xE0 su 25 di potenziare quell'animale"
+      una probabilit\xE0 su 15 di potenziare quell'animale"
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
-    m_Localized: Colpisci una talpa
+    m_Localized: Colpisci la talpa
     m_Metadata:
       m_Items: []
   - m_Id: 19552395433586688
@@ -1487,7 +1488,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421120
-    m_Localized: Fuga precipitosa
+    m_Localized: fuga precipitosa
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421121

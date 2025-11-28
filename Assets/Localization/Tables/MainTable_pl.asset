@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Utrata punkt\xF3w:"
+    m_Localized: "Strata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -416,9 +416,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 92
-    m_Localized: "Dobra robota! Za panowanie nad zwierz\u0119tami gospodarskimi dostaniesz
-      punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107 na
-      dworze ca\u0142\u0105 noc!"
+    m_Localized: "Dobra robota! Za opiekowanie si\u0119 zwierz\u0119tami gospodarskimi
+      dostaniesz punkty i got\xF3wk\u0119, ale nie mo\u017Cesz przecie\u017C siedzie\u0107
+      na dworze ca\u0142\u0105 noc!"
     m_Metadata:
       m_Items: []
   - m_Id: 93
@@ -768,7 +768,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607680
-    m_Localized: "Zakup tego daru zwi\u0119ksza poziom Twojej alpaki o 5"
+    m_Localized: "Zakup tego daru zwi\u0119ksza poziom Twojej alpaki o 4"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607681
@@ -795,8 +795,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: "Kot stodo\u0142owy staje si\u0119 zwierz\u0119ciem z najwi\u0119ksz\u0105
-      liczb\u0105 punkt\xF3w w Twoim lassie, gdy zostanie z\u0142apany"
+    m_Localized: "Kot ze stodo\u0142y staje si\u0119 zwierz\u0119ciem z najwi\u0119ksz\u0105
+      liczb\u0105 punkt\xF3w w twoim lassie, gdy zostanie z\u0142apany"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -1000,8 +1000,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
-      w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
+      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1030,7 +1030,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802026
-    m_Localized: Weteran-Pracownik Rolny
+    m_Localized: Weteran-robotnik
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802027
@@ -1084,8 +1084,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755328
-    m_Localized: "Otrzymuje podw\xF3jn\u0105 dzienn\u0105 got\xF3wk\u0119 po ka\u017Cdej
-      rundzie."
+    m_Localized: "Otrzymuje +100 got\xF3wki po ka\u017Cdej rundzie. Wszystkie pozosta\u0142e
+      bonusy do dziennej got\xF3wki s\u0105 podwajane."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1093,8 +1093,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949632
-    m_Localized: "W sklepie dost\u0119pne s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t.
-      Ulepszenia zwierz\u0105t s\u0105 ta\u0144sze."
+    m_Localized: "W sklepie s\u0105 3 opcje ulepsze\u0144 zwierz\u0105t. Ulepszenia
+      zwierz\u0105t s\u0105 ta\u0144sze."
     m_Metadata:
       m_Items: []
   - m_Id: 18706117562949633
@@ -1167,7 +1167,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 19461608641376271
     m_Localized: "Za ka\u017Cdym razem, gdy z\u0142apiesz na lasso dok\u0142adnie
-      2 identyczne zwierz\u0119ta, istnieje 1 szansa na 25 na ulepszenie tego zwierz\u0119cia"
+      2 identyczne zwierz\u0119ta, istnieje 1 szansa na 15 na ulepszenie tego zwierz\u0119cia"
     m_Metadata:
       m_Items: []
   - m_Id: 19552395341312000
@@ -1417,8 +1417,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
-      z 3 k\xF3z"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 3 kozy"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032539
