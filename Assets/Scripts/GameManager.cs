@@ -153,6 +153,10 @@ public class GameManager : MonoBehaviour
             GameController.shopManager.boonGroups[2].weights[1] += 4;
             GameController.shopManager.boonGroups[2].weights[2] += 6;
         }
+        if (farmerID == 3 && roundNumber == 1)
+        {
+            GameController.animalLevelManager.SetLevel("Chicken", 1);
+        }
         ApplyHarvestLevel();
         if (isTesting)
         {
@@ -641,6 +645,7 @@ public class GameManager : MonoBehaviour
                     challengeEventManager.EndChallenge();
                     inShop = true;
                     roundNumber++;
+                    AuroraCheck();
                     saveManager.SaveGameData();
                 });
             }
@@ -664,6 +669,31 @@ public class GameManager : MonoBehaviour
             inShop = false;
         });
         cameraController.ResetToStartPosition(1f);
+    }
+
+    public void AuroraCheck()
+    {
+        if (farmerID == 7)
+        {
+            List<Animal> nonPredList = new List<Animal>();
+            foreach (var animal in animalShopItem.possibleAnimals)
+            {
+                if (GameController.gameManager.roundNumber == 1 && (animal.isPredator || animal.animalData.price > 150))
+                {
+                    continue; // skip predators/horses in round 1
+                }
+                if (!animal.isPredator)
+                {
+                    nonPredList.Add(animal);
+                }
+            }
+            AnimalData chosenAnimal = nonPredList[Random.Range(0, nonPredList.Count)].animalData;
+            FBPP.SetInt(chosenAnimal.name + "_count", FBPP.GetInt(chosenAnimal.name + "_count") + 1);
+            FBPP.SetInt("totalAnimalsPurchased", FBPP.GetInt("totalAnimalsPurchased") + 1);
+            GameController.player.AddAnimalToDeck(chosenAnimal);
+            AudioManager.Instance.PlaySFX(chosenAnimal.name);
+            AnimalShopItem.Pulse();
+        }
     }
 
     private void UpdateScoreDisplay(double newPoints)

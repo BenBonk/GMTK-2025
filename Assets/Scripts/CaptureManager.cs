@@ -165,7 +165,7 @@ public class CaptureManager : MonoBehaviour
                     boonSprites.Add(boonManager.boonDict["Biodiversity"].art);
                     pointBonus += (10 * uniqueAnimalNames.Count);
                 }
-                if (!FBPP.GetBool("farmer7", false) && uniqueAnimalNames.Count >= 16)
+                if (!FBPP.GetBool("farmer7", false) && uniqueAnimalNames.Count >= gameManager.animalShopItem.possibleAnimals.Length)
                 {
                     FBPP.SetBool("farmer7", true);
                     gameManager.auroraUnlock = true;

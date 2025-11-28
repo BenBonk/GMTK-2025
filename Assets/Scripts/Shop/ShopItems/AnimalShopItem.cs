@@ -18,15 +18,15 @@ public class AnimalShopItem : ShopItem
     public bool leftAnimal;
     public override void Initialize()
     {
-        // Bias: non-predators get weight 5, predators get weight 1
+        // Bias: non-predators get weight 6, predators get weight 1
         List<Animal> weightedList = new List<Animal>();
         foreach (var animal in possibleAnimals)
         {
-            if (GameController.gameManager.roundNumber == 1 && (animal.isPredator || animal.animalData.name == "Horse"))
+            if (GameController.gameManager.roundNumber == 1 && (animal.isPredator || animal.animalData.price > 150))
             {
                 continue; // skip predators/horses in round 1
             }
-            int weight = animal.isPredator ? 1 : 5; // change weights as needed
+            int weight = animal.isPredator ? 1 : 6; // change weights as needed
             for (int i = 0; i < weight; i++)
             {
                 weightedList.Add(animal);
@@ -101,6 +101,21 @@ public class AnimalShopItem : ShopItem
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
         }
+    }
+
+    public static void Pulse()
+    {
+        Sequence pulse = DOTween.Sequence();
+        pulse.Append(GameController.shopManager.animalDeckButton.transform.DOScale(1.10f, 0.1f).SetEase(Ease.OutBack));
+        pulse.Append(GameController.shopManager.animalDeckButton.transform.DOShakeRotation(
+            duration: 0.15f,
+            strength: new Vector3(0f, 0f, 6f),
+            vibrato: 5,
+            randomness: 90,
+            fadeOut: true
+        ));
+        pulse.Append(GameController.shopManager.animalDeckButton.transform.DOScale(1f, 0.15f).SetEase(Ease.OutExpo));
+        pulse.Join(GameController.shopManager.animalDeckButton.transform.DOLocalRotate(Vector3.zero, 0.15f, RotateMode.Fast));
     }
 
     IEnumerator DeckPulse()

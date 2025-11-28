@@ -377,57 +377,6 @@ public class LassoController : MonoBehaviour
         DestroyLassoExit(false);
     }
 
-    private static bool NearlyOne(double x) => Math.Abs(x - 1.0) <= 0.01;
-
-    private static double CeilToStepIfAtLeastOne(double value, double step)
-    {
-        if (value < 1.0) return value;              // only round when >= 1
-        return Math.Ceiling(value / step) * step;   // always round UP
-    }
-
-    private static double FinalPointsTotal(double baseValue, double mult, bool abilityRound10s)
-    {
-        double total = baseValue * mult;
-        return abilityRound10s ? CeilToStepIfAtLeastOne(total, 10.0) : total;
-    }
-
-    private static double FinalCashTotal(double baseValue, double mult, bool abilityRound5s)
-    {
-        double total = baseValue * mult;
-        return abilityRound5s ? CeilToStepIfAtLeastOne(total, 5.0) : total;
-    }
-
-    // If NO multiplier, apply rounding to the base immediately (only if >= 1).
-    // If there IS a multiplier, show/award the raw base now; rounding happens on reveal.
-    private static double ShownPointsBase(double baseValue, double mult, bool abilityRound10s)
-    {
-        return NearlyOne(mult) && abilityRound10s
-            ? CeilToStepIfAtLeastOne(baseValue, 10.0)
-            : baseValue;
-    }
-
-    private static double ShownCashBase(double baseValue, double mult, bool abilityRound5s)
-    {
-        return NearlyOne(mult) && abilityRound5s
-            ? CeilToStepIfAtLeastOne(baseValue, 5.0)
-            : baseValue;
-    }
-
-    private bool IsRoundToNearestActive() => GameController.gameManager.farmerID == 4; // or read from your boon/ability system
-
-    private void AwardPoints(double amount)
-    {
-        if (TutorialManager._instance != null) TutorialManager._instance.pointsThisRound += amount;
-        else GameController.gameManager.pointsThisRound += amount;
-    }
-
-    private void AwardCash(double amount)
-    {
-        GameController.player.playerCurrency += amount;
-    }
-
-
-
 
     public static List<SpriteRenderer> CreateBoonIcons(Transform anchor, IEnumerable<Sprite> sprites , float boonIconScale = 1f, float boonIconSpacing = 0.9f, float offsetX = 0, float offsetY = 0.9f)
     {
@@ -948,6 +897,61 @@ public class LassoController : MonoBehaviour
         multPop.Append(multText.transform.DOLocalRotate(new Vector3(0, 0, 15f), 0.1f));
         multPop.Append(multText.transform.DOLocalRotate(Vector3.zero, 0.05f));
         multPop.Append(multText.transform.DOScale(targetScale, 0.1f).SetEase(Ease.OutCubic));
+    }
+
+    //FARMBOT STUFF
+    private const double EPS = 1e-12;
+    private static bool HasActiveMultiplier(double mult)
+        => Math.Abs(mult - 1.0) > EPS;
+    private static double FarmbotRoundUp(double value, double step)
+    {
+        if (value < 1.0) return value; // do not round values < 1
+        double k = Math.Floor(value / step);
+        double baseVal = k * step;
+        double remainder = value - baseVal;
+
+        if (remainder <= EPS) return baseVal;
+        if (remainder < 1.0 - EPS) return baseVal;
+        return (k + 1.0) * step;
+    }
+
+    private static double FinalPointsTotal(double baseValue, double mult, bool isFarmBot)
+    {
+        double total = baseValue * mult;
+        return isFarmBot ? FarmbotRoundUp(total, 10.0) : total;
+    }
+
+    private static double FinalCashTotal(double baseValue, double mult, bool isFarmBot)
+    {
+        double total = baseValue * mult;
+        return isFarmBot ? FarmbotRoundUp(total, 5.0) : total;
+    }
+
+    private static double ShownPointsBase(double baseValue, double mult, bool abilityRound10s)
+    {
+        return (!HasActiveMultiplier(mult) && abilityRound10s)
+            ? FarmbotRoundUp(baseValue, 10.0)
+            : baseValue;
+    }
+
+    private static double ShownCashBase(double baseValue, double mult, bool abilityRound5s)
+    {
+        return (!HasActiveMultiplier(mult) && abilityRound5s)
+            ? FarmbotRoundUp(baseValue, 5.0)
+            : baseValue;
+    }
+
+    private bool IsRoundToNearestActive() => GameController.gameManager.farmerID == 4;
+
+    private void AwardPoints(double amount)
+    {
+        if (TutorialManager._instance != null) TutorialManager._instance.pointsThisRound += amount;
+        else GameController.gameManager.pointsThisRound += amount;
+    }
+
+    private void AwardCash(double amount)
+    {
+        GameController.player.playerCurrency += amount;
     }
 
     // ===== Geometry/utility =====
