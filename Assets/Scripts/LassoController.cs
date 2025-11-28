@@ -518,7 +518,15 @@ public class LassoController : MonoBehaviour
                 AudioManager.Instance.PlaySFX("no_points");
 
 
-            if (finalPtsTotal > double.Parse(FBPP.GetString("highestPointsPerLasso"), System.Globalization.CultureInfo.InvariantCulture))
+
+            string storedValue = FBPP.GetString("highestPointsPerLasso");
+            double currentHighest = 0;
+            if (!string.IsNullOrEmpty(storedValue))
+            {
+                double.TryParse(storedValue, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.InvariantCulture, out currentHighest);
+            }
+
+            if (finalPtsTotal > currentHighest)
             {
                 FBPP.SetString("highestPointsPerLasso", finalPtsTotal.ToString(System.Globalization.CultureInfo.InvariantCulture));
             }
