@@ -597,7 +597,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "H\xF6chste gerundete Zahl bei maximalem Schwierigkeitsgrad:"
+    m_Localized: "H\xF6chste runde Zahl auf Erntestufe 20:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
@@ -1382,7 +1382,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032533
-    m_Localized: Waldfest
+    m_Localized: Waldfestmahl
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032534

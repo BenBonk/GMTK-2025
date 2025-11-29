@@ -122,7 +122,7 @@ public class Logbook : MonoBehaviour
         econStatTexts[3].text = $"{econStat4.GetLocalizedString()} {FBPP.GetInt("totalRerolls")}";
         
         recordsStatTexts[0].text = $"{recordsStat1.GetLocalizedString()} {FBPP.GetInt("highestRound")}";
-        recordsStatTexts[1].text = $"{recordsStat2.GetLocalizedString()} TBD";
+        recordsStatTexts[1].text = $"{recordsStat2.GetLocalizedString()} {FBPP.GetInt("highestRoundHarvest20")}";
         recordsStatTexts[2].text = $"{recordsStat3.GetLocalizedString()} {FBPP.GetInt("closeCalls")}";
     }
 }

@@ -62356,14 +62356,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1836716196}
     m_Modifications:
-    - target: {fileID: 82701087241368664, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1468.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 82701087241368664, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 119.35
-      objectReference: {fileID: 0}
     - target: {fileID: 123306690279326649, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -62444,117 +62436,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 196769956516187042, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 349435969867180705, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 804021864152227472, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 190.90001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1013424072800468989, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_text
-      value: Click a tab above to view your stats
-      objectReference: {fileID: 0}
-    - target: {fileID: 1013424072800468989, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_fontSize
-      value: 55.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1013424072800468989, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 55.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1013424072800468989, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1538119704520232947, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_text
-      value: Welcome to the Logbook!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1538119704520232947, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 1538119704520232947, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 86.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1538119704520232947, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2252883346249682941, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2498969782659341475, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 2938162044512544799, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
-      value: 37322272346865664
-      objectReference: {fileID: 0}
-    - target: {fileID: 3349894182819694768, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3357421512983903807, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 190.90001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930071749936408226, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 192.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 3930071749936408226, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 70.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4355590085908782892, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 190.90001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4594077064124595031, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 4849708179636176084, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 190.90001
-      objectReference: {fileID: 0}
     - target: {fileID: 4910081966737185464, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
       propertyPath: m_Name
       value: Logbook
       objectReference: {fileID: 0}
-    - target: {fileID: 5745272185093804907, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1454.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 5745272185093804907, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 86.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 5745272185093804907, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6456404984378111309, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 190.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428099145885920010, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 1024
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7328194715626819254, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
-    - {fileID: 5950139773032697351, guid: b8fbc490ebf141e42a8f6fb20f886c44, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

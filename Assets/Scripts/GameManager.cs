@@ -241,6 +241,10 @@ public class GameManager : MonoBehaviour
         {
             FBPP.SetInt("highestRound", roundNumber);
         }
+        if (harvestLevel == 20 && roundNumber > FBPP.GetInt("highestRoundHarvest20"))
+        {
+            FBPP.SetInt("highestRoundHarvest20", roundNumber);
+        }
         UpdateScoreDisplay(0);
         UpdateTimerDisplay();
         barnAnimator.Play("Closed", 0, 0.1f);

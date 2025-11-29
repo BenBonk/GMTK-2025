@@ -348,7 +348,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 79
-    m_Localized: Tamanho grande
+    m_Localized: Tamanho Plus Size
     m_Metadata:
       m_Items: []
   - m_Id: 80
@@ -581,7 +581,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550211
-    m_Localized: "N\xFAmero inteiro mais alto na dificuldade m\xE1xima:"
+    m_Localized: "N\xFAmero redondo mais alto no n\xEDvel de colheita 20:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550212
