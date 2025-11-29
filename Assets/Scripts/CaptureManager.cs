@@ -296,17 +296,21 @@ public class CaptureManager : MonoBehaviour
                 pointBonus += 5;
                 boonSprites.Add(boonManager.boonDict["HighFive"].art);
             }
-            int numBoar = capturedCounts["Boar"];
-            if (numBoar > 0 && boonManager.ContainsBoon("NoPainNoGain"))
-            {
-                //I think this is right?
-                pointBonus -= ((numBoar - 1) * 10)*numBoar;
-                currencyBonus -= ((numBoar - 1) * 3)*numBoar;
 
-                if (pointMult >0)
+            if (capturedCounts.ContainsKey("boar"))
+            {
+                int numBoar = capturedCounts["boar"];
+                if (numBoar > 0 && boonManager.ContainsBoon("NoPainNoGain"))
                 {
-                    pointMult *= -1;
-                }
+                    //I think this is right?
+                    pointBonus -= ((numBoar - 1) * 10)*numBoar;
+                    currencyBonus -= ((numBoar - 1) * 3)*numBoar;
+
+                    if (pointMult >0)
+                    {
+                        pointMult *= -1;
+                    }
+                }   
             }
             if (boonManager.ContainsBoon("AbsoluteValue"))
             {
