@@ -442,6 +442,8 @@ public class GameManager : MonoBehaviour
             {
                 steamIntegration.UnlockAchievement("Animalless");
             }
+
+            CheckMasteryAchivements();
             RectTransform children = winPanel.Find("Children") as RectTransform;
             children.DOAnchorPosY(0, 1f).SetEase(Ease.InOutBack);
             GameController.predatorSelect.darkCover.enabled = true;
@@ -1070,4 +1072,28 @@ public class GameManager : MonoBehaviour
         currencyDisplay.DOFade(1f, 0.5f);
     }
 
+    void CheckMasteryAchivements()
+    {
+        if (harvestLevel!=20)
+        {
+            return;
+        }
+        string achievementName = "";
+
+        if (farmerID == 0) achievementName = "Old MacDonald Mastery";
+        else if (farmerID == 1) achievementName = "Bubba Mastery";
+        else if (farmerID == 2) achievementName = "Slick Rick Mastery";
+        else if (farmerID == 3) achievementName = "John Deer Mastery";
+        else if (farmerID == 4) achievementName = "Farm-Bot-3000 Mastery";
+        else if (farmerID == 5) achievementName = "Toni Pepperoni Mastery";
+        else if (farmerID == 6) achievementName = "Nacho Mastery";
+        else if (farmerID == 7) achievementName = "Aurora Fern Mastery";
+
+        if (achievementName == "") return;
+
+        if (!steamIntegration.IsThisAchievementUnlocked(achievementName))
+        {
+            steamIntegration.UnlockAchievement(achievementName);
+        }
+    }
 }
