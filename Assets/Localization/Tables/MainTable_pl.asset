@@ -1608,10 +1608,6 @@ MonoBehaviour:
     m_Localized: "Teraz, gdy znasz ju\u017C podstawy, mo\u017Cemy zaczyna\u0107!"
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Localized: Witamy w Dzienniku!
-    m_Metadata:
-      m_Items: []
   - m_Id: 24856112636493824
     m_Localized: "Im wi\u0119cej osobnik\xF3w danego zwierz\u0119cia posiadasz, tym
       wi\u0119ksza szansa, \u017Ce \u200B\u200Bsi\u0119 pojawi!"
@@ -1769,6 +1765,10 @@ MonoBehaviour:
   - m_Id: 36459839981047824
     m_Localized: "Odblokuj: Zdob\u0105d\u017A Lasso zawieraj\u0105ce przynajmniej
       1 okaz ka\u017Cdego zwierz\u0119cia w grze."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37322272346865664
+    m_Localized: Witamy w Dzienniku!
     m_Metadata:
       m_Items: []
   references:

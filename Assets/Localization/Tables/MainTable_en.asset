@@ -1539,10 +1539,6 @@ MonoBehaviour:
       animal will spawn!
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Localized: Welcome to the Logbook!
-    m_Metadata:
-      m_Items: []
   - m_Id: 27389551341584384
     m_Localized: 'Nightfall: Higher predator spawnrate'
     m_Metadata:
@@ -1689,6 +1685,10 @@ MonoBehaviour:
   - m_Id: 36459839981047824
     m_Localized: 'Unlock: Score a Lasso that contains at least 1 of every animal
       in the game.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37322272346865664
+    m_Localized: Welcome to the Logbook!
     m_Metadata:
       m_Items: []
   references:

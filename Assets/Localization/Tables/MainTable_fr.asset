@@ -1590,10 +1590,6 @@ MonoBehaviour:
     m_Localized: "Maintenant que vous connaissez les bases, commen\xE7ons !"
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Localized: Bienvenue dans le journal de bord !
-    m_Metadata:
-      m_Items: []
   - m_Id: 24856112636493824
     m_Localized: "Plus vous poss\xE9dez d'animaux d'une m\xEAme esp\xE8ce, plus vous
       avez de chances de voir appara\xEEtre ces animaux !"
@@ -1749,6 +1745,10 @@ MonoBehaviour:
   - m_Id: 36459839981047824
     m_Localized: "D\xE9blocage\_: Obtenez un lasso contenant au moins un exemplaire
       de chaque animal du jeu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37322272346865664
+    m_Localized: Bienvenue dans le journal de bord !
     m_Metadata:
       m_Items: []
   references:

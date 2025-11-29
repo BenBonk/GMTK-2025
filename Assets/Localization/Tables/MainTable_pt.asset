@@ -1568,10 +1568,6 @@ MonoBehaviour:
     m_Localized: "Agora que voc\xEA j\xE1 conhece o b\xE1sico, vamos come\xE7ar!"
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Localized: "Bem-vindo ao Di\xE1rio de Bordo!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 24856112636493824
     m_Localized: "Quanto mais exemplares de um determinado animal voc\xEA tiver,
       maior a chance desse animal aparecer!"
@@ -1725,6 +1721,10 @@ MonoBehaviour:
   - m_Id: 36459839981047824
     m_Localized: "Desbloqueio: Consiga um La\xE7o que contenha pelo menos 1 de cada
       animal do jogo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37322272346865664
+    m_Localized: "Bem-vindo ao Di\xE1rio de Bordo!"
     m_Metadata:
       m_Items: []
   references:

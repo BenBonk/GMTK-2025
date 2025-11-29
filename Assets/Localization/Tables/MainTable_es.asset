@@ -1564,10 +1564,6 @@ MonoBehaviour:
     m_Localized: "Ahora que ya sabes lo b\xE1sico, \xA1comencemos!"
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
-    m_Metadata:
-      m_Items: []
   - m_Id: 24856112636493824
     m_Localized: "\xA1Cuanto m\xE1s ejemplares de un animal espec\xEDfico tengas,
       mayor ser\xE1 la probabilidad de que ese animal aparezca!"
@@ -1721,6 +1717,10 @@ MonoBehaviour:
   - m_Id: 36459839981047824
     m_Localized: 'Desbloquear: Consigue un lazo que contenga al menos 1 de cada animal
       del juego.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37322272346865664
+    m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
     m_Metadata:
       m_Items: []
   references:

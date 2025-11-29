@@ -766,8 +766,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607684
     m_Localized: "Il moltiplicatore di punti finale per ogni lazo contenente un cinghiale
-      sar\xE0 negativo. I cinghiali valgono -10 punti, -3 punti per ogni cinghiale
-      aggiuntivo in un lazo."
+      sar\xE0 negativo. I cinghiali valgono -10 punti, -3 punti in denaro per ogni
+      cinghiale aggiuntivo in un lazo."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607685
@@ -1557,10 +1557,6 @@ MonoBehaviour:
     m_Localized: Ora che conosci le basi, cominciamo!
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Localized: Benvenuti al diario di bordo!
-    m_Metadata:
-      m_Items: []
   - m_Id: 24856112636493824
     m_Localized: "Pi\xF9 esemplari di uno specifico animale hai, pi\xF9 alta \xE8
       la probabilit\xE0 che quell'animale si riproduca!"
@@ -1714,6 +1710,10 @@ MonoBehaviour:
   - m_Id: 36459839981047824
     m_Localized: 'Sblocca: ottieni un lazo che contenga almeno 1 esemplare di ogni
       animale presente nel gioco.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37322272346865664
+    m_Localized: Benvenuti al diario di bordo!
     m_Metadata:
       m_Items: []
   references:

@@ -559,8 +559,8 @@ MonoBehaviour:
     m_Key: startScreen.continue
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Key: book
+  - m_Id: 37322272346865664
+    m_Key: logbook.welcome
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355904

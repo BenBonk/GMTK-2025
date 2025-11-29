@@ -1596,10 +1596,6 @@ MonoBehaviour:
     m_Localized: Jetzt, wo Sie die Grundlagen kennen, legen wir los!
     m_Metadata:
       m_Items: []
-  - m_Id: 27389551270281216
-    m_Localized: Willkommen im Logbuch!
-    m_Metadata:
-      m_Items: []
   - m_Id: 24856112636493824
     m_Localized: "Je mehr Exemplare einer bestimmten Tierart man besitzt, desto h\xF6her
       ist die Wahrscheinlichkeit, dass diese Tierart erscheint!"
@@ -1751,6 +1747,10 @@ MonoBehaviour:
   - m_Id: 36459839981047824
     m_Localized: "Freischalten: Erhalte ein Lasso, das mindestens je ein Tier jeder
       Art im Spiel enth\xE4lt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37322272346865664
+    m_Localized: Willkommen im Logbuch!
     m_Metadata:
       m_Items: []
   references:
