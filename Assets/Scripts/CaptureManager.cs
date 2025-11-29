@@ -167,6 +167,7 @@ public class CaptureManager : MonoBehaviour
                 }
                 if (!FBPP.GetBool("farmer7", false) && uniqueAnimalNames.Count >= gameManager.animalShopItem.possibleAnimals.Length)
                 {
+                    steamIntegration.UnlockAchievement("Aurora Fern");
                     FBPP.SetBool("farmer7", true);
                     gameManager.auroraUnlock = true;
                 }

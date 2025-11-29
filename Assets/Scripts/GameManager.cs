@@ -456,6 +456,7 @@ public class GameManager : MonoBehaviour
             }
             if (!FBPP.GetBool("farmer1",false))
             {
+                steamIntegration.UnlockAchievement("Bubba");
                 FBPP.SetBool("farmer1", true);
                 FBPP.Save();
                 UnlockFarmer(1);
@@ -477,6 +478,7 @@ public class GameManager : MonoBehaviour
                 }
                 if (predCount > nonPredCount)
                 {
+                    steamIntegration.UnlockAchievement("Toni Pepperoni");
                     FBPP.SetBool("farmer5", true);
                     FBPP.Save();
                     UnlockFarmer(5);
@@ -484,6 +486,7 @@ public class GameManager : MonoBehaviour
             }
             if (!FBPP.GetBool("farmer6", false) && harvestLevel >= 10)
             {
+                steamIntegration.UnlockAchievement("Nacho");
                 FBPP.SetBool("farmer6", true);
                 FBPP.Save();
                 UnlockFarmer(6);
@@ -527,6 +530,7 @@ public class GameManager : MonoBehaviour
             }
             if (hasLegendaryBoon)
             {
+                steamIntegration.UnlockAchievement("Slick Rick");
                 FBPP.SetBool("farmer2", true);
                 FBPP.Save();
                 GameObject panel = UnlockFarmer(2);
@@ -538,6 +542,7 @@ public class GameManager : MonoBehaviour
         }
         if (!FBPP.GetBool("farmer3", false) && roundNumber <= 20 && player.animalsInDeck.Count >= 30)
         {
+            steamIntegration.UnlockAchievement("John Deer");
             FBPP.SetBool("farmer3", true);
             FBPP.Save();
             GameObject panel = UnlockFarmer(3);
@@ -548,6 +553,7 @@ public class GameManager : MonoBehaviour
         }
         if (!FBPP.GetBool("farmer4", false) && IsChallengeRound() && pointsThisRound == GetPointsRequirement())
         {
+            steamIntegration.UnlockAchievement("Farm-Bot-3000");
             FBPP.SetBool("farmer4", true);
             FBPP.Save();
             GameObject panel = UnlockFarmer(4);
