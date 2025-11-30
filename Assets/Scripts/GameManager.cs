@@ -557,7 +557,7 @@ public class GameManager : MonoBehaviour
                 yield return null;
             }
         }
-        if (!FBPP.GetBool("farmer4", false) && IsChallengeRound() && pointsThisRound == GetPointsRequirement())
+        if (!FBPP.GetBool("farmer4", false) && IsChallengeRound() && math.round(pointsThisRound) == math.round(GetPointsRequirement()))
         {
             steamIntegration.UnlockAchievement("Farm-Bot-3000");
             FBPP.SetBool("farmer4", true);

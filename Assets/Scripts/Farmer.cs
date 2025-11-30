@@ -72,6 +72,8 @@ public class Farmer : MonoBehaviour
                 GameController.farmerSelectManager.SelectFarmer(farmerData.farmerIndex);
                 farmerInfo.gameObject.SetActive(true);
                 farmerInfo.DOScale(new Vector3(3.571429f, 3.571429f, 3.571429f), .25f).SetEase(Ease.OutBack);
+                unlockText.text = farmerData.description.GetLocalizedString();
+                farmerName.text = farmerData.farmerName.GetLocalizedString();
             }
             else
             {
