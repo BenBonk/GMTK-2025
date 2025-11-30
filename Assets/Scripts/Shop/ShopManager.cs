@@ -117,7 +117,7 @@ public class ShopManager : MonoBehaviour
         {
             weightIndex = 2;
         }
-        else if (GameController.gameManager.roundNumber > 5)
+        else if (GameController.gameManager.roundNumber > 5 && GameController.gameManager.farmerID == 2)
         {
             weightIndex = 1;
         }
