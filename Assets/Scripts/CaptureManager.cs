@@ -1,9 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using Unity.VisualScripting;
 using UnityEngine;
-using System.Linq;
 
 public class CaptureManager : MonoBehaviour
 {
@@ -83,10 +84,10 @@ public class CaptureManager : MonoBehaviour
                 steamIntegration.UnlockAchievement("Crowd Control");
             }
             var capturedCounts = GetNameCounts(animalsCaptured);
-            /*foreach (var key in capturedCounts.Keys)
+            foreach (var key in capturedCounts.Keys)
             {
                 Debug.Log(key + ": " + capturedCounts[key]);
-            }*/
+            }
 
             for (int i = 0; i < player.boonsInDeck.Count; i++)
             {
@@ -432,7 +433,7 @@ public class CaptureManager : MonoBehaviour
         Dictionary<string, int> counts = new Dictionary<string, int>();
         foreach (var animal in animals)
         {
-            string key = animal.Trim().ToLower();
+            string key = Regex.Replace(animal, @"\s", "").ToLower();
             if (counts.ContainsKey(key))
                 counts[key]++;
             else
@@ -446,7 +447,7 @@ public class CaptureManager : MonoBehaviour
         Dictionary<string, int> counts = new Dictionary<string, int>();
         foreach (var animal in animals)
         {
-            string key = animal.animalData.animalName.GetLocalizedString().Trim().ToLower();
+            string key = Regex.Replace(animal.animalData.animalName.GetLocalizedString(), @"\s", "").ToLower();
             if (counts.ContainsKey(key))
                 counts[key]++;
             else
