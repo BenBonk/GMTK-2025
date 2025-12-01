@@ -85,7 +85,7 @@ public class RerollManager : MonoBehaviour
         {
             FBPP.SetInt("mostRerollsInGame", rerollsThisGame);
         }
-        if (freeRerollsPerShop+freeRerollsPerShop<=rerollsThisShop)
+        if (freeRerollsPerShop+paidRerollsPerShop<=rerollsThisShop)
         {
             transform.DOScale(Vector3.zero, 0.25f).SetEase(Ease.InBack);
             canReroll = false;

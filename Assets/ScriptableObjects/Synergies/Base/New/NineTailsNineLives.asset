@@ -39,7 +39,7 @@ MonoBehaviour:
   pointsMult: 1.9
   animalsNeeded:
   - Fox
-  - Cat
+  - BarnCat
   references:
     version: 2
     RefIds: []

@@ -38,7 +38,7 @@ MonoBehaviour:
   pointsBonus: 10
   pointsMult: 2
   animalsNeeded:
-  - Cat
+  - BarnCat
   - Puma
   - Fox
   references:

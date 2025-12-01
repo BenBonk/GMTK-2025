@@ -150,7 +150,7 @@ MonoBehaviour:
     volume: 0.09
   - name: round_win
     clip: {fileID: 8300000, guid: 4f752ee9dba9b0a47a52a576f9076480, type: 3}
-    volume: 0.2
+    volume: 0.3
   - name: round_lose
     clip: {fileID: 8300000, guid: 1d210404f0b576943936b4ff1a2e7c27, type: 3}
     volume: 0.5

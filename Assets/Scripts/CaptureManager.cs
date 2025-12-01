@@ -84,10 +84,10 @@ public class CaptureManager : MonoBehaviour
                 steamIntegration.UnlockAchievement("Crowd Control");
             }
             var capturedCounts = GetNameCounts(animalsCaptured);
-            foreach (var key in capturedCounts.Keys)
+            /*foreach (var key in capturedCounts.Keys)
             {
                 Debug.Log(key + ": " + capturedCounts[key]);
-            }
+            }*/
 
             for (int i = 0; i < player.boonsInDeck.Count; i++)
             {

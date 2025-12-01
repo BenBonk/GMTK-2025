@@ -71,6 +71,18 @@ public class Bunny : Animal
     public override void Start()
     {
         base.Start();
+
+        // Make sure the bunny's baseline is low enough
+        // that its hop arc (baseline + hopHeight) never exceeds topLimitY.
+        Vector3 pos = transform.position;
+        float maxBaselineY = topLimitY - hopHeight;
+
+        if (pos.y > maxBaselineY)
+        {
+            pos.y = maxBaselineY;
+            transform.position = pos;
+        }
+
         // start at neutral, initial pause
         EnterPhase(Phase.Pause1, pauseBeforeTiltUp);
     }

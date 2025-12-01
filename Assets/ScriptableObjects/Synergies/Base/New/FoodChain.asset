@@ -39,7 +39,7 @@ MonoBehaviour:
   pointsMult: 3
   animalsNeeded:
   - Wolf
-  - Cat
+  - BarnCat
   - Mouse
   references:
     version: 2
