@@ -464,10 +464,6 @@ public class LassoController : MonoBehaviour
             var multText = bonusText.transform.Find("MultiplierText")?.GetComponent<TMP_Text>();
 
             bool round10 = IsRoundToNearestActive();
-            if (round10)
-            {
-                result.boonSprites.Add(farmbotIcon);
-            }
             double shownBasePts = ShownPointsBase(result.pointBonus, result.pointMult, round10); // may round if mult ~ 1
 
             if (bonusText != null)
@@ -487,6 +483,7 @@ public class LassoController : MonoBehaviour
                 GameController.gameManager.pointsThisRound += shownBasePts;
 
             double finalPtsTotal = FinalPointsTotal(result.pointBonus, result.pointMult, round10);
+            finalPtsTotal = SnapFinalToStep(finalPtsTotal, 10.0);
 
 
             if (multText != null)
@@ -517,6 +514,11 @@ public class LassoController : MonoBehaviour
             else
                 AudioManager.Instance.PlaySFX("no_points");
 
+
+            if (finalPtsTotal > 1 && IsRoundToNearestActive())
+            {
+                result.boonSprites.Add(farmbotIcon);
+            }
 
 
             string storedValue = FBPP.GetString("highestPointsPerLasso");
@@ -610,6 +612,7 @@ public class LassoController : MonoBehaviour
 
             GameController.player.playerCurrency += shownBaseCash;
             double finalCashTotal = FinalCashTotal(result.currencyBonus, result.currencyMult, round5);
+            finalCashTotal = SnapFinalToStep(finalCashTotal, 5.0);
 
             if (multText != null)
             {
@@ -633,6 +636,11 @@ public class LassoController : MonoBehaviour
                     multCashShown = true;
                     multText.gameObject.SetActive(false);
                 }
+            }
+
+            if (finalCashTotal > 1 && IsRoundToNearestActive())
+            {
+                result.boonSprites.Add(farmbotIcon);
             }
 
             if (finalCashTotal > FBPP.GetFloat("highestCashPerLasso"))
@@ -850,6 +858,7 @@ public class LassoController : MonoBehaviour
         double finalTotal = isPoints
                 ? FinalPointsTotal(baseValue, multiplier, farmbot)  
                 : FinalCashTotal(baseValue, multiplier, farmbot);
+        finalTotal = SnapFinalToStep(finalTotal, isPoints ? 10.0 : 5.0);
 
         double delta = finalTotal - baseValue;
         if (isPoints) AwardPoints(delta);
@@ -907,7 +916,7 @@ public class LassoController : MonoBehaviour
         multPop.Append(multText.transform.DOScale(targetScale, 0.1f).SetEase(Ease.OutCubic));
     }
 
-    //FARMBOT STUFF
+    // ===== farmbot stuff =====
     private const double EPS = 1e-12;
     private static bool HasActiveMultiplier(double mult)
         => Math.Abs(mult - 1.0) > EPS;
@@ -960,6 +969,13 @@ public class LassoController : MonoBehaviour
     private void AwardCash(double amount)
     {
         GameController.player.playerCurrency += amount;
+    }
+
+    private static double SnapFinalToStep(double value, double step)
+    {
+        if (value < 1.0) return value;
+
+        return Math.Round(value / step, MidpointRounding.AwayFromZero) * step;
     }
 
     // ===== Geometry/utility =====
