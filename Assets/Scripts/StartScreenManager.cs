@@ -31,7 +31,6 @@ public class StartScreenManager : MonoBehaviour
             Debug.Log("No Save Data");
             noSaveData.SetActive(true);
         }
-        GameController.farmerSelectManager.CheckUnlokcedFarmers();
 
         yield return new WaitForSeconds(5);
         if (!GameController.gameManager.roundCompleted)

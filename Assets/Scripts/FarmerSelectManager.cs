@@ -9,6 +9,12 @@ public class FarmerSelectManager : MonoBehaviour
     public GameObject startGameButton;
     public GameObject titleObject;
     public int selectedFarmerIndex = -1;
+
+    private void Awake()
+    {
+        CheckUnlokcedFarmers();
+    }
+
     public void SelectFarmer(int index)
     {
         selectedFarmerIndex = index;
