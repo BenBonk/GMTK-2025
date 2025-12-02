@@ -706,6 +706,7 @@ public class GameManager : MonoBehaviour
             GameController.player.AddAnimalToDeck(chosenAnimal);
             AudioManager.Instance.PlaySFX(chosenAnimal.name);
             AnimalShopItem.Pulse();
+            GameController.shopManager.UpdateDeck(GameController.shopManager.deckParent);
         }
     }
 
