@@ -157,6 +157,10 @@ public class GameManager : MonoBehaviour
         {
             GameController.animalLevelManager.SetLevel("Chicken", 1);
         }
+        if (farmerID == 7 && roundNumber == 1)
+        {
+            FBPP.SetFloat("spawnRate", FBPP.GetFloat("spawnRate", 1f) * 0.75f);
+        }
         ApplyHarvestLevel();
         if (isTesting)
         {

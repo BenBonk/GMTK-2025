@@ -483,7 +483,8 @@ public class LassoController : MonoBehaviour
                 GameController.gameManager.pointsThisRound += shownBasePts;
 
             double finalPtsTotal = FinalPointsTotal(result.pointBonus, result.pointMult, round10);
-            finalPtsTotal = SnapFinalToStep(finalPtsTotal, 10.0);
+            if (round10)
+                finalPtsTotal = SnapFinalToStep(finalPtsTotal, 10.0);
 
 
             if (multText != null)
@@ -612,7 +613,8 @@ public class LassoController : MonoBehaviour
 
             GameController.player.playerCurrency += shownBaseCash;
             double finalCashTotal = FinalCashTotal(result.currencyBonus, result.currencyMult, round5);
-            finalCashTotal = SnapFinalToStep(finalCashTotal, 5.0);
+            if(round5)
+                finalCashTotal = SnapFinalToStep(finalCashTotal, 5.0);
 
             if (multText != null)
             {
@@ -858,7 +860,8 @@ public class LassoController : MonoBehaviour
         double finalTotal = isPoints
                 ? FinalPointsTotal(baseValue, multiplier, farmbot)  
                 : FinalCashTotal(baseValue, multiplier, farmbot);
-        finalTotal = SnapFinalToStep(finalTotal, isPoints ? 10.0 : 5.0);
+        if (farmbot)
+            finalTotal = SnapFinalToStep(finalTotal, isPoints ? 10.0 : 5.0);
 
         double delta = finalTotal - baseValue;
         if (isPoints) AwardPoints(delta);
