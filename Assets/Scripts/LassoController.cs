@@ -1462,7 +1462,6 @@ public class LassoController : MonoBehaviour
     {
         if (drawParticles == null || particlesPerMeter <= 0f) return;
         if (loop == null || loop.Count < 2) return;
-
         var main = drawParticles.main;
         main.simulationSpace = ParticleSystemSimulationSpace.World;
 

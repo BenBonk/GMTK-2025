@@ -57,7 +57,7 @@ public class RerollManager : MonoBehaviour
     }
     public void Reroll()
     {
-        if (!canReroll || rerollsThisShop >= paidRerollsPerShop+freeRerollsPerShop || (GameController.player.playerCurrency < rerollPrice && !GameController.boonManager.ContainsBoon("BNPL")) || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - rerollPrice <-150))
+        if (!canReroll || rerollsThisShop >= paidRerollsPerShop+freeRerollsPerShop || ((GameController.player.playerCurrency < rerollPrice && !GameController.boonManager.ContainsBoon("BNPL")) || (GameController.boonManager.ContainsBoon("BNPL") && GameController.player.playerCurrency - rerollPrice <-150) && rerollsThisShop >= freeRerollsPerShop))
         {
             AudioManager.Instance.PlaySFX("no_point_mult");
             return;
@@ -96,7 +96,7 @@ public class RerollManager : MonoBehaviour
         }
         else
         {
-            priceText.text = rerollPrice.ToString();
+            priceText.text = rerollPriceThisShop.ToString();
         }
         if (totalRerolls == 100 && !steamIntegration.IsThisAchievementUnlocked("Shopaholic"))
         {

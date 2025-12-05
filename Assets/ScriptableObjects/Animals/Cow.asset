@@ -37,7 +37,7 @@ MonoBehaviour:
   animalPrefab: {fileID: 6561535014221172434, guid: 5c35bec9414ba1047bc6dd3f61e56cae, type: 3}
   legendaryBoon: {fileID: 11400000, guid: 0574fa9d62ff30642881045a6de3b0ae, type: 2}
   isPredator: 0
-  pointsToGive: 20
+  pointsToGive: 15
   pointsMultToGive: 1.1
   currencyToGive: 0
   currencyMultToGive: 0

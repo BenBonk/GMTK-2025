@@ -26,7 +26,15 @@ public class AnimalShopItem : ShopItem
             {
                 continue; // skip predators/horses in round 1
             }
-            int weight = animal.isPredator ? 1 : 6; // change weights as needed
+            int weight = 1;
+            if (GameController.gameManager.farmerID == 5)
+            {
+                weight = animal.isPredator ? 1 : 3;
+            }
+            else
+            {
+                weight = animal.isPredator ? 1 : 6;
+            }
             for (int i = 0; i < weight; i++)
             {
                 weightedList.Add(animal);

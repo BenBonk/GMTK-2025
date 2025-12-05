@@ -347,7 +347,7 @@ public class CaptureManager : MonoBehaviour
         pointBonus += boon.pointsBonus;
         pointMult *=  boon.pointsMult;
         boonSprites.Add(boon.art);
-        Debug.Log($"Boon activated: {boon.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
+        //Debug.Log($"Boon activated: {boon.name} - Currency Bonus: {currencyBonus}, Currency Multiplier: {currencyMult}, Point Bonus: {pointBonus}, Point Multiplier: {pointMult}");
     }
 
     public virtual void CaptureAnimal(Animal capturedAnimal)

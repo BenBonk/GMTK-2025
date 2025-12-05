@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
             GameController.shopManager.boonGroups[2].weights[1] += 4;
             GameController.shopManager.boonGroups[2].weights[2] += 6;
         }
-        if (farmerID == 3 && roundNumber == 1)
+        if (farmerID == 6 && roundNumber == 1)
         {
             GameController.animalLevelManager.SetLevel("Chicken", 1);
         }
@@ -337,7 +337,9 @@ public class GameManager : MonoBehaviour
                 break;
             case DifficultySetting.Veteran:
                 //value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
-                value = 50 + 20 * R + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 5) * (Math.Pow(1.42f, R + 3));
+                //value = 50 + 20 * R + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 5) * (Math.Pow(1.42f, R + 3));
+                //value = 60 + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 4) * (Math.Pow(1.6f, R + 3));
+                value = 75 + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 2) * (Math.Pow(1.6f, R + 3));
                 break;
             case DifficultySetting.Expert:
                 //placeholder
@@ -363,7 +365,9 @@ public class GameManager : MonoBehaviour
                 break;
             case DifficultySetting.Veteran:
                 //value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
-                value = 50 + 20 * R + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 5) * (Math.Pow(1.42f, R + 3));
+                //value = 50 + 20 * R + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 5) * (Math.Pow(1.42f, R + 3));
+                //value = 60 + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 4) * (Math.Pow(1.6f, R + 3));
+                value = 75 + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 2) * (Math.Pow(1.6f, R + 3));
                 break;
             case DifficultySetting.Expert:
                 //placeholder
@@ -1020,10 +1024,6 @@ public class GameManager : MonoBehaviour
             typer.ChangeTextAnimated(roundDescription,0.04f,0.04f);
             yield return skipper.AwaitTypewriter(typer);
             yield return skipper.Wait(displayDuration*3);
-        }
-        else
-        {
-            Debug.Log("No description TMP or no round description");
         }
 
             // Pause again
