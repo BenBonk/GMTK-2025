@@ -337,7 +337,8 @@ public class GameManager : MonoBehaviour
                 value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.24, R + 3));
                 break;
             case DifficultySetting.Beginner:
-                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
+                //value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.24, R + 3));
                 break;
             case DifficultySetting.Novice:
                 value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5*R + 5)*(Math.Pow(1.28,R+4));
@@ -370,7 +371,8 @@ public class GameManager : MonoBehaviour
                 value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.24, R + 3));
                 break;
             case DifficultySetting.Beginner:
-                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
+                //value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.24, R + 3));
                 break;
             case DifficultySetting.Novice:
                 value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
