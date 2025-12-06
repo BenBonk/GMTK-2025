@@ -508,6 +508,10 @@ PrefabInstance:
       propertyPath: farmerIndex
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6250446043872799259, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1027,6 +1031,10 @@ PrefabInstance:
       propertyPath: farmerIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: unlockedSprite
       value: 
@@ -2278,6 +2286,10 @@ PrefabInstance:
       propertyPath: farmerIndex
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6250446043872799259, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4024,6 +4036,10 @@ PrefabInstance:
       propertyPath: farmerIndex
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6250446043872799259, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5202,6 +5218,10 @@ PrefabInstance:
       propertyPath: farmerIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6250446043872799259, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5734,6 +5754,10 @@ PrefabInstance:
       propertyPath: farmerIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6250446043872799259, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5990,6 +6014,10 @@ PrefabInstance:
       propertyPath: farmerIndex
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6250446043872799259, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10894,6 +10922,10 @@ PrefabInstance:
       propertyPath: isUnlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
+      propertyPath: highlightMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d1eaed596a83da5419ba50c8cacb1876, type: 2}
     - target: {fileID: 6244642506297171879, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
       propertyPath: unlockedSprite
       value: 

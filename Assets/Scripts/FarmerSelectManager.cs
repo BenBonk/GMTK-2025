@@ -54,7 +54,10 @@ public class FarmerSelectManager : MonoBehaviour
         foreach (var dude in farmers)
         {
             if (dude.farmerData != null && dude.farmerData.farmerIndex != except)
+            {
                 dude.HideFarmerInfo();
+                dude.farmerImg.sprite = dude.farmerData.sprite;   
+            }
         }
     }
 }

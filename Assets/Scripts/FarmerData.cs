@@ -9,6 +9,7 @@ public class FarmerData : ScriptableObject
     public LocalizedString unlockDescription;
     public Sprite sprite;
     public Sprite lockedSprite;
+    public Sprite selectedSprite;
     public AnimalData[] startingDeck;
     public string audioClipName;
     public int farmerIndex;

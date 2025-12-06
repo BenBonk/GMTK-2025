@@ -17,9 +17,10 @@ public class Farmer : MonoBehaviour
     public Image[] animalImages;
     public TextMeshProUGUI unlockText;
     public TextMeshProUGUI farmerName;
-
+    private Image sr;
     private void Start()
     {
+        sr = GetComponent<Image>();
         HideFarmerInfo();
         if (isUnlocked)
         {
@@ -69,6 +70,7 @@ public class Farmer : MonoBehaviour
         {
             if (isUnlocked)
             {
+                farmerImg.sprite = farmerData.selectedSprite;
                 GameController.farmerSelectManager.SelectFarmer(farmerData.farmerIndex);
                 farmerInfo.gameObject.SetActive(true);
                 farmerInfo.DOScale(new Vector3(3.571429f, 3.571429f, 3.571429f), .25f).SetEase(Ease.OutBack);
@@ -100,6 +102,7 @@ public class Farmer : MonoBehaviour
 
     public void HideFarmerInfo()
     {
+        sr.material = null;
         farmerInfo.DOScale(Vector3.zero, .25f).SetEase(Ease.InBack)
             .OnComplete(() => farmerInfo.gameObject.SetActive(false));
     }

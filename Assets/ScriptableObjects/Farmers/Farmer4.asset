@@ -41,6 +41,7 @@ MonoBehaviour:
     m_LocalVariables: []
   sprite: {fileID: 6539199221212056867, guid: e5a9a588a0a53294db4ed43d1bc91dc8, type: 3}
   lockedSprite: {fileID: 4839259140074295261, guid: b67ac77db4872b744af34614b9f67a3c, type: 3}
+  selectedSprite: {fileID: 1055295157303575131, guid: e361edb5126e9f544a9aa9d39daca622, type: 3}
   startingDeck:
   - {fileID: 11400000, guid: 2934a686e4b1d5c4d99402de55f05c55, type: 2}
   - {fileID: 11400000, guid: 3736da33dc3abfe429112c413e0574ff, type: 2}

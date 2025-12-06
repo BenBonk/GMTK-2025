@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: e5a9a588a0a53294db4ed43d1bc91dc8
+guid: e361edb5126e9f544a9aa9d39daca622
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3173562007628435259
-    second: FarmerLayout_0
+      213: -3303501655154169513
+    second: FarmerLayoutOutlined_0
   - first:
-      213: 2484620633241126911
-    second: FarmerLayout_1
+      213: -407100161487170548
+    second: FarmerLayoutOutlined_1
   - first:
-      213: 4721386039088065541
-    second: FarmerLayout_2
+      213: -1739563317156729297
+    second: FarmerLayoutOutlined_2
   - first:
-      213: 7165011142971765558
-    second: FarmerLayout_3
+      213: -4429099184107292939
+    second: FarmerLayoutOutlined_3
   - first:
-      213: 6539199221212056867
-    second: FarmerLayout_4
+      213: 2604146401617379000
+    second: FarmerLayoutOutlined_4
   - first:
-      213: -508409833125588936
-    second: FarmerLayout_5
+      213: 1055295157303575131
+    second: FarmerLayoutOutlined_5
   - first:
-      213: -8887847189983744844
-    second: FarmerLayout_6
-  - first:
-      213: -5887284253483819891
-    second: FarmerLayout_7
+      213: -1438525950086457275
+    second: FarmerLayoutOutlined_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -117,108 +114,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FarmerLayout_0
+      name: FarmerLayoutOutlined_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 37
-        width: 15
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c0b1a61b2e35f3d0800000000000000
-      internalID: -3173562007628435259
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FarmerLayout_1
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 37
-        width: 16
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff781f54d452b7220800000000000000
-      internalID: 2484620633241126911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FarmerLayout_2
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 37
-        width: 16
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50c255b669bb58140800000000000000
-      internalID: 4721386039088065541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FarmerLayout_3
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 37
-        width: 15
+        x: 6
+        y: 36
+        width: 17
         height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -228,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6333c843cab3f6360800000000000000
-      internalID: 7165011142971765558
+      spriteID: 759ee915fba9722d0800000000000000
+      internalID: -3303501655154169513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerLayout_4
+      name: FarmerLayoutOutlined_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
+        x: 28
+        y: 36
         width: 17
-        height: 23
+        height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32d0bd7ab07efba50800000000000000
-      internalID: 6539199221212056867
+      spriteID: c049d8e5f80b95af0800000000000000
+      internalID: -407100161487170548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerLayout_5
+      name: FarmerLayoutOutlined_2
       rect:
         serializedVersion: 2
-        x: 26
-        y: 6
-        width: 18
-        height: 26
+        x: 47
+        y: 5
+        width: 25
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,41 +177,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 830db3053f3c1f8f0800000000000000
-      internalID: -508409833125588936
+      spriteID: f2ea2903164dbd7e0800000000000000
+      internalID: -1739563317156729297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FarmerLayout_6
+      name: FarmerLayoutOutlined_3
       rect:
         serializedVersion: 2
         x: 48
-        y: 6
-        width: 23
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4bca01f021608a480800000000000000
-      internalID: -8887847189983744844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FarmerLayout_7
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 6
-        width: 14
+        y: 36
+        width: 18
         height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -316,8 +199,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8c9853e92a2c4ea0800000000000000
-      internalID: -5887284253483819891
+      spriteID: 5f6ff4822cda882c0800000000000000
+      internalID: -4429099184107292939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmerLayoutOutlined_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 36
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bef38bda59c32420800000000000000
+      internalID: 2604146401617379000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmerLayoutOutlined_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 5
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b520548ba5925ae00800000000000000
+      internalID: 1055295157303575131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmerLayoutOutlined_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 5
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5485ae02544590ce0800000000000000
+      internalID: -1438525950086457275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FarmerLayoutOutlined_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 5
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8dfa7294730bf4780cf54df50c2c32
+      internalID: -1205800098
       vertices: []
       indices: 
       edges: []
@@ -326,7 +297,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f2dda0420b04f2c44ae2f37b1bea0e2c
+    spriteID: 6069fefbecdb97c45a04bc1bf29a105b
     internalID: 0
     vertices: []
     indices: 
@@ -336,14 +307,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FarmerLayout_0: -3173562007628435259
-      FarmerLayout_1: 2484620633241126911
-      FarmerLayout_2: 4721386039088065541
-      FarmerLayout_3: 7165011142971765558
-      FarmerLayout_4: 6539199221212056867
-      FarmerLayout_5: -508409833125588936
-      FarmerLayout_6: -8887847189983744844
-      FarmerLayout_7: -5887284253483819891
+      FarmerLayoutOutlined_0: -3303501655154169513
+      FarmerLayoutOutlined_1: -407100161487170548
+      FarmerLayoutOutlined_2: -1739563317156729297
+      FarmerLayoutOutlined_3: -4429099184107292939
+      FarmerLayoutOutlined_4: 2604146401617379000
+      FarmerLayoutOutlined_5: 1055295157303575131
+      FarmerLayoutOutlined_6: -1438525950086457275
+      FarmerLayoutOutlined_7: -1205800098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
