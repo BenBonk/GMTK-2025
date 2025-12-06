@@ -380,7 +380,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 84
-    m_Localized: Fangt eine Gruppe von Tieren mit einem Pferd und einem Hund mit
+    m_Localized: Fange eine Gruppe von Tieren mit einem Pferd und einem Hund mit
       dem Lasso ein.
     m_Metadata:
       m_Items: []
@@ -673,7 +673,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206023
-    m_Localized: Maximiertes Fenster
+    m_Localized: Fenster maximiert
     m_Metadata:
       m_Items: []
   - m_Id: 4287678725206024
@@ -1050,7 +1050,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169344
-    m_Localized: 'Im vollen Spielverlauf:'
+    m_Localized: 'Im vollen Spiel:'
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169345
@@ -1224,7 +1224,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276035
-    m_Localized: "Du kannst 1 zus\xE4tzlichen Vorteil behalten."
+    m_Localized: "Du kannst 1 zus\xE4tzlichen Segen behalten."
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276036
@@ -1290,7 +1290,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032512
-    m_Localized: Fangen Sie eine Gruppe von Tieren mit einem Alpaka und 2 Stallkatzen
+    m_Localized: Fange eine Gruppe von Tieren mit einem Alpaka und 2 Stallkatzen
       ein.
     m_Metadata:
       m_Items: []
@@ -1334,8 +1334,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032522
-    m_Localized: Fange eine Gruppe von Tieren mit einem Lasso ein, darunter eine
-      Stallkatze, ein Hund und eine Maus.
+    m_Localized: Fange eine Gruppe von Tieren mit dem Lasso ein, darunter eine Stallkatze,
+      ein Hund und eine Maus.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032523
@@ -1369,7 +1369,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032530
-    m_Localized: Fange eine Gruppe von Tieren ein, darunter ein Alpaka und ein Hund.
+    m_Localized: Fange eine Gruppe von Tieren mit einem Alpaka und einem Hund mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032531
@@ -1382,7 +1383,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032533
-    m_Localized: Waldfestmahl
+    m_Localized: Waldfest
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032534
@@ -1400,7 +1401,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032537
-    m_Localized: Ziegengruff
+    m_Localized: Ziegenbock
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
@@ -1528,8 +1529,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421121
-    m_Localized: Fange eine Gruppe von Tieren mit einem Wildschwein und einem Pferd
-      mit dem Lasso ein.
+    m_Localized: Fange eine Gruppe Tiere mit einem Wildschwein und einem Pferd mit
+      dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421122
@@ -1563,7 +1564,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421129
-    m_Localized: Fange eine Gruppe von Tieren mit 2 Alpakas ein.
+    m_Localized: Fange eine Gruppe von Tieren mit 2 Alpakas mit dem Lasso ein.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421130
@@ -1658,7 +1659,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 35758618513199112
-    m_Localized: "Schlurft und ruckt \xFCber das Spielfeld hin und her."
+    m_Localized: "Schlurft und ruckt er \xFCber das Spielfeld hin und her."
     m_Metadata:
       m_Items: []
   - m_Id: 35758618513199113
@@ -1714,8 +1715,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047817
-    m_Localized: Wenn das Endergebnis eines Lassos negativ ist, wird es stattdessen
-      als positiv gewertet.
+    m_Localized: "Wenn das Endergebnis eines Lassos negativ ist, wird es stattdessen
+      als positiv gewertet. Raubtiere sind im Laden h\xE4ufiger anzutreffen."
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047818
@@ -1751,6 +1752,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37322272346865664
     m_Localized: Willkommen im Logbuch!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39869370246234112
+    m_Localized: "Anf\xE4nger"
     m_Metadata:
       m_Items: []
   references:

@@ -766,8 +766,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 8932396769607684
     m_Localized: "Il moltiplicatore di punti finale per ogni lazo contenente un cinghiale
-      sar\xE0 negativo. I cinghiali valgono -10 punti, -3 punti in denaro per ogni
-      cinghiale aggiuntivo in un lazo."
+      sar\xE0 negativo. I cinghiali valgono -10 punti, -3 punti per ogni cinghiale
+      aggiuntivo in un lazo."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607685
@@ -1059,7 +1059,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 18706117558755328
     m_Localized: Riceve +100 punti in denaro dopo ogni round. Tutti gli altri bonus
-      in denaro giornaliero sono raddoppiati.
+      in denaro giornaliero vengono raddoppiati.
     m_Metadata:
       m_Items: []
   - m_Id: 18706117558755329
@@ -1244,7 +1244,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031426
-    m_Localized: "Vento in poppa fastidioso: tutti gli animali si muovono pi\xF9
+    m_Localized: "Vento in poppa problematico: tutti gli animali si muovono pi\xF9
       velocemente"
     m_Metadata:
       m_Items: []
@@ -1335,7 +1335,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032528
-    m_Localized: Lazo un gruppo di animali contenente un gatto da fienile e un puma
+    m_Localized: Lasso un gruppo di animali contenente un gatto da fienile e un puma
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032529
@@ -1678,7 +1678,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 36459839981047817
     m_Localized: "Se il risultato finale di un lazo \xE8 negativo, verr\xE0 invece
-      valutato come positivo."
+      valutato come positivo. I predatori sono pi\xF9 comuni nel negozio."
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047818
@@ -1714,6 +1714,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37322272346865664
     m_Localized: Benvenuti al diario di bordo!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39869370246234112
+    m_Localized: Principiante
     m_Metadata:
       m_Items: []
   references:

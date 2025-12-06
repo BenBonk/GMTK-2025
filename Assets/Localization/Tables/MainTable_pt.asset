@@ -157,7 +157,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 32
-    m_Localized: "Diminui a velocidade de predadores pr\xF3ximos."
+    m_Localized: "Diminui a velocidade dos predadores pr\xF3ximos."
     m_Metadata:
       m_Items: []
   - m_Id: 33
@@ -189,7 +189,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40
-    m_Localized: "Predador. Persegue indiv\xEDduos que n\xE3o s\xE3o predadores."
+    m_Localized: "Predador. Persegue animais que n\xE3o s\xE3o predadores."
     m_Metadata:
       m_Items: []
   - m_Id: 41
@@ -294,8 +294,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 66
-    m_Localized: "La\xE7ar um grupo de animais contendo uma vaca, uma cabra, um cavalo
-      e uma ovelha."
+    m_Localized: "La\xE7ar um grupo de animais que inclui uma vaca, uma cabra, um
+      cavalo e uma ovelha."
     m_Metadata:
       m_Items: []
   - m_Id: 67
@@ -348,7 +348,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 79
-    m_Localized: Tamanho Plus Size
+    m_Localized: Tamanho grande
     m_Metadata:
       m_Items: []
   - m_Id: 80
@@ -569,7 +569,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
-    m_Localized: 'Total de novas tentativas:'
+    m_Localized: 'Total de rerolls:'
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550209
@@ -758,8 +758,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607682
-    m_Localized: "Existe a possibilidade de uma ovelha ser a ovelha negra, reativando
-      seu la\xE7o uma vez ao ser la\xE7ada."
+    m_Localized: "Chance de uma ovelha ser a ovelha negra, reativando seu la\xE7o
+      uma vez quando la\xE7ada."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607683
@@ -959,7 +959,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802015
-    m_Localized: "Agora \xE9 poss\xEDvel redefinir o conte\xFAdo de cada loja tr\xEAs
+    m_Localized: "Agora \xE9 poss\xEDvel redefinir os atributos de cada loja tr\xEAs
       vezes, em vez de apenas uma."
     m_Metadata:
       m_Items: []
@@ -1033,7 +1033,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169344
-    m_Localized: "Chegando em vers\xE3o completa:"
+    m_Localized: 'Chegando o jogo completo:'
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169345
@@ -1216,7 +1216,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 21217007663276037
-    m_Localized: Remova 2 animais do seu Baralho de Animais.
+    m_Localized: Remova 2 animais do seu baralho de animais.
     m_Metadata:
       m_Items: []
   - m_Id: 21394830084497408
@@ -1291,7 +1291,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032516
-    m_Localized: "La\xE7o, um grupo de animais contendo um cavalo e uma puma."
+    m_Localized: "La\xE7o, um grupo de animais que inclui um cavalo e uma puma."
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032517
@@ -1689,7 +1689,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 36459839981047817
     m_Localized: "Se o resultado final de qualquer la\xE7o for negativo, ele ser\xE1
-      pontuado como positivo."
+      contabilizado como positivo. Predadores s\xE3o mais comuns na loja."
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047818
@@ -1725,6 +1725,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37322272346865664
     m_Localized: "Bem-vindo ao Di\xE1rio de Bordo!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39869370246234112
+    m_Localized: Novato
     m_Metadata:
       m_Items: []
   references:

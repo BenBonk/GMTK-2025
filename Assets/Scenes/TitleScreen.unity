@@ -2630,14 +2630,6 @@ MonoBehaviour:
   - m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
-      m_KeyId: 8554514727809036
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  - m_TableReference:
-      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
-    m_TableEntryReference:
       m_KeyId: 8554514727809037
       m_Key: 
     m_FallbackState: 0
@@ -2647,6 +2639,14 @@ MonoBehaviour:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
       m_KeyId: 8554514727809038
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 39869370246234112
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -5085,6 +5085,7 @@ MonoBehaviour:
   firstCapture: 0
   mootiplier: 1
   lightningBoltIcon: {fileID: 0}
+  toniIcon: {fileID: 0}
 --- !u!224 &881715124 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7820206095430002056, guid: a838b52569b2e1f4b878755132bb6fa6, type: 3}
@@ -7803,6 +7804,7 @@ MonoBehaviour:
   fairyBottleInstance: {fileID: 0}
   extraUpgradeSlot: {fileID: 0}
   unlockPanel: {fileID: 0}
+  auroraUnlock: 0
   foxThiefStolenStats: {fileID: 0}
   references:
     version: 2

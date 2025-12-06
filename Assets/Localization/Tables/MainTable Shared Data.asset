@@ -883,6 +883,10 @@ MonoBehaviour:
     m_Key: farmerSelect.harvestLevel
     m_Metadata:
       m_Items: []
+  - m_Id: 39869370246234112
+    m_Key: farmerSelect.beginner
+    m_Metadata:
+      m_Items: []
   - m_Id: 8554514727809036
     m_Key: farmerSelect.novice
     m_Metadata:

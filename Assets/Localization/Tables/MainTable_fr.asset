@@ -87,7 +87,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15
-    m_Localized: 'Points multiplicateurs :'
+    m_Localized: 'Points mult :'
     m_Metadata:
       m_Items: []
   - m_Id: 16
@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 44
     m_Localized: Attrapez au lasso un groupe d'animaux comprenant un cochon et une
-      poule
+      poule.
     m_Metadata:
       m_Items: []
   - m_Id: 45
@@ -330,7 +330,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 73
-    m_Localized: Photo-finition
+    m_Localized: Photo-finish
     m_Metadata:
       m_Items: []
   - m_Id: 74
@@ -529,7 +529,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355908
-    m_Localized: "Les 3 animaux les plus achet\xE9s\_:"
+    m_Localized: "Les 3 animaux les plus achet\xE9s :"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355909
@@ -577,7 +577,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3154139535355920
-    m_Localized: "Nombre maximal de relances dans une seule partie\_:"
+    m_Localized: "Nombre maximal de relances en une seule partie\_:"
     m_Metadata:
       m_Items: []
   - m_Id: 3154139539550208
@@ -857,7 +857,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801988
-    m_Localized: "ch\xE8vre des champs"
+    m_Localized: "Ch\xE8vre des champs"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801989
@@ -906,7 +906,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Les prix des animaux sont d\xE9sormais al\xE9atoires en magasin"
+    m_Localized: "Les prix des animaux sont d\xE9sormais al\xE9atoires en magasin."
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169344
-    m_Localized: "Le jeu complet arrive bient\xF4t\_:"
+    m_Localized: "Disponible en version compl\xE8te :"
     m_Metadata:
       m_Items: []
   - m_Id: 10403423450169345
@@ -1150,8 +1150,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376269
-    m_Localized: "Vous pouvez d\xE9sormais contracter un pr\xEAt jusqu'\xE0 -150
-      en esp\xE8ces dans le magasin."
+    m_Localized: "Vous pouvez d\xE9sormais contracter une dette allant jusqu'\xE0
+      -150 en esp\xE8ces dans le magasin."
     m_Metadata:
       m_Items: []
   - m_Id: 19461608641376270
@@ -1316,7 +1316,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032518
-    m_Localized: Lasso un groupe d'animaux comprenant un sanglier et un cochon
+    m_Localized: Attraper au lasso un groupe d'animaux comprenant un sanglier et
+      un cochon
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032519
@@ -1505,7 +1506,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400424226818
-    m_Localized: Attrapez au lasso un groupe d'animaux comprenant un lapin, une souris
+    m_Localized: Capturez au lasso un groupe d'animaux comprenant un lapin, une souris
       et un mouton.
     m_Metadata:
       m_Items: []
@@ -1565,8 +1566,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421131
-    m_Localized: Attraper au lasso un groupe d'animaux comprenant un lapin, un cochon
-      et un ours
+    m_Localized: Attrapez au lasso un groupe d'animaux comprenant un lapin, un cochon
+      et un ours.
     m_Metadata:
       m_Items: []
   - m_Id: 23523400428421132
@@ -1712,8 +1713,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047817
-    m_Localized: "Si le r\xE9sultat final d'un lasso est n\xE9gatif, il sera consid\xE9r\xE9
-      comme positif."
+    m_Localized: "Si le r\xE9sultat final d'un lasso est n\xE9gatif, il sera comptabilis\xE9
+      comme positif. Les pr\xE9dateurs sont plus fr\xE9quents dans la boutique."
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047818
@@ -1749,6 +1750,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37322272346865664
     m_Localized: Bienvenue dans le journal de bord !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39869370246234112
+    m_Localized: "D\xE9butant"
     m_Metadata:
       m_Items: []
   references:

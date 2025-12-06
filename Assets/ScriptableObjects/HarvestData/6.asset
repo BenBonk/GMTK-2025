@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 6
   m_EditorClassIdentifier: 
   harvestLevel: 6
-  roundLength: 42
+  roundLength: 41
   numberOfDays: 15
-  dailyCash: 35
+  dailyCash: 40
   predatorFrequency: 3
-  predatorOptions: 3
+  predatorOptions: 2
   pointQuotas: 2
-  challengeRoundIntensity: 1
+  challengeRoundIntensity: 2

@@ -891,7 +891,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773801999
-    m_Localized: "Los precios de los animales ahora est\xE1n aleatorios en la tienda."
+    m_Localized: Los precios de los animales ahora son aleatorios en la tienda.
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802000
@@ -1236,7 +1236,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031424
-    m_Localized: 'Terrible Tumbleweed: Las Tumbleweeds rompen los lazos al contacto'
+    m_Localized: 'Terrible Tumbleweed: Las plantas rodantes rompen los lazos al contacto'
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
@@ -1685,7 +1685,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 36459839981047817
     m_Localized: "Si el resultado final de cualquier lazo es negativo, se calificar\xE1
-      como positivo."
+      como positivo. Los depredadores son m\xE1s comunes en la tienda."
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047818
@@ -1721,6 +1721,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37322272346865664
     m_Localized: "\xA1Bienvenido al Libro de Bit\xE1cora!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39869370246234112
+    m_Localized: Principiante
     m_Metadata:
       m_Items: []
   references:

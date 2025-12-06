@@ -68,8 +68,8 @@ public class HarvestLevelManager : MonoBehaviour
         numberOfDaysText.text = $"{numberOfDaysLocalized.GetLocalizedString()} {data.numberOfDays}";
         predatorFrequencyText.text = $"{predatorFrequencyLocalized.GetLocalizedString()} {data.predatorFrequency} {predatorFrequencyLocalized2.GetLocalizedString()}";
         predatorOptionsText.text = $"{predatorOptionsLocalized.GetLocalizedString()} {data.predatorOptions}";
-        pointQuotasText.text = $"{pointQuotasLocalized.GetLocalizedString()} {difficultyLevels[(int)data.pointQuotas].GetLocalizedString()}";
-        challengeIntensityText.text = $"{challengeIntensityLocalized.GetLocalizedString()} {difficultyLevels[(int)data.challengeRoundIntensity].GetLocalizedString()}";
+        pointQuotasText.text = $"{pointQuotasLocalized.GetLocalizedString()} {difficultyLevels[(int)data.pointQuotas-1].GetLocalizedString()}";
+        challengeIntensityText.text = $"{challengeIntensityLocalized.GetLocalizedString()} {difficultyLevels[(int)data.challengeRoundIntensity-1].GetLocalizedString()}";
         harvestLevelText.text = $"{data.harvestLevel}";
     }
 

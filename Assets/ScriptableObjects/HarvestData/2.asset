@@ -15,8 +15,8 @@ MonoBehaviour:
   harvestLevel: 2
   roundLength: 45
   numberOfDays: 15
-  dailyCash: 45
+  dailyCash: 50
   predatorFrequency: 3
   predatorOptions: 3
-  pointQuotas: 1
+  pointQuotas: 2
   challengeRoundIntensity: 1

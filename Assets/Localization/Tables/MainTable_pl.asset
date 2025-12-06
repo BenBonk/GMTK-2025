@@ -71,7 +71,7 @@ MonoBehaviour:
       m_Items:
       - rid: 241711563893112945
   - m_Id: 11
-    m_Localized: "Strata punkt\xF3w:"
+    m_Localized: "Utrata punkt\xF3w:"
     m_Metadata:
       m_Items:
       - rid: 241711563893112945
@@ -794,8 +794,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607686
-    m_Localized: "Kot ze stodo\u0142y staje si\u0119 zwierz\u0119ciem z najwi\u0119ksz\u0105
-      liczb\u0105 punkt\xF3w w twoim lassie, gdy zostanie z\u0142apany"
+    m_Localized: "Kot stodo\u0142owy staje si\u0119 zwierz\u0119ciem z najwi\u0119ksz\u0105
+      liczb\u0105 punkt\xF3w w Twoim lassie, gdy zostanie z\u0142apany"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607687
@@ -803,7 +803,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396769607688
-    m_Localized: "Pumy ponownie uruchamiaj\u0105 lasso, gdy zostan\u0105 z\u0142apane
+    m_Localized: "Pumy ponownie uruchamiaj\u0105 lasso, gdy zostan\u0105 schwytane
       w trakcie skoku"
     m_Metadata:
       m_Items: []
@@ -999,8 +999,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802019
-    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego osobnika, kt\xF3ry
-      nie jest drapie\u017Cnikiem, w lassie, zamiast 10%"
+    m_Localized: "Zyskaj +20% punkt\xF3w premii za ka\u017Cdego drapie\u017Cnika
+      w lassie, zamiast 10%"
     m_Metadata:
       m_Items: []
   - m_Id: 8932396773802020
@@ -1264,8 +1264,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031424
-    m_Localized: "Straszliwy wiatro\u0142om: wiatro\u0142omy zrywaj\u0105 lassa w
-      kontakcie"
+    m_Localized: "Straszliwy wiatropyle: wiatropyle zrywaj\u0105 lassa w kontakcie"
     m_Metadata:
       m_Items: []
   - m_Id: 23036628909031425
@@ -1416,7 +1415,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032538
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 3 kozy"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t sk\u0142adaj\u0105c\u0105 si\u0119
+      z 3 k\xF3z"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032539
@@ -1450,8 +1450,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032546
-    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t zawieraj\u0105c\u0105 kr\xF3lika
-      i pum\u0119"
+    m_Localized: "Z\u0142ap grup\u0119 zwierz\u0105t, w kt\xF3rej jest kr\xF3liczek
+      i puma"
     m_Metadata:
       m_Items: []
   - m_Id: 23523400420032547
@@ -1730,8 +1730,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047817
-    m_Localized: "Je\u015Bli ko\u0144cowy wynik kt\xF3regokolwiek lassa b\u0119dzie
-      negatywny, zostanie on oceniony jako pozytywny."
+    m_Localized: "Je\u015Bli wynik ko\u0144cowy kt\xF3rego\u015B z lass b\u0119dzie
+      negatywny, zostanie on oceniony jako pozytywny. Drapie\u017Cniki s\u0105 w
+      sklepie cz\u0119stsze."
     m_Metadata:
       m_Items: []
   - m_Id: 36459839981047818
@@ -1768,6 +1769,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37322272346865664
     m_Localized: Witamy w Dzienniku!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39869370246234112
+    m_Localized: "Pocz\u0105tkuj\u0105cy"
     m_Metadata:
       m_Items: []
   references:

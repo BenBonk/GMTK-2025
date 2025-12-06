@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1617227283e0d864d8c578350da14f34, type: 3}
-  m_Name: 19
+  m_Name: 0
   m_EditorClassIdentifier: 
-  harvestLevel: 19
-  roundLength: 35
-  numberOfDays: 20
-  dailyCash: 5
-  predatorFrequency: 2
-  predatorOptions: 2
-  pointQuotas: 3
-  challengeRoundIntensity: 2
+  harvestLevel: 0
+  roundLength: 45
+  numberOfDays: 15
+  dailyCash: 50
+  predatorFrequency: 3
+  predatorOptions: 3
+  pointQuotas: 4
+  challengeRoundIntensity: 1
