@@ -1098,7 +1098,7 @@ public class GameManager : MonoBehaviour
 
     void CheckMasteryAchivements()
     {
-        if (harvestLevel!=20)
+        if (harvestLevel!=15)
         {
             return;
         }
