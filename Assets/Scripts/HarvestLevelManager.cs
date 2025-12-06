@@ -29,7 +29,7 @@ public class HarvestLevelManager : MonoBehaviour
     public GameObject increaseButton;
     void Start()
     {
-        SetHarvestLevel(1); // Initialize to level 1
+        SetHarvestLevel(FBPP.GetInt("lastHarvestLevel", 1)); // Initialize to level 1
     }
 
     public void SetHarvestLevel(int levelIndex)

@@ -189,6 +189,7 @@ public class GameManager : MonoBehaviour
         GameController.challengeEventManager.SetDifficulty(challengeIntensitySetting);
         predatorRoundFrequency = saveManager.harvestDatas[harvestLevel - 1].predatorFrequency;
         predatorOptions = saveManager.harvestDatas[harvestLevel - 1].predatorOptions;
+        FBPP.SetInt("lastHarvestLevel", harvestLevel);
     }
 
     private void Update()
