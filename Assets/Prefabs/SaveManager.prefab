@@ -180,7 +180,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 48b6f2ecba0d6c54d9aa39a3efc9cef5, type: 2}
   - {fileID: 11400000, guid: d2287b068b079354a953c2affeddc0f1, type: 2}
   - {fileID: 11400000, guid: 717704e2c53a6ab40ac29d9e305349d6, type: 2}
-  - {fileID: 11400000, guid: de8076133b729184db9cf847d2075ad9, type: 2}
+  - {fileID: 11400000, guid: 2db9df0c525b4f743a82b1f3d1fb33ef, type: 2}
   farmerDatas:
   - {fileID: 11400000, guid: 4606dd3161c1d3b4aa50abe96be4c49a, type: 2}
   - {fileID: 11400000, guid: a14aa737d286e994bb5cf459cd05b9ae, type: 2}

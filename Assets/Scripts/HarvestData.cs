@@ -8,7 +8,6 @@ public enum DifficultySetting
     Novice,
     Veteran,
     Expert,
-    Beginner
 }
 
 [CreateAssetMenu(fileName = "HarvestData", menuName = "Scriptable Objects/HarvestData")]

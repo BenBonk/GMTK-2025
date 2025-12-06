@@ -18,5 +18,5 @@ MonoBehaviour:
   dailyCash: 50
   predatorFrequency: 3
   predatorOptions: 3
-  pointQuotas: 4
-  challengeRoundIntensity: 1
+  pointQuotas: 2
+  challengeRoundIntensity: 3

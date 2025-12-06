@@ -2622,6 +2622,30 @@ MonoBehaviour:
   - m_TableReference:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
+      m_KeyId: 39869370246234112
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 39869370246234112
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
+      m_KeyId: 39869370246234112
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  - m_TableReference:
+      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
+    m_TableEntryReference:
       m_KeyId: 8554514727809036
       m_Key: 
     m_FallbackState: 0
@@ -2639,14 +2663,6 @@ MonoBehaviour:
       m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
     m_TableEntryReference:
       m_KeyId: 8554514727809038
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  - m_TableReference:
-      m_TableCollectionName: GUID:67f652bb649f23a4dbde2d1bd75f61ed
-    m_TableEntryReference:
-      m_KeyId: 39869370246234112
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -9170,17 +9186,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 470009086}
     m_Modifications:
     - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
-      propertyPath: farmerDatas.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
-      propertyPath: 'farmerDatas.Array.data[0]'
+      propertyPath: 'harvestDatas.Array.data[15]'
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3903840157358554807, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
-      propertyPath: 'farmerDatas.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 2db9df0c525b4f743a82b1f3d1fb33ef, type: 2}
     - target: {fileID: 5028369202084395491, guid: 174a5ff2ba46df348bf4761ef2778286, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9958664
