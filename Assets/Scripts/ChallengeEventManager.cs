@@ -29,12 +29,15 @@ public class ChallengeEventManager : MonoBehaviour
     private bool spawnFromRight;
     private string tailwindModifer="tailwind";
     [HideInInspector]public int nightPredatorIncrease;
-    private IEnumerator Start()
+    private void Start()
     {
-        yield return new WaitForSeconds(.25f);
         gameManager = GameController.gameManager;
-        intensityLevel = gameManager.challengeIntensitySetting;
-        switch (intensityLevel)
+    }
+
+    public void SetDifficulty(DifficultySetting difficultySetting)
+    {
+        intensityLevel = difficultySetting;
+        switch (difficultySetting)
         {
             case DifficultySetting.Novice:
                 SetDifficulty(

@@ -186,6 +186,7 @@ public class GameManager : MonoBehaviour
         roundsToWin = saveManager.harvestDatas[harvestLevel - 1].numberOfDays;
         quotaSetting = saveManager.harvestDatas[harvestLevel - 1].pointQuotas;
         challengeIntensitySetting = saveManager.harvestDatas[harvestLevel - 1].challengeRoundIntensity;
+        GameController.challengeEventManager.SetDifficulty(challengeIntensitySetting);
         predatorRoundFrequency = saveManager.harvestDatas[harvestLevel - 1].predatorFrequency;
         predatorOptions = saveManager.harvestDatas[harvestLevel - 1].predatorOptions;
     }
@@ -332,24 +333,29 @@ public class GameManager : MonoBehaviour
         {
             case DifficultySetting.None:
                 return 0;
+            case DifficultySetting.Practice:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.24, R + 3));
+                break;
+            case DifficultySetting.Beginner:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
+                break;
             case DifficultySetting.Novice:
-                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f*R + 5)*(Math.Pow(1.28f,R+4));
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5*R + 5)*(Math.Pow(1.28,R+4));
                 break;
             case DifficultySetting.Veteran:
                 //value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
                 //value = 50 + 20 * R + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 5) * (Math.Pow(1.42f, R + 3));
                 //value = 60 + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 4) * (Math.Pow(1.6f, R + 3));
-                value = 75 + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 2) * (Math.Pow(1.6f, R + 3));
+                value = 75 + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5 * R + 2) * (Math.Pow(1.6, R + 3));
                 break;
             case DifficultySetting.Expert:
-                //placeholder
-                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                value = 100 + 10 * (R-1) + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.6 * R - 1.6) * (Math.Pow(1.9, R + 1.5));
                 break;
             default:
                 value = 0;
                 break;
         }
-        return Math.Round(value / 5.0) * 5.0; ;
+        return Math.Round(value / 5.0) * 5.0; 
     }
 
     public double GetPointsRequirement(int round)
@@ -360,24 +366,29 @@ public class GameManager : MonoBehaviour
         {
             case DifficultySetting.None:
                 return 0;
+            case DifficultySetting.Practice:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.24, R + 3));
+                break;
+            case DifficultySetting.Beginner:
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
+                break;
             case DifficultySetting.Novice:
-                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5f * R + 5) * (Math.Pow(1.28f, R + 4));
+                value = 55 + 10 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 2) + (1.5 * R + 5) * (Math.Pow(1.28, R + 4));
                 break;
             case DifficultySetting.Veteran:
                 //value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
                 //value = 50 + 20 * R + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 5) * (Math.Pow(1.42f, R + 3));
                 //value = 60 + 150 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 4) * (Math.Pow(1.6f, R + 3));
-                value = 75 + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5f * R + 2) * (Math.Pow(1.6f, R + 3));
+                value = 75 + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.5 * R + 2) * (Math.Pow(1.6, R + 3));
                 break;
             case DifficultySetting.Expert:
-                //placeholder
-                value = 50 + 20 * R + 50 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.25f * R + 5) * (Math.Pow(1.38f, R + 3));
+                value = 100 + 10 * (R - 1) + 200 * Math.Pow(Mathf.Floor((R - 1) / 5), 3) + (1.6 * R - 1.6) * (Math.Pow(1.9, R + 1.5));
                 break;
             default:
                 value = 0;
                 break;
         }
-        return Math.Round(value / 5.0) * 5.0; ;
+        return Math.Round(value / 5.0) * 5.0; 
     }
 
 

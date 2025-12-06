@@ -3,6 +3,8 @@ using UnityEngine;
 public enum DifficultySetting
 {
     None,
+    Practice,
+    Beginner,
     Novice,
     Veteran,
     Expert,
